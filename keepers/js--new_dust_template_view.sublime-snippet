@@ -1,0 +1,26 @@
+<snippet>
+    <content><![CDATA[
+{>layout/}
+
+{!--------------------------------------------------!}
+{!***************!} {<head_extend} {!***************!}
+
+
+{!***************!} {/head_extend} {!***************!}
+{!__________________________________________________!}
+
+
+{!--------------------------------------------------!}
+{!*****************!} {<content} {!*****************!}
+
+${1}
+
+{!*****************!} {/content} {!*****************!}
+{!__________________________________________________!}
+
+]]></content>
+    <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+    <tabTrigger>new_dust_template_view</tabTrigger>
+    <!-- Optional: Set a scope to limit where the snippet will trigger -->
+    <!-- <scope>source.python</scope> -->
+</snippet>

@@ -1,0 +1,16 @@
+<snippet>
+    <content><![CDATA[
+seneca
+    .add(
+        ${1:'ns:nstxt,cmd:cmdtxt'},
+        function( msg, respond ) {
+            ${2:fnContent}
+            respond( null, { answer: ${3:answerContent} })
+        }
+    )
+]]></content>
+    <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+    <tabTrigger>seneca_new_ms</tabTrigger>
+    <!-- Optional: Set a scope to limit where the snippet will trigger -->
+    <!-- <scope>source.python</scope> -->
+</snippet>
