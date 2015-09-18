@@ -1,0 +1,13 @@
+tpc         -- this.props.children
+rren        -- React.render(<element />, document.body);
+rc_select   -- react "component" template for a dropdown menu (<select> tags with <option> values);
+rupdate     -- update function for React component - sets action that occurs when object is 'updated'
+                -- generally sets object state (this.setState)
+                -- explicit calls to this.update trigger it
+                -- basic:
+                        update: function(e){
+                            return this.setState({
+                                propToChange: e.target.value
+                            });
+                        }
+
