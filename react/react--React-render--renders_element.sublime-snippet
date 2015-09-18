@@ -1,0 +1,9 @@
+<snippet>
+    <content><![CDATA[
+React.render(<${1:ComponentName} ${2:prop}='${3:propValue}' />, ${4:domNodeToAttachComponentTo});
+]]></content>
+    <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+    <tabTrigger>rren</tabTrigger>
+    <!-- Optional: Set a scope to limit where the snippet will trigger -->
+    <!-- <scope>source.python</scope> -->
+</snippet>
