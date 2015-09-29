@@ -1,7 +1,25 @@
-tpc         -- this.props.children
-rren        -- React.render(<element />, document.body);
-rc_select   -- react "component" template for a dropdown menu (<select> tags with <option> values);
-rupdate     -- update function for React component - sets action that occurs when object is 'updated'
+react_tpc       -- this.props.children
+
+react_ren       -- React.render(<element />, document.body);
+
+react_ptn       -- React.PropTypes.number
+
+react_pts       -- React.PropTypes.string
+
+react_pta       -- React.PropTypes.any
+
+react_pto       -- React.PropTypes.object
+
+react_tsp       -- this.setProps - full boilerplate
+
+react_tss       -- this.setState
+
+react_fdn       -- React.findDOMNode(this.refs.someTagInThis.refs.someTagInChild).value)
+
+react_initstate -- getInitialState function for a react component - sets the state the
+                   component has at the moment it's created.
+
+react_update    -- update fn for React component: sets action that occurs when obj is 'updated'
                 -- generally sets object state (this.setState)
                 -- explicit calls to this.update trigger it
                 -- basic:
@@ -11,3 +29,14 @@ rupdate     -- update function for React component - sets action that occurs whe
                             });
                         }
 
+react_childcontextmethods -- add methods to a react component that allow accessing the component's child properties - both to view, and to change
+
+rc_select    -- react component template for dropdown menu (<select> tags w/ <option> vals);
+
+rc_mountable -- component that can be mounted
+
+rc_mounter   -- component that can mount another component
+
+rcl          -- new react class (new component)
+
+rc_fullupdatelifecycle --- component with a full set of update lifecycle methods

@@ -1,0 +1,30 @@
+<snippet>
+    <content><![CDATA[
+    var ${1:ComponentThatMountsAnother} = React.createClass({
+
+        //function that is called to mount the new element
+        mountEl: function() {
+            React.render(<${2:TagOfComponentToMount} />, document.getElementById('${3:id-of-place-to-mount-component}'));
+        },
+
+        //function that is called to unmount the new element
+        unmountEl: function() {
+            React.unmountComponentAtNode(document.getElementById('${3:id-of-place-to-mount-component}'));
+        },
+
+        render: function() {
+            return (
+                <div>
+                    <button onClick={this.mountEl}>${4:MountButtonText}</button>
+                    <button onClick={this.unmountEl}>${5:UnmountButtonText}</button>
+                    <div id='${3:id-of-place-to-mount-component}'></div>
+                </div>
+            );
+        }
+    });
+]]></content>
+    <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+    <tabTrigger>rc_mounter</tabTrigger>
+    <!-- Optional: Set a scope to limit where the snippet will trigger -->
+    <!-- <scope>source.python</scope> -->
+</snippet>

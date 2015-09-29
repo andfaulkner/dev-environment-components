@@ -1,0 +1,13 @@
+<snippet>
+    <content><![CDATA[
+//Determines if the component should update; only update component if this returns true.
+//nextProps & nextState: post-update component properties & state, respectively;
+shouldComponentUpdate: function(nextProps, nextState) {
+    return ${1:somethingResultingInTrueOrFalse};
+}
+]]></content>
+    <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+    <tabTrigger>react_scu</tabTrigger>
+    <!-- Optional: Set a scope to limit where the snippet will trigger -->
+    <!-- <scope>source.python</scope> -->
+</snippet>

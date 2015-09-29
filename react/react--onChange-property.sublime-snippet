@@ -3,7 +3,7 @@
 onChange={this.${1:nameOfFnOnThisPropToCall_(e.g.:_update)}}
 ]]></content>
     <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
-    <tabTrigger>roch</tabTrigger>
+    <tabTrigger>react_och</tabTrigger>
     <!-- Optional: Set a scope to limit where the snippet will trigger -->
     <!-- <scope>source.python</scope> -->
 </snippet>

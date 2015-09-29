@@ -1,0 +1,22 @@
+<snippet>
+    <content><![CDATA[
+childContextTypes: {
+    ${1:activeItem}: React.PropTypes.${2:somePropTypeEg_any_Or_object}
+},
+
+getChildContext: function() {
+    return {
+        ${1:activeItem}: this.state.${1:activeItem}
+    }
+},
+
+set${1/(^.)(.*)/\U\1\E\2/g}: function (item) {
+    this.setState({activeItem: item});
+  },
+
+]]></content>
+    <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+    <tabTrigger>react_childcontextmethods</tabTrigger>
+    <!-- Optional: Set a scope to limit where the snippet will trigger -->
+    <!-- <scope>source.python</scope> -->
+</snippet>

@@ -1,13 +1,9 @@
 <snippet>
     <content><![CDATA[
-update: function(e){
-    return this.setState({
-	    ${1:propToChange}: e.target.value
-	});
-}
+this.setProps({ ${1:varToSet}: ${2:value--e.g-this.props.someValue}});
 ]]></content>
     <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
-    <tabTrigger>react_update</tabTrigger>
+    <tabTrigger>react_tsp</tabTrigger>
     <!-- Optional: Set a scope to limit where the snippet will trigger -->
     <!-- <scope>source.python</scope> -->
 </snippet>
