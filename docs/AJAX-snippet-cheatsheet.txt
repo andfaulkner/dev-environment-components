@@ -1,0 +1,11 @@
+jquery_submitaction       -- submit function to submit form data to server
+
+jquery_postaction         -- submit data to a server by POST via jquery
+
+loc_href                  -- get the entire URL of the current page
+                             e.g. "http://localhost:3002/components/react-1/index.html"
+
+loc_origin                -- get current page 'root' URL: URL minus all paths e.g. "http://localhost:3002"
+
+loc_search                -- get entire query string of page URL - including and after ? itself e.g.
+                              "?email=someone@example.com"

@@ -1,0 +1,11 @@
+<snippet>
+    <description>Declare a module's global variables for the linter.</description>
+    <content><![CDATA[
+/* global console, _, ${1:globalModule1}, ${2:globalModule2-anyNumCanGoInThisList} */
+'use strict';
+]]></content>
+    <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+    <tabTrigger>comment_lintglobals</tabTrigger>
+    <!-- Optional: Set a scope to limit where the snippet will trigger -->
+    <!-- <scope>source.python</scope> -->
+</snippet>
