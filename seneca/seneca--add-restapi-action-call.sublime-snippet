@@ -2,18 +2,18 @@
     <content><![CDATA[
 module.exports = function ${1:1stPathPt}_SenecaPlugin(options) {
 
-    seneca.add('role:color,cmd:${2:specific_val_of_cmd}', ${2:specific_val_of_cmd}_cb);
-    seneca.add('role:color,cmd:${3:specific_val_of_cmd_2}', ${3:specific_val_of_cmd_2});
-    seneca.add('role:color,cmd:${4:specific_val_of_cmd_3}', ${4:specific_val_of_cmd_3});
+    this.add('role:${1:1stPathPt},cmd:${2:specific_val_of_cmd}', ${2:specific_val_of_cmd}_cb);
+    this.add('role:${1:1stPathPt},cmd:${3:specific_val_of_cmd_2}', ${3:specific_val_of_cmd_2}_cb);
+    this.add('role:${1:1stPathPt},cmd:${4:specific_val_of_cmd_3}', ${4:specific_val_of_cmd_3}_cb);
 
 
-    seneca.act('role:web', {
+    this.act('role:web', {
         use: {
             prefix: '/${1:1stPathPt}',
             pin: 'role:${1:1stPathPt},cmd:*',
             map: {
                 '${2:specific_val_of_cmd}': { GET: true },
-                '${3:specific_val_of_cmd_2}': { GET: true, POST: true }
+                '${3:specific_val_of_cmd_2}': { GET: true, POST: true },
                 '${4:specific_val_of_cmd_3}': true //GET by default
             }
         }}
