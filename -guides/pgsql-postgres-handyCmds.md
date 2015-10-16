@@ -1,3 +1,14 @@
+IMPORTANT
+=========
+
+look at pg_dump for preserving db examples:
+http://www.postgresql.org/docs/9.1/static/app-pgdump.html
+
+- it actually generates commands for you!!!!!
+
+
+
+
 ---------------------------------------------------------------------------------------------------
 POSTGRES DATABASE INFO
 ======================
