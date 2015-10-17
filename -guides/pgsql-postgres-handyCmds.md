@@ -134,6 +134,18 @@ ALTER A USER (ROLE)
 *   Provide a user with the ability to log in:
 
         ALTER ROLE nameofuser WITH LOGIN
+
+*   Give user all the powers:
+
+        ALTER ROLE nameofuser CREATEROLE
+        ALTER ROLE nameofuser CREATEDB
+        ALTER ROLE nameofuser REPLICATION;
+
+    *  ...and confirm it worked with:
+
+        \du
+
+
 ---------------------------------------------------------------------------------------------------
 
 ---------------------------------------------------------------------------------------------------
