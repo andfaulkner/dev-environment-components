@@ -1,0 +1,30 @@
+<snippet>
+	<content><![CDATA[
+//Runs arr of fns in series, each passing results to next in arr; but if any tasks pass an error to
+//their cb ('next' param), next fn not executed & main callback immediately called w/ the err. Args
+//for the 1st function in the sequence are defined in .bind at end of said function (after '}').
+async.waterfall([
+	//initial args passed in via bind at the bottom of the function
+	function wf1_withInitArgs(arg1, arg2, next) {
+		//custom fn code
+		next(null, 'arg1: ' + arg1 + '\narg2: ' + arg2);
+	}.bind(this, 'arg 1 passed 1', someOutsideArg),
+	//Normal waterfall functions with propagating values from here downward
+	function wf2(arrProps, next) {
+		//custom fn code
+		next(null, arrProps);
+	}
+], function wfFinal(err, result) {
+	if (err) {
+		console.log(err);
+		return err;
+	}
+	//code run on waterfall success
+	return result;
+});
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>async__waterfall_initparams</tabTrigger>
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<scope>source.js</scope>
+</snippet>
