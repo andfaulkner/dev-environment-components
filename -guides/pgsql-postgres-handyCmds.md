@@ -84,13 +84,13 @@ Postgres CLI 'help' commands
 
 Postgres CLI format commands
 ----------------------------
-		\t 							-		'tuples' mode (you want it off)
-		\a 							-		'aligned' mode (you want it on)
+	\t				-	'tuples' mode (you want it off)
+	\a				-	'aligned' mode (you want it on)
 
 
 Postgres CLI 'info' commands
 ----------------------------
-		\d 							-		list tables, views, sequences
+	\d				-	list tables, views, sequences
     \dt[S+]         -   list tables
     \du  OR \dg     -   list roles (users)
     \l              -   list databases
@@ -101,12 +101,12 @@ Postgres CLI 'info' commands
 
     \s [filename]   -   output postgres query buffer (CLI command history) to file
 
-    \d [tablename]	-		see table schema - handy-dandy
+    \d [tablename]	-	see table schema - handy-dandy
 
 
 SQL-based info command essentials
 ---------------------------------
-		SELECT * from [tablename];	-		view all data in the table.
+	SELECT * from [tablename];	-		view all data in the table.
 
 Postgres CLI 'select current database'
 --------------------------------------
