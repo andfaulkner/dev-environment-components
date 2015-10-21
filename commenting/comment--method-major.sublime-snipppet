@@ -6,11 +6,11 @@
 *
 *       @method ${2:nameOfMethod}
 *       @return ${3:ReturnType} ${4:explanation of return value}
-*/${5}
+*/
+${5}
 ]]></content>
     <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
     <tabTrigger>comment_methodmajor</tabTrigger>
     <!-- Optional: Set a scope to limit where the snippet will trigger -->
     <!-- <scope>source.python</scope> -->
 </snippet>
-//comment_methodmajor
