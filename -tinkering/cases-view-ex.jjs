@@ -1,0 +1,32 @@
+		gridColumns: [
+			{
+				title: utils.translateKey('case_number'),
+				value: 'caseNumber',
+				sort: 'caseNumber.raw'
+			},
+			{
+				title: utils.translateKey('complaint_topic_for_overview'),
+				value: 'complaintTopic',
+				sort: 'complaintTopic.raw'
+			},
+			{
+				title: utils.translateKey('case_status'),
+				value: 'caseStatusText',
+				sort: 'caseStatus.raw'
+			},
+			{
+				title: utils.translateKey('responsible'),
+				value: 'ownerName',
+				sort: 'ownerName.raw'
+			},
+			{
+				title: utils.translateKey('date_recorded'),
+				value: 'createdDate',
+				sort: 'createdDate'
+			},
+			{
+				title: utils.translateKey('date_closed'),
+				value: 'dateClosed',
+				sort: 'dateClosed'
+			}
+		]
