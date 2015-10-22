@@ -1,31 +1,27 @@
 <snippet>
+
 	<content><![CDATA[
 //Runs the following functions in parallel, with the final callback receiving an array containing
 //the return results of each function in the 1st arg given to async.parallel; and/or errors.
 async.parallel([
 	function asyncParallelFn1(next){
-		//other code here
 		next(null, retVal);
 	},
 	function asyncParallelFn2(next){
-		//other code here
 		next(null, retVal);
 	},
 	function asyncParallelFn3(next){
-		//other code here
 		next(null, retVal);
 	}
-], function asyncParallelFinal(err, resultsArray){
+], function asyncParallelFinal(err, results){
 	if (err) {
 		console.error("parallel failed");
 		return;
 	}
-	//code run on parallel execution success.
-	//This section often uses resultsArray: an array of return vals (1 from each fn above)
+	//code run on parallel run success; oft uses results: an arr of ret vals: 1 from each fn above
 });
 ]]></content>
-	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+
 	<tabTrigger>async__parallel</tabTrigger>
-	<!-- Optional: Set a scope to limit where the snippet will trigger -->
-	<!-- <scope>source.js</scope> -->
+	<scope>source.js</scope>
 </snippet>

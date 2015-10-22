@@ -1,13 +1,13 @@
 <snippet>
-    <description>Create a new SQL table, with columns. 2 in snippet, but any # can be given.</description>
-    <content><![CDATA[
+	<description>Create a new SQL table, with columns. 2 in snippet, but any # can be given.</description>
+	<content><![CDATA[
 CREATE TABLE ${1:table_name} (
-    ${2:col1_name} ${3:col1_type_eg_TEXT_or_INTEGER},
-    ${4:col2_name} ${5:col2_type}
+	${2:col1_name} ${3:col1_type_eg_TEXT_or_INTEGER},
+	${4:col2_name} ${5:col2_type}
 );
 ]]></content>
-    <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
-    <tabTrigger>sql__create_table</tabTrigger>
-    <!-- Optional: Set a scope to limit where teh snippet will trigger -->
-    <!-- <scope>source.python</scope> -->
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>sql__create_table</tabTrigger>
+	<!-- Optional: Set a scope to limit where teh snippet will trigger -->
+	<!-- <scope>source.python</scope> -->
 </snippet>

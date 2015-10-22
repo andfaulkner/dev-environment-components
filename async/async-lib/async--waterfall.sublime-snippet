@@ -1,35 +1,31 @@
 <snippet>
+
 	<content><![CDATA[
 //Runs arr of fns in series, each passing results to next in arr; but if any tasks pass an error
 //to their cb ('next' param), next fn not executed & main callback immediately called w/ the error.
 async.waterfall([
-    function wf1(next){
-        //custom fn code
-        return next(null, ${1:valueToPropagate});
-    },
-    function wf2(${1:valueToPropagate}, next) {
-        //custom fn code
-        return next(null, ${1:valueToPropagate});
-    },
-    function wf3(${1:valueToPropagate}, next) {
-        //custom fn code
-        return next(null, ${1:valueToPropagate});
-    },
-    function wf4(${1:valueToPropagate}, next) {
-        //custom fn code
-        return next(null, ${1:valueToPropagate});
-    },
+	function wf1(next){
+		return next(null, ${1:valueToPropagate});
+	},
+	function wf2(${1:valueToPropagate}, next) {
+		return next(null, ${1:valueToPropagate});
+	},
+	function wf3(${1:valueToPropagate}, next) {
+		return next(null, ${1:valueToPropagate});
+	},
+	function wf4(${1:valueToPropagate}, next) {
+		return next(null, ${1:valueToPropagate});
+	},
 ], function wfFinalCb(err, result){
-    if (err) {
-        console.log(err);
-        return err;
-    }
-		//code run on waterfall success
-    return result;
+	if (err) {
+		console.log(err);
+		return err;
+	}
+	//code run on waterfall success
+	return result;
 });
 ]]></content>
-	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+
 	<tabTrigger>async__waterfall_noinitparams</tabTrigger>
-	<!-- Optional: Set a scope to limit where the snippet will trigger -->
 	<scope>source.js</scope>
 </snippet>
