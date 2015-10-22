@@ -2,11 +2,10 @@
     <description>Moderate-size comment (3 line +)</description>
     <content><![CDATA[
 /***
-*       ${1:Note text goes here.}
+*			${1:Note text goes here.}
 */
 ]]></content>
-    <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+
     <tabTrigger>comment_notebig</tabTrigger>
-    <!-- Optional: Set a scope to limit where the snippet will trigger -->
-    <!-- <scope>source.python</scope> -->
+    <scope>source.js</scope>
 </snippet>
