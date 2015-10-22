@@ -9,17 +9,6 @@
 			]
 		]
 	},
-	"buffers":
-	[
-		{
-			"contents": "<snippet>\n	<content><![CDATA[\nHello, ${1:this} is a ${2:snippet}.\n]]></content>\n	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->\n	<!-- <tabTrigger>hello</tabTrigger> -->\n	<!-- Optional: Set a scope to limit where the snippet will trigger -->\n	<!-- <scope>source.python</scope> -->\n</snippet>\n",
-			"settings":
-			{
-				"buffer_size": 317,
-				"line_ending": "Unix"
-			}
-		}
-	],
 	"build_system": "",
 	"build_system_choices":
 	[
@@ -28,7 +17,7 @@
 	"command_palette":
 	{
 		"height": 327.0,
-		"last_filter": "fav",
+		"last_filter": "",
 		"selected_items":
 		[
 			[
@@ -80,7 +69,7 @@
 				"Preferences: Browse Packages"
 			]
 		],
-		"width": 593.0
+		"width": 692.0
 	},
 	"console":
 	{
@@ -99,12 +88,16 @@
 		"side_bar_visible": false,
 		"status_bar_visible": false
 	},
-	"expanded_folders":
-	[
-		"/Users/andrew/Library/Application Support/Sublime Text 3/Packages/User/snippets"
-	],
 	"file_history":
 	[
+		"/Users/andrew/Library/Application Support/Sublime Text 3/Packages/User/snippets/commenting/comment--method-major.sublime-snipppet",
+		"/Users/andrew/Library/Application Support/Sublime Text 3/Packages/User/snippets/project-setup/isightconf_view_ex_base.sublime-snippet",
+		"/Users/andrew/Library/Application Support/Sublime Text 3/Packages/User/snippets/docs/location--origin.sublime-snippet",
+		"/Users/andrew/Library/Application Support/Sublime Text 3/Packages/User/snippets/lodash/lodash--repeat_text.sublime-snippet",
+		"/Users/andrew/Library/Application Support/Sublime Text 3/Packages/User/snippets/lodash/lodash--arguments_to_array.sublime-snippet",
+		"/Users/andrew/Library/Application Support/Sublime Text 3/Packages/User/snippets/lodash/lodash--arguments_to_array2.sublime-snippet",
+		"/Users/andrew/Library/Application Support/Sublime Text 3/Packages/User/snippets/lodash/lodash--repeat_text-trigger2.sublime-snippet",
+		"/Users/andrew/Library/Application Support/Sublime Text 3/Packages/User/snippets/lodash/lodash--repeat_text-trigger3.sublime-snippet",
 		"/Users/andrew/Library/Application Support/Sublime Text 3/Packages/User/snippets.sublime-project",
 		"/Users/andrew/projects/isight/isight_main_v5_beta/package.json",
 		"/Users/andrew/projects/isight/isight_main_v5_beta/public/js/lib/view-manager.js",
@@ -217,13 +210,15 @@
 	],
 	"find":
 	{
-		"height": 23.0
+		"height": 35.0
 	},
 	"find_in_files":
 	{
 		"height": 93.0,
 		"where_history":
 		[
+			"/Users/andrew/projects/isight/config_hp_v5/public/config/,/Users/andrew/projects/isight/config_hp_v5/public/css,/Users/andrew/projects/isight/config_hp_v5/public/img,/Users/andrew/projects/isight/config_hp_v5/public/js,/Users/andrew/projects/isight/config_hp_v5/public/templates,/Users/andrew/projects/isight/config_hp_v5/config,/Users/andrew/projects/isight/config_hp_v5/lib",
+			"/Users/andrew/projects/isight/isight_main_v5_beta/public/config/,/Users/andrew/projects/isight/isight_main_v5_beta/public/css,/Users/andrew/projects/isight/isight_main_v5_beta/public/img,/Users/andrew/projects/isight/isight_main_v5_beta/public/js,/Users/andrew/projects/isight/isight_main_v5_beta/public/templates,/Users/andrew/projects/isight/isight_main_v5_beta/config,/Users/andrew/projects/isight/isight_main_v5_beta/lib,*.csv",
 			"/Users/andrew/projects/isight/isight_main_v5_beta/public/config/,/Users/andrew/projects/isight/isight_main_v5_beta/public/css,/Users/andrew/projects/isight/isight_main_v5_beta/public/img,/Users/andrew/projects/isight/isight_main_v5_beta/public/js,/Users/andrew/projects/isight/isight_main_v5_beta/public/templates,/Users/andrew/projects/isight/isight_main_v5_beta/config,/Users/andrew/projects/isight/isight_main_v5_beta/lib",
 			"/Users/andrew/projects/isight/isight_main_v5_beta/public,/Users/andrew/projects/isight/isight_main_v5_beta/config,/Users/andrew/projects/isight/isight_main_v5_beta/lib,-/Users/andrew/projects/isight_main_v5_beta/public/components/**,-/Users/andrew/projects/isight/isight_main_v5_beta/public/components",
 			"/Users/andrew/projects/isight/isight_main_v5_beta/public,/Users/andrew/projects/isight/isight_main_v5_beta/config,/Users/andrew/projects/isight/isight_main_v5_beta/lib,-/Users/andrew/projects/isight_main_v5_beta/public/components/**",
@@ -247,6 +242,17 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"csv",
+			"cases.?to.?close",
+			"cases.*close",
+			"cases",
+			"cases-to-close",
+			"csv",
+			"\\,",
+			"isight_main_v5_beta",
+			"csv",
+			"\\,",
+			",",
 			"app_CONF",
 			"seneca",
 			"populate-demo",
@@ -340,6 +346,7 @@
 		"regex": true,
 		"replace_history":
 		[
+			"config_hp_v5",
 			""
 		],
 		"reverse": false,
@@ -348,109 +355,9 @@
 		"whole_word": false,
 		"wrap": true
 	},
-	"groups":
-	[
-		{
-			"selected": 0,
-			"sheets":
-			[
-				{
-					"buffer": 0,
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 317,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								317,
-								317
-							]
-						],
-						"settings":
-						{
-							"BracketHighlighterBusy": false,
-							"bh_regions":
-							[
-								"bh_round",
-								"bh_round_center",
-								"bh_round_open",
-								"bh_round_close",
-								"bh_round_content",
-								"bh_square",
-								"bh_square_center",
-								"bh_square_open",
-								"bh_square_close",
-								"bh_square_content",
-								"bh_default",
-								"bh_default_center",
-								"bh_default_open",
-								"bh_default_close",
-								"bh_default_content",
-								"bh_curly",
-								"bh_curly_center",
-								"bh_curly_open",
-								"bh_curly_close",
-								"bh_curly_content",
-								"bh_c_define",
-								"bh_c_define_center",
-								"bh_c_define_open",
-								"bh_c_define_close",
-								"bh_c_define_content",
-								"bh_unmatched",
-								"bh_unmatched_center",
-								"bh_unmatched_open",
-								"bh_unmatched_close",
-								"bh_unmatched_content",
-								"bh_angle",
-								"bh_angle_center",
-								"bh_angle_open",
-								"bh_angle_close",
-								"bh_angle_content",
-								"bh_tag",
-								"bh_tag_center",
-								"bh_tag_open",
-								"bh_tag_close",
-								"bh_tag_content",
-								"bh_double_quote",
-								"bh_double_quote_center",
-								"bh_double_quote_open",
-								"bh_double_quote_close",
-								"bh_double_quote_content",
-								"bh_single_quote",
-								"bh_single_quote_center",
-								"bh_single_quote_open",
-								"bh_single_quote_close",
-								"bh_single_quote_content",
-								"bh_regex",
-								"bh_regex_center",
-								"bh_regex_open",
-								"bh_regex_close",
-								"bh_regex_content"
-							],
-							"default_dir": "/Users/andrew/Library/Application Support/Sublime Text 3/Packages/User",
-							"default_extension": "sublime-snippet",
-							"syntax": "Packages/XML/XML.tmLanguage",
-							"tabs_extra_closing": true,
-							"tabs_extra_last_activated": 1442500855.17,
-							"tabs_extra_last_activated_sheet_index": 0
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 0,
-					"type": "text"
-				}
-			]
-		}
-	],
 	"incremental_find":
 	{
-		"height": 23.0
+		"height": 17.0
 	},
 	"input":
 	{
@@ -492,10 +399,9 @@
 		"height": 123.0
 	},
 	"pinned_build_system": "",
-	"project": "snippets.sublime-project",
 	"replace":
 	{
-		"height": 42.0
+		"height": 64.0
 	},
 	"save_all_on_build": true,
 	"select_file":
@@ -504,6 +410,14 @@
 		"last_filter": "",
 		"selected_items":
 		[
+			[
+				".csv",
+				"data/cases-to-close.csv"
+			],
+			[
+				"",
+				"script/sample.csv"
+			],
 			[
 				"l/c/inde",
 				"isight_main_v5_beta/lib/controllers/index.js"
@@ -565,7 +479,6 @@
 		],
 		"width": 756.0
 	},
-	"selected_group": 0,
 	"settings":
 	{
 	},
@@ -573,7 +486,7 @@
 	"show_open_files": true,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 221.0,
+	"side_bar_width": 404.0,
 	"status_bar_visible": true,
 	"template_settings":
 	{
