@@ -1,11 +1,11 @@
 <snippet>
-    <description>Return row data from given cols in given table.</description>
-    <content><![CDATA[
+	<description>Return row data from given cols in given table.</description>
+	<content><![CDATA[
 SELECT ${1:col1}, ${2:col2}
-    FROM ${3:tableName};
+	FROM ${3:tableName};
 ]]></content>
-    <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
-    <tabTrigger>sql_select_multi_cols</tabTrigger>
-    <!-- Optional: Set a scope to limit where teh snippet will trigger -->
-    <!-- <scope>source.python</scope> -->
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>sql_select_multi_cols</tabTrigger>
+	<!-- Optional: Set a scope to limit where teh snippet will trigger -->
+	<!-- <scope>source.python</scope> -->
 </snippet>

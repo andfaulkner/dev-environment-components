@@ -1,10 +1,10 @@
 <snippet>
-    <description>Return data from 1 column in a table</description>
-    <content><![CDATA[
+	<description>Return data from 1 column in a table</description>
+	<content><![CDATA[
 SELECT ${1:column_name} FROM ${2:tableName};
 ]]></content>
-    <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
-    <tabTrigger>sql__select_column</tabTrigger>
-    <!-- Optional: Set a scope to limit where teh snippet will trigger -->
-    <!-- <scope>source.python</scope> -->
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>sql__select_column</tabTrigger>
+	<!-- Optional: Set a scope to limit where teh snippet will trigger -->
+	<!-- <scope>source.python</scope> -->
 </snippet>

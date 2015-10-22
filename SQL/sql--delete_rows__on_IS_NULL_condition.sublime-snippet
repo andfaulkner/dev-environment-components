@@ -1,11 +1,11 @@
 <snippet>
-    <description>Delete all rows where col being tested contains no data (i.e. IS NULL)</description>
-    <content><![CDATA[
+	<description>Delete all rows where col being tested contains no data (i.e. IS NULL)</description>
+	<content><![CDATA[
 DELETE FROM ${1:table_name}
-    WHERE ${2:col_to_test_against} IS NULL;
+	WHERE ${2:col_to_test_against} IS NULL;
 ]]></content>
-    <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
-    <tabTrigger>sql__del_rows__on_IS_NULL_condition</tabTrigger>
-    <!-- Optional: Set a scope to limit where teh snippet will trigger -->
-    <!-- <scope>source.python</scope> -->
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>sql__del_rows__on_IS_NULL_condition</tabTrigger>
+	<!-- Optional: Set a scope to limit where teh snippet will trigger -->
+	<!-- <scope>source.python</scope> -->
 </snippet>
