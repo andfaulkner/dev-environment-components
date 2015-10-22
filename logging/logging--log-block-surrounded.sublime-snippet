@@ -1,0 +1,15 @@
+<snippet>
+    <description>Output var to CLI in big, conspicuous block</description>
+    <content><![CDATA[
+
+/*_LOG_*/	console.log('\n' + _.repeat('${3:-}', ${4:50}));
+/*_LOG_*/	console.log('$TM_FILENAME IN fn ${1:nameOfFn}: var ${2:nameOfVarToLog}::');
+/*_LOG_*/	console.dir(${2:nameOfVarToLog});
+/*_LOG_*/	console.log(_.repeat('${3:-}', ${4:50}) + '\n');
+
+]]></content>
+    <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+    <tabTrigger>log__var_val_in_block</tabTrigger>
+    <!-- Optional: Set a scope to limit where the snippet will trigger -->
+    <!-- <scope>source.python</scope> -->
+</snippet>
