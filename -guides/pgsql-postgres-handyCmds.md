@@ -13,7 +13,7 @@ http://www.postgresql.org/docs/9.1/static/app-pgdump.html
 POSTGRES DATABASE INFO
 ======================
 ---------------------------------------------------------------------------------------------------
-
+---------------------------------------------------------------------------------------------------
 
 EXAMPLE POSTGRES INITIALIZATION
 ===============================
@@ -52,10 +52,34 @@ It always starts with one of these
 *   postgres
 
 ---------------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------
+
+POSTGRES DATABASE SERVER CONNECTION INFO
+========================================
+
+Determine if postgres server is running
+---------------------------------------
+*   from CLI:
+
+    netstat -na | grep postgres
+
+    *   if there's a LISTENING row returned, the server is running
+
+
+Determine postgres port
+-----------------------
+*   from CLI (again):
+
+    netstat -na | grep postgres
+
+    * #### in /.s.PGSQL.#### at the end of the rows returned gives you the port. Usually 5432.
 
 ---------------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------
+
 DEFINTIONS
 ==========
+
 Schema
 ------
 > named collection of tables. Can also contain views, indexes, sequences, data types, operators, &
@@ -71,8 +95,8 @@ Tablespace
     CREATE TABLESPACE nameoftablespace LOCATION '/path/to/tablespace/folder';
 
 ---------------------------------------------------------------------------------------------------
-
 ---------------------------------------------------------------------------------------------------
+
 Postgres CLI
 ============
 
@@ -115,8 +139,8 @@ Postgres CLI 'select current database'
         \c nameofdbtoselect
 
 ---------------------------------------------------------------------------------------------------
-
 ---------------------------------------------------------------------------------------------------
+
 USERS
 =====
 
@@ -159,10 +183,31 @@ ALTER A USER (ROLE)
 
         \du
 
+Access rights
+-------------
+
+GRANT usage on schema public to postgres
 
 ---------------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------
+
+ENVIRONMENT
+===========
+
+Set an environment variable
+---------------------------
+*   use `SET` command
+*   Examples:
+
+        SET default_tablespace = '';
+        SET default_with_oids = false;
+        SET statement_timeout = 0;
+        SET search_path = public, pg_catalog;
+
 
 ---------------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------
+
 DATABASES
 =========
 
@@ -172,9 +217,32 @@ MAKE A DATABASE
 
         CREATE DATABASE nameofnewdb;
 
+
+CONNECT TO A DATABASE
+---------------------
+*    from within the CLI:
+
+        \c name_of_database_to_connect_to
+
+
 ---------------------------------------------------------------------------------------------------
+
 ADD DATA
 ========
+
+Data types
+----------
+1.  `CHARACTER VARYING` - a string, of variable length 	-	also goes by `VARCHAR`
+2.  `CHARACTER` - a single character (unless VARYING is added as a qualifier)
+3.  `NUMERIC` - a real number - allows reasonably large numbers
+4.  `INTEGER` - standard integer - positive or negative whole number
+5.  `TEXT` - a string of any length at all - fully infinite; however, not SQL standard
+6.  `BOOLEAN` - true or false value.
+        *   These evaluate to true: TRUE, 't', 'true', 'y', 'yes' 'on', '1'
+        *   These evaluate to false: FALSE, 'f', 'false', 'n', 'no' 'off', '0'
+5.  Date - usually in YYYY-MM-DD format
+6.  Real - a numeric value allowing decimals
+
 
 MAKE A SCHEMA
 -------------
@@ -182,14 +250,12 @@ MAKE A SCHEMA
 
         CREATE SCHEMA nameofschema;
 
-
 MAKE A TABLESPACE
 -----------------
 *   Create a tablespace at a given location:
 
         CREATE TABLESPACE nameoftablespace
             LOCATION '/path/to/tablespace/folder'
-
 
 MAKE A TABLE
 ------------
@@ -200,8 +266,87 @@ MAKE A TABLE
             test_column_2 TEXT
         );
 
+*   Example:
+
+        CREATE TABLE starter_data (
+            first_name TEXT PRIMARY KEY,
+            last_name TEXT,
+            colour TEXT,
+            favorite_bear TEXT,
+            rar BOOLEAN
+        );
+
 
 ---------------------------------------------------------------------------------------------------
+
+MODIFY DATA TABLES
+==================
+
+Add column to table
+-------------------
+
+*   use `ALTER TABLE` command
+*   generic:
+
+        ALTER TABLE name_of_table
+            ADD COLUMN name_of_column {{insertTypeHere}};
+
+*   example:
+
+        ALTER TABLE test_entity_1
+            ADD COLUMN omnomnomnom CHARACTER VARYING;
+
+        ALTER TABLE starter_data ADD COLUMN id TEXT;
+
+
+Rename a column
+---------------
+*   example:
+
+    ALTER TABLE test_entity_1 RENAME COLUMN entnum TO ent_num;
+
+*   generic:
+
+    ALTER TABLE name_of_table RENAME COLUMN original_col_name TO new_col_name;
+
+
+Remove a table
+--------------
+*   use `DROP TABLE` command
+*   Example:
+
+        DROP TABLE films;
+
+    *   destroys table files
+
+---------------------------------------------------------------------------------------------------
+
+ADD DATA
+========
+
+Insert data into table, at specific columns
+-------------------------------------------
+*   example:
+
+        INSERT INTO test_entity_1 (
+            omnom,
+            name,
+            price,
+            ent_num,
+            id
+        ) VALUES (
+            'omnomnomnom',
+            'omnomnomnom man',
+            '1.423',
+            '5',
+            'd6c95a2b-bd81-4e7b-a0f8-d15d8f28d097'
+        );
+
+*   generic:
+
+
+---------------------------------------------------------------------------------------------------
+
 VIEW DATA
 =========
 
@@ -239,9 +384,9 @@ GET ALL DATA FROM MULTIPLE COLUMNS
 
 
 ---------------------------------------------------------------------------------------------------
+
 GET DATA FROM JSON
 ==================
-
 
 GET DATA FROM A KEY IN A JSON OBJECT STORED IN A COLUMN OF TYPE json
 --------------------------------------------------------------------
@@ -297,5 +442,3 @@ CONDITIONALLY GET DATA FROM ARRAY STORED AT SPECIFIC KEY IN JSON COL
 * generic:
 
         SELECT some_col,json_array_elements(json_col->'key') FROM table_name WHERE some_col='some_value';
-
-
