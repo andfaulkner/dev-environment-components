@@ -90,7 +90,17 @@
 	},
 	"file_history":
 	[
+		"/Users/andrew/Library/Application Support/Sublime Text 3/Packages/User/snippets/logging/logging--log-block-surrounded.sublime-snippet",
+		"/Users/andrew/Library/Application Support/Sublime Text 3/Packages/User/snippets/commenting/comment--block-1line-bookend.sublime-snippet",
+		"/Users/andrew/Library/Application Support/Sublime Text 3/Packages/User/snippets/commenting/comment--note_very_big.sublime-snippet",
+		"/Users/andrew/Library/Application Support/Sublime Text 3/Packages/User/snippets/commenting/comment--block-huge.sublime-snippet",
 		"/Users/andrew/Library/Application Support/Sublime Text 3/Packages/User/snippets/commenting/comment--method-major.sublime-snipppet",
+		"/Users/andrew/Library/Application Support/Sublime Text 3/Packages/User/snippets/commenting/comment--bigheader-dashlines.sublime-snippet",
+		"/Users/andrew/Library/Application Support/Sublime Text 3/Packages/User/snippets/commenting/comment-block-1line-bookend.sublime-snippet",
+		"/Users/andrew/Library/Application Support/Sublime Text 3/Packages/User/snippets/commenting/comment-section.sublime-snippet",
+		"/Users/andrew/Library/Application Support/Sublime Text 3/Packages/User/snippets/commenting/comment--header-block-dashlines.sublime-snippet",
+		"/Users/andrew/Library/Application Support/Sublime Text 3/Packages/User/snippets/-guides/pgsql-postgres-handyCmds.md",
+		"/Users/andrew/Library/Application Support/Sublime Text 3/Packages/User/snippets/pgdumper.sh",
 		"/Users/andrew/Library/Application Support/Sublime Text 3/Packages/User/snippets/project-setup/isightconf_view_ex_base.sublime-snippet",
 		"/Users/andrew/Library/Application Support/Sublime Text 3/Packages/User/snippets/docs/location--origin.sublime-snippet",
 		"/Users/andrew/Library/Application Support/Sublime Text 3/Packages/User/snippets/lodash/lodash--repeat_text.sublime-snippet",
@@ -242,6 +252,7 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"CaseModel",
 			"csv",
 			"cases.?to.?close",
 			"cases.*close",
@@ -357,7 +368,7 @@
 	},
 	"incremental_find":
 	{
-		"height": 17.0
+		"height": 20.0
 	},
 	"input":
 	{
@@ -486,7 +497,7 @@
 	"show_open_files": true,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 404.0,
+	"side_bar_width": 422.0,
 	"status_bar_visible": true,
 	"template_settings":
 	{
