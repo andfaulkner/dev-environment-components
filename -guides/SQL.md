@@ -68,6 +68,18 @@ DROP TABLE
         DROP TABLE films;
             * destroys table files
 
+ALTER TABLE
+===========
+*   generic:
+
+        ALTER TABLE name_of_table
+            ADD COLUMN name_of_column {{insertTypeHere}};
+
+*   example:
+
+        ALTER TABLE test_entity_1
+            ADD COLUMN omnomnomnom CHARACTER VARYING;
+
 
 OWNER
 =====
