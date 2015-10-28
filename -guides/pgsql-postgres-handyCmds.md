@@ -102,7 +102,7 @@ Postgres CLI 'info' commands
     \s [filename]   -   output postgres query buffer (CLI command history) to file
 
     \d [tablename]	-	see table schema - handy-dandy
-
+                    -   i.e. see all columns names, equivalent of Object.keys
 
 SQL-based info command essentials
 ---------------------------------
@@ -173,10 +173,8 @@ MAKE A DATABASE
         CREATE DATABASE nameofnewdb;
 
 ---------------------------------------------------------------------------------------------------
-
----------------------------------------------------------------------------------------------------
-DATA
-====
+ADD DATA
+========
 
 MAKE A SCHEMA
 -------------
@@ -202,5 +200,102 @@ MAKE A TABLE
             test_column_2 TEXT
         );
 
+
 ---------------------------------------------------------------------------------------------------
+VIEW DATA
+=========
+
+DISPLAY ENTIRE TABLE
+-----------------------
+*   example:
+
+        SELECT * FROM sys_user;
+
+*   generic:
+
+        SELECT * FROM name_of_table;
+
+
+GET ALL DATA FROM A COLUMN
+--------------------------
+*   example:
+
+        SELECT roles FROM sys_user;
+
+*   generic:
+
+        SELECT name_of_column FROM name_of_table;
+
+
+GET ALL DATA FROM MULTIPLE COLUMNS
+----------------------------------
+*   example:
+
+        SELECT employment,roles FROM sys_user;
+
+*   generic:
+
+        SELECT name_of_col,name_of_another_col FROM name_of_table;
+
+
+---------------------------------------------------------------------------------------------------
+GET DATA FROM JSON
+==================
+
+
+GET DATA FROM A KEY IN A JSON OBJECT STORED IN A COLUMN OF TYPE json
+--------------------------------------------------------------------
+*   example:
+
+        SELECT perm->'roles' AS rls FROM sys_user;
+
+* generic:
+
+        SELECT json_column->'key' AS genericnametogivecol FROM table_name;
+
+
+GET TOP-LEVEL OBJECT KEYS FROM JSON COLUMN
+------------------------------------------
+*   example:
+
+        SELECT json_object_keys(perm) FROM sys_user;
+
+*   generic:
+
+        SELECT json_object_keys(json_col) FROM name_of_table;
+
+
+GET DATA FROM ARRAY STORED AT SPECIFIC KEY IN JSON COL
+------------------------------------------------------
+*   example:
+
+        SELECT employment,json_array_elements(perm->'roles') FROM sys_user;
+
+* generic:
+
+        SELECT some_other_col,json_array_elements(json_col->'key_with_array_val') FROM table_name;
+
+
+GET LENGTH OF ARRAY STORED A SPECIFIC KEY IN JSON COL
+-----------------------------------------------------
+*   example:
+
+        SELECT employment,json_array_length(perm->'roles') FROM sys_user;
+
+*   generic:
+
+        SELECT some_other_col,json_array_length(json_col->'array_col') FROM table_name;
+
+
+CONDITIONALLY GET DATA FROM ARRAY STORED AT SPECIFIC KEY IN JSON COL
+--------------------------------------------------------------------
+*   ...based on value of another col
+*   example:
+
+        SELECT employment,json_array_elements(perm->'roles') FROM sys_user WHERE employment='Analyst';
+
+* generic:
+
+        SELECT some_col,json_array_elements(json_col->'key') FROM table_name WHERE some_col='some_value';
+
 
