@@ -96,7 +96,6 @@ Full list
 
 		_.map
 		_.reduce
-		_.extend
 		_.forEach
 
 		_.isArray + _.isObject + _.isFunction
@@ -104,6 +103,8 @@ Full list
 
 		_.defaultsDeep
 		_.merge
+		_.extend   /   _.assign
+		_.clone
 
 		_.toArray(arguments)
 
@@ -119,6 +120,10 @@ Full list
 		_.pick
 		_.omit
 		_.uniq
+
+		_.flatten
+		_.flattenDeep
+
 
 
 ***************************************************************************************************
@@ -239,6 +244,53 @@ Of interest for logging
 ====================================
 ##_.pad(str, length, charsToPadWith)
 *    pad str on left & right if str shorter than given length; e.g. _.pad('abc', 6); //--> ' abc  '
+
+
+***************************************************************************************************
+Add to lodash itself
+====================
+_.mixin
+-------
+*   example:
+
+    _.mixin({
+
+      _hasNoDot: function _hasNoDot(char){
+        if(_.isString(char) && char.length === 1) {
+          return val !== '.';
+        }
+        if (_.isString(char)){
+          return !_.includes(char.split(''), '.');
+        }
+        if (_.isArray(char)){
+          return !_.includes(char, '.');
+        }
+      },
+
+      // Standard sort on arrays that contain both numeric and string values
+      sortNumStrMixArr: function sortMixNumStrArr(coll) {
+        if (!(_.isArray(coll))) {
+          return _.sortBy(coll);
+        }
+        return _.sortBy(coll, function (val) {
+          if (_.isNumber(val)) {
+            var valAsStrArr = (_._hasNoDot(val))
+            	? (val + '.0').split('')
+            	: (val + '').split('');
+            var intPt = _.takeWhile(valAsStrArr, this._hasNoDot).join('');
+            var intPtPadded = _.padLeft(Math.floor(intPt), 50, '0');
+            var decPt = _.takeRightWhile(valAsStrArr, this._hasNoDot).join('');
+            return intPtPadded + '.' + decPt;
+          }
+          return val;
+        });
+      }
+
+    });
+
+
+    console.log(_.sortNumStrMixArr([3, 'awef, 4, 1, 'few', 'z', 321, 'aaa', 2, 'bab', 'efe']));
+        //--> [1, 2, 3, 4, 321, 'aaa', 'awef', 'bab', 'efe', 'few', 'z']
 
 
 ***************************************************************************************************
