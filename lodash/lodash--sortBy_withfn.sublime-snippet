@@ -1,0 +1,12 @@
+<snippet>
+    <content><![CDATA[
+${1:sortedArr} = _.sortBy(${2:arrObjOrStr}, function(${3:collItemVal}, ${4:key_here_if_obj}){
+	${6://code here}
+	return ${5:valToTreatCurValAsForSort_thoOrigValStillOutput};
+});
+]]></content>
+    <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+    <tabTrigger>_sortBy_withfn</tabTrigger>
+    <!-- Optional: Set a scope to limit where the snippet will trigger -->
+    <scope>source.js</scope>
+</snippet>
