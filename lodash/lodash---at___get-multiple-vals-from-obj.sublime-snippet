@@ -1,0 +1,10 @@
+<snippet>
+	<description>Grab multiple elements from an object by keys, return all in an array</description>
+    <content><![CDATA[
+var ${1:arrWithGrabbedEls} = _.at(${2:objToGrabFrom}, ${3:key1OrArrOfKeys}, ${4:optionalKey2_etc});
+]]></content>
+    <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+    <tabTrigger>_at</tabTrigger>
+    <!-- Optional: Set a scope to limit where the snippet will trigger -->
+    <scope>source.js</scope>
+</snippet>
