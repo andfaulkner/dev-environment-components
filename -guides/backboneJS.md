@@ -3,6 +3,11 @@ BackboneJS notes
 ===================
 **********************************************************************************************
 
+*   [Annotated source](http://backbonejs.org/docs/backbone.html)
+*   [Why use Backbone?](http://beletsky.net/2012/09/why-use-backbonejs.html)
+*   [Intro to Backbone](http://www.clock.co.uk/blog/an-introduction-to-backbonejs)
+*   [Pragmatic backbone - must-read](http://pragmatic-backbone.com/)
+
 ----------------------------------------------------------------------------------------------
 Definitions
 ===========
@@ -15,12 +20,12 @@ Atomic 'chunk' of UI.  Can either:
     1.   render the data from a specific model or number of models
     2.   be a dataless standalone chunk of UI
 Should listen for model 'change' events, then re-render itself
+* this & view are only 2 essential parts
 
 ##Collection
 Helper / handler for dealing with groups of related models.
 Handles loading & saving of new models to server
 Provides helper functions for performing aggregations or computations against a list of models
-
 
 
 ----------------------------------------------------------------------------------------------
@@ -57,9 +62,6 @@ Backbone.View
 
             (model => template) --output--> $el
 
-
-*
-
 Backbone.Model
 --------------
 *   stores application data
@@ -76,7 +78,21 @@ Backbone.Collection
 
 Backbone.Router (RESTful resources)
 -----------------------------------
+*   provides methods for routing client-side pages, and connecting them to actions and events
 *
+
+Backbone.history
+----------------
+*   serves as a global router (per frame) to:
+
+    1.   handle hashchange events or pushState
+    2.   match the appropriate route; and
+    3.   trigger callbacks
+
+
+###Backbone.history.start
+*   must be called to start the application - nothing will run otherwise
+
 
 Presenter
 ---------
@@ -88,7 +104,12 @@ Presenter
 
 ----------------------------------------------------------------------------------------------
 ----------------------------------------------------------------------------------------------
+Existing events
+===============
 
+
+----------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------
 
 Api
 ===
