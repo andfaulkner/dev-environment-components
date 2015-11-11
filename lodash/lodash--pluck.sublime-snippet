@@ -1,0 +1,10 @@
+<snippet>
+		<description>Extract multiple property vals into an arr at once, from objs in an arr of objs</description>
+    <content><![CDATA[
+${1:arrRetVal} = _.includes(${2:arrOfObjs}, ${3:nameOfObjProp_InObjsInArrOfObjsToExtractIntoArr});
+]]></content>
+    <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+    <tabTrigger>_pluck</tabTrigger>
+    <!-- Optional: Set a scope to limit where the snippet will trigger -->
+    <scope>source.js</scope>
+</snippet>
