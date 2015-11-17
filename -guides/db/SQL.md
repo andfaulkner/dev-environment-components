@@ -28,6 +28,45 @@ Types
 3.  Date - usually in YYYY-MM-DD format
 4.  Real - a numeric value allowing decimals
 
+Relationship Types
+------------------
+### one-to-one
+*   e.g. if each address can belong to only one customer, this relationship is "One to One"
+
+### One to Many
+*   e.g. Each customer may have zero, one or multiple orders, but anorder can only belong to
+    1 customer
+
+### Many to Many
+*   e.g. each order can contain multiple items, and each item can also be in multiple orders
+
+Foreign Keys
+------------
+*   Way to reference data in another table
+
+Joins
+-----
+*   Used to retrieve data from DBs with relationships
+
+###Cross Joins
+*   Default JOIN type
+*   each row from the first table is matched with each row of the second table
+*   basically useless
+
+###Natural Join
+*   tables need to have a matching column name
+*   join the records only when the value of this column is matching on two records
+
+    SELECT * FROM customers NATURAL JOIN orders;
+
+USING
+-----
+*   If a column is the same name on both tables, we can specify it here
+    *   for joining the tables together
+*   much like the NATURAL JOIN
+*   extremely useful
+
+
 ---------------------------------------------------------------
 
 Creating tables
@@ -113,3 +152,18 @@ CREATE INDEX
 
 ON keyword
 ==========
+
+INSERT
+
+autoincrement value in table
+----------------------------
+
+		SEQUENCE role_id_seq
+    ALTER TABLE roles ALTER id SET DEFAULT NEXTVAL('role_id_seq');
+
+*  henceforth, the default value of column 'id' will be [previous row's id] + 1.
+
+Remove a column of a table
+------------------------
+
+		ALTER TABLE roles DROP COLUMN starter_id;
