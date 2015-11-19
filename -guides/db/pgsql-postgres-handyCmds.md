@@ -94,6 +94,12 @@ Tablespace
 
     CREATE TABLESPACE nameoftablespace LOCATION '/path/to/tablespace/folder';
 
+Joins
+-----
+> SQL joins are used to combine rows from two or more tables
+> ...based on a common field between them
+>
+
 ---------------------------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------------------------
 
@@ -279,8 +285,8 @@ MAKE A TABLE
 
 ---------------------------------------------------------------------------------------------------
 
-MODIFY DATA TABLES
-==================
+MODIFY DATA TABLES - COLUMNS
+============================
 
 Add column to table
 -------------------
@@ -288,15 +294,24 @@ Add column to table
 *   use `ALTER TABLE` command
 *   generic:
 
-        ALTER TABLE name_of_table
-            ADD COLUMN name_of_column {{insertTypeHere}};
+        ALTER TABLE name_of_table ADD COLUMN name_of_column {{insertTypeHere}};
 
-*   example:
+*   examples:
 
-        ALTER TABLE test_entity_1
-            ADD COLUMN omnomnomnom CHARACTER VARYING;
-
+        ALTER TABLE test_entity_1 ADD COLUMN omnomnomnom CHARACTER VARYING;
         ALTER TABLE starter_data ADD COLUMN id TEXT;
+
+Remove column from table
+-------------------
+
+*   generic:
+
+        ALTER TABLE name_of_table DROP COLUMN name_of_column;
+
+*   examples:
+
+        ALTER TABLE test_entity_1 DROP COLUMN omnomnomnom;
+        ALTER TABLE starter_data DROP COLUMN id;
 
 
 Rename a column
@@ -318,6 +333,28 @@ Remove a table
         DROP TABLE films;
 
     *   destroys table files
+
+---------------------------------------------------------------------------------------------------
+MODIFY DATA TABLES -- ROWS
+===================================
+
+Update rows based on a search (WHERE)
+-------------------------------------
+
+*   Generic:
+
+    UPDATE table_name
+    SET column_name1='new_data_at_column_name1', column_name2='new_data_at_column_name2'
+    WHERE column_name_any='value_to_match'
+
+    *   any row where column_name_any has a value of 'value_to_match' will have
+        its 'column_name1' & 'column_name2' values set
+
+*   Example:
+
+		UPDATE Customers
+		SET ContactName='Alfred Schmidt', City='Hamburg'
+		WHERE CustomerName='Alfreds Futterkiste';
 
 ---------------------------------------------------------------------------------------------------
 
@@ -382,6 +419,20 @@ GET ALL DATA FROM MULTIPLE COLUMNS
 
         SELECT name_of_col,name_of_another_col FROM name_of_table;
 
+GET UNIQUE VALUES FROM TABLE
+----------------------------
+*   generic:
+
+        SELECT DISTINCT column_name FROM table_name;
+
+*   example:
+
+				SELECT DISTINCT genre FROM movies;
+
+				--> [a list of genres]
+
+
+
 
 ---------------------------------------------------------------------------------------------------
 
@@ -442,3 +493,18 @@ CONDITIONALLY GET DATA FROM ARRAY STORED AT SPECIFIC KEY IN JSON COL
 * generic:
 
         SELECT some_col,json_array_elements(json_col->'key') FROM table_name WHERE some_col='some_value';
+
+---------------------------------------------------------------------------------------------------
+
+Misc
+====
+
+autoincrement value in table
+----------------------------
+
+		SEQUENCE role_id_seq
+    ALTER TABLE roles ALTER id SET DEFAULT NEXTVAL('role_id_seq');
+
+*   henceforth, the default value of column 'id' will be [previous row's id] + 1.
+*   each newly inserted row is assigned an id that is 1 higher than the row added directly before
+
