@@ -1,0 +1,32 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/home/andrew/.nvm/v0.10.36/bin/node',
+1 verbose cli   '/home/andrew/.nvm/v0.10.36/bin/npm',
+1 verbose cli   'completion',
+1 verbose cli   '--',
+1 verbose cli   'npm',
+1 verbose cli   'install',
+1 verbose cli   '' ]
+2 info using npm@1.4.28
+3 info using node@v0.10.36
+4 verbose registry.get https://registry.npmjs.org/-/short not expired, no request
+5 error TypeError: Object #<Object> has no method 'match'
+5 error     at escape (/home/andrew/.nvm/v0.10.36/lib/node_modules/npm/lib/completion.js:185:10)
+5 error     at /home/andrew/.nvm/v0.10.36/lib/node_modules/npm/lib/completion.js:199:14
+5 error     at Array.map (native)
+5 error     at /home/andrew/.nvm/v0.10.36/lib/node_modules/npm/lib/completion.js:197:19
+5 error     at /home/andrew/.nvm/v0.10.36/lib/node_modules/npm/lib/install.js:40:35
+5 error     at RegClient.get_ (/home/andrew/.nvm/v0.10.36/lib/node_modules/npm/node_modules/npm-registry-client/lib/get.js:130:14)
+5 error     at RegClient.<anonymous> (/home/andrew/.nvm/v0.10.36/lib/node_modules/npm/node_modules/npm-registry-client/lib/get.js:49:12)
+5 error     at evalmachine.<anonymous>:272:14
+5 error     at /home/andrew/.nvm/v0.10.36/lib/node_modules/npm/node_modules/graceful-fs/graceful-fs.js:102:5
+5 error     at Object.oncomplete (evalmachine.<anonymous>:108:15)
+6 error If you need help, you may report this *entire* log,
+6 error including the npm and node versions, at:
+6 error     <http://github.com/npm/npm/issues>
+7 error System Linux 3.13.0-37-generic
+8 error command "/home/andrew/.nvm/v0.10.36/bin/node" "/home/andrew/.nvm/v0.10.36/bin/npm" "completion" "--" "npm" "install" ""
+9 error cwd /home/andrew/projects/node/experiments/seneca-promises
+10 error node -v v0.10.36
+11 error npm -v 1.4.28
+12 error type undefined_method
+13 verbose exit [ 1, true ]
