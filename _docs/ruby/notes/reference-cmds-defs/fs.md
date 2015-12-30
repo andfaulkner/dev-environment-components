@@ -5,3 +5,4 @@
 -   get dir of script being run relative to current working directory
 -   e.g. output:  scripts/test-scripts/my-test.rb
 -   e.g. if script is in same dir: output: .
+

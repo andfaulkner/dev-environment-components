@@ -1,4 +1,4 @@
-#!/usr/bin/ruby
+#!/usr/local/bin/ruby
 
 # GET THE JSON MODULE
 require 'json'
