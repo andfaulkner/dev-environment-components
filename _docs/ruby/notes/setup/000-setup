@@ -13,3 +13,13 @@ rvm @global do sudo gem install rb-fsevent
 
 # filesize gem
 rvm @global do sudo gem install filesize
+
+# get this
+cp ~/.irbrc ~/.irbrc_bk
+curl https://raw.githubusercontent.com/andfaulkner/sublime-nodejs-dev-environment-snippets/master/dev-env/.irbrc > ~/.irbrc
+
+# cross-session history for irb
+rvm @global do sudo gem install wirble
+
+# bookmark this: http://rubular.com/
+# --- it's an online regex tester for ruby
