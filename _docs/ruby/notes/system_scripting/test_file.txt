@@ -1,0 +1,16 @@
+First line of test file
+Second line of test file
+Third line of test file
+Fourth line of test file
+
+Sixth line of test file - fifth line was blank
+
+
+Ninth line of test file - seventh and eighth lines were blank
+
+{
+	"key": "value",
+	"random_json": "placed in the middle for no reason"
+}
+
+[1, 3, 5, 6, 7, 8, 9]
