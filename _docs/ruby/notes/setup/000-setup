@@ -1,0 +1,15 @@
+# get rvm
+\curl -sSL https://get.rvm.io | bash -s stable --ruby
+
+# load change to path made by rvm install
+. ~/.bashrc
+. ~/.bash_profile
+
+# get "rerun" module, to allow insta-rerunning of ruby scripts (a la nodemon)
+rvm @global do gem install rerun
+
+# to make rerun work smoothly
+rvm @global do sudo gem install rb-fsevent
+
+# filesize gem
+rvm @global do sudo gem install filesize
