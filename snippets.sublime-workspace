@@ -90,6 +90,16 @@
 	},
 	"file_history":
 	[
+		"/home/andrew/.config/sublime-text-3/Packages/User/snippets/commenting/ruby/comment--ruby_heading_block.sublime-snippet",
+		"/home/andrew/.config/sublime-text-3/Packages/User/snippets/commenting/ruby/comment--ruby_heading_block_with_sep.sublime-snippet",
+		"/home/andrew/.config/sublime-text-3/Packages/User/snippets/commenting/ruby/comment--ruby_cli_heading.sublime-snippet",
+		"/home/andrew/.config/sublime-text-3/Packages/User/snippets/commenting/comment--method_major.sublime-snippet",
+		"/home/andrew/.config/sublime-text-3/Packages/User/snippets/commenting/comment--method-major.sublime-snipppet",
+		"/home/andrew/.config/sublime-text-3/Packages/User/snippets/commenting/comment--block-huge.sublime-snippet",
+		"/home/andrew/.config/sublime-text-3/Packages/User/snippets/commenting/comment--bigheader-dashlines.sublime-snippet",
+		"/home/andrew/.config/sublime-text-3/Packages/User/snippets/commenting/comment-flatline.sublime-snippet",
+		"/home/andrew/.config/sublime-text-3/Packages/User/snippets/commenting/comment--note_very_big.sublime-snippet",
+		"/home/andrew/.config/sublime-text-3/Packages/User/snippets/commenting/comment--linter_global_var_declarations.sublime-snippet",
 		"/Users/andrew/Library/Application Support/Sublime Text 3/Packages/User/snippets/logging/logging--log-block-surrounded.sublime-snippet",
 		"/Users/andrew/Library/Application Support/Sublime Text 3/Packages/User/snippets/commenting/comment--block-1line-bookend.sublime-snippet",
 		"/Users/andrew/Library/Application Support/Sublime Text 3/Packages/User/snippets/commenting/comment--note_very_big.sublime-snippet",
@@ -207,16 +217,7 @@
 		"/Users/andrew/projects/isight/isight_main_v5_beta/public/templates/settings/holiday-calendar/editable-holiday-calendar-tmpl.dust",
 		"/Users/afaulkner/projects/isight/config_bcd_v5/public/js/views/settings/holiday-calendar/editable-holiday-calendar-view-ex.js",
 		"/Users/afaulkner/projects/isight/config_bcd_v5/test/api/holiday_entry/test.holiday_entry.crud.js",
-		"/Users/andrew/projects/isight/isight_main_v5_beta/.travis.yml",
-		"/Users/andrew/projects/isight/isight_main_v5_beta/Makefile",
-		"/Users/andrew/projects/isight/isight_main_v5_beta/lib/services/business-logic/holiday-entry/workflow-holiday-entry.js",
-		"/Users/afaulkner/projects/isight/config_bcd_v5/public/js/require-config.js",
-		"/Users/andrew/projects/isight/config_walmart_v5/public/js/require-config.js",
-		"/Users/afaulkner/projects/isight/config_bcd_v5/lib/api/web.js",
-		"/Users/afaulkner/projects/isight/config_bcd_v5/config/options.elasticsearch.js",
-		"/Users/afaulkner/projects/isight/config_bcd_v5/script/database/migrations/018.do.add-holiday_entry_team.sql",
-		"/Users/afaulkner/projects/isight/config_bcd_v5/data/lists/cancel_reasons.json",
-		"/Users/andrew/projects/config_bcd_v5"
+		"/Users/andrew/projects/isight/isight_main_v5_beta/.travis.yml"
 	],
 	"find":
 	{

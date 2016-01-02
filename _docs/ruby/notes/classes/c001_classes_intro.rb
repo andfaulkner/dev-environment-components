@@ -141,8 +141,53 @@ puts "#{person_w_3_read_accessors.name} was created at #{person_w_3_read_accesso
 puts "------------------------------------------------------------------------------------------"
 
 
+puts "------------------------------------------------------------------------------------------"
+##############################################################
+#          CLASS-LEVEL DATA (PROPERTIES, CONSTANTS)          #
+##############################################################
+puts "***************** CLASS-LEVEL DATA (PROPERTIES, CONSTANTS) *****************"
 
+puts " ----- DEFINE A CLASS WITH A CLASS CONSTANT -----"
+class PersonWithClassConstant
+	SPECIES = "homo sapien"
+	def initialize(name = "\[DEFAULT\]")
+		puts "person has been born!"
+	end
+end
 
+puts " ----- OUTPUT CLASS CONSTANT FROM THE CLASS OBJECT -----"
+puts PersonWithClassConstant::SPECIES 			# => homo sapien
+
+puts " ----- INSTANTIATE CLASS WITH A CLASS CONSTANT -----"
+person_with_class_constant = PersonWithClassConstant.new
+
+puts " ----- OUTPUT CLASS CONSTANT FROM THE INSTANCE OF THE CLASS -----"
+puts person_with_class_constant.class::SPECIES 	# => homo sapien 
+
+puts "------------------------------------------------------------------------------------------"
+
+puts " ----- DEFINE A CLASS WITH A CLASS LEVEL VARIABLE -----"
+class PersonWithClassLevelVariable
+	def PersonWithClassLevelVariable.get_latest
+		puts "The latest person is #{@@latest}"
+	end
+	def initialize(name)
+		@@latest = name
+	end
+end
+
+puts " ----- 1: INSTANTIATE ONCE THEN OUTPUT CLASS-LEVEL VARIABLE FROM THE CLASS OBJECT -----"
+jacky_o_hare = PersonWithClassLevelVariable.new('jacky o hare')
+puts PersonWithClassLevelVariable.get_latest
+
+puts " ----- 2: INSTANTIATE THEN OUTPUT CLASS-LEVEL VARIABLE FROM THE CLASS OBJECT AGAIN -----"
+johnny_d = PersonWithClassLevelVariable.new('johnny d')
+puts PersonWithClassLevelVariable.get_latest
+
+puts " ----- GET CLASS LEVEL VARIABLE VALUE FROM AN INSTANCE OF THE CLASS -----"
+johnny_d.class::get_latest
+
+puts "------------------------------------------------------------------------------------------"
 
 #########################################
 #          METHOD MANIPULATION          #
