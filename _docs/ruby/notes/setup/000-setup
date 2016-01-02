@@ -5,8 +5,26 @@
 . ~/.bashrc
 . ~/.bash_profile
 
+# get ruby-install
+wget -O ruby-install-0.6.0.tar.gz https://github.com/postmodern/ruby-install/archive/v0.6.0.tar.gz
+tar -xzvf ruby-install-0.6.0.tar.gz
+cd ruby-install-0.6.0/
+sudo make install
+
+# get rbenv and a plugin
+sudo apt-get install rbenv
+git clone https://github.com/rbenv/ruby-build.git ~/.rbenv/plugins/ruby-build
+
+# install latest ruby
+# ruby-install ruby 2.3.0
+ruby-install --system ruby 2.3.0
+
+# update rubygems
+rvm @global do sudo gem install rubygems-update
+sudo update_rubygems
+
 # get "rerun" module, to allow insta-rerunning of ruby scripts (a la nodemon)
-rvm @global do gem install rerun
+rvm @global do sudo gem install rerun
 
 # to make rerun work smoothly
 rvm @global do sudo gem install rb-fsevent
@@ -23,3 +41,9 @@ rvm @global do sudo gem install wirble
 
 # bookmark this: http://rubular.com/
 # --- it's an online regex tester for ruby
+
+# Rails
+rvm @global do sudo gem install rails
+
+#If you're doing Rails...
+rails new --database=postgresql [./path/to/new/project/dir/here]
