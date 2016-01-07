@@ -3,7 +3,7 @@
 
 require "filesize"
 
-FSIZE_WIDTH = 35
+FSIZE_WIDTH = 52
 
 class ArgHandler
     attr_accessor :hide_locked, :hide_hidden, :hide_unhidden, :hide_dirs, :hide_files
@@ -86,6 +86,7 @@ def output_file_list(file_list)
         # pretty_file_size
         puts "#{dir_or_file(filename)}  |#{perms(filename)} |#{filename.ljust(FSIZE_WIDTH)}|#{pretty_file_size(filename)}|"
     end
+    puts "___|____PERM____|#{"FILENAME".center(FSIZE_WIDTH, "_")}|___SIZE____|"
 end
 
 output_file_list(filter_file_list(args.hide_hidden, args.hide_unhidden, 
