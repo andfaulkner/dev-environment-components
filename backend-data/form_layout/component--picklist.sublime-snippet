@@ -1,0 +1,17 @@
+<snippet>
+	<content><![CDATA[
+{
+	comment: '$1',
+	field: '${1}',
+	$0//TODO: displayRule: '${2:ADD-DISPLAY-RULE-NAME-HERE}',
+	caption: '${1/([a-zA-Z]+)(?:(\s+?)|\b)/\L$1(?2:_)\E/g/g}',
+	type: 'picklist',
+	picklistData: '${1/([a-zA-Z]+)(?:(\s+?)|\b)/\L$1(?2:_)\E/g/g}s'
+},
+]]></content>
+	<!-- field: '${1/([a-zA-Z]+)(?:(\s+?)|\b)/\L$1(?2:)\E/g/g}', -->
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>formlayout_picklist</tabTrigger>
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<!-- <scope>source.python</scope> -->
+</snippet>
