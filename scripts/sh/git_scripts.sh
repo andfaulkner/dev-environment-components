@@ -1,13 +1,15 @@
-
+################################################################################
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ GIT ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+################################################################################
 alias gaa="git add --all"
 alias gca="git commit --all -m"
 alias gpo="git push origin"
-alias gremote="git init; git remote add origin" #arg: location of repo
+alias g_remote="git init; git remote add origin" #arg: location of repo
 alias grro="git remote remove origin"
 alias grao="git remote add origin" #[place remote repo uri here]
 
 # SANER GIT BRANCH DISPLAY - only show my own branches
-function gitbranches {
+function g_branches {
     DASHESLINE='--------------------------------------------------------------------------------------';
     echo '';
     echo $DASHESLINE;
@@ -22,8 +24,16 @@ function gitbranches {
     echo '';
 }
 
-alias g_currepo="git remote -v | xargs ruby -e \"puts 'git@andfaulkner.github.com:andfaulkner' + ARGV.find{ |arg| /^git@.*:/.match(arg) }.split('/').last\" 2>/dev/null"
+# get the remote repository location
+alias g_currepo="git remote -v | xargs ruby -e \"
+    puts 'git@andfaulkner.github.com:andfaulkner' + ARGV.find { |arg| 
+        /^git@.*:/.match(arg) 
+    }.split('/').last
+\" 2>/dev/null"
 
+#display name of current git branch
+alias g_curbranch="git branch | grep '\*'"
+alias curbranch="g_curbranch"
 
 #function reclaimbranch
 #git remote add origin git@andfaulkner.github.com:andfaulkner/$1"
