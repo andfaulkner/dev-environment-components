@@ -8,6 +8,12 @@ alias g_remote="git init; git remote add origin" #arg: location of repo
 alias grro="git remote remove origin"
 alias grao="git remote add origin" #[place remote repo uri here]
 
+# Squash together any number of the most recent commits into 1
+# @param $1 - number of commits to squash together (including HEAD, so 1 does nothing)
+function g_squash {
+    git rebase -i HEAD~$1
+}
+
 # SANER GIT BRANCH DISPLAY - only show my own branches
 function g_branches {
     DASHESLINE='--------------------------------------------------------------------------------------';
