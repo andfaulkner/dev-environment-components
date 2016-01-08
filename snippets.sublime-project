@@ -2,7 +2,11 @@
 	"folders":
 	[
 		{
+<<<<<<< HEAD
 			"path": "."
+=======
+			"path": "/home/andrew/projects/ruby/rails_test_1"
+>>>>>>> 11577ce428cdac2cf57847116b2ee6b431bbd597
 		}
 	]
 }
