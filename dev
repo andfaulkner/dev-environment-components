@@ -1,0 +1,3 @@
+Ignoring binding_of_caller-0.7.2 because its extensions are not built.  Try: gem pristine binding_of_caller --version 0.7.2
+Ignoring byebug-8.2.1 because its extensions are not built.  Try: gem pristine byebug --version 8.2.1
+Ignoring debug_inspector-0.0.2 because its extensions are not built.  Try: gem pristine debug_inspector --version 0.0.2

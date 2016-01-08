@@ -1,0 +1,41 @@
+<snippet>
+	<content><![CDATA[
+var path = require('path');
+var fs = require('fs');
+var util = require('util');
+var through2 = require('through2');
+var childProcess = require('child_process');
+var events = require("events");
+
+var currentDir = __dirname;
+var currentFile = __filename;
+
+console.log("node file loaded!");
+
+
+
+/**
+ * @module ${1:moduleName}
+ * @return {Object} set of public functions, properties, and objects
+ */
+module.exports = (function ${1:moduleName}(){
+
+
+	//Closure
+
+
+//****************************** PUBLIC ******************************//
+	return({
+		${2:publicFnName}: function ${2:publicFnName}(){
+                
+                },
+	});
+//********************************************************************//
+
+}());
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>nodemodule_starter</tabTrigger>
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<scope>source.js</scope>
+</snippet>

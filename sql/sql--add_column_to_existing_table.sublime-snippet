@@ -1,0 +1,11 @@
+<snippet>
+	<description>Add column to existing table.</description>
+	<content><![CDATA[
+ALTER TABLE ${1:table_name}
+	ADD COLUMN ${2:name_of_new_col} ${3:new_col_data_type_eg_TEXT_or_INTEGER};
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>sql__add_col_to_table</tabTrigger>
+	<!-- Optional: Set a scope to limit where teh snippet will trigger -->
+	<!-- <scope>source.python</scope> -->
+</snippet>
