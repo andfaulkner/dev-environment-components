@@ -1,4 +1,8 @@
+<<<<<<< HEAD
+#!/usr/bin/ruby
+=======
 #!/usr/local/bin/ruby
+>>>>>>> 11577ce428cdac2cf57847116b2ee6b431bbd597
 
 ##############################
 ########## INSPECT ###########
@@ -6,6 +10,8 @@
 
 puts "\n ----- DISPLAYS THE CURRENT DATA CONTENT OF THE OBJECT -----"
 puts [1, 2, 3].inspect
+<<<<<<< HEAD
+=======
 
 
 
@@ -21,3 +27,4 @@ if __FILE__ == $0
 	puts "...which is where classes actually start to matter"
 end
 
+>>>>>>> 11577ce428cdac2cf57847116b2ee6b431bbd597

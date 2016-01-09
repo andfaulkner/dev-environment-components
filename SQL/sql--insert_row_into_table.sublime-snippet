@@ -1,0 +1,19 @@
+<snippet>
+	<description>Insert row into table (multiple data points)</description>
+	<content><![CDATA[
+INSERT INTO
+	${1:table_name} (
+		${2:column_1_name},
+		${4:col_2_name},
+		${6:col_3_name}
+	) VALUES (
+		${3:data_to_insert_in_col1},
+		${5:data_for_col2},
+		${6:data_for_col3}
+	);
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>sql__insert_row_into_table</tabTrigger>
+	<!-- Optional: Set a scope to limit where teh snippet will trigger -->
+	<!-- <scope>source.python</scope> -->
+</snippet>

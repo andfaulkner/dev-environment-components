@@ -1,0 +1,16 @@
+<snippet>
+	<content><![CDATA[
+//Read in file pathToFile, return file contents in Buffer 'data' if successful
+fs.readFile('${1:pathToFile}', function(err, data){
+	if (err) {
+		throw err;
+	}
+	console.log(data.toString());
+	${2}
+});
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>node_readfile</tabTrigger>
+	<!-- Optional: Set a scope to limit whvaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaere the snippet will trigger -->
+	<scope>source.js</scope>
+</snippet>
