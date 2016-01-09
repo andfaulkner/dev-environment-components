@@ -1,0 +1,12 @@
+<snippet>
+	<description>Update all rows that match WHERE condition to have new value in the SET column</description>
+	<content><![CDATA[
+UPDATE ${1:table_name}
+	SET ${2:col_to_edit} = ${3:new_value}
+	WHERE ${4:col_to_test_against} = ${5:val_test_col_req_to_meet_cnd};
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>sql__edit_rowdata__on_eq_condition</tabTrigger>
+	<!-- Optional: Set a scope to limit where teh snippet will trigger -->
+	<!-- <scope>source.python</scope> -->
+</snippet>

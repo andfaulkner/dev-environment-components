@@ -1,4 +1,8 @@
+<<<<<<< HEAD
+#!/usr/bin/ruby
+=======
 #!/usr/local/bin/ruby
+>>>>>>> 11577ce428cdac2cf57847116b2ee6b431bbd597
 
 require 'etc'
 

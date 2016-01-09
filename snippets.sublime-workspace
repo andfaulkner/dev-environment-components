@@ -4,6 +4,13 @@
 		"selected_items":
 		[
 			[
+<<<<<<< HEAD
+				"time",
+				"timeout	setTimeout function"
+			]
+		]
+	},
+=======
 				"_sort",
 				"_sortByAll	Sort arr or obj via any # of sorters (both sort vals & fns)"
 			],
@@ -352,6 +359,7 @@
 			}
 		}
 	],
+>>>>>>> 11577ce428cdac2cf57847116b2ee6b431bbd597
 	"build_system": "",
 	"build_system_choices":
 	[
@@ -359,6 +367,13 @@
 	"build_varint": "",
 	"command_palette":
 	{
+<<<<<<< HEAD
+		"height": 327.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+=======
 		"height": 201.0,
 		"last_filter": "install",
 		"selected_items":
@@ -460,10 +475,64 @@
 				"Favorite Files: Open File(s)"
 			],
 			[
+>>>>>>> 11577ce428cdac2cf57847116b2ee6b431bbd597
 				"fav",
 				"Favorite Files: Open File(s)"
 			],
 			[
+<<<<<<< HEAD
+				"next",
+				"Set Syntax: JavaScript Next"
+			],
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"packag",
+				"Package Control: Install Package"
+			],
+			[
+				"favo",
+				"Favorite Files: Open File(s)"
+			],
+			[
+				"chara",
+				"Character Table: Lookup Unicode Character"
+			],
+			[
+				"package",
+				"Package Control: Install Package"
+			],
+			[
+				"edpr",
+				"Project: Edit Project"
+			],
+			[
+				"",
+				"About"
+			],
+			[
+				"j",
+				"JsonTree: Show Tree"
+			],
+			[
+				"inst",
+				"Package Control: Install Package"
+			],
+			[
+				"pack",
+				"Preferences: Browse Packages"
+			]
+		],
+		"width": 692.0
+	},
+	"console":
+	{
+		"height": 126.0,
+		"history":
+		[
+=======
 				"jscs",
 				"JSHint: Set Linting Preferences"
 			],
@@ -557,6 +626,7 @@
 		[
 			"import urllib.request,os,hashlib; h = '7183a2d3e96f11eeadd761d777e62404' + 'e330c659d4bb41d3bdf022e94cab3cd0'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)",
 			"import urllib.request,os,hashlib; h = '7183a2d3e96f11eeadd761d777e62404' + 'e330c659d4bb41d3bdf022e94cab3cd0'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by) ",
+>>>>>>> 11577ce428cdac2cf57847116b2ee6b431bbd597
 			"import urllib.request,os,hashlib; h = 'eb2297e1a458f27d836c04bb0cbaf282' + 'd0e7a3098092775ccb37ca9d6b2e4b7d'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)"
 		]
 	},
@@ -569,6 +639,142 @@
 		"side_bar_visible": false,
 		"status_bar_visible": false
 	},
+<<<<<<< HEAD
+	"file_history":
+	[
+		"/home/andrew/.config/sublime-text-3/Packages/User/snippets/commenting/ruby/comment--ruby_heading_block.sublime-snippet",
+		"/home/andrew/.config/sublime-text-3/Packages/User/snippets/commenting/ruby/comment--ruby_heading_block_with_sep.sublime-snippet",
+		"/home/andrew/.config/sublime-text-3/Packages/User/snippets/commenting/ruby/comment--ruby_cli_heading.sublime-snippet",
+		"/home/andrew/.config/sublime-text-3/Packages/User/snippets/commenting/comment--method_major.sublime-snippet",
+		"/home/andrew/.config/sublime-text-3/Packages/User/snippets/commenting/comment--method-major.sublime-snipppet",
+		"/home/andrew/.config/sublime-text-3/Packages/User/snippets/commenting/comment--block-huge.sublime-snippet",
+		"/home/andrew/.config/sublime-text-3/Packages/User/snippets/commenting/comment--bigheader-dashlines.sublime-snippet",
+		"/home/andrew/.config/sublime-text-3/Packages/User/snippets/commenting/comment-flatline.sublime-snippet",
+		"/home/andrew/.config/sublime-text-3/Packages/User/snippets/commenting/comment--note_very_big.sublime-snippet",
+		"/home/andrew/.config/sublime-text-3/Packages/User/snippets/commenting/comment--linter_global_var_declarations.sublime-snippet",
+		"/Users/andrew/Library/Application Support/Sublime Text 3/Packages/User/snippets/logging/logging--log-block-surrounded.sublime-snippet",
+		"/Users/andrew/Library/Application Support/Sublime Text 3/Packages/User/snippets/commenting/comment--block-1line-bookend.sublime-snippet",
+		"/Users/andrew/Library/Application Support/Sublime Text 3/Packages/User/snippets/commenting/comment--note_very_big.sublime-snippet",
+		"/Users/andrew/Library/Application Support/Sublime Text 3/Packages/User/snippets/commenting/comment--block-huge.sublime-snippet",
+		"/Users/andrew/Library/Application Support/Sublime Text 3/Packages/User/snippets/commenting/comment--method-major.sublime-snipppet",
+		"/Users/andrew/Library/Application Support/Sublime Text 3/Packages/User/snippets/commenting/comment--bigheader-dashlines.sublime-snippet",
+		"/Users/andrew/Library/Application Support/Sublime Text 3/Packages/User/snippets/commenting/comment-block-1line-bookend.sublime-snippet",
+		"/Users/andrew/Library/Application Support/Sublime Text 3/Packages/User/snippets/commenting/comment-section.sublime-snippet",
+		"/Users/andrew/Library/Application Support/Sublime Text 3/Packages/User/snippets/commenting/comment--header-block-dashlines.sublime-snippet",
+		"/Users/andrew/Library/Application Support/Sublime Text 3/Packages/User/snippets/-guides/pgsql-postgres-handyCmds.md",
+		"/Users/andrew/Library/Application Support/Sublime Text 3/Packages/User/snippets/pgdumper.sh",
+		"/Users/andrew/Library/Application Support/Sublime Text 3/Packages/User/snippets/project-setup/isightconf_view_ex_base.sublime-snippet",
+		"/Users/andrew/Library/Application Support/Sublime Text 3/Packages/User/snippets/docs/location--origin.sublime-snippet",
+		"/Users/andrew/Library/Application Support/Sublime Text 3/Packages/User/snippets/lodash/lodash--repeat_text.sublime-snippet",
+		"/Users/andrew/Library/Application Support/Sublime Text 3/Packages/User/snippets/lodash/lodash--arguments_to_array.sublime-snippet",
+		"/Users/andrew/Library/Application Support/Sublime Text 3/Packages/User/snippets/lodash/lodash--arguments_to_array2.sublime-snippet",
+		"/Users/andrew/Library/Application Support/Sublime Text 3/Packages/User/snippets/lodash/lodash--repeat_text-trigger2.sublime-snippet",
+		"/Users/andrew/Library/Application Support/Sublime Text 3/Packages/User/snippets/lodash/lodash--repeat_text-trigger3.sublime-snippet",
+		"/Users/andrew/Library/Application Support/Sublime Text 3/Packages/User/snippets.sublime-project",
+		"/Users/andrew/projects/isight/isight_main_v5_beta/package.json",
+		"/Users/andrew/projects/isight/isight_main_v5_beta/public/js/lib/view-manager.js",
+		"/Users/andrew/projects/isight/isight_main_v5_beta/gulpfile.js",
+		"/Users/andrew/projects/isight/config_base_v5/nodemon.json",
+		"/Users/andrew/projects/isight/isight_main_v5_beta/lib/common/workflowHelper.js",
+		"/Users/andrew/projects/isight/isight_main_v5_beta/script/create-users-demo.js",
+		"/Users/andrew/projects/isight/config_base_v5/data/translations/en_US.js",
+		"/Users/andrew/projects/isight/isight_main_v5_beta/public/js/views/common/profile-view.js",
+		"/Users/andrew/projects/isight/isight_main_v5_beta/public/templates/debug/view-info-tmpl.dust",
+		"/Users/andrew/projects/isight/isight_main_v5_beta/public/js/lib/logger.js",
+		"/Users/andrew/projects/isight/isight_main_v5_beta/public/js/lib/utils.js",
+		"/Users/andrew/projects/isight/isight_main_v5_beta/public/js/lib/rules-helper.js",
+		"/Users/andrew/projects/isight/isight_main_v5_beta/script/data/translations/en_US.js",
+		"/Users/andrew/projects/isight/isight_main_v5_beta/lib/api/web.js",
+		"/Users/andrew/projects/isight/isight_main_v5_beta/public/js/lib/helpers.js",
+		"/Users/andrew/projects/isight/isight_main_v5_beta/public/js/lib/backbone-router.js",
+		"/Users/andrew/projects/isight/config_base_v5/config/form-layouts/case-notification-details-form.js",
+		"/Users/andrew/projects/isight/isight_main_v5_beta/public/js/lib/acl.js",
+		"/Users/andrew/projects/isight/isight_main_v5_beta/public/js/lib/form-layout-helper.js",
+		"/Users/andrew/projects/isight/isight_main_v5_beta/public/js/lib/dust-ex.js",
+		"/Users/andrew/projects/isight/isight_main_v5_beta/public/js/lib/backbone-view.js",
+		"/Users/andrew/projects/isight/isight_main_v5_beta/public/js/lib/backbone-collection.js",
+		"/Users/andrew/projects/isight/isight_main_v5_beta/lib/services/business-logic/trigger/notification.js",
+		"/Users/andrew/projects/isight/isight_main_v5_beta/public/js/routers/index.js",
+		"/Users/andrew/projects/isight/isight_main_v5_beta/public/js/routers/index-external.js",
+		"/Users/andrew/projects/isight/isight_main_v5_beta/public/js/lib/record-locker.js",
+		"/Users/andrew/projects/isight/isight_main_v5_beta/lib/services/business-logic/case/workflow/case-deep-clone.js",
+		"/Users/andrew/projects/isight/isight_main_v5_beta/public/js/lib/jquery.picklist.js",
+		"/Users/andrew/projects/isight/isight_main_v5_beta/public/js/lib/history-nav.js",
+		"/Users/andrew/projects/isight/isight_main_v5_beta/public/js/collections/case-child-records-collection.js",
+		"/Users/andrew/projects/isight/isight_main_v5_beta/public/js/require-config.js",
+		"/Users/andrew/projects/isight/isight_main_v5_beta/public/components/Backbone.ModelBinder/lib/backbone.js",
+		"/Users/andrew/projects/isight/config_base_v5/public/.jshintrc",
+		"/Users/andrew/Library/Application Support/Sublime Text 3/Packages/User/Preferences.sublime-settings",
+		"/Users/andrew/projects/isight/isight_main_v5_beta/nodemon.json",
+		"/Users/andrew/Library/Application Support/Sublime Text 3/Packages/Default/Preferences.sublime-settings",
+		"/Users/andrew/projects/isight/isight_main_v5_beta/server.js",
+		"/Users/andrew/Library/Application Support/Sublime Text 3/Packages/User/Default (OSX).sublime-keymap",
+		"/Users/andrew/Library/Application Support/Sublime Text 3/Packages/Default/Default (OSX).sublime-keymap",
+		"/Users/andrew/Library/Application Support/Sublime Text 3/Packages/Alignment/Default (OSX).sublime-keymap",
+		"/Users/andrew/projects/isight/isight_main_v5_beta/lib/controllers/index.js",
+		"/Users/andrew/projects/isight/config_corning_v5/v5.sublime-project",
+		"/Users/andrew/projects/isight/isight_main_v5_beta/docs/config-project/overriding-standard-view-model-collection.md",
+		"/Users/andrew/projects/isight/config_base_v5/node_modules/isight/package.json",
+		"/Users/andrew/Library/Application Support/Sublime Text 3/Packages/User/JavaScript (DOM).sublime-settings",
+		"/Users/andrew/projects/isight/isight_main_v5_beta/public/js/test/framework/translations/index.js",
+		"/Users/andrew/projects/isight/config_base_v5/package.json",
+		"/Users/andrew/projects/isight/isight_main_v5_beta/node_modules/config_corning_v5/public/js/views/file/files-view-ex.js",
+		"/Users/andrew/projects/isight/isight_main_v5_beta/public/js/test/framework/form-generation/index.js",
+		"/Users/andrew/projects/isight/isight_main_v5_beta/public/js/models/trigger-model.js",
+		"/Users/andrew/projects/isight/isight_main_v5_beta/public/js/models/standard-response-model.js",
+		"/Users/andrew/projects/isight/isight_main_v5_beta/public/js/models/event-model.js",
+		"/Users/andrew/projects/isight/isight_main_v5_beta/public/js/models/case-related-model.js",
+		"/Users/andrew/projects/isight/isight_main_v5_beta/docs/development/UI.md",
+		"/Users/andrew/projects/isight/isight_main_v5_beta/.jscsrc",
+		"/Users/andrew/projects/isight/config_base_v5/public/js/models/party-model-ex.js",
+		"/Users/andrew/projects/isight/config_base_v5/public/css/style.less",
+		"/Users/andrew/projects/isight/config_base_v5/mail-templates/case-ownership-declined/text.ejs",
+		"/Users/andrew/projects/isight/config_base_v5/server.js",
+		"/Users/andrew/projects/isight/config_base_v5/Dockerfile",
+		"/Users/andrew/projects/isight/config_base_v5/mail-templates/password-generated/html.ejs",
+		"/Users/andrew/Library/Application Support/Sublime Text 3/Packages/TrailingSpaces/trailing_spaces.sublime-settings",
+		"/Users/andrew/Library/Application Support/Sublime Text 3/Packages/User/trailing_spaces.sublime-settings",
+		"/Users/andrew/projects/isight/config_base_v5/test/test.sample.js",
+		"/Users/andrew/projects/isight/config_base_v5/README.md",
+		"/Users/andrew/projects/isight/config_base_v5/.jscsrc",
+		"/Users/andrew/projects/isight/config_base_v5/.travis.yml",
+		"/Users/andrew/projects/isight/config_base_v5/Makefile",
+		"/Users/andrew/projects/isight/isight_main_v5_beta/.jshintrc",
+		"/Users/andrew/projects/isight/isight_main_v5_beta/script/create-users.js",
+		"/Users/andrew/projects/isight/config_base_v5/public/js/require-config.js",
+		"/Users/andrew/projects/isight/isight_main_v5_beta/public/templates/report/reports-tmpl.dust",
+		"/Users/andrew/projects/isight/isight_main_v5_beta/public/css/app.less",
+		"/Users/afaulkner/projects/isight/config_bcd_v5/config/entity-rules.js",
+		"/Users/andrew/projects/isight/config_corning_v5/node_modules/isight/lib/common/workflowHelper.js",
+		"/Users/afaulkner/projects/isight/config_bcd_v5/config/entities/sys_holidayEntry.entity.js",
+		"/Users/afaulkner/projects/isight/config_bcd_v5/config/form-layouts/holiday-calendar-details-form.js",
+		"/Users/afaulkner/projects/isight/config_bcd_v5/data/lists/regions.json",
+		"/Users/andrew/projects/isight/config_walmart_v5/node_modules/isight/node_modules/.bin/nodemon",
+		"/Users/afaulkner/projects/isight/config_bcd_v5/lib/services/business-logic/holiday-entry/workflow/auto-populate-team.js",
+		"/Users/afaulkner/projects/isight/config_bcd_v5/lib/services/business-logic/holiday-entry/workflow-holiday-entry.js",
+		"/Users/andrew/projects/isight/isight_main_v5_beta/.jshintignore",
+		"/Users/andrew/projects/isight/isight_main_v5_beta/srv/import.js",
+		"/Users/andrew/projects/isight/isight_main_v5_beta/lib/services/business-logic/case/workflow/case-attr-change-access-control.js",
+		"/Users/andrew/projects/isight/isight_main_v5_beta/script/es-config.sh",
+		"/Users/afaulkner/projects/isight/config_bcd_v5/public/js/views/settings/holiday-calendar/holiday-calendar-view-ex.js",
+		"/Users/andrew/projects/isight/isight_main_v5_beta/lib/services/business-logic/holiday-entry/workflow/default-properties.js",
+		"/Users/andrew/projects/isight/isight_main_v5_beta/public/js/views/settings/holiday-calendar/holiday-calendar-view.js",
+		"/Users/andrew/projects/isight/isight_main_v5_beta/.build/templates/templates.js",
+		"/Users/andrew/projects/isight/isight_main_v5_beta/sonar-project.properties",
+		"/Users/andrew/projects/isight/isight_main_v5_beta/lib/common/app-dynamics-helper.js",
+		"/Users/andrew/projects/isight/config_corning_v5/node_modules/isight/node_modules/seneca-auth/node_modules/connect/examples/logger.fast.js",
+		"/Users/andrew/projects/isight/isight_main_v5_beta/test/.jshintrc",
+		"/Users/afaulkner/projects/isight/config_bcd_v5/data/lists/teams.json",
+		"/Users/afaulkner/projects/isight/config_bcd_v5/script/database/latest.sql",
+		"/Users/andrew/projects/isight/isight_main_v5_beta/public/templates/settings/holiday-calendar/editable-holiday-calendar-tmpl.dust",
+		"/Users/afaulkner/projects/isight/config_bcd_v5/public/js/views/settings/holiday-calendar/editable-holiday-calendar-view-ex.js",
+		"/Users/afaulkner/projects/isight/config_bcd_v5/test/api/holiday_entry/test.holiday_entry.crud.js",
+		"/Users/andrew/projects/isight/isight_main_v5_beta/.travis.yml"
+	],
+	"find":
+	{
+		"height": 35.0
+=======
 	"expanded_folders":
 	[
 		"/home/andrew/.config/sublime-text-3/Packages/User/snippets"
@@ -707,12 +913,33 @@
 	"find":
 	{
 		"height": 22.0
+>>>>>>> 11577ce428cdac2cf57847116b2ee6b431bbd597
 	},
 	"find_in_files":
 	{
 		"height": 93.0,
 		"where_history":
 		[
+<<<<<<< HEAD
+			"/Users/andrew/projects/isight/config_hp_v5/public/config/,/Users/andrew/projects/isight/config_hp_v5/public/css,/Users/andrew/projects/isight/config_hp_v5/public/img,/Users/andrew/projects/isight/config_hp_v5/public/js,/Users/andrew/projects/isight/config_hp_v5/public/templates,/Users/andrew/projects/isight/config_hp_v5/config,/Users/andrew/projects/isight/config_hp_v5/lib",
+			"/Users/andrew/projects/isight/isight_main_v5_beta/public/config/,/Users/andrew/projects/isight/isight_main_v5_beta/public/css,/Users/andrew/projects/isight/isight_main_v5_beta/public/img,/Users/andrew/projects/isight/isight_main_v5_beta/public/js,/Users/andrew/projects/isight/isight_main_v5_beta/public/templates,/Users/andrew/projects/isight/isight_main_v5_beta/config,/Users/andrew/projects/isight/isight_main_v5_beta/lib,*.csv",
+			"/Users/andrew/projects/isight/isight_main_v5_beta/public/config/,/Users/andrew/projects/isight/isight_main_v5_beta/public/css,/Users/andrew/projects/isight/isight_main_v5_beta/public/img,/Users/andrew/projects/isight/isight_main_v5_beta/public/js,/Users/andrew/projects/isight/isight_main_v5_beta/public/templates,/Users/andrew/projects/isight/isight_main_v5_beta/config,/Users/andrew/projects/isight/isight_main_v5_beta/lib",
+			"/Users/andrew/projects/isight/isight_main_v5_beta/public,/Users/andrew/projects/isight/isight_main_v5_beta/config,/Users/andrew/projects/isight/isight_main_v5_beta/lib,-/Users/andrew/projects/isight_main_v5_beta/public/components/**,-/Users/andrew/projects/isight/isight_main_v5_beta/public/components",
+			"/Users/andrew/projects/isight/isight_main_v5_beta/public,/Users/andrew/projects/isight/isight_main_v5_beta/config,/Users/andrew/projects/isight/isight_main_v5_beta/lib,-/Users/andrew/projects/isight_main_v5_beta/public/components/**",
+			"/Users/andrew/projects/isight/isight_main_v5_beta/public,/Users/andrew/projects/isight/isight_main_v5_beta/config,/Users/andrew/projects/isight/isight_main_v5_beta/lib,-/Users/andrew/projects/isight_main_v5_beta/public/components",
+			"/Users/andrew/projects/isight/isight_main_v5_beta/public,/Users/andrew/projects/isight/isight_main_v5_beta/config,/Users/andrew/projects/isight/isight_main_v5_beta/lib",
+			"/Users/andrew/projects/isight/isight_main_v5_beta/public/js/lib",
+			"<project>",
+			"/Users/andrew/projects/isight/isight_main_v5_beta",
+			"/Users/andrew/projects/isight/isight_main_v5_beta/**/utils*",
+			"/Users/andrew/projects/isight/isight_main_v5_beta/**/utils",
+			"/Users/andrew/projects/isight/isight_main_v5_beta",
+			"/Users/andrew/projects/isight/isight_main_v5_beta/public",
+			"<project>",
+			"*.js, <project>",
+			"*.js",
+			""
+=======
 			"<project>,-**/node_modules/**",
 			"<project>",
 			"<project>,-node_modules/**,-.build/**,*.js,-gulpfile.js",
@@ -745,6 +972,7 @@
 			"web_modules/js/**",
 			"web_modules/**",
 			"web_modules"
+>>>>>>> 11577ce428cdac2cf57847116b2ee6b431bbd597
 		]
 	},
 	"find_state":
@@ -752,6 +980,106 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+<<<<<<< HEAD
+			"CaseModel",
+			"csv",
+			"cases.?to.?close",
+			"cases.*close",
+			"cases",
+			"cases-to-close",
+			"csv",
+			"\\,",
+			"isight_main_v5_beta",
+			"csv",
+			"\\,",
+			",",
+			"app_CONF",
+			"seneca",
+			"populate-demo",
+			"populate",
+			"BBFView",
+			"BBModel",
+			"BBRouter",
+			"BBCollection",
+			"pluginName",
+			"shared\\-utils",
+			"sharedutils",
+			"\\$appData",
+			"$appData",
+			"backbone\\-router",
+			"_\\([^\\)]*\\)\\..*extend|_\\.extend|\\.extend",
+			"_\\([^\\)]*\\)\\..*extend|_\\.extend",
+			"_\\([^\\)]*\\)\\..*extend",
+			"_\\([^\\)]+\\)\\..*extend",
+			"_\\([^\\)]+\\)\\..+extend",
+			"_\\([^\\)]+\\)\\.extend",
+			"_extend",
+			"_\\.extend",
+			"helpers",
+			"CTRL TAB",
+			"workstream",
+			"translateKeys",
+			"storage",
+			"sessionStorage",
+			"translateKeyMissingList",
+			"translateKeyList",
+			"SUPER v",
+			"v",
+			"words",
+			"paste",
+			"console",
+			"missingTranslationsKeys",
+			"\\$appData",
+			"$appData",
+			"missingTranslationsKeys",
+			"missingTranslationKeys",
+			"locals",
+			"modelId",
+			"viewName",
+			"<",
+			"render",
+			"window.",
+			"translateKeysToSStorage",
+			"allowUndefinedKey",
+			"console",
+			"translateKeysToSessionStorage",
+			"sessionStorageKeysJSON",
+			"startPersistTimer",
+			"syntax",
+			"localStorage",
+			"keysFromStorageArr",
+			"localStorageKeysArray",
+			"translateKeys",
+			"storableArr",
+			"translateKeysFullArr",
+			"translateKeysStorable",
+			"translateKeyStorable",
+			");\n",
+			"'';\n",
+			"translateKey",
+			"origTranslateKey",
+			"log",
+			"translateKey",
+			"utils",
+			"\\{",
+			"{",
+			"translateKey",
+			"function translateKey",
+			"user",
+			"translateKey",
+			"isight",
+			".build",
+			"watch",
+			"create-users",
+			"workflow-[^\\w]",
+			"workflow-",
+			"team",
+			"holiday-calendar",
+			"Object.create",
+			"holiday_entry",
+			"holiday",
+			"Aruba"
+=======
 			"-------------------------",
 			"vehicledetailPrefixTranslations",
 			"HACK",
@@ -880,6 +1208,7 @@
 			"data\\ssent",
 			"data sent",
 			"DATA.?TO.?LOG"
+>>>>>>> 11577ce428cdac2cf57847116b2ee6b431bbd597
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -887,6 +1216,10 @@
 		"regex": true,
 		"replace_history":
 		[
+<<<<<<< HEAD
+			"config_hp_v5",
+			""
+=======
 			"=========================",
 			"	",
 			"return ",
@@ -947,6 +1280,7 @@
 			"_copy-static",
 			"__compiler",
 			"compiler"
+>>>>>>> 11577ce428cdac2cf57847116b2ee6b431bbd597
 		],
 		"reverse": false,
 		"show_context": true,
@@ -954,6 +1288,15 @@
 		"whole_word": false,
 		"wrap": true
 	},
+<<<<<<< HEAD
+	"incremental_find":
+	{
+		"height": 20.0
+	},
+	"input":
+	{
+		"height": 31.0
+=======
 	"groups":
 	[
 		{
@@ -1061,6 +1404,7 @@
 	"input":
 	{
 		"height": 34.0
+>>>>>>> 11577ce428cdac2cf57847116b2ee6b431bbd597
 	},
 	"layout":
 	{
@@ -1087,6 +1431,24 @@
 	"menu_visible": true,
 	"output.exec":
 	{
+<<<<<<< HEAD
+		"height": 22.0
+	},
+	"output.find_results":
+	{
+		"height": 334.0
+	},
+	"output.unicode_preview":
+	{
+		"height": 123.0
+	},
+	"pinned_build_system": "",
+	"replace":
+	{
+		"height": 64.0
+	},
+	"save_all_on_build": true,
+=======
 		"height": 68.0
 	},
 	"output.find_results":
@@ -1104,6 +1466,7 @@
 		"height": 40.0
 	},
 	"save_all_on_build": false,
+>>>>>>> 11577ce428cdac2cf57847116b2ee6b431bbd597
 	"select_file":
 	{
 		"height": 0.0,
@@ -1111,31 +1474,97 @@
 		"selected_items":
 		[
 			[
+<<<<<<< HEAD
+				".csv",
+				"data/cases-to-close.csv"
+			],
+			[
+				"",
+				"script/sample.csv"
+			],
+			[
+				"l/c/inde",
+				"isight_main_v5_beta/lib/controllers/index.js"
+			],
+			[
+				"lib/controllers/in",
+				"isight_main_v5_beta/lib/controllers/index.js"
+			],
+			[
+				"viewman",
+				"isight_main_v5_beta/public/js/lib/view-manager.js"
+			],
+			[
+				"vieinfotmp",
+				"isight_main_v5_beta/public/templates/debug/view-info-tmpl.dust"
+			],
+			[
+				"backbone",
+				"isight_main_v5_beta/public/js/lib/backbone-view.js"
+			],
+			[
+				"logger.js",
+				"isight_main_v5_beta/public/js/lib/logger.js"
+			],
+			[
+				"nodemon",
+				"isight/config_walmart_v5/node_modules/isight/node_modules/.bin/nodemon"
+			],
+			[
+				"holiday-calendar-view",
+				"isight/isight_main_v5_beta/public/js/views/settings/holiday-calendar/holiday-calendar-view.js"
+			],
+			[
+				"editable-holiday-calendar",
+				"isight/isight_main_v5_beta/public/templates/settings/holiday-calendar/editable-holiday-calendar-tmpl.dust"
+			],
+			[
+				"options.elastic",
+				"config_bcd_v5/config/options.elasticsearch.js"
+=======
 				"web.js",
 				"node_modules/isight/lib/api/web.js"
+>>>>>>> 11577ce428cdac2cf57847116b2ee6b431bbd597
 			]
 		],
 		"width": 0.0
 	},
 	"select_project":
 	{
+<<<<<<< HEAD
+		"height": 0.0,
+=======
 		"height": 500.0,
+>>>>>>> 11577ce428cdac2cf57847116b2ee6b431bbd597
 		"last_filter": "",
 		"selected_items":
 		[
 		],
+<<<<<<< HEAD
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 360.0,
+=======
 		"width": 380.0
 	},
 	"select_symbol":
 	{
 		"height": 392.0,
+>>>>>>> 11577ce428cdac2cf57847116b2ee6b431bbd597
 		"last_filter": "",
 		"selected_items":
 		[
 		],
+<<<<<<< HEAD
+		"width": 756.0
+	},
+=======
 		"width": 570.0
 	},
 	"selected_group": 0,
+>>>>>>> 11577ce428cdac2cf57847116b2ee6b431bbd597
 	"settings":
 	{
 	},
@@ -1143,10 +1572,17 @@
 	"show_open_files": true,
 	"show_tabs": true,
 	"side_bar_visible": true,
+<<<<<<< HEAD
+	"side_bar_width": 422.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+=======
 	"side_bar_width": 431.0,
 	"status_bar_visible": true,
 	"template_settings":
 	{
 		"max_columns": 1
+>>>>>>> 11577ce428cdac2cf57847116b2ee6b431bbd597
 	}
 }

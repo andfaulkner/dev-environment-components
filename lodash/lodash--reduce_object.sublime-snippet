@@ -1,0 +1,13 @@
+<snippet>
+    <content><![CDATA[
+_.reduce(${1:objToReduce}, function(${2:accumulator}, ${3:val}, ${4:key}) {
+	${5://code}
+	//${2:accumulator}[${4:key}] = ${3:val};
+	return ${2:accumulator}; //transformed accumulator
+}, ${2:accumulator});
+]]></content>
+    <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+    <tabTrigger>_reduceObject</tabTrigger>
+    <!-- Optional: Set a scope to limit where the snippet will trigger -->
+    <scope>source.js</scope>
+</snippet>
