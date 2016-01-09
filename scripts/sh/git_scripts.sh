@@ -40,6 +40,7 @@ alias g_currepo="git remote -v | xargs ruby -e \"
 #display name of current git branch
 alias g_curbranch="git branch | grep '\*'"
 alias curbranch="g_curbranch"
+alias gcbr="g_curbranch"
 
 #function reclaimbranch
 #git remote add origin git@andfaulkner.github.com:andfaulkner/$1"
