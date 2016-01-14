@@ -508,3 +508,19 @@ autoincrement value in table
 *   henceforth, the default value of column 'id' will be [previous row's id] + 1.
 *   each newly inserted row is assigned an id that is 1 higher than the row added directly before
 
+
+
+
+
+
+
+
+Alter
+        INSERT INTO roles(`role_id`, `role_name`) VALUES
+            (1, 'agent'),
+            (2, 'view_all_cases'),
+            (3, 'view_confidential'),
+            (4, 'view_restricted'),
+            (5, 'edit_confidential'),
+            (6, 'edit_restricted');
+
