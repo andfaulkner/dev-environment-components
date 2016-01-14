@@ -100,6 +100,19 @@ puts random_numbers.select {|num| num % 2 != 0 }.to_s
 puts " ----- FILTER OUT ODD NUMBERS WITH REJECT (ODD #s RETURN TRUE) -----"
 puts random_numbers.reject {|num| num % 2 != 0 }.to_s
 
+puts " ----- FILTER OUT METHODS FROM A METHOD LIST WITH PROGRESSIVE REJECTIONS -----"
+/asdf/.methods.sort.reject { |mtd|
+	mtd.to_s.match(/.*method.*/)
+}.reject { |mtd|
+	mtd.to_s.match(/.*instance.*/)
+}.reject { |mtd|
+	mtd.to_s.match(/.*class.*/)
+}
+# => [:!, :!=, :!~, :<=>, :==, :===, :=~, :__id__, :__send__, :casefold?, :clone,
+#			:display, :dup, :encoding, :enum_for, :eql?, :equal?, :extend, :fixed_encoding?,
+#			:freeze, :frozen?, :hash, :inspect, :is_a?, :kind_of?, :match, :named_captures,
+#			:names, :nil?, :object_id, :options, :public_send, :respond_to?, :send, :source,
+#			:taint, :tainted?, :tap, :to_enum, :to_s, :trust, :untaint, :untrust, :untrusted?, :~]
 
 puts "------------------------------------------------------------------------------------------"
 ####################################

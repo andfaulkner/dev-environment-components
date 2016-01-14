@@ -27,7 +27,13 @@ puts "--------------------------------------------------------------------------
 ################################################
 #          REGULAR EXPRESSION OBJECTS          #
 ################################################
-puts "***************** REGULAR EXPRESSION OBJECTS *****************"
+
+
+puts "------------------------------------------------------------------------------------------"
+###################################################################
+#          CREATING REGEXES; REGULAR EXPRESSION OBJECTS           #
+###################################################################
+puts "***************** CREATING REGEXES; REGULAR EXPRESSION OBJECTS *****************"
 puts " ----- CREATE A REGULAR EXPRESSION OBJECT -----"
 my_regex = /[^\.]*[\.]/
 # my_regex = /[a-zA-Z]+/
@@ -38,3 +44,23 @@ puts my_string.scan(my_regex).to_s		# => ["Here is a string.", " It is quite sil
 
 puts " ----- RETURN ALL MATCHING SUBSTRINGS -----"
 puts test_string.match(/[^\.]*[\.]/)
+
+puts " ----- CREATE NEW REGEX WITH Regexp.new -----"
+my_regex_2 = Regexp.new("[a-zA-Z]") # => identical to /[a-zA-Z]/
+
+
+puts "------------------------------------------------------------------------------------------"
+###################################
+#          REGEX OPTIONS          #
+###################################
+puts "***************** REGEX OPTIONS *****************"
+# Regexp::IGNORECASE		Ignore character case. Akin to /i
+# Regexp::MULTILINE			Newlines treated as regular character
+# Regexp::EXTENDED			ignores spaces and newlines
+
+puts " ----- SETTING REGEX OPTIONS IN A NEW REGEX -----"
+my_opts_regex = /abc/mix		# => multiline, case-insensitive, extended
+my_opts_regex_2 = /abc/m			# => multiline
+
+my_opts_regex_3 = Regexp.new("[a-zA-Z]", Regexp::IGNORECASE | Regexp::MULTILINE | Regexp::EXTENDED)
+# => identical to /[a-zA-Z]/mix

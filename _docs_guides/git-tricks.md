@@ -42,3 +42,10 @@ git://github.com/nherment/seneca-redis-store#master
 git+ssh://git@github.com:i-Sight/seneca-soap-client#master
 git://github.com/nherment/seneca-transport#master
 git://github.com/nherment/seneca-vcache#nherment/ability_to_disable_local_lru
+
+-------------------------------
+In-file indicators of mid-merge
+===============================
+>>>>>>> 11577ce428cdac2cf57847116b2ee6b431bbd597
+<<<<<<< HEAD
+=======
