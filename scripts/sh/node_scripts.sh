@@ -3,9 +3,17 @@
 ################################################################################
 alias nrn="npm run nodemon"
 
+alias nrnd="export LOG_LEVEL=debug; npm run nodemon"
+alias nrnt="export LOG_LEVEL=trace; npm run nodemon"
+alias nrns="export LOG_LEVEL=silly; npm run nodemon"
+alias nrne="export LOG_LEVEL=error; npm run nodemon"
+
 alias mds="make dev-setup"
+alias mdsr="make dev-setup; npm run nodemon"
 alias mpt="make populate-translations"
 alias mpl="make populate-lists"
+alias mg="make gulp"
+alias eri="make es-reindex-data"
 
 #find version of globally installed package
 alias npmpv="npm list -g | grep"

@@ -21,9 +21,9 @@ module DynamicAccessors
     # type accepts "full", "read", and "write"
     def create_accessor(accessor_name, value = "", type="full")
         instance_variable_set("@#{accessor_name}", value)
-        self.class.send(:attr_accessor, accessor_name) if (type == "full") 
-        self.class.send(:attr_reader, accessor_name) if (type == "read") 
-        self.class.send(:attr_writer, accessor_name) if (type == "write") 
+        self.class.send(:attr_accessor, accessor_name) if (type == "full")
+        self.class.send(:attr_reader, accessor_name) if (type == "read")
+        self.class.send(:attr_writer, accessor_name) if (type == "write")
     end
 end
 
@@ -38,9 +38,9 @@ end
 #   
 # Accessors are created for each accessor_name. Values are assigned to the accessors by
 # searching through params_from_cli for the string in cli_param, where:
-# If a cli_param matches an params_from_cli (ARGV) item, if there's an '=' in the params_from_cli 
-#   item, the right side of the = is assigned as the value of the accessor of accessor_name. 
-# If there is a match but no =, the accessor's value becomes (Boolean) true. 
+# If a cli_param matches an params_from_cli (ARGV) item, if there's an '=' in the params_from_cli
+#   item, the right side of the = is assigned as the value of the accessor of accessor_name.
+# If there is a match but no =, the accessor's value becomes (Boolean) true.
 # If there is no match, accessor value is (Boolean) false
 # 
 # Any "--" before a param passed in from the cli gets ignored
@@ -61,7 +61,7 @@ class ParsedArguments
                 (/^(--)?#{cli_arg_string}(=.*)?$/.match(cli_param_received))
             }
             if !!cli_param_val
-                cli_param_val = (cli_param_val.include? "=") ? 
+                cli_param_val = (cli_param_val.include? "=") ?
                                 cli_param_val.split('=')[1] : true
             else
                 cli_param_val = false
