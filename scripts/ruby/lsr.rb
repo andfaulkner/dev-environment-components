@@ -1,4 +1,4 @@
-#!/usr/local/bin/ruby
+#!/usr/bin/env ruby
 # home_dir = Dir.home()
 
 # Emits human-readable file information about current directory. Similar to ls.
@@ -29,9 +29,9 @@ FSIZE_WIDTH = 43
 module TitleSettings
     TITLE_SETTINGS = {
         :type=>{ :text=>"T", :width=>3 },
-        :perm=>{ :text=>"PERM", :width=>12 },
+        :perm=>{ :text=>"PERM", :width=>13 },
         :name=>{ :text=>"FILENAME", :width=>43 },
-        :size=>{ :text=>"SIZE", :width=>11 }
+        :size=>{ :text=>"SIZE", :width=>12 }
     }
 end
 
@@ -70,6 +70,7 @@ end
 # 
 class FileList
     include TitleSettings
+    attr_reader :header_length
     attr_accessor :display_cols
     def initialize(display_cols, title_config = {}, replace = false)
         if replace == true && ! title_config.empty?
@@ -97,20 +98,27 @@ class FileList
         }.join("")
     end
 
+    # Output a single row of data based on the full file data, the width of the column, and the file path
+    def display_row(fdata, path_col_width, file_path)
+        puts "|" + fdata.dir_or_file.center(TITLE_SETTINGS[:type][:width]) + 
+             "  " + fdata.perms.ljust(TITLE_SETTINGS[:perm][:width] - 1) + 
+             "  " + file_path + 
+             "  " + fdata.pretty_filesize.ljust(TITLE_SETTINGS[:perm][:width] - 2) + "|"
+    end
+
     # Outputs entire file grid - heading and file data - to the terminal. Display method.
     def output_file_list(file_list, fileDataClass)
+        puts ""
+        puts Array.new(heading_string().length,"-").join("")
         puts heading_string()
         file_list.sort.each do | filename |
             fdata = fileDataClass.new(filename)
             path_col_width = TITLE_SETTINGS[:name][:width]
-            file_path = fdata.file_path.ljust(path_col_width)
-
-            puts "|" + 
-            fdata.dir_or_file.ljust(TITLE_SETTINGS[:type][:width]) + "|" + 
-            fdata.perms.ljust(TITLE_SETTINGS[:perm][:width]) + "|" + 
-            file_path + "|" + fdata.pretty_filesize.ljust(TITLE_SETTINGS[:perm][:width] -1 )+ "|"
+            file_path = fdata.file_path.ljust(path_col_width-1)
+            display_row(fdata, path_col_width, file_path)
         end
-        puts Array.new(43,"_").join("")
+        puts Array.new(heading_string().length,"-").join("")
+        puts "" 
     end
 
     private
