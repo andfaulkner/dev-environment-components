@@ -1,0 +1,258 @@
+** GenericApi:: remove fn: enters
+
+
+** GenericApi:: remove fn: args: { end: 'delete_case_note',
+  role: 'api',
+  caseId: '7e883016-4cf9-4897-9d08-89278dd946cd',
+  id: 'e25b2b4d-6b98-4ee0-831b-f2d4661f4553',
+  'actid$': 'qtq4pt9zng0f/mecprvbkbzoe',
+  'meta$':
+   { id: 'qtq4pt9zng0f/mecprvbkbzoe',
+     tx: 'mecprvbkbzoe',
+     start: 1452295168323,
+     pattern: 'role:api,end:delete_case_note',
+     action: 'ksde4e1kyur5',
+     entry: true,
+     chain: [] },
+  'plugin$': { name: 'seneca-ld5utr', tag: undefined },
+  'ungate$': true,
+  'fatal$': false,
+  'tx$': 'mecprvbkbzoe' }
+
+
+** GenericApi:: remove fn: entity: $-/sys/note:{id=;}
+
+
+** GenericApi:: remove fn: query: { id: 'e25b2b4d-6b98-4ee0-831b-f2d4661f4553',
+  caseId: '7e883016-4cf9-4897-9d08-89278dd946cd' }
+
+
+** GenericApi:: remove fn: about to exit
+trace: 2016-01-08T23:19:28.325Z [lib/services/business-logic/common/merge.js] generateMerge()
+trace: 2016-01-08T23:19:28.326Z [lib/services/business-logic/common/workflow/audit-entities.js] auditLogLoad()
+
+
+** audit-entities.js:: auditLogLoad: entered
+trace: 2016-01-08T23:19:28.328Z [lib/services/business-logic/common/merge.js] mergeEntity()
+trace: 2016-01-08T23:19:28.328Z [lib/services/business-logic/common/workflow/audit-entities.js] auditLogRemoved()
+
+
+** audit-entities:: in auditLogRemoved
+
+
+** audit-entities:: auditLogRemoved:: args:{ qent: $-/sys/note:{id=e25b2b4d-6b98-4ee0-831b-f2d4661f4553;caseData={caseStatus:'open',caseType:null,owner:'261bbf82-407d-42c4-b8a0-78921f1b808a',investigativeTeamMembers:null,userBlacklist:null};caseId=7e883016-4cf9-4897-9d08-89278dd946cd;caseNumber=2016-01-00000006;caseType=null;createdBy=261bbf82-407d-42c4-b8a0-78921f1b808a;createdByName=i-Sight Software;createdDate=2016-01-08T23:19:23.759Z;details=;isActiveRecord=true;lastUpdatedBy=261bbf82-407d-42c4-b8a0-78921f1b808a;lastUpdatedDate=2016-01-08T23:19:23.759Z;noteType=Note Type 2;number=1},
+  q:
+   { id: 'e25b2b4d-6b98-4ee0-831b-f2d4661f4553',
+     caseId: '7e883016-4cf9-4897-9d08-89278dd946cd' },
+  cmd: 'remove',
+  role: 'entity',
+  ent: $-/sys/note:{id=e25b2b4d-6b98-4ee0-831b-f2d4661f4553;caseData={caseStatus:'open',caseType:null,owner:'261bbf82-407d-42c4-b8a0-78921f1b808a',investigativeTeamMembers:null,userBlacklist:null};caseId=7e883016-4cf9-4897-9d08-89278dd946cd;caseNumber=2016-01-00000006;caseType=null;createdBy=261bbf82-407d-42c4-b8a0-78921f1b808a;createdByName=i-Sight Software;createdDate=2016-01-08T23:19:23.759Z;details=;isActiveRecord=true;lastUpdatedBy=261bbf82-407d-42c4-b8a0-78921f1b808a;lastUpdatedDate=2016-01-08T23:19:23.759Z;noteType=Note Type 2;number=1},
+  name: 'note',
+  base: 'sys',
+  'plugin$': { name: 'seneca-ld5utr', tag: undefined },
+  'ungate$': true,
+  'fatal$': false,
+  'tx$': 'mecprvbkbzoe',
+  'perm$':
+   { roles:
+      [ 'agent',
+        'link_cases',
+        'delete',
+        'create_case',
+        'view_all_cases',
+        'edit_all_cases',
+        'edit_investigative_team',
+        'investigative_team_member',
+        'assign_case',
+        'view_children',
+        'edit_children',
+        'close_a_case',
+        'closed_case',
+        'reopen_case',
+        'edit_user',
+        'edit_documents',
+        'write_translations',
+        'edit_blacklists',
+        'settings',
+        'cancelled_cases',
+        'cancel_a_case',
+        'case_owner',
+        'closed_case_add_todo',
+        'closed_case_add_party',
+        'cases',
+        'notes',
+        'files',
+        'todos',
+        'custom_forms',
+        'emails',
+        'parties',
+        'reports',
+        'profile_grid_view',
+        'reopen_a_case' ] },
+  'user$': $-/sys/user:{id=261bbf82-407d-42c4-b8a0-78921f1b808a;active=true;admin=false;alignmentRegion=global;createdBy=null;createdDate=2016-01-08T16:56:27.732Z;dateregistered=null;email=isight@localhost;fax=null;firstName=i-Sight;lastName=Software;lastUpdatedBy=null;lastUpdatedDate=2016-01-08T16:56:27.732Z;locale=en_US;name=i-Sight Software;nick=isight;passwordResetCode=null;passwordResetSession=null;perm={roles:['agent','link_cases','delete','create_case','view_all_cases','edit_all_cases','edit_investigative_team','investigative_team_member','assign_case','view_children','edit_children','close_a_case','closed_case','reopen_case','edit_user','edit_documents','write_translations','edit_blacklists','settings','cancelled_cases','cancel_a_case','case_owner','closed_case_add_todo','closed_case_add_party','cases','notes','files','todos','custom_forms','emails','parties','reports','profile_grid_view','reopen_a_case']};phone=null;roles=['agent','link_cases','delete','create_case','view_all_cases','edit_all_cases','edit_investigative_team','investigative_team_member','assign_case','view_children','edit_children','close_a_case','closed_case','reopen_case','edit_user','edit_documents','write_translations','edit_blacklists','settings','cancelled_cases','cancel_a_case','case_owner','closed_case_add_todo','closed_case_add_party','case_owner','cases','notes','files','todos','custom_forms','emails','parties','reports','profile_grid_view'];samlId=null;service=null;signature=null;ssoUser=false;when=2016-01-08T16:56:27.648Z;yellowfinHash=null;yellowfinSalt=null;yellowfinUsername=null},
+  'login$': $-/sys/login:{id=b94c7cde-baf5-40a2-bacf-6cfcfb92cd10;active=true;auto=true;nick=isight;q={nick:'isight','raw$':true};token=b94c7cde-baf5-40a2-bacf-6cfcfb92cd10;user=261bbf82-407d-42c4-b8a0-78921f1b808a;when=2016-01-08T16:57:43.157Z;why=auto},
+  'join$': [ '*' ],
+  'showSoftDenied$': undefined,
+  'audit$': true,
+  'actid$': 'bzs2538f9a9r/mecprvbkbzoe',
+  'meta$':
+   { id: 'bzs2538f9a9r/mecprvbkbzoe',
+     tx: 'mecprvbkbzoe',
+     start: 1452295168328,
+     pattern: 'role:entity,cmd:remove,base:sys,name:note',
+     action: 'h2ejd78x16u9',
+     entry: false,
+     chain: [ 'frboaxyqu71m/mecprvbkbzoe' ] } }
+
+
+** audit-entities:: auditLogRemoved:: args.plugin$:{ name: 'seneca-ld5utr', tag: undefined }
+
+
+
+
+** audit-entities:: auditLogRemoved:: args.audit$ b4 condition::: true
+
+
+
+
+** audit-entities.js::: auditLogRemoved:: in seneca audit$ condition
+
+
+** audit-entities.js::: auditLogRemoved:: seneca.audit$ after condition: false
+
+
+
+
+** audit-entities.js::: auditLogRemoved:: entity:$-/sys/note:{id=;}
+trace: 2016-01-08T23:19:28.334Z [lib/services/business-logic/common/workflow/audit-entities.js] auditLogLoad()
+
+
+** audit-entities.js:: auditLogLoad: entered
+trace: 2016-01-08T23:19:28.335Z [lib/services/business-logic/common/workflow/audit-entities.js] auditLogLoad()
+
+
+** audit-entities.js:: auditLogLoad: entered
+trace: 2016-01-08T23:19:28.337Z [lib/services/business-logic/joins/workflow/join.js] joinFn()
+trace: 2016-01-08T23:19:28.337Z [lib/services/business-logic/common/workflow/audit-entities.js] auditLogLoad()
+
+
+** audit-entities.js:: auditLogLoad: entered
+trace: 2016-01-08T23:19:28.361Z [lib/services/business-logic/common/merge.js] generateMerge()
+trace: 2016-01-08T23:19:28.361Z [lib/services/business-logic/common/workflow/audit-entities.js] auditLogLoad()
+
+
+** audit-entities.js:: auditLogLoad: entered
+trace: 2016-01-08T23:19:28.364Z [lib/services/business-logic/common/merge.js] mergeEntity()
+trace: 2016-01-08T23:19:28.365Z [lib/services/business-logic/common/workflow/audit-entities.js] auditLogRemoved()
+
+
+** audit-entities:: in auditLogRemoved
+
+
+** audit-entities:: auditLogRemoved:: args:{ qent: $-/sys/note:{id=e25b2b4d-6b98-4ee0-831b-f2d4661f4553;caseData={caseStatus:'open',caseType:null,owner:'261bbf82-407d-42c4-b8a0-78921f1b808a',investigativeTeamMembers:null,userBlacklist:null};caseId=7e883016-4cf9-4897-9d08-89278dd946cd;caseNumber=2016-01-00000006;caseType=null;createdBy=261bbf82-407d-42c4-b8a0-78921f1b808a;createdByName=i-Sight Software;createdDate=2016-01-08T23:19:23.759Z;details=;isActiveRecord=true;lastUpdatedBy=261bbf82-407d-42c4-b8a0-78921f1b808a;lastUpdatedDate=2016-01-08T23:19:23.759Z;noteType=Note Type 2;number=1},
+  q:
+   { id: 'e25b2b4d-6b98-4ee0-831b-f2d4661f4553',
+     caseId: '7e883016-4cf9-4897-9d08-89278dd946cd' },
+  cmd: 'remove',
+  role: 'entity',
+  ent: $-/sys/note:{id=e25b2b4d-6b98-4ee0-831b-f2d4661f4553;caseData={caseStatus:'open',caseType:null,owner:'261bbf82-407d-42c4-b8a0-78921f1b808a',investigativeTeamMembers:null,userBlacklist:null};caseId=7e883016-4cf9-4897-9d08-89278dd946cd;caseNumber=2016-01-00000006;caseType=null;createdBy=261bbf82-407d-42c4-b8a0-78921f1b808a;createdByName=i-Sight Software;createdDate=2016-01-08T23:19:23.759Z;details=;isActiveRecord=true;lastUpdatedBy=261bbf82-407d-42c4-b8a0-78921f1b808a;lastUpdatedDate=2016-01-08T23:19:23.759Z;noteType=Note Type 2;number=1},
+  name: 'note',
+  base: 'sys',
+  'plugin$': { name: 'seneca-ld5utr', tag: undefined },
+  'ungate$': true,
+  'fatal$': false,
+  'tx$': 'mecprvbkbzoe',
+  'perm$':
+   { roles:
+      [ 'agent',
+        'link_cases',
+        'delete',
+        'create_case',
+        'view_all_cases',
+        'edit_all_cases',
+        'edit_investigative_team',
+        'investigative_team_member',
+        'assign_case',
+        'view_children',
+        'edit_children',
+        'close_a_case',
+        'closed_case',
+        'reopen_case',
+        'edit_user',
+        'edit_documents',
+        'write_translations',
+        'edit_blacklists',
+        'settings',
+        'cancelled_cases',
+        'cancel_a_case',
+        'case_owner',
+        'closed_case_add_todo',
+        'closed_case_add_party',
+        'cases',
+        'notes',
+        'files',
+        'todos',
+        'custom_forms',
+        'emails',
+        'parties',
+        'reports',
+        'profile_grid_view',
+        'reopen_a_case' ] },
+  'user$': $-/sys/user:{id=261bbf82-407d-42c4-b8a0-78921f1b808a;active=true;admin=false;alignmentRegion=global;createdBy=null;createdDate=2016-01-08T16:56:27.732Z;dateregistered=null;email=isight@localhost;fax=null;firstName=i-Sight;lastName=Software;lastUpdatedBy=null;lastUpdatedDate=2016-01-08T16:56:27.732Z;locale=en_US;name=i-Sight Software;nick=isight;passwordResetCode=null;passwordResetSession=null;perm={roles:['agent','link_cases','delete','create_case','view_all_cases','edit_all_cases','edit_investigative_team','investigative_team_member','assign_case','view_children','edit_children','close_a_case','closed_case','reopen_case','edit_user','edit_documents','write_translations','edit_blacklists','settings','cancelled_cases','cancel_a_case','case_owner','closed_case_add_todo','closed_case_add_party','cases','notes','files','todos','custom_forms','emails','parties','reports','profile_grid_view','reopen_a_case']};phone=null;roles=['agent','link_cases','delete','create_case','view_all_cases','edit_all_cases','edit_investigative_team','investigative_team_member','assign_case','view_children','edit_children','close_a_case','closed_case','reopen_case','edit_user','edit_documents','write_translations','edit_blacklists','settings','cancelled_cases','cancel_a_case','case_owner','closed_case_add_todo','closed_case_add_party','case_owner','cases','notes','files','todos','custom_forms','emails','parties','reports','profile_grid_view'];samlId=null;service=null;signature=null;ssoUser=false;when=2016-01-08T16:56:27.648Z;yellowfinHash=null;yellowfinSalt=null;yellowfinUsername=null},
+  'login$': $-/sys/login:{id=b94c7cde-baf5-40a2-bacf-6cfcfb92cd10;active=true;auto=true;nick=isight;q={nick:'isight','raw$':true};token=b94c7cde-baf5-40a2-bacf-6cfcfb92cd10;user=261bbf82-407d-42c4-b8a0-78921f1b808a;when=2016-01-08T16:57:43.157Z;why=auto},
+  'join$': [ '*' ],
+  'showSoftDenied$': undefined,
+  'audit$': false,
+  'actid$': 'db4dryj80p71/mecprvbkbzoe',
+  'meta$':
+   { id: 'db4dryj80p71/mecprvbkbzoe',
+     tx: 'mecprvbkbzoe',
+     start: 1452295168364,
+     pattern: 'role:entity,cmd:remove,base:sys,name:note',
+     action: 'h2ejd78x16u9',
+     entry: false,
+     chain: [ 'bzs2538f9a9r/mecprvbkbzoe' ] } }
+
+
+** audit-entities:: auditLogRemoved:: args.plugin$:{ name: 'seneca-ld5utr', tag: undefined }
+
+
+
+
+** audit-entities:: auditLogRemoved:: args.audit$ b4 condition::: false
+
+
+
+
+
+** audit-entities:: auditLogRemoved:: role:audt,cmd:log -->/
+{ role: 'audit',
+  cmd: 'log',
+  'user$': $-/sys/user:{id=261bbf82-407d-42c4-b8a0-78921f1b808a;active=true;admin=false;alignmentRegion=global;createdBy=null;createdDate=2016-01-08T16:56:27.732Z;dateregistered=null;email=isight@localhost;fax=null;firstName=i-Sight;lastName=Software;lastUpdatedBy=null;lastUpdatedDate=2016-01-08T16:56:27.732Z;locale=en_US;name=i-Sight Software;nick=isight;passwordResetCode=null;passwordResetSession=null;perm={roles:['agent','link_cases','delete','create_case','view_all_cases','edit_all_cases','edit_investigative_team','investigative_team_member','assign_case','view_children','edit_children','close_a_case','closed_case','reopen_case','edit_user','edit_documents','write_translations','edit_blacklists','settings','cancelled_cases','cancel_a_case','case_owner','closed_case_add_todo','closed_case_add_party','cases','notes','files','todos','custom_forms','emails','parties','reports','profile_grid_view','reopen_a_case']};phone=null;roles=['agent','link_cases','delete','create_case','view_all_cases','edit_all_cases','edit_investigative_team','investigative_team_member','assign_case','view_children','edit_children','close_a_case','closed_case','reopen_case','edit_user','edit_documents','write_translations','edit_blacklists','settings','cancelled_cases','cancel_a_case','case_owner','closed_case_add_todo','closed_case_add_party','case_owner','cases','notes','files','todos','custom_forms','emails','parties','reports','profile_grid_view'];samlId=null;service=null;signature=null;ssoUser=false;when=2016-01-08T16:56:27.648Z;yellowfinHash=null;yellowfinSalt=null;yellowfinUsername=null},
+  objectType: 'sys/note',
+  objectId: 'e25b2b4d-6b98-4ee0-831b-f2d4661f4553',
+  parentType: 'sys/case',
+  parentId: '7e883016-4cf9-4897-9d08-89278dd946cd',
+  diff: null,
+  entity: $-/sys/note:{id=e25b2b4d-6b98-4ee0-831b-f2d4661f4553;caseData={caseStatus:'open',caseType:null,owner:'261bbf82-407d-42c4-b8a0-78921f1b808a',investigativeTeamMembers:null,userBlacklist:null};caseId=7e883016-4cf9-4897-9d08-89278dd946cd;caseNumber=2016-01-00000006;caseType=null;createdBy=261bbf82-407d-42c4-b8a0-78921f1b808a;createdByName=i-Sight Software;createdDate=2016-01-08T23:19:23.759Z;details=;isActiveRecord=true;lastUpdatedBy=261bbf82-407d-42c4-b8a0-78921f1b808a;lastUpdatedDate=2016-01-08T23:19:23.759Z;noteType=Note Type 2;number=1},
+  action: 'remove' }
+trace: 2016-01-08T23:19:28.381Z [lib/common/audit/audit.js] logAudit()
+trace: 2016-01-08T23:19:28.399Z [srv/front.js] Request [GET]  /api/1.0/case/7e883016-4cf9-4897-9d08-89278dd946cd
+trace: 2016-01-08T23:19:28.403Z [lib/api/login-sessions.js] loadLogin()
+trace: 2016-01-08T23:19:28.408Z [lib/services/business-logic/user/workflow/user-clean.js] clean()
+trace: 2016-01-08T23:19:28.409Z [lib/services/business-logic/user/workflow/user-clean.js] clean()
+trace: 2016-01-08T23:19:28.409Z [lib/services/business-logic/user/workflow/user-clean.js] clean()
+trace: 2016-01-08T23:19:28.424Z [lib/api/GenericApi.js] load()
+trace: 2016-01-08T23:19:28.425Z [lib/services/business-logic/joins/workflow/join.js] joinFn()
+trace: 2016-01-08T23:19:28.426Z [lib/services/business-logic/joins/workflow/join.js] joinFn()
+trace: 2016-01-08T23:19:28.426Z [lib/services/business-logic/common/workflow/audit-entities.js] auditLogLoad()
+
+
+** audit-entities.js:: auditLogLoad: entered
+trace: 2016-01-08T23:19:28.428Z [lib/services/business-logic/joins/workflow/join.js] joinFn()
+trace: 2016-01-08T23:19:28.429Z [lib/services/business-logic/common/workflow/audit-entities.js] auditLogLoad()
+
+
+** audit-entities.js:: auditLogLoad: entered
+trace: 2016-01-08T23:19:28.437Z [lib/common/audit/audit.js] logAudit()
+trace: 2016-01-08T23:19:28.440Z [lib/common/audit/audit.js] logAudit()
