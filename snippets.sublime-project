@@ -4,5 +4,11 @@
 		{
 			"path": "."
 		}
-	]
+	],
+	"settings": {
+		"file_history": {
+		  "show_file_preview": false,
+		  "global_max_entries": 3
+		}		
+	}
 }

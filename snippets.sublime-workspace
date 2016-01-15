@@ -4,24 +4,28 @@
 		"selected_items":
 		[
 			[
-				"async_",
-				"async__waterfall_noinitparams	async--waterfall"
+				"readFileS",
+				"fs.readFileSync(path, options);"
 			],
 			[
-				"instance_vari",
-				"instance_variable_set	func"
+				"readFile",
+				"fs.readFileSync(path, options);"
 			],
 			[
-				"fs",
-				"fs.open"
+				"comment",
+				"comment_notebig	Moderate-size comment (3 line +)"
+			],
+			[
+				"log",
+				"log__var_val_in_block	Output var to CLI in big, conspicuous block"
+			],
+			[
+				"inspect",
+				"util.inspect(obj, opts);"
 			],
 			[
 				"_sort",
 				"_sortByAll	Sort arr or obj via any # of sorters (both sort vals & fns)"
-			],
-			[
-				"comment",
-				"comment_moduleheading	Main module heading - explain what module does etc."
 			],
 			[
 				"seneca_",
@@ -353,6 +357,9 @@
 			]
 		]
 	},
+	"buffers":
+	[
+	],
 	"build_system": "",
 	"build_system_choices":
 	[
@@ -360,13 +367,33 @@
 	"build_varint": "",
 	"command_palette":
 	{
-		"height": 201.0,
-		"last_filter": "install",
+		"height": 138.0,
+		"last_filter": "bookmar",
 		"selected_items":
 		[
 			[
+				"bookmar",
+				"Bookmarks: Toggle"
+			],
+			[
+				"package",
+				"Package Control: Remove Package"
+			],
+			[
 				"install",
 				"Package Control: Install Package"
+			],
+			[
+				"instal",
+				"Package Control: Install Package"
+			],
+			[
+				"JSON",
+				"JSON Reindent: reindent file or selection"
+			],
+			[
+				"json",
+				"JSON Reindent: reindent file or selection"
 			],
 			[
 				"html",
@@ -379,10 +406,6 @@
 			[
 				"snippet",
 				"Snippet: HTML - Navigation object (inline-block)"
-			],
-			[
-				"package",
-				"Preferences: Browse Packages"
 			],
 			[
 				"disable",
@@ -493,10 +516,6 @@
 				"SublimeBookmarks: Add Bookmark"
 			],
 			[
-				"instal",
-				"Package Control: Install Package"
-			],
-			[
 				"syntax: d",
 				"Set Syntax: Dust"
 			],
@@ -549,7 +568,7 @@
 				"Package Control: Install Package"
 			]
 		],
-		"width": 521.0
+		"width": 603.0
 	},
 	"console":
 	{
@@ -570,36 +589,64 @@
 		"side_bar_visible": false,
 		"status_bar_visible": false
 	},
+	"expanded_folders":
+	[
+		"/home/andrew/.config/sublime-text-3/Packages/User/snippets"
+	],
 	"file_history":
 	[
-		"/home/andrew/.config/sublime-text-3/Packages/User/snippets/dust/js--new_dust_template_view.sublime-snippet",
-		"/home/andrew/.config/sublime-text-3/Packages/User/snippets/_docs/ruby/notes/iterators/011-iterators_eg_each_collect_map.rb",
-		"/home/andrew/.config/sublime-text-3/Packages/User/snippets/_docs/ruby/notes/oop/c007-classes-dynamic-method-variable-etc-setting-getting.rb",
-		"/home/andrew/.config/sublime-text-3/Packages/User/snippets/_docs/ruby/notes/types/hashes/e001-hashes_creating_and_destroying.rb",
-		"/home/andrew/.config/sublime-text-3/Packages/User/snippets/_docs/ruby/notes/iterators/014-implementing_iterators.rb",
-		"/home/andrew/.config/sublime-text-3/Packages/User/snippets/_docs/ruby/notes/setup/000-setup",
-		"/home/andrew/.config/sublime-text-3/Packages/User/snippets/_docs/js/js-learning/async-in-order/async-in-order.js",
-		"/home/andrew/.config/sublime-text-3/Packages/User/snippets/scripts/ruby/git.rb",
-		"/home/andrew/.config/sublime-text-3/Packages/User/snippets/_docs/ruby/notes/013-debugging.rb",
-		"/home/andrew/.config/sublime-text-3/Packages/User/snippets/_docs/ruby/notes/functional_programming/f001-blocks_and_procs.rb",
-		"/home/andrew/.config/sublime-text-3/Packages/User/snippets/scripts/ruby/utils/parse_cli_arguments.rb",
-		"/home/andrew/.config/sublime-text-3/Packages/User/snippets/scripts/ruby/lsr.rb",
-		"/home/andrew/.config/sublime-text-3/Packages/User/snippets/scripts/lsr.rb",
-		"/home/andrew/.config/sublime-text-3/Packages/User/snippets/_tinkering/ruby/misc_iterator_experiments.rb",
-		"/home/andrew/.config/sublime-text-3/Packages/User/snippets/snippets.sublime-project",
-		"/home/andrew/projects/isight/config_complaints-demo_v5/config/entities/sys_case.entity.js",
-		"/home/andrew/projects/isight/config_complaints-demo_v5/config/form-layouts/case-escalation-details-form.js",
-		"/home/andrew/projects/isight/config_complaints-demo_v5/data/translations/en_US.js",
-		"/home/andrew/projects/isight/config_complaints-demo_v5/public/js/require-config.js",
-		"/home/andrew/projects/isight/config_complaints-demo_v5/public/js/views/case/case-overview-view-ex.js",
-		"/home/andrew/projects/isight/config_complaints-demo_v5/script/utils/generate-field-definition-data.js",
-		"/home/andrew/projects/isight/config_complaints-demo_v5/script/utils/requirer.js",
-		"/home/andrew/projects/isight/config_complaints-demo_v5/script/utils/get-merged-user-object.js",
-		"/home/andrew/projects/isight/config_complaints-demo_v5/public/js/views/search/search-results-view-ex.js",
-		"/home/andrew/projects/isight/config_complaints-demo_v5/public/js/views/location/location-search-view.js",
-		"/home/andrew/projects/isight/config_complaints-demo_v5/public/js/views/common/header-toolbar-view-ex.js",
-		"/home/andrew/projects/isight/config_complaints-demo_v5/config/entities/sys_party.entity.js",
+		"/home/andrew/projects/isight/isight_main_v5_beta/script/case-generation-utils/create-final-form-data-objects.js",
+		"/home/andrew/projects/isight/isight_main_v5_beta/script/case-generation-utils/generate-field-definition-data.js",
+		"/home/andrew/projects/isight/isight_main_v5_beta/script/case-generation-utils/handle-users.js",
+		"/home/andrew/projects/isight/isight_main_v5_beta/script/config/populate-cases-config.js",
+		"/home/andrew/projects/isight/isight_main_v5_beta/script/case-generation-utils/progress-bar-handler.js",
+		"/home/andrew/projects/isight/isight_main_v5_beta/script/case-generation-utils/load-configs.js",
+		"/home/andrew/projects/isight/isight_main_v5_beta/script/case-generation-utils/field-extractor-utils.js",
+		"/home/andrew/projects/isight/isight_main_v5_beta/script/case-generation-utils/get-merged-user-object.js",
+		"/home/andrew/projects/isight/isight_main_v5_beta/script/populate-cases-bk.js",
+		"/home/andrew/projects/isight/isight_main_v5_beta/script/case-generation-utils/run-progress-bar.js",
+		"/home/andrew/projects/isight/isight_main_v5_beta/script/populate-triggers.js",
+		"/home/andrew/projects/isight/isight_main_v5_beta/test/api/email/test.email.js",
+		"/home/andrew/projects/isight/isight_main_v5_beta/lib/api/api-email.js",
+		"/home/andrew/projects/isight/isight_main_v5_beta/test/api/test.email-template.js",
+		"/home/andrew/projects/isight/isight_main_v5_beta/public/js/lib/elasticsearch-collection.js",
+		"/home/andrew/projects/isight/isight_main_v5_beta/public/js/views/settings/picklist-settings-view.js",
+		"/home/andrew/projects/isight/isight_main_v5_beta/public/js/views/common/header-toolbar-view.js",
+		"/home/andrew/projects/isight/isight_main_v5_beta/public/js/views/common/profile-view.js",
+		"/home/andrew/projects/isight/isight_main_v5_beta/public/js/lib/backbone-grid.js",
+		"/home/andrew/projects/isight/isight_main_v5_beta/public/js/lib/es-helpers.js",
+		"/home/andrew/projects/isight/isight_main_v5_beta/public/js/collections/event-collection.js",
+		"/home/andrew/projects/isight/isight_main_v5_beta/lib/services/business-logic/search/filters.js",
+		"/home/andrew/projects/isight/isight_main_v5_beta/public/js/views/common/grid-filters-view.js",
+		"/home/andrew/projects/isight/isight_main_v5_beta/public/templates/common/grid-filters-tmpl.dust",
+		"/home/andrew/projects/isight/isight_main_v5_beta/public/js/models/case-model.js",
+		"/home/andrew/projects/isight/isight_main_v5_beta/lib/api/api-attachment.js",
+		"/home/andrew/Downloads/backup-test.attachment.delete.js",
+		"/home/andrew/projects/isight/isight_main_v5_beta/test/api/helper.js",
+		"/home/andrew/projects/isight/isight_main_v5_beta/public/js/views/file/file-details-view.js",
+		"/home/andrew/projects/tracking-file-record-calls.md",
+		"/home/andrew/projects/isight/isight_main_v5_beta/public/js/views/search/advanced-search-view.js",
+		"/home/andrew/projects/isight/isight_main_v5_beta/lib/api/web.js",
+		"/home/andrew/Documents/wael-test-case-example.js",
+		"/home/andrew/projects/isight/isight_main_v5_beta/test/api/document/test.document.js",
+		"/home/andrew/projects/isight/isight_main_v5_beta/test/api/attachment/file.txt",
+		"/home/andrew/projects/isight/isight_main_v5_beta/test/api/attachment/test.attachment.delete.js",
+		"/home/andrew/projects/isight/isight_main_v5_beta/test/api/attachment/test.attachment.js",
+		"/home/andrew/projects/isight/isight_main_v5_beta/package-backup.json",
+		"/home/andrew/projects/isight/isight_main_v5_beta/test/api/email/attachment.txt",
+		"/home/andrew/projects/isight/isight_main_v5_beta/public/js/models/file-model.js",
+		"/home/andrew/projects/isight/isight_main_v5_beta/public/js/lib/backbone-model.js",
+		"/home/andrew/projects/isight/isight_main_v5_beta/test/fixture/public/js/views/file/file-details-view-ex.js",
+		"/home/andrew/projects/isight/isight_main_v5_beta/config/options.router.js",
+		"/home/andrew/projects/isight/isight_main_v5_beta/test/api/trigger/test.trigger-matchFn.js",
+		"/home/andrew/projects/isight/isight_main_v5_beta/lib/api/GenericApi.js",
+		"/home/andrew/projects/isight/isight_main_v5_beta/lib/services/business-logic/case/case-copy.js",
+		"/home/andrew/projects/isight/isight_main_v5_beta/lib/api/api-case.js",
+		"/home/andrew/projects/isight/isight_main_v5_beta/package.json",
+		"/home/andrew/projects/isight/config_complaints-demo_v5/node_modules/isight/lib/api/api.js",
 		"/home/andrew/projects/isight/config_complaints-demo_v5/node_modules/isight/lib/api/api-case.js",
+		"/home/andrew/projects/isight/config_complaints-demo_v5/node_modules/isight/lib/api/web.js",
+		"/home/andrew/projects/isight/config_complaints-demo_v5/node_modules/isight/lib/services/business-logic/case/case-copy.js",
 		"/home/andrew/projects/isight/config_complaints-demo_v5/node_modules/isight/package.json",
 		"/home/andrew/projects/isight/isight_main_v5_beta/script/populate-cases.js",
 		"/home/andrew/projects/isight/isight_main_v5_beta/server.js",
@@ -675,43 +722,18 @@
 		"/home/andfaulkner/Projects/testbed/express-backbone-testbed-3/.build/client/components/tetris-2/tetris-2jsx.jsx",
 		"/home/andfaulkner/Projects/testbed/express-backbone-testbed-3/client/components/tetris-2/tetris-2.html",
 		"/home/andfaulkner/Projects/testbed/express-backbone-testbed-3/client/components/tetris-2/tetris-2jsx.jsx",
-		"/home/andfaulkner/Projects/testbed/express-backbone-testbed-3/client/components/tetris-2/tetris-2.js",
-		"/home/andfaulkner/Projects/testbed/express-backbone-testbed-3/.build/client/components/tetris-2/tetris-2.html",
-		"/home/andfaulkner/Projects/testbed/express-backbone-testbed-3/.build/client/components/tetris/tetris-index.jsx",
-		"/home/andfaulkner/Projects/testbed/express-backbone-testbed-3/.build/client/components/tetris-2/tetris-2.jsx",
-		"/home/andfaulkner/Projects/testbed/express-backbone-testbed-3/.build/client/components/tetris-2/tetris-2.js",
-		"/home/andfaulkner/Projects/testbed/express-backbone-testbed-3/client/components/tetris/tetris.js",
-		"/home/andfaulkner/Projects/testbed/express-backbone-testbed-3/client/components/tetris/theme-1.js",
-		"/home/andfaulkner/Projects/testbed/express-backbone-testbed-3/client/components/tetris/tetris-index.jsx",
-		"/home/andfaulkner/Projects/testbed/express-backbone-testbed-3/.build/client/components/tetris-2/index.html",
-		"/home/andfaulkner/Projects/testbed/express-backbone-testbed-3/client/components/react-1/tetris.html",
-		"/home/andfaulkner/Projects/testbed/express-backbone-testbed-3/logs/testSenecaFormatting.js",
-		"/home/andfaulkner/Projects/testbed/express-backbone-testbed-3/node_modules/seneca/node_modules/jshint/node_modules/cli/cli.js",
-		"/home/andfaulkner/Projects/testbed/express-backbone-testbed-3/server/debug/winston-logger.js",
-		"/home/andfaulkner/Projects/testbed/express-backbone-testbed-3/node_modules/seneca/lib/logging.js",
-		"/home/andfaulkner/Projects/testbed/express-backbone-testbed-3/node_modules/seneca/lib/cmdline.js",
-		"/home/andfaulkner/Projects/testbed/express-backbone-testbed-3/node_modules/seneca/lib/optioner.js",
-		"/home/andfaulkner/Projects/testbed/express-backbone-testbed-3/node_modules/seneca/package.json",
-		"/home/andfaulkner/Projects/testbed/express-backbone-testbed-3/node_modules/seneca/lib/common.js",
-		"/home/andfaulkner/Projects/testbed/express-backbone-testbed-3/server/microservices/plugins/math_test_1.js",
-		"/home/andfaulkner/Projects/testbed/express-backbone-testbed-3/node_modules/seneca/seneca.js",
-		"/home/andfaulkner/Projects/testbed/express-backbone-testbed-3/server/microservices/serviceRunnerTest.js",
-		"/home/andfaulkner/Projects/testbed/express-backbone-testbed-3/server/microservices/seneca.js",
-		"/home/andfaulkner/Projects/testbed/express-backbone-testbed-3/node_modules/seneca/node_modules/nid/nid.js",
-		"/home/andfaulkner/Projects/testbed/express-backbone-testbed-3/server/routes/todo-restapi-routes.js",
-		"/home/andfaulkner/Projects/testbed/express-backbone-testbed-3/server/microservices/plugins/emitHello.js"
+		"/home/andfaulkner/Projects/testbed/express-backbone-testbed-3/client/components/tetris-2/tetris-2.js"
 	],
 	"find":
 	{
-		"height": 35.0
+		"height": 22.0
 	},
 	"find_in_files":
 	{
 		"height": 93.0,
 		"where_history":
 		[
-			"**/ruby/**,*.rb",
-			"<project>,-**/node_modules/**",
+			"<project>,-node_modules/**,-.build/**,*.js,-gulpfile.js",
 			"<project>",
 			"<project>,-node_modules/**,-.build/**,*.js,-gulpfile.js",
 			"<project>,-node_modules/**,-.build/**,*.js",
@@ -747,137 +769,137 @@
 	},
 	"find_state":
 	{
-		"case_sensitive": false,
+		"case_sensitive": true,
 		"find_history":
 		[
-			"createCase",
-			"reader",
-			"moreLogga",
-			"seneca",
-			"logga",
-			"conflict",
-			"ArgumentParser",
-			"FlagArgHandler",
-			"handle_cli_params",
-			"did_arg_match_cli_param",
-			"ArgHandler",
-			"create_accessor",
-			"cli_arg_string",
-			"any",
-			"args_hash",
-			"ARG",
-			"two_simple_params",
-			"\\&",
-			"ampersand",
-			"definable_args",
-			"usable_args",
-			"bundler",
-			"rvm",
-			"-------------------------",
-			"vehicledetailPrefixTranslations",
-			"HACK",
-			"copy_case",
-			"copy",
-			"_copy",
-			"entityName",
-			"interfaces",
-			"copy_case",
-			"copyCase",
-			"entityName",
-			"copy_case",
-			"defaultHandler",
-			"copy_case",
-			"copy",
-			"act",
-			"type:",
-			"sys_case_link",
-			"defaultHandler",
-			"mapRouter",
-			"strict mode",
-			"strict",
-			"randexp",
-			"elasticsearch",
-			"seneca-mail",
-			"tab",
-			"ruler",
-			"capitalize",
-			"body.?.?parser",
-			"body-parser",
-			"entities",
-			"main_data",
-			"test_entity_1",
-			"newentity",
-			"newentity_callback",
-			"test_entity_1",
-			"omnom",
-			"log.block",
-			"logBlock",
-			"block",
-			"senecaMsgOut",
-			"log\\.",
-			"console\\.dir",
-			"console.log",
-			"'{",
-			"log\\.",
-			"var log",
-			"log.block",
-			"logger",
-			"  ",
-			"_.repeat",
-			"chk50",
-			"require\\('[^']+winston-logger'\\)",
-			"require\\('[^']+winston-logger'\\)[^\\(]",
-			"require\\('[^']+winston-logger'\\)",
-			"log",
-			"require\\('server",
-			"log.info",
-			"\\.dir",
-			"\\,dir",
-			"dir",
-			"\\.dir",
-			"log.info",
-			"omnomnom",
-			"logLevel",
-			"logLevelNum\\s=\\s",
-			"logLevelNum",
-			"error",
-			"warn",
-			"console\\.",
-			"console\\.log",
-			"console.log",
-			"in\\sload",
-			"console",
-			"[^\\.]log",
-			"log",
-			"GLOBAL.log",
-			"require\\('log",
-			"require\\('win",
-			"require\\('lwin",
-			"require('",
+			"HEAD",
+			">>",
+			"user",
+			"getUserFromApi",
+			"cookieJar1",
+			"user1",
+			"user",
+			"user1",
+			"cookieJar1",
+			"user1",
+			"excludes",
+			"({\n",
+			"excludes",
+			"userConfig",
+			"setupUserInRole",
+			"FieldExtractorUtils",
+			"generateFieldDefData",
+			"getMergedUserObject",
+			"FieldExtractorUtils",
+			"progressBarHandler",
+			"roles:",
+			"role:",
+			"platformCaseGenConfig",
+			"appPath",
+			"configGlobal",
+			"require",
 			"config",
-			"consoleLogLevel",
-			"logger",
-			"console.dir",
-			"_\\.",
-			"log\\.dir",
-			"username",
-			"USERNAME",
-			"$tablename",
-			"'someName',",
-			"'some_orange_presses_val'",
-			"some_red_presses_val",
-			"guid1",
-			"emal1",
-			"phone1",
-			"guid1",
-			"emal1",
-			"name1",
-			"phone1",
-			"guid1",
-			"emal1",
-			"name1",
-			"\"myTable\"",
-			"dbname"
+			"enable mock",
+			"users",
+			"createSomeUsers",
+			"\\.users[^a-zA-Z_]",
+			"\\.users[^a-zA-Z]",
+			"\\.users",
+			"users",
+			"helper",
+			"serverConfig",
+			"setupUser",
+			"globalSeneca",
+			"seneca",
+			"initSenecaForPopulate",
+			"appPath",
+			"initSenecaForPopulate",
+			"cases",
+			"run-progress",
+			"requirer",
+			"uuid",
+			"util",
+			"api.?email",
+			"sort",
+			"[^a-zA-Z0-9]sort:",
+			"sort:",
+			"column",
+			"getSort",
+			"multiSelect",
+			"Function",
+			"getSort",
+			"sort[^:]",
+			"sortColumnIndex",
+			"_sort",
+			"{ ",
+			"title",
+			"{ ",
+			"sortColumn",
+			"sort",
+			"esHelpers",
+			"GridFiltersView",
+			"Grid",
+			"done\\)",
+			"fs",
+			"path",
+			"startServer",
+			"helper",
+			"util",
+			"console",
+			"inspect",
+			"util",
+			"\\.blue",
+			"\\.gree",
+			"\\.red",
+			"inspOpts",
+			"green",
+			"attachedFile1",
+			"fileId",
+			"green",
+			"parsedBody",
+			"attachedFile1",
+			"self",
+			"\\$operatorSelector",
+			"$operatorSelector",
+			"operator",
+			"opeator",
+			"createdFileRecord",
+			"save:",
+			"save",
+			"this.model.save",
+			"onSave",
+			"startServer",
+			"file",
+			"attachment",
+			"file",
+			"attachment",
+			"file",
+			"config",
+			"apibaseurl",
+			"attachment",
+			"\\/attachment",
+			"cookiejar",
+			"cookieJar",
+			"form",
+			"r\\.form",
+			"r.form",
+			"request",
+			"cookieJar",
+			"getTestAttachment",
+			"opt",
+			"attachmentFile",
+			"nattachmentFile",
+			"attachmentFile",
+			"form",
+			"res",
+			"getTestCase",
+			"getcreatedCase",
+			"testCase",
+			"TestCase",
+			"testCase",
+			"timerAssert",
+			"file",
+			"  "
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -885,7 +907,6 @@
 		"regex": true,
 		"replace_history":
 		[
-			"=========================",
 			"	",
 			"return ",
 			"",
@@ -952,6 +973,14 @@
 		"whole_word": false,
 		"wrap": true
 	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		}
+	],
 	"incremental_find":
 	{
 		"height": 21.0
@@ -969,12 +998,6 @@
 				0,
 				1,
 				1
-			],
-			[
-				0,
-				1,
-				1,
-				2
 			]
 		],
 		"cols":
@@ -985,7 +1008,6 @@
 		"rows":
 		[
 			0.0,
-			0.5,
 			1.0
 		]
 	},
@@ -1002,7 +1024,12 @@
 	{
 		"height": 23.0
 	},
+	"output.nodejs":
+	{
+		"height": 88.0
+	},
 	"pinned_build_system": "Packages/Markdown Preview/Markdown.sublime-build",
+	"project": "snippets.sublime-project",
 	"replace":
 	{
 		"height": 40.0
@@ -1015,8 +1042,68 @@
 		"selected_items":
 		[
 			[
+				"populate-triggers",
+				"script/populate-triggers.js"
+			],
+			[
+				"eshel",
+				"public/js/lib/es-helpers.js"
+			],
+			[
+				"gridfilterstmpl",
+				"public/templates/common/grid-filters-tmpl.dust"
+			],
+			[
+				"gridfiltersview",
+				"public/js/views/common/grid-filters-view.js"
+			],
+			[
+				"elasticsearchcoll",
+				"public/js/lib/elasticsearch-collection.js"
+			],
+			[
+				"backbonegrid",
+				"public/js/lib/backbone-grid.js"
+			],
+			[
+				"settingsview",
+				"public/js/views/settings/picklist-settings-view.js"
+			],
+			[
+				"casemodel",
+				"public/js/models/case-model.js"
+			],
+			[
+				"case-model",
+				"public/js/models/case-model.js"
+			],
+			[
+				"advancedsearch",
+				"public/js/views/search/advanced-search-view.js"
+			],
+			[
+				"backbonemodel",
+				"public/js/lib/backbone-model.js"
+			],
+			[
+				"filemodel",
+				"public/js/models/file-model.js"
+			],
+			[
+				"filedetails",
+				"public/js/views/file/file-details-view.js"
+			],
+			[
 				"web.js",
-				"node_modules/isight/lib/api/web.js"
+				"lib/api/web.js"
+			],
+			[
+				"generica",
+				"lib/api/GenericApi.js"
+			],
+			[
+				"apicase",
+				"lib/api/api-case.js"
 			]
 		],
 		"width": 0.0
@@ -1039,6 +1126,7 @@
 		],
 		"width": 570.0
 	},
+	"selected_group": 0,
 	"settings":
 	{
 	},
@@ -1046,7 +1134,7 @@
 	"show_open_files": true,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 296.0,
+	"side_bar_width": 269.0,
 	"status_bar_visible": true,
 	"template_settings":
 	{

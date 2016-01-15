@@ -11,7 +11,13 @@ alias countf='find . | wc -l'
 #               subdirs w/ the given text anywhere in their file name
 #=======================================================================
 function searchfn {
-  find . -regex ".*$1[^\/]*$" 2>/dev/null
+  if [ $# -eq 0 ]; then
+    echo "Usage: searchfn [regex]"
+    echo "  Matches only on file name & extension - path is excluded"
+    echo "  [regex] - string or regular expression to match on" 
+  else
+    find . -regex ".*$1[^\/]*$" 2>/dev/null
+  fi
 }
 #=======================================================================
 
@@ -38,6 +44,7 @@ function findtype {
          find . -name "*.$2"
          find . -name "*.$2"|wc -l
       fi
+   #if only 1 param passed, 
    else
       find . -name "*\.$1*"
       find . -name "*\.$1*"|wc -l
