@@ -14,6 +14,10 @@ alias g_curbr="git branch | ack '\*' | awk '{print \$2}'"
 alias g_mybranches="git branch | ack 'ITPL.*[a-zA-Z]' --no-color"
 alias g_branchhistory="git for-each-ref --sort=committerdate refs/heads/ --format='%(refname) %(committerdate) %(authorname)' | sed 's/refs\/heads\///g' | awk '{print \$1}' | tail"
 
+function g_diffwremote {
+  git diff $1 remotes/origin/$1  
+}
+
 # rubify this, make it check current branch first and only do this if it's on develop after checkout
 alias g_resetdev="git stash; git checkout develop; git fetch origin; git reset --hard origin/develop"
 

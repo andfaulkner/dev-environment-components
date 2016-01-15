@@ -8,3 +8,7 @@ Ruby scripts to create
 
 -   create the same branch on both main and base. First check out develop on each, then if both 
     checkouts succeed, create a branch with the given name on each. Otherwise return an error.
+
+General scripting tasks
+=======================
+-   Figure out how to get Clojure up and running
