@@ -10,8 +10,6 @@ alias g_remote="git init; git remote add origin" #arg: location of repo
 alias g_rro="git remote remove origin"
 alias g_rao="git remote add origin" #[place remote repo uri here]
 
-echo "here-001"
-
 alias g_br="git branch"
 alias g_s="git status"
 alias g_l=" git log"
@@ -19,29 +17,20 @@ alias g_curbr="git branch | ack '\*' | awk '{print \$2}'"
 alias g_mybranches="git branch | ack 'ITPL.*[a-zA-Z]' --no-color"
 alias g_branchhistory="git for-each-ref --sort=committerdate refs/heads/ --format='%(refname) %(committerdate) %(authorname)' | sed 's/refs\/heads\///g' | awk '{print \$1}' | tail"
 
-echo "here-002"
-
 function g_diff_br_remote {
   git diff $1 remotes/origin/$1  
 }
 
-echo "here-003"
-
 alias g_diff_remote="g_diff_br_remote \$(g_curbr)"
-echo "here-005"
 
 # rubify this, make it check current branch first and only do this if it's on develop after checkout
 alias g_resetdev="git stash; git checkout develop; git fetch origin; git reset --hard origin/develop"
-
-echo "here-004"
 
 # Squash together any number of the most recent commits into 1
 # @param $1 - number of commits to squash together (including HEAD, so 1 does nothing)
 function g_squash {
     git rebase -i HEAD~$1
 }
-
-echo "here-1"
 
 # SANER GIT BRANCH DISPLAY - only show my own branches
 function g_branches {
@@ -59,8 +48,6 @@ function g_branches {
     echo '';
 }
 
-echo "here-2"
-
 # get the remote repository location
 alias g_currepo="git remote -v | xargs ruby -e \"
     puts 'git@andfaulkner.github.com:andfaulkner' + ARGV.find { |arg| 
@@ -73,7 +60,5 @@ alias g_curbranch="git branch | grep '\*'"
 alias curbranch="g_curbranch"
 alias gcbr="g_curbranch"
 
-
 #function reclaimbranch
 #git remote add origin git@andfaulkner.github.com:andfaulkner/$1"
-echo "end of git_scripts"

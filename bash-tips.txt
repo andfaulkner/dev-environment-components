@@ -1,7 +1,47 @@
-# TO ACCESS sudo PERMISSIONS:
-sudo visudo
+#!sh
 
-# perform a database dump, to backup all data within
+# Symbolic links - file linking
+ln -s /file/to/link/to location/and/name/of/symbolic/link
+    # -- the link appears in this case at 'location/and/name/of/symbolic/link' 
+
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~ POSTGRES FROM TERMINAL ~~~~~~~~~~~~~~~~~~~~~~~~~~~
+# Perform a database dump, to backup all data within
 pg_dump dbname > outfile
 # Restore a database from a database dump
 psql isight < outfile; make es-reindex-data; # es-reindex data is NB, won't show changes otherwise 
+
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ VIM ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+* Vim find & replace:: general form:    %s/from/to/g          #g: all; i: ignore-case
+    Example:    %s/^\n^echo.*$/Y/g
+    # replace all matches (blankline followed by 'echo' as 1st item on new line) with 'Y'
+
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ ACK ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+* Show lines around match:          --context=2
+* Show lines before or after match: --after-context=2 ..OR.. --before-context=2
+* Match highlighting:               --color           ..OR.. --nocolor
+
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ DIRECTORY STACK ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+pushd path/to/dir # places dir at path/to/dir atop the stack
+popd              # cd to location atop dir stack, rm item from top of stack 
+dirs              # list all items on the directory stack. Args: 
+                    # -N  Nth dir in stack (from end);    -l  full paths (no ~);   
+                    # +N  Nth dir in stack (from start);  -p  one path / line 
+
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ BASH SCRIPTING ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+* Suppress error output:  2>/dev/null   ..e.g..   mkdir -p ~/temp_bk 2>/dev/null
+
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ BASH CONTROL FLOW ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+* $# - Get num args passed to fn:  $# 
+       e.g:  if [ $# -eq 0 ]; then echo "$#"; fi  #--> 0 (if no args given 2 fn)
+
+* Single line if statements: see preceding item for an example
+
+* && # Only run next step if preceding step worked
+* || # Run next step if preceding step failed
+    * e.g.: ls -ar && echo "ran" || echo "quit" #-> .. -> ran   [since ls -ar is a real cmd]
+            tc4bbt && echo "ran" || echo "quit" #-> .. -> quit  [because tc4bbt isnt a cmd]
+
+
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ PERMISSIONS ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+sudo visudo   #...TO ACCESS sudo PERMISSIONS

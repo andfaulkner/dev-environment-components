@@ -2,11 +2,17 @@ REPL
 ====
 
 ## Best repl
-lein repl
+    lein repl
 
 ## Basic repl
-clojure
+    clojure
+
+## Once in the repl, to exit:
+    (System/exit 0)
 
 INSTALL PACKAGES
 ================
-lein
+    lein
+
+
+

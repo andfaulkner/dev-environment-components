@@ -20,7 +20,7 @@ end
 
 # GET PRETTIER ENVIRONMENT VARIABLES, THEN DISPLAY THEM
 env_vars = ENV.reduce [] do |vars, env_var|
-    if ['PATH', 'NODE_PATH', 'XDG_DATA_DIRS', 'MANPATH'].include? env_var[0]
+    if ['PATH', 'NODE_PATH', 'XDG_DATA_DIRS', 'MANPATH', 'ES_CLASSPATH'].include? env_var[0]
         vars.push(split_large_data(env_var, /:/))
     elsif ['LS_COLORS'].include? env_var[0]
         vars.push(split_large_data(env_var, /;/))
@@ -34,6 +34,6 @@ env_vars = ENV.reduce [] do |vars, env_var|
     vars
 end
 
-table_3 = TTY::Table.new ['VARIABLE', 'VALUE'], env_vars
+table_3 = TTY::Table.new header: ['VARIABLE', 'VALUE'], rows: env_vars
 
-puts table_3.render :ascii, multiline: true, width: 100, padding: [0,1]
+puts table_3.render :ascii, multiline: true, width: 140, padding: [0,1]
