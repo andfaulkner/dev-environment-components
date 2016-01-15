@@ -6,7 +6,7 @@ var childProcess = require('child_process');
 var events = require("events");
 require('colors');
 
-var _ = require('./utils/lodash-with-mixins.js');
+var _ = require('../../utils/lodash-with-mixins.js');
 var async = require('async');
 
 var Bluebird = require('bluebird');

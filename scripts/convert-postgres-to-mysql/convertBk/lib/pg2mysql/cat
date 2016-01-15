@@ -1,3 +1,0 @@
-
-Notice: Undefined offset: 2 in /Users/andrew/projects/isight/isight_main_v5_beta/script/database/mysql/lib/pg2mysql/pg2mysql_cli.php on line 27
-Usage: php pg2mysql_cli.php <inputfilename> <outputfilename> [engine]
