@@ -1,3 +1,5 @@
+echo "loaded search_scripts.sh!"
+
 alias regexes="gnome-terminal --title=~REGEXES --geometry 110x50-0-0 -x vim ~/regexes_helpful.txt"
 
 #count number of results a search returns
