@@ -1,6 +1,8 @@
 ################################################################################
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ GIT ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 ################################################################################
+echo 'loaded git_scripts.sh!'
+
 alias gaa="git add --all"
 alias gca="git commit --all -m"
 alias g_po="git push origin"
@@ -14,9 +16,11 @@ alias g_curbr="git branch | ack '\*' | awk '{print \$2}'"
 alias g_mybranches="git branch | ack 'ITPL.*[a-zA-Z]' --no-color"
 alias g_branchhistory="git for-each-ref --sort=committerdate refs/heads/ --format='%(refname) %(committerdate) %(authorname)' | sed 's/refs\/heads\///g' | awk '{print \$1}' | tail"
 
-function g_diffwremote {
+function g_diff_br_remote {
   git diff $1 remotes/origin/$1  
 }
+
+alias g_diff_remote="g_diff_br_remote $(g_curbr)"
 
 # rubify this, make it check current branch first and only do this if it's on develop after checkout
 alias g_resetdev="git stash; git checkout develop; git fetch origin; git reset --hard origin/develop"

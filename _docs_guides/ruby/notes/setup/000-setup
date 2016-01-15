@@ -58,6 +58,7 @@ git clone https://github.com/rbenv/ruby-build.git ~/.rbenv/plugins/ruby-build
 # ruby-install ruby 2.3.0
 ruby-install --system ruby 2.3.0
 
+################################### GEMS ###################################
 # update rubygems
 rvm @global do sudo gem install rubygems-update
 sudo update_rubygems
@@ -76,6 +77,16 @@ rvm @global do sudo gem install rush2
 
 # ????? __- yard - a ruby doc generation gem -__ ????? <<< MAY NOT BE USEFUL
 rvm @global do sudo gem install yard
+
+# output array of arrays to cli in table format - VERY simple - no wrapping
+sudo gem install terminal-table
+rvm @global do sudo gem install terminal-table
+# table = Terminal::Table.new :rows=>my_array_of_arrays_here
+
+# output array of arrays to cli in table format - wrapping, more complex
+sudo gem install tty-table
+rvm @global do sudo gem install tty-table
+############################################################################
 
 # get this
 cp ~/.irbrc ~/.irbrc_bk
