@@ -14,8 +14,10 @@ sudo apt-get install oracle-java8-set-default
 # SEE http://tecadmin.net/install-oracle-java-8-jdk-8-ubuntu-via-ppa/#
 
 ############################## FASTER LAUNCH TIMES  ##############################
-# Faster clojure launch times
+# Faster clojure launch times - permanently running vm handles it
 apt-get install nailgun
+java -server -jar /usr/share/java/nailgun.jar& 		# run nailgun server
+ng-nailgun ng-cp /usr/share/java/clojure-1.4.jar 	# add clj to classpath
 
 # drip
 cd ~/bin
@@ -28,3 +30,4 @@ PATH="$PATH:~/bin/drip/bin"
 
 ### MAC ###
 brew install drip
+

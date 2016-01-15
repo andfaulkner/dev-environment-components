@@ -13,6 +13,3 @@ REPL
 INSTALL PACKAGES
 ================
     lein
-
-
-

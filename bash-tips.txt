@@ -20,6 +20,15 @@ psql isight < outfile; make es-reindex-data; # es-reindex data is NB, won't show
 * Show lines before or after match: --after-context=2 ..OR.. --before-context=2
 * Match highlighting:               --color           ..OR.. --nocolor
 
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ AWK ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+awk '{$1=""; print $0}' # print all but the 1st column of output
+awk '{$1=""; $2=""; print $0}' # print all but the 1st & 2nd column of output
+awk '{$NF=""; print $0}' # print all but the last column of output
+awk '{print $NF}' # print only the last column of output
+awk '{print $1 $3}' # print the 1st & 3rd column of output
+awk -F ':' '{print $(NF)}' #treat : as the column separator, then output last 'column'
+
+
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ DIRECTORY STACK ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 pushd path/to/dir # places dir at path/to/dir atop the stack
 popd              # cd to location atop dir stack, rm item from top of stack 
