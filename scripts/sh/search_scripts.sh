@@ -2,6 +2,71 @@ echo "loaded search_scripts.sh!"
 
 alias regexes="gnome-terminal --title=~REGEXES --geometry 110x50-0-0 -x vim ~/regexes_helpful.txt"
 
+################################################################################
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ TEXT PROCESSING  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~#
+################################################################################
+# rm leading & trailing whitespace from output 
+#(yes, technically chomp only refers to removing trailing, but 'slice' was taken) 
+alias chomp="awk '{\$1=\$1}1'"  
+
+function tp_appendtext {
+    (cat $2 ; echo '$1') > .TEMP_1234561_123456_123456.txt; rm $2; mv .TEMP_1234561_123456_123456.txt $2
+}
+
+#conglomerates 2 separate variables into a single string 
+function tp_glue_vars {
+  $(echo ${1}${2})
+}
+
+#trim whitespace before terminal output & condense large spaces into small ones [TOADD]
+function trim {
+    awk '{$1=$1};1'
+}
+
+#=== FUNCTION ==========================================================
+#        NAME:  transpose
+# DESCRIPTION:  turn table outputted to cli 90 degrees 
+#               rows-->cols, cols-->rows 
+#=======================================================================
+function tp_transpose {
+    awk '
+    {
+        for (i=1; i<=NF; i++)  {
+            a[NR,i] = $i
+        }
+    }
+    NF>p { p = NF }
+    END {
+        for(j=1; j<=p; j++) {
+            str=a[1,j]
+            for(i=2; i<=NR; i++){
+                str=str" "a[i,j];
+            }
+            print str
+        }
+    }' $1
+}
+#=======================================================================
+###############################################################################
+
+
+################################################################################
+#~~~~~~~~~~~~~~~~~~~~~~ TERMINAL COMMAND HISTORY SEARCHING ~~~~~~~~~~~~~~~~~~~~~
+################################################################################
+
+#=== FUNCTION ==========================================================
+#        NAME:  searchhist
+# DESCRIPTION:  search history for the given string.
+#=======================================================================
+function searchhist {
+  history | grep "$1"
+}
+#=======================================================================
+
+# display history as only a list of commands - no numbers etc.
+alias history_cmds_only="history | awk '{\$1=\"\"; print \$0}' | awk '{\$1=\$1}1'"
+#########################################################################
+
 #count number of results a search returns
 alias countf='find . | wc -l'
 
@@ -22,15 +87,6 @@ function searchfn {
 #=======================================================================
 
 #=== FUNCTION ==========================================================
-#        NAME:  searchhist
-# DESCRIPTION:  search history for the given string.
-#=======================================================================
-function searchhist {
-  history | grep "$1"
-}
-#=======================================================================
-
-#=== FUNCTION ==========================================================
 #        NAME:  findtype
 # DESCRIPTION:  find all files w/ given extension that contain a pattern
 #               To return an exact extension:   findtype -a pattern
@@ -41,13 +97,13 @@ function findtype {
    then
       if [ "$1" = "-a" ]
       then
-         find . -name "*.$2"
-         find . -name "*.$2"|wc -l
+         find . -name "*.$2" 2>/dev/null
+         find . -name "*.$2" 2>/dev/null |wc -l
       fi
    #if only 1 param passed, 
    else
-      find . -name "*\.$1*"
-      find . -name "*\.$1*"|wc -l
+      find . -name "*\.$1*" 2>/dev/null
+      find . -name "*\.$1*" 2>/dev/null |wc -l
    fi
 }
 #=======================================================================
