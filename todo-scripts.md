@@ -9,6 +9,14 @@ Ruby scripts to create
 -   create the same branch on both main and base. First check out develop on each, then if both 
     checkouts succeed, create a branch with the given name on each. Otherwise return an error.
 
+-   use table display for showing files lists (in lsr.rb)
+
+-   recursive file list
+
+-   detector of files containing '>>>>', '<<<<', '====', etc. - git merge conflict artifacts 
+
+-   extract all translations from a project, display them 
+
 General scripting tasks
 =======================
 -   Figure out how to get Clojure up and running
