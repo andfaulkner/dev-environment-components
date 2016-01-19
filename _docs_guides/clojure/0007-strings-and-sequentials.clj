@@ -50,3 +50,17 @@
 ;			l
 ;			l
 ;			o
+
+;;#########################################
+;;#          SEQUENTIALS - LISTS          #
+;;#########################################
+(println " ***** SEQUENTIALS - LISTS *****")
+
+(println " ----- DEFINE A LIST -----")
+(def my-list '(8 3 4))
+(println " ----- GET FIRST LIST ITEM -----")
+(println (first my-list))			;	=> 8
+(println " ----- GET SECOND LIST ITEM -----")
+(println (second my-list))		;	=> 3
+(println " ----- GET THIRD LIST ITEM -----")
+(println (last my-list))			; => 4 
