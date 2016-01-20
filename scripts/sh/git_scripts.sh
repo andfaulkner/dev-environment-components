@@ -21,7 +21,11 @@ function g_diff_br_remote {
   git diff $1 remotes/origin/$1  
 }
 
-alias g_diff_remote="g_diff_br_remote \$(g_curbr)"
+function g_diff_remote {
+  git diff $(g_curbr) remotes/origin/$(g_curbr)
+}
+
+# alias g_diff_remote="g_diff_br_remote \$(g_curbr)"
 
 # rubify this, make it check current branch first and only do this if it's on develop after checkout
 alias g_resetdev="git stash; git checkout develop; git fetch origin; git reset --hard origin/develop"
