@@ -1,0 +1,4 @@
+# Include the 1st item (ADD) but exclude the 2nd (math)
+^(?!.+ADD).+math.+$
+
+

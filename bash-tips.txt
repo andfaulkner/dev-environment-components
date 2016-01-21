@@ -72,6 +72,17 @@ dirs              # list all items on the directory stack. Args:
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ GIT ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 * git diff      <<< default: compare cur branch changed files vs. cur branch last commit / index
 
+git tag AF-pwd-dsl-1.4 -f -m "about to attempt pwd success msg      >>>>confirmed working:     #### length::_ALL_      #### mandatory::_ALL_;       #### forbid::whitespace::_ALL_;   ##forbid:: #--errMsg #--which--[];   ##forbid:: #--errMsh #--which<group, <group,errMsg>>;   #forbid:: #--which<group, errMsg>"
+
+* get tag history, newest to oldest
+git tag -n2
+
+* rename a tag:
+git tag AF--pwd-dsl-1.4 AF-pwd-dsl-1.4
+git tag -d AF-pwd-dsl-1.4
+
+
+
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ PERMISSIONS ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 sudo visudo   #...TO ACCESS sudo PERMISSIONS
