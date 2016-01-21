@@ -3,3 +3,9 @@
 
 # match any char
 (\s\S)
+
+# lookahead
+(?=\S*[a-z])
+
+# at least (some number) of preceding character (or character set). Example - at least 7 lowercase chars:
+[a-z]{7,}
