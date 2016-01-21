@@ -10,11 +10,17 @@ alias g_po="git push origin"
 alias g_br="git branch"
 alias gs="git status"
 alias gl=" git log"
+#alias g_curbr="git rev-parse --abbrev-ref HEAD"
 alias g_curbr="git status | head -1 | awk '{print \$3}'"
+#alias g_curbr="git status | head -1 | awk '{print \$3}'"
 #display name of current git branch
 #alias g_curbr="git branch | ack '\*' | awk '{print \$2}'"
 alias g_mybranches="git branch | ack 'ITPL.*[a-zA-Z]' --no-color"
 alias g_branchhistory="git for-each-ref --sort=committerdate refs/heads/ --format='%(refname) %(committerdate) %(authorname)' | sed 's/refs\/heads\///g' | awk '{print \$1}' | tail"
+
+alias g_tag_rm="git tag -d"
+alias g_tag_new="git tag"
+alias g_tags_my="git tag | ack AF"
 
 # function g_diff_remote {
 #  CURRENT_BRANCH=$(echo $(g_curbr))
@@ -33,6 +39,7 @@ function g_squash {
     git rebase -i HEAD~$1
 }
 
+alias g_diff_files_changed='git diff `g_curbr` develop | ack "^\-{3}"'
 # SANER GIT BRANCH DISPLAY - only show my own branches
 function g_branches {
     DASHESLINE='--------------------------------------------------------------------------------------';
@@ -56,7 +63,7 @@ function g_diff_br_remote {
 function g_diff_cur_rem {
     CURRENT_BRANCH_FOR_DIFF=`g_curbr`
     echo $CURRENT_BRANCH_FOR_DIFF;
-    g_diff_br_remote `g_curbr` 
+    git diff `g_curbr` remotes/origin/`g_curbr` 
 }
 
 alias g_tree='git log --pretty=format:"%h %ad | %s%d [%an]" --graph --date=short'
