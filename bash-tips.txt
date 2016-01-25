@@ -69,6 +69,25 @@ dirs              # list all items on the directory stack. Args:
             tc4bbt && echo "ran" || echo "quit" #-> .. -> quit  [because tc4bbt isnt a cmd]
 
 
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ GIT ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+* git diff      <<< default: compare cur branch changed files vs. cur branch last commit / index
+
+git tag AF-pwd-dsl-1.4 -f -m "about to attempt pwd success msg      >>>>confirmed working:     #### length::_ALL_      #### mandatory::_ALL_;       #### forbid::whitespace::_ALL_;   ##forbid:: #--errMsg #--which--[];   ##forbid:: #--errMsh #--which<group, <group,errMsg>>;   #forbid:: #--which<group, errMsg>"
+
+* get tag history, newest to oldest
+git tag -n2
+
+* rename a tag:
+git tag AF--pwd-dsl-1.4 AF-pwd-dsl-1.4
+git tag -d AF-pwd-dsl-1.4
+
+
+
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ PERMISSIONS ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 sudo visudo   #...TO ACCESS sudo PERMISSIONS
+
+
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ SENECA ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+alias nrn_seneca_reduced_1='export LOG_LEVEL=trace; nodemon server.js | ack -v "eraro|gate-executor" | ack "^2016.*ERROR.*act.*OUT.*\/.*\{.*\}" --no-color | awk "{\$1=\"\";\$3=\"\"; \$NF=\"\"; \$(NF-1)=\"\"; \$(NF-2)=\"\"; print\" \n\"\$0}"'

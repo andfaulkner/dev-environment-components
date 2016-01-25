@@ -1,6 +1,6 @@
 npm install -g md2html
 npm install -g gulp
-npm install -g dustjs-linkedinls
+npm install -g dustjs-linkedin
 npm install -g yo
 npm install -g yeoman
 npm install -g forever
