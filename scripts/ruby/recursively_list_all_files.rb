@@ -21,10 +21,19 @@ def filepaths_to_name_content_hash(files)
 end
 
 filepaths_to_name_content_hash(files).each{ |filename, filecontent|
-	filecontent.select{ |line|
-		puts line.match(/.*def.*/)
-		line.match(/def/)
-	}
+	if filecontent.any? {|line| line.match(/.*[^a-zA-Z]{2}function\s.*/) }
+		puts "\n********" + filename + "********"
+		filecontent.select{ |line|
+			if line.match(/.*[^a-zA-Z]{2}function\s+[^\n]/)
+				# || 
+					# line.match(/.*[^a-zA-Z]{2}class\s.*/)
+				puts (line.match(/.*function\s+[^\n\{]*/))
+					# || 
+					# line.match(/.*class\s.*/)).to_s.gsub('#', '').strip
+				line.match(/function/)
+			end
+		}
+	end
 }
 
 # files.each {|line| puts line}

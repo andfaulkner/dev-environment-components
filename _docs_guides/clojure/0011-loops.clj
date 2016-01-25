@@ -11,3 +11,8 @@
     (println i)    
     (recur (inc i)); loop i will take this value
 ))
+
+(loop [j 0]
+	(when (< j 5)
+		(println (+ j 8))
+		(recur (inc j))))
