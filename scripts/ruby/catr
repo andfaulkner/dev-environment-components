@@ -36,6 +36,7 @@ def show_help
 	puts "\n"
 	puts 'catr [uU]ser type="js" exclude="node_modules" --function'
 	puts "   - match functions in js files w/ word user in them, exclude paths w/ node_modules"
+        puts ""
 	exit!
 end
 
