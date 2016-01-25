@@ -39,6 +39,7 @@ def show_help
 	exit!
 end
 
+# show help if user put too few arguments in...then stop the program
 if ARGV.length == 0
 	show_help
 end
@@ -110,12 +111,12 @@ end
 
 # output the file data that matches the find (calls the find)
 def prep_find_args(fname, content, args, printer)
-	# convert find argument to regular expression if it isn't one already
+	# convert various args to regexes if they aren't already
 	args[:orig_find] = args[:orig_find] || args[:find]
 	args[:find] = to_match_only_regex(args[:find], args)
-	args[:exclude] = to_match_only_regex(args[:exclude], args) if args[:exclude]
-	args[:exclude_find] = to_match_only_regex(args[:exclude_find], args) if args[:exclude_find]
-	args[:ftype] = to_match_only_regex(args[:ftype], args) if args[:ftype]
+	args[:exclude] = to_regexp(args[:exclude]) if args[:exclude]
+	args[:exclude_find] = to_regexp(args[:exclude_find]) if args[:exclude_find]
+	args[:ftype] = to_regexp(args[:ftype]) if args[:ftype]
 	printer.call(search_content(fname, content, args), 
 							 args[:orig_find])
 end
@@ -188,25 +189,25 @@ def arg_setup(param_args, flag_args)
 	args
 end
 
-# grab the args
-args = arg_setup(["find", "ftype", "exclude", "exclude_find"],
-								 ["function", "match_only", "nocomment", "console"])
-
-# special printing function, to allow colorized printing
+# special printing function, to allow colorized printing of nb section
 printer = Proc.new {|data, orig_find|
 	orig_matches = data.to_s.match(orig_find)
 	if orig_matches
 		data.each {|line|
 			orig_match = line.match(orig_find)
-			# if orig_match
 				output = line.split(to_regexp(orig_match).to_s)
 				print output[0]
 				print orig_match.to_s.green
 				print "#{output[1]}\n"
-			# end
 		}
 	end
 }
+
+## TOOL ACTUALLY RUNS HERE ##
+
+# grab the args
+args = arg_setup(["find", "ftype", "exclude", "exclude_find"],
+								 ["function", "match_only", "nocomment", "console"])
 
 # actually display the filenames and matching content below
 fname_cat_hash(get_files).each { |fname, content|
