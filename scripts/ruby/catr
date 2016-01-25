@@ -121,7 +121,7 @@ def prep_find_args(fname, content, args, printer)
 							 args[:orig_find])
 end
 
-# turn 
+# turn a regex arg into a rewgex that matches entire line the original regex would've matched
 def to_match_only_regex(str, args)
 	if str.class == String && (! args[:match_only])
 		clean_str = str.gsub(/^\^/, "").gsub(/\$$/, "")
