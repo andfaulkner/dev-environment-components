@@ -1,0 +1,220 @@
+#!/usr/bin/env ruby
+
+require 'optparse'
+require 'colorize'
+
+def show_help
+	puts "\nUsage:  catr [find=]regexp|string [OPTIONS] [OPTIONAL_PARAMS]"
+	puts "\nESSENTIAL ARGUMENTS"
+	puts "   find=[string|regex]   string or regular expression to search for in all files."
+	puts "                         Returns matching files, along with the line you can find each"
+	puts "                         match at. "
+	puts "     Can also just be defined as a bare 1st argument, no find="
+	puts "\nOPTIONS:"
+	puts "   --function                only match lines with functions"
+	puts "   --console                 only match lines with calls to console"
+	puts "   --nocomment               exclude // comment lines"
+	puts "   --match_only              show just the matching part, rather than the entire matching"
+	puts "                             line (with the matching part highlighed"
+	puts "\nOPTIONAL_PARAMS:"
+	puts "   ftype=[string|regex]      filetype (technically it matches any part of a filepath)"
+	puts "   exclude=[string|regex]    exclude files with this matching group in the path"
+	puts "   exclude_find=[str|regex]  exclude files with this matching group in the content (text)"
+	puts "\nEXAMPLES:"
+	puts 'catr [^\w\d\.]seneca[^\(]*[\(][^\{]*\) type=.js exclude=node_modules --nocomment --match_only'
+	puts "   - match files of type .js containing 'seneca' that don't have node_modules in their" 
+	puts "     path. Show only the match, not the full line. Exclude lines that are commented out."
+	puts 'catr global type=.js exclude=node_modules --nocomment --match_only'
+	puts "   - match files of type .js containing 'seneca' that don't have node_modules in their" 
+	puts "     path. Show only the match, not the full line. Exclude lines that are commented out."
+	puts "\nEXAMPLES:"
+	puts "catr global ftype=js exclude=min --nocomment exclude_find=this"
+	puts "   - match on the word global in js files, exclude min files & lines with the word 'this'"
+	puts "\n"
+	puts 'catr [^\w\d]seneca[^\W\D] type="js" exclude="node_modules" --nocomment'
+	puts "   - match on full word seneca in js files, w/ path node_modules & comment lines excluded"
+	puts "\n"
+	puts 'catr [uU]ser type="js" exclude="node_modules" --function'
+	puts "   - match functions in js files w/ word user in them, exclude paths w/ node_modules"
+	exit!
+end
+
+if ARGV.length == 0
+	show_help
+end
+
+# get all files downward in file system tree from current working directory
+def get_files
+	Dir.glob("**/*").select{ |file|
+		File.file?(file)
+	}
+end
+
+# gets content of all files, places them in a hash. files is an array of filenames
+def fname_cat_hash(files)
+	files.reduce({}) { |filehash, file_name|
+		File.open(file_name) do |myfile|
+			lines_array = myfile.reduce([]) { |file_lines, line|
+				file_lines.push(line)
+				file_lines
+			}
+			filehash[file_name] = lines_array
+			filehash
+		end
+	}
+end
+
+# display formatted form of the file name
+def show_fname(fname)
+	len = fname.length
+	puts "\n#{fname}"
+	len.times{||print "*"}
+	puts ""
+	fname
+end
+
+def apply_special_filters(text, args)
+	if args[:function]
+		text.pop if ! text.last.match(/(?!<[^a-zA-Z0-9_])function(?=[^a-zA-Z0-9_])/)
+	end
+	if args[:console]
+		text.pop if ! text.last.match(/(?!<[^a-zA-Z0-9_])console(?=[^a-zA-Z0-9_])/)		
+	end
+	text
+end
+
+# return matching content, including the line number
+def search_content(fname, content, args)
+	lnum = 0
+	output = content.reduce([]) { |text, line|
+		lnum = lnum.next
+		begin
+			if args[:find].match(line.scrub) && (! args[:exclude_find].match(line.scrub))
+				if ! args[:nocomment] || (args[:nocomment] &&
+																	args[:find].match(line.scrub).to_s.split('/').length < 2)
+					text.push("#{lnum}: #{args[:find].match(line.scrub).to_s.strip}")
+					text = apply_special_filters(text, args)
+				end
+			end
+		rescue
+			puts "\n\n\n\n\n\n\n"
+			puts "FAIL!"
+			puts line.scrub
+			puts "\n\n\n\n\n\n\n"
+		end
+		text
+	}
+	show_fname(fname) if not output.empty?
+	output
+end
+
+# output the file data that matches the find (calls the find)
+def prep_find_args(fname, content, args, printer)
+	# convert find argument to regular expression if it isn't one already
+	args[:orig_find] = args[:orig_find] || args[:find]
+	args[:find] = to_match_only_regex(args[:find], args)
+	args[:exclude] = to_match_only_regex(args[:exclude], args) if args[:exclude]
+	args[:exclude_find] = to_match_only_regex(args[:exclude_find], args) if args[:exclude_find]
+	args[:ftype] = to_match_only_regex(args[:ftype], args) if args[:ftype]
+	printer.call(search_content(fname, content, args), 
+							 args[:orig_find])
+end
+
+# turn 
+def to_match_only_regex(str, args)
+	if str.class == String && (! args[:match_only])
+		clean_str = str.gsub(/^\^/, "").gsub(/\$$/, "")
+		puts clean_str
+		str = ".*#{clean_str}.*"
+	end
+	to_regexp(str)
+end
+
+# convert string to regular expression
+def to_regexp(str)
+	if str.class == String
+		Regexp.new(str.gsub(/\/\w?$/, "").gsub("/", ""))
+	else
+		str
+	end
+end
+
+# used to actually match arguments of interest
+def match_args(arg, opts, keys)
+	keys.reduce(opts) {|options, key|
+		if arg.match("=") && (arg.include? key.to_s)
+			arg_arr = arg.split("=")
+			if arg_arr[0] == key.to_s
+				options[arg_arr[0].to_sym] = arg_arr[1]
+			end
+		end
+		options
+	}
+end
+
+#request the arguments of interest
+def get_args(argv, arg_list)
+	argv.reduce({}) do |opts, arg|
+		opts = match_args(arg, opts, arg_list)
+		opts
+	end
+end
+
+# get a single flag argument
+def flag_arg(argv, args, addition)
+	args[addition.to_sym] = ((argv.include? addition) || (argv.include? "--#{addition}"))
+	puts args
+	args
+end
+
+# get ALL single flag arguments (from an array passed in)
+def flag_args(argv, args, new_args)
+	new_args.reduce(args) { |margs, magic_arg|
+		flag_arg(argv, margs, magic_arg)
+	}
+end
+
+# initialize params passed in from terminal
+def arg_setup(param_args, flag_args)
+	args = get_args(ARGV, param_args)
+	args = flag_args(ARGV, args, flag_args)
+	if ! args[:find] && param_args.concat(flag_args).include?(ARGV[0])
+		show_help
+	elsif ! args[:find] && ! param_args.concat(flag_args).include?(ARGV[0])
+		args[:find] = ARGV[0]
+		puts ARGV[0]
+	end
+	args[:exclude_find] = /xafoijrgnviaewugfheaogiavfg/ if ! args[:exclude_find]
+	args
+end
+
+# grab the args
+args = arg_setup(["find", "ftype", "exclude", "exclude_find"],
+								 ["function", "match_only", "nocomment", "console"])
+
+# special printing function, to allow colorized printing
+printer = Proc.new {|data, orig_find|
+	orig_matches = data.to_s.match(orig_find)
+	if orig_matches
+		data.each {|line|
+			orig_match = line.match(orig_find)
+			# if orig_match
+				output = line.split(to_regexp(orig_match).to_s)
+				print output[0]
+				print orig_match.to_s.green
+				print "#{output[1]}\n"
+			# end
+		}
+	end
+}
+
+# actually display the filenames and matching content below
+fname_cat_hash(get_files).each { |fname, content|
+	# if filetype was given, only let matching files through; otherwise let all files through
+	if (args[:ftype] && fname.split(".").last.match(args[:ftype])) || (! args[:ftype])
+		# Exclude filenames with the exclude
+		if (! args[:exclude]) || (args[:exclude] && ! fname.match(args[:exclude])) 
+			prep_find_args(fname, content, args, printer)
+		end
+	end
+}
