@@ -72,6 +72,9 @@ rvm @global do sudo gem install rb-fsevent
 # filesize gem
 rvm @global do sudo gem install filesize
 
+# color terminal output 
+rvm @global do sudo gem install colorize
+
 # rush module - more filesystem control
 rvm @global do sudo gem install rush2
 
