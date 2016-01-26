@@ -4,6 +4,13 @@
 ln -s /file/to/link/to location/and/name/of/symbolic/link
     # -- the link appears in this case at 'location/and/name/of/symbolic/link' 
 
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ REGEXES ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+(?=pat)  - positive lookahead
+(?!pat)  - negative lookahead
+(?<=pat) - positive lookbehind
+(?<!pat) - negative lookbehind
+
+
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~ POSTGRES FROM TERMINAL ~~~~~~~~~~~~~~~~~~~~~~~~~~~
 # Perform a database dump, to backup all data within
 =======
