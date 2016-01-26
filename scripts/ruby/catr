@@ -250,10 +250,10 @@ printer = Proc.new {|data, orig_find|
 	if orig_matches
 		data.each {|line|
 			orig_match = line.match(orig_find)
-				output = line.split(to_regexp(orig_match).to_s)
-				print output[0]
-				print orig_match.to_s.green
-				print "#{output[1]}\n"
+			output = line.split(to_regexp(orig_match).to_s)
+			print output[0]
+			print orig_match.to_s.green
+			print "#{output[1]}\n"
 		}
 	end
 }
