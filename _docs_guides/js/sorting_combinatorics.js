@@ -42,6 +42,7 @@ var incomplete = R.filter(R.whereEq({complete: false}));
 
 var colors = ['red', 'orange', 'yellow', 'green'];
 
+
 console.log('----------------------------------------------------------------------------------');
 //###################################################
 //#          COMBINATIONS WITH npm MODULES          #
@@ -65,6 +66,7 @@ console.log(combo(colors));
 //			[ 'red', 'yellow', 'green' ],
 //			[ 'orange', 'yellow', 'green' ],
 //			[ 'red', 'orange', 'yellow', 'green' ] ]
+
 console.log(" ----- combinations MODULE ALSO ALLOWS SPECIFYING MINIMUM COMBO TO OUTPUT -----");
 console.log(combo(colors, 2));
 // => [ [ 'red', 'orange' ],
@@ -79,6 +81,7 @@ console.log(combo(colors, 2));
 //			[ 'orange', 'yellow', 'green' ],
 //			[ 'red', 'orange', 'yellow', 'green' ] ]
 
+
 console.log('----------------------------------------------------------------------------------');
 //###################################################
 //#          RAMDA SORTING & COMBINATORICS          #
@@ -88,7 +91,7 @@ console.log('***************** RAMDA SORTING & COMBINATORICS *****************')
 console.log(" ----- RAMDA APERTURE: get all combinations of the given length of an array -----");
 colors2 = colors.sort();
 console.log(R.aperture(5, colors2).sort()
-	.concat(R.aperture(4, colors2).sort())
-	.concat(R.aperture(3, colors2).sort())
-	.concat(R.aperture(2, colors2).sort())
-	.concat(R.aperture(1, colors2).sort()).reverse())
+		.concat(R.aperture(4, colors2).sort())
+		.concat(R.aperture(3, colors2).sort())
+		.concat(R.aperture(2, colors2).sort())
+		.concat(R.aperture(1, colors2).sort()).reverse())

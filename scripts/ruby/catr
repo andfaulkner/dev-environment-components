@@ -34,9 +34,12 @@ def show_help
 	puts 'catr [^\w\d]seneca[^\W\D] type="js" exclude="node_modules" --nocomment'
 	puts "   - match on full word seneca in js files, w/ path node_modules & comment lines excluded"
 	puts "\n"
+	puts "catr seneca ftype='js$' exclude=min"
+	puts "   - ftype regex example. matches 'seneca' in js but NOT jsx, json, or min.js files"
+	puts "\n"
 	puts 'catr [uU]ser type="js" exclude="node_modules" --function'
 	puts "   - match functions in js files w/ word user in them, exclude paths w/ node_modules"
-        puts ""
+	puts ""
 	exit!
 end
 
@@ -165,7 +168,6 @@ end
 # get a single flag argument
 def flag_arg(argv, args, addition)
 	args[addition.to_sym] = ((argv.include? addition) || (argv.include? "--#{addition}"))
-	puts args
 	args
 end
 
@@ -184,7 +186,6 @@ def arg_setup(param_args, flag_args)
 		show_help
 	elsif ! args[:find] && ! param_args.concat(flag_args).include?(ARGV[0])
 		args[:find] = ARGV[0]
-		puts ARGV[0]
 	end
 	args[:exclude_find] = /xafoijrgnviaewugfheaogiavfg/ if ! args[:exclude_find]
 	args
