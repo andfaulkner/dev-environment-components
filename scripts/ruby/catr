@@ -94,6 +94,7 @@ def apply_special_filters(text, args)
 	text
 end
 
+# place settings for searches you want to be able to re-run on a whim in SAVED_SEARCHES_HASH
 module SavedSearches
 	SAVED_SEARCHES_HASH = {
 		"seneca"=>Proc.new { |args|
@@ -104,17 +105,16 @@ module SavedSearches
 		},
 		#aims to identify all locations in which seneca actions are defined
 		"seneca.add"=>Proc.new { |args|
-			lookbehind = "(?<![^a-zA-Z0-9_][_R])"
+			lookbehind = 		"(?<![^a-zA-Z0-9_][_R])"
+			sen_add_call =	"([\s]|this|seneca|root|instance|router)\\.add"
+			sen_spacer =		"\s?\\(\s?\s?['\"\{]"
+			sen_args = 			"(.*(role|cmd|init|deprecate\$|hook|type|list|stats|get|info|ready|pinthis):)*"
+			endpt = 				"([^\}]*)[^\}]*\}"
 
-			sen_add_call="([\s]|this|seneca|root|instance|router)\\.add"
-			sen_spacer="\s?\\(\s?\s?['\"\{]"
-			sen_args = "(.*(role|cmd|init|deprecate\$|hook|type|list|stats|get|info|ready|pinthis):)*"
-			endpt = "([^\}]*)[^\}]*\}"
-
-			O_R_1 = "(seneca\\.add)|(role:[\s\"']?[\s\"']?seneca)|(private\$\.actrouter\.add\s?\\()"
-			O_R_2 = "(\.add.*seneca)|pinthis\.add\s?\\(.*(pattern|meta)|(this\.add\s?\\(.*#{sen_args})"
-			O_R_3 = "((?<=\\(\{\n).*$)"
-			overrides = "(#{O_R_1}|#{O_R_2}|#{O_R_3})"
+			O_R_1 = 				"(role:[\s\"']?[\s\"']?seneca)|(private\$\.actrouter\.add\s?\\()"
+			O_R_2 = 				"(seneca\\.add)|(\.add.*seneca)|pinthis\.add\s?\\(.*(pattern|meta)"
+			O_R_3 = 				"((?<=\\(\{\n).*$)|(this\.add\s?\\(.*#{sen_args})"
+			overrides = 		"(#{O_R_1}|#{O_R_2}|#{O_R_3})"
 
 			args[:find] = "((#{lookbehind}#{sen_add_call}#{sen_spacer}#{sen_args}#{endpt})|#{overrides})"
 			args[:ftype] = "js$"
@@ -125,17 +125,6 @@ module SavedSearches
 		}
 	}
 end
-
-# # place searches you want to be able to do any time in here
-# def load_saved_srch(args, saved_search)
-# 	SavedSearches::SAVED_SEARCHES_HASH.each {|key, saved_search_proc|
-# 		if saved_search == key
-# 			puts 'IN!'
-# 			args = saved_search_proc.call(args)
-# 		end
-# 	}
-# 	args
-# end
 
 # emulates scrub for earlier versions of ruby
 def scrub(str)
@@ -156,10 +145,7 @@ def search_content(fname, content, args)
 				end
 			end
 		rescue
-			puts "\n\n\n\n\n\n\n"
-			puts "FAIL!"
-			puts scrub(line)
-			puts "\n\n\n\n\n\n\n"
+			puts "\n\n\n\n\nsearch_content: failed, matching with line:\n#{scrub(line)}\n\n\n\n\n"
 		end
 		text
 	}
