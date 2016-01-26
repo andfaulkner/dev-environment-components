@@ -77,7 +77,7 @@ dirs              # list all items on the directory stack. Args:
 
 
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ GIT ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-* git diff      <<< default: compare cur branch changed files vs. cur branch last commit / index
+* git diff      <-<- default: compare cur branch changed files vs. cur branch last commit / index
 
 git tag AF-pwd-dsl-1.4 -f -m "about to attempt pwd success msg      >>>>confirmed working:     #### length::_ALL_      #### mandatory::_ALL_;       #### forbid::whitespace::_ALL_;   ##forbid:: #--errMsg #--which--[];   ##forbid:: #--errMsh #--which<group, <group,errMsg>>;   #forbid:: #--which<group, errMsg>"
 
@@ -87,6 +87,16 @@ git tag -n2
 * rename a tag:
 git tag AF--pwd-dsl-1.4 AF-pwd-dsl-1.4
 git tag -d AF-pwd-dsl-1.4
+
+# look thru summary git log, see what files changed in each 
+git log --diff-filter=D --summary
+
+# Find last commit that affected given path / file
+git rev-list -n 1 HEAD -- ./path/to/file/
+# --> [REVISION_NUMBER]  <<< actually a crazy id sequence, but we'll call it [REVISION_NUMBER] 
+#Checkout previous revision of a file
+git checkout [REVISON_NUMBER]^ -- ./path/to/file/
+# See: http://stackoverflow.com/questions/953481/restore-a-deleted-file-in-a-git-repo
 
 
 
