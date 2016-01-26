@@ -4,6 +4,14 @@
 		"selected_items":
 		[
 			[
+				"exit",
+				"exit!	func"
+			],
+			[
+				"g",
+				"github"
+			],
+			[
 				"readFileS",
 				"fs.readFileSync(path, options);"
 			],
@@ -86,10 +94,6 @@
 			[
 				"onc",
 				"onclick	Attr"
-			],
-			[
-				"g",
-				"get	$.get()"
 			],
 			[
 				"rren",
@@ -228,10 +232,6 @@
 				"document.getElementById(${0:id})	Document"
 			],
 			[
-				"exit",
-				"process.exit"
-			],
-			[
 				"first",
 				"_.first"
 			],
@@ -357,9 +357,6 @@
 			]
 		]
 	},
-	"buffers":
-	[
-	],
 	"build_system": "",
 	"build_system_choices":
 	[
@@ -367,10 +364,26 @@
 	"build_varint": "",
 	"command_palette":
 	{
-		"height": 138.0,
-		"last_filter": "bookmar",
+		"height": 306.0,
+		"last_filter": "install",
 		"selected_items":
 		[
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"packag",
+				"Package Control: Remove Package"
+			],
+			[
+				"list",
+				"Package Control: List Packages"
+			],
+			[
+				"List",
+				"Package Control: List Packages"
+			],
 			[
 				"bookmar",
 				"Bookmarks: Toggle"
@@ -378,10 +391,6 @@
 			[
 				"package",
 				"Package Control: Remove Package"
-			],
-			[
-				"install",
-				"Package Control: Install Package"
 			],
 			[
 				"instal",
@@ -434,10 +443,6 @@
 			[
 				"sublime",
 				"SublimeLinter: Next Error"
-			],
-			[
-				"list",
-				"Package Control: List Packages"
 			],
 			[
 				"remove pack",
@@ -568,7 +573,7 @@
 				"Package Control: Install Package"
 			]
 		],
-		"width": 603.0
+		"width": 854.0
 	},
 	"console":
 	{
@@ -589,12 +594,60 @@
 		"side_bar_visible": false,
 		"status_bar_visible": false
 	},
-	"expanded_folders":
-	[
-		"/home/andrew/.config/sublime-text-3/Packages/User/snippets"
-	],
 	"file_history":
 	[
+		"/home/andrew/.config/sublime-text-3/Packages/User/snippets/scripts/ruby/recursively_list_all_files2.rb",
+		"/home/andrew/.config/sublime-text-3/Packages/User/snippets/scripts/ruby/recursively_list_all_files.rb",
+		"/home/andrew/.config/sublime-text-3/Packages/User/snippets/todo-scripts.md",
+		"/home/andrew/.config/sublime-text-3/Packages/User/snippets/snippets.sublime-project",
+		"/home/andrew/.config/sublime-text-3/Packages/User/snippets/_docs_guides/clojure/0000-setup.sh",
+		"/home/andrew/.config/sublime-text-3/Packages/User/snippets/_docs_guides/clojure/0009-iterators-map-reduce.clj",
+		"/home/andrew/.config/sublime-text-3/Packages/User/snippets/_docs_guides/clojure/0011-loops.clj",
+		"/home/andrew/.config/sublime-text-3/Packages/User/FileHistory.sublime-settings",
+		"/home/andrew/.config/sublime-text-3/Packages/User/snippets/bash-tips.txt",
+		"/home/andrew/.config/sublime-text-3/Packages/User/snippets/_docs_guides/ruby/--ruby-environment-setup-and-utils.md",
+		"/home/andrew/.config/sublime-text-3/Packages/User/snippets/scripts/ruby/env_sorted.rb",
+		"/home/andrew/.config/sublime-text-3/Packages/User/snippets/_docs_guides/clojure/0001-print-to-console.clj",
+		"/home/andrew/.config/sublime-text-3/Packages/User/snippets/_docs_guides/clojure/0002-clojure-types.clj",
+		"/home/andrew/.config/sublime-text-3/Packages/User/snippets/_docs_guides/js/node-cli-tools/node-cli-tools.js",
+		"/home/andrew/.config/sublime-text-3/Packages/User/snippets/_docs_guides/js/node-cli-tools/package.json",
+		"/home/andrew/.config/sublime-text-3/Packages/User/snippets/_docs_guides/js/async-lib/async-cleverness.js",
+		"/home/andrew/.config/sublime-text-3/Packages/User/snippets/scripts/setup-node/essential-modules.sh",
+		"/home/andrew/.config/sublime-text-3/Packages/User/snippets/_docs_guides/clojure/macros/m0001-macros-basics.clj",
+		"/home/andrew/.config/sublime-text-3/Packages/User/snippets/_docs_guides/clojure/0008-lists-sequentials.clj",
+		"/home/andrew/.config/sublime-text-3/Packages/User/snippets/_docs_guides/clojure/0007-strings.clj",
+		"/home/andrew/.config/sublime-text-3/Packages/User/snippets/_docs_guides/clojure/0006-namespaces.clj",
+		"/home/andrew/.config/sublime-text-3/Packages/User/snippets/_docs_guides/clojure/0005-functions.clj",
+		"/home/andrew/.config/sublime-text-3/Packages/User/snippets/_docs_guides/clojure/0004-identifiers--def-let.clj",
+		"/home/andrew/.config/sublime-text-3/Packages/User/snippets/_docs_guides/clojure/0003-operations-conditionals-arithmetic.clj",
+		"/home/andrew/.config/sublime-text-3/Packages/User/snippets/_docs_guides/clojure/0010-hashmaps-and-vectors.clj",
+		"/home/andrew/.config/sublime-text-3/Packages/User/snippets/_docs_guides/markdown/markdown_basics.html",
+		"/home/andrew/.config/sublime-text-3/Packages/User/snippets/_docs_guides/clojure/0010-associative-arrays-slash-hashmaps-slash-maps.clj",
+		"/home/andrew/.config/sublime-text-3/Packages/User/snippets/_docs_guides/clojure/a0001-casting.clj",
+		"/home/andrew/.config/sublime-text-3/Packages/User/snippets/_docs_guides/clojure/0008-lists.clj",
+		"/home/andrew/.config/sublime-text-3/Packages/User/snippets/_docs_guides/clojure/0007-strings-and-sequentials.clj",
+		"/home/andrew/.config/sublime-text-3/Packages/User/snippets/_docs_guides/clojure/0004-conditionals.clj",
+		"/home/andrew/.config/sublime-text-3/Packages/User/snippets/_docs_guides/clojure/main_clojure_cli_commands.md",
+		"/home/andrew/.config/sublime-text-3/Packages/User/snippets/snippets/dust/js--new_dust_template_view.sublime-snippet",
+		"/home/andrew/.config/sublime-text-3/Packages/User/snippets/snippets/clojure/comment--clojure_cli_heading_small.sublime-snippet",
+		"/home/andrew/.config/sublime-text-3/Packages/User/snippets/snippets/clojure/comment--clojure_cli_heading_block.sublime-snippet",
+		"/home/andrew/.config/sublime-text-3/Packages/User/snippets/snippets/clojure/println--clojure.sublime-snippet",
+		"/home/andrew/.config/sublime-text-3/Packages/User/snippets/snippets/ruby/commenting/comment--ruby_cli_heading.sublime-snippet",
+		"/home/andrew/.config/sublime-text-3/Packages/User/snippets/dev-env/.irbrc",
+		"/home/andrew/.config/sublime-text-3/Packages/User/snippets/_docs_guides/sublime_notes/sublime_plugins_hotkeys.md",
+		"/home/andrew/.config/sublime-text-3/Packages/TabsExtra/tabs_extra.sublime-settings",
+		"/home/andrew/.config/sublime-text-3/Packages/User/Default (Linux).sublime-keymap",
+		"/home/andrew/.config/sublime-text-3/Packages/User/Terminal (Linux).sublime-settings",
+		"/home/andrew/.config/sublime-text-3/Packages/User/Terminal.sublime-settings",
+		"/home/andrew/.config/sublime-text-3/Packages/Terminal/Terminal.sublime-settings",
+		"/home/andrew/.config/sublime-text-3/Packages/Terminal/Default (Linux).sublime-keymap",
+		"/home/andrew/.config/sublime-text-3/Packages/User/Preferences.sublime-settings",
+		"/home/andrew/.config/sublime-text-3/Packages/Default/Default (Linux).sublime-keymap",
+		"/home/andrew/.config/sublime-text-3/Packages/User/snippets/_docs_guides/ack.md",
+		"/home/andrew/.config/sublime-text-3/Packages/User/snippets/base-snippet-template.sublime-snippet",
+		"/home/andrew/.config/sublime-text-3/Packages/File History/FileHistory.sublime-settings",
+		"/home/andrew/.config/sublime-text-3/Packages/File History/Default (Linux).sublime-keymap",
+		"/home/andrew/.config/sublime-text-3/Packages/User/snippets/_docs_guides/sublime_notes/hotkeys.md",
 		"/home/andrew/projects/isight/isight_main_v5_beta/script/case-generation-utils/create-final-form-data-objects.js",
 		"/home/andrew/projects/isight/isight_main_v5_beta/script/case-generation-utils/generate-field-definition-data.js",
 		"/home/andrew/projects/isight/isight_main_v5_beta/script/case-generation-utils/handle-users.js",
@@ -650,7 +703,6 @@
 		"/home/andrew/projects/isight/config_complaints-demo_v5/node_modules/isight/package.json",
 		"/home/andrew/projects/isight/isight_main_v5_beta/script/populate-cases.js",
 		"/home/andrew/projects/isight/isight_main_v5_beta/server.js",
-		"/home/andrew/.config/sublime-text-3/Packages/User/Preferences.sublime-settings",
 		"/home/andrew/.config/sublime-text-3/Packages/Default/Preferences.sublime-settings",
 		"/home/andfaulkner/Projects/testbed/testbed-seneca--4/server/debug/winston-logger.js",
 		"/home/andfaulkner/Projects/testbed/testbed-seneca--4/config/default.js",
@@ -671,68 +723,19 @@
 		"/home/andfaulkner/Projects/testbed/testbed-seneca--4/server/microservices/api/meta_api.js",
 		"/home/andfaulkner/Projects/testbed/testbed-seneca--4/gulpfile.js",
 		"/home/andfaulkner/.config/sublime-text-3/Packages/User/Preferences.sublime-settings",
-		"/home/andfaulkner/Projects/testbed/testbed-seneca--4/sql_dump.sql",
-		"/home/andfaulkner/Projects/testbed/testbed-seneca--4/server/microservices/express/express-plugin.js",
-		"/home/andfaulkner/Projects/testbed/testbed-seneca--4/data/test.sql.sh",
-		"/home/andfaulkner/Projects/testbed/testbed-seneca--4/doc/seneca log commands.txt",
-		"/home/andfaulkner/Projects/testbed/testbed-seneca--4/.build/index.js",
-		"/home/andfaulkner/Projects/testbed/testbed-seneca--4/data/sql-node-script.js",
-		"/home/andfaulkner/Projects/testbed/testbed-seneca--4/server/microservices/api/api.js",
-		"/home/andfaulkner/Projects/testbed/testbed-seneca--4/server/microservices/ultra-basic/basic-plugin-1.js",
-		"/home/andfaulkner/Projects/testbed/testbed-seneca--4/server/microservices/api/data_entity_api.js",
-		"/home/andfaulkner/Projects/testbed/testbed-seneca--4/doc/config-reference-1.js",
-		"/home/andfaulkner/Projects/testbed/testbed-seneca--4/node_modules/seneca/node_modules/zig/zig.js",
-		"/home/andfaulkner/Projects/testbed/testbed-seneca--4/.build/components/index_page/index_content.html",
-		"/home/andfaulkner/Projects/testbed/testbed-seneca--4/server/microservices/express/log-msg-plugin.js",
-		"/home/andfaulkner/Projects/testbed/testbed-seneca--4/.build/index.html",
-		"/home/andfaulkner/Projects/testbed/testbed-seneca--4/.build/components/forms_page/forms.html",
-		"/home/andfaulkner/Projects/testbed/testbed-seneca--4/webpack.config.js",
-		"/home/andfaulkner/Projects/testbed/testbed-seneca--4/client/index.html",
-		"/home/andfaulkner/Projects/testbed/testbed-seneca--4/client/index.css",
-		"/home/andfaulkner/Projects/testbed/testbed-seneca--4/client/load-css.js",
-		"/home/andfaulkner/Projects/testbed/testbed-seneca--4/.build/load-css.js",
-		"/home/andfaulkner/Projects/testbed/testbed-seneca--4/node_modules/bootstrap/dist/js/ie10-viewport-bug-workaround.js",
-		"/home/andfaulkner/Projects/testbed/express-backbone-testbed-3/client/components/tetris/index.html",
-		"/home/andfaulkner/Projects/testbed/testbed-seneca--4/client/theme-1.js",
-		"/home/andfaulkner/Projects/testbed/testbed-seneca--4/.build/client/components/index/theme-1.js",
-		"/home/andfaulkner/Projects/testbed/testbed-seneca--4/client/components/index/index.js",
-		"/home/andfaulkner/Projects/testbed/testbed-seneca--4/client/components/index/index.html",
-		"/home/andfaulkner/Projects/testbed/express-backbone-testbed-3/client/components/tetris/tetris-index-jsx.jsx",
-		"/home/andfaulkner/Projects/testbed/express-backbone-testbed-3/client/components/tetris/tetris-index.js",
-		"/home/andfaulkner/Projects/testbed/express-backbone-testbed-3/server.js",
-		"/home/andfaulkner/Projects/testbed/express-backbone-testbed-3/webpack.config.js",
-		"/home/andfaulkner/Projects/testbed/express-backbone-testbed-3/express-backbone-testbed-3.sublime-project",
-		"/home/andfaulkner/Projects/testbed/express-backbone-testbed-3/client/components/react-1/react-1-index.jsx",
-		"/home/andfaulkner/Projects/testbed/express-backbone-testbed-3/client/components/react-1/react-1-index.js",
-		"/home/andfaulkner/Projects/testbed/express-backbone-testbed-3/client/components/react-1/theme-1.js",
-		"/home/andfaulkner/Projects/testbed/express-backbone-testbed-3/.build/client/components/react-1/react-1-index.js",
-		"/home/andfaulkner/Projects/testbed/express-backbone-testbed-3/client/components/react-1/index.html",
-		"/home/andfaulkner/Projects/testbed/express-backbone-testbed-3/.build/client/components/react-1/index.html",
-		"/home/andfaulkner/Projects/testbed/express-backbone-testbed-3/.build/client/components/react-1/theme-1.js",
-		"/home/andfaulkner/Projects/testbed/express-backbone-testbed-3/.build/index2.js",
-		"/home/andfaulkner/Projects/testbed/express-backbone-testbed-3/.build/client/index.html",
-		"/home/andfaulkner/Projects/testbed/express-backbone-testbed-3/.build/e33cb45f2d347e8ac6ef.js",
-		"/home/andfaulkner/Projects/testbed/express-backbone-testbed-3/client/components/tetris2/tetris2.js",
-		"/home/andfaulkner/Projects/testbed/express-backbone-testbed-3/client/components/tetris2/tetris2.jsx",
-		"/home/andfaulkner/Projects/testbed/express-backbone-testbed-3/client/components/tetris2/index.html",
-		"/home/andfaulkner/Projects/testbed/express-backbone-testbed-3/.build/client/components/tetris2/tetris2.html",
-		"/home/andfaulkner/Projects/testbed/express-backbone-testbed-3/.build/client/components/tetris/theme-1.js",
-		"/home/andfaulkner/Projects/testbed/express-backbone-testbed-3/client/components/tetris/tetris.html",
-		"/home/andfaulkner/Projects/testbed/express-backbone-testbed-3/.build/client/components/react-1/react-1-index.jsx",
-		"/home/andfaulkner/Projects/testbed/express-backbone-testbed-3/.build/client/components/tetris-2/tetris-2jsx.jsx",
-		"/home/andfaulkner/Projects/testbed/express-backbone-testbed-3/client/components/tetris-2/tetris-2.html",
-		"/home/andfaulkner/Projects/testbed/express-backbone-testbed-3/client/components/tetris-2/tetris-2jsx.jsx",
-		"/home/andfaulkner/Projects/testbed/express-backbone-testbed-3/client/components/tetris-2/tetris-2.js"
+		"/home/andfaulkner/Projects/testbed/testbed-seneca--4/sql_dump.sql"
 	],
 	"find":
 	{
-		"height": 22.0
+		"height": 35.0
 	},
 	"find_in_files":
 	{
 		"height": 93.0,
 		"where_history":
 		[
+			"<project>,*.html",
+			"<project>,-node_modules/**,*.html",
 			"<project>,-node_modules/**,-.build/**,*.js,-gulpfile.js",
 			"<project>",
 			"<project>,-node_modules/**,-.build/**,*.js,-gulpfile.js",
@@ -772,6 +775,98 @@
 		"case_sensitive": true,
 		"find_history":
 		[
+			"printer",
+			"orig.?match",
+			"exclude_find",
+			"to_match_only_regex",
+			"to_regexp",
+			"\\^\\$",
+			"^$",
+			"search_content",
+			"#\\{",
+			"exclude_",
+			"match_only",
+			"full_line",
+			"ARGV[1]",
+			"exiter",
+			"fname_cat_hash",
+			"special_",
+			"regex",
+			"find",
+			"str",
+			"orig_matches",
+			"full_line",
+			"orig_find",
+			"prep_find_args",
+			"printer",
+			"puts",
+			"search_content",
+			"prep_find_args",
+			"magic_args",
+			"show_file_data",
+			"to_regexp",
+			"show_file_data",
+			"get_args",
+			"to_regexp",
+			"match_args",
+			"to_regexp",
+			"show_file_data",
+			"regex",
+			"function",
+			"puts",
+			"cmd",
+			"test",
+			"      //",
+			"otherTraits",
+			"otherTraitsIn",
+			"app",
+			"name",
+			"missing required",
+			"cmdIn",
+			"PROG_animalTypeIn",
+			"app",
+			"PROG_animalTypeIn",
+			"animalTypeIn",
+			"app",
+			"animalTypeIn",
+			"app",
+			"animalTypeIn",
+			"cmd",
+			"keywords",
+			"otherDogs",
+			"dog",
+			"<.*>",
+			"COMPILE",
+			" ----- ",
+			"/\\/\\/\\/\\",
+			" - AKA __NOT__ A MACRO -",
+			"++2",
+			"++",
+			"plus-two",
+			"undef",
+			"ONE-ITEM LIST CONTAINING LARGE UNQUOTED STRING",
+			"This string defined literally w no fn used",
+			"##",
+			"-##",
+			"+++",
+			"one-always",
+			"4",
+			"one-always",
+			"ARRAY",
+			"LITERAL",
+			"RAW",
+			"4",
+			"1",
+			"key1",
+			"val",
+			" value",
+			"value",
+			"LARGEST",
+			"OPERATORS",
+			"ctrl\\+shift\\+t",
+			"ctrl\\+shift",
+			"ctrl\\+shift\\+t",
+			"ctrl\\+shift",
 			"HEAD",
 			">>",
 			"user",
@@ -807,99 +902,7 @@
 			"\\.users",
 			"users",
 			"helper",
-			"serverConfig",
-			"setupUser",
-			"globalSeneca",
-			"seneca",
-			"initSenecaForPopulate",
-			"appPath",
-			"initSenecaForPopulate",
-			"cases",
-			"run-progress",
-			"requirer",
-			"uuid",
-			"util",
-			"api.?email",
-			"sort",
-			"[^a-zA-Z0-9]sort:",
-			"sort:",
-			"column",
-			"getSort",
-			"multiSelect",
-			"Function",
-			"getSort",
-			"sort[^:]",
-			"sortColumnIndex",
-			"_sort",
-			"{ ",
-			"title",
-			"{ ",
-			"sortColumn",
-			"sort",
-			"esHelpers",
-			"GridFiltersView",
-			"Grid",
-			"done\\)",
-			"fs",
-			"path",
-			"startServer",
-			"helper",
-			"util",
-			"console",
-			"inspect",
-			"util",
-			"\\.blue",
-			"\\.gree",
-			"\\.red",
-			"inspOpts",
-			"green",
-			"attachedFile1",
-			"fileId",
-			"green",
-			"parsedBody",
-			"attachedFile1",
-			"self",
-			"\\$operatorSelector",
-			"$operatorSelector",
-			"operator",
-			"opeator",
-			"createdFileRecord",
-			"save:",
-			"save",
-			"this.model.save",
-			"onSave",
-			"startServer",
-			"file",
-			"attachment",
-			"file",
-			"attachment",
-			"file",
-			"config",
-			"apibaseurl",
-			"attachment",
-			"\\/attachment",
-			"cookiejar",
-			"cookieJar",
-			"form",
-			"r\\.form",
-			"r.form",
-			"request",
-			"cookieJar",
-			"getTestAttachment",
-			"opt",
-			"attachmentFile",
-			"nattachmentFile",
-			"attachmentFile",
-			"form",
-			"res",
-			"getTestCase",
-			"getcreatedCase",
-			"testCase",
-			"TestCase",
-			"testCase",
-			"timerAssert",
-			"file",
-			"  "
+			"serverConfig"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -907,6 +910,7 @@
 		"regex": true,
 		"replace_history":
 		[
+			"========",
 			"	",
 			"return ",
 			"",
@@ -973,14 +977,6 @@
 		"whole_word": false,
 		"wrap": true
 	},
-	"groups":
-	[
-		{
-			"sheets":
-			[
-			]
-		}
-	],
 	"incremental_find":
 	{
 		"height": 21.0
@@ -998,16 +994,36 @@
 				0,
 				1,
 				1
+			],
+			[
+				1,
+				0,
+				2,
+				1
+			],
+			[
+				0,
+				1,
+				1,
+				2
+			],
+			[
+				1,
+				1,
+				2,
+				2
 			]
 		],
 		"cols":
 		[
 			0.0,
+			0.485800343974,
 			1.0
 		],
 		"rows":
 		[
 			0.0,
+			0.722777222777,
 			1.0
 		]
 	},
@@ -1029,10 +1045,9 @@
 		"height": 88.0
 	},
 	"pinned_build_system": "Packages/Markdown Preview/Markdown.sublime-build",
-	"project": "snippets.sublime-project",
 	"replace":
 	{
-		"height": 40.0
+		"height": 64.0
 	},
 	"save_all_on_build": false,
 	"select_file":
@@ -1041,6 +1056,10 @@
 		"last_filter": "",
 		"selected_items":
 		[
+			[
+				"",
+				"_docs_guides/ack.md"
+			],
 			[
 				"populate-triggers",
 				"script/populate-triggers.js"
@@ -1126,7 +1145,6 @@
 		],
 		"width": 570.0
 	},
-	"selected_group": 0,
 	"settings":
 	{
 	},
@@ -1134,7 +1152,7 @@
 	"show_open_files": true,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 269.0,
+	"side_bar_width": 255.0,
 	"status_bar_visible": true,
 	"template_settings":
 	{

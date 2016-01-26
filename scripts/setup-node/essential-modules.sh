@@ -1,3 +1,8 @@
+# sort npm dependencies
+npm install -g npm-sort
+# in project dir:
+# 	npm-sort
+
 npm install -g md2html
 npm install -g gulp
 npm install -g dustjs-linkedin
