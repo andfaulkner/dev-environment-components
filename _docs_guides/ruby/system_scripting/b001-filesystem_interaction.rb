@@ -118,6 +118,10 @@ puts " ----- READ A FILE -----"
 test_file = File.open("test_file.txt")
 puts test_file
 
+puts " ----- READ A FILE - V2 -----"
+react_package = File.open("node_modules/react/package.json")
+react_package.each_line{|line| puts line }
+
 puts " ----- GET NAME OF A STORED FILE -----"
 puts test_file.to_path
 

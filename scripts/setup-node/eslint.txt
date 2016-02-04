@@ -1,0 +1,39 @@
+##########################################################################################
+######################################### ESLINT #########################################
+##########################################################################################
+
+########## SETUP ##########
+#in a new project:
+eslint --init
+npm install --save-dev babel-eslint
+# if using react with ESLint:
+npm install --save-dev eslint-plugin-react eslint-plugin-babel
+
+########## RULES ##########
+0 - turn the rule off
+1 - turn the rule on as a warning (doesn't affect exit code)
+2 - turn the rule on as an error (exit code is 1 when triggered)
+
+e.g.
+		{
+		    "rules": {
+		        "eqeqeq": 0,
+		        "curly": 2,
+		        "quotes": [2, "double"]
+		    }
+		}
+
+########## DISABLING ##########
+#disable specific eslint rules in a js file with this on the same line you're disabling:
+#  			//eslint-disable-line semi
+# or to disable ALL rules:
+# 			//eslint-disable-line semi
+
+
+###### SPECIFIC RULES: EXTRA INFO ######
+## radix
+This is OK:
+		var num = parseInt("071", 10);  // 71
+This is not:
+		var num = parseInt("071");      // 57
+# options: "always" and "as-needed"

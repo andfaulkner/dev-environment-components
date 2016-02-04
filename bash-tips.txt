@@ -1,5 +1,8 @@
 #!sh
 
+# PLAY MUSIC FROM COMMAND LINE
+play path-to-mp3-or-*mp3
+
 # Symbolic links - file linking
 ln -s /file/to/link/to location/and/name/of/symbolic/link
     # -- the link appears in this case at 'location/and/name/of/symbolic/link' 
