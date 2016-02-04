@@ -4,6 +4,10 @@
 		"selected_items":
 		[
 			[
+				"comm",
+				"comment_moduleheading	Main module heading - explain what module does etc."
+			],
+			[
 				"readFileS",
 				"fs.readFileSync(path, options);"
 			],
@@ -357,9 +361,6 @@
 			]
 		]
 	},
-	"buffers":
-	[
-	],
 	"build_system": "",
 	"build_system_choices":
 	[
@@ -589,12 +590,9 @@
 		"side_bar_visible": false,
 		"status_bar_visible": false
 	},
-	"expanded_folders":
-	[
-		"/home/andrew/.config/sublime-text-3/Packages/User/snippets"
-	],
 	"file_history":
 	[
+		"/home/andrew/.config/sublime-text-3/Packages/User/snippets/scripts/setup-node/essential-modules.sh",
 		"/home/andrew/projects/isight/isight_main_v5_beta/script/case-generation-utils/create-final-form-data-objects.js",
 		"/home/andrew/projects/isight/isight_main_v5_beta/script/case-generation-utils/generate-field-definition-data.js",
 		"/home/andrew/projects/isight/isight_main_v5_beta/script/case-generation-utils/handle-users.js",
@@ -721,12 +719,11 @@
 		"/home/andfaulkner/Projects/testbed/express-backbone-testbed-3/.build/client/components/react-1/react-1-index.jsx",
 		"/home/andfaulkner/Projects/testbed/express-backbone-testbed-3/.build/client/components/tetris-2/tetris-2jsx.jsx",
 		"/home/andfaulkner/Projects/testbed/express-backbone-testbed-3/client/components/tetris-2/tetris-2.html",
-		"/home/andfaulkner/Projects/testbed/express-backbone-testbed-3/client/components/tetris-2/tetris-2jsx.jsx",
-		"/home/andfaulkner/Projects/testbed/express-backbone-testbed-3/client/components/tetris-2/tetris-2.js"
+		"/home/andfaulkner/Projects/testbed/express-backbone-testbed-3/client/components/tetris-2/tetris-2jsx.jsx"
 	],
 	"find":
 	{
-		"height": 22.0
+		"height": 35.0
 	},
 	"find_in_files":
 	{
@@ -772,6 +769,9 @@
 		"case_sensitive": true,
 		"find_history":
 		[
+			"SETUP",
+			"		",
+			"  ",
 			"HEAD",
 			">>",
 			"user",
@@ -896,10 +896,7 @@
 			"getcreatedCase",
 			"testCase",
 			"TestCase",
-			"testCase",
-			"timerAssert",
-			"file",
-			"  "
+			"testCase"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -973,14 +970,6 @@
 		"whole_word": false,
 		"wrap": true
 	},
-	"groups":
-	[
-		{
-			"sheets":
-			[
-			]
-		}
-	],
 	"incremental_find":
 	{
 		"height": 21.0
@@ -1029,10 +1018,9 @@
 		"height": 88.0
 	},
 	"pinned_build_system": "Packages/Markdown Preview/Markdown.sublime-build",
-	"project": "snippets.sublime-project",
 	"replace":
 	{
-		"height": 40.0
+		"height": 64.0
 	},
 	"save_all_on_build": false,
 	"select_file":
@@ -1126,7 +1114,6 @@
 		],
 		"width": 570.0
 	},
-	"selected_group": 0,
 	"settings":
 	{
 	},
@@ -1134,7 +1121,7 @@
 	"show_open_files": true,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 269.0,
+	"side_bar_width": 190.0,
 	"status_bar_visible": true,
 	"template_settings":
 	{

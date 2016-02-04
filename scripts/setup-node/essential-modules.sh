@@ -1,3 +1,6 @@
+##########################################################################################
+################################ ESSENTIAL GLOBAL MODULES ################################
+##########################################################################################
 # sort npm dependencies
 npm install -g npm-sort
 # in project dir:
@@ -12,25 +15,36 @@ npm install -g forever
 npm install -g nodemon
 npm install -g pm2
 npm install -g mimosa
-npm install -g broccoli
-npm install -g sass
+npm install -g broccoli broccoli-cli
+npm install -g node-sass
 npm install -g brunch
 npm install -g webpack
-npm install -g babel babel-core babel-loader node-babel
+npm install -g babel babel-core babel-loader node-babel babel-cli
 npm install -g less
 npm install -g eslint
 npm install -g jshint
 npm install -g jslint
+npm install -g babel-eslint
 npm install -g jscs
 npm install -g express
 npm install -g knex
-npm install -g jsbeautify
+npm install -g js-beautify
 npm install -g winston
-npm install -g winston-logger
 npm install -g backbone
 npm install -g seneca
 npm install -g cordova
+npm install -g structor
+npm install -g concurrently # run multiple commands at once e.g. concurrent 'cmd 1' 'cmd 2'
+npm install -g babel-node
+npm install -g mocha
 
+# ESSENTIAL FOR VERSION SWITCHING
+npm install -g avn avn-nvm
+avn setup
+
+##########################################################################################
+########################### COOL GLOBAL MODULES (explore more) ###########################
+##########################################################################################
 # move stuff to a 'trash can' - like rm but safer. https://github.com/sindresorhus/trash
 npm install --global trash-cli
 # Usage:		trash <path|glob>							
@@ -108,3 +122,43 @@ npm install --global fkill-cli
 # 
 npm install -g vantage
 # https://github.com/dthree/vantage
+
+##########################################################################################
+############################### ESSENTIAL PROJECT MODULES ################################
+##########################################################################################
+
+# styling, templating
+npm install --save dustjs-linkedin node-sass
+
+# ES6
+npm install --save babel babel-preset-react babel-preset-es2015
+npm install --save-dev babel-loader babel-runtime babel-eslint babel-core
+npm install --save-dev eslint-plugin-babel eslint-plugin-react
+
+# server framework
+npm install --save koa koa-router koa-compose koa-static
+
+# logging
+npm install --save winston
+
+# utils
+npm install --save jquery lodash
+
+# db
+npm install --save bookshelf pg 
+
+# control flow
+npm install --save co
+npm install --save async
+
+# Build
+npm install --save-dev broccoli webpack eslint babel redux-devtools
+
+# React & redux
+npm install --save react redux babel-preset-react react-dom react-router
+
+# Config handling
+npm install --save config json5 #json5, because screw having no comments etc.
+
+# make every non-module require relative to project root
+npm install --save app-module-path
