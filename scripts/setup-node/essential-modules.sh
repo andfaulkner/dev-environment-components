@@ -42,6 +42,20 @@ npm install -g mocha
 npm install -g avn avn-nvm
 avn setup
 
+
+##########################################################################################
+############################# GULP PLUGINS NEEDED (MINIMUM) ##############################
+##########################################################################################
+npm install --save-dev gulp-debug gulp-dev gulp-display-help gulp-dust gulp-exit
+npm install ---save-dev gulp-filter gulp-if-else gulp-newer gulp-plumber
+npm install --save-dev gulp-print gulp-rename gulp-replace gulp-rimraf
+npm install --save-dev gulp-sass gulp-shell gulp-size gulp-stats fs-extra
+npm install --save-dev gulp-tap gulp-webpack lazypipe run-sequence gulp-wait
+npm install --save-dev gulp-util gulp-wait gulp-livereload shelljs gulp-packages
+npm install --save-dev merge2 del async tcp-port-used colors rootpath yargs
+
+npm install --save clarify trace
+
 ##########################################################################################
 ########################### COOL GLOBAL MODULES (explore more) ###########################
 ##########################################################################################
