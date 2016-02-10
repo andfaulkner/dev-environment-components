@@ -1,0 +1,9 @@
+<snippet>
+	<description>import function from module, identically to require, w es6 syntax.</description>
+	<content><![CDATA[
+import ${1:nameOfModule} from '${1:nameOfModule}';
+${3}
+]]></content>
+	<tabTrigger>impors</tabTrigger>
+	<scope>source.js</scope>
+</snippet>

@@ -1,6 +1,13 @@
 ################################################################################
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ NODE ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 ################################################################################
+
+export NODE_PATH=/usr/lib/nodejs:/usr/lib/node_modules:/usr/share/javascript:/usr/local/lib/node_modules
+
+export NVM_DIR="/home/andrew/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
+. /home/andrew/.nvm/nvm.sh
+
 alias nrn="npm run nodemon"
 
 alias nrnd="export LOG_LEVEL=debug; npm run nodemon"
@@ -94,3 +101,8 @@ function slicesenerr {
 #enables completion for npm commands in cli
 . <(npm completion)
 
+# ensure proper node version loads based on value in .node-version in project folder
+# [[ -s "$HOME/.profile" ]] && source "$HOME/.profile" # Load the default .profile
+
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
+[[ -s "$HOME/.avn/bin/avn.sh" ]] && source "$HOME/.avn/bin/avn.sh" # load avn

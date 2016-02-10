@@ -1,0 +1,9 @@
+<snippet>
+	<description>es6 constant</description>
+	<content><![CDATA[
+const ${1:variable} = ${2:value};
+${3}
+]]></content>
+	<tabTrigger>cs</tabTrigger>
+	<scope>source.js</scope>
+</snippet>

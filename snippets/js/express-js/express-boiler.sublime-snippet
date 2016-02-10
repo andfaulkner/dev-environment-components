@@ -1,0 +1,15 @@
+<snippet>
+	<description>create an express middleware</description>
+	<content><![CDATA[
+import express from 'express';
+import _ from 'lodash';
+
+var app = express();
+
+${2:middlewaresAndRoutesHere}
+
+app.listen(${1:port});
+]]></content>
+	<tabTrigger>expr_boiler</tabTrigger>
+	<scope>source.js</scope>
+</snippet>
