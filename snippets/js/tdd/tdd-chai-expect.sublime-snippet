@@ -1,0 +1,8 @@
+<snippet>
+	<description>describe setup (for tdd)</description>
+	<content><![CDATA[
+expect(${1:val1}).to.equal(${2:val2});
+]]></content>
+	<tabTrigger>eexpect</tabTrigger>
+	<scope>source.js</scope>
+</snippet>

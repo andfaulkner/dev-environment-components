@@ -1,0 +1,11 @@
+<snippet>
+	<description>create an express middleware</description>
+	<content><![CDATA[
+	.use((req, res, next) => {
+		${1:code}
+		next();
+	});
+]]></content>
+	<tabTrigger>expr_mid</tabTrigger>
+	<scope>source.js</scope>
+</snippet>

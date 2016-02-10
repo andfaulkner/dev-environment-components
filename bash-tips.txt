@@ -7,6 +7,9 @@ play path-to-mp3-or-*mp3
 ln -s /file/to/link/to location/and/name/of/symbolic/link
     # -- the link appears in this case at 'location/and/name/of/symbolic/link' 
 
+# load metasploit (if it's installed)
+msfconsole
+
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ REGEXES ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 (?=pat)  - positive lookahead
 (?!pat)  - negative lookahead

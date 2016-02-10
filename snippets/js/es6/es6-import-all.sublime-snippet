@@ -1,0 +1,9 @@
+<snippet>
+	<description>import all functions & classes from a module. es6 syntax.</description>
+	<content><![CDATA[
+import * as ${1:nameToImportTo} from '${2:nameOfModule}';
+${3}
+]]></content>
+	<tabTrigger>impoa</tabTrigger>
+	<scope>source.js</scope>
+</snippet>

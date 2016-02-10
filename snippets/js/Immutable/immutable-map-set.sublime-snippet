@@ -1,0 +1,8 @@
+<snippet>
+	<description>Set val for key in hashmap, ret new hashmap (leave old 1 unmodified)</description>
+	<content><![CDATA[
+var ${1:varName} = Map.set(${2:key}, ${3:valToSetForKey});
+]]></content>
+	<tabTrigger>imms</tabTrigger>
+	<scope>source.js</scope>
+</snippet>

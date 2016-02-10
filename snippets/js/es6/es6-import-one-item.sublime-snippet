@@ -1,0 +1,8 @@
+<snippet>
+	<description>import a single function or class from a module. es6 syntax.</description>
+	<content><![CDATA[
+import {${1:ItemToImport}} from '${2:nameOfModule}';
+]]></content>
+	<tabTrigger>impoo</tabTrigger>
+	<scope>source.js</scope>
+</snippet>

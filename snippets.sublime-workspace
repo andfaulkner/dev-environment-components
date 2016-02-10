@@ -593,6 +593,29 @@
 	"file_history":
 	[
 		"/home/andrew/.config/sublime-text-3/Packages/User/snippets/scripts/setup-node/essential-modules.sh",
+		"/home/andrew/.config/sublime-text-3/Packages/User/snippets/snippets/js/express-js/express-middleware.sublime-snippet",
+		"/home/andrew/.config/sublime-text-3/Packages/User/snippets/snippets/js/tdd/tdd-it-es6.sublime-snippet",
+		"/home/andrew/.config/sublime-text-3/Packages/User/snippets/snippets/js/es6/es6-import-standard.sublime-snippet",
+		"/home/andrew/.config/sublime-text-3/Packages/User/snippets/_docs_guides/js/ES2015/export-on-fn-def.js",
+		"/home/andrew/.config/sublime-text-3/Packages/User/snippets/.babelrc",
+		"/home/andrew/.config/sublime-text-3/Packages/User/snippets/snippets/js/es6/es6-import-one-item.sublime-snippet",
+		"/home/andrew/.config/sublime-text-3/Packages/User/snippets/snippets/js/es6/es6-import-all.sublime-snippet",
+		"/home/andrew/.config/sublime-text-3/Packages/User/snippets/snippets/js/es6/es6-import-two-items.sublime-snippet",
+		"/home/andrew/.config/sublime-text-3/Packages/User/snippets/snippets/js/Immutable/immutable-list-of.sublime-snippet",
+		"/home/andrew/.config/sublime-text-3/Packages/User/snippets/snippets/js/Immutable/immutable-list.sublime-snippet",
+		"/home/andrew/.config/sublime-text-3/Packages/User/snippets/.gitignore",
+		"/home/andrew/.config/sublime-text-3/Packages/User/snippets/_docs_guides/js/redux/001--redux-what-it-is.md",
+		"/home/andrew/.config/sublime-text-3/Packages/User/snippets/_docs_guides/unix/bash_ampersands_double_pipes__flow_operators.md",
+		"/home/andrew/.config/sublime-text-3/Packages/User/snippets/_docs_guides/ruby/strings/014-regular_expressions.rb",
+		"/home/andrew/.config/sublime-text-3/Packages/User/snippets/_docs_guides/ruby/system_scripting/b005-streaming_into_ruby_from_cli.sh",
+		"/home/andrew/.config/sublime-text-3/Packages/User/snippets/_docs_guides/ruby/system_scripting/b001-filesystem_interaction.rb",
+		"/home/andrew/.config/sublime-text-3/Packages/User/snippets/_docs_guides/ruby/system_scripting/file-handling/013-copy-move-del-etc--files.rb",
+		"/home/andrew/.config/sublime-text-3/Packages/User/snippets/_docs_guides/ruby/system_scripting/file-handling/013-copying-moving-etc--files",
+		"/home/andrew/.config/sublime-text-3/Packages/User/snippets/snippets/js/react/react--component--full-update-lifecycle.sublime-snippet",
+		"/home/andrew/.config/sublime-text-3/Packages/User/snippets/snippets/js/react/react--component-dropdown(select-tag).sublime-snippet",
+		"/home/andrew/.config/sublime-text-3/Packages/User/snippets/snippets/js/react/react--component-mountable.sublime-snippet",
+		"/home/andrew/.config/sublime-text-3/Packages/User/snippets/snippets/js/react/react--component-mounter--(mounts_another_component).sublime-snippet",
+		"/home/andrew/.config/sublime-text-3/Packages/User/snippets/snippets/js/react/react--findDOMNode--toGetChildValue.sublime-snippet",
 		"/home/andrew/projects/isight/isight_main_v5_beta/script/case-generation-utils/create-final-form-data-objects.js",
 		"/home/andrew/projects/isight/isight_main_v5_beta/script/case-generation-utils/generate-field-definition-data.js",
 		"/home/andrew/projects/isight/isight_main_v5_beta/script/case-generation-utils/handle-users.js",
@@ -696,30 +719,7 @@
 		"/home/andfaulkner/Projects/testbed/testbed-seneca--4/client/components/index/index.js",
 		"/home/andfaulkner/Projects/testbed/testbed-seneca--4/client/components/index/index.html",
 		"/home/andfaulkner/Projects/testbed/express-backbone-testbed-3/client/components/tetris/tetris-index-jsx.jsx",
-		"/home/andfaulkner/Projects/testbed/express-backbone-testbed-3/client/components/tetris/tetris-index.js",
-		"/home/andfaulkner/Projects/testbed/express-backbone-testbed-3/server.js",
-		"/home/andfaulkner/Projects/testbed/express-backbone-testbed-3/webpack.config.js",
-		"/home/andfaulkner/Projects/testbed/express-backbone-testbed-3/express-backbone-testbed-3.sublime-project",
-		"/home/andfaulkner/Projects/testbed/express-backbone-testbed-3/client/components/react-1/react-1-index.jsx",
-		"/home/andfaulkner/Projects/testbed/express-backbone-testbed-3/client/components/react-1/react-1-index.js",
-		"/home/andfaulkner/Projects/testbed/express-backbone-testbed-3/client/components/react-1/theme-1.js",
-		"/home/andfaulkner/Projects/testbed/express-backbone-testbed-3/.build/client/components/react-1/react-1-index.js",
-		"/home/andfaulkner/Projects/testbed/express-backbone-testbed-3/client/components/react-1/index.html",
-		"/home/andfaulkner/Projects/testbed/express-backbone-testbed-3/.build/client/components/react-1/index.html",
-		"/home/andfaulkner/Projects/testbed/express-backbone-testbed-3/.build/client/components/react-1/theme-1.js",
-		"/home/andfaulkner/Projects/testbed/express-backbone-testbed-3/.build/index2.js",
-		"/home/andfaulkner/Projects/testbed/express-backbone-testbed-3/.build/client/index.html",
-		"/home/andfaulkner/Projects/testbed/express-backbone-testbed-3/.build/e33cb45f2d347e8ac6ef.js",
-		"/home/andfaulkner/Projects/testbed/express-backbone-testbed-3/client/components/tetris2/tetris2.js",
-		"/home/andfaulkner/Projects/testbed/express-backbone-testbed-3/client/components/tetris2/tetris2.jsx",
-		"/home/andfaulkner/Projects/testbed/express-backbone-testbed-3/client/components/tetris2/index.html",
-		"/home/andfaulkner/Projects/testbed/express-backbone-testbed-3/.build/client/components/tetris2/tetris2.html",
-		"/home/andfaulkner/Projects/testbed/express-backbone-testbed-3/.build/client/components/tetris/theme-1.js",
-		"/home/andfaulkner/Projects/testbed/express-backbone-testbed-3/client/components/tetris/tetris.html",
-		"/home/andfaulkner/Projects/testbed/express-backbone-testbed-3/.build/client/components/react-1/react-1-index.jsx",
-		"/home/andfaulkner/Projects/testbed/express-backbone-testbed-3/.build/client/components/tetris-2/tetris-2jsx.jsx",
-		"/home/andfaulkner/Projects/testbed/express-backbone-testbed-3/client/components/tetris-2/tetris-2.html",
-		"/home/andfaulkner/Projects/testbed/express-backbone-testbed-3/client/components/tetris-2/tetris-2jsx.jsx"
+		"/home/andfaulkner/Projects/testbed/express-backbone-testbed-3/client/components/tetris/tetris-index.js"
 	],
 	"find":
 	{
@@ -769,6 +769,15 @@
 		"case_sensitive": true,
 		"find_history":
 		[
+			"max-len",
+			"true",
+			"		",
+			"  ",
+			".js",
+			"my-module",
+			"#!/",
+			"mocha",
+			"babel",
 			"SETUP",
 			"		",
 			"  ",
@@ -887,16 +896,7 @@
 			"cookieJar",
 			"getTestAttachment",
 			"opt",
-			"attachmentFile",
-			"nattachmentFile",
-			"attachmentFile",
-			"form",
-			"res",
-			"getTestCase",
-			"getcreatedCase",
-			"testCase",
-			"TestCase",
-			"testCase"
+			"attachmentFile"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -987,6 +987,12 @@
 				0,
 				1,
 				1
+			],
+			[
+				0,
+				1,
+				1,
+				2
 			]
 		],
 		"cols":
@@ -997,6 +1003,7 @@
 		"rows":
 		[
 			0.0,
+			0.5,
 			1.0
 		]
 	},
@@ -1121,7 +1128,7 @@
 	"show_open_files": true,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 190.0,
+	"side_bar_width": 320.0,
 	"status_bar_visible": true,
 	"template_settings":
 	{

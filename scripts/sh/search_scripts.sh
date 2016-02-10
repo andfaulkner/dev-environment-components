@@ -46,7 +46,7 @@ function trim {
 }
 
 #=== FUNCTION ==========================================================
-#        NAME:  transpose
+#        NAME:  tp_transpose
 # DESCRIPTION:  turn table outputted to cli 90 degrees 
 #               rows-->cols, cols-->rows 
 #=======================================================================
