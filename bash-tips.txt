@@ -17,11 +17,6 @@ msfconsole
 (?<!pat) - negative lookbehind
 
 
-#~~~~~~~~~~~~~~~~~~~~~~~~~~~~ POSTGRES FROM TERMINAL ~~~~~~~~~~~~~~~~~~~~~~~~~~~
-# Perform a database dump, to backup all data within
-=======
-CLEAN THIS UP, DUDE
-
 #=== FUNCTION ================================================================
 #        NAME:  bu
 # DESCRIPTION:  create backup file
@@ -31,6 +26,12 @@ function bu() {
   TIME=$HOUR:`date +%M`:`date +%S`
   cp ./ $@.backup--date-20`date +%y`-`date +%m`-`date +%d`--$TIME;
 }
+
+
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~ POSTGRES FROM TERMINAL ~~~~~~~~~~~~~~~~~~~~~~~~~~~
+# Perform a database dump, to backup all data within
+=======
+CLEAN THIS UP, DUDE
 
 # perform a database dump, to backup all data within
 cp outfile outfile_bk && rm outfile || cp outfile_bk outfile_bk_2 && rm outfile_bk && cp outfile outfile_bk && rm outfile
