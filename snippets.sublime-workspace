@@ -592,6 +592,9 @@
 	},
 	"file_history":
 	[
+		"/home/andrew/.config/sublime-text-3/Packages/User/snippets/snippets/js/es6/es6-export-constant.sublime-snippet",
+		"/home/andrew/.config/sublime-text-3/Packages/User/snippets/snippets/js/es6/es6-export-def-func.sublime-snippet",
+		"/home/andrew/.config/sublime-text-3/Packages/User/snippets/snippets/js/es6/es6-export-func.sublime-snippet",
 		"/home/andrew/.config/sublime-text-3/Packages/User/snippets/scripts/setup-node/essential-modules.sh",
 		"/home/andrew/.config/sublime-text-3/Packages/User/snippets/snippets/js/express-js/express-middleware.sublime-snippet",
 		"/home/andrew/.config/sublime-text-3/Packages/User/snippets/snippets/js/tdd/tdd-it-es6.sublime-snippet",
@@ -716,10 +719,7 @@
 		"/home/andfaulkner/Projects/testbed/express-backbone-testbed-3/client/components/tetris/index.html",
 		"/home/andfaulkner/Projects/testbed/testbed-seneca--4/client/theme-1.js",
 		"/home/andfaulkner/Projects/testbed/testbed-seneca--4/.build/client/components/index/theme-1.js",
-		"/home/andfaulkner/Projects/testbed/testbed-seneca--4/client/components/index/index.js",
-		"/home/andfaulkner/Projects/testbed/testbed-seneca--4/client/components/index/index.html",
-		"/home/andfaulkner/Projects/testbed/express-backbone-testbed-3/client/components/tetris/tetris-index-jsx.jsx",
-		"/home/andfaulkner/Projects/testbed/express-backbone-testbed-3/client/components/tetris/tetris-index.js"
+		"/home/andfaulkner/Projects/testbed/testbed-seneca--4/client/components/index/index.js"
 	],
 	"find":
 	{
@@ -1128,7 +1128,7 @@
 	"show_open_files": true,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 320.0,
+	"side_bar_width": 354.0,
 	"status_bar_visible": true,
 	"template_settings":
 	{
