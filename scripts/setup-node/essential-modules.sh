@@ -6,6 +6,11 @@ npm install -g npm-sort
 # in project dir:
 # 	npm-sort
 
+# view pretty visual graph-based process usage
+npm install -g vtop
+# then run:
+vtop
+
 npm install -g md2html
 npm install -g gulp
 npm install -g dustjs-linkedin
