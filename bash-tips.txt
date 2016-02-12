@@ -10,6 +10,10 @@ ln -s /file/to/link/to location/and/name/of/symbolic/link
 # load metasploit (if it's installed)
 msfconsole
 
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ SYSTEM CHORES ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+# see running processes in a nicely formatted way
+vtop
+
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ REGEXES ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 (?=pat)  - positive lookahead
 (?!pat)  - negative lookahead
