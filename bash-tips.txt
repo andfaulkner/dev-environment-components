@@ -14,6 +14,9 @@ msfconsole
 # see running processes in a nicely formatted way
 vtop
 
+# get file info on a given file
+file #nameoffilehere#
+
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ REGEXES ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 (?=pat)  - positive lookahead
 (?!pat)  - negative lookahead
