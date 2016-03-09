@@ -7,7 +7,7 @@ alias regexes="gnome-terminal --title=~REGEXES --geometry 110x50-0-0 -x vim ~/re
 ################################################################################
 
 function lsrdeep {
-    ls -R ./ | awk '
+    ls -R ./ 2>/dev/null | awk '
         /:$/&&f{
             s=$0;
             f=0
@@ -21,7 +21,7 @@ function lsrdeep {
         NF&&f{
             print s"/"$0 
         }
-    ' | ack $1
+    ' | ack $1 2>/dev/null
 }
 
 ################################################################################

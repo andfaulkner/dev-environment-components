@@ -10,17 +10,19 @@ ln -s /file/to/link/to location/and/name/of/symbolic/link
 # load metasploit (if it's installed)
 msfconsole
 
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ SYSTEM CHORES ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+# see running processes in a nicely formatted way
+vtop
+
+# get file info on a given file
+file #nameoffilehere#
+
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ REGEXES ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 (?=pat)  - positive lookahead
 (?!pat)  - negative lookahead
 (?<=pat) - positive lookbehind
 (?<!pat) - negative lookbehind
 
-
-#~~~~~~~~~~~~~~~~~~~~~~~~~~~~ POSTGRES FROM TERMINAL ~~~~~~~~~~~~~~~~~~~~~~~~~~~
-# Perform a database dump, to backup all data within
-=======
-CLEAN THIS UP, DUDE
 
 #=== FUNCTION ================================================================
 #        NAME:  bu
@@ -31,6 +33,12 @@ function bu() {
   TIME=$HOUR:`date +%M`:`date +%S`
   cp ./ $@.backup--date-20`date +%y`-`date +%m`-`date +%d`--$TIME;
 }
+
+
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~ POSTGRES FROM TERMINAL ~~~~~~~~~~~~~~~~~~~~~~~~~~~
+# Perform a database dump, to backup all data within
+=======
+CLEAN THIS UP, DUDE
 
 # perform a database dump, to backup all data within
 cp outfile outfile_bk && rm outfile || cp outfile_bk outfile_bk_2 && rm outfile_bk && cp outfile outfile_bk && rm outfile

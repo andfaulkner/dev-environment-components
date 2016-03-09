@@ -69,7 +69,7 @@ function g_diff_cur_rem {
 alias g_tree='git log --pretty=format:"%h %ad | %s%d [%an]" --graph --date=short'
 
 # get the remote repository location
-alias g_currepo="git remote -v | xargs ruby -e \"
+alias g_repo="git remote -v | xargs ruby -e \"
     puts 'git@andfaulkner.github.com:andfaulkner' + ARGV.find { |arg| 
         /^git@.*:/.match(arg) 
     }.split('/').last
