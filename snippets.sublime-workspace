@@ -368,10 +368,14 @@
 	"build_varint": "",
 	"command_palette":
 	{
-		"height": 138.0,
-		"last_filter": "bookmar",
+		"height": 392.0,
+		"last_filter": "inst",
 		"selected_items":
 		[
+			[
+				"inst",
+				"Package Control: Install Package"
+			],
 			[
 				"bookmar",
 				"Bookmarks: Toggle"
@@ -533,10 +537,6 @@
 				"Set Syntax: Sass"
 			],
 			[
-				"inst",
-				"Package Control: Install Package"
-			],
-			[
 				"set syntax: Java",
 				"Set Syntax: JavaScript"
 			],
@@ -569,7 +569,7 @@
 				"Package Control: Install Package"
 			]
 		],
-		"width": 603.0
+		"width": 794.0
 	},
 	"console":
 	{
@@ -592,6 +592,39 @@
 	},
 	"file_history":
 	[
+		"/home/andrew/.config/sublime-text-3/Packages/User/snippets/snippets/js/node-specific/nodejs--readFile.sublime-snippet",
+		"/home/andrew/.config/sublime-text-3/Packages/User/snippets/snippets/clumped/test.sublime-completions",
+		"/home/andrew/.config/sublime-text-3/Packages/User/snippets/snippets/js/node-specific/nodejs--readfile-external-catch-error-function.sublime-snippet",
+		"/home/andrew/.config/sublime-text-3/Packages/User/snippets/_random-data/elasticsearch-query-samples-hp.js",
+		"/home/andrew/.config/sublime-text-3/Packages/User/snippets/snippets/js/react/methods/react--update-component-function.sublime-snippet",
+		"/home/andrew/.config/sublime-text-3/Packages/User/snippets/snippets/js/react/new-cmps/react-component-class-export--all-boiler.sublime-snippet",
+		"/home/andrew/.config/sublime-text-3/Packages/User/snippets/snippets/js/react/new-cmps/react-component-simple.sublime-snippet",
+		"/home/andrew/.config/sublime-text-3/Packages/User/snippets/snippets/js/AJAX/jquery--post.sublime-snippet",
+		"/home/andrew/.config/sublime-text-3/Packages/User/snippets/snippets/js/logging/log--console-file.sublime-snippet",
+		"/home/andrew/.config/sublime-text-3/Packages/User/snippets/snippets/js/logging/log--console-file-obj.sublime-snippet",
+		"/home/andrew/.config/sublime-text-3/Packages/User/snippets/_docs_guides/css-cheatsheet",
+		"/home/andrew/.config/sublime-text-3/Packages/User/snippets/_docs_guides/definitions-general.md",
+		"/home/andrew/.config/sublime-text-3/Packages/User/snippets/snippets/js/react/react--method--getInitialState.sublime-snippet",
+		"/home/andrew/.config/sublime-text-3/Packages/User/snippets/snippets/js/react/react--component-mountable.sublime-snippet",
+		"/home/andrew/.config/sublime-text-3/Packages/User/snippets/snippets/js/react/react--define-child-context-on-component.sublime-snippet",
+		"/home/andrew/.config/sublime-text-3/Packages/User/snippets/snippets/js/react/react--update-component-function.sublime-snippet",
+		"/home/andrew/.config/sublime-text-3/Packages/User/snippets/_docs_guides/js/ES2015/must-tries.md",
+		"/home/andrew/.config/sublime-text-3/Packages/User/snippets/snippets/js/react/react--comment--component-header.sublime-snippet",
+		"/home/andrew/.config/sublime-text-3/Packages/User/snippets/snippets/js/react/react--component--full-update-lifecycle.sublime-snippet",
+		"/home/andrew/.config/sublime-text-3/Packages/User/snippets/snippets/js/requires/require-lodash.sublime-snippet",
+		"/home/andrew/.config/sublime-text-3/Packages/User/snippets/snippets/js/gulp-task.sublime-snippet",
+		"/home/andrew/.config/sublime-text-3/Packages/User/snippets/snippets/js/requires/require-util-inspect.sublime-snippet",
+		"/home/andrew/.config/sublime-text-3/Packages/User/snippets/snippets/js/requires/require-path.sublime-snippet",
+		"/home/andrew/.config/sublime-text-3/Packages/User/snippets/snippets/js/react/react-component-simple.sublime-snippet",
+		"/home/andrew/.config/sublime-text-3/Packages/User/snippets/snippets/js/react/react-component-simple-class-export.sublime-snippet",
+		"/home/andrew/.config/sublime-text-3/Packages/User/snippets/snippets/js/react/react--PropTypes-required---rptreq.sublime-snippet",
+		"/home/andrew/.config/sublime-text-3/Packages/User/snippets/snippets/js/react/react--PropTypes.sublime-snippet",
+		"/home/andrew/.config/sublime-text-3/Packages/User/SublimeREPL.sublime-settings",
+		"/home/andrew/.config/sublime-text-3/Packages/User/snippets/snippets/js/commenting/comment--module-heading.sublime-snippet",
+		"/home/andrew/.config/sublime-text-3/Packages/User/snippets/snippets/js/react/react--get-default-props.sublime-snippet",
+		"/home/andrew/.config/sublime-text-3/Packages/User/snippets/snippets/js/commenting/comment--block-1line-bookend.sublime-snippet",
+		"/home/andrew/.config/sublime-text-3/Packages/User/snippets/snippets/js/es6/es6-export-def-class.sublime-snippet",
+		"/home/andrew/.config/sublime-text-3/Packages/User/snippets/_docs_guides/js/koa/003--koa--modules.md",
 		"/home/andrew/.config/sublime-text-3/Packages/User/snippets/snippets/js/es6/es6-export-constant.sublime-snippet",
 		"/home/andrew/.config/sublime-text-3/Packages/User/snippets/snippets/js/es6/es6-export-def-func.sublime-snippet",
 		"/home/andrew/.config/sublime-text-3/Packages/User/snippets/snippets/js/es6/es6-export-func.sublime-snippet",
@@ -614,9 +647,7 @@
 		"/home/andrew/.config/sublime-text-3/Packages/User/snippets/_docs_guides/ruby/system_scripting/b001-filesystem_interaction.rb",
 		"/home/andrew/.config/sublime-text-3/Packages/User/snippets/_docs_guides/ruby/system_scripting/file-handling/013-copy-move-del-etc--files.rb",
 		"/home/andrew/.config/sublime-text-3/Packages/User/snippets/_docs_guides/ruby/system_scripting/file-handling/013-copying-moving-etc--files",
-		"/home/andrew/.config/sublime-text-3/Packages/User/snippets/snippets/js/react/react--component--full-update-lifecycle.sublime-snippet",
 		"/home/andrew/.config/sublime-text-3/Packages/User/snippets/snippets/js/react/react--component-dropdown(select-tag).sublime-snippet",
-		"/home/andrew/.config/sublime-text-3/Packages/User/snippets/snippets/js/react/react--component-mountable.sublime-snippet",
 		"/home/andrew/.config/sublime-text-3/Packages/User/snippets/snippets/js/react/react--component-mounter--(mounts_another_component).sublime-snippet",
 		"/home/andrew/.config/sublime-text-3/Packages/User/snippets/snippets/js/react/react--findDOMNode--toGetChildValue.sublime-snippet",
 		"/home/andrew/projects/isight/isight_main_v5_beta/script/case-generation-utils/create-final-form-data-objects.js",
@@ -688,38 +719,7 @@
 		"/home/andfaulkner/Projects/testbed/testbed-seneca--4/client/components/forms_page/forms.html",
 		"/home/andfaulkner/Projects/testbed/testbed-seneca--4/server/debug/uncaught-error-handler.js",
 		"/home/andfaulkner/Projects/testbed/testbed-seneca--4/[1m[32m[40mseneca[49m[39m[22m",
-		"/home/andfaulkner/Projects/testbed/testbed-seneca--4/server/microservices/log-msg-plugin/log-msg-plugin.js",
-		"/home/andfaulkner/Projects/testbed/testbed-seneca--4/test.txt",
-		"/home/andfaulkner/Projects/testbed/testbed-seneca--4/client/index.js",
-		"/home/andfaulkner/Projects/testbed/testbed-seneca--4/server/microservices/api/math_api.js",
-		"/home/andfaulkner/Projects/testbed/testbed-seneca--4/server/microservices/api/meta_api.js",
-		"/home/andfaulkner/Projects/testbed/testbed-seneca--4/gulpfile.js",
-		"/home/andfaulkner/.config/sublime-text-3/Packages/User/Preferences.sublime-settings",
-		"/home/andfaulkner/Projects/testbed/testbed-seneca--4/sql_dump.sql",
-		"/home/andfaulkner/Projects/testbed/testbed-seneca--4/server/microservices/express/express-plugin.js",
-		"/home/andfaulkner/Projects/testbed/testbed-seneca--4/data/test.sql.sh",
-		"/home/andfaulkner/Projects/testbed/testbed-seneca--4/doc/seneca log commands.txt",
-		"/home/andfaulkner/Projects/testbed/testbed-seneca--4/.build/index.js",
-		"/home/andfaulkner/Projects/testbed/testbed-seneca--4/data/sql-node-script.js",
-		"/home/andfaulkner/Projects/testbed/testbed-seneca--4/server/microservices/api/api.js",
-		"/home/andfaulkner/Projects/testbed/testbed-seneca--4/server/microservices/ultra-basic/basic-plugin-1.js",
-		"/home/andfaulkner/Projects/testbed/testbed-seneca--4/server/microservices/api/data_entity_api.js",
-		"/home/andfaulkner/Projects/testbed/testbed-seneca--4/doc/config-reference-1.js",
-		"/home/andfaulkner/Projects/testbed/testbed-seneca--4/node_modules/seneca/node_modules/zig/zig.js",
-		"/home/andfaulkner/Projects/testbed/testbed-seneca--4/.build/components/index_page/index_content.html",
-		"/home/andfaulkner/Projects/testbed/testbed-seneca--4/server/microservices/express/log-msg-plugin.js",
-		"/home/andfaulkner/Projects/testbed/testbed-seneca--4/.build/index.html",
-		"/home/andfaulkner/Projects/testbed/testbed-seneca--4/.build/components/forms_page/forms.html",
-		"/home/andfaulkner/Projects/testbed/testbed-seneca--4/webpack.config.js",
-		"/home/andfaulkner/Projects/testbed/testbed-seneca--4/client/index.html",
-		"/home/andfaulkner/Projects/testbed/testbed-seneca--4/client/index.css",
-		"/home/andfaulkner/Projects/testbed/testbed-seneca--4/client/load-css.js",
-		"/home/andfaulkner/Projects/testbed/testbed-seneca--4/.build/load-css.js",
-		"/home/andfaulkner/Projects/testbed/testbed-seneca--4/node_modules/bootstrap/dist/js/ie10-viewport-bug-workaround.js",
-		"/home/andfaulkner/Projects/testbed/express-backbone-testbed-3/client/components/tetris/index.html",
-		"/home/andfaulkner/Projects/testbed/testbed-seneca--4/client/theme-1.js",
-		"/home/andfaulkner/Projects/testbed/testbed-seneca--4/.build/client/components/index/theme-1.js",
-		"/home/andfaulkner/Projects/testbed/testbed-seneca--4/client/components/index/index.js"
+		"/home/andfaulkner/Projects/testbed/testbed-seneca--4/server/microservices/log-msg-plugin/log-msg-plugin.js"
 	],
 	"find":
 	{
@@ -766,9 +766,33 @@
 	},
 	"find_state":
 	{
-		"case_sensitive": true,
+		"case_sensitive": false,
 		"find_history":
 		[
+			"PRE",
+			"path",
+			"NOT_SELECTED",
+			"    ",
+			"        ",
+			"       ",
+			"      ",
+			"     ",
+			"    ",
+			"		",
+			"  ",
+			"   ",
+			"  ",
+			"\"",
+			"  ",
+			"..",
+			"      ",
+			"     ",
+			"    ",
+			"   ",
+			"  ",
+			"; ",
+			"sort",
+			"copy",
 			"max-len",
 			"true",
 			"		",
@@ -872,36 +896,12 @@
 			"$operatorSelector",
 			"operator",
 			"opeator",
-			"createdFileRecord",
-			"save:",
-			"save",
-			"this.model.save",
-			"onSave",
-			"startServer",
-			"file",
-			"attachment",
-			"file",
-			"attachment",
-			"file",
-			"config",
-			"apibaseurl",
-			"attachment",
-			"\\/attachment",
-			"cookiejar",
-			"cookieJar",
-			"form",
-			"r\\.form",
-			"r.form",
-			"request",
-			"cookieJar",
-			"getTestAttachment",
-			"opt",
-			"attachmentFile"
+			"createdFileRecord"
 		],
 		"highlight": true,
 		"in_selection": false,
 		"preserve_case": false,
-		"regex": true,
+		"regex": false,
 		"replace_history":
 		[
 			"	",
@@ -1024,7 +1024,7 @@
 	{
 		"height": 88.0
 	},
-	"pinned_build_system": "Packages/Markdown Preview/Markdown.sublime-build",
+	"pinned_build_system": "Packages/User/Scheme.sublime-build",
 	"replace":
 	{
 		"height": 64.0
@@ -1128,7 +1128,7 @@
 	"show_open_files": true,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 354.0,
+	"side_bar_width": 298.0,
 	"status_bar_visible": true,
 	"template_settings":
 	{

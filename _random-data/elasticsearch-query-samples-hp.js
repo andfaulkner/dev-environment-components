@@ -1,3 +1,11 @@
+//Read utf8 file awef, return contents in Buffer 'data' if successful
+fs.readFile('awef', 'utf8', function(err, data) {
+	if (err) {
+		throw err;
+	}
+	console.log(data.toString());
+});
+
 {
 	"query": {
 		"filtered": {

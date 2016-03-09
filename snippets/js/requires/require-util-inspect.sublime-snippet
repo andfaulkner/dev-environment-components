@@ -1,0 +1,8 @@
+<snippet>
+	<description>require util.inspect</description>
+	<content><![CDATA[
+var inspect = require('util').inspect;
+]]></content>
+	<tabTrigger>rqui</tabTrigger>
+	<scope>source.js</scope>
+</snippet>

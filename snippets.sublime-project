@@ -3,6 +3,9 @@
 	[
 		{
 			"path": "."
+		},
+		{
+			"path": "/home/andrew/.config/sublime-text-3/Installed Packages"
 		}
 	]
 }
