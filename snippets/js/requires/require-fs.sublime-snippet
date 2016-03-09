@@ -1,0 +1,8 @@
+<snippet>
+	<description>require util.inspect</description>
+	<content><![CDATA[
+var fs = require('fs');
+]]></content>
+	<tabTrigger>rqf</tabTrigger>
+	<scope>source.js</scope>
+</snippet>

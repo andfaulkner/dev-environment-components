@@ -5,10 +5,9 @@
 		${3:dataItemFromForm2Key}: \$('[name="[name="${4:sourceInputEl2Name}"]"]').val()
 	}, function(data, textStatus, xhr) {
 		${5://actions to do on receipt of response data from server}
-	}
 });
 ]]></content>
 
-	<tabTrigger>jquery_postaction</tabTrigger>
+	<tabTrigger>jq_post</tabTrigger>
 	<scope>source.js</scope>
 </snippet>

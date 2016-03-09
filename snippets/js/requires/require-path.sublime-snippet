@@ -1,0 +1,8 @@
+<snippet>
+	<description>require util.inspect</description>
+	<content><![CDATA[
+var path = require('path');
+]]></content>
+	<tabTrigger>rqp</tabTrigger>
+	<scope>source.js</scope>
+</snippet>
