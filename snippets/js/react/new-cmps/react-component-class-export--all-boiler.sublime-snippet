@@ -15,7 +15,7 @@ export default class ${1:${TM_FILENAME/(.+)\..+|.*/$1/:name}} extends React.Comp
 };
 ]]></content>
     <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
-    <tabTrigger>react_newcabf</tabTrigger>
+    <tabTrigger>rct_newcabf</tabTrigger>
     <!-- Optional: Set a scope to limit where the snippet will trigger -->
     <scope>source.js</scope>
 </snippet>

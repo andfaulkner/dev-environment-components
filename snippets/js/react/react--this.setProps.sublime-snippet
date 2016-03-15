@@ -3,7 +3,7 @@
 this.setProps({ ${1:varToSet}: ${2:value--e.g-this.props.someValue}});
 ]]></content>
     <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
-    <tabTrigger>react_tsp</tabTrigger>
+    <tabTrigger>rct_tsp</tabTrigger>
     <!-- Optional: Set a scope to limit where the snippet will trigger -->
     <!-- <scope>source.python</scope> -->
 </snippet>

@@ -3,7 +3,7 @@
 React.PropTypes.${1:type--number|string|bool|func|object|array|node|element|any}.isRequired
 ]]></content>
     <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
-    <tabTrigger>react_ptreq</tabTrigger>
+    <tabTrigger>rct_ptreq</tabTrigger>
     <!-- Optional: Set a scope to limit where the snippet will trigger -->
     <!-- <scope>source.python</scope> -->
 </snippet>

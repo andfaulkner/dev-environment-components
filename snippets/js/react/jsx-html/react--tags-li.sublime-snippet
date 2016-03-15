@@ -1,9 +1,12 @@
 <snippet>
+		<description>Insert a li tag - for use in jsx files</description>
     <content><![CDATA[
-onChange={this.${1:nameOfFnOnThisPropToCall_(e.g.:_update)}}
+<li${1/.+/ style={/g}${1:style.MyComponent}${1/.+/}/g}>
+	${0}
+</li>
 ]]></content>
     <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
-    <tabTrigger>rct_och</tabTrigger>
+    <tabTrigger>li</tabTrigger>
     <!-- Optional: Set a scope to limit where the snippet will trigger -->
-    <!-- <scope>source.python</scope> -->
+    <scope>source.js</scope>
 </snippet>

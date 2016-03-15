@@ -1,9 +1,10 @@
 <snippet>
+		<description>Insert an img tag - for use in jsx files</description>
     <content><![CDATA[
-onChange={this.${1:nameOfFnOnThisPropToCall_(e.g.:_update)}}
+<img src='/${1}'${2/.+/ style={/g}${2:style.MyComponent}${2/.+/}/g} />${0}
 ]]></content>
     <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
-    <tabTrigger>rct_och</tabTrigger>
+    <tabTrigger>img</tabTrigger>
     <!-- Optional: Set a scope to limit where the snippet will trigger -->
-    <!-- <scope>source.python</scope> -->
+    <scope>source.js</scope>
 </snippet>

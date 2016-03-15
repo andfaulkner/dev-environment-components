@@ -1,9 +1,8 @@
 <snippet>
-	<description>import function from module, identically to require, w es6 syntax.</description>
+	<description>es6: import default export from module. Near-identic to require</description>
 	<content><![CDATA[
-import ${1:nameOfModule} from '${1:nameOfModule}';
-${3}
+import ${1:nameOfModule} from '${1:nameOfModule}';${0}
 ]]></content>
-	<tabTrigger>impors</tabTrigger>
+	<tabTrigger>impdef</tabTrigger>
 	<scope>source.js</scope>
 </snippet>

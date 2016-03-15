@@ -1,9 +1,0 @@
-<snippet>
-	<description>es6 constant</description>
-	<content><![CDATA[
-export const ${1:NAME_OF_CONSTANT} = ${2:valueOfConstant};
-${3}
-]]></content>
-	<tabTrigger>eexpc</tabTrigger>
-	<scope>source.js</scope>
-</snippet>
