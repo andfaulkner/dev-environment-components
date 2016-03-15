@@ -1,0 +1,9 @@
+<snippet>
+	<description>Redux: Create the file store</description>
+	<content><![CDATA[
+import { createStore } from 'redux';
+const ${1:store} = createStore(${2:reducers});
+]]></content>
+	<tabTrigger>rxnewstore</tabTrigger>
+	<scope>source.js</scope>
+</snippet>

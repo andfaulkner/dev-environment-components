@@ -7,7 +7,7 @@ componentDidUpdate: function() {
 }
 ]]></content>
     <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
-    <tabTrigger>react_cdu</tabTrigger>
+    <tabTrigger>rct_cdu</tabTrigger>
     <!-- Optional: Set a scope to limit where the snippet will trigger -->
     <!-- <scope>source.python</scope> -->
 </snippet>

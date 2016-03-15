@@ -47,7 +47,6 @@ npm install -g mocha
 npm install -g avn avn-nvm
 avn setup
 
-
 ##########################################################################################
 ############################# GULP PLUGINS NEEDED (MINIMUM) ##############################
 ##########################################################################################
@@ -181,3 +180,6 @@ npm install --save config json5 #json5, because screw having no comments etc.
 
 # make every non-module require relative to project root
 npm install --save app-module-path
+
+############################## INSTALL METEOR FRAMEWORK ##############################
+curl https://install.meteor.com/ | sh

@@ -1,10 +1,10 @@
 <snippet>
-    <description>Log object, with current filename, & fn name (optional)</description>
+    <description>Log object & name of object</description>
     <content><![CDATA[
-console.log('$TM_FILENAME:: ${1:nameOfFn}: ${2:nameOfObj}:', ${2:nameOfObj});
+console.log('${1:nameOfObject}', ${1:nameOfObject});
 ]]></content>
     <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
-    <tabTrigger>clfo</tabTrigger>
+    <tabTrigger>clo</tabTrigger>
     <!-- Optional: Set a scope to limit where the snippet will trigger -->
     <!-- <scope>source.python</scope> -->
 </snippet>

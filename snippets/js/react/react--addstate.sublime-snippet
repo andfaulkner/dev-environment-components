@@ -7,11 +7,11 @@ getInitialState: function(){
 },
 // runs when element with onClick={this.${3:eventEg_handleClick}} prop is clicked
 ${3:eventEg_handleClick}: function(event) {
-	this.setState({${1:stateType}: ${4:!}this.state.${1:stateType}});
+	this.setState({${1:stateType}: this.state.${1:stateType}});
 },
 ]]></content>
     <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
-    <tabTrigger>react_gis</tabTrigger>
+    <tabTrigger>rct_gis_wupdate</tabTrigger>
     <!-- Optional: Set a scope to limit where the snippet will trigger -->
-    <!-- <scope>source.python</scope> -->
+    <scope>source.js</scope>
 </snippet>

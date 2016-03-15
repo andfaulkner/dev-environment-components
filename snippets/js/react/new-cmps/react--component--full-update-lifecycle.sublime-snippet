@@ -43,7 +43,7 @@ var ${1:__ComponentWithFullUpdateLifecycle__} = React.createClass({
 React.render(<${1:__ComponentWithFullUpdateLifecycle__} />, ${9:__domNodeToAttachTo});
 ]]></content>
 	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
-	<tabTrigger>react_fullupdatelifecycle</tabTrigger>
+	<tabTrigger>rct_fullupdatelifecycle</tabTrigger>
 	<!-- Optional: Set a scope to limit where the snippet will trigger -->
 	<scope>source.js</scope>
 </snippet>

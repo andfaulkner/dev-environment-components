@@ -1,5 +1,5 @@
 <snippet>
-	<description>require util.inspect</description>
+	<description>require nodejs path module</description>
 	<content><![CDATA[
 var path = require('path');
 ]]></content>

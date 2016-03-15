@@ -3,7 +3,7 @@
 React.PropTypes.any
 ]]></content>
     <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
-    <tabTrigger>react_pta</tabTrigger>
+    <tabTrigger>rct_pta</tabTrigger>
     <!-- Optional: Set a scope to limit where the snippet will trigger -->
     <!-- <scope>source.python</scope> -->
 </snippet>

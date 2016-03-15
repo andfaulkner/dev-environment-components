@@ -1,0 +1,8 @@
+<snippet>
+	<description>es6: export named variable; import w/ import {item} from 'module'</description>
+	<content><![CDATA[
+export {${1:nameOfVariable}};${0}
+]]></content>
+	<tabTrigger>expnm</tabTrigger>
+	<scope>source.js</scope>
+</snippet>

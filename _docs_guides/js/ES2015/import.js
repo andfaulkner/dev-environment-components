@@ -1,3 +1,5 @@
+// RANDOM NOTE: IMPORTS ARE HOISTED
+
 // imports are used to import functions, objects or primitives that have been exported 
 // from an external module, another script, etc.
 

@@ -1,0 +1,8 @@
+<snippet>
+	<description>es6: default export a static value</description>
+	<content><![CDATA[
+export default ${1:'someStaticValueLikeAString'};
+]]></content>
+	<tabTrigger>expdefval</tabTrigger>
+	<scope>source.js</scope>
+</snippet>
