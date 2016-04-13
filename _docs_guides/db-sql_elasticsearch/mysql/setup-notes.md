@@ -29,9 +29,9 @@ Things to try
 2.  vim ~/.bash_profile
     *   within the file, add:
 
-        export MYSQL_HOME="path/to/isight/main/root/my.cnf"
+        export MYSQL_HOME="path/to/somewhere/main/root/my.cnf"
 
-3.  touch [path/to/isight/main/root/my.cnf]
+3.  touch [path/to/somewhere/main/root/my.cnf]
 
         * look into if there's anything you can add to this or other option files to alleviate your issue
              https://dev.mysql.com/doc/refman/5.5/en/option-files.html
