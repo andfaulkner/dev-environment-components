@@ -1,7 +1,7 @@
 <snippet>
 		<description>Insert a button with a click listener - for use in jsx files</description>
     <content><![CDATA[
-<button${1/.+/ style={/g}${1:style.MyComponent}${1/.+/}/g}${2/.+/ onClick={/g}${2:clickHandlerFn}${2/.+/}/g}>${0}</button>
+<button${1/.+/ className={/g}${1:className.MyComponent}${1/.+/}/g}${2/.+/ onClick={/g}${2:clickHandlerFn}${2/.+/}/g}>${0}</button>
 ]]></content>
     <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
     <tabTrigger>btn</tabTrigger>

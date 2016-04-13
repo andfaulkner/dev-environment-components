@@ -11,17 +11,17 @@ puts " ----- DEFINE CLASS THAT RETURNS SELF FROM CONSTRUCTOR & METHODS -----"
 class DirInfoDisplay
 	attr_accessor :output_string, :headings
 	attr_reader :file
-	def initialize(filename)
-		@file = File.open(filename)
+	def initialize filename
+		@file = File.open filename
 		@output_string = ""
 		@headings = []
 		self
 	end
-	def add_heading(heading)
-		@headings.push(heading) 
+	def add_heading heading
+		@headings.push heading 
 		self
 	end
-	def prefix_headings(prefix)
+	def prefix_headings prefix
 		@headings = @headings.map do | heading |
 			"#{prefix}#{heading}"
 		end
@@ -30,20 +30,25 @@ class DirInfoDisplay
 end
 
 puts " ----- INSTANTIATE CLASS THAT RETURNS SELF FROM CONSTRUCTOR & METHODS -----"
-dir_info = DirInfoDisplay.new("./test_file.txt")
+dir_info = DirInfoDisplay.new "./test_file.txt"
 
 puts " ----- RUN INSTANCE METHOD MANY X IN 1 LINE W/ CHAINING, BY MAKING USE OF RETURN SELF -----"
 # because the method returns the object that contains it, you can just run another method on the
 # object in the same chain of function calls
-dir_info.add_heading("hello").add_heading("aloha").add_heading("bonjour")
+dir_info.add_heading("hello")
+				.add_heading("aloha")
+				.add_heading("bonjour")
 puts dir_info.headings.to_s
 
 puts " ----- RUN 2 DIFFERENT METHODS IN A CHAIN BY MAKING USE OF RETURN SELF -----"
-dir_info.add_heading("gutentag").prefix_headings("greeting_")
+dir_info.add_heading("gutentag")
+				.prefix_headings("greeting_")
 puts dir_info.headings.to_s
 
 puts " ----- INSTANTIATE CLASS AGAIN, & IMMEDIATELY RUN INSTANCE FN ON SAME LINE W/ CHAINING -----"
-dir_info_2 = DirInfoDisplay.new("./test_file.txt").add_heading("size").add_heading("filename")
+dir_info_2 = DirInfoDisplay.new("./test_file.txt")
+													 .add_heading("size")
+													 .add_heading("filename")
 puts dir_info_2.headings.to_s
 
 puts "------------------------------------------------------------------------------------------"
@@ -58,20 +63,20 @@ puts "***************** SELF FOR USING KEYWORDS AS VARIABLE NAMES **************
 puts " ----- DEFINE CLASS W/ FUNCTION SHARING A NAME W/ A KEYWORD -----"
 class Organism
 	attr_accessor :alive
-	def initialize(alive = true)
+	def initialize alive=true
 		@alive = alive
 	end
 	def categorize(new_class, new_kingdom)
-		self.class(new_class)
-		self.kingdom(new_kingdom)
+		self.class new_class
+		self.kingdom new_kingdom
 	end
 	def get_categorization
 		"Creature is a member of kingdom #{@kingdom} and class #{@class}"
 	end
-	def class(new_class)
+	def class new_class
 		@class = new_class
 	end
-	def kingdom(new_kingdom)
+	def kingdom new_kingdom
 		@kingdom = new_kingdom
 	end
 end
@@ -100,7 +105,7 @@ puts "***************** SELF FOR CALLING BUILT-IN CLASSES NAMED AFTER KEYWORDS *
 
 puts " ----- DEFINE A CLASS THAT NEEDS TO REFERENCE ITS OWN CLASS -----"
 class SelfKnowledge
-	def initialize(name = "UNNNAMED")
+	def initialize name="UNNNAMED"
 		puts "Self-referencing class initialized!"
 		@name = name
 	end
@@ -110,7 +115,7 @@ class SelfKnowledge
 end
 
 puts " ----- INSTANTIATE SELF-REFERENCING CLASS -----"
-self_ref = SelfKnowledge.new("Dalai Lama")
+self_ref = SelfKnowledge.new "Dalai Lama"
 
 puts " ----- CALL INSTANCE METHOD THAT GETS INSTANCE'S CLASS NAME (self NEEDED TO REF class) -----"
 puts self_ref.metadata

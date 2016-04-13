@@ -1,0 +1,10 @@
+<snippet>
+	<description>Ruby valid email regex -- only matches valid emails</description>
+	<content><![CDATA[
+/\A([^@\s\.]+)@((?:[-a-z0-9]+\.)+[a-z]{2,})\z/i
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>regexemail</tabTrigger>
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<scope>source.ruby</scope>
+</snippet>

@@ -20,3 +20,12 @@ Ruby scripts to create
 General scripting tasks
 =======================
 -   Figure out how to get Clojure up and running
+
+
+
+TODO learning Ruby better
+=========================
+- singleton methods?
+- trust
+- taint
+- allocate

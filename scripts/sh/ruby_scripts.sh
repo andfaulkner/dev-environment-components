@@ -4,6 +4,54 @@ alias nukeruby="ps aux | ack 'bin\/ruby' | awk '{print \$2}' | xargs kill -9"
 # install a gem globally
 alias geminstg="rvm @global do sudo gem install"
 
+################################################################################
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ RAILS ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+################################################################################
+# Turns off ruby's verbose mode for testing - this just causes useless errors from bugs in gems
+alias rake="RUBYOPT=-W0 rake"
+
+alias rs="rails server"
+alias beg="rake db:test:prepare; bundle exec guard"
+alias rc="rails console"
+alias rcs="rails console --sandbox" # any changes made are rolled back on exit
+alias rg="rails generate"
+alias rgc="rails generate controller"
+alias rdm="bundle exec rake db:migrate"
+alias rdr="bundle exec rake db:rollback"
+alias rwipem="rails destroy model" #NameOfModel
+alias rwipec="rails destroy controller" #NameOfController #action_1 #action_2 ... #action_n
+# alias rgm="rails generate model" #nameOfModelHere #column1:type #col2:type ... col_n: type
+
+# generate model. Provides instructions and typechecking 
+function rgm {
+    if [ -z "$2" ]
+    then
+        echo "Usage: rgm NameOfModel COL1:type [COL2:type] ... [COL_n:type]"
+        echo " Example: rgm Users name:string birthday:date age:integer married:boolean"
+        echo " Example: rgm BankAccounts bank:string amount:decimal last_use:timestamp"
+        echo " Example: rgm Product description:text price:decimal release:datetime"
+    else
+        args=("$@")
+        ELEMENTS=${#args[@]}
+        for ((i=0; i<$ELEMENTS;i++)); do
+            if [[ "$i" -gt 0 ]]
+            then
+                if [[ ${args[${i}]} != *":"* ]]
+                then
+                    echo "you must provide a type for params passed to the model generator"
+                    return 0
+                fi
+            fi
+        done
+        rails generate model "$@"
+        echo "model generation successful!"
+    fi
+    echo "exiting..."
+}
+
+alias rr="rake routes"
+alias gorails="cd /home/andrew/projects/ruby/rails"
+
 #=== FUNCTION ==========================================================
 #        NAME:  rubify
 # DESCRIPTION:  convert an rb file into a standalone executable

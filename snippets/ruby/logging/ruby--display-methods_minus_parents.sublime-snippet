@@ -1,0 +1,10 @@
+<snippet>
+	<description>Display methods of an object MINUS methods of parent objects / classes</description>
+	<content><![CDATA[
+puts ${1:NameOfObject}.methods.sort - Object.new.methods
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>logmethinst</tabTrigger>
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<scope>source.ruby</scope>
+</snippet>

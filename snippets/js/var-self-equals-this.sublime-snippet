@@ -1,0 +1,10 @@
+<snippet>
+    <description>Common var self = this binding pattern</description>
+    <content><![CDATA[
+var self = this;${0}
+]]></content>
+    <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+    <tabTrigger>vst</tabTrigger>
+    <!-- Optional: Set a scope to limit where the snippet will trigger -->
+    <scope>source.js</scope>
+</snippet>

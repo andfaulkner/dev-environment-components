@@ -1,0 +1,93 @@
+#!/usr/bin/env ruby
+##
+## INSTGEM
+## 
+## Install a gem into a Rails project. Injects the gem name and optionally the version
+## into the project Gemfile. 
+##
+
+class Instgem
+
+	def initialize(gemname, version=nil)
+		@gemname = gemname 
+		@version = version
+	end
+
+	def display_usage
+		puts 'Usage: instgem GEM [VERSION]'
+		puts "\n"
+		puts ' GEM       name of the gem to install'
+		puts ' VERSION   optional version number to install'
+		puts "\n"
+		puts "Examples:"
+		puts " instgem rspec"
+		puts " instgem minitest 4.0"
+	end
+
+	def display_result(install_stdout)
+		if install_stdout.match("^Your Gemfile lists the gem #{@gemname}.*more than once\.")
+			handle_install_fail(@gemfile_content_orig, "\nGem not installed: already listed in Gemfile")
+		elsif install_stdout.match("^Could not find gem .?#{@gemname}[^'\"]*[\"'] in any of the gem sources listed in your Gemfile or available on this machine\.")
+			handle_install_fail(@gemfile_content_orig, "\nGem not installed: not found in any source lists")
+		else
+			puts "#{@gemname} successfully installed!"
+		end
+	end
+
+	def gem_installed?(gemfile_content, gemname)
+		gemfile_content.find_index do |line|
+			if (line.match("[^a-zA-Z0-9\#'\"]*gem[^a-zA-Z0-9'\"]*['\"]#{@gemname}['\"]"))
+				true
+			end
+		end
+	end
+
+	def handle_install_fail(error_msg)
+		puts @gemfile_content_orig
+		File.write('Gemfile', @gemfile_content_orig.join(''))
+		puts error_msg
+	end
+
+	# Performs the actual installation
+	def install_gem
+
+		if @gemname
+
+			puts "Installing #{@gemname}........."
+
+			# get the Gemfile & extract the row number of the first line of
+			gemfile_content = File.readlines('Gemfile')
+			@gemfile_content_orig = gemfile_content.clone
+			rubygems_line = gemfile_content.find_index do |item|
+				item.match("^source\s\'https:\/\/rubygems\.org\'\\n")
+			end
+
+			if gem_installed?(@gemfile_content_orig, @gemname)
+				handle_install_fail(@gemfile_content_orig, "\nGem not installed: already listed in Gemfile")
+				return
+			end
+
+			# insert name & possibly version of gem into Gemfile 
+			if ! @version
+				gemfile_content.insert(rubygems_line + 1, "gem '#{@gemname}'")
+			else
+				gemfile_content.insert(rubygems_line + 1, "gem '#{@gemname}', '#{@version}'")
+			end
+			gemfile_content.insert(rubygems_line + 1, "\n")
+
+			File.write('Gemfile', gemfile_content.join(''))
+
+			install_stdout = `bundle install`
+
+			display_result(install_stdout)
+
+		else
+			display_usage
+		end
+	end
+end
+
+
+if __FILE__ == $0
+	Instgem.new(ARGV[0], ARGV[1]).install_gem
+end
