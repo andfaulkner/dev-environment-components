@@ -122,11 +122,6 @@ Separate components of new db support
 
 
 
-
-
-git@github.com:i-Sight/isight_main_v5_beta.git
-
-
 Look at:
 postgrator npm module -- Node.js SQL migration tool:: Postgres <--> MySQL <--> SQL Server
 
