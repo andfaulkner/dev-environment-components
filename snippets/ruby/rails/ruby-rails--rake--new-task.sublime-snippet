@@ -1,0 +1,13 @@
+<snippet>
+	<description>Create new basic rake task</description>
+	<content><![CDATA[
+desc "${2:What the task actually does}"
+task :${1:name_of_task} do
+	${0}
+end
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>rktsk</tabTrigger>
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<scope>source.ruby</scope>
+</snippet>

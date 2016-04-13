@@ -1,0 +1,10 @@
+<snippet>
+	<description>ERB - render a partial</description>
+	<content><![CDATA[
+<%= render '${1:layouts/some_file_name_with_no_extension}' %>${0}
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>rend</tabTrigger>
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<scope>text.html.ruby</scope>
+</snippet>

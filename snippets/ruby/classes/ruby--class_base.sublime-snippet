@@ -1,0 +1,14 @@
+<snippet>
+	<description>Create a basic class in Ruby</description>
+	<content><![CDATA[
+class ${1:NameOfClass}
+	def initialize
+		${2}
+	end
+end
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>clab</tabTrigger>
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<scope>source.ruby</scope>
+</snippet>

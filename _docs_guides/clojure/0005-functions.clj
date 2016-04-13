@@ -23,3 +23,9 @@
 ;			 18
 
 (print "\n")
+
+(println "define a function in one 1 shot")
+(defn hello [a] (print "hello" a "\n"))
+
+(hello "meeka")
+; # => hello meeka

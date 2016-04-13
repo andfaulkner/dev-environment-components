@@ -1,0 +1,10 @@
+<snippet>
+	<description>ERB link</description>
+	<content><![CDATA[
+<%= link_to "${1:Text}", ${2:"relative/path/linked/to"}${3/.+/, /g}${3:class: "css-classes"} %>${0}
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>linkto</tabTrigger>
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<scope>text.html.ruby</scope>
+</snippet>

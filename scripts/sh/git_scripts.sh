@@ -6,8 +6,10 @@ echo 'loaded git_scripts.sh!'
 alias gaa="git add --all"
 alias gca="git commit --all -m"
 alias g_po="git push origin"
-
+alias gco="git checkout"
+alias gcob="git checkout -b"
 alias g_br="git branch"
+alias gbr="git branch"
 alias gs="git status"
 alias gl=" git log"
 #alias g_curbr="git rev-parse --abbrev-ref HEAD"

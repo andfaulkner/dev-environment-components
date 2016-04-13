@@ -66,6 +66,7 @@ puts "string me along".gsub(/\s/, "_") # => string_me_along
 puts "------ REPLACE INDIVIDUAL CHARACTERS ------"
 puts "string me along".gsub(/\s/, "_") # => string_me_along
 
+'Bears Are Pretty Awesome'.gsub(/[A-Z]/, '0') # => 0ears 0re 0retty 0wesome
 
 puts "------------------------------------------------------------------------------------------"
 ##############################################################
@@ -123,3 +124,32 @@ puts " ----- SPLIT ON MATCHING PATTERN -----"
 bear_string = "WTF?!?!?!? A BEAR? A GRIZZLY BEAR?"
 bear_match_pattern = /(?<=[a-zA-Z0-9])[!\?]+\s*/ # regexes are objects :)
 puts bear_string.split(bear_match_pattern).to_s # => ["WTF", "A BEAR", "A GRIZZLY BEAR"]
+
+
+puts "------------------------------------------------------------------------------------------"
+####################################
+#          CONCAT STRINGS          #
+####################################
+puts "***************** CONCAT STRINGS *****************"
+
+puts " ----- CONCAT 2 STRINGS WITH + -----"
+p "hello" + " meeka!" # => hello meeka!
+
+puts " ----- CONCAT 2 STRINGS WITH << -----"
+p "hello" << " meeka!" # => hello meeka!
+
+puts " ----- CONCAT 2 STRINGS WITH String#concat -----"
+p "hello".concat(" meeka!") # => hello meeka!
+
+
+puts "------------------------------------------------------------------------------------------"
+#####################################
+#          SEARCH A STRING          #
+#####################################
+puts "***************** SEARCH A STRING *****************"
+puts " ----- SEARCH A STRING FOR A REGEX OR SUBSTRING, RETURN ALL MATCHES IN AN ARRAY -----"
+"meeka eats poop sometimes".scan(/(?<=\s)[a-zA-Z]*(?=\s)/)			# => ["eats", "poop"]
+
+puts " ----- SEARCH A STRING FOR A REGEX OR SUBSTRING, RETURN THE FIRST MATCH -----"
+"meeka eats poop sometimes".match(/(?<=\s)[a-zA-Z]*(?=\s)/)			# => #<MatchData "eats">
+	# convert with to_s

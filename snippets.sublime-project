@@ -6,6 +6,9 @@
 		},
 		{
 			"path": "/home/andrew/.config/sublime-text-3/Installed Packages"
+		},
+		{
+			"path": "/home/andrew/projects/ruby/rails/rails_test_3"
 		}
 	]
 }

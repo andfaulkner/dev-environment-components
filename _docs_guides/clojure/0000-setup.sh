@@ -31,3 +31,18 @@ PATH="$PATH:~/bin/drip/bin"
 ### MAC ###
 brew install drip
 
+### get most recent lein version
+mkdir ~/bin
+pushd ~/bin
+curl https://raw.githubusercontent.com/technomancy/leiningen/stable/bin/lein > lein
+sudo chmod 755 lein
+lein
+popd
+lein -v  #<< should give a 2.* version if it succeeded
+
+######################## make new project ########################
+lein new app name-of-app
+
+####### run a newly created project #######
+# from within project root directory (./name-of-app)
+lein run

@@ -4,6 +4,30 @@
 		"selected_items":
 		[
 			[
+				"instan",
+				"instance_methods	func"
+			],
+			[
+				"def",
+				"def_class	func"
+			],
+			[
+				"cla",
+				"cla	class BlankSlate .. initialize .. end"
+			],
+			[
+				"cl",
+				"cl	classify { |e| .. }"
+			],
+			[
+				"down",
+				"downto	func"
+			],
+			[
+				"logme",
+				"logmethinst	Display methods of an object MINUS methods of parent objects / classes"
+			],
+			[
 				"comm",
 				"comment_moduleheading	Main module heading - explain what module does etc."
 			],
@@ -368,10 +392,22 @@
 	"build_varint": "",
 	"command_palette":
 	{
-		"height": 392.0,
-		"last_filter": "inst",
+		"height": 348.0,
+		"last_filter": "install",
 		"selected_items":
 		[
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"remove",
+				"Package Control: Remove Package"
+			],
+			[
+				"list",
+				"Package Control: List Packages"
+			],
 			[
 				"inst",
 				"Package Control: Install Package"
@@ -383,10 +419,6 @@
 			[
 				"package",
 				"Package Control: Remove Package"
-			],
-			[
-				"install",
-				"Package Control: Install Package"
 			],
 			[
 				"instal",
@@ -417,10 +449,6 @@
 				"Package Control: Disable Package"
 			],
 			[
-				"remove",
-				"Package Control: Remove Package"
-			],
-			[
 				"packa",
 				"Package Control: Install Package"
 			],
@@ -439,10 +467,6 @@
 			[
 				"sublime",
 				"SublimeLinter: Next Error"
-			],
-			[
-				"list",
-				"Package Control: List Packages"
 			],
 			[
 				"remove pack",
@@ -569,7 +593,7 @@
 				"Package Control: Install Package"
 			]
 		],
-		"width": 794.0
+		"width": 661.0
 	},
 	"console":
 	{
@@ -592,6 +616,42 @@
 	},
 	"file_history":
 	[
+		"/home/andrew/.config/sublime-text-3/Packages/User/snippets/_docs_guides/ruby/enumerables_and_enumerators.rb",
+		"/home/andrew/.config/sublime-text-3/Packages/User/snippets/_docs_guides/ruby/classes/c002_class_inheritance.rb",
+		"/home/andrew/.config/sublime-text-3/Packages/User/snippets/_docs_guides/ruby/oop/c001-classes_intro.rb",
+		"/home/andrew/.config/sublime-text-3/Packages/User/snippets/_docs_guides/ruby/classes/c003_class_method_aliasing.rb",
+		"/home/andrew/.config/sublime-text-3/Packages/User/snippets/_docs_guides/ruby/modules/import_modules.rb",
+		"/home/andrew/.config/sublime-text-3/Packages/User/snippets/_docs_guides/ruby/rails/z001-gems.sh",
+		"/home/andrew/.config/sublime-text-3/Packages/User/snippets/_docs_guides/ruby/z_tinkering/recursive_factorial.rb",
+		"/home/andrew/.config/sublime-text-3/Packages/User/snippets/_docs_guides/ruby/013-debugging.rb",
+		"/home/andrew/.config/sublime-text-3/Packages/User/snippets/_docs_guides/ruby/strings/escape_sequences.rb",
+		"/home/andrew/.config/sublime-text-3/Packages/User/snippets/_docs_guides/ruby/metaprogramming/m001--method_missing.rb",
+		"/home/andrew/.config/sublime-text-3/Packages/User/snippets/snippets/ruby/classes/ruby--class_base.sublime-snippet",
+		"/home/andrew/.config/sublime-text-3/Packages/User/snippets/_docs_guides/ruby/strings/014-regular_expressions.rb",
+		"/home/andrew/.config/sublime-text-3/Packages/User/snippets/snippets/ruby/logging/ruby--display-methods_minus_parents.sublime-snippet",
+		"/home/andrew/.config/sublime-text-3/Packages/User/snippets/_docs_guides/ruby/z_tinkering/reverse_array_by_hand.rb",
+		"/home/andrew/.config/sublime-text-3/Packages/User/snippets/_docs_guides/ruby/arrays/004-01-comparing-arrays.rb",
+		"/home/andrew/.config/sublime-text-3/Packages/User/snippets/snippets/ruby/ruby--def-1-param.sublime-snippet",
+		"/home/andrew/.config/sublime-text-3/Packages/User/snippets/snippets/ruby/logging/016-loops.rb",
+		"/home/andrew/.config/sublime-text-3/Packages/User/snippets/snippets/ruby/logging/ruby--display-methods-one-line-at-a-time.sublime-snippet",
+		"/home/andrew/.config/sublime-text-3/Packages/User/snippets/_docs_guides/ruby/strings/009-string_transformations__eg_downcase_upcase.rb",
+		"/home/andrew/.config/sublime-text-3/Packages/User/snippets/snippets/ruby/classes/ruby--attr_accessor.sublime-snippet",
+		"/home/andrew/.config/sublime-text-3/Packages/User/snippets/snippets/ruby/classes/ruby--attr_reader.sublime-snippet",
+		"/home/andrew/.config/sublime-text-3/Packages/User/snippets/snippets/ruby/classes/ruby--attr_accessor_multi.sublime-snippet",
+		"/home/andrew/.config/sublime-text-3/Packages/User/snippets/snippets/ruby/classes/ruby--attr_writer.sublime-snippet",
+		"/home/andrew/.config/sublime-text-3/Packages/User/snippets/snippets/js/react/jsx-html/react--button-tag.sublime-snippet",
+		"/home/andrew/.config/sublime-text-3/Packages/User/snippets/_docs_guides/ruby/014-let-file-act-as-lib-or-script.rb",
+		"/home/andrew/.config/sublime-text-3/Packages/User/snippets/_docs_guides/ruby/z_tinkering/recursive_factorial_unit_test.rb",
+		"/home/andrew/.config/sublime-text-3/Packages/User/snippets/_docs_guides/ruby/oop/c002-class_inheritance.rb",
+		"/home/andrew/.config/sublime-text-3/Packages/User/snippets/scripts/ruby/lsr.rb",
+		"/home/andrew/.config/sublime-text-3/Packages/User/snippets/scripts/ruby/utils/parse_cli_arguments.rb",
+		"/home/andrew/.config/sublime-text-3/Packages/User/snippets/snippets/js/react/jsx-html/react--div-tags.sublime-snippet",
+		"/home/andrew/.config/sublime-text-3/Packages/User/snippets/snippets/js/react/jsx-html/react--tags-img.sublime-snippet",
+		"/home/andrew/.config/sublime-text-3/Packages/User/snippets/snippets/js/react/lifecycle/react--componentDidUpdate.sublime-snippet",
+		"/home/andrew/.config/sublime-text-3/Packages/User/snippets/snippets/js/react/lifecycle/react--componentWillUpdate.sublime-snippet",
+		"/home/andrew/.config/sublime-text-3/Packages/User/snippets/snippets/js/react/lifecycle/react--componentWillMount.sublime-snippet",
+		"/home/andrew/.config/sublime-text-3/Packages/User/snippets/snippets/js/react/lifecycle/react--componentDidMount.sublime-snippet",
+		"/home/andrew/.config/sublime-text-3/Packages/User/snippets/snippets/js/react/new-cmps/react-component-class-export-w-constructor.sublime-snippet",
 		"/home/andrew/.config/sublime-text-3/Packages/User/snippets/snippets/js/react/new-cmps/react--component--full-update-lifecycle.sublime-snippet",
 		"/home/andrew/.config/sublime-text-3/Packages/User/snippets/snippets/js/react/new-cmps/react--component--complete-lifecycle.sublime-snippet",
 		"/home/andrew/.config/sublime-text-3/Packages/User/snippets/snippets/js/react/new-cmps/react-component-simple-class-export.sublime-snippet",
@@ -655,7 +715,6 @@
 		"/home/andrew/.config/sublime-text-3/Packages/User/snippets/.gitignore",
 		"/home/andrew/.config/sublime-text-3/Packages/User/snippets/_docs_guides/js/redux/001--redux-what-it-is.md",
 		"/home/andrew/.config/sublime-text-3/Packages/User/snippets/_docs_guides/unix/bash_ampersands_double_pipes__flow_operators.md",
-		"/home/andrew/.config/sublime-text-3/Packages/User/snippets/_docs_guides/ruby/strings/014-regular_expressions.rb",
 		"/home/andrew/.config/sublime-text-3/Packages/User/snippets/_docs_guides/ruby/system_scripting/b005-streaming_into_ruby_from_cli.sh",
 		"/home/andrew/.config/sublime-text-3/Packages/User/snippets/_docs_guides/ruby/system_scripting/b001-filesystem_interaction.rb",
 		"/home/andrew/.config/sublime-text-3/Packages/User/snippets/_docs_guides/ruby/system_scripting/file-handling/013-copy-move-del-etc--files.rb",
@@ -684,42 +743,7 @@
 		"/home/andrew/projects/isight/isight_main_v5_beta/public/js/lib/backbone-grid.js",
 		"/home/andrew/projects/isight/isight_main_v5_beta/public/js/lib/es-helpers.js",
 		"/home/andrew/projects/isight/isight_main_v5_beta/public/js/collections/event-collection.js",
-		"/home/andrew/projects/isight/isight_main_v5_beta/lib/services/business-logic/search/filters.js",
-		"/home/andrew/projects/isight/isight_main_v5_beta/public/js/views/common/grid-filters-view.js",
-		"/home/andrew/projects/isight/isight_main_v5_beta/public/templates/common/grid-filters-tmpl.dust",
-		"/home/andrew/projects/isight/isight_main_v5_beta/public/js/models/case-model.js",
-		"/home/andrew/projects/isight/isight_main_v5_beta/lib/api/api-attachment.js",
-		"/home/andrew/Downloads/backup-test.attachment.delete.js",
-		"/home/andrew/projects/isight/isight_main_v5_beta/test/api/helper.js",
-		"/home/andrew/projects/isight/isight_main_v5_beta/public/js/views/file/file-details-view.js",
-		"/home/andrew/projects/tracking-file-record-calls.md",
-		"/home/andrew/projects/isight/isight_main_v5_beta/public/js/views/search/advanced-search-view.js",
-		"/home/andrew/projects/isight/isight_main_v5_beta/lib/api/web.js",
-		"/home/andrew/Documents/wael-test-case-example.js",
-		"/home/andrew/projects/isight/isight_main_v5_beta/test/api/document/test.document.js",
-		"/home/andrew/projects/isight/isight_main_v5_beta/test/api/attachment/file.txt",
-		"/home/andrew/projects/isight/isight_main_v5_beta/test/api/attachment/test.attachment.delete.js",
-		"/home/andrew/projects/isight/isight_main_v5_beta/test/api/attachment/test.attachment.js",
-		"/home/andrew/projects/isight/isight_main_v5_beta/package-backup.json",
-		"/home/andrew/projects/isight/isight_main_v5_beta/test/api/email/attachment.txt",
-		"/home/andrew/projects/isight/isight_main_v5_beta/public/js/models/file-model.js",
-		"/home/andrew/projects/isight/isight_main_v5_beta/public/js/lib/backbone-model.js",
-		"/home/andrew/projects/isight/isight_main_v5_beta/test/fixture/public/js/views/file/file-details-view-ex.js",
-		"/home/andrew/projects/isight/isight_main_v5_beta/config/options.router.js",
-		"/home/andrew/projects/isight/isight_main_v5_beta/test/api/trigger/test.trigger-matchFn.js",
-		"/home/andrew/projects/isight/isight_main_v5_beta/lib/api/GenericApi.js",
-		"/home/andrew/projects/isight/isight_main_v5_beta/lib/services/business-logic/case/case-copy.js",
-		"/home/andrew/projects/isight/isight_main_v5_beta/lib/api/api-case.js",
-		"/home/andrew/projects/isight/isight_main_v5_beta/package.json",
-		"/home/andrew/projects/isight/config_complaints-demo_v5/node_modules/isight/lib/api/api.js",
-		"/home/andrew/projects/isight/config_complaints-demo_v5/node_modules/isight/lib/api/api-case.js",
-		"/home/andrew/projects/isight/config_complaints-demo_v5/node_modules/isight/lib/api/web.js",
-		"/home/andrew/projects/isight/config_complaints-demo_v5/node_modules/isight/lib/services/business-logic/case/case-copy.js",
-		"/home/andrew/projects/isight/config_complaints-demo_v5/node_modules/isight/package.json",
-		"/home/andrew/projects/isight/isight_main_v5_beta/script/populate-cases.js",
-		"/home/andrew/projects/isight/isight_main_v5_beta/server.js",
-		"/home/andrew/.config/sublime-text-3/Packages/User/Preferences.sublime-settings",
-		"/home/andrew/.config/sublime-text-3/Packages/Default/Preferences.sublime-settings"
+		"/home/andrew/projects/isight/isight_main_v5_beta/lib/services/business-logic/search/filters.js"
 	],
 	"find":
 	{
@@ -730,6 +754,7 @@
 		"height": 93.0,
 		"where_history":
 		[
+			"<project>,-node_modules/**,-.build/**,*.rb,-gulpfile.js",
 			"<project>,-node_modules/**,-.build/**,*.js,-gulpfile.js",
 			"<project>",
 			"<project>,-node_modules/**,-.build/**,*.js,-gulpfile.js",
@@ -769,6 +794,104 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"digits_range",
+			"range",
+			"ranges",
+			"=",
+			"do",
+			"do ",
+			"pitch_down",
+			"pitch_up",
+			"speed_up",
+			"speed",
+			"synths",
+			"up",
+			"next",
+			"ApplicationConfiguration",
+			":number_of_apps",
+			"include",
+			"initial_cash",
+			"take_out_money",
+			"amount_to_spend",
+			"spend_cash",
+			"life",
+			"varargs",
+			"num_two",
+			"num_one",
+			"yield",
+			"yeild",
+			"Dog",
+			"gem install",
+			"classes at runtime",
+			"self",
+			"CONCAT",
+			"match",
+			"scan",
+			"scan ruby",
+			"strip",
+			"chomp",
+			"select",
+			"/ball/",
+			"ball",
+			"concat",
+			"rindex",
+			"bird_types_count",
+			"AppConfiguration",
+			"Configuration",
+			"FavoriteBearAppConfiguration",
+			"'number_of_apps'",
+			"number_of_apps",
+			"FavoriteBearAppConfiguration",
+			"METHOD",
+			"CLASS METHODS",
+			"johnny_d",
+			"reopen",
+			"REOPEN",
+			"letters",
+			"downto",
+			"push",
+			"join",
+			"reverse",
+			"my_arr",
+			"item",
+			"combo",
+			"MAP",
+			"len",
+			"arg",
+			"_size",
+			"rpad_size",
+			"padding",
+			"# ",
+			"num",
+			"# ",
+			"scan",
+			"REPLACE",
+			"replace",
+			".tr",
+			"tr",
+			"scrub",
+			"sequence",
+			"iter",
+			"iterate",
+			"seq",
+			"reader",
+			"accessor",
+			"# should pass :)",
+			"mod",
+			"push",
+			"old_method_missing",
+			"super",
+			"Dog",
+			"bark_sound",
+			"import",
+			"require",
+			"utils",
+			"KEY",
+			"TableName",
+			"1",
+			"Update",
+			"componentDidMount",
+			"componentWillUpdate",
 			"componentWillReceiveProps",
 			"1",
 			"li",
@@ -798,110 +921,12 @@
 			"   ",
 			"  ",
 			"; ",
-			"sort",
-			"copy",
-			"max-len",
-			"true",
-			"		",
-			"  ",
-			".js",
-			"my-module",
-			"#!/",
-			"mocha",
-			"babel",
-			"SETUP",
-			"		",
-			"  ",
-			"HEAD",
-			">>",
-			"user",
-			"getUserFromApi",
-			"cookieJar1",
-			"user1",
-			"user",
-			"user1",
-			"cookieJar1",
-			"user1",
-			"excludes",
-			"({\n",
-			"excludes",
-			"userConfig",
-			"setupUserInRole",
-			"FieldExtractorUtils",
-			"generateFieldDefData",
-			"getMergedUserObject",
-			"FieldExtractorUtils",
-			"progressBarHandler",
-			"roles:",
-			"role:",
-			"platformCaseGenConfig",
-			"appPath",
-			"configGlobal",
-			"require",
-			"config",
-			"enable mock",
-			"users",
-			"createSomeUsers",
-			"\\.users[^a-zA-Z_]",
-			"\\.users[^a-zA-Z]",
-			"\\.users",
-			"users",
-			"helper",
-			"serverConfig",
-			"setupUser",
-			"globalSeneca",
-			"seneca",
-			"initSenecaForPopulate",
-			"appPath",
-			"initSenecaForPopulate",
-			"cases",
-			"run-progress",
-			"requirer",
-			"uuid",
-			"util",
-			"api.?email",
-			"sort",
-			"[^a-zA-Z0-9]sort:",
-			"sort:",
-			"column",
-			"getSort",
-			"multiSelect",
-			"Function",
-			"getSort",
-			"sort[^:]",
-			"sortColumnIndex",
-			"_sort",
-			"{ ",
-			"title",
-			"{ ",
-			"sortColumn",
-			"sort",
-			"esHelpers",
-			"GridFiltersView",
-			"Grid",
-			"done\\)",
-			"fs",
-			"path",
-			"startServer",
-			"helper",
-			"util",
-			"console",
-			"inspect",
-			"util",
-			"\\.blue",
-			"\\.gree",
-			"\\.red",
-			"inspOpts",
-			"green",
-			"attachedFile1",
-			"fileId",
-			"green",
-			"parsedBody"
+			"sort"
 		],
 		"highlight": true,
 		"in_selection": false,
 		"preserve_case": false,
-		"regex": false,
+		"regex": true,
 		"replace_history":
 		[
 			"	",
@@ -972,7 +997,7 @@
 	},
 	"incremental_find":
 	{
-		"height": 21.0
+		"height": 25.0
 	},
 	"input":
 	{
@@ -985,7 +1010,7 @@
 			[
 				0,
 				0,
-				1,
+				2,
 				1
 			],
 			[
@@ -993,17 +1018,24 @@
 				1,
 				1,
 				2
+			],
+			[
+				1,
+				1,
+				2,
+				2
 			]
 		],
 		"cols":
 		[
 			0.0,
+			0.103790994411,
 			1.0
 		],
 		"rows":
 		[
 			0.0,
-			0.5,
+			0.575383043922,
 			1.0
 		]
 	},
@@ -1027,7 +1059,7 @@
 	"pinned_build_system": "Packages/User/Scheme.sublime-build",
 	"replace":
 	{
-		"height": 64.0
+		"height": 46.0
 	},
 	"save_all_on_build": false,
 	"select_file":
@@ -1036,6 +1068,10 @@
 		"last_filter": "",
 		"selected_items":
 		[
+			[
+				"rubygem",
+				"snippets/_docs_guides/ruby/rails/z001-gems.sh"
+			],
 			[
 				"populate-triggers",
 				"script/populate-triggers.js"
@@ -1128,7 +1164,7 @@
 	"show_open_files": true,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 415.0,
+	"side_bar_width": 272.0,
 	"status_bar_visible": true,
 	"template_settings":
 	{

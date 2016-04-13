@@ -1,3 +1,0 @@
-line1: item1
-line2: item2
-line3: item3
