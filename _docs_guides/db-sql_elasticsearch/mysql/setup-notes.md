@@ -29,9 +29,9 @@ Things to try
 2.  vim ~/.bash_profile
     *   within the file, add:
 
-        export MYSQL_HOME="path/to/isight/main/root/my.cnf"
+        export MYSQL_HOME="path/to/somewhere/main/root/my.cnf"
 
-3.  touch [path/to/isight/main/root/my.cnf]
+3.  touch [path/to/somewhere/main/root/my.cnf]
 
         * look into if there's anything you can add to this or other option files to alleviate your issue
              https://dev.mysql.com/doc/refman/5.5/en/option-files.html
@@ -119,12 +119,6 @@ Separate components of new db support
     *  removing direct references to postgres and postgres-specific actions
 
 5.  environment variables & global options ('/config/**') to allow db-specific configuration
-
-
-
-
-
-git@github.com:i-Sight/isight_main_v5_beta.git
 
 
 Look at:

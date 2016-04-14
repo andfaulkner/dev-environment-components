@@ -15,6 +15,8 @@ skylight disable_dev_warning					  # << prevents this constant annoying error ms
 # set up rspec to work with app testing
 rspec --init
 
+
+
 #######################################
 #          MAKE A CONTROLLER          #
 #######################################
@@ -76,6 +78,17 @@ rspec --init
 # Clear the entire database
 		rake db:drop
 
+#######################################
+#          CREATE A SCAFFOLD          #
+#######################################
+# Scaffold: a full set of functionality for a new data type. Consists of a model,
+# 					database migration for that model, controller to manipulate it, views
+# 					to view and manipulate the data, and a test suite
+
+# Generate a scaffold
+
+    rails generate scaffold HighScore game:string score:integer
+
 
 
 #####################################
@@ -123,7 +136,7 @@ rspec --init
 
 
 ##################################################
-#          MAKE A (MATCHING) CONTROLLER          #
+#          MAKE A 2ND CONTROLLER (SAME)          #
 ##################################################
 # generic:
 # bin/rails generate controller NameOfController
