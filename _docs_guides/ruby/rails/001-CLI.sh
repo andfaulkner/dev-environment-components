@@ -120,6 +120,10 @@ rspec --init
 # changes you make in files will be automatically picked up by the server
 
 
+##############################################
+#          SEE ALL RACK MIDDLEWARES          #
+##############################################
+		rake middleware
 
 ########################
 #         RAKE         #
@@ -130,6 +134,8 @@ rspec --init
 
 #  run the entire Rails app test stack:
 		rake test
+
+defn
 
 
 

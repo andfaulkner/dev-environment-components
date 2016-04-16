@@ -1029,13 +1029,13 @@
 		"cols":
 		[
 			0.0,
-			0.103790994411,
+			0.0586166471278,
 			1.0
 		],
 		"rows":
 		[
 			0.0,
-			0.575383043922,
+			0.110913424972,
 			1.0
 		]
 	},
@@ -1164,7 +1164,7 @@
 	"show_open_files": true,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 272.0,
+	"side_bar_width": 280.0,
 	"status_bar_visible": true,
 	"template_settings":
 	{
