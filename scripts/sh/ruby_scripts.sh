@@ -10,7 +10,8 @@ alias geminstg="rvm @global do sudo gem install"
 # Turns off ruby's verbose mode for testing - this just causes useless errors from bugs in gems
 alias rake="RUBYOPT=-W0 rake"
 
-alias rs="rails server"
+# run with puma server by default, it's better
+alias rs="rails server puma"
 alias beg="rake db:test:prepare; bundle exec guard"
 alias rc="rails console"
 alias rcs="rails console --sandbox" # any changes made are rolled back on exit
@@ -18,6 +19,7 @@ alias rg="rails generate"
 alias rgc="rails generate controller"
 alias rdm="bundle exec rake db:migrate"
 alias rdr="bundle exec rake db:rollback"
+alias rreset="bundle exec rake db:migrate:reset"
 alias rwipem="rails destroy model" #NameOfModel
 alias rwipec="rails destroy controller" #NameOfController #action_1 #action_2 ... #action_n
 # alias rgm="rails generate model" #nameOfModelHere #column1:type #col2:type ... col_n: type

@@ -32,3 +32,44 @@ When a URL is visited - say /static_pages/home - Rails automatically:
 *   example:
     
     rails generate controller User new
+
+
+Methods available in controllers 
+================================
+
+redirect_to
+-----------
+*   examples:
+
+		redirect_to some_hash
+				*   extracts id and action from the hash to determine redirect.
+				*   examples:
+						redirect_to "id"=>5, "action"=>"show"
+						*   pass id=12 to action show in this controller
+						redirect_to "id"=>@user[:id], "action"=>"show"
+						*   pass whatever value is at key id in hash user ---to--> controller def show
+
+		redirect_to "http://some-address.com"
+				*   redirect to the exact path given
+				*   examples:
+						redirect_to "http://www.google.com"
+						*   pass whatever value is at key id in hash user ---to--> controller def show
+
+
+		redirect_to :back
+				*   same as pressing the back button
+
+
+flash
+-----
+*   Show a temporary onscreen message, generally in its own little box
+*   Example:
+		*   In the controller (somewhere):
+				flash[:success] = "New user successfully created! Welcome #{@user[:name]}!"
+		*   In the controller (elsewhere. optional):
+				flash[:success] = "Failed to create new user, see error message"
+		*   In the view:
+			    <% flash.each do |message_type, message| %>
+			      <% flash_classes="alert alert-#{message_type}" %>
+			      <div class="<%= flash_classes %>" id="flash_msg"> <%= message %> </div>
+			    <% end %>

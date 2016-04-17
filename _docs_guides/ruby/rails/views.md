@@ -22,3 +22,27 @@
 *   path at the end is the path the relative path at he beginning is relative to
 		*   optional
 
+
+### <%= form_for (current_form) do |current_form| =>
+*   creates a form
+*   example:
+
+				<%= form_for (@user) do |f| %>
+
+					<%= render 'shared/error_messages' %>
+
+					<%= f.label :name %>
+					<%= f.text_field :name,												class: 'form-control' %>
+
+					<%= f.label :email %>
+					<%= f.email_field :email,											class: 'form-control' %>
+
+					<%= f.label :password,												"Password" %>
+					<%= f.password_field :password, 							class: 'form-control' %>
+
+					<%= f.label :password_confirmation,						"Confirmation" %>
+					<%= f.password_field :password_confirmation, 	class: 'form-control' %>
+
+					<%= f.submit "Create my account", class: "btn btn-primary" %>
+				<% end %>
+

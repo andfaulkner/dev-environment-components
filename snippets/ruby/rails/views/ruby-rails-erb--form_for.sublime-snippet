@@ -1,0 +1,21 @@
+<snippet>
+	<description>Create a form</description>
+	<content><![CDATA[
+<%= form_for (@${1:data_type_eg_user}) do |f| %>
+	<%= f.label :${2:colname} %>
+	<%= f.text_field :${2:colname} %>
+
+	<%= f.label :${3:colname2} %>
+	<%= f.email_field :${3:colname2} %>
+
+	<%= f.label :${4:colname3} %>
+	<%= f.password_field :${4:colname3} %>
+	${0}
+	<%= f.submit "${5:Submit Button Text}", class: "btn btn-primary" %>
+<% end %>
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>formf</tabTrigger>
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<scope>text.html.ruby</scope>
+</snippet>

@@ -1,73 +1,3 @@
-# Generating models
-
-Syntax
-======
-
-		rails generate model NameOfModel column1:type column2:type ... column_n:type
-
-		*   example:
-
-				rails generate model User name:string email:string
-
-				*  this creates a "users" table in the db, with 2 columns: name & email
-
-*   Several files result from generating a model: a migration file, 2 types of
-    tests, and the model file itself
-
-
----------------------------------------------------------------------------------------------------
----------------------------------------------------------------------------------------------------
-
-ModelGenResult:: MIGRATION FILE
-===============================
-*   migrations provides a way to incrementally alter the structure of the db
-
-*   this is found in db/migration/[timestamp]_create_nameofmodel.rb 											 [[PATH]]
-		*    why a timestamp? To prevent migration file title conflicts.
-
-*   To run all migrations:
-
-				bundle exec rake db:migrate
-
-		*   After running a migration, the new table can be seen in the database
-
-### Example migration file
-		class CreateUsers < ActiveRecord::Migration
-		  def change
-		    create_table :users do |t|
-		      t.string :name
-		      t.string :email
-
-		      t.timestamps null: false
-		    end
-		  end
-		end
-
-*   class CreateModelnms:  where Modelnms in class name must be the model name plus 's' ('Users')
-*   change: 						   contents determine changes to be made to the db
-*   create_table:				   creates table in db, by accepting a block with a 'table' param (t)
-		**  create_table block:
-				*** t.string :columnname      -  creates a column of type string, called columnname
-				*** t.timestamps null: false  -  creates 2 datetime columns: created_at & updated_at
-
-
----------------------------------------------------------------------------------------------------
----------------------------------------------------------------------------------------------------
-
-ModelGenResult:: MODEL FILE
-===========================
-*   app/models/name_of_model.rb
-*   Example model file:
-
-		class User < ActiveRecord::Base
-		  attr_accessible :email, :name
-		end
-
-*   Models automatically have all the functionality of the ActiveRecord::Base class (inheritance)
-*   ...meaning User can call all the methods ActiveRecord::Base has, on itself (User.find etc.)
-
---------------------------------------------------------------------------------
-
 Model class / ActiveRecord::Base methods
 ----------------------------------------
 *   the class of the specific model (in the previous example "class User") inherits all methods
@@ -127,6 +57,12 @@ Model class / ActiveRecord::Base methods
 *   User.pluck("col") 				  - return specified columns
 
 ----
+### reassign data
+*   user.update_attributes 			- Reassign data values. Each key is a column name, each value is
+*   															the value to update that column to for the selected row. e.g.
+																		user.update_attributes(name: "Meeka", email: "meeka@meeka.org")
+
+----
 ### Dangerous ActiveRecord::Base methods - returns big piles in one go, often too slow
 *   User.find(:all)							- ***PERFORMANCE HAZARD*** return all rows saved in users table
 																	 (excludes unsaved WIP rows)
@@ -158,59 +94,6 @@ Model class / ActiveRecord::Base methods
 		data is done entirely in Ruby. Very, very, very slow, and it doesn't scale at all.
 
 --------------------------------------------------------------------------------
-
-Model file validation
----------------------
-*   done on individual rows to make sure they meet all requirements to be acceptable data
-		*   determines whether to allow a row into the database
-
-*   validations are set up in model files (app/models/modelnm.rb e.g. app/models/users.rb) [[PATH]]
-*   example:
-				class User < ActiveRecord::Base
-				  attr_accessible :email, :name
-				  validates :name, presence: true  # << this is a validation line
-				end
-
-#### Presence validations
-    validates :colname, presence: true
-
-*    checks to ensure the column actually has data in it
-
---------------------------------------------------------------------------------
-
-Migration to add structure to existing model
---------------------------------------------
-*   CLI command:
-		    rails generate migration name_of_migration_goes_here
-		    # OR
-		    rails generate migration name_of_migration_goes_here col_name:type
-		    *   where type must be string, integer, date, etc.
-
-*   result goes in db/migration/[timestamp]_name_of_migration_goes_here.rb 								 [[PATH]]
-
-*   example migration given by generic example command:
-
-				class NameOfMigrationGoesHere < ActiveRecord::Migration
-				  def change
-				  end
-				end
-
-### Add an index to a migration
-*   example (in class NameOfMigrationGoesHere - as referenced above)
-			def change
-				add_index :users, :email, unique: true
-			end
-
-	  *   add_index - adds an index on the email column of the users table
-	  		*   unique: true 	- enforces uniqueness on the new index
-
----------------------------------------------------------------------------------------------------
----------------------------------------------------------------------------------------------------
-
-ModelGenResult:: MODEL TESTS
-============================
-*   test/unit/nameofmodel_test.rb 																												 [[PATH]]
-*   test/fixtures/nameofmodel.yml 																												 [[PATH]]
 
 
 ---------------------------------------------------------------------------------------------------
@@ -252,16 +135,3 @@ Add password magic to a model
 *   if the password matches the hash stored in the db (after conversion), returns the user
 		*   otherwise, returns false
 *   auto-added to any model with has_secure_password defined on it
-
-Create a model in the rails console
-===================================
-
-*   example
-
-    User.create(name: "Meeka Faulkner",
-    						email: "meekafaulkner@gmail.com",
-    						password: "imabigmoo",
-    						password_confirmation: "imabigmoo")
-
-        *   above example assumes model has columns name & email, & contains has_secure_password
-
