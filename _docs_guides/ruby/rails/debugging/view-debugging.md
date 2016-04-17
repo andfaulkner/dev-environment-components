@@ -61,8 +61,8 @@ RailsPanel plugin
 *   Install the meta_request gem
 
 				gem install meta_request
+				bundle install
 
-*  [Install the RailsPanel Chrome plugin](https://chrome.google.com/webstore/detail/railspanel/gjpfobpafnhjhbajcjgccbbdofdckggg)]
-*   
+*   [Install the RailsPanel Chrome plugin](https://chrome.google.com/webstore/detail/railspanel/gjpfobpafnhjhbajcjgccbbdofdckggg)]
 
-*  asdf
+*   Restart the server

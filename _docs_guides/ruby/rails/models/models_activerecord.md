@@ -91,7 +91,7 @@ Model class / ActiveRecord::Base methods
 *   user.update_attributes(arg) - accepts hash of attributes. If successful, updates & saves data
 																	in 1 step. E.g.
 																			user.update_attributes(name: "Dude", email: "dude@abides.me")
-																	Note that if any validation fails, the whole call fails. 
+																	Note that if any validation fails, the whole call fails.
 
 *   user.update_attribute(arg) -  identical to update_attributes, but only accepts 1 argument. e.g.
 																			 user.update_attribute(:name, "The Dude")
