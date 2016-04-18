@@ -32,6 +32,9 @@ furniture.each {|seat, price|
 	puts "seat: #{seat} costs #{price}"
 }
 
+puts " ----- CREATE A NEW HASH CONTAINING ONLY ITEMS FROM AN INITIAL HASH W/ A NUMERIC VALUE -----"
+hsh_test = {"a"=>123, "b"=>234, "c"=>"see"}
+puts hsh_test.select{|k, v| v.class.ancestors.include? Numeric} # => {"a"=>123, "b"=>234}
 
 
 puts "------------------------------------------------------------------------------------------"

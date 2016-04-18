@@ -15,3 +15,8 @@ Sessions
 *   session: semi-permanent connection between 2 computers
 		*   e.g. client using a web browser & server running Rails
 
+
+Authentication storage
+======================
+1.  Cookies
+2.  LocalStorage

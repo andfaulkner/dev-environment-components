@@ -1,17 +1,23 @@
 <snippet>
 	<description>Create a form</description>
 	<content><![CDATA[
-<%= form_for (@${1:data_type_eg_user}) do |f| %>
+<%= form_for ${1:@actual_object_being_edited} do |f| %> <!-- f is a form builder object -->
 	<%= f.label :${2:colname} %>
 	<%= f.text_field :${2:colname} %>
 
 	<%= f.label :${3:colname2} %>
-	<%= f.email_field :${3:colname2} %>
+	<%= f.text_area :${3:colname2, size: "60x12"} %>
 
 	<%= f.label :${4:colname3} %>
-	<%= f.password_field :${4:colname3} %>
+	<%= f.email_field :${4:colname3} %>
+
+	<%= f.label :${5:colname4} %>
+	<%= f.password_field :${5:colname4} %>
+
+	<%= f.label :${6:colname5} %>
+	<%= f.checkbox :${6:colname5} %>
 	${0}
-	<%= f.submit "${5:Submit Button Text}", class: "btn btn-primary" %>
+	<%= f.submit "${7:Submit Button Text}", class: "btn btn-primary" %>
 <% end %>
 ]]></content>
 	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->

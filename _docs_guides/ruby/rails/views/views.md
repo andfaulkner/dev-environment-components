@@ -1,6 +1,15 @@
-#Location: app/views/**/*.html.erb
-##Magic methods that can go into erb tags
+Location of view helpers
+------------------------
+app/helpers/**/*.rb
 
+
+Location of views
+-----------------
+app/views/**/*.html.erb
+
+
+Methods accessible in erb files 
+-------------------------------
 ###<%= %>
 *   assigns return value of anything inside the braces to the location in the html document
 
@@ -9,7 +18,6 @@
 
 ###<%= link_to "Text", "relative/path/to/location" %>
 *   create a link, pointing to relative/path/to/location, with text "Text"
-
 
 ### <nav>
 *   formally unneccessary. Purpose: more clearly communicate the purpose of a set of nav links

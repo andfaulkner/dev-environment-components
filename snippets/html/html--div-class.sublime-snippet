@@ -1,0 +1,10 @@
+<snippet>
+    <description>Div tag with classes defined</description>
+    <content><![CDATA[
+<div class="${1:classname}">${0}</div>
+]]></content>
+    <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+    <tabTrigger>divc</tabTrigger>
+    <!-- Optional: Set a scope to limit where the snippet will trigger -->
+    <!-- <scope>source.python</scope> -->
+</snippet>

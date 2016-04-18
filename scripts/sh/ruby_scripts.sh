@@ -1,5 +1,5 @@
 # close ruby process that just refuses to
-alias nukeruby="ps aux | ack 'bin\/ruby' | awk '{print \$2}' | xargs kill -9"
+alias nukeruby='ps aux | ack "(bin.?ruby)|(puma)" |  awk "{print \$2}" | xargs kill -9'
 
 # install a gem globally
 alias geminstg="rvm @global do sudo gem install"

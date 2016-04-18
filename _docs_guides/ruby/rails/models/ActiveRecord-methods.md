@@ -95,6 +95,18 @@ Model class / ActiveRecord::Base methods
 
 --------------------------------------------------------------------------------
 
+ActiveRecord console 
+---
+
+###Destroy all rows in a model of a specific type
+	User.all.each{|usr|usr.destroy}
+
+*   above clears all rows in table tied to model User
+
+###Sort ActiveRecord Model methods for debugging / testing / experiments / etc.
+	User.instance_methods.sort.select{|mtd|
+		!mtd.match(/class|method|public|variable|to_|[0-9]{2}|callback|init|instance|eval|exec|inspect|dup/)
+	}
 
 ---------------------------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------------------------

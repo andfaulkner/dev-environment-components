@@ -2,9 +2,17 @@ File/Directory		Purpose
 ==============    =======
 app/							Core application (app) code, including models, views, controllers, and helpers
 app/assets				Applications assets such as cascading style sheets (CSS), JavaScript files, and images
+app/controllers		
+app/decorators		
+app/helpers				used to extract complex logic out of views. automatically included in views.
+app/views					view template files, often *.html.erb. The "view" in MVC.
 
 bin/							Binary executable files
+
 config/						Application configuration
+config/routes.rb  app routing config. Defines resources, endpoints of get, post, delete requests, root, etc.
+									What controller & action each request ends up at is defined here 
+
 db/								Database files
 doc/							Documentation for the application
 
