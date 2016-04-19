@@ -1,7 +1,7 @@
 <snippet>
-	<description>Create an accessor for a class in Ruby</description>
+	<description>Create accessor for a class in Ruby</description>
 	<content><![CDATA[
-attr_accessor :${1:name_of_accessor}${0}
+attr_accessor :${1:name_of_accessor}
 ]]></content>
 	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
 	<tabTrigger>attra</tabTrigger>

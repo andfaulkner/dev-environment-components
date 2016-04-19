@@ -1,14 +1,10 @@
 <snippet>
-	<description>Create a basic class in Ruby</description>
+	<description>Basic rspec it statement</description>
 	<content><![CDATA[
-class ${1:NameOfClass}
-	def initialize ${2:optional_param1}${2/.+/\n		/}${2/.+/@/}${2}${2/.+/ = /}${2}
-		${0}
-	end
-end
+expect(${1:condition}).to${2:_not} ${3:||comparison::be, be_between, be <, etc||}(${4:compared_against})
 ]]></content>
 	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
-	<tabTrigger>clab</tabTrigger>
+	<tabTrigger>rsexp</tabTrigger>
 	<!-- Optional: Set a scope to limit where the snippet will trigger -->
 	<scope>source.ruby</scope>
 </snippet>

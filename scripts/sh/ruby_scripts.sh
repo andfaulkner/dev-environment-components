@@ -4,6 +4,8 @@ alias nukeruby='ps aux | ack "(bin.?ruby)|(puma)" |  awk "{print \$2}" | xargs k
 # install a gem globally
 alias geminstg="rvm @global do sudo gem install"
 
+alias bir="bundle install; rbenv rehash"
+
 ################################################################################
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ RAILS ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 ################################################################################

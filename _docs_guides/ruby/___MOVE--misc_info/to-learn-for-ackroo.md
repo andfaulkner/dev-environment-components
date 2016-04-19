@@ -1,4 +1,22 @@
 
+- draper 1.2.1 										:: for decorators
+- factory_girl "~> 4.0"						:: mocks
+- jquery-datatables-rails 3.1.1   :: um...datatables (frontend)
+- grape 0.13.0										:: REST API creation
+- grape-swagger 0.10.2
+- grape-rabl 0.2.0
+- meta_request 0.3.4
+- nokogiri 1.6.0									:: forms
+- oauth2 0.9.1										:: auth
+- rabl 0.8.5
+- roo 1.13.2
+- squeel 1.0.18										:: friendlier requests
+- devise 2.2.3										:: login / logout / authentication
+- cancancan 1.9.2									:: Restrict what resources a user can access. ACL. authorization.
+
+- improved RSpec Guard terminal reporting
+! RSpec Guard setup
+
 -   models in rails
 -   auth in rails
 -   

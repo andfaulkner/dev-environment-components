@@ -1,14 +1,14 @@
 <snippet>
-	<description>Create a basic class in Ruby</description>
+	<description>Basic rspec describe</description>
 	<content><![CDATA[
-class ${1:NameOfClass}
-	def initialize ${2:optional_param1}${2/.+/\n		/}${2/.+/@/}${2}${2/.+/ = /}${2}
+describe "${1:.name_of_method}" do
+	it "${2:does this action}" do
 		${0}
 	end
 end
 ]]></content>
 	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
-	<tabTrigger>clab</tabTrigger>
+	<tabTrigger>rsdesc</tabTrigger>
 	<!-- Optional: Set a scope to limit where the snippet will trigger -->
 	<scope>source.ruby</scope>
 </snippet>

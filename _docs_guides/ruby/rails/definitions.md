@@ -19,3 +19,8 @@
   compiled) whose purpose is to prep the environment before dispatching the call to the
   original executable
 - most common binstubs: the ones RubyGems generates after installing a gem containing executables
+
+# ASSOCATIONS (polymorphic associations)
+*   set of macro-like class methods for tying objects together through foreign keys
+*   with polymorphic associations a model can belong to more than 1 other model, on a single
+		association
