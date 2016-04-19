@@ -4,9 +4,9 @@
 
 export NODE_PATH=/usr/lib/nodejs:/usr/lib/node_modules:/usr/share/javascript:/usr/local/lib/node_modules
 
-export NVM_DIR="/home/andrew/.nvm"
+export NVM_DIR="~/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
-. /home/andrew/.nvm/nvm.sh
+. ~/.nvm/nvm.sh
 
 alias nrn="npm run nodemon"
 
