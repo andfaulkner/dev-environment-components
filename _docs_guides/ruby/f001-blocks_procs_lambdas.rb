@@ -1,5 +1,7 @@
 #!/usr/local/bin/ruby
 
+require 'pry'
+
 # 
 # Blocks: code wrapped in a do-end construct
 # 
@@ -224,3 +226,80 @@ puts " ----- CALL THE METHOD WITH REGULAR PARAMS AND A BLOCK -----"
 puts calculation(4, 7) {|num1, num2| num1 + num2}
 # => running calculation!
 # 	 11
+
+
+puts "------------------------------------------------------------------------------------------"
+################################
+#          YIELD SELF          #
+################################
+# Makes an instance available to a block passed to one of the instance's methods. I.e.
+#                                  
+#                                       ==================================
+# (-(passed to instance method)-)       ||  INSTANCE                    ||
+# (        _________________    )       ||    _______________________   ||
+# ( args, |  BLOCK          |   )---1---++-->|      instance_method1 |  ||
+# (				|  |--4-->{[A]}   |   )       ||   | [mtd code runs]<--2-| |  ||
+# (				|  |              |<--)---3---++---+----3--(INSTANCE)--3-/ |  ||
+# (				|	 |			 	   	  |   )       ||   |_______________________|  ||
+# (       |  |              |   )       ||                              ||
+# (       |  |              |   )       ||    _______________________   ||
+# (       |  \->[INSTANCE]--+---)---5---++-->| instance_method2      |  ||
+# (       |_________________|   )       ||   |_______________________|  ||
+# (                             )       ==================================
+# (-----------------------------)    
+#
+# 1: arguments and a block are passed to an instance method in an instance
+# 2: the instance method code runs
+# 3: yield self is called in the instance method, passing the instance to the block
+# 4: the block code is executed
+# 5: another instance method is called, which is available because it was passed into the block
+#    as self
+#
+#
+# {[A]} -  block code runs
+puts "***************** YIELD SELF *****************"
+puts " ----- Define a test class -----"
+class YieldsToSelf
+	def initialize
+		puts "YieldsToSelf initializing!"
+		yield self if block_given?
+	end
+
+	def hello_im_yields_to_self
+		"Hello! I'm in a method in an instance of class YieldsToSelf! YAY!"
+	end
+
+	def too_tired_error msg = "this shit"
+		puts "I'm too tired for #{msg}"
+	end
+
+	def too_boring_error msg = "This shit"
+		puts "#{msg} is too boring, not doing it"
+	end
+
+	def runme *args
+		@current_args = args
+		yield self if block_given?
+	end
+
+end
+
+yieldsToSelf = YieldsToSelf.new {|s|
+	puts s.hello_im_yields_to_self
+} # => "Hello! I'm in a method in an instance of class YieldsToSelf! YAY!"
+
+puts yieldsToSelf.hello_im_yields_to_self
+# => "Hello! I'm in a method in an instance of class YieldsToSelf! YAY!"
+
+puts " ----- CALL A 'RUNNER' METHOD IN YieldsToSelf WITH A BLOCK GIVEN self THAT REFERENCES"
+puts " ----- ALL ARGS PASSED TO THE ORIGINAL METHOD -----"
+yieldsToSelf.runme(6) {|es|
+	args = es.instance_variable_get(:@current_args)
+	puts "args given to original object: #{args}"
+	if args.count > 4
+		es.too_tired_error "handling that many arguments, #{args.count} is way too much, you crazy."
+	end
+}
+
+puts "end" 
+

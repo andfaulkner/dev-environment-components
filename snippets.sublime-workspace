@@ -616,6 +616,9 @@
 	},
 	"file_history":
 	[
+		"/home/andrew/.config/sublime-text-3/Packages/User/snippets/_docs_guides/unix/cp-files-dirs_links_copying_viewing__ls.md",
+		"/home/andrew/.config/sublime-text-3/Packages/User/snippets/scripts/setup/symlink-home-to-snippets.sh",
+		"/home/andrew/.config/sublime-text-3/Packages/User/snippets/scripts/setup/essential-npm-modules-and-node-related-installs.sh",
 		"/home/andrew/.config/sublime-text-3/Packages/User/snippets/_docs_guides/common-lisp/001-basics.lisp",
 		"/home/andrew/.config/sublime-text-3/Packages/User/snippets/_docs_guides/ruby/enumerables_and_enumerators.rb",
 		"/home/andrew/.config/sublime-text-3/Packages/User/snippets/_docs_guides/ruby/classes/c002_class_inheritance.rb",
@@ -740,10 +743,7 @@
 		"/home/andrew/projects/isight/isight_main_v5_beta/public/js/lib/elasticsearch-collection.js",
 		"/home/andrew/projects/isight/isight_main_v5_beta/public/js/views/settings/picklist-settings-view.js",
 		"/home/andrew/projects/isight/isight_main_v5_beta/public/js/views/common/header-toolbar-view.js",
-		"/home/andrew/projects/isight/isight_main_v5_beta/public/js/views/common/profile-view.js",
-		"/home/andrew/projects/isight/isight_main_v5_beta/public/js/lib/backbone-grid.js",
-		"/home/andrew/projects/isight/isight_main_v5_beta/public/js/lib/es-helpers.js",
-		"/home/andrew/projects/isight/isight_main_v5_beta/public/js/collections/event-collection.js"
+		"/home/andrew/projects/isight/isight_main_v5_beta/public/js/views/common/profile-view.js"
 	],
 	"find":
 	{
@@ -794,6 +794,14 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			".vimrc",
+			"SNIPPETS",
+			"  ",
+			"_",
+			"backups",
+			"vim_bks",
+			"vim",
+			".vim",
 			"poo",
 			"digits_range",
 			"range",
@@ -913,15 +921,7 @@
 			"  ",
 			"   ",
 			"  ",
-			"\"",
-			"  ",
-			"..",
-			"      ",
-			"     ",
-			"    ",
-			"   ",
-			"  ",
-			"; "
+			"\""
 		],
 		"highlight": true,
 		"in_selection": false,

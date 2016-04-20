@@ -1,3 +1,6 @@
+- Module1 has Module2 and Module3 nested inside. Module4 includes Module1.
+	Does Module4 get access to Module1 & Module2's methods?
+- install thin
 
 - draper 1.2.1 										:: for decorators
 - factory_girl "~> 4.0"						:: mocks
