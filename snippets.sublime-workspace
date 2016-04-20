@@ -392,7 +392,7 @@
 	"build_varint": "",
 	"command_palette":
 	{
-		"height": 348.0,
+		"height": 390.0,
 		"last_filter": "install",
 		"selected_items":
 		[
@@ -593,7 +593,7 @@
 				"Package Control: Install Package"
 			]
 		],
-		"width": 661.0
+		"width": 498.0
 	},
 	"console":
 	{
@@ -616,6 +616,7 @@
 	},
 	"file_history":
 	[
+		"/home/andrew/.config/sublime-text-3/Packages/User/snippets/_docs_guides/common-lisp/001-basics.lisp",
 		"/home/andrew/.config/sublime-text-3/Packages/User/snippets/_docs_guides/ruby/enumerables_and_enumerators.rb",
 		"/home/andrew/.config/sublime-text-3/Packages/User/snippets/_docs_guides/ruby/classes/c002_class_inheritance.rb",
 		"/home/andrew/.config/sublime-text-3/Packages/User/snippets/_docs_guides/ruby/oop/c001-classes_intro.rb",
@@ -742,8 +743,7 @@
 		"/home/andrew/projects/isight/isight_main_v5_beta/public/js/views/common/profile-view.js",
 		"/home/andrew/projects/isight/isight_main_v5_beta/public/js/lib/backbone-grid.js",
 		"/home/andrew/projects/isight/isight_main_v5_beta/public/js/lib/es-helpers.js",
-		"/home/andrew/projects/isight/isight_main_v5_beta/public/js/collections/event-collection.js",
-		"/home/andrew/projects/isight/isight_main_v5_beta/lib/services/business-logic/search/filters.js"
+		"/home/andrew/projects/isight/isight_main_v5_beta/public/js/collections/event-collection.js"
 	],
 	"find":
 	{
@@ -794,6 +794,7 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"poo",
 			"digits_range",
 			"range",
 			"ranges",
@@ -920,8 +921,7 @@
 			"    ",
 			"   ",
 			"  ",
-			"; ",
-			"sort"
+			"; "
 		],
 		"highlight": true,
 		"in_selection": false,
