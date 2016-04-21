@@ -385,9 +385,6 @@
 			]
 		]
 	},
-	"buffers":
-	[
-	],
 	"build_system": "",
 	"build_system_choices":
 	[
@@ -617,14 +614,9 @@
 		"side_bar_visible": false,
 		"status_bar_visible": false
 	},
-	"expanded_folders":
-	[
-		"/home/andrew/.config/sublime-text-3/Packages/User/snippets",
-		"/home/andrew/.config/sublime-text-3/Packages/User/snippets/--learning-promises",
-		"/home/andrew/.config/sublime-text-3/Packages/User/snippets/lodash"
-	],
 	"file_history":
 	[
+		"/home/andrew/.config/sublime-text-3/Packages/User/snippets/_docs_guides/random/tech_choices__pros_cons.md",
 		"/home/andrew/.config/sublime-text-3/Packages/User/snippets/_docs_guides/unix/cp-files-dirs_links_copying_viewing__ls.md",
 		"/home/andrew/.config/sublime-text-3/Packages/User/snippets/scripts/setup/symlink-home-to-snippets.sh",
 		"/home/andrew/.config/sublime-text-3/Packages/User/snippets/scripts/setup/essential-npm-modules-and-node-related-installs.sh",
@@ -751,8 +743,7 @@
 		"/home/andrew/projects/isight/isight_main_v5_beta/test/api/test.email-template.js",
 		"/home/andrew/projects/isight/isight_main_v5_beta/public/js/lib/elasticsearch-collection.js",
 		"/home/andrew/projects/isight/isight_main_v5_beta/public/js/views/settings/picklist-settings-view.js",
-		"/home/andrew/projects/isight/isight_main_v5_beta/public/js/views/common/header-toolbar-view.js",
-		"/home/andrew/projects/isight/isight_main_v5_beta/public/js/views/common/profile-view.js"
+		"/home/andrew/projects/isight/isight_main_v5_beta/public/js/views/common/header-toolbar-view.js"
 	],
 	"find":
 	{
@@ -1004,14 +995,6 @@
 		"whole_word": false,
 		"wrap": true
 	},
-	"groups":
-	[
-		{
-			"sheets":
-			[
-			]
-		}
-	],
 	"incremental_find":
 	{
 		"height": 25.0
@@ -1073,12 +1056,7 @@
 	{
 		"height": 88.0
 	},
-<<<<<<< Updated upstream
-	"pinned_build_system": "Packages/User/Scheme.sublime-build",
-=======
 	"pinned_build_system": "",
-	"project": "snippets.sublime-project",
->>>>>>> Stashed changes
 	"replace":
 	{
 		"height": 46.0
@@ -1179,7 +1157,6 @@
 		],
 		"width": 570.0
 	},
-	"selected_group": 0,
 	"settings":
 	{
 	},

@@ -36,17 +36,3 @@ String.instance_methods(false).sort
 
 
 puts "------------------------------------------------------------------------------------------"
-#########################
-#          pry          #
-#########################
-# A powerful alternative to irb
-# install with 		sudo gem install pry
-# run with 				pry
-
-# commands:
-# 
-# cd any_object_even_a_literal			e.g.			cd "asdf"
-# -    puts you in the scope of the object
-# 
-# cd ..	
-# -    go up one level of scope

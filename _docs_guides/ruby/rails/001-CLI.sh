@@ -3,6 +3,7 @@
 ##################################
 rails new projname 
 # or to use a different database from sqlite3:     rails new --database=postgresql projname
+# or to make a new project with specific version rails _3.2.12_ new projname
 
 cd projname
 
@@ -15,7 +16,8 @@ skylight disable_dev_warning					  # << prevents this constant annoying error ms
 # set up rspec to work with app testing
 rspec --init
 
-
+# avoid having the default page always show
+mv ./public/index.html ./public/index__old.html
 
 #######################################
 #          MAKE A CONTROLLER          #
@@ -50,6 +52,13 @@ rspec --init
 ### STANDARD MODEL, NO ASSOCIATIONS
 # generic:
 # 		bin/rails generate model SQLTableName rowName:dataType rowName:dataType [...more rows]
+#
+#			...where datatype can be:  string, text,
+#															   float, integer, decimal,
+#															   date, time, datetime, timestamp,
+#															   primary_key,
+#															   boolean
+#			- postgres also allows type array
 
 # example:
 		bin/rails generate model Article title:string text:text
@@ -68,6 +77,8 @@ rspec --init
 		# class Comment < ActiveRecord::Base
 		#   belongs_to :article
 		# end
+
+# DATA TYPES ALLOWED ON A MODEL:
 
 #####################################
 #          DESTROY A MODEL          #
