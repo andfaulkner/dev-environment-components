@@ -1,0 +1,11 @@
+<snippet>
+	<description>Markdown top-level header (level 1 header)</description>
+	<content><![CDATA[
+${1:Title}
+${1/(.)/=/g}
+${0}]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>h1</tabTrigger>
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<scope>text.html.markdown</scope>
+</snippet>

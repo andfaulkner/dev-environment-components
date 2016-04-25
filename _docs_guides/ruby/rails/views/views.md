@@ -54,3 +54,5 @@ Methods accessible in erb files
 					<%= f.submit "Create my account", class: "btn btn-primary" %>
 				<% end %>
 
+### <%=h somethingelseinhere %>
+*   escape the output of the tag to avoid XSS

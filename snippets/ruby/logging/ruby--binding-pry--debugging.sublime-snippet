@@ -1,12 +1,10 @@
 <snippet>
-	<description>Define a method (function) taking one argument</description>
+	<description>Pause execution and open a pry terminal at this point in the code</description>
 	<content><![CDATA[
-def ${1:name_of_def}(${2:arg})
-	${0}
-end
+binding.pry
 ]]></content>
 	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
-	<tabTrigger>defnaarg</tabTrigger>
+	<tabTrigger>bp</tabTrigger>
 	<!-- Optional: Set a scope to limit where the snippet will trigger -->
 	<scope>source.ruby</scope>
 </snippet>

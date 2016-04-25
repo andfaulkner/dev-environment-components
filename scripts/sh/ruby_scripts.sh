@@ -1,3 +1,5 @@
+eval "$(rbenv init -)"
+
 # close ruby process that just refuses to
 alias nukeruby='ps aux | ack "(bin.?ruby)|(puma)" |  awk "{print \$2}" | xargs kill -9'
 

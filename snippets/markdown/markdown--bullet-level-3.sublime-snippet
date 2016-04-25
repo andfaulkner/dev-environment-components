@@ -1,12 +1,10 @@
 <snippet>
-	<description>Define a method (function) taking one argument</description>
+	<description>Markdown level 3 bullet</description>
 	<content><![CDATA[
-def ${1:name_of_def}(${2:arg})
-	${0}
-end
+        *   ${0}
 ]]></content>
 	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
-	<tabTrigger>defnaarg</tabTrigger>
+	<tabTrigger>3*</tabTrigger>
 	<!-- Optional: Set a scope to limit where the snippet will trigger -->
-	<scope>source.ruby</scope>
+	<scope>text.html.markdown</scope>
 </snippet>
