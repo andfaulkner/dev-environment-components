@@ -2,6 +2,7 @@ eval "$(rbenv init -)"
 
 # close ruby process that just refuses to
 alias nukeruby='ps aux | ack "(bin.?ruby)|(puma)" |  awk "{print \$2}" | xargs kill -9'
+alias rubypocalypse='ps aux | ack "ruby|passenger" | awk "{print \$2}" | xargs kill -9'
 
 # install a gem globally
 alias geminstg="rvm @global do sudo gem install"
