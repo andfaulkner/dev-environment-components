@@ -532,3 +532,46 @@ Digest.drink 					# => Just drank liquid!
 puts " ----- Rerun method initially declared on the module (note that it still works :) )  -----"
 Digest.put_in_mouth 			# => Just put food in mouth! Preparing to digest it. Omnomnomnom.
 
+
+puts "------------------------------------------------------------------------------------------"
+#################################################################
+#          INCLUDING MODULES CONTAINING NESTED MODULES          #
+#################################################################
+puts "***************** INCLUDING MODULES CONTAINING NESTED MODULES *****************"
+module TestOuterModule
+	module TestInnerModuleClassMethods
+		def hello_one
+			puts "hello! I'm in inner module TestInnerModuleClassMethods! "
+		end
+	end
+	
+	module TestInnerModuleInstanceMethods
+		def hello_two
+			puts "hello! I'm in TestInnerModuleInstanceMethods!"
+		end		
+	end
+	
+	def self.included(receiver)
+		receiver.extend         TestInnerModuleClassMethods
+		receiver.send :include, TestInnerModuleInstanceMethods
+	end
+end
+
+class EatsModule
+	include TestOuterModule
+	def say_hello
+		puts "ran say_hello"
+		hello_two		 							 # run one of the instance methods
+		self.class.send :hello_one # run one of the class methods
+	end
+end
+
+puts " ----- Instantiate EatsModule (create eatsModule). ------"
+puts " ----- This does an 'include' of TestOuterModule, & thus runs its self.included method -----"
+eatsModule = EatsModule.new
+
+puts " ----- Run eatsModule method that calls methods from each inner module in TestOuterModule -----"
+eatsModule.say_hello
+# From within eatsModule's say_hello instance method, the method from TestInnerModuleInstanceMethods 
+# is called using a regular method call - hello_two; while the method from TestInnerModuleClassMethods
+# can only be called from within the say_hello method by explicitly sending a method to self.class

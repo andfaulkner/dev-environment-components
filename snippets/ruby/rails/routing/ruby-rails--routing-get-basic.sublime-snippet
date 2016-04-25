@@ -1,0 +1,10 @@
+<snippet>
+	<description>Basic GET endpoint</description>
+	<content><![CDATA[
+get "${1:pathpt1/pathpt2"}
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>rrtget</tabTrigger>
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<scope>source.ruby</scope>
+</snippet>

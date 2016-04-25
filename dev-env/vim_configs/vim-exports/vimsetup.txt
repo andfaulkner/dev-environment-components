@@ -1,0 +1,55 @@
+#!shell
+
+#install pathogen (ESSENTIAL!!!!)
+mkdir -p ~/.vim/autoload ~/.vim/bundle && curl -LSso ~/.vim/autoload/pathogen.vim https://tpo.pe/pathogen.vim
+
+#### PREP FOR INSTALLING PLUGINS ####
+cd ~/.vim/bundle
+
+#install node plugin
+mkdir -p ~/.vim/bundle/node
+git clone https://github.com/moll/vim-node.git ~/.vim/bundle/node
+
+#install syntastic
+git clone https://github.com/scrooloose/syntastic.git
+
+#install jshint plugin
+git clone https://github.com/walm/jshint.vim.git
+
+#install js syntax completion
+curl http://www.vim.org/scripts/download_script.php?src_id=20270 > ~/.vim/autoload/syntaxcomplete.vim
+git clone https://github.com/jelera/vim-javascript-syntax.git ~/.vim/bundle/vim-javascript-syntax
+
+# install tern for vim
+git clone https://github.com/marijnh/tern_for_vim.git
+
+#install neobundle (yet another package manager for vim)
+curl https://raw.githubusercontent.com/Shougo/neobundle.vim/master/bin/install.sh > install.sh
+bash ./install.sh
+rm install.sh
+
+# finish tern for vim install
+cd ~/.vim/bundle/tern_for_vim
+npm install
+
+'
+###in vim:::
+BundleInstall moll/vim-node
+BundleInstall Javascript-Indent
+PluginInstall 
+NeoBundleList
+'
+
+#COOL NEW COMMANDS:
+'
+TernRename
+TernRefs
+TernDoc
+TernType
+TernDef
+<ctrl-x ctrl-o> in insert mode for autocompletes 
+
+<C-w>f  --- opens require`d file under cursor in a new vertical split
+gf      --- to open gf on require("something") to open the module
+
+JSHint  --- to display JS errors

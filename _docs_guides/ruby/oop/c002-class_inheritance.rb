@@ -68,3 +68,6 @@ meeka_two = Dog.new("woof", "girl", "meeka two")
 
 meeka_two.bark
 
+# NOTE::
+# 	super without parentheses: calls parent method with the same args passed to the original method
+# 	super with parentheses: 	 calls parent method with NO arguments

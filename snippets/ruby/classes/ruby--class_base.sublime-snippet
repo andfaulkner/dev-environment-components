@@ -2,8 +2,8 @@
 	<description>Create a basic class in Ruby</description>
 	<content><![CDATA[
 class ${1:NameOfClass}
-	def initialize
-		${2}
+	def initialize ${2:optional_param1}${2/.+/\n		/}${2/.+/@/}${2}${2/.+/ = /}${2}
+		${0}
 	end
 end
 ]]></content>

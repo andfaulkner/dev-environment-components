@@ -682,7 +682,7 @@
 				"Package Control: Install Package"
 			]
 		],
-		"width": 632.0
+		"width": 498.0
 	},
 	"console":
 	{
@@ -717,6 +717,11 @@
 		"/Users/andrewfaulkner/Library/Application Support/Sublime Text 3/Packages/User/Markdown.sublime-settings",
 		"/Users/andrewfaulkner/Library/Application Support/Sublime Text 3/Packages/User/sublime-dev-environment-snippet/snippets/markdown/markdown--h1.sublime-snippet",
 		"/Users/andrewfaulkner/Library/Application Support/Sublime Text 3/Packages/User/sublime-dev-environment-snippet/snippets/markdown/ruby--def-1-param.sublime-snippet",
+		"/home/andrew/.config/sublime-text-3/Packages/User/snippets/_docs_guides/random/tech_choices__pros_cons.md",
+		"/home/andrew/.config/sublime-text-3/Packages/User/snippets/_docs_guides/unix/cp-files-dirs_links_copying_viewing__ls.md",
+		"/home/andrew/.config/sublime-text-3/Packages/User/snippets/scripts/setup/symlink-home-to-snippets.sh",
+		"/home/andrew/.config/sublime-text-3/Packages/User/snippets/scripts/setup/essential-npm-modules-and-node-related-installs.sh",
+		"/home/andrew/.config/sublime-text-3/Packages/User/snippets/_docs_guides/common-lisp/001-basics.lisp",
 		"/home/andrew/.config/sublime-text-3/Packages/User/snippets/_docs_guides/ruby/enumerables_and_enumerators.rb",
 		"/home/andrew/.config/sublime-text-3/Packages/User/snippets/_docs_guides/ruby/classes/c002_class_inheritance.rb",
 		"/home/andrew/.config/sublime-text-3/Packages/User/snippets/_docs_guides/ruby/oop/c001-classes_intro.rb",
@@ -890,8 +895,6 @@
 		"case_sensitive": false,
 		"find_history":
 		[
-			"Fridge",
-			"-",
 			"digits_range",
 			"range",
 			"ranges",
@@ -1018,6 +1021,7 @@
 			"    ",
 			"   ",
 			"  "
+			"\""
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -1386,8 +1390,8 @@
 	{
 		"height": 88.0
 	},
-	"pinned_build_system": "Packages/User/Scheme.sublime-build",
 	"project": "snippets.sublime-project",
+	"pinned_build_system": "",
 	"replace":
 	{
 		"height": 42.0

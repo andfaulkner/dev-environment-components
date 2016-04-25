@@ -483,13 +483,20 @@ puts "--------------------------------------------------------------------------
 ########################################
 puts "***************** ALIAS CLASS METHOD *****************"
 
-# TODO
-# class TestClass
-# 	alias 
-# 	def initialize(name='boo')
-		
-# 	end
-# end
+puts " ----- Define a class containing an alias -----"
+class DrumAndBass
+  def boom_tick_clack_tick_boom_tick_clack_tick
+    puts "BOOM tick clack, tick Boom tick clack tick"
+  end
+  alias amen_break boom_tick_clack_tick_boom_tick_clack_tick
+end
+
+puts " ----- Call method using the alias -----"
+DrumAndBass.new.amen_break
+# => BOOM tick clack, tick Boom tick clack tick 
+puts " ----- Call method using the original method name - note that the result is the same -----"
+DrumAndBass.new.boom_tick_clack_tick_boom_tick_clack_tick
+# => BOOM tick clack, tick Boom tick clack tick 
 
 #########################################
 #          METHOD MANIPULATION          #

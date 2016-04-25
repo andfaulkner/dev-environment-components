@@ -1,0 +1,11 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =9
+let g:netrw_dirhist_1='/home/andfaulkner/.lein'
+let g:netrw_dirhist_2='/home/andfaulkner/Projects/cordova/framework/.settings'
+let g:netrw_dirhist_3='/usr/lib/node_modules/casperjs/modules'
+let g:netrw_dirhist_4='/home/andfaulkner/.config/streamtuner2'
+let g:netrw_dirhist_5='/home/andfaulkner/Projects/yeoman/generator-gulp-webpack-essentials/.git'
+let g:netrw_dirhist_6='/home/andfaulkner/.vim/bundle/Vundle.vim'
+let g:netrw_dirhist_7='/home/andfaulkner/.vim/bundle/Vundle.vim/autoload'
+let g:netrw_dirhist_8='/home/andfaulkner/.vim/bundle/Vundle.vim/autoload/vundle'
+let g:netrw_dirhist_9='/home/andfaulkner/.plugman'

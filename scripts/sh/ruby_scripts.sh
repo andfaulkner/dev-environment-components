@@ -2,9 +2,12 @@ eval "$(rbenv init -)"
 
 # close ruby process that just refuses to
 alias nukeruby='ps aux | ack "(bin.?ruby)|(puma)" |  awk "{print \$2}" | xargs kill -9'
+alias rubypocalypse='ps aux | ack "ruby|passenger" | awk "{print \$2}" | xargs kill -9'
 
 # install a gem globally
 alias geminstg="rvm @global do sudo gem install"
+
+alias bir="bundle install; rbenv rehash"
 
 ################################################################################
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ RAILS ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -12,8 +15,10 @@ alias geminstg="rvm @global do sudo gem install"
 # Turns off ruby's verbose mode for testing - this just causes useless errors from bugs in gems
 alias rake="RUBYOPT=-W0 rake"
 
-# run with puma server by default, it's better
-alias rs="rails server puma"
+# run with defined server
+alias rs="bundle exec rails server"
+# run with puma server
+alias rsp="bundle exec rails server puma"
 alias beg="rake db:test:prepare; bundle exec guard"
 alias rc="rails console"
 alias rcs="rails console --sandbox" # any changes made are rolled back on exit
