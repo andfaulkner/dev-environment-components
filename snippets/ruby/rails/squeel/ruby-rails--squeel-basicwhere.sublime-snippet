@@ -1,0 +1,10 @@
+<snippet>
+	<description>Squeel: search for items matching on a field</description>
+	<content><![CDATA[
+User.where{${1:field} =~ "${2:value}}
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>sqwhere</tabTrigger>
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<scope>text.html.ruby</scope>
+</snippet>

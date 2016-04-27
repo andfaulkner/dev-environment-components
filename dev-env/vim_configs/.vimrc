@@ -1,27 +1,30 @@
  " Note: Skip initialization for vim-tiny or vim-small.
- if 0 | endif
+if 0 | endif
 
- if has('vim_starting')
-   if &compatible
-     set nocompatible               " Be iMproved
-   endif
+"if has('vim_starting')
+if &compatible
+  set nocompatible               " Be iMproved
+endif
 
-   " Required:
-   set runtimepath+=~/.vim/bundle/neobundle.vim/
- endif
+" Required:
+"""set runtimepath+=~/.vim/bundle/neobundle.vim/
+"endif
 
- " Required:
- call neobundle#begin(expand('~/.vim/bundle/'))
+" Required:
+set runtimepath^=~/.vim/bundle/neobundle.vim/
+
+" Required:
+call neobundle#begin(expand('~/.vim/bundle/'))
 
  " Let NeoBundle manage NeoBundle
  " Required:
- NeoBundleFetch 'Shougo/neobundle.vim'
+NeoBundleFetch 'Shougo/neobundle.vim'
 
  " My Bundles here:
  " Refer to |:NeoBundle-examples|.
  " Note: You don't set neobundle setting in .gvimrc!
 
- call neobundle#end()
+call neobundle#end()
 
  " Required:
  filetype plugin indent on
@@ -182,6 +185,7 @@ call vundle#begin()
     Plugin 'jelera/vim-javascript-syntax'
     Plugin 'elzr/vim-json'
     Plugin 'jimmyhchan/dustjs.vim'
+    Plugin 'tpope/vim-fugitive'
 
 call vundle#end()
 "***********************************************"
@@ -277,7 +281,7 @@ if !exists("autocommands_loaded")
   " au BufRead,BufNewFile *.md,*.markdown,*.mkd call s:setMarkdown()
   au BufRead,BufNewFile *.css,*.scss call s:setCSS()
   "au BufRead,BufNewFile *.html,*.js,*.haml,*.erb call s:setBrowserEnv()
-  au User Rails call s:setRails()
+  " au User Rails call s:setRails()
 
   " Reload all snippets when creating new ones.
   au! BufWritePost *.snippets call ReloadAllSnippets()
