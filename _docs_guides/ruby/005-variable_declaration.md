@@ -35,3 +35,19 @@ Special cases
 
 -   ending a message in ? indicates it's asking a true/false question
 -   ending a message in ! indicates the message does something 'special' & maybe unexpected
+
+
+Variable types --- IDed by Ruby using sigils
+
+
+-----------------------------------------------------------------------------
+| Name Begins With	|			Variable Scope			|		Example 									|
+-----------------------------------------------------------------------------
+|	$									|		A global variable     |		$app_name = "MyApp"				|
+|	@									|		An instance variable  | 	@user_name = "meeka"			|
+|	[a-z]	or _				|		A local variable 			|		interim_result = a * b		|
+|	[A-Z]							|		A constant 						|		PI = 3.1415926535897			|
+|	@@								|		A class variable 			|	 	@@number_of_users					|
+| (PSEUDOVAR)  self	|		cur executing object  |   self											|
+| (PSEUDOVAR)  nil	|		cur executing object  |   nil												|
+-----------------------------------------------------------------------------
