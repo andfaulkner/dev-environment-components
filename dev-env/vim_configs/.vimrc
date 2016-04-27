@@ -1,4 +1,11 @@
- " Note: Skip initialization for vim-tiny or vim-small.
+" NOTES:::
+" SPLIT HORIZONTALLY:          <C-W><C-n>        ------pane1------
+"                                                ------pane2------
+"
+" SPLIT VERTICALLY:            <C-W><C-v>   ::   | pane1 | pane2 |
+"
+
+" Note: Skip initialization for vim-tiny or vim-small.
 if 0 | endif
 
 "if has('vim_starting')
