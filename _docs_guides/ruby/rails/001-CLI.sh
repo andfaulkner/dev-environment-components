@@ -28,11 +28,11 @@ mv ./public/index.html ./public/index__old.html
 		rails generate controller welcome index
 		# ... builds a controller named 'welcome' with an action called 'index'
 
-		# creates a new controller, as:			app/controllers/welcome_controller.rb						[PATHPATH]
-		# places an associated route into: 	config/routes.rb																[PATHPATH]
-		# creates a new view, as: 					app/views/welcome/index.html.erb								[PATHPATH]
+		# creates a new controller, as:		app/controllers/welcome_controller.rb		[PATHPATH]
+		# places an associated route into: 	config/routes.rb							[PATHPATH]
+		# creates a new view, as: 			app/views/welcome/index.html.erb			[PATHPATH]
 
-# NOTE: when defining root page, make sure you erase default public/index.html 1st			[PATHPATH]
+# NOTE: when defining root page, make sure you erase default public/index.html 1st		[PATHPATH]
 
 # e.g. 2:
 		rails generate controller StaticPages home help

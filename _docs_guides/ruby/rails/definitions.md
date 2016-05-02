@@ -24,3 +24,11 @@
 *   set of macro-like class methods for tying objects together through foreign keys
 *   with polymorphic associations a model can belong to more than 1 other model, on a single
 		association
+
+# CONCERNS
+
+*   Different models in your Rails app will often share a set of cross-cutting concerns
+	-   e.g. things like "Trashable", "Searchable", "Visible", "Movable", "Taggable"
+*	These concerns encapsulate both data access and domain logic about a certain slice of responsibility
+*   They can be mixed into modules & provide a single place to reason about this specific behaviour
+*   

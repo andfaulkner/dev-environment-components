@@ -192,3 +192,102 @@ puts "--------------------------------------------------------------------------
 # class DuckbilledPlatypus
 # 	include Mammal
 # 	include Amphibian
+
+
+puts "------------------------------------------------------------------------------------------"
+########################################################################
+#          NESTING MODULES & CLASSES, & PRIVATE CLASS METHODS          #
+########################################################################
+puts "***************** NESTING MODULES & CLASSES, & PRIVATE CLASS METHODS *****************"
+
+module Cave
+
+    def depth
+        puts @depth
+    end
+
+	class Bear
+	    def self.gr
+	        puts "ROOOOOOAAAAARRRR!!!"
+	    end
+
+	    private
+		    def fleas
+		    	puts "hello I'm this bear's fleas"
+		    end # fails as a private method - this is accessible still
+
+		    class << self
+		    	private
+				    def cry_to_sleep
+				    	puts "bear is secretly a sad bear"
+				    end
+				## END private
+			end
+
+		    module Digestion
+		    	private # this declaration doesn't affect class methods
+				    def self.poop
+				    	puts "poop time!"
+				    end # this does not work - fails as a private class method
+
+					def self.absorb_nutrients
+						puts "*sluuuurp*"
+					end
+					private_class_method :absorb_nutrients
+
+					def self.absorb_water
+						puts "*glug...glug...glug*"
+					end
+					private_class_method :absorb_water
+
+				## END private
+		    end
+
+		## END private
+	end
+end
+
+
+Cave::Bear.gr 				 					# =>  "ROOOOOOAAAAARRRR!!!"
+
+# fails to make methods private, calls work
+Cave::Bear::Digestion::poop 					# =>  "poop time!"
+Cave::Bear::Digestion.poop  					# =>  "poop time!"
+
+# Cave::Bear.cry_to_sleep	 					# =>  ((throws error - class method is private))
+# Cave::Bear::cry_to_sleep	 					# =>  ((throws error - class method is private))
+
+# Cave::Bear::Digestion::absorb_nutrients		# =>  ((throws error - class method is private))
+# Cave::Bear::Digestion::absorb_nutrients		# =>  ((throws error - class method is private))
+
+puts " ----- Sending message to private class method will still run it (for metaprogramming) -----"
+Cave::Bear::Digestion.send :absorb_nutrients	# =>  "*sluuuurp*"
+
+
+
+puts "------------------------------------------------------------------------------------------"
+#############################################
+#          MODULE PATTERN IN RUBY?          #
+#############################################
+puts "***************** MODULE PATTERN IN RUBY? *****************"
+
+def Tree height, width, opts={}
+	size_metric = opts[:size_metric] || "feet"
+	color = opts[:color] || "brown"
+	type = opts[:type] || "redwood"
+	{ 
+		height: height,
+		width: width,
+		size_metric: size_metric,
+		color: color,
+		type: type
+	}
+end
+
+Tree 150, 2, {type: "Baobob", size_metric: "metres", color: "black"}
+
+
+
+
+
+

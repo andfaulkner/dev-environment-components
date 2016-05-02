@@ -21,18 +21,23 @@
 
 #Additive array comparison
 #----------------------------
+#   returns all items from both arrays
+
 #   example:
 
 		first_array && second_array
 
-#   returns all items from both arrays
 
 
-#Array comparison: get common elements
-#-------------------------------------
+# arr1 && arr2 - return second array if 1st array / variable exists  
+#------------------------------------------------------------------
+#   returns all items present in both arrays
 
 #   example
+first_array = ["a", "b", "c", "d"]
+second_array = ["c", "d", "e", "f"]
 
-		first_array & second_array
+conglomerate_array = first_array && second_array
+puts conglomerate_array
+# => ["c", "d"]
 
-#   returns all items present in both arrays
