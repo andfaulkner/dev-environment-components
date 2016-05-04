@@ -405,6 +405,9 @@
 			]
 		]
 	},
+	"buffers":
+	[
+	],
 	"build_system": "",
 	"build_system_choices":
 	[
@@ -646,33 +649,13 @@
 		"side_bar_visible": false,
 		"status_bar_visible": false
 	},
+	"expanded_folders":
+	[
+		"/Users/andrewfaulkner/Library/Application Support/Sublime Text 3/Packages/User/sublime-dev-environment-snippet"
+	],
 	"file_history":
 	[
-		"/home/andrew/.config/sublime-text-3/Packages/User/snippets/snippets.sublime-project",
-		"/home/andrew/.config/sublime-text-3/Packages/User/snippets/dev-env/ruby-linux.sh",
-		"/home/andrew/.config/sublime-text-3/Packages/User/snippets/custom-manuals/man__ruby_oft_forgotten",
-		"/home/andrew/.config/sublime-text-3/Packages/User/snippets/scripts/ruby/rails-templates/template-1.rb",
-		"/home/andrew/.config/sublime-text-3/Packages/User/snippets/snippets/sh/sh--cheatsheet-template.sublime-snippet",
-		"/home/andrew/.config/sublime-text-3/Packages/User/snippets/dev-env/devenv-install.sh",
-		"/home/andrew/.config/sublime-text-3/Packages/User/snippets/scripts/setup/symlink-home-to-snippets.sh",
-		"/home/andrew/.config/sublime-text-3/Packages/User/snippets/custom-manuals/man__shebang",
-		"/home/andrew/.config/sublime-text-3/Packages/User/snippets/custom-manuals/man__sed",
-		"/home/andrew/.config/sublime-text-3/Packages/User/snippets/_docs_guides/js/js-learning/async-in-order/test-files/test-file-1.txt",
-		"/home/andrew/.config/sublime-text-3/Packages/User/snippets/_docs_guides/js/js-learning/async-in-order/package.json",
-		"/home/andrew/.config/sublime-text-3/Packages/User/snippets/_docs_guides/js/js-learning/async-in-order/async-in-order.js",
-		"/home/andrew/.config/sublime-text-3/Packages/User/snippets/_docs_guides/js/sorting_combinatorics.js",
-		"/home/andrew/.config/sublime-text-3/Packages/User/snippets/_docs_guides/js/bitmasks_bitshifting_bitwise.js",
-		"/home/andrew/.config/sublime-text-3/Packages/User/snippets/scripts/ruby/utils/parse_cli_arguments.rb",
-		"/home/andrew/.config/sublime-text-3/Packages/User/snippets/scripts/ruby/recursively_list_all_files.rb",
-		"/home/andrew/.config/sublime-text-3/Packages/User/snippets/scripts/ruby/lsr.rb",
-		"/home/andrew/.config/sublime-text-3/Packages/User/snippets/scripts/ruby/env_sorted.rb",
-		"/home/andrew/.config/sublime-text-3/Packages/User/snippets/scripts/ruby/git.rb",
-		"/home/andrew/.config/sublime-text-3/Packages/User/snippets/scripts/ruby/catr___classes_attempt",
-		"/home/andrew/.config/sublime-text-3/Packages/User/snippets/dev-env/setup-git-completions.sh",
-		"/home/andrew/.config/sublime-text-3/Packages/User/snippets/snippets/ruby/rails/ruby-rails--rake--new-task.sublime-snippet",
-		"/home/andrew/.config/sublime-text-3/Packages/User/snippets/_docs_guides/ruby/f001-blocks_procs_lambdas.rb",
-		"/home/andrew/.config/sublime-text-3/Packages/User/snippets/snippets/ruby/rails/ruby-multiline-string.sublime-snippet",
-		"/home/andrew/.config/sublime-text-3/Packages/User/snippets/snippets/ruby/rails/ruby-rails--add-gem.sublime-snippet",
+		"/Users/andrewfaulkner/Library/Application Support/Sublime Text 3/Packages/User/sublime-dev-environment-snippet/snippets/ruby/ruby--def_base.sublime-snippet",
 		"/Users/andrewfaulkner/Library/Application Support/Sublime Text 3/Packages/User/sublime-dev-environment-snippet/snippets/ruby/rails/views/ruby-rails-erb--class-form-control.sublime-snippet",
 		"/Users/andrewfaulkner/Library/Application Support/Sublime Text 3/Packages/User/sublime-dev-environment-snippet/snippets/ruby/rails/squeel/ruby-rails--squeel-where_any_not_nil.sublime-snippet",
 		"/Users/andrewfaulkner/Library/Application Support/Sublime Text 3/Packages/User/sublime-dev-environment-snippet/snippets/ruby/rails/squeel/ruby-rails--squeel-basicwhere.sublime-snippet",
@@ -776,6 +759,29 @@
 		"/home/andrew/.config/sublime-text-3/Packages/User/snippets/snippets/js/express-js/express-middleware.sublime-snippet",
 		"/home/andrew/.config/sublime-text-3/Packages/User/snippets/snippets/js/tdd/tdd-it-es6.sublime-snippet",
 		"/home/andrew/.config/sublime-text-3/Packages/User/snippets/snippets/js/es6/es6-import-standard.sublime-snippet"
+		"/home/andrew/.config/sublime-text-3/Packages/User/snippets/snippets/js/es6/es6-import-standard.sublime-snippet",
+		"/home/andrew/.config/sublime-text-3/Packages/User/snippets/_docs_guides/js/ES2015/export-on-fn-def.js",
+		"/home/andrew/.config/sublime-text-3/Packages/User/snippets/.babelrc",
+		"/home/andrew/.config/sublime-text-3/Packages/User/snippets/snippets/js/es6/es6-import-one-item.sublime-snippet",
+		"/home/andrew/.config/sublime-text-3/Packages/User/snippets/snippets/js/es6/es6-import-all.sublime-snippet",
+		"/home/andrew/.config/sublime-text-3/Packages/User/snippets/snippets/js/es6/es6-import-two-items.sublime-snippet",
+		"/home/andrew/.config/sublime-text-3/Packages/User/snippets/snippets/js/Immutable/immutable-list-of.sublime-snippet",
+		"/home/andrew/.config/sublime-text-3/Packages/User/snippets/snippets/js/Immutable/immutable-list.sublime-snippet",
+		"/home/andrew/.config/sublime-text-3/Packages/User/snippets/.gitignore",
+		"/home/andrew/.config/sublime-text-3/Packages/User/snippets/_docs_guides/js/redux/001--redux-what-it-is.md",
+		"/home/andrew/.config/sublime-text-3/Packages/User/snippets/_docs_guides/unix/bash_ampersands_double_pipes__flow_operators.md",
+		"/home/andrew/.config/sublime-text-3/Packages/User/snippets/_docs_guides/ruby/system_scripting/b005-streaming_into_ruby_from_cli.sh",
+		"/home/andrew/.config/sublime-text-3/Packages/User/snippets/_docs_guides/ruby/system_scripting/b001-filesystem_interaction.rb",
+		"/home/andrew/.config/sublime-text-3/Packages/User/snippets/_docs_guides/ruby/system_scripting/file-handling/013-copy-move-del-etc--files.rb",
+		"/home/andrew/.config/sublime-text-3/Packages/User/snippets/_docs_guides/ruby/system_scripting/file-handling/013-copying-moving-etc--files",
+		"/home/andrew/.config/sublime-text-3/Packages/User/snippets/snippets/js/react/react--component-dropdown(select-tag).sublime-snippet",
+		"/home/andrew/.config/sublime-text-3/Packages/User/snippets/snippets/js/react/react--component-mounter--(mounts_another_component).sublime-snippet",
+		"/home/andrew/.config/sublime-text-3/Packages/User/snippets/snippets/js/react/react--findDOMNode--toGetChildValue.sublime-snippet",
+		"/home/andrew/projects/isight/isight_main_v5_beta/script/case-generation-utils/create-final-form-data-objects.js",
+		"/home/andrew/projects/isight/isight_main_v5_beta/script/case-generation-utils/generate-field-definition-data.js",
+		"/home/andrew/projects/isight/isight_main_v5_beta/script/case-generation-utils/handle-users.js",
+		"/home/andrew/projects/isight/isight_main_v5_beta/script/config/populate-cases-config.js",
+		"/home/andrew/projects/isight/isight_main_v5_beta/script/case-generation-utils/progress-bar-handler.js"
 	],
 	"find":
 	{
@@ -1027,6 +1033,29 @@
 		"whole_word": false,
 		"wrap": true
 	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		},
+		{
+			"sheets":
+			[
+			]
+		},
+		{
+			"sheets":
+			[
+			]
+		},
+		{
+			"sheets":
+			[
+			]
+		}
+	],
 	"incremental_find":
 	{
 		"height": 21.0

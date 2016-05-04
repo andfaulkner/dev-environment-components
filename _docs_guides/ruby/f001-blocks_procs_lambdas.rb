@@ -197,8 +197,11 @@ puts "***************** CHECK THAT BLOCK WAS GIVEN WHEN REQUIRED BY A FUNCTION  
 
 puts " ----- CREATE A FUNCTION DEFINING A CHECK FOR A BLOCK: block_given? -----"
 def grarg
-	yield if block_given?
-	else p "no block given :("
+	if block_given?
+		yield 
+	else 
+		p "no block given :("
+	end
 end
 
 puts " ----- RUN THE YIELDING FUNCTION WHEN NO BLOCK IS GIVEN -----"
@@ -330,3 +333,22 @@ end
 
 # asks user to input an int 3 times. if the user fails to do this all 3 times, returns 6379
 select_redis_port
+
+
+puts "------------------------------------------------------------------------------------------"
+####################################
+#          LAMBDA PASSING          #
+####################################
+puts "***************** LAMBDA PASSING *****************"
+
+#TODO UPDATE THIS TO WORK OUTSIDE RAILS:
+
+# update_third_party = ->(oapp){ oapp.update_attribute("is_third_party_pos", "true") }
+
+# # migrate existing app
+# ["eGift", "Virtual Terminal", "Terminal"].each do |app_name|
+#   Doorkeeper::Application.where(name: app_name).each &update_third_party
+# end
+
+
+
