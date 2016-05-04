@@ -1,0 +1,20 @@
+#!/usr/bin/env sh
+
+echo ''
+echo '---------------------------------------------------------------------------------'
+echo '** sed cheatsheet **'
+echo '---------------------------------------------------------------------------------'
+echo '- find and replace text tool'
+echo ""
+echo "## Insert a line into a file:          sed -i '2 i\\\text to insert' path/to/file"
+echo "  -- insert 'text to insert' at line 2 of a file"
+echo ""
+echo "## Find and replace from a stream:     ... | sed s/text-to-replace/new-text/g"
+echo "  -- replace text-to-replace matches from a stream with new-text"
+echo ""
+echo "## sed characters requiring escape:"
+echo "  -- place a backslash before:         $.*/[\]^"
+echo "  -- get single quote in output via:   '\''"
+echo "  -- get single quote in output via:   '\''"
+echo "  -- in replacement text, quote:       &\/"
+echo '---------------------------------------------------------------------------------\n'

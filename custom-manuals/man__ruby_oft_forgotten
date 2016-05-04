@@ -1,0 +1,15 @@
+#!/usr/bin/env sh
+
+#!/usr/bin/env sh
+
+echo ''
+echo '---------------------------------------------------------------------------------'
+echo '** Ruby: often forgotten commands cheatsheet **'
+echo '---------------------------------------------------------------------------------'
+echo '- things I just cannot seem to remember in Ruby'
+echo ""
+echo "## Multiline strings                      <<-STRINGNAME"
+echo "                                              text goes here"
+echo "                                          STRINGNAME"
+echo ""
+echo '---------------------------------------------------------------------------------\n'

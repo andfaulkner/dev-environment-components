@@ -303,3 +303,30 @@ yieldsToSelf.runme(6) {|es|
 
 puts "end" 
 
+
+puts "------------------------------------------------------------------------------------------"
+###############################
+#          RECURSION          #
+###############################
+puts "***************** RECURSION *****************"
+
+puts " ----- EXAMPLE -----"
+
+def select_redis_port
+  counter = 1
+  get_port = ->{
+  	puts "What port would you like to assign to redis?"
+    port = $stdin.gets.to_i
+    if port < 1
+      return 6379 if counter >= 3
+      puts "invalid port - please input an integer above 0"
+      counter = counter + 1
+      return get_port.call
+    end
+    port
+  }
+  get_port.call
+end
+
+# asks user to input an int 3 times. if the user fails to do this all 3 times, returns 6379
+select_redis_port

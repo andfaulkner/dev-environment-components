@@ -1,0 +1,12 @@
+<snippet>
+	<description>Create multiline string</description>
+	<content><![CDATA[
+<<-${1:STRING_NAME}
+	${0:STRING_CONTENT}
+${1}
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>mlstr</tabTrigger>
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<scope>source.ruby</scope>
+</snippet>

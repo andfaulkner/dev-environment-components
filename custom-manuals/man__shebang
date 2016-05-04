@@ -1,0 +1,10 @@
+#!/usr/bin/env sh
+
+echo '----------------------------------------------------------------------------'
+echo 'shebangs / hashbangs / #!'
+echo '---- shebang at top of file tells OS what interpreter to execute file with'
+echo '----------------------------------------------------------------------------'
+echo 'Bash shebang:        \#!/usr/bin/env sh'
+echo 'Ruby shebang:        \#!/usr/bin/env ruby'
+echo 'NodeJS shebang       \#!/usr/bin/env node'
+echo '----------------------------------------------------------------------------'

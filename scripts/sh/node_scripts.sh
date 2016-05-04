@@ -49,7 +49,7 @@ alias killnodemon="ps axu | grep nodemon | cut -d' ' -f3 | grep '$' | sudo xargs
 alias killnpm="ps axu | grep npm | cut -d' ' -f3 | grep '$' | sudo xargs kill -9"
 
 #kill all node-related processes
-alias nukenode="killnode; killgulp; killnodemon; killnpm"
+alias bombnode="killnode; killgulp; killnodemon; killnpm"
 
 alias nukenodesrv="ps aux | grep node | grep -v 'gulp' | awk '{print \$2}' | xargs kill -9"
 
