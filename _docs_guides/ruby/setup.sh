@@ -189,6 +189,10 @@ sudo gem install sinatra
 sudo gem install sinatra-contrib
 ################################
 
+###########
+# ri docs
+###########
+sudo gem rdoc --all --ri --no-rdoc
 
 ###### Gem version installs - generic format ######
 # 			gem install gemname -v 0.8

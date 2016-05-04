@@ -33,6 +33,32 @@ alias rwipem="rails destroy model" #NameOfModel
 alias rwipec="rails destroy controller" #NameOfController #action_1 #action_2 ... #action_n
 # alias rgm="rails generate model" #nameOfModelHere #column1:type #col2:type ... col_n: type
 
+########## AKR-SPECIFIC ############
+alias killakr3="ps aux | ack rails | ack -v '3001' | awk '{print \$2}' | xargs kill -9; ps aux | ack rails | ack -v '3001'"
+alias resetakr3="ps aux | ack rails | ack -v '3001' | awk '{print \$2}' | xargs kill -9; ps aux | ack rails | ack -v '3001'; bundle exec rails server"
+alias killrakeworker="ps aux | ack 'rake jobs:work' | awk '{print \$2}' | xargs kill -9; ps aux | ack 'rake jobs:work'"
+alias bir="bundle install; rbenv rehash"
+
+alias cut_timestamp="lsa | awk '{print \$8}' | ruby -ne 'puts \$_.split(\"\n\").map{|fn|fn.split(\"_\")[1...-1].join(\"_\")}'"
+
+# reduce annoying ruby error messages
+alias be="RUBYOPT=-W0 bundle exec"
+
+# run with puma server
+alias rsp="bundle exec rails server puma"
+
+alias rreset="bundle exec rake db:migrate:reset"
+alias rreset_db_full_DANGER="bundle exec rake db:migrate:reset"
+
+alias rjw="bundle exec rake jobs:work"
+alias berjw="bundle exec rake jobs:work"
+alias rw="killrakeworker; rjw"
+
+# view all running ruby processes
+alias rubyps='ps aux | ack "ruby|rails|guard|rake|rack|puma|passenger|rbenv|irb|pry|bundler|rerun|rspec|zeus"'
+alias psruby='rubyps'
+#alias bombruby='rubyps | awk "{print \$2}" | xargs kill -9'
+
 # generate model. Provides instructions and typechecking 
 function rgm {
     if [ -z "$2" ]
