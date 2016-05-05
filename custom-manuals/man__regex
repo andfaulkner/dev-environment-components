@@ -1,0 +1,9 @@
+#!/usr/bin/env sh
+
+echo '----------------------------------------------------------------------------'
+echo 'COLLECTION OF HANDY REGEXES'
+echo '----------------------------------------------------------------------------'
+echo 'Select all lines containing a puts statement added for debugging (for replacement)'
+echo '        \n^[^a-zA-Z0-9_]*puts\s['"].*$"']'
+echo ''
+echo '----------------------------------------------------------------------------'

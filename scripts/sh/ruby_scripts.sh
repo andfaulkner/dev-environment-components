@@ -35,6 +35,7 @@ alias rwipec="rails destroy controller" #NameOfController #action_1 #action_2 ..
 
 ########## AKR-SPECIFIC ############
 alias killakr3="ps aux | ack rails | ack -v '3001' | awk '{print \$2}' | xargs kill -9; ps aux | ack rails | ack -v '3001'"
+alias ka="killakr3"
 alias resetakr3="ps aux | ack rails | ack -v '3001' | awk '{print \$2}' | xargs kill -9; ps aux | ack rails | ack -v '3001'; bundle exec rails server"
 alias killrakeworker="ps aux | ack 'rake jobs:work' | awk '{print \$2}' | xargs kill -9; ps aux | ack 'rake jobs:work'"
 alias bir="bundle install; rbenv rehash"
@@ -43,6 +44,9 @@ alias cut_timestamp="lsa | awk '{print \$8}' | ruby -ne 'puts \$_.split(\"\n\").
 
 # reduce annoying ruby error messages
 alias be="RUBYOPT=-W0 bundle exec"
+
+# I've typed this too many times
+alias bi="bundle install"
 
 # run with puma server
 alias rsp="bundle exec rails server puma"

@@ -1,0 +1,10 @@
+<snippet>
+	<description>Basic puts log - ruby - includes current filename + slot for method name and a msg</description>
+	<content><![CDATA[
+puts "${1:${TM_FILENAME/(.+)/$1/:name}}::: ${2:method_name}:: ${3:ENTERED!}"${0}
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>putf</tabTrigger>
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<scope>source.ruby</scope>
+</snippet>

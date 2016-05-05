@@ -1,0 +1,10 @@
+<snippet>
+	<description>Basic Ruby puts log intended to show a single object</description>
+	<content><![CDATA[
+puts "${1:${TM_FILENAME/(.+)/$1/:name}}::: ${2:method_name}:: ${3:object_name}: #\{${3}.inspect\}"${0}
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>putfo</tabTrigger>
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<scope>source.ruby</scope>
+</snippet>

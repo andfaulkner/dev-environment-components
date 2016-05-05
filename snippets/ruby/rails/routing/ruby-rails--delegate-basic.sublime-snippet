@@ -4,7 +4,7 @@
 delegate :${1:method_call_on_cur_class}, to: :${2:class_to_run_method_on_instead}${3/.+/, prefix: /}${3:true}${4/.+/, allow_nil: /}${4:true}
 ${0}]]></content>
 	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
-	<tabTrigger>rdeleg</tabTrigger>
+	<tabTrigger>delegate</tabTrigger>
 	<!-- Optional: Set a scope to limit where the snippet will trigger -->
 	<scope>source.ruby</scope>
 </snippet>
