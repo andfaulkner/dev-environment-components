@@ -38,21 +38,19 @@ gem_group :development do
   gem 'pry-rails'
   gem 'pry-stack_explorer'
   gem 'pry-coolline'
-  gem 'pry-exception_explorer'
   gem 'pry-vterm_aliases'
   gem 'pry-em'
   gem 'pry-theme'
   gem 'pry-macro'
   gem 'pry-inline'
-  gem 'pry-nav'
-  gem 'pry-doc'
+  gem 'pry-debugger'
   gem 'pry-git'
   gem 'pry-rails'
   gem 'pry-awesome_print'
   gem 'pry-pretty-numeric'
-  gem 'pry-highlight'
   gem 'hirb'
   gem 'meta_request'
+  gem 'better_errors'
 end
 
 gem_group :assets do
