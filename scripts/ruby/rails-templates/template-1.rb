@@ -33,17 +33,14 @@ gem 'sprockets'
 gem_group :development do
   gem 'thin'
   gem 'pry'
-  # gem 'pry-debugger'
   gem 'pry-byebug'
   gem 'pry-rails'
   gem 'pry-stack_explorer'
   gem 'pry-coolline'
-  gem 'pry-vterm_aliases'
   gem 'pry-em'
   gem 'pry-theme'
   gem 'pry-macro'
   gem 'pry-inline'
-  gem 'pry-debugger'
   gem 'pry-git'
   gem 'pry-rails'
   gem 'pry-awesome_print'
@@ -51,6 +48,8 @@ gem_group :development do
   gem 'hirb'
   gem 'meta_request'
   gem 'better_errors'
+  gem 'rubocop'
+  gem 'capistrano-rails'
 end
 
 gem_group :assets do
@@ -63,6 +62,9 @@ gem_group :test do
 	gem 'mini_backtrace'
 	gem 'factory_girl'
 	gem 'minitest-reporters'
+  gem 'factory_girl_rails'
+  gem 'rspec'
+  gem 'rspec-rails'
 end
 
 run "bundle install --without nothing"
@@ -107,8 +109,8 @@ if yes?("Do you want to use redis?")
 		  }
 		}
 	CODE
-else
-	session_store = :cookie_store
+# else
+	# session_store = :cookie_store
 end
 puts " -------------------------------------------------------------------------------"
 
@@ -131,7 +133,6 @@ environment <<-ENV
   console do
     # this block is called only when running console, so we can safely require pry here
     require "pry"
-    require 'pry-debugger'
     require 'pry-rails'
     require 'pry-stack_explorer'
     require 'pry-coolline'
@@ -185,10 +186,10 @@ after_bundle do
   git add: "."
   git commit: %Q{ -m 'Initial commit' }
   #nodeJS modules ignore
-  run "echo 'node_modules' >> .gitignore"
+  `echo 'node_modules' >> .gitignore`
   #install lodash
-  run "touch app/assets/javascripts/application.js"
-	run "echo '//= require lodash' >> app/assets/javascripts/application.js"
+  `touch 'app/assets/javascripts/application.js`
+	`echo "//= require lodash" >> app/assets/javascripts/application.js`
 end
 
 
@@ -197,9 +198,8 @@ puts "--------------------------------------------------------------------------
 #          BUILD SUBLIME PROJECT          #
 ###########################################
 puts "***************** BUILD SUBLIME PROJECT *****************"
-touch ''
 run <<-SUBLIMEPROJECT
-{
+echo '{
   "folders":
   [
     {
@@ -212,6 +212,5 @@ run <<-SUBLIMEPROJECT
       "path": "."
     }
   ]
-}
-
+}' >> #{@app_name}.sublime-project
 SUBLIMEPROJECT

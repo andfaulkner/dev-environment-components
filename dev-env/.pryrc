@@ -19,7 +19,6 @@ Gem.path.each do |gemset|
   $:.concat(Dir.glob("#{gemset}/gems/pry-*/lib"))
 end if defined?(Bundler)
 $:.uniq!
-require 'pry-editline'
 
 # Custom prompt
 Pry.print = proc { |output, value| output.puts value.ai }

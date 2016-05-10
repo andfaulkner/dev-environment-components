@@ -1,0 +1,15 @@
+#!/usr/bin/env sh
+
+echo ''
+echo '---------------------------------------------------------------------------------'
+echo '** postgres cli cheatsheet **'
+echo '---------------------------------------------------------------------------------'
+echo '- open from shell:                psql postgres               <<< where postgres is the db'
+echo '- open from shell with username:  psql postgres -U postgres   <<< 2nd postgres is the user'
+echo ""
+echo "- once in the cli..."
+echo "- quit:              \q"
+echo "- see all db:        \l"
+echo "- change db:         \c db_to_change_to"
+echo "- create new db:     CREATE DATABASE name_of_database"
+echo '---------------------------------------------------------------------------------\n'
