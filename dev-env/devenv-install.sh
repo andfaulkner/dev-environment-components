@@ -3,6 +3,9 @@
 SNIPPETS_DIR=$(pwd | sed s/\\/snippets\\/.*/\\/snippets/g)
 
 function unix_setup {
+    # install nerdcommenter vim plugin
+    curl http://www.vim.org/scripts/download_script.php?src_id=14455 > nerdcommenter.zip; unzip nerdcommenter.zip -d ./nerdcommenter; pushd ./; mkdir ~/.vim/plugin; mkdir ~/.vim/doc; cd nerdcommenter; mv doc/NERD_commenter.txt ~/.vim/doc/NERD_commenter.txt; mv plugin/NERD_commenter.vim ~/.vim/plugin/NERD_commenter.vim
+
     touch ~/.bashrc
     touch ~/.bash_profile
     echo "Main bash file: "$MAIN_BASH_FILE
