@@ -1,0 +1,1 @@
+/home/andrew/.config/sublime-text-3/Packages/User/snippets/dev-env/vim_configs/.vim

@@ -1,0 +1,18 @@
+#!/usr/bin/env sh
+
+echo ''
+echo '---------------------------------------------------------------------------------'
+echo '** NEW_TYPE **'
+echo '---------------------------------------------------------------------------------'
+echo '- subtitle'
+echo ''
+echo "## First item (title here):   general syntax of 'item'"
+echo "   -- (definition of first item goes here)"
+echo "   -- example:                example goes here"
+echo ""
+echo "## List item title:"
+echo "   -- subitem here:           syntax here"
+echo "   -- subitem here:           syntax here"
+echo "   -- subitem here:           syntax here"
+echo ""
+echo '---------------------------------------------------------------------------------\n'

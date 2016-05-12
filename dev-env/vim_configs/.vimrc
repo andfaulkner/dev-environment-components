@@ -18,27 +18,27 @@ endif
 "endif
 
 " Required:
-set runtimepath^=~/.vim/bundle/neobundle.vim/
+"set runtimepath^=~/.vim/bundle/neobundle.vim/
 
 " Required:
-call neobundle#begin(expand('~/.vim/bundle/'))
+"call neobundle#begin(expand('~/.vim/bundle/'))
 
  " Let NeoBundle manage NeoBundle
  " Required:
-NeoBundleFetch 'Shougo/neobundle.vim'
+"NeoBundleFetch 'Shougo/neobundle.vim'
 
  " My Bundles here:
  " Refer to |:NeoBundle-examples|.
  " Note: You don't set neobundle setting in .gvimrc!
 
-call neobundle#end()
+"call neobundle#end()
 
  " Required:
  filetype plugin indent on
 
  " If there are uninstalled bundles found on startup,
  " this will conveniently prompt you to install them.
- NeoBundleCheck
+ " NeoBundleCheck
 
 
 set tabstop=8 softtabstop=0 expandtab shiftwidth=4 smarttab
@@ -168,8 +168,8 @@ set statusline+=%F
 set nocompatible
 
 syntax on
-filetype plugin indent on
-filetype plugin on
+# filetype plugin indent on
+# filetype plugin on
 
 " filetype off
 
@@ -214,29 +214,36 @@ call vundle#end()
 
    " Required:
    set runtimepath+=~/.vim/bundle/neobundle.vim/
+   set runtimepath^=~/.vim/dein/
+
+   call dein#begin(expand('~/.cache/dein'))
+   call dein#add('~/.vim/dein/')
+   call dein#add('Shougo/neocomplete.vim')
+   call dein#end()
+
  endif
 
  " Required:
- call neobundle#begin(expand('~/.vim/bundle/'))
+" call neobundle#begin(expand('~/.vim/bundle/'))
 
  " Let NeoBundle manage NeoBundle
  " Required:
- NeoBundleFetch 'Shougo/neobundle.vim'
+" NeoBundleFetch 'Shougo/neobundle.vim'
 
-    NeoBundleLazy 'jelera/vim-javascript-syntax', {'autoload':{'filetypes':['javascript']}}
+"    NeoBundleLazy 'jelera/vim-javascript-syntax', {'autoload':{'filetypes':['javascript']}}
 
-    NeoBundle 'andfaulkner/gulp-babel-vim'
-	NeoBundle 'dhruvasagar/vim-table-mode'
+"    NeoBundle 'andfaulkner/gulp-babel-vim'
+"	NeoBundle 'dhruvasagar/vim-table-mode'
 
  " My Bundles here:
  " Refer to |:NeoBundle-examples|.
  " Note: You don't set neobundle setting in .gvimrc!
 
- call neobundle#end()
+" call neobundle#end()
 
  " If there are uninstalled bundles found on startup,
  " this will conveniently prompt you to install them.
- NeoBundleCheck
+" NeoBundleCheck
 "======================================================================================
 
 

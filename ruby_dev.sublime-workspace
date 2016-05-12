@@ -437,9 +437,6 @@
 			]
 		]
 	},
-	"buffers":
-	[
-	],
 	"build_system": "",
 	"build_system_choices":
 	[
@@ -452,6 +449,18 @@
 		"selected_items":
 		[
 			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"i",
+				"Package Control: Install Package"
+			],
+			[
+				"remove",
+				"Package Control: Remove Package"
+			],
+			[
 				"markdownExte",
 				"MarkdownEditing: Fix Underlined Headers"
 			],
@@ -462,14 +471,6 @@
 			[
 				"markdownEx",
 				"Set Syntax: Markdown Extended"
-			],
-			[
-				"install",
-				"Package Control: Install Package"
-			],
-			[
-				"remove",
-				"Package Control: Remove Package"
 			],
 			[
 				"list",
@@ -660,7 +661,7 @@
 				"Package Control: Install Package"
 			]
 		],
-		"width": 555.0
+		"width": 589.0
 	},
 	"console":
 	{
@@ -681,9 +682,6 @@
 		"side_bar_visible": false,
 		"status_bar_visible": false
 	},
-	"expanded_folders":
-	[
-	],
 	"file_history":
 	[
 		"/home/andrew/projects/ruby/rails/rails-test-2/app/assets/javascripts/bears.js",
@@ -865,6 +863,7 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"num",
 			"sprockets",
 			"jquery",
 			"rails",
@@ -991,8 +990,7 @@
 			"sequence",
 			"iter",
 			"iterate",
-			"seq",
-			"reader"
+			"seq"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -1066,14 +1064,6 @@
 		"whole_word": false,
 		"wrap": true
 	},
-	"groups":
-	[
-		{
-			"sheets":
-			[
-			]
-		}
-	],
 	"incremental_find":
 	{
 		"height": 21.0
@@ -1110,7 +1100,6 @@
 		"height": 0.0
 	},
 	"pinned_build_system": "Packages/User/Scheme.sublime-build",
-	"project": "ruby_dev.sublime-project",
 	"replace":
 	{
 		"height": 40.0
@@ -1263,13 +1252,12 @@
 		],
 		"width": 570.0
 	},
-	"selected_group": 0,
 	"settings":
 	{
 	},
 	"show_minimap": false,
 	"show_open_files": true,
-	"show_tabs": true,
+	"show_tabs": false,
 	"side_bar_visible": true,
 	"side_bar_width": 280.0,
 	"status_bar_visible": true,

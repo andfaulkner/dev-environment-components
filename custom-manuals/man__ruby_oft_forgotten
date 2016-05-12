@@ -8,8 +8,11 @@ echo '** Ruby: often forgotten commands cheatsheet **'
 echo '---------------------------------------------------------------------------------'
 echo '- things I just cannot seem to remember in Ruby'
 echo ""
-echo "## Multiline strings                      <<-STRINGNAME"
-echo "                                              text goes here"
-echo "                                          STRINGNAME"
+echo "## Multiline strings          <<-STRINGNAME"
+echo "                                text goes here"
+echo "                              STRINGNAME"
+echo ""
+echo "## pipe to ruby one-liner"
+echo "## ruby -pe:                  cmd | ruby -pe '$_ = $_.modify_in_some_way' | cmd"
 echo ""
 echo '---------------------------------------------------------------------------------\n'
