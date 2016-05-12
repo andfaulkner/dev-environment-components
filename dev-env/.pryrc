@@ -30,7 +30,6 @@ Pry.config.theme = "solarized"
 
 Pry.prompt = [proc { |obj, nest_level, _| "#{RUBY_VERSION} (#{obj}):#{nest_level} > " }, proc { |obj, nest_level, _| "#{RUBY_VERSION} (#{obj}):#{nest_level} * " }]
 
-
 # Custom prompt
 Pry.print = proc { |output, value| output.puts value.ai }
 #
