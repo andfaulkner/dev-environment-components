@@ -11,6 +11,11 @@ alias geminstg="rvm @global do sudo gem install"
 
 alias bir="bundle install; rbenv rehash"
 
+
+########## AKR-SPECIFIC KILLS ############
+alias killakr3="ps aux | ack rails | ack -v '3001' | awk '{print \$2}' | xargs kill -9; ps aux | ack rails | ack -v '3001'"
+alias ka="killakr3"
+
 ################################################################################
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ RAILS ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 ################################################################################
@@ -19,23 +24,22 @@ alias rake="RUBYOPT=-W0 rake"
 
 # run with defined server
 alias rs="bundle exec rails server"
+alias rsakr="killakr3; bundle exec rails server"
 # run with puma server
 alias rsp="bundle exec rails server puma"
-alias beg="rake db:test:prepare; bundle exec guard"
-alias rc="rails console"
-alias rcs="rails console --sandbox" # any changes made are rolled back on exit
-alias rg="rails generate"
-alias rgc="rails generate controller"
+alias beg="bundle exec rake db:test:prepare; bundle exec guard"
+alias rc="bundle exec rails console"
+alias rcs="bundle exec rails console --sandbox" # any changes made are rolled back on exit
+alias rg="bundle exec rails generate"
+alias rgc="bundle exec rails generate controller"
 alias rdm="bundle exec rake db:migrate"
+alias rgmig="bundle exec rails generate migration" #AddSomecolumnToSometable #colname:coltype
 alias rdr="bundle exec rake db:rollback"
 alias rreset="bundle exec rake db:migrate:reset"
-alias rwipem="rails destroy model" #NameOfModel
-alias rwipec="rails destroy controller" #NameOfController #action_1 #action_2 ... #action_n
+alias rwipem="bundle exec rails destroy model" #NameOfModel
+alias rwipec="bundle exec rails destroy controller" #NameOfController #action_1 #action_2 ... #action_n
 # alias rgm="rails generate model" #nameOfModelHere #column1:type #col2:type ... col_n: type
 
-########## AKR-SPECIFIC ############
-alias killakr3="ps aux | ack rails | ack -v '3001' | awk '{print \$2}' | xargs kill -9; ps aux | ack rails | ack -v '3001'"
-alias ka="killakr3"
 alias resetakr3="ps aux | ack rails | ack -v '3001' | awk '{print \$2}' | xargs kill -9; ps aux | ack rails | ack -v '3001'; bundle exec rails server"
 alias killrakeworker="ps aux | ack 'rake jobs:work' | awk '{print \$2}' | xargs kill -9; ps aux | ack 'rake jobs:work'"
 alias bir="bundle install; rbenv rehash"
@@ -47,6 +51,13 @@ alias be="RUBYOPT=-W0 bundle exec"
 
 # I've typed this too many times
 alias bi="bundle install"
+
+alias ber="be rake"
+# display tasks
+alias bert="be rake -T"
+
+alias berm="be rake db:migrate"
+alias berms="be rake db:migrate:status"
 
 # run with puma server
 alias rsp="bundle exec rails server puma"
@@ -92,6 +103,9 @@ function rgm {
 
 alias rr="rake routes"
 alias gorails="cd /home/andrew/projects/ruby/rails"
+
+#### MYSQL ####
+alias msqlstart="mysql.server start"
 
 #=== FUNCTION ==========================================================
 #        NAME:  rubify
