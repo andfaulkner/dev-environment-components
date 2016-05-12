@@ -30,6 +30,9 @@ gem 'redis-session-store'
 
 gem 'sprockets'
 
+# for use with grape
+gem 'hashie-forbidden_attributes'
+
 gem_group :development do
   gem 'thin'
   gem 'pry'
@@ -54,20 +57,19 @@ end
 
 gem_group :assets do
 	gem 'sprockets-es6'
-	gem 'lodash-rails'
 end
 
-gem_group :test do
-	gem 'minitest'
-	gem 'mini_backtrace'
+gem_group :test, :development do
+	# gem 'minitest'
+	# gem 'mini_backtrace'
 	gem 'factory_girl'
-	gem 'minitest-reporters'
+	# gem 'minitest-reporters'
   gem 'factory_girl_rails'
   gem 'rspec'
   gem 'rspec-rails'
 end
 
-run "bundle install --without nothing"
+run "bundle install"
 
 
 puts "------------------------------------------------------------------------------------------"
@@ -126,30 +128,26 @@ environment <<-ENV
 	javascript_engine = :js
 	config.generators do |g|
 	  g.orm :active_record
-	  g.test_framework :minitest
+	  g.test_framework :rspec
 	  g.javascript_engine :js
 	  g.stylesheet_engine :scss
 	end
   console do
     # this block is called only when running console, so we can safely require pry here
-    require "pry"
-    require 'pry-rails'
-    require 'pry-stack_explorer'
-    require 'pry-coolline'
-    require "pry-exception_explorer"
-    require "pry-vterm_aliases"
-    require "pry-em"
-    require "pry-theme"
-    require "pry-macro"
-    require "pry-inline"
-    require "pry-nav"
-    require "pry-doc"
-    require "pry-git"
-    require "pry-rails"
-    require "pry-awesome_print"
-    require "pry-pretty-numeric"
-    require "pry-highlight"
-    require "hirb"
+    gem 'pry'
+    gem 'pry-byebug'
+    gem 'pry-rails'
+    gem 'pry-stack_explorer'
+    gem 'pry-coolline'
+    gem 'pry-em'
+    gem 'pry-theme'
+    gem 'pry-macro'
+    gem 'pry-inline'
+    gem 'pry-git'
+    gem 'pry-rails'
+    gem 'pry-awesome_print'
+    gem 'pry-pretty-numeric'
+    gem 'hirb'
     config.console = Pry
   end
 ENV
@@ -172,6 +170,26 @@ rakefile("shell.rake") do
 end
 
 puts "------------------------------------------------------------------------------------------"
+###########################################
+#          BUILD SUBLIME PROJECT          #
+###########################################
+puts "***************** BUILD SUBLIME PROJECT *****************"
+run <<-SUBLIMEPROJECT
+echo '{
+  "folders":
+  [
+    {
+      "path": "/home/andrew/.config/sublime-text-3/Packages/User/snippets"
+    },
+    {
+      "path": "."
+    }
+  ]
+}' >> #{@app_name}.sublime-project
+SUBLIMEPROJECT
+
+
+puts "------------------------------------------------------------------------------------------"
 ########################################
 #          GENERATORS - SETUP          #
 ########################################
@@ -188,29 +206,29 @@ after_bundle do
   #nodeJS modules ignore
   `echo 'node_modules' >> .gitignore`
   #install lodash
-  `touch 'app/assets/javascripts/application.js`
+  `mkdir app/assets/javascripts`
+  `touch 'app/assets/javascripts/application.js'`
 	`echo "//= require lodash" >> app/assets/javascripts/application.js`
+
+  puts "------------------------------------------------------------------------------------------"
+  ###################################
+  #          INSTALLATIONS          #
+  ###################################
+  puts "***************** INSTALLATIONS *****************"
+
+  # insert default urls for mailer
+  `sed -i "3 i\\\n  config.action_mailer.default_url_options = { host: 'localhost', port: 3000 }" config/environments/test.rb`
+  `sed -i "3 i\\\n  config.action_mailer.default_url_options = { host: 'localhost', port: 3000 }" config/environments/development.rb`
+
+  # RUN THESE AFTERWARDS:
+  # cd ${@app_name}
+  # bin/rails generate rspec:install
+  # add squeel
+  # bin/rails generate squeel:initializer
+  # install devise
+  # bin/rails generate devise:install
+
+  # ADD THESE TO application.rb if using grape:
+  # config.paths.add File.join('app', 'api'), glob: File.join('**', '*.rb')
+  # config.autoload_paths += Dir[Rails.root.join('app', 'api', '*')]
 end
-
-
-puts "------------------------------------------------------------------------------------------"
-###########################################
-#          BUILD SUBLIME PROJECT          #
-###########################################
-puts "***************** BUILD SUBLIME PROJECT *****************"
-run <<-SUBLIMEPROJECT
-echo '{
-  "folders":
-  [
-    {
-      "path": "/home/andrew/.config/sublime-text-3/Packages/User/snippets"
-    },
-    {
-      "path": "/home/andrew/.config/sublime-text-3/Installed Packages"
-    },
-    {
-      "path": "."
-    }
-  ]
-}' >> #{@app_name}.sublime-project
-SUBLIMEPROJECT

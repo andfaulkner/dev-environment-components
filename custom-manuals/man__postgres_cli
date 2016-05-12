@@ -10,6 +10,6 @@ echo ""
 echo "- once in the cli..."
 echo "- quit:              \q"
 echo "- see all db:        \l"
-echo "- change db:         \c db_to_change_to"
+echo "- change db:         \\\c db_to_change_to"
 echo "- create new db:     CREATE DATABASE name_of_database"
 echo '---------------------------------------------------------------------------------\n'

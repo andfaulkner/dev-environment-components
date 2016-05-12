@@ -7,7 +7,7 @@ Pry.config.theme = "solarized"
 Pry.prompt = [proc { |obj, nest_level, _| "#{RUBY_VERSION} (#{obj}):#{nest_level} > " }, proc { |obj, nest_level, _| "#{RUBY_VERSION} (#{obj}):#{nest_level} * " }]
 
 require 'rubygems'
-require 'interactive_editor'
+#require 'interactive_editor'
 require 'awesome_print'
 #require 'awesome_print_colors'
 

@@ -1,0 +1,20 @@
+{
+	"folders":
+	[
+		{
+			"path": "_docs_guides/ruby"
+		},
+		{
+			"path": "scripts/ruby"
+		},
+		{
+			"path": "scripts/setup"
+		},
+		{
+			"path": "scripts/sh"
+		},
+		{
+			"path": "_docs_guides/img/ruby-img"
+		}
+	]
+}

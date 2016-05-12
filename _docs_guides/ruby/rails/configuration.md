@@ -9,3 +9,6 @@ Enabling ssl
 *   Setting up a production site to use SSL involves purchasing & configuring an SSL
 		certificate for your domain
 		*   ...but on Heroku, we can just use Heroku's
+
+Config folder
+-------------

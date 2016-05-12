@@ -45,6 +45,15 @@ alias cut_timestamp="lsa | awk '{print \$8}' | ruby -ne 'puts \$_.split(\"\n\").
 # reduce annoying ruby error messages
 alias be="RUBYOPT=-W0 bundle exec"
 
+# view all rake tasks
+alias bert="RUBYOPT=-W0 bundle exec rake -T"
+
+# run rake
+alias ber="RUBYOPT=-W0 bundle exec rake"
+
+# db migration status
+alias berms="RUBYOPT=-W0 bundle exec rake db:migrate:status"
+
 # I've typed this too many times
 alias bi="bundle install"
 

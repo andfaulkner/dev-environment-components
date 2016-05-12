@@ -1,15 +1,15 @@
 <snippet>
+
 	<description>Create rails controller file for resource, with all CRUD methods</description>
 	<content><![CDATA[
 class ${TM_FILENAME/(?<______first =>^[a-z])(?<W1_rest -=>[^\._]*)?_?(?<_w2L1 -=>[a-z])?(?<___W2_rest -=>[^\._]*)?_?(?<_w3L1 -=>[a-z])?(?<___W3_rest -=>[^\._]*)?_?(?<_w4L1 -=>[a-z])?(?<___W4_rest -=>[^\._]*)?\.rb/\U$+{______first =}\L$+{W1_rest -=}\U$+{_w2L1 -=}\L$+{___W2_rest -=}\U$+{_w3L1 -=}\L$+{___W3_rest -=}\U$+{_w4L1 -=}\L$+{___W4_rest -=}/g} < ApplicationController
-
   # GET /${TM_FILENAME/([^_]*)_?([^_]*)?_?([^_]*)?(_controller\.rb)/$1$2$3/g}/:id
 	def show
 	end
 
   # GET /${TM_FILENAME/([^_]*)_?([^_]*)?_?([^_]*)?(_controller\.rb)/$1$2$3/g}/new
 	def new
-		@${TM_FILENAME/(?<______first =>^[a-z])(?<W1_rest -=>[^\._]*)?_?(?<_w2L1 -=>[a-z])?(?<___W2_rest -=>[^\._]*)?_?(?<_w3L1 -=>[a-z])?(?<___W3_rest -=>[^\._]*)?_?(?<_w4L1 -=>[a-z])?(?<___W4_rest -=>[^\._]*)?s+?_controller\.rb/\L$+{______first =}\L$+{W1_rest -=}\L$+{_w2L1 -=}\L$+{___W2_rest -=}\L$+{_w3L1 -=}\L$+{___W3_rest -=}\L$+{_w4L1 -=}\L$+{___W4_rest -=}/g} = ${TM_FILENAME/(?<______first =>^[a-z])(?<W1_rest -=>[^\._]*)?_?(?<_w2L1 -=>[a-z])?(?<___W2_rest -=>[^\._]*)?_?(?<_w3L1 -=>[a-z])?(?<___W3_rest -=>[^\._]*)?_?(?<_w4L1 -=>[a-z])?(?<___W4_rest -=>[^\._]*)?s+?_controller\.rb/\U$+{______first =}\L$+{W1_rest -=}\U$+{_w2L1 -=}\L$+{___W2_rest -=}\U$+{_w3L1 -=}\L$+{___W3_rest -=}\U$+{_w4L1 -=}\L$+{___W4_rest -=}/g}
+		@${TM_FILENAME/([^_]*)_?([^_]*)?_?([^_]*)?(_controller\.rb)/$1$2$3/g} = ${TM_FILENAME/(?<______first =>^[a-z])(?<W1_rest -=>[^\._]*)?_?(?<_w2L1 -=>[a-z])?(?<___W2_rest -=>[^\._]*)?_?(?<_w3L1 -=>[a-z])?(?<___W3_rest -=>[^\._]*)?_?(?<_w4L1 -=>[a-z])?(?<___W4_rest -=>[^\._])*controller\.rb/\U$+{______first =}\L$+{W1_rest -=}\U$+{_w2L1 -=}\L$+{___W2_rest -=}\U$+{_w3L1 -=}\L$+{___W3_rest -=}\U$+{_w4L1 -=}\L$+{___W4_rest -=}/g}.new ${2}
 	end
 
   # GET /${TM_FILENAME/([^_]*)_?([^_]*)?_?([^_]*)?(_controller\.rb)/$1$2$3/g}/:id/edit
@@ -18,7 +18,7 @@ class ${TM_FILENAME/(?<______first =>^[a-z])(?<W1_rest -=>[^\._]*)?_?(?<_w2L1 -=
 
   # POST /${TM_FILENAME/([^_]*)_?([^_]*)?_?([^_]*)?(_controller\.rb)/$1$2$3/g}
 	def create
-		@${TM_FILENAME/(?<______first =>^[a-z])(?<W1_rest -=>[^\._]*)?_?(?<_w2L1 -=>[a-z])?(?<___W2_rest -=>[^\._]*)?_?(?<_w3L1 -=>[a-z])?(?<___W3_rest -=>[^\._]*)?_?(?<_w4L1 -=>[a-z])?(?<___W4_rest -=>[^\._]*)?s+?_controller\.rb/\L$+{______first =}\L$+{W1_rest -=}\L$+{_w2L1 -=}\L$+{___W2_rest -=}\L$+{_w3L1 -=}\L$+{___W3_rest -=}\L$+{_w4L1 -=}\L$+{___W4_rest -=}/g} = ${TM_FILENAME/(?<______first =>^[a-z])(?<W1_rest -=>[^\._]*)?_?(?<_w2L1 -=>[a-z])?(?<___W2_rest -=>[^\._]*)?_?(?<_w3L1 -=>[a-z])?(?<___W3_rest -=>[^\._]*)?_?(?<_w4L1 -=>[a-z])?(?<___W4_rest -=>[^\._]*)?s+?_controller\.rb/\U$+{______first =}\L$+{W1_rest -=}\U$+{_w2L1 -=}\L$+{___W2_rest -=}\U$+{_w3L1 -=}\L$+{___W3_rest -=}\U$+{_w4L1 -=}\L$+{___W4_rest -=}/g}.new(params[:id])
+		@${TM_FILENAME/([^_]*)_?([^_]*)?_?([^_]*)?(_controller\.rb)/$1$2$3/g} = ${TM_FILENAME/(?<______first =>^[a-z])(?<W1_rest -=>[^\._]*)?_?(?<_w2L1 -=>[a-z])?(?<___W2_rest -=>[^\._]*)?_?(?<_w3L1 -=>[a-z])?(?<___W3_rest -=>[^\._]*)?_?(?<_w4L1 -=>[a-z])?(?<___W4_rest -=>[^\._])*controller\.rb/\U$+{______first =}\L$+{W1_rest -=}\U$+{_w2L1 -=}\L$+{___W2_rest -=}\U$+{_w3L1 -=}\L$+{___W3_rest -=}\U$+{_w4L1 -=}\L$+{___W4_rest -=}/g}.new(params[:id])
 		${0}
 	end
 
@@ -28,8 +28,8 @@ class ${TM_FILENAME/(?<______first =>^[a-z])(?<W1_rest -=>[^\._]*)?_?(?<_w2L1 -=
 
   # DELETE /${TM_FILENAME/([^_]*)_?([^_]*)?_?([^_]*)?(_controller\.rb)/$1$2$3/g}/:id
 	def destroy
-		@${TM_FILENAME/(?<______first =>^[a-z])(?<W1_rest -=>[^\._]*)?_?(?<_w2L1 -=>[a-z])?(?<___W2_rest -=>[^\._]*)?_?(?<_w3L1 -=>[a-z])?(?<___W3_rest -=>[^\._]*)?_?(?<_w4L1 -=>[a-z])?(?<___W4_rest -=>[^\._]*)?s+?_controller\.rb/\L$+{______first =}\L$+{W1_rest -=}\L$+{_w2L1 -=}\L$+{___W2_rest -=}\L$+{_w3L1 -=}\L$+{___W3_rest -=}\L$+{_w4L1 -=}\L$+{___W4_rest -=}/g} = ${TM_FILENAME/(?<______first =>^[a-z])(?<W1_rest -=>[^\._]*)?_?(?<_w2L1 -=>[a-z])?(?<___W2_rest -=>[^\._]*)?_?(?<_w3L1 -=>[a-z])?(?<___W3_rest -=>[^\._]*)?_?(?<_w4L1 -=>[a-z])?(?<___W4_rest -=>[^\._]*)?s+?_controller\.rb/\U$+{______first =}\L$+{W1_rest -=}\U$+{_w2L1 -=}\L$+{___W2_rest -=}\U$+{_w3L1 -=}\L$+{___W3_rest -=}\U$+{_w4L1 -=}\L$+{___W4_rest -=}/g}.find(params[:id])
-		@${TM_FILENAME/(?<______first =>^[a-z])(?<W1_rest -=>[^\._]*)?_?(?<_w2L1 -=>[a-z])?(?<___W2_rest -=>[^\._]*)?_?(?<_w3L1 -=>[a-z])?(?<___W3_rest -=>[^\._]*)?_?(?<_w4L1 -=>[a-z])?(?<___W4_rest -=>[^\._]*)?s+?_controller\.rb/\L$+{______first =}\L$+{W1_rest -=}\L$+{_w2L1 -=}\L$+{___W2_rest -=}\L$+{_w3L1 -=}\L$+{___W3_rest -=}\L$+{_w4L1 -=}\L$+{___W4_rest -=}/g}.destroy
+		${TM_FILENAME/([^_]*)_?([^_]*)?_?([^_]*)?(_controller\.rb)/$1$2$3/g} = ${TM_FILENAME/(?<______first =>^[a-z])(?<W1_rest -=>[^\._]*)?_?(?<_w2L1 -=>[a-z])?(?<___W2_rest -=>[^\._]*)?_?(?<_w3L1 -=>[a-z])?(?<___W3_rest -=>[^\._]*)?_?(?<_w4L1 -=>[a-z])?(?<___W4_rest -=>[^\._])*controller\.rb/\U$+{______first =}\L$+{W1_rest -=}\U$+{_w2L1 -=}\L$+{___W2_rest -=}\U$+{_w3L1 -=}\L$+{___W3_rest -=}\U$+{_w4L1 -=}\L$+{___W4_rest -=}/g}.find(params[:id])
+		${TM_FILENAME/([^_]*)_?([^_]*)?_?([^_]*)?(_controller\.rb)/$1$2$3/g}.destroy if ${TM_FILENAME/([^_]*)_?([^_]*)?_?([^_]*)?(_controller\.rb)/$1$2$3/g}
 	end
 
 end
@@ -39,4 +39,11 @@ end
 	<tabTrigger>rconres</tabTrigger>
 	<!-- Optional: Set a scope to limit where the snippet will trigger -->
 	<scope>source.ruby</scope>
+	<notes><![CDATA[
+		if the file is named BearController.rb...
+			BearController => 	${TM_FILENAME/(?<______first =>^[a-z])(?<W1_rest -=>[^\._]*)?_?(?<_w2L1 -=>[a-z])?(?<___W2_rest -=>[^\._]*)?_?(?<_w3L1 -=>[a-z])?(?<___W3_rest -=>[^\._]*)?_?(?<_w4L1 -=>[a-z])?(?<___W4_rest -=>[^\._]*)?\.rb/\U$+{______first =}\L$+{W1_rest -=}\U$+{_w2L1 -=}\L$+{___W2_rest -=}\U$+{_w3L1 -=}\L$+{___W3_rest -=}\U$+{_w4L1 -=}\L$+{___W4_rest -=}/g}
+			Bear  =>  					${TM_FILENAME/(?<______first =>^[a-z])(?<W1_rest -=>[^\._]*)?_?(?<_w2L1 -=>[a-z])?(?<___W2_rest -=>[^\._]*)?_?(?<_w3L1 -=>[a-z])?(?<___W3_rest -=>[^\._]*)?_?(?<_w4L1 -=>[a-z])?(?<___W4_rest -=>[^\._])*controller\.rb/\U$+{______first =}\L$+{W1_rest -=}\U$+{_w2L1 -=}\L$+{___W2_rest -=}\U$+{_w3L1 -=}\L$+{___W3_rest -=}\U$+{_w4L1 -=}\L$+{___W4_rest -=}/g}
+			@bear => 						@${TM_FILENAME/([^_]*)_?([^_]*)?_?([^_]*)?(_controller\.rb)/$1$2$3/g}
+			bear  =>  					${TM_FILENAME/([^_]*)_?([^_]*)?_?([^_]*)?(_controller\.rb)/$1$2$3/g}
+	]]></notes>
 </snippet>

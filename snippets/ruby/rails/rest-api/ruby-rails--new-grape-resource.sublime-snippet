@@ -1,0 +1,13 @@
+<snippet>
+	<description>Create new grape api class</description>
+	<content><![CDATA[
+resource :${1:resource_name} do
+	desc "${2:description of resource}"
+	${0}
+end
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>grapresbasic</tabTrigger>
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<scope>source.ruby</scope>
+</snippet>

@@ -1,0 +1,39 @@
+<snippet>
+	<description>Examples of all available fields</description>
+	<content><![CDATA[
+<%= f.label :${1:colname} %>
+<%= f.text_field :${2:obj_name, :attribute_on_model, options_hash} %>
+<%= f.text_area :${3:obj_name, :attribute_on_model, size: "60x12"} %>
+<%= f.hidden_field :${4:obj_name, :attribute_on_model, options_hash} %>
+
+<%= f.email_field :${5:obj_name, :attribute_on_model, options_hash} %>
+<%= f.phone_field :${6:obj_name, :attribute_on_model, options_hash} %>
+<%= f.password_field :${7:obj_name, :attribute_on_model, options_hash} %>
+
+<%= f.number_field :${9:obj_name, :attribute_on_model, options_hash} %>
+<%= f.range_field :${10:obj_name, :attribute_on_model, options_hash} %>
+<%= f.url_field :${11:obj_name, :attribute_on_model, options_hash} %>
+
+<%= f.check_box :${8:obj_name, :attribute_on_model, \{options_hash\}, "yes", "no"} %> <!-- last 2: checked_value & unchecked_value-->
+
+<%= f.radio_button("post", "does_eat_hikers", "yes") %> <!-- name="post[does_eat_hikers]" value="yes" in form created -->
+<%= f.radio_button("post", "does_eat_hikers", "no", {checked: true}) %> <!-- will be checked -->
+
+<%= f.search_field("post", "does_eat_hikers", "no", {checked: true}) %> <!-- will be checked -->
+
+<%= f.time_field :${12:obj_name, :attribute_on_model, options_hash} %>
+<%= f.month_field :${13:obj_name, :attribute_on_model, options_hash} %>
+<%= f.week_field :${14:obj_name, :attribute_on_model, options_hash} %>
+<%= f.date_field :${15:obj_name, :attribute_on_model, options_hash} %>
+<%= f.datetime_field :${16:obj_name, :attribute_on_model, options_hash} %>
+<%= f.datetime_local_field :${17:obj_name, :attribute_on_model, options_hash} %>
+
+<%= f.file_field :${18:obj_name, :attribute_on_model, options_hash} %>
+${0}
+<%= f.submit "${19:Submit Button Text}", class: "btn btn-primary" %>
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>formf_examples_of_all</tabTrigger>
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<scope>text.html.ruby</scope>
+</snippet>

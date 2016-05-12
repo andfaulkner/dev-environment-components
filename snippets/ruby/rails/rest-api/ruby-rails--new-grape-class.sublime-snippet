@@ -1,0 +1,12 @@
+<snippet>
+	<description>Create new grape api class</description>
+	<content><![CDATA[
+class ${1:EndpointName} < Grape::API
+	${0}
+end
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>grapcla</tabTrigger>
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<scope>source.ruby</scope>
+</snippet>
