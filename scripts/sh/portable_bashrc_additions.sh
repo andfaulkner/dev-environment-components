@@ -37,10 +37,14 @@ function rol_get_bash_sources_from_paths {
   cat $1 | ack 'source' | ack -v 'source \$' | awk '{print $2}' | ack -v "rbenv.bash"
 }
 
+# show all your aliases
 function show_aliases {
   cat ~/.bashrc > ~/.all_src_scripts_tmp_holder
   rol_get_bash_sources_from_vars ~/.bashrc | xargs >> ~/.all_src_scripts_tmp_holder
   rol_get_bash_sources_from_paths ~/.bashrc | xargs >> ~/.all_src_scripts_tmp_holder
+  cat ~/.bash_profile >> ~/.all_src_scripts_tmp_holder
+  rol_get_bash_sources_from_vars ~/.bash_profile | xargs >> ~/.all_src_scripts_tmp_holder
+  rol_get_bash_sources_from_paths ~/.bash_profile | xargs >> ~/.all_src_scripts_tmp_holder
   cat ~/.all_src_scripts_tmp_holder | ack '^alias' | sort
   rm ~/.all_src_scripts_tmp_holder
 }
