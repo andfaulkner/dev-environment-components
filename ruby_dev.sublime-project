@@ -2,7 +2,10 @@
 	"folders":
 	[
 		{
-			"path": "_docs_guides/ruby"
+			"path": "_docs_guides/img/ruby-img"
+		},
+		{
+			"path": "_docs_guides/ruby_docs"
 		},
 		{
 			"path": "scripts/ruby"
@@ -12,9 +15,6 @@
 		},
 		{
 			"path": "scripts/sh"
-		},
-		{
-			"path": "_docs_guides/img/ruby-img"
 		}
 	]
 }
