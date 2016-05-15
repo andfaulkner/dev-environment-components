@@ -1,6 +1,6 @@
 export PATH="$HOME/.rbenv/bin:$PATH"
 
-echo "in ruby_scripts!!!!!!!!!"
+echo "in ruby_scripts"
 
 eval "$(rbenv init -)"
 

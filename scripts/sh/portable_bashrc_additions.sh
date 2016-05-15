@@ -30,7 +30,7 @@ function projinfo {
     #bundle exec rake -T
 }
 
-alias rbash=". ~/.bash_profile"
+#alias rbash=". ~/.bash_profile"
 
 function whichdir {
     which $1 | ruby -pe '$_ = $_.split(/[^\/]*$/).first.chop + "\n"'
