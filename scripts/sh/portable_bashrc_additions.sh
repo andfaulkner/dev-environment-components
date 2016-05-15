@@ -45,6 +45,7 @@ alias rol_linecount="ruby -ne 'END {puts $.}'"
 
 alias rol_out_linecount="ruby -pe 'END {puts \"\n#{$.}\"}'"
 
+# for use with ps aux - when piped into this, removes references to chrome
 function nochrome {
     ruby -pe '$_ = "" if $_.match(/\/opt\/google\/chrome\/chrome/)'
 }

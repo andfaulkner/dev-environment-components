@@ -445,7 +445,7 @@
 	"command_palette":
 	{
 		"height": 392.0,
-		"last_filter": "",
+		"last_filter": "install",
 		"selected_items":
 		[
 			[
@@ -684,6 +684,8 @@
 	},
 	"file_history":
 	[
+		"/home/andrew/.config/sublime-text-3/Packages/User/snippets/_docs_guides/ruby_docs/019-RD-barewords.rb",
+		"/home/andrew/.config/sublime-text-3/Packages/User/snippets/_docs_guides/ruby_docs/018-RD-literals.rb",
 		"/home/andrew/projects/ruby/rails/rails-test-2/app/assets/javascripts/bears.js",
 		"/home/andrew/projects/ruby/rails/rails-test-2/app/controllers/bears_controller.rb",
 		"/home/andrew/projects/ruby/rails/rails-test-2/app/controllers/bear_controller.rb",
@@ -809,9 +811,7 @@
 		"/home/andrew/.config/sublime-text-3/Packages/User/snippets/snippets/js/react/react--define-child-context-on-component.sublime-snippet",
 		"/home/andrew/.config/sublime-text-3/Packages/User/snippets/snippets/js/react/react--update-component-function.sublime-snippet",
 		"/home/andrew/.config/sublime-text-3/Packages/User/snippets/_docs_guides/js/ES2015/must-tries.md",
-		"/home/andrew/.config/sublime-text-3/Packages/User/snippets/snippets/js/react/react--comment--component-header.sublime-snippet",
-		"/home/andrew/.config/sublime-text-3/Packages/User/snippets/snippets/js/react/react--component--full-update-lifecycle.sublime-snippet",
-		"/home/andrew/.config/sublime-text-3/Packages/User/snippets/snippets/js/requires/require-lodash.sublime-snippet"
+		"/home/andrew/.config/sublime-text-3/Packages/User/snippets/snippets/js/react/react--comment--component-header.sublime-snippet"
 	],
 	"find":
 	{
