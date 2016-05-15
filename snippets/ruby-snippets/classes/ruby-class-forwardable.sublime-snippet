@@ -1,0 +1,21 @@
+<snippet>
+	<description>Class with Forwardable inserted. Remember to require 'forwardable'</description>
+	<content><![CDATA[
+class ${1:MyForwardableClass}
+	extend Forwardable
+
+	def_delegators :${2:struct_giving_vars_to_instance}, :${3:vars_from_struct}
+
+	def initialize(${2:struct_giving_vars_to_instance})
+		@${2:struct_giving_vars_to_instance} = ${2:struct_giving_vars_to_instance}
+  end
+
+  ${0}
+
+end 
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>cla_w_forwardable</tabTrigger>
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<scope>source.ruby</scope>
+</snippet>

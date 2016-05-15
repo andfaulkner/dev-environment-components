@@ -1,12 +1,10 @@
 <snippet>
-	<description>Class lifecycle method that runs when method added to class</description>
+	<description>Create new struct</description>
 	<content><![CDATA[
-def self.method_added(method_name)
-  ${0}
-end 
+Struct.new(${1::var1, :var2, :etc})${0}
 ]]></content>
 	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
-	<tabTrigger>cla_lc_ma</tabTrigger>
+	<tabTrigger>Struct</tabTrigger>
 	<!-- Optional: Set a scope to limit where the snippet will trigger -->
 	<scope>source.ruby</scope>
 </snippet>

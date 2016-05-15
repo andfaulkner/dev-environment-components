@@ -5,6 +5,38 @@ run "rbenv local 2.3.1"
 
 
 puts "------------------------------------------------------------------------------------------"
+#############################
+#          HELPERS          #
+#############################
+puts "***************** HELPERS *****************"
+
+puts " ----- DECIDE WHETHER TO USE REDIS AS A SESSION STORE (use cookies if not) -----"
+def select_redis_port
+  counter = 1
+  get_port = ->{
+    puts "What port would you like to assign to redis?"
+    port = $stdin.gets.to_i
+    if port < 1
+      return 6379 if counter >= 3
+      puts "invalid port - please input an integer above 0"
+      counter = counter + 1
+      return get_port.call
+    end
+    port
+  }
+  get_port.call
+end
+
+
+use_redis = yes?("Do you want to use redis?")
+if use_redis
+  redis_port ||= yes?("Use a custom redis port or the default of 6379?") ? select_redis_port : 6379
+end
+
+use_devise = yes?("Do you want to use devise?")
+use_rspec = yes?("Do you want to use rspec?")
+
+puts "------------------------------------------------------------------------------------------"
 ##################################
 #          INSTALL GEMS          #
 ##################################
@@ -78,41 +110,28 @@ puts "--------------------------------------------------------------------------
 ##################################
 puts "***************** INITIALIZERS *****************"
 
-puts " ----- DECIDE WHETHER TO USE REDIS AS A SESSION STORE (use cookies if not) -----"
-def select_redis_port
-  counter = 1
-  get_port = ->{
-  	puts "What port would you like to assign to redis?"
-    port = $stdin.gets.to_i
-    if port < 1
-      return 6379 if counter >= 3
-      puts "invalid port - please input an integer above 0"
-      counter = counter + 1
-      return get_port.call
-    end
-    port
-  }
-  get_port.call
-end
-
-if yes?("Do you want to use redis?")
+if use_redis
 	session_store = :redis_session_store
-	redis_port = yes?("Would you like to use a custom redis port, or the default 6379?") ? select_redis_port : 6379
-	initializer 'redis.rb', <<-CODE
-		My::Application.config.session_store :redis_session_store, {
-		  key: 'your_session_key',
-		  redis: {
-		    db: 2,
-		    expire_after: 120.minutes,
-		    key_prefix: 'myapp:session:',
-		    host: 'host', # Redis host name, default is localhost
-		    port: 12345   # Redis port, default is 6379
-		    serializer: :hybrid
-		  }
-		}
-	CODE
-# else
-	# session_store = :cookie_store
+	# if redis_port
+ #    redis_port = select_redis_port
+ #  else
+ #    redis_port = 6379
+ #  end
+# 	initializer 'redis.rb', <<-CODE
+# 		My::Application.config.session_store :redis_session_store, {
+# 		  key: 'your_session_key',
+# 		  redis: {
+# 		    db: 2,
+# 		    expire_after: 120.minutes,
+# 		    key_prefix: 'myapp:session:',
+# 		    host: 'host', # Redis host name, default is localhost
+# 		    port: 12345   # Redis port, default is 6379
+# 		    serializer: :hybrid
+# 		  }
+# 		}
+# 	CODE
+else
+  session_store = :cookie_store
 end
 puts " -------------------------------------------------------------------------------"
 
@@ -124,7 +143,6 @@ puts "--------------------------------------------------------------------------
 puts "***************** ENVIRONMENT SETUP *****************"
 environment <<-ENV
 	config.time_zone = 'Eastern Time (US & Canada)'
-	config.session_store = #{session_store}
 	javascript_engine = :js
 	config.generators do |g|
 	  g.orm :active_record
@@ -206,7 +224,7 @@ after_bundle do
   #nodeJS modules ignore
   `echo 'node_modules' >> .gitignore`
   #install lodash
-  `mkdir app/assets/javascripts`
+  # `mkdir app/assets/javascripts` 
   `touch 'app/assets/javascripts/application.js'`
 	`echo "//= require lodash" >> app/assets/javascripts/application.js`
 
@@ -232,3 +250,32 @@ after_bundle do
   # config.paths.add File.join('app', 'api'), glob: File.join('**', '*.rb')
   # config.autoload_paths += Dir[Rails.root.join('app', 'api', '*')]
 end
+
+puts " ----- RSPEC? -----"
+
+if use_rspec
+  run "bundle exec bin/rails generate rspec:install"
+end
+
+if use_devise
+  run "bundle exec bin/rails generate devise:install"
+end
+
+#   session_store = :redis_session_store
+#   redis_port = yes?("Would you like to use a custom redis port, or the default 6379?") ? select_redis_port : 6379
+#   initializer 'redis.rb', <<-CODE
+#     My::Application.config.session_store :redis_session_store, {
+#       key: 'your_session_key',
+#       redis: {
+#         db: 2,
+#         expire_after: 120.minutes,
+#         key_prefix: 'myapp:session:',
+#         host: 'host', # Redis host name, default is localhost
+#         port: 12345   # Redis port, default is 6379
+#         serializer: :hybrid
+#       }
+#     }
+#   CODE
+# # else
+#   # session_store = :cookie_store
+# end

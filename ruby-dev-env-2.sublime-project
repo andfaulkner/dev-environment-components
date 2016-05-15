@@ -1,0 +1,23 @@
+{
+	"folders":
+	[
+		{
+			"path": "_docs_guides/ruby_docs"
+		},
+		{
+			"path": "."
+		},
+		{
+			"path": "snippets/ruby-snippets"
+		},
+		{
+			"path": "dev-env"
+		},
+		{
+			"path": "scripts/ruby"
+		},
+		{
+			"path": "custom-manuals"
+		}
+	]
+}

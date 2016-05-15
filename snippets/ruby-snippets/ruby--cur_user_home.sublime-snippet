@@ -1,12 +1,10 @@
 <snippet>
-	<description>Class lifecycle method that runs when method added to class</description>
+	<description>Get the  current user's home directory</description>
 	<content><![CDATA[
-def self.method_added(method_name)
-  ${0}
-end 
+Dir.home(Etc.getlogin)
 ]]></content>
 	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
-	<tabTrigger>cla_lc_ma</tabTrigger>
+	<tabTrigger>curuserhome</tabTrigger>
 	<!-- Optional: Set a scope to limit where the snippet will trigger -->
 	<scope>source.ruby</scope>
 </snippet>

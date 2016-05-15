@@ -168,8 +168,8 @@ set statusline+=%F
 set nocompatible
 
 syntax on
-# filetype plugin indent on
-# filetype plugin on
+" filetype plugin indent on
+" filetype plugin on
 
 " filetype off
 
@@ -216,10 +216,10 @@ call vundle#end()
    set runtimepath+=~/.vim/bundle/neobundle.vim/
    set runtimepath^=~/.vim/dein/
 
-   call dein#begin(expand('~/.cache/dein'))
-   call dein#add('~/.vim/dein/')
-   call dein#add('Shougo/neocomplete.vim')
-   call dein#end()
+  " call dein#begin(expand('~/.cache/dein'))
+  " call dein#add('~/.vim/dein/')
+  " call dein#add('Shougo/neocomplete.vim')
+  " call dein#end()
 
  endif
 
