@@ -5,19 +5,30 @@ Pry.config.editor = "vim"
 require "rails"
 require "active_record"
 
+# needed utils
+require 'os'
+
 ## require 'pry-coolline'
+if OS.config["RUBY_VERSION_NAME"].include?("ruby-2")
+    require 'pry-byebug'
+else
+    require 'pry-vterm_aliases'
+    require 'interactive_editor'
+    require 'awesome_print_colors'
+    require 'pry-debugger'
+end
+
+# if OS.linux? end
+# if OS.mac? end
+
 require 'pry-rails'
 require 'pry-macro'
-require 'pry-vterm_aliases'
 require 'pry-theme'
 require 'pry-awesome_print'
-require 'rubygems'
-#require 'interactive_editor'
-require 'awesome_print'
-require 'hirb'
-#require 'awesome_print_colors'
-require 'pry-debugger'
 require 'pry-stack_explorer'
+require 'hirb'
+require 'rubygems'
+require 'awesome_print'
 
 Gem.path.each do |gemset|
   $:.concat(Dir.glob("#{gemset}/gems/pry-*/lib"))

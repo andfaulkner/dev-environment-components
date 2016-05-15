@@ -45,6 +45,9 @@ if use_redis
 end
 
 use_devise = yes?("Do you want to use devise?")
+if use_devise
+  make_user = yes?("Create a default device model named User?")
+end
 use_rspec = yes?("Do you want to use rspec?")
 
 puts "------------------------------------------------------------------------------------------"
@@ -59,6 +62,7 @@ gem 'cancan'
 gem 'devise'
 gem 'delayed_job'
 gem 'bootstrap-sass'
+gem 'compass-rails'
 gem 'squeel'
 gem 'skylight'
 gem 'grape'
@@ -70,11 +74,13 @@ gem 'rails'
 gem 'pg'
 gem 'rails_12factor'
 gem 'redis-session-store'
-
+gem 'jquery-turbolinks'
 gem 'sprockets'
+
 
 # for use with grape
 gem 'hashie-forbidden_attributes'
+
 
 gem_group :development do
   gem 'thin'
@@ -96,6 +102,7 @@ gem_group :development do
   gem 'better_errors'
   gem 'rubocop'
   gem 'capistrano-rails'
+  gem 'os'
 end
 
 gem_group :assets do
@@ -236,9 +243,12 @@ after_bundle do
   `echo 'node_modules' >> .gitignore`
   `echo 'local_notes' >> .gitignore`
   #install lodash
-  # `mkdir app/assets/javascripts` 
+  # `mkdir app/assets/javascripts`
   `touch 'app/assets/javascripts/application.js'`
+  # TODO: auto-reorder this
 	`echo "//= require lodash" >> app/assets/javascripts/application.js`
+  `echo "//= require jquery.turbolinks" >> app/assets/javascripts/application.js`
+  `echo "//= require bootstrap/dropdown" >> app/assets/javascripts/application.js`
 
   puts "------------------------------------------------------------------------------------------"
   ###################################
@@ -247,8 +257,12 @@ after_bundle do
   puts "***************** INSTALLATIONS *****************"
 
   # insert default urls for mailer
-  `sed -i "3 i\\\n\ \ config.action_mailer.default_url_options = { host: 'localhost', port: 3000 }" config/environments/test.rb`
-  `sed -i "3 i\\\n\ \ config.action_mailer.default_url_options = { host: 'localhost', port: 3000 }" config/environments/development.rb`
+  `sed -i "3 i\\\n\\ \\ config.action_mailer.default_url_options = { host: 'localhost', port: 3000 }" config/environments/test.rb`
+  `sed -i "3 i\\\n\\ \\ config.action_mailer.default_url_options = { host: 'localhost', port: 3000 }" config/environments/development.rb`
+  `sed -i "4 i\\\n\\ \\ config.action_mailer.perform_deliveries = true" config/environments/development.rb`
+  `sed -i "5 i\\\n\\ \\ config.action_mailer.delivery_method = :sendmail" config/environments/development.rb`
+
+  
 
   # RUN THESE AFTERWARDS:
   # cd ${@app_name}
@@ -268,8 +282,12 @@ if use_rspec
   run "bundle exec bin/rails generate rspec:install"
 end
 
+puts " ----- DEVISE -----"
 if use_devise
   run "bundle exec bin/rails generate devise:install"
+  if make_user 
+    run 'bundle exec bin/rails generate devise User'
+  end
 end
 
 run "mkdir doc"
@@ -293,9 +311,16 @@ echo "AllCops:
     - 'script/**/*'
     - 'doc/**/*'
     - 'log/**/*'
-    - 'tml/**/*'
+    - '.gitignore'
+    - '.babelrc'
+    - '*.sublime-*'
+    - '*.sh'
+    - '*.md'
+    - '*.txt'
+    - 'package.json'
+    - 'node_modules/**/*'
+    - '**/node_modules/**/*'
     - '.bundle/**/*'
-    - !ruby/regexp /old_and_unused\.rb$/
     - 'bin/setup'
     - 'bin/rails'
     - 'bin/rake'
@@ -312,7 +337,10 @@ Style/Encoding:
 Style/StringLiterals:
   Enabled: false
 
-DefaultFormatter: progress" >> .rubycop.yml`
+Style/BlockComments:
+  Enabled: false
+
+DefaultFormatter: progress" >> .rubocop.yml
 RUBOCOP
 
 

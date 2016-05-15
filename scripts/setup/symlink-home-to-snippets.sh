@@ -25,4 +25,3 @@ git clone git://github.com/tpope/vim-bundler.git
 mkdir ~/.vim/backup_files
 mkdir ~/.vim/swap_files
 mkdir ~/.vim/undo_files
-

@@ -1,5 +1,7 @@
 export PATH="$HOME/.rbenv/bin:$PATH"
 
+echo "in ruby_scripts!!!!!!!!!"
+
 eval "$(rbenv init -)"
 
 # close ruby process that just refuses to
@@ -88,6 +90,20 @@ alias rw="killrakeworker; rjw"
 alias rubyps='ps aux | ack "ruby|rails|guard|rake|rack|puma|passenger|rbenv|irb|pry|bundler|rerun|rspec|zeus"'
 alias psruby='rubyps'
 #alias bombruby='rubyps | awk "{print \$2}" | xargs kill -9'
+
+################################################################################
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ UTILITIES ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+################################################################################
+alias unescape_text="ruby -pe 'require \"uri\"; $_ = URI.unescape($_)'"
+
+function show_types {
+  ack -v "(\s\.\.?$)|(^total[^a-zA-Z0-9]*[0-9]*$)" | ack -v "^\.\.?^$" | ruby -pe '
+      type = $_.clone;
+      type = type.include?(".") ? $_.split(".").last : " \n";
+      line_len = $_.chomp.to_s.size;
+      $_ = "#{$_.chomp}#{" " * (90 - line_len) unless (line_len >90)} || type = #{type}"
+  '
+}
 
 # generate model. Provides instructions and typechecking 
 function rgm {

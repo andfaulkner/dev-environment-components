@@ -1,0 +1,11 @@
+#!/usr/bin/env sh
+
+echo ''
+echo '---------------------------------------------------------------------------------'
+echo '** URI DECODING **'
+echo '---------------------------------------------------------------------------------'
+echo '#Ruby uri decoding'
+echo '-- may need import lib first:        require "uri"'
+echo '-- unescape: rm crazy browser text:  URI.unescape("http://example.com/?a=%09%0D")'
+echo '-- escape:  add crazy browser text:  URI.escape("http://example.com/?a=\\t\\r")'
+echo '---------------------------------------------------------------------------------\n'
