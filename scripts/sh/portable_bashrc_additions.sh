@@ -1,10 +1,44 @@
+alias ..="cd .."
+alias ...="cd ../.."
+alias ....="cd ../../.."
+alias .....="cd ../../../.."
+alias ......="cd ../../../../.."
+
+alias lsa="ls -ao"
+
+function whereami {
+    ls -ao
+    PWD__TEMP__WHEREAMI=`pwd`
+    echo $PWD__TEMP__WHEREAMI
+    echo ""
+    echo "**************************************"
+    echo "current git branch:"
+    g_curbr
+    echo "**************************************"
+    echo ""
+    git status
+}
+
+function projinfo {
+    echo ""
+    whereami
+    echo ""
+    echo *** GEMS INSTALLED IN PROJECT::: ***
+    cat Gemfile | ack "^ *gem.*" | sort
+    #echo ""
+    #echo **** RAKE TASKS AVAILABLE::: ****
+    #bundle exec rake -T
+}
+
+alias rbash=". ~/.bash_profile"
+
 function whichdir {
     which $1 | ruby -pe '$_ = $_.split(/[^\/]*$/).first.chop + "\n"'
 }
 
 function newmanual {
-    cp `which man__TEMPLATE` `whichdir man__TEMPLATE`/man__$1
-    vim `whichdir man__TEMPLATE`/man__$1
+    cp "`which man__TEMPLATE`" "`whichdir man__TEMPLATE`/man__$1"
+    vim "`whichdir man__TEMPLATE`/man__$1"
 }
  
 alias rol_linecount="ruby -ne 'END {puts $.}'"

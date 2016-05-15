@@ -9,12 +9,16 @@ alias rubypocalypse='ps aux | ack "ruby|passenger" | awk "{print \$2}" | xargs k
 # install a gem globally
 alias geminstg="rvm @global do sudo gem install"
 
+alias localgems='cat Gemfile | ack "^ *gem.*" | sort'
+
 alias bir="bundle install; rbenv rehash"
 
 
 ########## AKR-SPECIFIC KILLS ############
 alias killakr3="ps aux | ack rails | ack -v '3001' | awk '{print \$2}' | xargs kill -9; ps aux | ack rails | ack -v '3001'"
 alias ka="killakr3"
+
+alias berspec="bundle exec rake spec"
 
 ################################################################################
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ RAILS ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -67,6 +71,8 @@ alias bert="be rake -T"
 
 alias berm="be rake db:migrate"
 alias berms="be rake db:migrate:status"
+
+alias belisttests="find `pwd`/spec \*\.rb | awk '{print $1}' | ack -v '\.$' | ack -v '^[0-9]{1,3}$' | ack -v ':$' | ack -v \"^$\" | xargs cat > tmptmptmp.txt; cat tmptmptmp.txt | ack \"(context)|(^[^a-zA-Z0-9_#]*it[^a-zA-Z0-9_])|([^#a-zA-Z0-9_]describe[^a-zA-Z0-9_])\""
 
 # run with puma server
 alias rsp="bundle exec rails server puma"

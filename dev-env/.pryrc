@@ -54,7 +54,14 @@ Pry.commands.alias_command 'vim', 'edit'            # because I keep forgetting 
 #Pry.commands.alias_command 'cr', 'copy-result', :desc => 'Copy result to clipboard.'     # <<<<<< WTF WHY ISN'T IT WORKING?!?!?
 #Pry.commands.alias_command 'pste', 'paste', :desc => 'Paste from clipboard'              # <<<<<< WTF WHY ISN'T IT WORKING?!?!?
 
+################################################################################
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ COMMANDS ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+################################################################################
+
+# TODO setup NB commands
+#Pry::Commands.block_command "" ""
 
 ################################################################################
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ TIPS ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 ################################################################################
+
