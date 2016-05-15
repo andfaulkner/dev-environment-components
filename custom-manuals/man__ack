@@ -1,0 +1,18 @@
+#!/usr/bin/env sh
+
+echo ''
+echo '---------------------------------------------------------------------------------'
+echo '** ACK **'
+echo '---------------------------------------------------------------------------------'
+echo 'SHOW CONTEXT OF FIND'
+echo '-- show a lines before match        ack --before-context=NUM "search_for_something'
+echo '-- show a lines after match         ack --after-context=NUM "search_for_something'
+echo '-- show lines around match          ack --context=NUM "search_for_something'
+echo ''
+echo 'SEARCH FILES, SHOW MATCHING FILE'
+echo '-- search all cur dir files, show filename above all matches'
+echo '                                    ack "rbash" -H **'
+echo '-- show filename                    -H'
+echo ''
+echo 'INVERSE SEARCH (SHOW NON-MATCHES):  ack -v "only-return-things-that-dont-match-me'
+echo '---------------------------------------------------------------------------------\n'
