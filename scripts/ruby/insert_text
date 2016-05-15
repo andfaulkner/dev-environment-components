@@ -1,0 +1,39 @@
+#!/usr/bin/env ruby
+
+NAME = "insert_text"
+
+def insert_text(fname, at_line, sdat)
+  at_line = at_line.to_i
+  open(fname, 'r+') do |f|
+    while (at_line = at_line - 1) > 0          # read up to the line you want to write after
+      f.readline
+    end
+    pos = f.pos                     # save your position in the file
+    rest = f.read                   # save the rest of the file
+    f.seek pos                      # go back to the old position
+    puts "SDAT: #{sdat}"
+    puts "rest: #{rest}\n"
+    f.write sdat
+    f.write "\n"
+    f.write rest	            # write new data & rest of file
+  end
+end
+
+def usage(error)
+  puts error
+  puts "-- #{NAME} #{"-" * (60 - NAME.size - 4)}"
+  puts "USAGE:       #{NAME} filename \"Text to insert\" [-f]"
+  puts "OPTIONS:     -f   create file if file doesn't exist"
+  puts "-" * 60
+end
+
+if __FILE__ == $0
+  if ARGV.count != 3
+    usage "Wrong number of arguments given to #{NAME} utility."
+  elsif !File.exists?("./#{ARGV[0]}") && !ARGV.include?("-f")
+    usage "file does not exist"
+  else
+    insert_text(ARGV[0], ARGV[2], ARGV[1])
+    puts "END!"
+  end
+end

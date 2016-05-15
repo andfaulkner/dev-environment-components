@@ -27,6 +27,17 @@ def select_redis_port
   get_port.call
 end
 
+def prepend_line_to_file(file, text_to_prepend)
+  orig_file = file
+  temp_file = "#{file}_temp"
+  File.open(file, 'w') do |fo|
+    fo.puts text_to_prepend
+    File.foreach(original_file) do |li|
+      fo.puts li
+    end
+  end
+end
+
 
 use_redis = yes?("Do you want to use redis?")
 if use_redis
@@ -221,8 +232,9 @@ after_bundle do
   git :init
   git add: "."
   git commit: %Q{ -m 'Initial commit' }
-  #nodeJS modules ignore
+  # ignore unwanted items for git
   `echo 'node_modules' >> .gitignore`
+  `echo 'local_notes' >> .gitignore`
   #install lodash
   # `mkdir app/assets/javascripts` 
   `touch 'app/assets/javascripts/application.js'`
@@ -235,8 +247,8 @@ after_bundle do
   puts "***************** INSTALLATIONS *****************"
 
   # insert default urls for mailer
-  `sed -i "3 i\\\n  config.action_mailer.default_url_options = { host: 'localhost', port: 3000 }" config/environments/test.rb`
-  `sed -i "3 i\\\n  config.action_mailer.default_url_options = { host: 'localhost', port: 3000 }" config/environments/development.rb`
+  `sed -i "3 i\\\n\ \ config.action_mailer.default_url_options = { host: 'localhost', port: 3000 }" config/environments/test.rb`
+  `sed -i "3 i\\\n\ \ config.action_mailer.default_url_options = { host: 'localhost', port: 3000 }" config/environments/development.rb`
 
   # RUN THESE AFTERWARDS:
   # cd ${@app_name}
@@ -252,7 +264,6 @@ after_bundle do
 end
 
 puts " ----- RSPEC? -----"
-
 if use_rspec
   run "bundle exec bin/rails generate rspec:install"
 end
@@ -260,6 +271,50 @@ end
 if use_devise
   run "bundle exec bin/rails generate devise:install"
 end
+
+run "mkdir doc"
+
+
+puts "------------------------------------------------------------------------------------------"
+#############################
+#          RUBOCOP          #
+#############################
+puts "***************** RUBOCOP *****************"
+`touch .rubocop.yml`
+run <<-RUBOCOP
+echo "AllCops:
+  Include:
+    - '**/Rakefile'
+    - '**/config.ru'
+    - 'app/**/*.rb'
+  Exclude:
+    - 'db/**/*'
+    - 'config/**/*'
+    - 'script/**/*'
+    - 'doc/**/*'
+    - 'log/**/*'
+    - 'tml/**/*'
+    - '.bundle/**/*'
+    - !ruby/regexp /old_and_unused\.rb$/
+    - 'bin/setup'
+    - 'bin/rails'
+    - 'bin/rake'
+    - 'bin/spring'
+    - 'bin/bundle'
+    - 'test/**/*'
+
+Metrics/LineLength:
+  Max: 100
+
+Style/Encoding:
+  Enabled: false
+
+Style/StringLiterals:
+  Enabled: false
+
+DefaultFormatter: progress" >> .rubycop.yml`
+RUBOCOP
+
 
 #   session_store = :redis_session_store
 #   redis_port = yes?("Would you like to use a custom redis port, or the default 6379?") ? select_redis_port : 6379

@@ -1,0 +1,33 @@
+#!/usr/bin/env ruby
+
+def prepend_line_to_file(file, text_to_prepend)
+  original_file = "./#{file}"
+  new_file = "#{original_file}.new"
+  File.open(new_file, 'w') do |fo|
+    fo.puts text_to_prepend
+    File.foreach(original_file) do |li|
+      fo.puts li
+    end
+  end
+  File.rename(original_file, "#{original_file}.old")
+  File.rename(new_file, original_file)
+end
+
+def usage(error)
+  puts error
+  puts "-- prepend_text -------------------------------------------"
+  puts "USAGE:       prepend_text filename \"Text to prepend\" [-f]"
+  puts "OPTIONS:     -f   create file if file doesn't exist"
+  puts "-----------------------------------------------------------"
+end
+
+if __FILE__ == $0
+  if ARGV.count != 2
+    usage "Wrong number of arguments given to prepend_text utility."
+  elsif !File.exists?("./#{ARGV[0]}") && !ARGV.include?("-f")
+    usage "file does not exist"
+  else
+    prepend_line_to_file(ARGV[0], ARGV[1])
+    puts "END!"
+  end
+end
