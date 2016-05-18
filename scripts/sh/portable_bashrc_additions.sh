@@ -14,6 +14,8 @@ alias lsa="ls -ao"
 
 ## use nvim instead
 alias vim="nvim"
+## handy vim shortcut
+alias v="nvim"
 
 alias devenvedit="vim $HOME/.config/sublime-text-3/Packages/User/snippets/dev-env/devenv-install.sh"
 

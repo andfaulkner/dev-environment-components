@@ -7,6 +7,8 @@ alias ....="cd ../../.."
 alias .....="cd ../../../.."
 alias ......="cd ../../../../.."
 
+alias back="echo 'DIR returning from:'; pwd; popd; echo 'DIR returned to:'; pwd"
+
 ## super-ls
 alias lsa="ls -ao"
 
@@ -118,7 +120,3 @@ function insertfirstline {
     echo $2 | cat - $1 > temp && mv temp $1
 }
 
-function cd {
-    pushd ./ > 2/dev/null; cd $1 || popd -n"
-}
-alias back="echo 'DIR returning from:'; pwd; popd; echo 'DIR returned to:'; pwd"

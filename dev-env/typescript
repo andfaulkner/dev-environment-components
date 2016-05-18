@@ -301,4 +301,50 @@ drwxr-xr-x    3 andrew   4096 Jan 28 23:35 [01;34mVideos[0m
 lrwxrwxrwx    1 andrew     82 Apr 20 03:59 [01;36mvim[0m -> [01;34m/home/andrew/.config/sublime-text-3/Packages/User/snippets/dev-env/vim_configs/vim[0m
 drwxr-xr-x    2 andrew   4096 May 11 23:49 [01;34m~.vim[0m
 lrwxrwxrwx    1 andrew     83 Apr 20 03:59 [01;36m.vim[0m -> [01;34m/home/andrew/.config/sublime-text-3/Packages/User/snippets/dev-env/vim_configs/.vim[0m
-drwxr-xr-x    2 andrew   4096 May 18 01:46 [01;34m.vimb
+drwxr-xr-x    2 andrew   4096 May 18 01:46 [01;34m.vimbackup[0m
+drwxr-xr-x    6 andrew   4096 Apr 20 03:36 [01;34mvim_bks[0m
+-rw-------    1 andrew  21729 May 18 02:44 .viminfo
+lrwxrwxrwx    1 andrew     32 May 18 00:55 [01;36m.vimrc[0m -> /home/andrew/.spf13-vim-3/.vimrc
+lrwxrwxrwx    1 andrew     39 May 18 00:55 [01;36m.vimrc.before[0m -> /home/andrew/.spf13-vim-3/.vimrc.before
+-rw-r--r--    1 andrew   8859 May 11 23:36 .vimrc_BK_2016_05_11
+-rw-r--r--    1 andrew   9054 May 18 00:55 .vimrc__BK_2016_05_18
+lrwxrwxrwx    1 andrew     40 May 18 00:55 [01;36m.vimrc.bundles[0m -> /home/andrew/.spf13-vim-3/.vimrc.bundles
+-rw-r--r--    1 andrew      0 May 18 02:32 .vimrc.bundles.local
+-rw-r--r--    1 andrew   1623 May 18 01:39 .vimrc.local
+drwxr-xr-x    2 andrew   4096 May 18 02:36 [01;34m.vimswap[0m
+drwxr-xr-x    2 andrew   4096 May 18 01:46 [01;34m.vimundo[0m
+drwxr-xr-x    2 andrew   4096 May 18 00:56 [01;34m.vimviews[0m
+-rw-------    1 andrew    125 May 12 08:26 .Xauthority
+-rw-r--r--    1 andrew 200302 May 12 08:58 .xsession-errors
+-rw-r--r--    1 andrew    119 Mar 22 03:24 .zlogin
+-rw-r--r--    1 andrew    282 Mar 22 03:24 .zshrc
+[01;32mandrew@andrew-X751LAB[01;34m ~ $[00m lsa[Klsa scripts
+total 20
+drwxr-xr-x  2 andrew 4096 Apr 27 01:16 [0m[01;34m.[0m
+drwxr-xr-x 79 andrew 4096 May 18 02:44 [01;34m..[0m
+lrwxrwxrwx  1 andrew   84 Apr 27 01:16 [01;36mpry-utils[0m -> [01;34m/home/andrew/.config/sublime-text-3/Packages/User/snippets/dev-env/scripts/pry-utils[0m
+lrwxrwxrwx  1 andrew   71 Jan  2 12:04 [01;36mruby[0m -> [01;34m/home/andrew/.config/sublime-text-3/Packages/User/snippets/scripts/ruby[0m
+lrwxrwxrwx  1 andrew   69 Jan  8 01:45 [01;36msh[0m -> [01;34m/home/andrew/.config/sublime-text-3/Packages/User/snippets/scripts/sh[0m
+[01;32mandrew@andrew-X751LAB[01;34m ~ $[00m ls exit
+ls: cannot access exit: No such file or directory
+[01;32mandrew@andrew-X751LAB[01;34m ~ $[00m exi
+tNo command 'exi' found, did you mean:
+ Command 'esi' from package 'atm-tools' (universe)
+ Command 'kexi' from package 'kexi' (universe)
+ Command 'exp' from package 'alliance' (universe)
+ Command 'axi' from package 'afnix' (universe)
+ Command 'exif' from package 'exif' (universe)
+ Command 'ex' from package 'vim-athena' (universe)
+ Command 'ex' from package 'nvi' (universe)
+ Command 'ex' from package 'vim-tiny' (main)
+ Command 'ex' from package 'vim-gnome' (main)
+ Command 'ex' from package 'vim-gtk' (universe)
+ Command 'ex' from package 'vim-nox' (universe)
+ Command 'ex' from package 'vim' (main)
+ Command 'exim' from package 'exim4-daemon-heavy' (main)
+ Command 'exim' from package 'exim4-daemon-light' (main)
+exi: command not found
+[01;32mandrew@andrew-X751LAB[01;34m ~ $[00m tex[K[K[Kexit
+exit
+
+Script done on Wed 18 May 2016 07:16:25 AM EDT

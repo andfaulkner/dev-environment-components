@@ -24,9 +24,25 @@ function unix_setup {
     #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ SCRIPTS LINKS ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
     ################################################################################
     mkdir ~/scripts
-    ln -s $HOME/.config/sublime-text-3/Packages/User/snippets/dev-env/scripts/pry-utils ~/scripts/pry-utils
-    ln -s $HOME/.config/sublime-text-3/Packages/User/snippets/scripts/ruby ~/scripts/ruby
-    ln -s $HOME/.config/sublime-text-3/Packages/User/snippets/scripts/sh ~/scripts/sh
+    ln -s $SNIPPETS_DIR/dev-env/scripts/pry-utils $HOME/scripts/pry-utils
+    ln -s $SNIPPETS_DIR/scripts/ruby $HOME/scripts/ruby
+    ln -s $SNIPPETS_DIR/scripts/sh $HOME/scripts/sh
+    ln -s $SNIPPETS_DIR/dev-env/vim_configs/vim $HOME/vim
+    ln -s $SNIPPETS_DIR/dev-env/vim_configs/.vim $HOME/.vim
+    ln -s $SNIPPETS_DIR/dev-env/vim_configs/.spf13-vim-3 $HOME/.spf13-vim
+    ln -s $SNIPPETS_DIR/dev-env/vim_configs/.vim $HOME/.nvim 
+    ln -s $SNIPPETS_DIR/dev-env/vim_configs/.vimrc $HOME/.nvimrc
+    ln -s $HOME/.vimrc $HOME/.nvimrc
+#lrwxrwxrwx    1 andrew     32 May 18 00:55 .vimrc -> /home/andrew/.spf13-vim-3/.vimrc
+#lrwxrwxrwx    1 andrew     39 May 18 00:55 .vimrc.before -> /home/andrew/.spf13-vim-3/.vimrc.before
+#-rw-r--r--    1 andrew   8859 May 11 23:36 .vimrc_BK_2016_05_11
+#-rw-r--r--    1 andrew   9054 May 18 00:55 .vimrc__BK_2016_05_18
+#lrwxrwxrwx    1 andrew     40 May 18 00:55 .vimrc.bundles -> /home/andrew/.spf13-vim-3/.vimrc.bundles
+#lrwxrwxrwx    1 andrew     82 Apr 20 03:59 vim -> /home/andrew/.config/sublime-text-3/Packages/User/snippets/dev-env/vim_configs/vim
+#drwxr-xr-x    2 andrew   4096 May 11 23:49 ~.vim
+#lrwxrwxrwx    1 andrew     83 Apr 20 03:59 .vim -> /home/andrew/.config/sublime-text-3/Packages/User/snippets/dev-env/vim_configs/.vim
+
+
 
 
     curl https://raw.githubusercontent.com/git/git/master/contrib/completion/git-completion.bash > ~/scripts/git-completion.bash
@@ -41,7 +57,7 @@ function unix_setup {
     git clone git://github.com/wbond/sublime_package_control.git Package\ Control
     cd Package\ Control
     git checkout python3
-    
+
     #link vimrc file
     mkdir -p ${XDG_CONFIG_HOME:=$HOME/.config}
     ln -s ~/.vim $XDG_CONFIG_HOME/nvim
@@ -70,6 +86,13 @@ function unix_setup {
     # install nerdcommenter vim plugin
     curl http://www.vim.org/scripts/download_script.php?src_id=14455 > nerdcommenter.zip; unzip nerdcommenter.zip -d ./nerdcommenter; pushd ./; mkdir ~/.vim/plugin; mkdir ~/.vim/doc; cd nerdcommenter; mv doc/NERD_commenter.txt ~/.vim/doc/NERD_commenter.txt; mv plugin/NERD_commenter.vim ~/.vim/plugin/NERD_commenter.vim
 
+    pushd ./
+    cd ~/.vim/bundle
+    git clone git://github.com/tpope/vim-rails.git
+    git clone git://github.com/tpope/vim-bundler.git
+    popd
+
+
     unix_post_setup
 }
 
@@ -85,7 +108,7 @@ function linux_setup {
     MAIN_BASH_FILE=".bashrc"
     #install tmux
     #curl https://github.com/tmux/tmux/releases/download/2.2/tmux-2.2.tar.gz > ~/Downloads/tmux__2_2.zip
-    curl https://github.com/tmux/tmux/releases/download/2.2/tmux-2.2.tar.gz > `curl -sI https://github.com/tmux/tmux/releases/download/2.2/tmux-2.2.tar.gz | grep -oP '(?<=Location: )[^\s]+' | xargs basename | ruby -pe '$_=$_.to_s.split("filename%3D").last.split("&").first'
+    #curl https://github.com/tmux/tmux/releases/download/2.2/tmux-2.2.tar.gz > `curl -sI https://github.com/tmux/tmux/releases/download/2.2/tmux-2.2.tar.gz | grep -oP '(?<=Location: )[^\s]+' | xargs basename | ruby -pe '$_=$_.to_s.split("filename%3D").last.split("&").first'
     unzip ~/Downloads/tmux__2.2.zip -d ~/Downloads/tmux
     pushd ./
     cd ~/Downloads/tmux
@@ -114,7 +137,7 @@ if [[ "$(uname)" == "Darwin" ]]; then
 elif [[ "$(expr substr $(uname -s) 1 5)" == "Linux" ]]; then
     linux_setup
 elif [[ "$(expr substr $(uname -s) 1 10)" == "MINGW32_NT" ]]; then
-    echo "windoze"
+    echo "windoze";
 fi
 
 # git completions - first run only
