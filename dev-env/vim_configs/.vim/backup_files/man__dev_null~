@@ -1,0 +1,19 @@
+#!/usr/bin/env sh
+
+echo ''
+echo '---------------------------------------------------------------------------------'
+echo '** 2/dev/null **'
+echo '---------------------------------------------------------------------------------'
+echo '- SUPPRESSING OUTPUT WITH 2/dev/null'
+echo ''
+echo 'EXAMPLE:                          rbenv rehash 2>/dev/null'
+echo "## First item (title here):   general syntax of 'item'"
+echo "   -- (definition of first item goes here)"
+echo "   -- example:                example goes here"
+echo ""
+echo "## List item title:"
+echo "   -- subitem here:           syntax here"
+echo "   -- subitem here:           syntax here"
+echo "   -- subitem here:           syntax here"
+echo ""
+echo '---------------------------------------------------------------------------------\n'

@@ -1,0 +1,304 @@
+Script started on Wed 18 May 2016 02:46:00 AM EDT
+in ruby_scripts
+find: `~/.nvm/': No such file or directory
+loaded git_scripts.sh!
+loaded search_scripts.sh!
+cli opts loaded!
+IN ~/.bash_profile!
+[01;32mandrew@andrew-X751LAB[01;34m ~/.config/sublime-text-3/Packages/User/snippets/dev-env $[00m ls
+cli-tricks.sh  [0m[01;32mdevenv-install.sh[0m  [01;32mjs-coffee-rails-env-setup--gem-install-bk.sh[0m  local-gems-to-add-to-project-gemfiles.rb  [01;34mnerdcommenter[0m  [01;31mnerdcommenter.zip[0m  ruby-linux.sh  [01;34mscripts[0m  setup-git-completions.sh  typescript  [01;34mvim_configs[0m
+[01;32mandrew@andrew-X751LAB[01;34m ~/.config/sublime-text-3/Packages/User/snippets/dev-env $[00m cd ~/script
+bash: cd: /home/andrew/script: No such file or directory
+[01;32mandrew@andrew-X751LAB[01;34m ~/.config/sublime-text-3/Packages/User/snippets/dev-env $[00m cd ~/scripts
+[01;32mandrew@andrew-X751LAB[01;34m ~/scripts $[00m ls
+[0m[01;36mpry-utils[0m  [01;36mruby[0m  [01;36msh[0m
+[01;32mandrew@andrew-X751LAB[01;34m ~/scripts $[00m ..
+[01;32mandrew@andrew-X751LAB[01;34m ~ $[00m lsa
+total 4352
+-rw-rw-rw-    1 andrew      0 Jan 15 06:02 ~
+drwxr-xr-x   79 andrew   4096 May 18 02:44 [0m[01;34m.[0m
+drwxr-xr-x    4 root     4096 Mar 22 07:24 [01;34m..[0m
+-rw-r--r--    1 andrew    266 Jan  2 12:33 .ackrc
+drwx------    3 andrew   4096 Mar 19 19:37 [01;34m.adobe[0m
+-rw-r--r--    1 andrew  20166 May 12 03:38 .aliases.tmp
+drwx------    8 andrew   4096 Sep 24  2015 [01;34m.atom[0m
+drwx------    3 andrew   4096 Dec 31 19:50 [01;34m.audacity-data[0m
+drwxr-xr-x    9 andrew   4096 Feb  9 18:15 [01;34m.avn[0m
+-rw-r--r--    1 andrew     19 Jan 30 07:34 .avnrc
+-rw-r--r--    1 andrew 570699 Mar 30 10:17 .babel.json
+drwxr-xr-x    5 andrew   4096 May  4 05:55 [01;34mbackups[0m
+drwxr-xr-x    2 root     4096 Mar 22 07:24 [01;34m.basher[0m
+-rw-------    1 andrew  22175 May 18 02:46 .bash_history
+-rw-r--r--    1 andrew    220 Dec  1 04:49 .bash_logout
+-rw-r--r--    1 andrew    311 May 18 01:09 .bash_profile
+-rw-r--r--    1 andrew  20141 May 18 02:44 .bashrc
+lrwxrwxrwx    1 andrew     72 Apr 20 04:28 [01;36mbash-tips--from-snippets.txt[0m -> /home/andrew/.config/sublime-text-3/Packages/User/snippets/bash-tips.txt
+lrwxrwxrwx    1 andrew     72 Jan 15 02:40 [01;36mbash-tips.txt[0m -> /home/andrew/.config/sublime-text-3/Packages/User/snippets/bash-tips.txt
+drwxr-xr-x   12 andrew   4096 Apr 13 22:39 [01;34mbin[0m
+drwxr-xr-x    3 andrew   4096 May  4 03:03 [01;34m.bundle[0m
+drwx------   20 andrew   4096 Apr 16 17:02 [01;34m.cache[0m
+drwxr-xr-x    6 andrew   4096 Dec 16 00:39 [01;34m.cinnamon[0m
+drwxr-xr-x    2 andrew   4096 Feb 27 19:29 [01;34m.clementine[0m
+-rw-------    1 andrew    177 Jan 19 22:22 .clojure_history
+drwxr-xr-x   30 andrew   4096 May 18 01:42 [01;34m.config[0m
+drwxr-xr-x    3 andrew   4096 Mar 10 08:58 [01;34m.cordova[0m
+-rw-r--r--    1 andrew   3884 Mar 30 02:57 .dbshell
+drwx------    3 andrew   4096 Dec  1 21:36 [01;34m.dbus[0m
+drwxr-xr-x    3 andrew   4096 May 14 15:29 [01;34mDesktop[0m
+drwxr-xr-x    2 andrew   4096 Dec 16 00:41 [01;34mdesktop_backgrounds[0m
+-rw-------    1 andrew     28 May 12 08:26 .dmrc
+drwxrwxrwx    4 andrew   4096 Jan  2 05:09 [34;42mdoc[0m
+drwx------   11 andrew   4096 Apr 10 17:05 [01;34mDocuments[0m
+drwxr-xr-x   77 andrew  20480 May 16 07:10 [01;34mDownloads[0m
+drwxrwxrwx    3 andrew   4096 Jan 15 04:26 [34;42m.drip[0m
+drwx------    4 andrew   4096 Apr 20 01:04 [01;34m.emacs.d[0m
+drwxr-xr-x    3 andrew   4096 Dec 16 22:45 [01;34mextra[0m
+drwx------    4 andrew   4096 May 12 08:27 [01;34m.gconf[0m
+drwxr-xr-x    4 andrew   4096 Dec 30 01:50 [01;34m.gem[0m
+drwx------   24 andrew   4096 May 16 08:01 [01;34m.gimp-2.8[0m
+-rw-r--r--    1 andrew    344 Mar 10 02:41 .gitconfig
+drwx------    2 andrew   4096 May 18 00:49 [01;34m.git-credential-cache[0m
+-rw-r-----    1 andrew      0 Apr 10 23:11 .gksu.lock
+drwx------    3 andrew   4096 Dec  1 22:05 [01;34m.gnome[0m
+drwxr-xr-x    5 andrew   4096 Dec 29 15:07 [01;34m.gnome2[0m
+drwx------    2 andrew   4096 Dec  1 22:00 [01;34m.gnome2_private[0m
+drwx------    2 andrew   4096 Mar 22 03:24 [01;34m.gnupg[0m
+drwxr-xr-x    2 andrew   4096 Apr  1 11:30 [01;34m.gstreamer-0.10[0m
+-rw-------    1 andrew    213 Apr 25 04:20 .guard_history
+drwxr-xr-x    6 andrew   4096 Apr  1 02:59 [01;34m.heroku[0m
+-rw-------    1 andrew  12266 May 12 08:26 .ICEauthority
+-rw-r--r--    1 andrew   2187 May 11 23:39 installer.sh
+-rw-r--r--    1 andrew    668 Apr 11 04:02 .irbrc
+drwx------    4 andrew   4096 Apr 30  2015 [01;34m.java[0m
+-rw-------    1 andrew     23 Mar 23 00:15 .java_history
+drwxrwxrwx    3 andrew   4096 Mar 23 01:08 [34;42m.lein[0m
+-rw-------    1 andrew    359 May 15 11:40 .lesshst
+drwxr-xr-x    3 andrew   4096 Dec  1 21:36 [01;34m.linuxmint[0m
+drwxr-xr-x    3 andrew   4096 Dec 16 00:01 [01;34m.local[0m
+drwxr-xr-x    2 andrew   4096 Mar 22 17:11 [01;34mlog[0m
+drwxr-xr-x    2 andrew   4096 Mar 22 09:30 [01;34mlogs[0m
+drwxrwxrwx    3 andrew   4096 Mar 23 00:07 [34;42m.m2[0m
+drwx------    3 andrew   4096 Mar 19 19:37 [01;34m.macromedia[0m
+drwxr-xr-x    4 andrew   4096 Oct 26  2015 [01;34m.meteor[0m
+-rw-r--r--    1 andrew    204 Mar 22 03:24 .mkshrc
+drwx------    3 andrew   4096 Jan 30 01:40 [01;34m.moc[0m
+-rw-r--r--    1 andrew      0 Jul 29  2015 .mongorc.js
+drwxr-xr-x    4 andrew   4096 Dec  1 22:00 [01;34m.mozilla[0m
+drwxr-xr-x    8 andrew   4096 Feb  5 02:01 [01;34m.msf4[0m
+drwxr-xr-x    7 andrew   4096 Jan 30 01:08 [01;34mmusic[0m
+drwx------    3 andrew   4096 Nov 13  2015 [01;34m.mysql[0m
+-rw-r--r--    1 andrew   2198 May 18 02:10 neobundlenviminstall.sh
+-rw-r--r--    1 andrew    108 Apr 27 04:15 .NERDTreeBookmarks
+-rw-------    1 andrew    202 Mar 22 06:26 .netrc
+drwxr-xr-x    7 andrew   4096 Mar 30 09:38 [01;34m.node-gyp[0m
+-rw-r--r--    1 andrew     25 Jan 20 02:01 .node_repl_history
+drwxr-xr-x 2399 andrew 106496 Mar 29 16:16 [01;34m.npm[0m
+-rw-------    1 andrew     26 Feb 17 23:14 .npmrc
+lrwxrwxrwx    1 andrew     83 May 18 02:06 [01;36m.nvim[0m -> [01;34m/home/andrew/.config/sublime-text-3/Packages/User/snippets/dev-env/vim_configs/.vim[0m
+lrwxrwxrwx    1 andrew     19 May 18 02:25 [01;36m.nvimrc[0m -> /home/andrew/.vimrc
+drwxr-xr-x   11 andrew   4096 May 12 08:26 [01;34m.nvm[0m
+drwxrwxrwx    2 andrew   4096 Jan 15 04:18 [34;42m.oracle_jre_usage[0m
+-rw-r--r--    1 andrew 436604 Mar 15 22:39 P5.pdf
+drwxr-xr-x    3 andrew   4096 Apr 17 00:02 [01;34m.passenger[0m
+-rw-r--r--    1 andrew   4557 Mar 23 05:49 .pgadmin3
+-rw-------    1 andrew    275 Dec  2 05:47 .pgpass
+drwxr-xr-x    4 andrew   4096 May  4 05:53 [01;34mPhotos[0m
+drwx------    3 andrew   4096 Dec 16 00:19 [01;34m.pki[0m
+drwxr-xr-x    6 andrew   4096 Mar 23 04:41 [01;34m.pm2[0m
+-rw-r--r--    1 andrew    963 Mar 22 03:36 .profile
+drwxr-xr-x   20 andrew   4096 May 10 01:59 [01;34mprojects[0m
+drwxr-xr-x    3 andrew   4096 Apr 26 23:39 [01;34m.pry[0m
+-rw-------    1 andrew  57813 May 15 12:25 .pry_history
+lrwxrwxrwx    1 andrew     73 Apr 20 03:30 [01;36m.pryrc[0m -> /home/andrew/.config/sublime-text-3/Packages/User/snippets/dev-env/.pryrc
+-rw-------    1 andrew   3877 May 11 02:52 .psql_history
+drwxr-xr-x   12 andrew   4096 May  4 01:19 [01;34m.rbenv[0m
+-rw-r--r--    1 andrew   2022 Feb 23 02:03 .rediscli_history
+-rw-------    1 root     1024 May 15 08:04 .rnd
+drwxrwxr-x    3 andrew   4096 Dec 31 08:11 [01;34m.rubies[0m
+drwxr-xr-x    2 andrew   4096 Apr 27 04:03 [01;34mruby_repl_outfiles[0m
+drwxr-xr-x    2 andrew   4096 Jan  2 18:23 [01;34m.rush[0m
+-rw-r--r--    1 andrew 695245 May 10 02:22 [01;35mScreenshot from 2016-05-10 02:22:11.png[0m
+-rw-r--r--    1 andrew 695452 May 10 02:22 [01;35mScreenshot from 2016-05-10 02:22:15.png[0m
+-rw-r--r--    1 andrew 560621 May 15 12:12 [01;35mScreenshot from 2016-05-15 12:12:06.png[0m
+drwxr-xr-x    2 andrew   4096 Feb  9 18:33 [01;34mscript_backups[0m
+drwxr-xr-x    2 andrew   4096 Apr 27 01:16 [01;34mscripts[0m
+-rw-r--r--    1 andrew  24670 Aug 18  2015 Session.vim
+-rw-r--r--    1 andrew     30 Apr  8 11:13 .skylight
+drwxr-xr-x    4 andrew   4096 Feb 26 19:55 [01;34mSoulseek Downloads[0m
+drwxr-xr-x    3 andrew   4096 Feb 26 20:53 [01;34m.SoulseekQt[0m
+drwxr-xr-x    3 andrew   4096 May 18 00:55 [01;34m.spf13-vim-3[0m
+-rw-------    1 andrew    203 Apr 12 02:38 .sqlite_history
+drwxrwxr-x    3 andrew   4096 Dec 31 08:03 [01;34msrc[0m
+drwx------    2 andrew   4096 Mar 22 06:29 [01;34m.ssh[0m
+drwxr-xr-x    2 andrew   4096 Dec 16 00:06 [01;34m.swp[0m
+drwx------    3 andrew   4096 Dec 30 03:58 [01;34m.thumbnails[0m
+drwxr-xr-x   11 andrew   4096 Mar 22 03:51 [01;34mtmp[0m
+-rw-r--r--    1 andrew      0 May 12 04:51 .tmp_all_scripts
+-rw-r--r--    1 andrew  24075 May 12 04:58 .tmp_scripts_storage
+-rw-r--r--    1 andrew  23796 May 12 04:52 .tmptmpfile
+-rw-r--r--    1 andrew  14210 May 12 05:29 .tmptmptmp
+-rw-r--r--    1 andrew 372736 May 12 02:57 typescript
+-rw-r--r--    1 andrew   4152 Dec 16 01:43 .v8flags.3.14.5.9.andrew.json
+-rw-r--r--    1 andrew   8456 Jan 20 00:58 .v8flags.4.6.85.31.andrew.json
+drwxr-xr-x    3 andrew   4096 Jan 28 23:35 [01;34mVideos[0m
+lrwxrwxrwx    1 andrew     82 Apr 20 03:59 [01;36mvim[0m -> [01;34m/home/andrew/.config/sublime-text-3/Packages/User/snippets/dev-env/vim_configs/vim[0m
+drwxr-xr-x    2 andrew   4096 May 11 23:49 [01;34m~.vim[0m
+lrwxrwxrwx    1 andrew     83 Apr 20 03:59 [01;36m.vim[0m -> [01;34m/home/andrew/.config/sublime-text-3/Packages/User/snippets/dev-env/vim_configs/.vim[0m
+drwxr-xr-x    2 andrew   4096 May 18 01:46 [01;34m.vimbackup[0m
+drwxr-xr-x    6 andrew   4096 Apr 20 03:36 [01;34mvim_bks[0m
+-rw-------    1 andrew  21729 May 18 02:44 .viminfo
+lrwxrwxrwx    1 andrew     32 May 18 00:55 [01;36m.vimrc[0m -> /home/andrew/.spf13-vim-3/.vimrc
+lrwxrwxrwx    1 andrew     39 May 18 00:55 [01;36m.vimrc.before[0m -> /home/andrew/.spf13-vim-3/.vimrc.before
+-rw-r--r--    1 andrew   8859 May 11 23:36 .vimrc_BK_2016_05_11
+-rw-r--r--    1 andrew   9054 May 18 00:55 .vimrc__BK_2016_05_18
+lrwxrwxrwx    1 andrew     40 May 18 00:55 [01;36m.vimrc.bundles[0m -> /home/andrew/.spf13-vim-3/.vimrc.bundles
+-rw-r--r--    1 andrew      0 May 18 02:32 .vimrc.bundles.local
+-rw-r--r--    1 andrew   1623 May 18 01:39 .vimrc.local
+drwxr-xr-x    2 andrew   4096 May 18 02:36 [01;34m.vimswap[0m
+drwxr-xr-x    2 andrew   4096 May 18 01:46 [01;34m.vimundo[0m
+drwxr-xr-x    2 andrew   4096 May 18 00:56 [01;34m.vimviews[0m
+-rw-------    1 andrew    125 May 12 08:26 .Xauthority
+-rw-r--r--    1 andrew 200302 May 12 08:58 .xsession-errors
+-rw-r--r--    1 andrew    119 Mar 22 03:24 .zlogin
+-rw-r--r--    1 andrew    282 Mar 22 03:24 .zshrc
+[01;32mandrew@andrew-X751LAB[01;34m ~ $[00m ls scripts
+[0m[01;36mpry-utils[0m  [01;36mruby[0m  [01;36msh[0m
+[01;32mandrew@andrew-X751LAB[01;34m ~ $[00m ls scriptsa scripts
+total 20
+drwxr-xr-x  2 andrew 4096 Apr 27 01:16 [0m[01;34m.[0m
+drwxr-xr-x 79 andrew 4096 May 18 02:44 [01;34m..[0m
+lrwxrwxrwx  1 andrew   84 Apr 27 01:16 [01;36mpry-utils[0m -> [01;34m/home/andrew/.config/sublime-text-3/Packages/User/snippets/dev-env/scripts/pry-utils[0m
+lrwxrwxrwx  1 andrew   71 Jan  2 12:04 [01;36mruby[0m -> [01;34m/home/andrew/.config/sublime-text-3/Packages/User/snippets/scripts/ruby[0m
+lrwxrwxrwx  1 andrew   69 Jan  8 01:45 [01;36msh[0m -> [01;34m/home/andrew/.config/sublime-text-3/Packages/User/snippets/scripts/sh[0m
+[01;32mandrew@andrew-X751LAB[01;34m ~ $[00m lsa scripts[K[K
+total 4352
+-rw-rw-rw-    1 andrew      0 Jan 15 06:02 ~
+drwxr-xr-x   79 andrew   4096 May 18 02:44 [0m[01;34m.[0m
+drwxr-xr-x    4 root     4096 Mar 22 07:24 [01;34m..[0m
+-rw-r--r--    1 andrew    266 Jan  2 12:33 .ackrc
+drwx------    3 andrew   4096 Mar 19 19:37 [01;34m.adobe[0m
+-rw-r--r--    1 andrew  20166 May 12 03:38 .aliases.tmp
+drwx------    8 andrew   4096 Sep 24  2015 [01;34m.atom[0m
+drwx------    3 andrew   4096 Dec 31 19:50 [01;34m.audacity-data[0m
+drwxr-xr-x    9 andrew   4096 Feb  9 18:15 [01;34m.avn[0m
+-rw-r--r--    1 andrew     19 Jan 30 07:34 .avnrc
+-rw-r--r--    1 andrew 570699 Mar 30 10:17 .babel.json
+drwxr-xr-x    5 andrew   4096 May  4 05:55 [01;34mbackups[0m
+drwxr-xr-x    2 root     4096 Mar 22 07:24 [01;34m.basher[0m
+-rw-------    1 andrew  22202 May 18 02:46 .bash_history
+-rw-r--r--    1 andrew    220 Dec  1 04:49 .bash_logout
+-rw-r--r--    1 andrew    311 May 18 01:09 .bash_profile
+-rw-r--r--    1 andrew  20141 May 18 02:44 .bashrc
+lrwxrwxrwx    1 andrew     72 Apr 20 04:28 [01;36mbash-tips--from-snippets.txt[0m -> /home/andrew/.config/sublime-text-3/Packages/User/snippets/bash-tips.txt
+lrwxrwxrwx    1 andrew     72 Jan 15 02:40 [01;36mbash-tips.txt[0m -> /home/andrew/.config/sublime-text-3/Packages/User/snippets/bash-tips.txt
+drwxr-xr-x   12 andrew   4096 Apr 13 22:39 [01;34mbin[0m
+drwxr-xr-x    3 andrew   4096 May  4 03:03 [01;34m.bundle[0m
+drwx------   20 andrew   4096 Apr 16 17:02 [01;34m.cache[0m
+drwxr-xr-x    6 andrew   4096 Dec 16 00:39 [01;34m.cinnamon[0m
+drwxr-xr-x    2 andrew   4096 Feb 27 19:29 [01;34m.clementine[0m
+-rw-------    1 andrew    177 Jan 19 22:22 .clojure_history
+drwxr-xr-x   30 andrew   4096 May 18 01:42 [01;34m.config[0m
+drwxr-xr-x    3 andrew   4096 Mar 10 08:58 [01;34m.cordova[0m
+-rw-r--r--    1 andrew   3884 Mar 30 02:57 .dbshell
+drwx------    3 andrew   4096 Dec  1 21:36 [01;34m.dbus[0m
+drwxr-xr-x    3 andrew   4096 May 14 15:29 [01;34mDesktop[0m
+drwxr-xr-x    2 andrew   4096 Dec 16 00:41 [01;34mdesktop_backgrounds[0m
+-rw-------    1 andrew     28 May 12 08:26 .dmrc
+drwxrwxrwx    4 andrew   4096 Jan  2 05:09 [34;42mdoc[0m
+drwx------   11 andrew   4096 Apr 10 17:05 [01;34mDocuments[0m
+drwxr-xr-x   77 andrew  20480 May 16 07:10 [01;34mDownloads[0m
+drwxrwxrwx    3 andrew   4096 Jan 15 04:26 [34;42m.drip[0m
+drwx------    4 andrew   4096 Apr 20 01:04 [01;34m.emacs.d[0m
+drwxr-xr-x    3 andrew   4096 Dec 16 22:45 [01;34mextra[0m
+drwx------    4 andrew   4096 May 12 08:27 [01;34m.gconf[0m
+drwxr-xr-x    4 andrew   4096 Dec 30 01:50 [01;34m.gem[0m
+drwx------   24 andrew   4096 May 16 08:01 [01;34m.gimp-2.8[0m
+-rw-r--r--    1 andrew    344 Mar 10 02:41 .gitconfig
+drwx------    2 andrew   4096 May 18 00:49 [01;34m.git-credential-cache[0m
+-rw-r-----    1 andrew      0 Apr 10 23:11 .gksu.lock
+drwx------    3 andrew   4096 Dec  1 22:05 [01;34m.gnome[0m
+drwxr-xr-x    5 andrew   4096 Dec 29 15:07 [01;34m.gnome2[0m
+drwx------    2 andrew   4096 Dec  1 22:00 [01;34m.gnome2_private[0m
+drwx------    2 andrew   4096 Mar 22 03:24 [01;34m.gnupg[0m
+drwxr-xr-x    2 andrew   4096 Apr  1 11:30 [01;34m.gstreamer-0.10[0m
+-rw-------    1 andrew    213 Apr 25 04:20 .guard_history
+drwxr-xr-x    6 andrew   4096 Apr  1 02:59 [01;34m.heroku[0m
+-rw-------    1 andrew  12266 May 12 08:26 .ICEauthority
+-rw-r--r--    1 andrew   2187 May 11 23:39 installer.sh
+-rw-r--r--    1 andrew    668 Apr 11 04:02 .irbrc
+drwx------    4 andrew   4096 Apr 30  2015 [01;34m.java[0m
+-rw-------    1 andrew     23 Mar 23 00:15 .java_history
+drwxrwxrwx    3 andrew   4096 Mar 23 01:08 [34;42m.lein[0m
+-rw-------    1 andrew    359 May 15 11:40 .lesshst
+drwxr-xr-x    3 andrew   4096 Dec  1 21:36 [01;34m.linuxmint[0m
+drwxr-xr-x    3 andrew   4096 Dec 16 00:01 [01;34m.local[0m
+drwxr-xr-x    2 andrew   4096 Mar 22 17:11 [01;34mlog[0m
+drwxr-xr-x    2 andrew   4096 Mar 22 09:30 [01;34mlogs[0m
+drwxrwxrwx    3 andrew   4096 Mar 23 00:07 [34;42m.m2[0m
+drwx------    3 andrew   4096 Mar 19 19:37 [01;34m.macromedia[0m
+drwxr-xr-x    4 andrew   4096 Oct 26  2015 [01;34m.meteor[0m
+-rw-r--r--    1 andrew    204 Mar 22 03:24 .mkshrc
+drwx------    3 andrew   4096 Jan 30 01:40 [01;34m.moc[0m
+-rw-r--r--    1 andrew      0 Jul 29  2015 .mongorc.js
+drwxr-xr-x    4 andrew   4096 Dec  1 22:00 [01;34m.mozilla[0m
+drwxr-xr-x    8 andrew   4096 Feb  5 02:01 [01;34m.msf4[0m
+drwxr-xr-x    7 andrew   4096 Jan 30 01:08 [01;34mmusic[0m
+drwx------    3 andrew   4096 Nov 13  2015 [01;34m.mysql[0m
+-rw-r--r--    1 andrew   2198 May 18 02:10 neobundlenviminstall.sh
+-rw-r--r--    1 andrew    108 Apr 27 04:15 .NERDTreeBookmarks
+-rw-------    1 andrew    202 Mar 22 06:26 .netrc
+drwxr-xr-x    7 andrew   4096 Mar 30 09:38 [01;34m.node-gyp[0m
+-rw-r--r--    1 andrew     25 Jan 20 02:01 .node_repl_history
+drwxr-xr-x 2399 andrew 106496 Mar 29 16:16 [01;34m.npm[0m
+-rw-------    1 andrew     26 Feb 17 23:14 .npmrc
+lrwxrwxrwx    1 andrew     83 May 18 02:06 [01;36m.nvim[0m -> [01;34m/home/andrew/.config/sublime-text-3/Packages/User/snippets/dev-env/vim_configs/.vim[0m
+lrwxrwxrwx    1 andrew     19 May 18 02:25 [01;36m.nvimrc[0m -> /home/andrew/.vimrc
+drwxr-xr-x   11 andrew   4096 May 12 08:26 [01;34m.nvm[0m
+drwxrwxrwx    2 andrew   4096 Jan 15 04:18 [34;42m.oracle_jre_usage[0m
+-rw-r--r--    1 andrew 436604 Mar 15 22:39 P5.pdf
+drwxr-xr-x    3 andrew   4096 Apr 17 00:02 [01;34m.passenger[0m
+-rw-r--r--    1 andrew   4557 Mar 23 05:49 .pgadmin3
+-rw-------    1 andrew    275 Dec  2 05:47 .pgpass
+drwxr-xr-x    4 andrew   4096 May  4 05:53 [01;34mPhotos[0m
+drwx------    3 andrew   4096 Dec 16 00:19 [01;34m.pki[0m
+drwxr-xr-x    6 andrew   4096 Mar 23 04:41 [01;34m.pm2[0m
+-rw-r--r--    1 andrew    963 Mar 22 03:36 .profile
+drwxr-xr-x   20 andrew   4096 May 10 01:59 [01;34mprojects[0m
+drwxr-xr-x    3 andrew   4096 Apr 26 23:39 [01;34m.pry[0m
+-rw-------    1 andrew  57813 May 15 12:25 .pry_history
+lrwxrwxrwx    1 andrew     73 Apr 20 03:30 [01;36m.pryrc[0m -> /home/andrew/.config/sublime-text-3/Packages/User/snippets/dev-env/.pryrc
+-rw-------    1 andrew   3877 May 11 02:52 .psql_history
+drwxr-xr-x   12 andrew   4096 May  4 01:19 [01;34m.rbenv[0m
+-rw-r--r--    1 andrew   2022 Feb 23 02:03 .rediscli_history
+-rw-------    1 root     1024 May 15 08:04 .rnd
+drwxrwxr-x    3 andrew   4096 Dec 31 08:11 [01;34m.rubies[0m
+drwxr-xr-x    2 andrew   4096 Apr 27 04:03 [01;34mruby_repl_outfiles[0m
+drwxr-xr-x    2 andrew   4096 Jan  2 18:23 [01;34m.rush[0m
+-rw-r--r--    1 andrew 695245 May 10 02:22 [01;35mScreenshot from 2016-05-10 02:22:11.png[0m
+-rw-r--r--    1 andrew 695452 May 10 02:22 [01;35mScreenshot from 2016-05-10 02:22:15.png[0m
+-rw-r--r--    1 andrew 560621 May 15 12:12 [01;35mScreenshot from 2016-05-15 12:12:06.png[0m
+drwxr-xr-x    2 andrew   4096 Feb  9 18:33 [01;34mscript_backups[0m
+drwxr-xr-x    2 andrew   4096 Apr 27 01:16 [01;34mscripts[0m
+-rw-r--r--    1 andrew  24670 Aug 18  2015 Session.vim
+-rw-r--r--    1 andrew     30 Apr  8 11:13 .skylight
+drwxr-xr-x    4 andrew   4096 Feb 26 19:55 [01;34mSoulseek Downloads[0m
+drwxr-xr-x    3 andrew   4096 Feb 26 20:53 [01;34m.SoulseekQt[0m
+drwxr-xr-x    3 andrew   4096 May 18 00:55 [01;34m.spf13-vim-3[0m
+-rw-------    1 andrew    203 Apr 12 02:38 .sqlite_history
+drwxrwxr-x    3 andrew   4096 Dec 31 08:03 [01;34msrc[0m
+drwx------    2 andrew   4096 Mar 22 06:29 [01;34m.ssh[0m
+drwxr-xr-x    2 andrew   4096 Dec 16 00:06 [01;34m.swp[0m
+drwx------    3 andrew   4096 Dec 30 03:58 [01;34m.thumbnails[0m
+drwxr-xr-x   11 andrew   4096 Mar 22 03:51 [01;34mtmp[0m
+-rw-r--r--    1 andrew      0 May 12 04:51 .tmp_all_scripts
+-rw-r--r--    1 andrew  24075 May 12 04:58 .tmp_scripts_storage
+-rw-r--r--    1 andrew  23796 May 12 04:52 .tmptmpfile
+-rw-r--r--    1 andrew  14210 May 12 05:29 .tmptmptmp
+-rw-r--r--    1 andrew 372736 May 12 02:57 typescript
+-rw-r--r--    1 andrew   4152 Dec 16 01:43 .v8flags.3.14.5.9.andrew.json
+-rw-r--r--    1 andrew   8456 Jan 20 00:58 .v8flags.4.6.85.31.andrew.json
+drwxr-xr-x    3 andrew   4096 Jan 28 23:35 [01;34mVideos[0m
+lrwxrwxrwx    1 andrew     82 Apr 20 03:59 [01;36mvim[0m -> [01;34m/home/andrew/.config/sublime-text-3/Packages/User/snippets/dev-env/vim_configs/vim[0m
+drwxr-xr-x    2 andrew   4096 May 11 23:49 [01;34m~.vim[0m
+lrwxrwxrwx    1 andrew     83 Apr 20 03:59 [01;36m.vim[0m -> [01;34m/home/andrew/.config/sublime-text-3/Packages/User/snippets/dev-env/vim_configs/.vim[0m
+drwxr-xr-x    2 andrew   4096 May 18 01:46 [01;34m.vimb

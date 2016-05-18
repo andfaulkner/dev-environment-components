@@ -1,0 +1,496 @@
+unalias cd
+
+SNIPPETS_DIR=/home/andrew/.config/sublime-text-3/Packages/User/snippets
+alias mounts="cat /proc/mounts | ack -v 'none|rootfs'"
+alias spin="vlc -I ncurses" #path_to_song_here#
+
+################################################################################
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~ ENVIRONMENT VARIABLES ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+################################################################################
+# TODO: WTF is this? 
+ulimit=2048
+
+# postgres likes this because reasons
+POSTGRESQL=1
+
+ANDROID_HOME="/Android/Sdk"
+
+# folder containing ruby scripts (written in ruby only, not inline ruby)
+RUBY_SYS_SCRIPTS="~/scripts/ruby"
+
+# mysql doesn't work without this
+export MYSQL_HOME="/Projects"
+
+# export environment path
+PATH=.:.~/Android/Sdk/tools:~/Android/Sdk/platform-tools:~/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/opt/PostgreSQL/9.4/bin:~/bin/memcached-1.4.24
+PATH="$PATH:~/bin/mysql/bin"
+PATH="$PATH:/bin/flow/"
+PATH="$PATH:~/bin/elasticsearch-1.6.1/bin"
+PATH="$PATH:~/scripts/ruby"
+PATH="$PATH:~/bin/drip/bin"
+
+#reverse mouse wheel - rolling up pushes page down, rolling down pushes page up (like in OSX)
+# MOUSE_ID=`xinput list | grep -i 'Logitech.*Mouse' | awk -F= '{print $2}' | awk '{print $1}'`; xinput set-button-map $MOUSE_ID 1 2 3 5 4 6 7
+
+# NB relative path - shared dev environment items go in here. Many HOME dir items are symlinks to items in snippets
+export SNIPPETS_DIR="$(echo ~)/.config/sublime-text-3/Packages/User/snippets"
+
+################################################################################
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ BASHRC SPECIFIC ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+################################################################################
+# reload .bash_profile and .bashrc files into the terminal environment
+#alias rbash=". ~/.bashrc 2>/dev/null; . ~/.bash_profile 2>/dev/null"
+alias rbash=". ~/.bashrc 2>/dev/null; . $RUBY_SCRIPTS_BASH_PATH 2>/dev/null; . $CLOJURE_SCRIPTS_BASH_PATH 2>/dev/null; . $NODE_SCRIPTS_BASH_PATH 2>/dev/null; . $GIT_SCRIPTS_BASH_PATH 2>/dev/null; . $SEARCH_SCRIPTS_BASH_PATH 2>/dev/null; . $HOME/scripts/sh/cli_opts.sh 2>/dev/null"
+
+# Open a text file in a new vim window
+alias new_vim_window="gnome-terminal --title=~.BASHRC --geometry 110x50-0-0 -x vim"
+
+#make new tab remember current working directory
+. /etc/profile.d/vte.sh
+
+function new-path-var { 
+    #BACKUPS
+    mkdir -p ~/temp_bk 2>/dev/null
+    rm ~/temp_bk/.bashrc3 2>/dev/null
+    mv ~/temp_bk/.bashrc2 ~/temp_bk/.bashrc3 2>/dev/null 
+    mv ~/temp_bk/.bashrc ~/temp_bk/.bashrc2 2>/dev/null
+    cp ~/.bashrc ~/temp_bk/.bashrc 2>/dev/null
+    
+    #ADD TO BASHRC
+    echo "" >> ~/.bashrc
+    echo 'export PATH=$PATH:'${1} >> ~/.bashrc
+    #OUTPUT
+    echo "new path:\n"
+    $(echo 'export PATH=$PATH:'${1})
+    . ~/.bashrc
+}
+
+function new-path-var-2 {
+    rm ~/.bashrc_tmp2 2>/dev/null
+    cat .bashrc | grep -v "^PATH=" | grep -v "^export PATH" > ~/.bashrc_tmp2; 
+    echo 'export PATH='$PATH':'${1} >> ~/.bashrc_tmp2
+    mkdir -p ~/temp_bk
+    rm ~/temp_bk/.bashrc3 2>/dev/null
+    mv ~/temp_bk/.bashrc2 ~/temp_bk/.bashrc3 2>/dev/null 
+    mv ~/temp_bk/.bashrc ~/temp_bk/.bashrc2 2>/dev/null
+    mv ~/.bashrc ~/temp_bk/.bashrc 2>/dev/null
+    mv ~/.bashrc_tmp2 ~/.bashrc
+    . ~/.bashrc
+    echo "new path:\n"
+    echo 'export PATH='$PATH':'${1}
+}
+################################################################################
+
+###############################################################################
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ FILE UTILITIES ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+###############################################################################
+#make a file accessible to everyone
+alias mkshared="sudo chmod -R a+rwxXst"
+
+#get size of a file, or total size of a directory + all subdirectories
+alias fsize='du -chs'
+
+#=== FUNCTION ==========================================================
+#	 NAME: 	bu
+# DESCRIPTION: 	create backup file
+#=======================================================================
+function bu() { 
+  HOUR=`date +%k`
+  TIME=$HOUR:`date +%M`:`date +%S`
+  cp ./ $@.backup--date-20`date +%y`-`date +%m`-`date +%d`--$TIME;
+}
+###############################################################################
+
+################################################################################
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ SYSTEM UTILITIES ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~#
+################################################################################
+alias grep='grep --colour=auto'
+alias ll='ls -al'
+alias ls='ls --color=auto'
+alias gt="gnome-terminal"
+
+#find process running on a given port
+alias pidofport="sudo netstat -nlp | grep" #port number here
+
+###########################################
+#   Find processes slowing machine down   #
+###########################################
+# RSS = resident set size -- amount of mem allocated to that process & in RAM
+# VSZ = virtual memory size -- includes all mem the process can access, including
+#       mem swapped out & mem from shared libs
+alias show_cpu_overusers="ps aux | awk 'NR==1 || /^[a-zA-Z][^0-9]+[0-9]+[^0-9]+(([1-9][0-9])|([3-9]))\./' | ack -v 'cinnamon|nemo'"
+alias show_mem_leaks="ps aux | awk 'NR==1 || /^[a-zA-Z][^0-9]+[0-9]+[^0-9]+[0-9\.]+[^0-9]+(([1-9][0-9])|([3-9]))\./' | ack -v 'cinnamon|nemo'"
+###########################################
+
+#add new alias to bashrc
+function newalias { 
+    echo "" >> ~/.bashrc
+    echo "" >> ~/.bashrc
+    echo 'alias' ${1}='"'${2}'"' >> ~/.bashrc
+  $(echo 'alias' ${1}'='${2})
+}
+
+#rename a file
+function replace {
+  rename $(echo 's/'$1'/'$2'/') $(echo $1)*
+}
+
+# get the file extension
+# @param $1 - path/to/file.ext
+# @returns file extension, excluding the dot. E.g. js
+function getfileext {
+    echo "${1##*/}" | awk -F. '{print $NF}'
+}
+
+#insert text at beginning of file
+#Usage:  
+#    insertfirstline path/to/file.ext "text to insert before 1st line of file" 
+function insertfirstline {
+    echo $2 | cat - $1 > temp && mv temp $1
+}
+
+#return directory contents going from least to most recent
+alias llt='ll -t -r'
+
+alias lsa="ls -all"
+# display directories only
+alias lsd="lsa | grep '^d' | grep -v '\s\.\.\?$'"
+# display files only
+alias lsf="lsa | grep -v '^d'"
+# display hidden files & directories only
+alias lsh="$RUBY_SYS_SCRIPTS/lsr.rb -u"
+# display hidden files only
+alias lsfh="$RUBY_SYS_SCRIPTS/lsr.rb -ud"
+# display hidden directories only
+alias lsdh="$RUBY_SYS_SCRIPTS/lsr.rb -uf"
+
+PATH="$PATH:$RUBY_SYS_SCRIPTS/"
+
+alias ..="cd .."
+alias ...="cd ..; cd .."
+alias ....="cd ..; cd ..; cd .."
+alias .....="cd ..; cd ..; cd ..; cd .."
+alias ......='cd ..; cd ..; cd ..; cd ..; cd ..'
+alias .......='cd ..; cd ..; cd ..; cd ..; cd ..; cd ..'
+
+alias psmem="ps aux | sort -n -k5"
+
+#=== FUNCTION ==========================================================
+#	 NAME: 	newp
+# DESCRIPTION: 	launch app in a new process detached from the cli, &
+#		don't pipe err msgs from new app to launching terminal
+#=======================================================================
+function newp {
+  ($1 &> /dev/null &);
+}
+
+#=== FUNCTION ==========================================================
+#	 NAME: 	bkdir
+# DESCRIPTION: 	backs up a directory
+#=======================================================================
+function bkdir {
+  HOUR=`date +%k`
+  TIME=$HOUR:`date +%M`:`date +%S`
+  NEWDIR=$1.backup--date-20`date +%y`-`date +%m`-`date +%d`--$TIME
+  mkdir $NEWDIR
+  cp -R $1 $NEWDIR
+}
+
+#=== FUNCTION ==========================================================
+#	 NAME: 	nuke
+# DESCRIPTION: 	super-force kill process
+#=======================================================================
+function nuke { 
+  killall $1
+  killall -15 $1
+  killall -9 $1 
+}
+
+################################################################################
+
+# usage in a function to get lenth of a param: size=$(getstrlen $1)
+function getstrlen {
+    GETSTRLEN_PARAM=$1
+    size=${#GETSTRLEN_PARAM}
+    echo $size
+}
+
+################################################################################
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ CLOJURE ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+################################################################################
+# path to git script file
+CLOJURE_SCRIPTS_BASH_PATH=~/scripts/sh/clojure_scripts.sh
+# load clojure scripts into terminal
+source $CLOJURE_SCRIPTS_BASH_PATH 
+# open clojure script file
+alias bashrc_clojure="new_vim_window $CLOJURE_SCRIPTS_BASH_PATH"
+################################################################################
+
+################################################################################
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ RUBY ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+################################################################################
+# path to git script file
+RUBY_SCRIPTS_BASH_PATH=$HOME/scripts/sh/ruby_scripts.sh
+# load ruby scripts into terminal
+source $RUBY_SCRIPTS_BASH_PATH
+# open ruby script file
+alias bashrc_ruby="new_vim_window $RUBY_SCRIPTS_BASH_PATH"
+################################################################################
+
+################################################################################
+#~~~~~~~~~~~~~~~~~~~~~ FAST NAVIGATION TO COMMON LOCATIONS ~~~~~~~~~~~~~~~~~~~~~
+################################################################################
+alias windrive="cd /media/andfaulkner/7490994390990D2C"
+alias photos="cd /media/andfaulkner/7490994390990D2C/Users/andrew/Desktop/Photos"
+alias proj="cd /projects"
+alias nodetetris="cd /projects/node/production/nodeTetris"
+alias learnnode="cd /projects/cordova/learnnode"
+alias cmsmo="cd /projects/cordova/CMSMobile"
+alias cljproj="cd /projects/Clojurescript"
+alias nodemodules="cd /usr/local/lib/node_modules"
+alias nodemodulesg="cd /usr/lib/node_modules"
+alias bins="cd /usr/local/bin"
+alias cdredis="cd ~/bin/redis-3.0.3"
+alias snippets="cd ~/.config/sublime-text-3/Packages/User/snippets"
+alias goguideruby="pushd ./; cd ~/.config/sublime-text-3/Packages/User/snippets/_docs_guides/ruby"
+alias gorubyguide="pushd ./; cd ~/.config/sublime-text-3/Packages/User/snippets/_docs_guides/ruby"
+alias guideruby="pushd ./; cd ~/.config/sublime-text-3/Packages/User/snippets/_docs_guides/ruby"
+alias rubyguide="pushd ./; cd ~/.config/sublime-text-3/Packages/User/snippets/_docs_guides/ruby_docs"
+alias goseneca="cd ~/projects/seneca-0.6.1"
+alias gomysqldir="cd ~/bin/mysql"
+alias golearnruby="cd ~/projects/ruby/learning_ruby"
+alias gosamplerails="cd /home/andrew/projects/ruby/rails/sample_app"
+alias gorailssample="cd /home/andrew/projects/ruby/rails/sample_app"
+
+alias goproj="cd ~/projects"
+alias goruby="cd ~/projects/ruby"
+alias goscripts="cd ~/scripts"
+
+alias goartwebapp="cd /home/andrew/projects/own-projects/pattern-design-showcase-webapp"
+alias gousb="cd /media/andrew/SP\ UFD\ U2"
+alias goscripts="cd /home/andrew/.config/sublime-text-3/Packages/User/snippets/scripts"
+
+alias gomusic="cd /home/andrew/music" 
+alias godownloads="cd /home/andrew/Downloads"
+
+alias copymusic="mv ~/Downloads/*.mp3 ~/music/unsorted/"
+
+alias akr3="cd /home/andrew/projects/ackroo/akr-3"
+alias goakr3="cd /home/andrew/projects/ackroo/akr-3"
+
+################################################################################
+
+################################################################################
+#~~~~~~~~~~~~~~~~~~~~~~~~ INFO FILES & ENVIRONMENT SETUP ~~~~~~~~~~~~~~~~~~~~~~~
+################################################################################
+alias cheatsheet='gnome-terminal --title=BASH_TIPS -x vim ~/bash-tips.txt'
+
+# includes java settings
+source ~/scripts/sh/cli_opts.sh
+
+source ~/.bash_profile
+
+GENERAL_BASH_SCRIPTS=~/scripts/sh/portable_bashrc_additions.sh
+source $GENERAL_BASH_SCRIPTS  # ~/scripts/sh/portable_bashrc_additions.sh
+alias bashrc="new_vim_window $GENERAL_BASH_SCRIPTS" 
+
+#open bashrc to modify command line aliases & functions
+alias bashrc_SYS_INITIALIZE="new_vim_window ~/.bashrc"
+alias vimrc="new_vim_window ~/.vimrc"
+alias bashrc2="gedit ~/.bashrc"
+
+source ~/scripts/sh/sys_util_scripts.sh
+alias bashrc_sys="new_vim_window ~/scripts/sh/sys_util_scripts.sh"
+################################################################################
+
+################################################################################
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ SERVER ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+################################################################################
+alias redis="cd ~/bin/redis-3.0.3/src; ./redis-server --port" #give port number
+alias rediscli="~/bin/redis-3.0.3/src/redis-cli -p" #give port number
+
+alias pgcli="psql postgres"
+
+alias killpostgres="sudo service postgresql-9.4 stop"
+
+alias pingpost="curl --data 'param1=value1&param2=value2'"
+
+# EXAMPLE POSTGRES INITIALIZATION::
+# sudo -u postgres psql postgres
+#       -- creates a local db with user postgres
+# "initdb --pgdata=/Projects/testbed/express-backbone-testbed-3/dbstore --username=postgres --nodename=postgres"
+#       or try...
+#               "initdb --pgdata=/Projects/testbed/express-backbone-testbed-3/dbstore --username=andfaulkner --nodename=testbed"
+# postgres --coordinator -D /Projects/testbed/express-backbone-testbed-3/dbstore
+### kill a db running in /Projects/testbed/express-backbone-testbed-3/dbstore/
+# PGDATA=/Projects/testbed/express-backbone-testbed-3/dbstore/ pg_ctl stop
+################################################################################
+
+alias badhorse="traceroute -m 40 bad.horse | awk '{print \$2}' | grep -v '^[0-9\*]' | grep -v 'com\|net$' | grep -v '^to$'"
+
+################################################################################
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ NODE ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~#
+################################################################################
+NODE_SCRIPTS_BASH_PATH=~/scripts/sh/node_scripts.sh
+source $NODE_SCRIPTS_BASH_PATH #~/scripts/sh/node_scripts.sh
+alias bashrc_node="new_vim_window $NODE_SCRIPTS_BASH_PATH"
+alias bashrc_node2="vim $NODE_SCRIPTS_BASH_PATH"
+################################################################################
+
+################################################################################
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ GIT ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~#
+################################################################################
+GIT_SCRIPTS_BASH_PATH=~/scripts/sh/git_scripts.sh #path to git script file
+source $GIT_SCRIPTS_BASH_PATH #load git scripts into terminal 
+alias bashrc_git="new_vim_window $GIT_SCRIPTS_BASH_PATH" #open git script file
+################################################################################
+
+################################################################################
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ PROGRAMS ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+################################################################################
+alias sublime="~/bin/sublime_text_3/sublime_text"
+
+function gimpr {
+  (gimp $1 &> /dev/null &)
+}
+################################################################################
+
+################################################################################
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ CORDOVA / MOBILE ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+################################################################################
+alias crun="cordova run"
+alias creinstall="cordova platform remove android --save; cordova platform add android --save; cordova build"
+################################################################################
+
+################################################################################
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ SEARCHING ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+################################################################################
+SEARCH_SCRIPTS_BASH_PATH=~/scripts/sh/search_scripts.sh
+source $SEARCH_SCRIPTS_BASH_PATH
+# open searches script file
+alias bashrc_search="new_vim_window $SEARCH_SCRIPTS_BASH_PATH"
+################################################################################
+
+#=== FUNCTION ==========================================================
+# TODO:: FIX THIS UP. SUPER-USEFUL, BUT WAS UNMAINTAINED
+#	 NAME:  startenv
+# DESCRIPTION:  launch all important components of server 
+#
+# PARAMETER 1:  the string you're searching, between quotes.
+#=======================================================================
+function startenv {
+    murdernode
+    nuke gulp #kill instances of gulp
+    #nuke node #kill instances of node   
+    testbed3 #open project
+    sublime  #open IDE
+    gt --title=REDIS -x ~/bin/redis-3.0.3/src/redis-server --port 9999 #launch redis
+    gt --title=GULP -e "testbed3; gulp" #open gulp in project
+    (google-chrome https://soundcloud.com/stream &> /dev/null &) #open chome, open music    
+    echo "wait 5 seconds for redis to finish launching"
+    sleep 5
+    gt --title=SERVER -x "testbed3; gulp server" #launch server
+    echo "wait 5 seconds for server to finish launching"
+    sleep 5
+	redis-cli -p 9999
+    (google-chrome http://localhost:3003 &> /dev/null &) # open google chrome, point to server 
+}
+
+function startcurenv {
+    murdernode
+    nuke gulp
+    sublime
+    gt --title=REDIS -x ~/bin/redis-3.0.3/src/redis-server --port 9999
+    pushd ./
+    gt --title=GULP -e "popd; gulp"
+}
+#=======================================================================
+################################################################################
+
+################################################################################
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ PROJECT INFO ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+################################################################################
+#output a divider to the cli
+alias clidivider="echo '======================================'"
+
+#provides the current directory name - without the full path
+alias curdir="pwd | rev | cut -d'/' -f1 | rev"
+
+#info about the current project: current git branch, project folder
+alias curproj="echo ''; clidivider; echo 'CURRENT PROJECT:'; curdir; clidivider; echo ''; clidivider; echo 'CURRENT GIT BRANCH:'; curbranch; clidivider"
+################################################################################
+
+#export NODE_PATH=/usr/lib/nodejs:/usr/lib/node_modules:/usr/share/javascript:/usr/local/lib/node_modules
+
+################################################################################
+#~~~~~~~~~~~~~~~~~ SQLITE, ELASTICSEARCH, & POSTGRES SETTINGS ~~~~~~~~~~~~~~~~~~
+################################################################################
+# launch sqlitebrowser in a freestanding terminal-dissociated process
+alias sqlitebrowser="(sqlitebrowser &> /dev/null &)"
+
+export MAILSRV_DOMAIN=localhost;
+export MAIL_DISABLE_DNS_VALID=true;
+export MAIL_OVERRIDE_RECIP='afaulkner@i-sight.com';
+export ES_REFRESH_ON_SAVE=0;
+
+#export LOG_LEVEL=trace;
+export YF_ENABLED=false;
+export QUNIT_ENABLED=true;
+
+#export DB_SHARDS=1 ; # enable the shard plugin
+
+export POSTGRESQL=1 ; # use PostgreSQL instead of Mongo
+
+export DB_HOST_SHARD1=localhost ; # shard 1 host
+export DB_HOST_SHARD2=localhost ; # shard 2 host
+
+export DB_NAME_SHARD1=isight1 ; # shard 1 db name
+export DB_NAME_SHARD2=isight2 ; # shard 2 db name
+export PGDATA="/Users/afaulkner/Library/Application Support/Postgres/var-9.4"
+#export PGPASSFILE="~/.pgpass"
+################################################################################
+
+# PATH
+export NODE_PATH=/usr/lib/nodejs:/usr/lib/node_modules:/usr/share/javascript:/usr/local/lib/node_modules
+# export PATH="$HOME/.nodenv/bin:$PATH"
+# eval "$(nodenv init -)"
+
+export PATH="/usr/local/heroku/bin:$PATH" # Add RVM to PATH for scripting
+export PATH="$HOME/.rbenv/bin:$PATH"
+eval export PATH="/home/andrew/.rbenv/shims:${PATH}"
+source "/usr/lib/rbenv/libexec/../completions/rbenv.bash"
+rbenv rehash 2>/dev/null
+rbenv() {
+  typeset command
+  command="$1"
+  if [ "$#" -gt 0 ]; then
+    shift
+  fi
+
+  case "$command" in
+  rehash|shell)
+    eval `rbenv "sh-$command" "$@"`;;
+  *)
+    command rbenv "$command" "$@";;
+  esac
+}
+
+# add sqlitebrowser to path
+export PATH="$PATH:/home/andrew/bin/sqlitebrowser-3.8.0"
+export PATH="$SNIPPETS_DIR/custom-manuals:$PATH"
+
+# ALIASES ADDED FROM TERMINAL
+alias go_devenvmod="pushd ./; cd $SNIPPETS_DIR/dev-env/"
+
+function cd {
+    pushd ./ > 2/dev/null; cd $1 && echo success || popd -n"
+}
+alias back="echo 'DIR returning from:'; pwd; popd; echo 'DIR returned to:'; pwd"
+
+################################################################################
+#~~~~~~~~~~~~~~~~~~~~~~~~ RESTORE STACK TO PRE-RUN STATE ~~~~~~~~~~~~~~~~~~~~~~~
+################################################################################
+popd -n > /dev/null
+popd -n > /dev/null
+popd -n > /dev/null
+popd -n > /dev/null

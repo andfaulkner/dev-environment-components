@@ -1,6 +1,5 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =4
+let g:netrw_dirhist_cnt =3
 let g:netrw_dirhist_1='/Users/andrewfaulkner/projects/ackroo/akr-3'
 let g:netrw_dirhist_2='/Users/andrewfaulkner/projects/ackroo/akr-3/config/deploy'
 let g:netrw_dirhist_3='/home/andrew/.vim'
-let g:netrw_dirhist_4='/home/andrew/.nvim'

@@ -70,13 +70,6 @@ function unix_setup {
     # install nerdcommenter vim plugin
     curl http://www.vim.org/scripts/download_script.php?src_id=14455 > nerdcommenter.zip; unzip nerdcommenter.zip -d ./nerdcommenter; pushd ./; mkdir ~/.vim/plugin; mkdir ~/.vim/doc; cd nerdcommenter; mv doc/NERD_commenter.txt ~/.vim/doc/NERD_commenter.txt; mv plugin/NERD_commenter.vim ~/.vim/plugin/NERD_commenter.vim
 
-    pushd ./
-    cd ~/.vim/bundle
-    git clone git://github.com/tpope/vim-rails.git
-    git clone git://github.com/tpope/vim-bundler.git
-    popd
-
-
     unix_post_setup
 }
 
