@@ -10,6 +10,11 @@ puts "--------------------------------------------------------------------------
 #############################
 puts "***************** HELPERS *****************"
 
+def ask?(question)
+  puts question
+  $stdin.gets
+end
+
 puts " ----- DECIDE WHETHER TO USE REDIS AS A SESSION STORE (use cookies if not) -----"
 def select_redis_port
   counter = 1
@@ -27,6 +32,22 @@ def select_redis_port
   get_port.call
 end
 
+def select_db
+  counter = 1
+  select_db = ->{
+    db = ask?("What db would you like to use: Postgres or Mysql/mariadb?")
+    if not %w(postgres mariadb mysql).include? db.downcase
+      return 'mysql' if counter >= 3
+      puts "invalid db - please choose postgres, mysql, or mariadb"
+      counter = counter + 1
+      return select_db.call
+    end
+    db.downcase
+  }
+  select_db.call
+end
+
+
 def prepend_line_to_file(file, text_to_prepend)
   orig_file = file
   temp_file = "#{file}_temp"
@@ -39,16 +60,31 @@ def prepend_line_to_file(file, text_to_prepend)
 end
 
 
-use_redis = yes?("Do you want to use redis?")
-if use_redis
-  redis_port ||= yes?("Use a custom redis port or the default of 6379?") ? select_redis_port : 6379
+
+kick_it_oldskool = yes?("Do you want to kick it oldskool?")
+
+# defaults
+if yes?("Do you want to use a set of sane defaults?")
+  use_bootstrap = use_grape = use_rspec = true
+  use_redis = use_devise = make_user = !yes?("Would you like a minimal setup?")
+  redis_port = 6379 if use_redis
+  db = 'mysql'
+
+# custom
+else
+  use_bootstrap = yes?("Do you want to use bootstrap?")
+  use_grape = yes?("Do you want to use grape?")
+  (use_redis = yes?("Do you want to use redis?")) unless kick_it_oldskool
+  if use_redis
+    redis_port ||= yes?("Use a custom redis port or the default of 6379?") ? select_redis_port : 6379
+  end
+  if (use_devise = yes?("Do you want to use devise?"))
+    make_user = yes?("Create a default device model named User?")
+  end
+  use_rspec = yes?("Do you want to use rspec?")
 end
 
-use_devise = yes?("Do you want to use devise?")
-if use_devise
-  make_user = yes?("Create a default device model named User?")
-end
-use_rspec = yes?("Do you want to use rspec?")
+db = ask?("Would you like to use postgres or mysql/mariadb?")
 
 puts "------------------------------------------------------------------------------------------"
 ##################################
@@ -56,67 +92,101 @@ puts "--------------------------------------------------------------------------
 ##################################
 puts "***************** INSTALL GEMS *****************"
 
+if kick_it_oldskool
+  gem 'rails', '3.2.12'
+else
+  gem 'rails'
+end
+
+# REST API GEMS
+if use_grape
+  gem 'rabl'
+  gem 'grape'
+  gem 'hashie-forbidden_attributes'
+  gem 'grape-entity'
+end
+
+# AUTH GEMS
+gem 'warden-oauth2'
 gem 'oauth2'
-gem 'rabl'
 gem 'cancan'
-gem 'devise'
-gem 'delayed_job'
-gem 'bootstrap-sass'
-gem 'compass-rails'
-gem 'squeel'
-gem 'skylight'
-gem 'grape'
-gem 'roo'
-gem 'draper'
-gem 'ice_cube'
+gem 'devise' if use_devise
 gem 'bcrypt'
-gem 'rails'
-gem 'pg'
-gem 'rails_12factor'
-gem 'redis-session-store'
+
+#FRONTEND GEMS
+gem 'sass-rails'
+gem 'bootstrap-sass' if use_bootstrap
+gem 'compass-rails'
 gem 'jquery-turbolinks'
 gem 'sprockets'
+gem 'draper'
 
+## DB GEMS
+if db == 'postgres'
+  gem 'pg'
+elsif kick_it_oldskool
+  gem 'mysql2', '>= 0.3.13'
+else
+  gem 'mysql2'
+end
+gem 'redis-session-store' if use_redis
+gem 'squeel'
+gem "audited-activerecord"
+gem 'foreigner'
+gem 'activerecord-import'
+gem 'delayed_job_active_record'
+
+# OTHER GEMS
+gem 'skylight'
+gem 'roo'
+gem 'ice_cube'
+gem 'delayed_job'
+gem 'rails_12factor'
+gem 'os'
 
 # for use with grape
-gem 'hashie-forbidden_attributes'
 
 
 gem_group :development do
   gem 'thin'
+
   gem 'pry'
-  gem 'pry-byebug'
+  gem 'pry-debugger' if kick_it_oldskool
+  gem 'pry-byebug' unless kick_it_oldskool
   gem 'pry-rails'
   gem 'pry-stack_explorer'
   gem 'pry-coolline'
-  gem 'pry-em'
+  gem 'pry-em' unless kick_it_oldskool
   gem 'pry-theme'
   gem 'pry-macro'
-  gem 'pry-inline'
-  gem 'pry-git'
+  gem 'pry-inline' unless kick_it_oldskool
+  gem 'pry-git' unless kick_it_oldskool
   gem 'pry-rails'
   gem 'pry-awesome_print'
   gem 'pry-pretty-numeric'
   gem 'hirb'
+
   gem 'meta_request'
   gem 'better_errors'
+
   gem 'rubocop'
   gem 'capistrano-rails'
-  gem 'os'
+  gem 'fivemat'
+  gem 'quiet_assets'
 end
 
 gem_group :assets do
-	gem 'sprockets-es6'
+	gem 'sprockets-es6' unless kick_it_oldskool
 end
 
 gem_group :test, :development do
 	# gem 'minitest'
 	# gem 'mini_backtrace'
-	gem 'factory_girl'
+	gem 'factory_girl' if use_rspec
 	# gem 'minitest-reporters'
-  gem 'factory_girl_rails'
-  gem 'rspec'
-  gem 'rspec-rails'
+  gem 'factory_girl_rails' if use_rspec
+  gem 'rspec' if use_rspec
+  gem 'rspec-rails' if use_rspec
 end
 
 run "bundle install"
@@ -158,35 +228,37 @@ puts "--------------------------------------------------------------------------
 #######################################
 #          ENVIRONMENT SETUP          #
 #######################################
-puts "***************** ENVIRONMENT SETUP *****************"
-environment <<-ENV
-	config.time_zone = 'Eastern Time (US & Canada)'
-	javascript_engine = :js
-	config.generators do |g|
-	  g.orm :active_record
-	  g.test_framework :rspec
-	  g.javascript_engine :js
-	  g.stylesheet_engine :scss
-	end
-  console do
-    # this block is called only when running console, so we can safely require pry here
-    gem 'pry'
-    gem 'pry-byebug'
-    gem 'pry-rails'
-    gem 'pry-stack_explorer'
-    gem 'pry-coolline'
-    gem 'pry-em'
-    gem 'pry-theme'
-    gem 'pry-macro'
-    gem 'pry-inline'
-    gem 'pry-git'
-    gem 'pry-rails'
-    gem 'pry-awesome_print'
-    gem 'pry-pretty-numeric'
-    gem 'hirb'
-    config.console = Pry
-  end
-ENV
+if not kick_it_oldskool
+  puts "***************** ENVIRONMENT SETUP *****************"
+  environment <<-ENV
+  	config.time_zone = 'Eastern Time (US & Canada)'
+  	javascript_engine = :js
+  	config.generators do |g|
+  	  g.orm :active_record
+  	  g.test_framework :rspec
+  	  g.javascript_engine :js
+  	  g.stylesheet_engine :scss
+  	end
+    console do
+      # this block is called only when running console, so we can safely require pry here
+      gem 'pry'
+      gem 'pry-byebug'
+      gem 'pry-rails'
+      gem 'pry-stack_explorer'
+      gem 'pry-coolline'
+      gem 'pry-em'
+      gem 'pry-theme'
+      gem 'pry-macro'
+      gem 'pry-inline'
+      gem 'pry-git'
+      gem 'pry-rails'
+      gem 'pry-awesome_print'
+      gem 'pry-pretty-numeric'
+      gem 'hirb'
+      config.console = Pry
+    end
+  ENV
+end
 
 puts "------------------------------------------------------------------------------------------"
 ################################
@@ -248,7 +320,9 @@ after_bundle do
   # TODO: auto-reorder this
 	`echo "//= require lodash" >> app/assets/javascripts/application.js`
   `echo "//= require jquery.turbolinks" >> app/assets/javascripts/application.js`
-  `echo "//= require bootstrap/dropdown" >> app/assets/javascripts/application.js`
+  if use_bootstrap
+    `echo "//= require bootstrap/dropdown" >> app/assets/javascripts/application.js`
+  end
 
   puts "------------------------------------------------------------------------------------------"
   ###################################
@@ -261,8 +335,6 @@ after_bundle do
   `sed -i "3 i\\\n\\ \\ config.action_mailer.default_url_options = { host: 'localhost', port: 3000 }" config/environments/development.rb`
   `sed -i "4 i\\\n\\ \\ config.action_mailer.perform_deliveries = true" config/environments/development.rb`
   `sed -i "5 i\\\n\\ \\ config.action_mailer.delivery_method = :sendmail" config/environments/development.rb`
-
-  
 
   # RUN THESE AFTERWARDS:
   # cd ${@app_name}

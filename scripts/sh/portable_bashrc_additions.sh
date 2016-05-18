@@ -84,6 +84,14 @@ function show_aliases {
   rm ~/.all_src_scripts_tmp_holder
 }
 
+function show_aliases_mac {
+  cat ~/.bashrc > ~/.all_src_scripts_tmp_holder
+  cat ~/.bash_profile >> ~/.all_src_scripts_tmp_holder
+  cat ~/.
+ 
+}
+
+
 # store all scripts in a single temporary file
 function list_dir_files {
   #grab all "path to bash source script" containing vars from .bashrc, cat all files within
@@ -91,3 +99,11 @@ function list_dir_files {
   cat ~/.bash_profile >> ~/.tmp_bash_source_scripts_storage
   cat ~/.bashrc >> ~/.tmp_bash_source_scripts_storage
 }
+
+#insert text at beginning of file
+#Usage:
+#    insertfirstline path/to/file.ext "text to insert before 1st line of file"
+function insertfirstline {
+    echo $2 | cat - $1 > temp && mv temp $1
+}
+

@@ -1,0 +1,10 @@
+<snippet>
+	<description>Create a focus tag to run with rspec . --tag focus</description>
+	<content><![CDATA[
+, :focus => true${0}
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>rsfocus</tabTrigger>
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<scope>source.ruby</scope>
+</snippet>

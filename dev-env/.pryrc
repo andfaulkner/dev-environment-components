@@ -8,13 +8,15 @@ require "active_record"
 # needed utils
 require 'os'
 
+puts "OS: #{OS}"
+
 ## require 'pry-coolline'
-if OS.config["RUBY_VERSION_NAME"].include?("ruby-2")
+if !OS.config["ruby_version"].include?("1.9") && OS.config["RUBY_VERSION_NAME"].include?("ruby-2")
     require 'pry-byebug'
 else
-    require 'pry-vterm_aliases'
-    require 'interactive_editor'
-    require 'awesome_print_colors'
+#  require 'pry-vterm_aliases'
+#    require 'interactive_editor'
+#    require 'awesome_print_colors'
     require 'pry-debugger'
 end
 
@@ -22,13 +24,13 @@ end
 # if OS.mac? end
 
 require 'pry-rails'
-require 'pry-macro'
+# require 'pry-macro'
 require 'pry-theme'
 require 'pry-awesome_print'
 require 'pry-stack_explorer'
 require 'hirb'
 require 'rubygems'
-require 'awesome_print'
+#require 'awesome_print'
 
 Gem.path.each do |gemset|
   $:.concat(Dir.glob("#{gemset}/gems/pry-*/lib"))
@@ -39,13 +41,10 @@ $:.uniq!
 Pry.config.color = true
 Pry.config.theme = "solarized"
 
-Pry.prompt = [proc { |obj, nest_level, _| "#{RUBY_VERSION} (#{obj}):#{nest_level} > " }, proc { |obj, nest_level, _| "#{RUBY_VERSION} (#{obj}):#{nest_level} * " }]
+# Pry.prompt = [proc { |obj, nest_level, _| "#{RUBY_VERSION} (#{obj}):#{nest_level} > " }, proc { |obj, nest_level, _| "#{RUBY_VERSION} (#{obj}):#{nest_level} * " }]
 
-# Custom prompt
-Pry.print = proc { |output, value| output.puts value.ai }
-#
 # # Include current object scope and time in prompt:
-Pry.config.prompt = proc { |obj, nest_level, _| "[pry@#{obj}] #{Time.now.strftime('%I:%M:%S %p')} > " }
+# Pry.config.prompt = proc { |obj, nest_level, _| "[pry@#{obj}] #{Time.now.strftime('%I:%M:%S %p')} > " }
 
 
 ################################################################################
