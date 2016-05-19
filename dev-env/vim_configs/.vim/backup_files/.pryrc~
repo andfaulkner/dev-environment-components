@@ -84,8 +84,8 @@ def bash(command)
   escaped_command = Shellwords.escape(command)
   system "bash -c #{escaped_command}"
 end
-# USAGE: 
-# bash("echo $0")  # => bash
-# cmd = "cat <(echo 'Saluton!') <(echo 'Kiel vi fartas?')"
-# bash(cmd)        # => Saluton! Kiel vi fartas?
+
+
+
+
 

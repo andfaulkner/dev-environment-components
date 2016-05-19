@@ -41,6 +41,8 @@ function unix_setup {
 #lrwxrwxrwx    1 andrew     82 Apr 20 03:59 vim -> /home/andrew/.config/sublime-text-3/Packages/User/snippets/dev-env/vim_configs/vim
 #drwxr-xr-x    2 andrew   4096 May 11 23:49 ~.vim
 #lrwxrwxrwx    1 andrew     83 Apr 20 03:59 .vim -> /home/andrew/.config/sublime-text-3/Packages/User/snippets/dev-env/vim_configs/.vim
+#lrwxrwxrwx    1 andrew     83 May 18 02:06 .nvim -> /home/andrew/.config/sublime-text-3/Packages/User/snippets/dev-env/vim_configs/.vim
+#lrwxrwxrwx    1 andrew     19 May 18 02:25 .nvimrc -> /home/andrew/.vimrc
 
 
 
