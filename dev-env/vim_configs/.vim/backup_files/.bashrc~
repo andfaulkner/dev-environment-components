@@ -1,5 +1,3 @@
-unalias cd
-
 SNIPPETS_DIR=/home/andrew/.config/sublime-text-3/Packages/User/snippets
 alias mounts="cat /proc/mounts | ack -v 'none|rootfs'"
 alias spin="vlc -I ncurses" #path_to_song_here#
@@ -482,15 +480,9 @@ export PATH="$SNIPPETS_DIR/custom-manuals:$PATH"
 # ALIASES ADDED FROM TERMINAL
 alias go_devenvmod="pushd ./; cd $SNIPPETS_DIR/dev-env/"
 
-function cd {
-    pushd ./ > 2/dev/null; cd $1 && echo success || popd -n"
-}
 alias back="echo 'DIR returning from:'; pwd; popd; echo 'DIR returned to:'; pwd"
 
 ################################################################################
 #~~~~~~~~~~~~~~~~~~~~~~~~ RESTORE STACK TO PRE-RUN STATE ~~~~~~~~~~~~~~~~~~~~~~~
 ################################################################################
-popd -n > /dev/null
-popd -n > /dev/null
-popd -n > /dev/null
 popd -n > /dev/null

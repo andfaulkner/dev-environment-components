@@ -28,7 +28,7 @@ function whereami {
     echo ""
     echo "**************************************"
     echo "current git branch:"
-    g_curbr
+    git status | head -1 | awk '{print $3}'
     echo "**************************************"
     echo ""
     git status
@@ -55,7 +55,7 @@ function newmanual {
     cp "`which man__TEMPLATE`" "`whichdir man__TEMPLATE`/man__$1"
     vim "`whichdir man__TEMPLATE`/man__$1"
 }
- 
+
 alias rol_linecount="ruby -ne 'END {puts $.}'"
 
 alias rol_out_linecount="ruby -pe 'END {puts \"\n#{$.}\"}'"
@@ -103,7 +103,6 @@ function show_aliases_mac {
   cat ~/.bashrc > ~/.all_src_scripts_tmp_holder
   cat ~/.bash_profile >> ~/.all_src_scripts_tmp_holder
   cat ~/.
- 
 }
 
 

@@ -13,4 +13,5 @@ echo "***** INLINE CONSOLE *****"
 echo "## Open a console in current panel       :e term://bash"
 echo "## Open a console in new panel below:    :sp term://bash"
 echo "## Open a console in new panel to right: :vsp term://bash"
+echo ""
 echo '---------------------------------------------------------------------------------\n'
