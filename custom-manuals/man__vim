@@ -13,4 +13,8 @@ echo "***** INLINE CONSOLE *****"
 echo "## Open a console in current panel       :e term://bash"
 echo "## Open a console in new panel below:    :sp term://bash"
 echo "## Open a console in new panel to right: :vsp term://bash"
+echo ""
+echo "**** FIND AND REPLACE EXAMPLES *****"
+echo "remove start-of-line irb(main):020:0> + a space    < :%s/irb(main):.*>\s//g"
+echo "remove start-of-line => + a space                  :%s/^=>\s//g
 echo '---------------------------------------------------------------------------------\n'
