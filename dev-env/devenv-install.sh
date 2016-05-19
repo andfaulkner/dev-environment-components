@@ -133,6 +133,9 @@ function linux_setup {
     # GET LATEST LUA
     lua > ~/Documents/.ERROR_OUTPUT_TEMP 2>&1; cat ~/Documents/.ERROR_OUTPUT_TEMP | head -2 | tail -1 | awk '{print $2}' | xargs sudo apt-get install
 
+    # INSTALL REALPATH
+    sudo apt-get install realpath
+    
     unix_setup
 }
 
