@@ -5,6 +5,7 @@ group :test, :development do
 	gem "morpher", "0.2.3"
 	gem "mutant", "0.5.26"
 	gem "mutant-rspec", "0.5.26"
+  gem 'fivemat'
 end
 
 group :development do

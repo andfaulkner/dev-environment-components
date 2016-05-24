@@ -58,3 +58,4 @@ VIMPLUGINS=$HOME/.config/sublime-text-3/Packages/User/snippets/dev-env/vim_confi
 #alias list_vimplugins="ls -ao $VIMPLUGINS | sed s/^[^:]*:[^a-zA-Z]*//g"
 alias list_vimplugins="ls $VIMPLUGINS"
 
+alias goguides='pushd ./; cd "$SNIPPETS_DIR/_docs_guides"'

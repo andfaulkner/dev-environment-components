@@ -1,0 +1,137 @@
+let s:so_save = &so | let s:siso_save = &siso | set so=0 siso=0
+argglobal
+let s:cpo_save=&cpo
+set cpo&vim
+inoremap <buffer> <silent> <BS> =AutoPairsDelete()
+xnoremap <buffer> <silent>  a} `>a}`<i{
+xnoremap <buffer> <silent>  a{ `>a}`<i{
+xnoremap <buffer> <silent>  a) `>a)`<i(
+xnoremap <buffer> <silent>  a( `>a)`<i(
+xnoremap <buffer> <silent>  a' `>a'`<i'
+xnoremap <buffer> <silent>  a] `>a]`<i[
+xnoremap <buffer> <silent>  a[ `>a]`<i[
+xnoremap <buffer> <silent>  a" `>a"`<i"
+xnoremap <buffer> <silent>  a` `>a``<i`
+inoremap <buffer> <silent> î :call AutoPairsJump()a
+inoremap <buffer> <silent> <expr> ð AutoPairsToggle()
+inoremap <buffer> <silent> â =AutoPairsBackInsert()
+inoremap <buffer> <silent> å =AutoPairsFastWrap()
+inoremap <buffer> <silent>  =AutoPairsDelete()
+cmap <buffer>  <Plug><cfile>
+inoremap <buffer> <silent>   =AutoPairsSpace()
+inoremap <buffer> <silent> " =AutoPairsInsert('"')
+inoremap <buffer> <silent> ' =AutoPairsInsert('''')
+inoremap <buffer> <silent> ( =AutoPairsInsert('(')
+inoremap <buffer> <silent> ) =AutoPairsInsert(')')
+noremap <buffer> <silent> î :call AutoPairsJump()
+noremap <buffer> <silent> ð :call AutoPairsToggle()
+inoremap <buffer> <silent> [ =AutoPairsInsert('[')
+inoremap <buffer> <silent> ] =AutoPairsInsert(']')
+inoremap <buffer> <silent> ` =AutoPairsInsert('`')
+inoremap <buffer> <silent> { =AutoPairsInsert('{')
+inoremap <buffer> <silent> } =AutoPairsInsert('}')
+let &cpo=s:cpo_save
+unlet s:cpo_save
+setlocal noautoindent
+setlocal nobinary
+setlocal bufhidden=
+setlocal buflisted
+setlocal buftype=
+setlocal cindent
+setlocal cinkeys=0{,0},0),:,0#,!^F,o,O,e
+setlocal cinoptions=(0,u0,U0
+setlocal cinwords=if,else,while,do,for,switch
+setlocal colorcolumn=
+setlocal comments=s1:/*,mb:*,ex:*/,://,b:#,:%,:XCOMM,n:>,fb:-
+setlocal commentstring=/*%s*/
+setlocal complete=.,w,b,u,t,i
+setlocal completefunc=syntaxcomplete#Complete
+setlocal nocopyindent
+setlocal cryptmethod=
+setlocal nocursorbind
+setlocal nocursorcolumn
+setlocal nocursorline
+setlocal define=
+setlocal dictionary=
+setlocal nodiff
+setlocal equalprg=
+setlocal errorformat=%\\S%\\+\ \ %#%[cefi]%[rxod]%[eir]%[a-z]%#%\\x1b[0m\ %\\+%\\S%\\+%$%\\&%\\x1b%\\S%\\+\ \ %#%m%\\>%\\x1b[0m\ \ %#%f,%\\s\ %#%[cefi]%[rxod]%[eir]%[a-z]%#\ %\\+%\\S%\\+%$%\\&%\\s\ %#%m%\\>\ \ %#%f,Overwrite%.%#%\\S%\\+\ \ %#%m%\\x1b[0m\ \ %#%f,%-GOverwrite%.%#\"h\"%.%#,%.%#rails\ test\ %f:%l,%+GCurrent\ version:%.%#,%+G\ %#Status\ %#Migration\ ID%.%#,%+G\ The\ fixture\ ID\ for\ %.%#,%f:\ %s\ (%m)%$%\\&%.%#/fixtures/%.%#(%\\d%\\+),%+G\ %#Prefix\ %#Verb%.%#,%+G\ %#Code\ LOC:\ %.%#,%+GAbout\ your\ application's\ environment,%+Grun\ %\\S%#::Application.routes,%+Irails\ %\\S%\\+%\\s%\\+#\ %.%#,%+Eruby:%.%#(LoadError),%+EUsage:%.%#,%+ECould\ not\ find\ generator%.%#,%+EType\ 'rails'\ for\ help.,%D(in\ %f),%\\s%#from\ %f:%l:%m,%\\s%#from\ %f:%l:,%\\s%##\ %f:%l:%m,%\\s%##\ %f:%l,%\\s%#[%f:%l:\ %#%m,%\\s%#%f:%l:\ %#%m,%\\s%#%f:%l:,%m\ [%f:%l]:,%+Erake\ aborted!,%+EDon't\ know\ how\ to\ build\ task\ %.%#,%+Einvalid\ option:%.%#,%+Irake\ %\\S%\\+%\\s%\\+#\ %.%#,chdir\ /Users/andrewfaulkner/projects/ackroo/akr-3
+setlocal expandtab
+if &filetype != 'gitcommit'
+setlocal filetype=gitcommit
+endif
+setlocal foldcolumn=0
+setlocal foldenable
+setlocal foldexpr=0
+setlocal foldignore=#
+setlocal foldlevel=0
+setlocal foldmarker={{{,}}}
+setlocal foldmethod=manual
+setlocal foldminlines=1
+setlocal foldnestmax=20
+setlocal foldtext=fugitive#foldtext()
+setlocal formatexpr=
+setlocal formatoptions=tcq
+setlocal formatlistpat=^\\s*\\d\\+[\\]:.)}\\t\ ]\\s*
+setlocal grepprg=
+setlocal iminsert=0
+setlocal imsearch=0
+setlocal include=
+setlocal includeexpr=rails#includeexpr(v:fname)
+setlocal indentexpr=
+setlocal indentkeys=0{,0},:,0#,!^F,o,O,e
+setlocal noinfercase
+setlocal iskeyword=@,48-57,_,192-255
+setlocal keywordprg=git\ --git-dir='/Users/andrewfaulkner/projects/ackroo/akr-3/.git'\ show
+setlocal nolinebreak
+setlocal nolisp
+setlocal nolist
+setlocal makeprg=bundle\ exec\ rake
+setlocal matchpairs=(:),{:},[:]
+setlocal modeline
+setlocal modifiable
+setlocal nrformats=octal,hex
+setlocal nonumber
+setlocal numberwidth=4
+setlocal omnifunc=syntaxcomplete#Complete
+setlocal path=~/projects/ackroo/akr-3/lib,~/projects/ackroo/akr-3/vendor,~/projects/ackroo/akr-3/app/models/concerns,~/projects/ackroo/akr-3/app/controllers/concerns,~/projects/ackroo/akr-3/app/controllers,~/projects/ackroo/akr-3/app/helpers,~/projects/ackroo/akr-3/app/mailers,~/projects/ackroo/akr-3/app/models,~/projects/ackroo/akr-3/app/*,~/projects/ackroo/akr-3/app/views,~/projects/ackroo/akr-3/test,~/projects/ackroo/akr-3/test/unit,~/projects/ackroo/akr-3/test/functional,~/projects/ackroo/akr-3/test/integration,~/projects/ackroo/akr-3/test/controllers,~/projects/ackroo/akr-3/test/helpers,~/projects/ackroo/akr-3/test/mailers,~/projects/ackroo/akr-3/test/models,~/projects/ackroo/akr-3/spec,~/projects/ackroo/akr-3/spec/controllers,~/projects/ackroo/akr-3/spec/helpers,~/projects/ackroo/akr-3/spec/mailers,~/projects/ackroo/akr-3/spec/models,~/projects/ackroo/akr-3/spec/views,~/projects/ackroo/akr-3/spec/lib,~/projects/ackroo/akr-3/spec/features,~/projects/ackroo/akr-3/spec/requests,~/projects/ackroo/akr-3/spec/integration,
+setlocal nopreserveindent
+setlocal nopreviewwindow
+setlocal quoteescape=\\
+setlocal noreadonly
+setlocal norelativenumber
+setlocal noscrollbind
+setlocal shiftwidth=4
+setlocal noshortname
+setlocal nosmartindent
+setlocal softtabstop=0
+setlocal nospell
+setlocal spellcapcheck=[.?!]\\_[\\])'\"\	\ ]\\+
+setlocal spellfile=
+setlocal spelllang=en
+setlocal statusline=%!airline#statusline(1)
+setlocal suffixesadd=.rb
+setlocal swapfile
+setlocal synmaxcol=3000
+if &syntax != 'gitcommit'
+setlocal syntax=gitcommit
+endif
+setlocal tabstop=8
+setlocal tags=~/projects/ackroo/akr-3/tags,~/projects/ackroo/akr-3/tmp/tags,./tags,tags,~/.rbenv/versions/1.9.3-p551/lib/ruby/gems/1.9.1/bundler/gems/doorkeeper-e3eb63316b44/tags,~/.rbenv/versions/1.9.3-p551/lib/ruby/gems/1.9.1/bundler/gems/grape-swagger-ui-1cfcf02e10af/tags,~/.rbenv/versions/1.9.3-p551/lib/ruby/gems/1.9.1/bundler/gems/userstamp-fe41d4dc5e56/tags,~/.rbenv/versions/1.9.3-p551/lib/ruby/gems/1.9.1/gems/actionmailer-3.2.12/tags,~/.rbenv/versions/1.9.3-p551/lib/ruby/gems/1.9.1/gems/actionpack-3.2.12/tags,~/.rbenv/versions/1.9.3-p551/lib/ruby/gems/1.9.1/gems/activemodel-3.2.12/tags,~/.rbenv/versions/1.9.3-p551/lib/ruby/gems/1.9.1/gems/activerecord-3.2.12/tags,~/.rbenv/versions/1.9.3-p551/lib/ruby/gems/1.9.1/gems/activerecord-import-0.3.1/tags,~/.rbenv/versions/1.9.3-p551/lib/ruby/gems/1.9.1/gems/activeresource-3.2.12/tags,~/.rbenv/versions/1.9.3-p551/lib/ruby/gems/1.9.1/gems/activesupport-3.2.12/tags,~/.rbenv/versions/1.9.3-p551/lib/ruby/gems/1.9.1/gems/acts_as_xlsx-1.0.6/tags,~/.rbenv/versions/1.9.3-p551/lib/r
+setlocal textwidth=72
+setlocal thesaurus=
+setlocal noundofile
+setlocal nowinfixheight
+setlocal nowinfixwidth
+setlocal nowrap
+setlocal wrapmargin=0
+silent! normal! zE
+let s:l = 1 - ((0 * winheight(0) + 18) / 36)
+if s:l < 1 | let s:l = 1 | endif
+exe s:l
+normal! zt
+1
+normal! 0
+let &so = s:so_save | let &siso = s:siso_save
+doautoall SessionLoadPost
+" vim: set ft=vim :
