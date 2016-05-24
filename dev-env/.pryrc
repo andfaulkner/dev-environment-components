@@ -89,3 +89,14 @@ end
 # cmd = "cat <(echo 'Saluton!') <(echo 'Kiel vi fartas?')"
 # bash(cmd)        # => Saluton! Kiel vi fartas?
 
+def test_def
+    puts "TEST WIN!"
+end
+
+def own_instance_methods_only(object)
+  object.instance_methods - object.class.instance_methods
+end
+
+def own_methods_only(object)
+  object.methods - Class.methods - Object.methods - BasicObject.methods - Module.methods
+end

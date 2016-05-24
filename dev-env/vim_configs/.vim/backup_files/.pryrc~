@@ -84,8 +84,15 @@ def bash(command)
   escaped_command = Shellwords.escape(command)
   system "bash -c #{escaped_command}"
 end
+# USAGE: 
+# bash("echo $0")  # => bash
+# cmd = "cat <(echo 'Saluton!') <(echo 'Kiel vi fartas?')"
+# bash(cmd)        # => Saluton! Kiel vi fartas?
 
+def test_def
+    puts "TEST WIN!"
+end
 
-
-
-
+def own_methods_only(object)
+  object.instance_methods - object.class.instance_methods
+end

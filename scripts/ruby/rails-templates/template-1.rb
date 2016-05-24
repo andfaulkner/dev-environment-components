@@ -343,6 +343,7 @@ after_bundle do
   ###################################
   puts "***************** INSTALLATIONS *****************"
 
+  # INJECT LINES INTO FILES
   # insert default urls for mailer
   `sed -i "3 i\\\n\\ \\ config.action_mailer.default_url_options = { host: 'localhost', port: 3000 }" config/environments/test.rb`
   `sed -i "3 i\\\n\\ \\ config.action_mailer.default_url_options = { host: 'localhost', port: 3000 }" config/environments/development.rb`
@@ -427,6 +428,16 @@ Style/BlockComments:
 
 DefaultFormatter: progress" >> .rubocop.yml
 RUBOCOP
+
+## PULL SCRIPTS IN FROM WEB
+`mkdir app/assets/vendor/`
+`wget https://github.com/twbs/bootstrap/releases/download/v3.3.6/bootstrap-3.3.6-dist.zip`
+`unzip bootstrap-3.3.6-dist.zip -d app/assets/vendor/`
+`rm bootstrap-3.3.6-dist.zip`
+`mv app/assets/vendor/bootstrap-3.3.6-dist app/assets/vendor/bootstrap`
+`wget https://raw.githubusercontent.com/lodash/lodash/4.13.1/dist/lodash.min.js`
+`mv lodash.min.js app/assets/vendor/`
+
 
 
 #   session_store = :redis_session_store

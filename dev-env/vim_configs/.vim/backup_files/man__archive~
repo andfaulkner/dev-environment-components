@@ -13,5 +13,5 @@ echo "## LIST TAR ARCHIVE CONTENT:     tar -tvf sometarfile.tar.gz"
 echo "## VIEW TAR ARCHIVE SIZE:        tar -czf sometarfile.tar.gz \| wc -c"
 echo "---------------------------------------------------------------------------------"
 echo "ZIP"
-echo "## UNZIP INTO SPECIFIED DIR:    unzip somezipfile.zip -d ./output_dir"
+echo "## UNZIP INTO SPECIFIED DIR:    zip somezipfile.zip -d ./output_dir"
 echo '---------------------------------------------------------------------------------\n'
