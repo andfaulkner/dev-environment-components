@@ -104,6 +104,9 @@ function mac_setup {
     echo "mac"
     MAIN_BASH_FILE=".bash_profile"
     brew install neovim/neovim/neovim
+    brew cask install caskroom/versions/java7
+    brew install gradle
+    brew install ant
     unix_setup
 }
 

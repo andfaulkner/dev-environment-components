@@ -63,6 +63,8 @@ gem install rack-cors', :require => 'rack/cors
 gem install rabl -v "0.12.0"
 gem install grape-entity
 gem install hashie-forbidden_attributes
+# requests to REST APIS
+gem install rest-client 
 
 # ********** FRONTEND, ASSETS **********
 gem install lodash-rails

@@ -9,6 +9,13 @@ alias ......="cd ../../../../.."
 
 alias back="echo 'DIR returning from:'; pwd; popd; echo 'DIR returned to:'; pwd"
 
+alias go_android_tools="pushd ./; cd $HOME/Library/Android/sdk; ls -ao; echo ''; pwd"
+
+alias downloads="pushd ./; cd $HOME/Downloads"
+alias documents="pushd ./; cd $HOME/Documents"
+alias proj="pushd ./; cd $HOME/projects"
+alias anproj="pushd ./; cd $HOME/projects/android"
+
 ## super-ls
 alias lsa="ls -ao"
 
@@ -17,7 +24,7 @@ alias vim="nvim"
 ## handy vim shortcut
 alias v="nvim"
 
-alias devenvedit="vim $HOME/.config/sublime-text-3/Packages/User/snippets/dev-env/devenv-install.sh"
+alias devenvedit='vim "$SNIPPETS_DIR/dev-env/devenv-install.sh"'
 
 alias _="\!\!"
 
@@ -62,6 +69,7 @@ alias rol_out_linecount="ruby -pe 'END {puts \"\n#{$.}\"}'"
 
 # for use with ps aux - when piped into this, removes references to chrome
 function nochrome {
+
     ruby -pe '$_ = "" if $_.match(/\/opt\/google\/chrome\/chrome/)'
 }
 
@@ -76,6 +84,7 @@ function rol_get_shdirvars {
 function rol_expand_shdir_vars {
   eval echo $(ruby -pe '$_ = "$" + $_')
 }
+
 
 # get all paths to source $SOME_SOURCE - referenced scripts in a shell file
 function rol_get_bash_sources_from_vars {
