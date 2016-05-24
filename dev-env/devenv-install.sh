@@ -135,7 +135,7 @@ function linux_setup {
 
     # INSTALL REALPATH
     sudo apt-get install realpath
-    
+
     unix_setup
 }
 
