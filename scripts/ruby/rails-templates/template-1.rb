@@ -20,7 +20,7 @@ def select_redis_port
   counter = 1
   get_port = ->{
     puts "What port would you like to assign to redis?"
-    port = $stdin.gets.to_i
+    port = $stdin.gets.chomp.to_i
     if port < 1
       return 6379 if counter >= 3
       puts "invalid port - please input an integer above 0"
@@ -33,13 +33,13 @@ def select_redis_port
 end
 
 def select_db
-  counter = 1
+  db_select_counter = 1
   select_db = ->{
     db = ask?("What db would you like to use: Postgres or Mysql/mariadb?")
-    if not %w(postgres mariadb mysql).include? db.downcase
-      return 'mysql' if counter >= 3
-      puts "invalid db - please choose postgres, mysql, or mariadb"
-      counter = counter + 1
+    if not ['postgres', 'mariadb', 'mysql'].include? db.chomp.downcase
+      return 'mysql' if db_select_counter >= 3
+      puts "invalid db: #{db} chosen - please choose postgres, mysql, or mariadb"
+      db_select_counter = db_select_counter + 1
       return select_db.call
     end
     db.downcase
@@ -84,7 +84,16 @@ else
   use_rspec = yes?("Do you want to use rspec?")
 end
 
-db = ask?("Would you like to use postgres or mysql/mariadb?")
+db = select_db
+# ask?("Would you like to use postgres or mysql/mariadb?")
+puts "\n\n *******************************"
+puts "db selected:::   #{db}"
+puts "use_bootstrap:::   #{use_bootstrap}"
+puts "use_redis:::   #{use_redis}"
+puts "use_grape:::   #{use_grape}"
+puts "use_rspec:::   #{use_rspec}"
+puts "use_devise:::   #{use_devise}"
+puts " *******************************\n\n\n"
 
 puts "------------------------------------------------------------------------------------------"
 ##################################
@@ -122,11 +131,15 @@ gem 'sprockets'
 gem 'draper'
 
 ## DB GEMS
-if db == 'postgres'
+puts db
+if db.chomp == 'postgres' || db.chomp == 'pg'
+  puts '\n\n**installing postgres **\n\n'
   gem 'pg'
 elsif kick_it_oldskool
+  puts '\n\n**installing mysql2 **\n\n'
   gem 'mysql2', '>= 0.3.13'
 else
+  puts '\n\n**installing mysql2 **\n\n'
   gem 'mysql2'
 end
 gem 'redis-session-store' if use_redis
