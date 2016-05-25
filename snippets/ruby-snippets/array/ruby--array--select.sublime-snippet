@@ -1,0 +1,8 @@
+<snippet>
+	<description>Ret new arr w/ all items that ret true</description>
+	<content><![CDATA[
+${1:some_arr}.select {|item| ${2:truthiness_test_code} }
+]]></content>
+	<tabTrigger>arr_select</tabTrigger>
+	<scope>source.ruby</scope>
+</snippet>

@@ -1,0 +1,10 @@
+<snippet>
+	<description>Open file for read & write, & pass file into block</description>
+	<content><![CDATA[
+open(${1:fname}, 'r+') do |f|
+  ${2:write_into_file_eg f.puts text_to_prepend}
+end
+]]></content>
+	<tabTrigger>file_open_readwrite_inblock</tabTrigger>
+	<scope>source.ruby</scope>
+</snippet>

@@ -1,0 +1,8 @@
+<snippet>
+	<description>Before given index of arr, insert given item.</description>
+	<content><![CDATA[
+${1:some_arr}.insert(${2:index_integer}, ${3:item_to_insert})
+]]></content>
+	<tabTrigger>arr_insert</tabTrigger>
+	<scope>source.ruby</scope>
+</snippet>

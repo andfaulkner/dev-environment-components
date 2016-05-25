@@ -1,0 +1,8 @@
+<snippet>
+	<description>Return first item where block ret true</description>
+	<content><![CDATA[
+${1:some_arr}.find {|item| ${2:truthiness_test_eg_item.is_a?(String)} }
+]]></content>
+	<tabTrigger>arr_find</tabTrigger>
+	<scope>source.ruby</scope>
+</snippet>

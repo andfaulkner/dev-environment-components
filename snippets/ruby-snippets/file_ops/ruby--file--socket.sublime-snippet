@@ -1,0 +1,8 @@
+<snippet>
+	<description>Return true if file is a socket</description>
+	<content><![CDATA[
+File.socket?(${1:filename})
+]]></content>
+	<tabTrigger>file_socket?</tabTrigger>
+	<scope>source.ruby</scope>
+</snippet>

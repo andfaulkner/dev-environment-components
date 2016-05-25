@@ -1,0 +1,8 @@
+<snippet>
+	<description>Ret true if string 2 found in string 1</description>
+	<content><![CDATA[
+${1:some_string}.include?(${2:str_to_match_on})
+]]></content>
+	<tabTrigger>str_include?</tabTrigger>
+	<scope>source.ruby</scope>
+</snippet>

@@ -1,0 +1,8 @@
+<snippet>
+	<description>Move / rename file</description>
+	<content><![CDATA[
+FileUtils.mv(${1:filename}, ${2:location_to_move_file_to_and_name_to_give_it})
+]]></content>
+	<tabTrigger>file_mv</tabTrigger>
+	<scope>source.ruby</scope>
+</snippet>

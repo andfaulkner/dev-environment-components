@@ -1,0 +1,8 @@
+<snippet>
+	<description>Ins spaces to R of str; pad it to given size</description>
+	<content><![CDATA[
+${1:some_string}.ljust(${2:length_integer})
+]]></content>
+	<tabTrigger>str_ljust</tabTrigger>
+	<scope>source.ruby</scope>
+</snippet>

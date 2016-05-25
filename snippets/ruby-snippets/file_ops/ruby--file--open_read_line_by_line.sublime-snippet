@@ -1,0 +1,10 @@
+<snippet>
+	<description>Open file, read it in one line at a time</description>
+	<content><![CDATA[
+File.open(${1:filename}, 'r').each_line do |line|
+	${0}
+end.close
+]]></content>
+	<tabTrigger>file_open_read_in_linebyline</tabTrigger>
+	<scope>source.ruby</scope>
+</snippet>

@@ -1,0 +1,8 @@
+<snippet>
+	<description>Return true if named file is a symlink</description>
+	<content><![CDATA[
+File.symlink?(${1:filename})
+]]></content>
+	<tabTrigger>file_symlink?</tabTrigger>
+	<scope>source.ruby</scope>
+</snippet>

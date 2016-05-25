@@ -1,0 +1,8 @@
+<snippet>
+	<description>Create new writeable file, or wipe existing file & get handle</description>
+	<content><![CDATA[
+f = File.new(filename, "w+")
+]]></content>
+	<tabTrigger>file__new_writeable_OVERWRITE</tabTrigger>
+	<scope>source.ruby</scope>
+</snippet>

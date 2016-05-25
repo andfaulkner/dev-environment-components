@@ -1,0 +1,8 @@
+<snippet>
+	<description>Return all matches in an array</description>
+	<content><![CDATA[
+${1:some_string}.scan(${2:str_or_/regex/_to_match_on})
+]]></content>
+	<tabTrigger>str_scan</tabTrigger>
+	<scope>source.ruby</scope>
+</snippet>

@@ -1,0 +1,8 @@
+<snippet>
+	<description>Split file into dir & filename components (arr)</description>
+	<content><![CDATA[
+File.split(${1:filename})
+]]></content>
+	<tabTrigger>file_split</tabTrigger>
+	<scope>source.ruby</scope>
+</snippet>

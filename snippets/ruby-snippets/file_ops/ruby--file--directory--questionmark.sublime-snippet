@@ -1,0 +1,8 @@
+<snippet>
+	<description>Ret true if file is a dir or symlink --> to a dir</description>
+	<content><![CDATA[
+File.directory?(${1:filename})
+]]></content>
+	<tabTrigger>file_directory?</tabTrigger>
+	<scope>source.ruby</scope>
+</snippet>

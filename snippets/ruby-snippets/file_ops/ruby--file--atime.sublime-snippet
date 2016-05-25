@@ -1,0 +1,8 @@
+<snippet>
+	<description>Return last file access time</description>
+	<content><![CDATA[
+File.atime(${1:filename})
+]]></content>
+	<tabTrigger>file_atime</tabTrigger>
+	<scope>source.ruby</scope>
+</snippet>

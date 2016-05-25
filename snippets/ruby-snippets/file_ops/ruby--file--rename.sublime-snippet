@@ -1,0 +1,8 @@
+<snippet>
+	<description>Rename file</description>
+	<content><![CDATA[
+File.rename(${1:filename}, ${2:new_filename})
+]]></content>
+	<tabTrigger>file_rename</tabTrigger>
+	<scope>source.ruby</scope>
+</snippet>

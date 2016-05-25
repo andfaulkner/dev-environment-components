@@ -1,0 +1,8 @@
+<snippet>
+	<description>Get size of file; return nil if file doesn't exist</description>
+	<content><![CDATA[
+File.size?(${1:filename})
+]]></content>
+	<tabTrigger>file_size?</tabTrigger>
+	<scope>source.ruby</scope>
+</snippet>

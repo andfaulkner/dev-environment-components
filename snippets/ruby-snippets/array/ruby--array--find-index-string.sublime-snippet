@@ -1,0 +1,8 @@
+<snippet>
+	<description>Return index of 1st matching item</description>
+	<content><![CDATA[
+${1:some_arr}.find_index(${2:item_to_search_array_for})
+]]></content>
+	<tabTrigger>arr_find_index_string</tabTrigger>
+	<scope>source.ruby</scope>
+</snippet>

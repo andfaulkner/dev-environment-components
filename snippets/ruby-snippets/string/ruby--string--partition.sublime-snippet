@@ -1,10 +1,10 @@
 <snippet>
-	<description>Get the current user's home directory</description>
+	<description>Split str-->3pt arr: pre-m, match, post-m; ON NO MATCH: str, "", ""</description>
 	<content><![CDATA[
-Dir.home(Etc.getlogin)
+${1:some_string}.partition(${2:str_or_/regex/_to_match_on})
 ]]></content>
 	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
-	<tabTrigger>curuserhome</tabTrigger>
+	<tabTrigger>str_partition</tabTrigger>
 	<!-- Optional: Set a scope to limit where the snippet will trigger -->
 	<scope>source.ruby</scope>
 </snippet>

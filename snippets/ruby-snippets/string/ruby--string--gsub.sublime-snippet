@@ -1,0 +1,8 @@
+<snippet>
+	<description>Replace all matches on pattern</description>
+	<content><![CDATA[
+${1:some_string}.gsub(${2:str_or_/regex/_to_match_on}, #{3:replacement_string})
+]]></content>
+	<tabTrigger>str_gsub</tabTrigger>
+	<scope>source.ruby</scope>
+</snippet>

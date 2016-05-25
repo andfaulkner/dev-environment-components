@@ -1,0 +1,8 @@
+<snippet>
+	<description>Combine all items in arr by applying block. No def val</description>
+	<content><![CDATA[
+${1:some_arr}.reduce {|total, item| ${2:combine_operation_eg: sum + n} }
+]]></content>
+	<tabTrigger>arr_reduce_nostartval</tabTrigger>
+	<scope>source.ruby</scope>
+</snippet>

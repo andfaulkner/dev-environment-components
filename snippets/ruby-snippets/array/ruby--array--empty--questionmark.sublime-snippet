@@ -1,0 +1,8 @@
+<snippet>
+	<description>Statement is true if arr has no items in it</description>
+	<content><![CDATA[
+${1:some_arr}.empty?
+]]></content>
+	<tabTrigger>arr_empty?</tabTrigger>
+	<scope>source.ruby</scope>
+</snippet>

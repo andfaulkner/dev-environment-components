@@ -1,0 +1,8 @@
+<snippet>
+	<description>Return all items where block returns true</description>
+	<content><![CDATA[
+${1:some_arr}.find_all {|item| ${2:truthiness_test_eg_item.is_a?(String)} }
+]]></content>
+	<tabTrigger>arr_find_all</tabTrigger>
+	<scope>source.ruby</scope>
+</snippet>

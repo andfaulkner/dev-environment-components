@@ -1,10 +1,10 @@
 <snippet>
-	<description>Get the current user's home directory</description>
+	<description>Remove last char</description>
 	<content><![CDATA[
-Dir.home(Etc.getlogin)
+${1:some_string}.chop
 ]]></content>
 	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
-	<tabTrigger>curuserhome</tabTrigger>
+	<tabTrigger>str_chop</tabTrigger>
 	<!-- Optional: Set a scope to limit where the snippet will trigger -->
 	<scope>source.ruby</scope>
 </snippet>

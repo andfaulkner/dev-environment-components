@@ -1,0 +1,8 @@
+<snippet>
+	<description>Create path out of individual strings (join with separator)</description>
+	<content><![CDATA[
+File.join(${1:"path_pt1", "path_pt_2", "...etc..."})
+]]></content>
+	<tabTrigger>file_join</tabTrigger>
+	<scope>source.ruby</scope>
+</snippet>

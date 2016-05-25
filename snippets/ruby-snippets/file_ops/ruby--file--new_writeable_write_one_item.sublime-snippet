@@ -1,0 +1,8 @@
+<snippet>
+	<description>Make new or wipe existing writeable file; add 1 content item</description>
+	<content><![CDATA[
+File.new(filename, "w+").write(${2:content_to_add})
+]]></content>
+	<tabTrigger>file__new_writable_OW_write_1</tabTrigger>
+	<scope>source.ruby</scope>
+</snippet>

@@ -1,0 +1,8 @@
+<snippet>
+	<description>Drop given # of items from left of array</description>
+	<content><![CDATA[
+${1:some_arr}.drop(${2:number_of_items_to_drop_from_left})
+]]></content>
+	<tabTrigger>arr_drop</tabTrigger>
+	<scope>source.ruby</scope>
+</snippet>

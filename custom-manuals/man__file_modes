@@ -1,0 +1,21 @@
+#!/usr/bin/env sh
+
+echo ''
+echo '---------------------------------------------------------------------------------'
+echo '** FILE MODES **'
+echo '---------------------------------------------------------------------------------'
+echo 'r         Open file for reading.'
+echo ""
+echo 'r+        Open file for reading and writing.'
+echo ""
+echo 'w         Truncate file to zero length or create text file for writing.'
+echo ""
+echo "w+        Open for reading and writing.  The file is created if it doesn't"
+echo "          exist, otherwise it's truncated"
+echo ""
+echo "a         Write-only. Open for appending (writing at end of file). File"
+echo "          created if it doesn't exist."
+echo ""
+echo "a+        Open for reading & appending (writing at end of file). File"
+echo "          created if it doesn't exist."
+echo '---------------------------------------------------------------------------------\n'

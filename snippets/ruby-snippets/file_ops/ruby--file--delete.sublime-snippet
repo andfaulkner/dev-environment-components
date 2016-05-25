@@ -1,0 +1,8 @@
+<snippet>
+	<description>Delete file or files</description>
+	<content><![CDATA[
+File.delete(${1:filename1, optional_filename_2, ...})
+]]></content>
+	<tabTrigger>file_delete</tabTrigger>
+	<scope>source.ruby</scope>
+</snippet>

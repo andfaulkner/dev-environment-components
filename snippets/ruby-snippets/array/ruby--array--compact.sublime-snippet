@@ -1,0 +1,8 @@
+<snippet>
+	<description>Return array with nil values removed</description>
+	<content><![CDATA[
+${1:some_arr}.compact
+]]></content>
+	<tabTrigger>arr_compact</tabTrigger>
+	<scope>source.ruby</scope>
+</snippet>

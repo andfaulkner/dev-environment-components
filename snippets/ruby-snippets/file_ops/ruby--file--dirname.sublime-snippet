@@ -1,0 +1,8 @@
+<snippet>
+	<description>Get path of directory containing file</description>
+	<content><![CDATA[
+File.dirname(${1:filename1})
+]]></content>
+	<tabTrigger>file_dirname</tabTrigger>
+	<scope>source.ruby</scope>
+</snippet>

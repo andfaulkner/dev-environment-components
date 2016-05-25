@@ -1,0 +1,8 @@
+<snippet>
+	<description>Return file stats object for given filename</description>
+	<content><![CDATA[
+File.stat(${1:filename})
+]]></content>
+	<tabTrigger>file_stat</tabTrigger>
+	<scope>source.ruby</scope>
+</snippet>

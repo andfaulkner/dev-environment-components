@@ -1,0 +1,10 @@
+<snippet>
+	<description>Open file for appending text to end</description>
+	<content><![CDATA[
+open(${1:fname}, 'a') do |f|
+  ${2:write_into_file_eg f.puts text_to_append}
+end
+]]></content>
+	<tabTrigger>file_open_append</tabTrigger>
+	<scope>source.ruby</scope>
+</snippet>

@@ -28,20 +28,24 @@ RSpec.configure do |config|
   end
 end
 
+inclusions = ["USAGE", "inject_at_match", "filename", "regex", "--before", "--after", "--wildside"]
+
 describe "inject_at_match" do
 
 	describe "responds with usage when incorrect args given" do
 		it "displays help file if no args given" do
-			expect(`inject_at_match.rb`).to include("USAGE")
+			expect(`inject_at_match.rb`).to include(*inclusions)
 		end
 		it "displays help file if only 1 arg given" do
-			expect(`inject_at_match.rb hello`).to include("USAGE")
+			expect(`inject_at_match.rb`).to include(*inclusions)
 		end
 		it "displays help file if only 2 args given" do
-			expect(`inject_at_match.rb hello hello`).to include("USAGE")
+			expect(`inject_at_match.rb`).to include(*inclusions)
 		end
 		it "displays help file if only 3 args given" do
-			expect(`inject_at_match.rb hello hello`).to include("USAGE")
+			expect(`inject_at_match.rb`).to include(*inclusions)
+			# you could also do this but it's slow:
+			# 	inclusions.each {|inclusion| expect(`inject_at_match.rb`).to include(inclusion) }			
 		end
 	end
 
@@ -61,11 +65,23 @@ describe "inject_at_match" do
 			arguments = build(:arguments)
 			expect(arguments.after).to be_falsey
 		end
+		it "has factory w/ 'args' containing ['hello', 'goodbye'] (both strings); excludes '--before'" do
+			arguments = build(:arguments)
+			expect(arguments.args).to contain_exactly('hello', 'goodbye')
+			expect(arguments.args).to all(be_a(String)) # they must both be strings
+		end
 	end
 
 	describe "Can insert a line" do
 		before(:each) do
 			puts "TODO: CREATE A FILE IN HERE"
+		end
+	end
+
+	describe "random tests: " do
+		it "dividing by zero should raise exception" do
+			# includes a message
+		  expect { 3 / 0 }.to raise_exception(ZeroDivisionError), "apparently 3 can be divided by 0"
 		end
 	end
 end

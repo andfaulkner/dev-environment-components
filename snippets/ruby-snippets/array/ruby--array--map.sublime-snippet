@@ -1,0 +1,8 @@
+<snippet>
+	<description>Apply operation to each item in arr. Ret altered arr.</description>
+	<content><![CDATA[
+${1:some_arr}.map {|item| ${2:operation_to_transform_arr_item_eg item.to_s} }
+]]></content>
+	<tabTrigger>arr_map</tabTrigger>
+	<scope>source.ruby</scope>
+</snippet>

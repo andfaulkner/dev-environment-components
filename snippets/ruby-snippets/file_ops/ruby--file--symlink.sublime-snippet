@@ -1,0 +1,8 @@
+<snippet>
+	<description>Create a symlink from path 1 to path 2</description>
+	<content><![CDATA[
+File.symlink(${1:existing_file}, ${2:new_link_to_existing_file})
+]]></content>
+	<tabTrigger>file_symlink</tabTrigger>
+	<scope>source.ruby</scope>
+</snippet>
