@@ -1,0 +1,10 @@
+#!/usr/bin/env sh
+
+echo ''
+echo '---------------------------------------------------------------------------------'
+echo '** CURL **'
+echo '---------------------------------------------------------------------------------'
+echo '- subtitle'
+echo 'curl to an output file - example:'
+echo '    curl -o ./rake https://raw.githubusercontent.com/ai/rake-completion/master/rake'
+echo '---------------------------------------------------------------------------------\n'

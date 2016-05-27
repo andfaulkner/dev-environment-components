@@ -2,17 +2,22 @@
 
 echo ''
 echo '---------------------------------------------------------------------------------'
-echo '** NEW_TYPE **'
+echo '** RUBY USAGE IN SHELL **'
 echo '---------------------------------------------------------------------------------'
-echo '- subtitle'
+echo '- ruby cli gems'
 echo ''
-echo "## First item (title here):   general syntax of 'item'"
-echo "   -- (definition of first item goes here)"
-echo "   -- example:                example goes here"
-echo ""
-echo "## List item title:"
-echo "   -- subitem here:           syntax here"
-echo "   -- subitem here:           syntax here"
-echo "   -- subitem here:           syntax here"
+echo "## rerun gem:"
+echo "   -- Custom watch pattern: use | to alternate. Example:"
+echo '      rerun --pattern  "**/*.{rb,js,coffee,css,scss,erb,html,ru,yml,md,feature}|Rakefile" rake tasks'
+echo ''
+echo "## rake gem:"
+echo '   -- args for rake tasks:'
+echo "       * passing args to rake from terminal:     "
+echo "           *   one arg:                    rake sometask[arg]"
+echo "           *   multiple args:              rake sometask[arg1,arg2,arg3]"
+echo "       * get rake task to access args (in Rakefile):"
+echo "               task :sometask, [:arg1, arg2, ...] do |task, args|"
+echo "                   # all args  accessible through args.argname e.g. args.arg1"
+echo "               end"
 echo ""
 echo '---------------------------------------------------------------------------------\n'

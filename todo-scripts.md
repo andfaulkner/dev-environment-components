@@ -43,6 +43,8 @@ X callcc
 ! initialize rake without rails - make basic task
 	- doc this
 - let! - rspec
+- rake namespaces
+	- rake task list
 - Threads
 - delegate call to a module
 - alias
@@ -59,6 +61,20 @@ X callcc
 	- rake-roll - for autotagging releases? https://github.com/thelazycamel/rake_roll
 	- rake-growl? (tells U when task done)	https://github.com/porras/rakegrowl
 
+- Ruby Queue
+
+
+- require all in a dir
+
+
+- autotest
+- filewatcher
+- cells: https://github.com/apotonick/cells
+	  *   encapsulate parts of your UI into components into view models
+    *   Cells aka View models: simple ruby classes that can render templates
+	      *   they also allow proper OOP, polymorphic builders, nesting, view inheritance, use
+	     		  of Rails helpers, asset packaging to bundle JS+CSS+images, simple distribution of
+	     		  model components via gems or Rails engines, encapsulated testing, caching, etc.
 
 Consider arbre to make html in ruby syntax is regular ruby files
 Arbre: 	https://github.com/activeadmin/arbre

@@ -1,0 +1,4 @@
+rake multiply[num1,num2]     # Task to multply two given numbers
+rake task:tasks              # Get a list of all tasks
+rake task:testcallothertask  # Call a Rake task from a Rake task
+rake task:threadedtask       # Use threads in a rake task

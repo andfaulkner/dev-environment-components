@@ -1,7 +1,5 @@
 #!/usr/bin/env sh
 
-#!/usr/bin/env sh
-
 echo ''
 echo '---------------------------------------------------------------------------------'
 echo '** Ruby: often forgotten commands cheatsheet **'
@@ -27,4 +25,7 @@ echo "5.hours"
 echo "5.days"
 echo "5.months"
 echo ""
+echo "*** PAUSE EXECUTION ***"
+echo "sleep(numseconds)"
+echo "   *   does not work properly in rake tasks!"
 echo '---------------------------------------------------------------------------------\n'
