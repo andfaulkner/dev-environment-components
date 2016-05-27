@@ -20,7 +20,7 @@ namespace :task do
 
 end
 
-desc 'Task to multply two given numbers'
+desc 'Task to multiply two given numbers'
 task :multiply, [:num1, :num2] do |task, args|
 	puts "Total is #{args.num1 * args.num2}"
 end

@@ -6,18 +6,21 @@ echo '** RUBY USAGE IN SHELL **'
 echo '---------------------------------------------------------------------------------'
 echo '- ruby cli gems'
 echo ''
-echo "## rerun gem:"
+echo "## RERUN GEM:"
 echo "   -- Custom watch pattern: use | to alternate. Example:"
 echo '      rerun --pattern  "**/*.{rb,js,coffee,css,scss,erb,html,ru,yml,md,feature}|Rakefile" rake tasks'
 echo ''
-echo "## rake gem:"
-echo '   -- args for rake tasks:'
-echo "       * passing args to rake from terminal:     "
-echo "           *   one arg:                    rake sometask[arg]"
-echo "           *   multiple args:              rake sometask[arg1,arg2,arg3]"
-echo "       * get rake task to access args (in Rakefile):"
-echo "               task :sometask, [:arg1, arg2, ...] do |task, args|"
-echo "                   # all args  accessible through args.argname e.g. args.arg1"
-echo "               end"
+echo "## RAKE GEM:"
+echo ' - args for rake tasks:'
+echo "    * passing args to rake from terminal:"
+echo "        *   one arg:                       rake sometask[arg]"
+echo "        *   multiple args:                 rake sometask[arg1,arg2,arg3]"
+echo "    * get rake task to access args (in Rakefile):"
+echo "        task :sometask, [:arg1, arg2, ...] do |task, args|"
+echo "            # all args  accessible through args.argname e.g. args.arg1"
+echo "        end"
 echo ""
+echo " - list rake tasks in a namespace e.g.:    rake -T db"
+echo " - display task path e.g.:                 rake -W db:migrate"
+echo " - set environment to run task in e.g.:    RAILS_ENV=test rake db:migrate"
 echo '---------------------------------------------------------------------------------\n'

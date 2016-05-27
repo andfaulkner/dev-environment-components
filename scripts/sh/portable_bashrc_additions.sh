@@ -33,10 +33,10 @@ function whereami {
     PWD__TEMP__WHEREAMI=`pwd`
     echo $PWD__TEMP__WHEREAMI
     echo ""
-    echo "**************************************"
+    echo "****************************************************************************"
     echo "current git branch:"
     git status | head -1 | awk '{print $3}'
-    echo "**************************************"
+    echo "****************************************************************************"
     echo ""
     git status
 }

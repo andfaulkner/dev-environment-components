@@ -2,11 +2,22 @@
 
 SNIPPETS_DIR=$(pwd | sed s/\\/snippets\\/.*/\\/snippets/g)
 
+
+
+
+
 # THESE MUST RUN AFTER REGULAR UNIX SETUP
 function unix_post_setup {
     vim +VundleInstall
 }
 
+
+
+
+
+#-----------------------------------------------------------------------------------------------------------------------------------------#
+############################################### UNIX SETUP: COMMON TO BOTH MAC AND LINUX ##################################################
+#-----------------------------------------------------------------------------------------------------------------------------------------#
 function unix_setup {
     # MAKE ESSENTIAL BASH CONFIG FILES
     touch ~/.bashrc
@@ -35,19 +46,19 @@ function unix_setup {
     ln -s $SNIPPETS_DIR/dev-env/vim_configs/.vim $HOME/.nvim 
     ln -s $SNIPPETS_DIR/dev-env/vim_configs/.vimrc $HOME/.nvimrc
     ln -s $HOME/.vimrc $HOME/.nvimrc
-#lrwxrwxrwx    1 andrew     32 May 18 00:55 .vimrc -> /home/andrew/.spf13-vim-3/.vimrc
-#lrwxrwxrwx    1 andrew     39 May 18 00:55 .vimrc.before -> /home/andrew/.spf13-vim-3/.vimrc.before
-#-rw-r--r--    1 andrew   8859 May 11 23:36 .vimrc_BK_2016_05_11
-#-rw-r--r--    1 andrew   9054 May 18 00:55 .vimrc__BK_2016_05_18
-#lrwxrwxrwx    1 andrew     40 May 18 00:55 .vimrc.bundles -> /home/andrew/.spf13-vim-3/.vimrc.bundles
-#lrwxrwxrwx    1 andrew     82 Apr 20 03:59 vim -> /home/andrew/.config/sublime-text-3/Packages/User/snippets/dev-env/vim_configs/vim
-#drwxr-xr-x    2 andrew   4096 May 11 23:49 ~.vim
-#lrwxrwxrwx    1 andrew     83 Apr 20 03:59 .vim -> /home/andrew/.config/sublime-text-3/Packages/User/snippets/dev-env/vim_configs/.vim
-#lrwxrwxrwx    1 andrew     83 May 18 02:06 .nvim -> /home/andrew/.config/sublime-text-3/Packages/User/snippets/dev-env/vim_configs/.vim
-#lrwxrwxrwx    1 andrew     19 May 18 02:25 .nvimrc -> /home/andrew/.vimrc
 
-
-
+     ############################ VIM SETUP NOTES - NEEDS REPAIR ###########################
+     #lrwxrwxrwx    1 andrew     32 May 18 00:55 .vimrc -> /home/andrew/.spf13-vim-3/.vimrc
+     #lrwxrwxrwx    1 andrew     39 May 18 00:55 .vimrc.before -> /home/andrew/.spf13-vim-3/.vimrc.before
+     #-rw-r--r--    1 andrew   8859 May 11 23:36 .vimrc_BK_2016_05_11
+     #-rw-r--r--    1 andrew   9054 May 18 00:55 .vimrc__BK_2016_05_18
+     #lrwxrwxrwx    1 andrew     40 May 18 00:55 .vimrc.bundles -> /home/andrew/.spf13-vim-3/.vimrc.bundles
+     #lrwxrwxrwx    1 andrew     82 Apr 20 03:59 vim -> /home/andrew/.config/sublime-text-3/Packages/User/snippets/dev-env/vim_configs/vim
+     #drwxr-xr-x    2 andrew   4096 May 11 23:49 ~.vim
+     #lrwxrwxrwx    1 andrew     83 Apr 20 03:59 .vim -> /home/andrew/.config/sublime-text-3/Packages/User/snippets/dev-env/vim_configs/.vim
+     #lrwxrwxrwx    1 andrew     83 May 18 02:06 .nvim -> /home/andrew/.config/sublime-text-3/Packages/User/snippets/dev-env/vim_configs/.vim
+     #lrwxrwxrwx    1 andrew     19 May 18 02:25 .nvimrc -> /home/andrew/.vimrc
+     #######################################################################################
 
     curl https://raw.githubusercontent.com/git/git/master/contrib/completion/git-completion.bash > ~/scripts/git-completion.bash
     echo "source ~/scripts/git-completion.bash" >> ~/.bash_profile
@@ -88,18 +99,49 @@ function unix_setup {
     rm ~/neobundleviminstall.sh
 
     # install nerdcommenter vim plugin
-    curl http://www.vim.org/scripts/download_script.php?src_id=14455 > nerdcommenter.zip; unzip nerdcommenter.zip -d ./nerdcommenter; pushd ./; mkdir ~/.vim/plugin; mkdir ~/.vim/doc; cd nerdcommenter; mv doc/NERD_commenter.txt ~/.vim/doc/NERD_commenter.txt; mv plugin/NERD_commenter.vim ~/.vim/plugin/NERD_commenter.vim
+    curl http://www.vim.org/scripts/download_script.php?src_id=14455 > nerdcommenter.zip
+    unzip nerdcommenter.zip -d ./nerdcommenter
+    pushd ./
+    mkdir ~/.vim/plugin
+    mkdir ~/.vim/doc
+    cd nerdcommenter
+    mv doc/NERD_commenter.txt ~/.vim/doc/NERD_commenter.txt
+    mv plugin/NERD_commenter.vim ~/.vim/plugin/NERD_commenter.vim
 
+    # install vim rails and vim bundler
     pushd ./
     cd ~/.vim/bundle
     git clone git://github.com/tpope/vim-rails.git
     git clone git://github.com/tpope/vim-bundler.git
     popd
 
+    ################################################################################
+    #~~~~~~~~~~~~~~~~~~~ PYTHON PACKAGE MANAGER / INSTALLER SETUP ~~~~~~~~~~~~~~~~~~
+    ################################################################################
+    # GLOBAL PYTHON PACKAGE MANAGER
+    wget https://bootstrap.pypa.io/get-pip.py
+    sudo python ./get-pip.py
+    pip install -U pip
+    sudo pip install virtualenv
+    
+    # LOCAL PYTHON PACKAGE MANAGER
+    wget https://raw.githubusercontent.com/mitsuhiko/pipsi/master/get-pipsi.py
+    sudo python get-pipsi.py
+    echo 'export PATH=$HOME/.local/bin:$PATH' >> $HOME/$MAIN_BASH_FILE 
+
+    # simple filesystem watching
+    pip install watch-fs
 
     unix_post_setup
 }
 
+
+
+
+
+#-----------------------------------------------------------------------------------------------------------------------------------------#
+################################################################ MAC SETUP ################################################################
+#-----------------------------------------------------------------------------------------------------------------------------------------#
 function mac_setup {
     echo "mac"
     MAIN_BASH_FILE=".bash_profile"
@@ -111,9 +153,22 @@ function mac_setup {
     # SHELL COMPLETIONS
     brew install bash-completion
 
+    # wget
+    brew install wget
+   
+    # python virtualenv
+    brew install pyenv-virtualenv
+
     unix_setup
 }
 
+
+
+
+
+#-----------------------------------------------------------------------------------------------------------------------------------------#
+############################################################### LINUX SETUP ###############################################################
+#-----------------------------------------------------------------------------------------------------------------------------------------#
 function linux_setup {
     echo "linux"
     MAIN_BASH_FILE=".bashrc"
@@ -151,6 +206,13 @@ function linux_setup {
     unix_setup
 }
 
+
+
+
+
+#-----------------------------------------------------------------------------------------------------------------------------------------#
+########################################################## DETERMINE CURRENT OS ###########################################################
+#-----------------------------------------------------------------------------------------------------------------------------------------#
 if [[ "$(uname)" == "Darwin" ]]; then
     mac_setup;
 elif [[ "$(expr substr $(uname -s) 1 5)" == "Linux" ]]; then
@@ -159,4 +221,3 @@ elif [[ "$(expr substr $(uname -s) 1 10)" == "MINGW32_NT" ]]; then
     echo "windoze";
 fi
 
-# git completions - first run only
