@@ -107,6 +107,10 @@ function mac_setup {
     brew cask install caskroom/versions/java7
     brew install gradle
     brew install ant
+
+    # SHELL COMPLETIONS
+    brew install bash-completion
+
     unix_setup
 }
 
@@ -132,6 +136,11 @@ function linux_setup {
     sudo add-apt-repository ppa:neovim-ppa/unstable
     sudo apt-get update
     sudo apt-get install neovim
+
+    # SHELL COMPLETIONS
+    sudo apt-get install bash-completion
+    echo '[[ $PS1 && -f /usr/share/bash-completion/bash_completion ]] && . /usr/share/bash-completion/bash_completion' >> ~/.bashrc
+
 
     # GET LATEST LUA
     lua > ~/Documents/.ERROR_OUTPUT_TEMP 2>&1; cat ~/Documents/.ERROR_OUTPUT_TEMP | head -2 | tail -1 | awk '{print $2}' | xargs sudo apt-get install

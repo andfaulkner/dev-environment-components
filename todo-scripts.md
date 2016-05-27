@@ -29,3 +29,50 @@ TODO learning Ruby better
 - trust
 - taint
 - allocate
+
+
+TODO Learn rspec + factory_girl + Ruby
+======================================
+- Lifecycle callbacks - custom
+- stateful objects (factories?)
+- context vs describe
+- learn to wrap every method in another class (delegated from)
+	- to allow "locking" of a method 
+- learn to 
+X callcc
+! initialize rake without rails - make basic task
+	- doc this
+- let! - rspec
+- Threads
+- delegate call to a module
+- alias
+- better class snippet
+- rake plugins?
+	- rake gem handling?   									https://github.com/mojombo/rakegem
+	- rake completions?
+	- rake-todo?
+	- rake-hooks?					 									https://github.com/guillermo/rake-hooks
+	- rake-pipeline?			 									https://github.com/livingsocial/rake-pipeline
+	- rake-notes?					 									https://github.com/fgrehm/rake-notes
+	- misc extras?				 									https://github.com/thoughtbot/limerick_rake
+	- rake-progressbar?		 									https://github.com/ondrejbartas/rake-progressbar
+	- rake-roll - for autotagging releases? https://github.com/thelazycamel/rake_roll
+	- rake-growl? (tells U when task done)	https://github.com/porras/rakegrowl
+
+
+Consider arbre to make html in ruby syntax is regular ruby files
+Arbre: 	https://github.com/activeadmin/arbre
+e.g. 
+html = Arbre::Context.new do
+  h2 "Why is Arbre awesome?"
+
+  ul do
+    li "The DOM is implemented in ruby"
+    li "You can create object oriented views"
+    li "Templates suck"
+  end
+end
+
+puts html.to_s # =>
+
+

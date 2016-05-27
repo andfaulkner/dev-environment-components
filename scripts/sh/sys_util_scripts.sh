@@ -36,6 +36,7 @@ alias nukedocker='sudo service docker stop; ps aux | ack "docker" | awk "{print 
 alias nukemisc_utils='ps aux | ack "[^a-zA-Z0-9_](cat|less)$" | awk "{print \$2}" | xargs kill -9'
 
 alias nukechrome='ps aux | ack chrome | awk "{print \$2}" | xargs kill -9'
+alias nukefirefox='ps aux | ack firefox | awk "{print \$2}" | xargs kill -9'
 alias nukesublime='ps aux | ack sublime | awk "{print \$2}" | xargs kill -9'
 
 # will kill all scripting languages & minor utils
@@ -43,11 +44,11 @@ alias clean_mega_level1='nukeruby; nukenode; nukelisp; nukepython; nukemisc_util
 # will kill all scripting languages & minor utils, & nginx
 alias clean_mega_level2='nukeruby; nukenode; nukelisp; nukepython; nukemisc_utils; nukenginx'
 # will kill all scripting languages & minor utils; nginx; postgres, mongodb, and mySQL; and docker;
-alias clean_mega_level3='nukeruby; nukenode; nukelisp; nukepython; nukemisc_utils; nukedocker; nukepostgres; nukemysql; nukenginx'
-# will kill all scripting languages & minor utils; nginx; postgres, mongodb, and mysql; and docker; and chrome
-alias clean_mega_level5='nukeruby; nukenode; nukelisp; nukepython; nukemisc_utils; nukedocker; nukepostgres; nukemysql; nukechrome; nukenginx'
-# will kill all scripting languages & minor utils; nginx; postgres, mongodb, and mysql; and docker; chrome; and sublime
-alias clean_mega_level6='nukeruby; nukenode; nukelisp; nukepython; nukemisc_utils; nukedocker; nukepostgres; nukemysql; nukechrome; nukesublime; nukenginx'
+alias clean_mega_level3='nukeruby; nukenode; nukelisp; nukepython; nukemisc_utils; nukedocker; nukepostgres; nukemysql; nukenginx; nukemongo'
+# will kill all scripting languages & minor utils; nginx; postgres, mongodb, and mysql; and docker; and chrome and firefox
+alias clean_mega_level5='nukeruby; nukenode; nukelisp; nukepython; nukemisc_utils; nukedocker; nukepostgres; nukemysql; nukechrome; nukefirefox; nukenginx; nukemongo'
+# will kill all scripting languages & minor utils; nginx; postgres, mongodb, and mysql; and docker; chrome and firefox; and sublime
+alias clean_mega_level6='nukeruby; nukenode; nukelisp; nukepython; nukemisc_utils; nukedocker; nukepostgres; nukemysql; nukechrome; nukefirefox; nukesublime; nukenginx; nukemongo'
 
 alias startpostgres="sudo service postgresql-9.4 start"
 alias startmysql="sudo service mysql start"
@@ -59,3 +60,5 @@ VIMPLUGINS=$HOME/.config/sublime-text-3/Packages/User/snippets/dev-env/vim_confi
 alias list_vimplugins="ls $VIMPLUGINS"
 
 alias goguides='pushd ./; cd "$SNIPPETS_DIR/_docs_guides"'
+
+alias ps_sort_by_res_use="ps aux --sort=pcpu,+pmem"
