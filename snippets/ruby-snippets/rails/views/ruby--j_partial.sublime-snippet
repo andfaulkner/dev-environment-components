@@ -1,0 +1,8 @@
+<snippet>
+	<description>Render a partial w JS chars escaped (j==escape_javascript)</description>
+	<content><![CDATA[
+<%= j render partial: '${1:name_of_partial_minus_leading_underscore}' %>
+]]></content>
+	<tabTrigger>erb_j_partial</tabTrigger>
+	<scope>text.html.ruby</scope>
+</snippet>

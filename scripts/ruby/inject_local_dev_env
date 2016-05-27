@@ -1,0 +1,47 @@
+#!/usr/bin/env ruby
+
+puts ARGV
+
+rspec_args = [
+  "--require rspec/instafail",
+  "--format RSpec::Instafail",
+  "--format progress"
+]
+
+local_gems = [
+  'pry-rails',
+  'pry-awesome_print',
+  'better_errors',
+  'fivemat',
+  'hirb',
+  'rspec-instafail'
+]
+
+def clean_temps
+  `prepend_text Gemfile "source 'http://rubygems.org'"`
+  puts `bundle install`
+  `rm Gemfile.old`
+  `rm .rspec.old`
+end
+
+if !ARGV.include?("--reverse") && !File.exists?(".injected_dev_env")
+  rspec_args.each {|current_arg| `prepend_text .rspec "#{current_arg}'"` }        #  `prepend_text .rspec "--require rspec/instafail"`
+  `delete_line Gemfile 1`
+  local_gems.each {|current_gem| `prepend_text Gemfile "gem '#{current_gem}'"` }
+  `prepend_text Gemfile "source 'http://rubygems.org'"`
+  clean_temps
+  `touch .injected_dev_env`
+
+elsif !ARGV.include?("--reverse") && File.exists?(".injected_dev_env")
+  puts "CANNOT RE-INJECT LOCAL DEV ENVIRONMENT"
+
+elsif File.exists?(".injected_dev_env")
+  (local_gems.length + 2).times { `delete_line Gemfile 1` }
+  rspec_args.length.times { `delete_line .rspec 1` }
+  clean_temps
+  `rm .injected_dev_env`
+
+else
+  puts "CANNOT REVERSE DEV ENVIRONMENT, IT HAS NOT BEEN INJECTED"  
+end
+
