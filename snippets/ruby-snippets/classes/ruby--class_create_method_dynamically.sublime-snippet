@@ -1,0 +1,11 @@
+<snippet>
+	<description>Create method to define new methods</description>
+	<content><![CDATA[
+def create_method(name, &block)
+	self.class.send(:define_method, name, &block)
+end
+${1:# use: inst.create_method(:clearly_you_want_ants) { p "why are there donuts everywhere?" \}}
+]]></content>
+	<tabTrigger>class-create_method</tabTrigger>
+	<scope>source.ruby</scope>
+</snippet>

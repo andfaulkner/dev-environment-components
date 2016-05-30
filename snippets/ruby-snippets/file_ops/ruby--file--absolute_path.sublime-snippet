@@ -1,0 +1,8 @@
+<snippet>
+	<description>Display absolute path from relative path.</description>
+	<content><![CDATA[
+File.absolute_path(${1:"../../../relative/path/here" OR file_name, dir_string1, dir_string2, etc})
+]]></content>
+	<tabTrigger>file_absolute_path</tabTrigger>
+	<scope>source.ruby</scope>
+</snippet>

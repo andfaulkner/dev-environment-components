@@ -33,6 +33,14 @@ TODO learning Ruby better
 
 TODO Learn rspec + factory_girl + Ruby
 ======================================
+! rack basics
+	! install rack
+	! get a basic rack app running
+	! get a config-based rack app running
+	! get a config-based rack app that loads an external file running
+	! write a middleware
+	- write a second middleware that provides html
+		- try arbre
 - Lifecycle callbacks - custom
 - stateful objects (factories?)
 - context vs describe

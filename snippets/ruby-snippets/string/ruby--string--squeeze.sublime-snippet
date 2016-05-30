@@ -1,0 +1,8 @@
+<snippet>
+	<description>Remove all duplicates of given char from string</description>
+	<content><![CDATA[
+${1:some_string}.squeeze("${2:char_to_rm_dupes_of}")
+]]></content>
+	<tabTrigger>str_squeeze</tabTrigger>
+	<scope>source.ruby</scope>
+</snippet>

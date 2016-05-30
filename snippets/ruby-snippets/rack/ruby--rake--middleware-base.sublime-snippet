@@ -1,0 +1,31 @@
+<snippet>
+	<description>Basic middleware; wraps return data including request</description>
+	<content><![CDATA[
+class ${1:${TM_FILENAME/(?<______first =>^[a-z])(?<W1_rest -=>[^\._]*)?_?(?<_w2L1 -=>[a-z])?(?<___W2_rest -=>[^\._]*)?_?(?<_w3L1 -=>[a-z])?(?<___W3_rest -=>[^\._]*)?_?(?<_w4L1 -=>[a-z])?(?<___W4_rest -=>[^\._]*)?\.rb/\U$+{______first =}\L$+{W1_rest -=}\U$+{_w2L1 -=}\L$+{___W2_rest -=}\U$+{_w3L1 -=}\L$+{___W3_rest -=}\U$+{_w4L1 -=}\L$+{___W4_rest -=}/g}}${2/(.+)/ < /}${2: OptionalClassToExtendFrom}
+
+  def initialize(appl)
+    @appl = appl
+  end
+
+  # Do the actual action
+  def ${3:modify_response}(body)
+    new_body = ""
+    body.each { |string|
+    	new_body << " " << string
+    }
+    new_body << ${0:#NEW DATA FOR BODY GOES HERE}
+  end
+
+  # call the inner application & return it
+  def call env
+    status, headers, body = @appl.call(env)
+    new_body = ${3:modify_response}(body)
+    [status, headers, [new_body]]
+  end
+end
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>rack_middleware_base</tabTrigger>
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<scope>source.ruby</scope>
+</snippet>

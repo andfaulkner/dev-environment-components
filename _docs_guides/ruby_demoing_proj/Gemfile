@@ -2,8 +2,15 @@
 # A sample Gemfile
 source "https://rubygems.org"
 
+# testing
 gem "rspec"
 gem "factory_girl"
+
+# task running
 gem "rake"
 
+# serve to web
 gem 'rack'
+
+# build html
+gem 'arbre'
