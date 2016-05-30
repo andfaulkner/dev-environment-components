@@ -3,8 +3,10 @@
 require 'rspec'
 require 'factory_girl'
 require 'pry'
-require '../../scripts/ruby/inject_at_match'
-require './testables/filesystem'
+
+require '../../scripts/ruby/inject_at_match.rb'
+
+require './scripts/filesystem'
 
 # auto-require all ruby files in a given directory. Recursively requires "depth" # of dirs deep.
 # when depth is one, it only requires files directly inside the given dir - no files in subdirs.
@@ -18,7 +20,7 @@ def require_dir_relative_to_pwd(dir, depth=1)
 	end
 end
 
-require_dir_relative_to_pwd("testables", 2)
+require_dir_relative_to_pwd("scripts", 2)
 
 puts FileHandlers
 
