@@ -11,6 +11,126 @@ function unix_post_setup {
     vim +VundleInstall
 }
 
+function _gems_install_pry {
+    gem install pry
+    gem install pry-stack_explorer
+    gem install hirb
+    gem install pry-awesome_print
+    gem install pry-macros
+    gem install pry-theme
+    gem install pry-rails
+    if [[ $(ruby -v) = *"1.9"* ]]
+    then
+        gem install "pry-debugger"
+    else
+        gem install "pry-byebug"
+    fi
+    gem install pry-debugger
+    gem install pry-rails
+    gem install pry-coolline
+}
+
+function gems_ruby_debugging {
+    gem install rspec
+    gem install rspec-rails
+    gem install factory_girl
+    gem install factory_girl_rails
+    gem install minitest
+    gem install better_errors
+    gem install ruby-progressbar
+    gem install guard
+    gem install guard-rspec
+    gem install guard-rails
+    gem install simplecov
+    gem install rubocop
+    gem install quiet_assets
+    _gems_install_pry
+}
+
+function gems_frontend {
+    gem install sass
+    gem install nokogiri
+    gem install jquery
+    gem install jquery-rails
+    gem install jquery-ui-rails
+    gem install jquery-datatables-rails
+    gem install client_side_validations
+    gem install sass-rails
+    gem install coffee-rails
+    gem install compass
+    gem install turbolinks
+    gem install bootstrap-sass
+    gem install uglifier
+    gem install simple_form
+}
+
+function gems_web_servers {
+    gem install rails
+    gem install rack
+    gem install thin
+    gem install sinatra
+    gem install puma
+    gem install passenger
+    gem install eventmachine
+}
+
+function gems_rest_api {
+    gem install grape
+    gem install multi_json
+    gem install rabl
+    gem install json
+}
+
+function gems_cli_utils {
+    gem install thor
+    gem install rake
+    gem install shellwords
+    gem install zeus
+    gem install rerun
+    gem install bundler
+    gem install listen
+    gem install columnize
+}
+
+function gems_security {
+    gem install devise
+    gem install oauth2
+    gem install warden
+    gem install cancancan
+}
+
+functions gems_dbs {
+    gem install pg
+    gem install mysql2
+    gem install redis
+    gem install redis-rails
+    gem install sqlite3
+    gem install database_cleaner
+    gem install squeel
+}
+
+function gems_scheduling {
+    gem install ice_cube
+    gem install daemons
+    gem install delayed_job
+}
+
+function gems {
+    gem install capistrano
+    gem install mime-types
+    gem install i18n
+    gem install rubyzip
+    gem install chronic
+    gem install yard
+    gems_scheduling 
+    gems_dbs
+    gems_web_servers
+    gems_frontend
+    gems_ruby_debugging
+    gems_rest_api
+    gems_cli_utils
+    gems_security
+}
 
 
 

@@ -67,7 +67,12 @@ class Instgem
 				return
 			end
 
-			# insert name & possibly version of gem into Gemfile 
+			# insert name & possibly version of gem into Gemfile
+			puts "gemfile_content: #{gemfile_content}"
+			puts "@gemname: #{@gemname}"
+			puts "@version: #{@version}"
+			puts "@rubygems_line: #{@rubygems_line}"
+			puts "@gemfile_content_orig: #{@gemfile_content_orig}"
 			if ! @version
 				gemfile_content.insert(rubygems_line + 1, "gem '#{@gemname}'")
 			else
