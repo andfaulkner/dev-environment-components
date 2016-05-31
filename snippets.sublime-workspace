@@ -442,6 +442,14 @@
 				"buffer_size": 3452,
 				"line_ending": "Unix"
 			}
+		},
+		{
+			"file": "_docs_guides/ruby_demoing_proj/Rakefile",
+			"settings":
+			{
+				"buffer_size": 518,
+				"line_ending": "Unix"
+			}
 		}
 	],
 	"build_system": "",
@@ -687,13 +695,9 @@
 	},
 	"expanded_folders":
 	[
-		"/home/andrew/.config/sublime-text-3/Packages/User/snippets/_docs_guides",
-		"/home/andrew/.config/sublime-text-3/Packages/User/snippets/_docs_guides/ruby_docs/ADVANCED/ruby-module-magic",
-		"/home/andrew/.config/sublime-text-3/Packages/User/snippets/_docs_guides/ruby_docs/ADVANCED/ruby-tapas-episodes",
-		"/home/andrew/.config/sublime-text-3/Packages/User/snippets/_docs_guides/ruby_docs/metaprogramming/DSL_files",
-		"/home/andrew/.config/sublime-text-3/Packages/User/snippets/snippets",
-		"/home/andrew/.config/sublime-text-3/Packages/User/snippets/snippets/ruby-snippets",
-		"/home/andrew/.config/sublime-text-3/Packages/User/snippets/snippets/ruby-snippets/classes"
+		"/Users/andrewfaulkner/Library/Application Support/Sublime Text 3/Packages/User/sublime-dev-environment-snippet",
+		"/Users/andrewfaulkner/Library/Application Support/Sublime Text 3/Packages/User/sublime-dev-environment-snippet/_docs_guides",
+		"/Users/andrewfaulkner/Library/Application Support/Sublime Text 3/Packages/User/sublime-dev-environment-snippet/_docs_guides/ruby_demoing_proj"
 	],
 	"file_history":
 	[
@@ -1079,7 +1083,7 @@
 	"groups":
 	[
 		{
-			"selected": 0,
+			"selected": 1,
 			"sheets":
 			[
 				{
@@ -1163,8 +1167,41 @@
 							"open_with_edit": true,
 							"side_bar_folders_auto_load_folder": 1,
 							"syntax": "Packages/Ruby/Ruby.sublime-syntax",
-							"tabs_extra_last_activated": 1463294000.37,
+							"tabs_extra_last_activated": 1464604742.66,
 							"tabs_extra_last_activated_sheet_index": 0,
+							"tabs_extra_spawned": true,
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "_docs_guides/ruby_demoing_proj/Rakefile",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 518,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								171,
+								171
+							]
+						],
+						"settings":
+						{
+							"side_bar_folders_auto_load_folder": 1,
+							"syntax": "Packages/Ruby/Ruby.sublime-syntax",
+							"tabs_extra_last_activated": 1464604742.71,
+							"tabs_extra_last_activated_sheet_index": 1,
 							"tabs_extra_spawned": true,
 							"translate_tabs_to_spaces": false
 						},

@@ -12,20 +12,19 @@ local_gems = [
   'pry-rails',
   'pry-awesome_print',
   'better_errors',
-  'fivemat',
   'hirb',
   'rspec-instafail'
 ]
 
 def clean_temps
-  `prepend_text Gemfile "source 'http://rubygems.org'"`
+  # `prepend_text Gemfile "source 'http://rubygems.org'"`
   puts `bundle install`
   `rm Gemfile.old`
   `rm .rspec.old`
 end
 
 if !ARGV.include?("--reverse") && !File.exists?(".injected_dev_env")
-  rspec_args.each {|current_arg| `prepend_text .rspec "#{current_arg}'"` }        #  `prepend_text .rspec "--require rspec/instafail"`
+  rspec_args.each {|current_arg| `prepend_text .rspec "#{current_arg}"` }        #  `prepend_text .rspec "--require rspec/instafail"`
   `delete_line Gemfile 1`
   local_gems.each {|current_gem| `prepend_text Gemfile "gem '#{current_gem}'"` }
   `prepend_text Gemfile "source 'http://rubygems.org'"`

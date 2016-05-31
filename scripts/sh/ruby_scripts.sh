@@ -18,6 +18,10 @@ alias localgems='cat Gemfile | ack "^ *gem.*" | sort'
 alias bir="bundle install; rbenv rehash"
 
 
+function rspec_extract {
+    cat $1 | ack "([^a-zA-Z0-9_]*it )|([^a-zA-Z0-9_]*describe)|([^a-zA-Z0-9_]*context)"
+}
+
 ########## AKR-SPECIFIC KILLS ############
 alias killakr3="ps aux | ack rails | ack -v '3001' | awk '{print \$2}' | xargs kill -9; ps aux | ack rails | ack -v '3001'"
 alias ka="killakr3"
