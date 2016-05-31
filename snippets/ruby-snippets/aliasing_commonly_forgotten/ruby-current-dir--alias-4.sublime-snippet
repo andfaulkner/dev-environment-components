@@ -1,0 +1,8 @@
+<snippet>
+	<description>Output absolute path to directory containing current file</description>
+	<content><![CDATA[
+File.dirname(__FILE__)
+]]></content>
+	<tabTrigger>curdir</tabTrigger>
+	<scope>source.ruby</scope>
+</snippet>

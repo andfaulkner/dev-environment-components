@@ -31,55 +31,80 @@ class Arguments
 		end
 end
 
-arguments = Arguments.new ARGV
+module InjectAtMatch
 
-if __FILE__ == $0
+	def self.inject(filename, pattern, new_text, options)
+		bk_filename = "#{filename}__bk"
 
-	# IF INCORRECT INPUT, SHOW USAGE
-	if arguments.valid_input
+		FileUtils.mv(filename, bk_filename)  # COPY ORIGINAL FILE TO BACKUP
+		newfile = []
+
+		File.open(bk_filename, 'r').each_line do |line|
+			if options[:before]
+			  newfile << ("#{new_text}\n") if line.match pattern
+				newfile << line
+			else
+				newfile << line
+			  newfile << ("#{new_text}\n") if line.match pattern
+			end
+		end.close
+
+		if !options[:no_output]
+			puts "OUTPUT\n-------"
+			puts newfile
+		end
+
+		File.new(filename, "w+").write newfile.join ""
+		File.delete bk_filename if options[:wildside]
+	end
+
+	def usage
 		puts "-----------------------------------------------------------------------------"
 		puts "USAGE:        inject_at_match [opts] filename regex text"
-		puts "------------------------"
+		puts "------------------------------------------------"
+		puts " injects text into a file before or after all locations matching a given regex"
+		puts "------------------------------------------------"
 		puts "ARGUMENTS:"
 		puts "filename:     path to file to modify"
 		puts "regex:        "
 		puts "text:         text to inject into file"
-		puts "------------------------"
+		puts "------------------------------------------------"
 		puts "OPTIONS:"
 		puts "  --before    inject before match"
 		puts "  --after     inject after match"
 		puts "  --wildside  create no backup"
 		puts "  --help      display this help text"
+		puts "------------------------------------------------"
+		puts 'EXAMPLE:  inject_at_match.rb --before asdf.txt "kittens" "puppies"'
+		puts '  Output: '
+		puts '             ORIGINAL TEXT   |  NEW TEXT'
+		puts '             ----------------+----------------'
+		puts '                asdf         |  asdf'
+		puts '                kittens      |  puppies'
+		puts '                asdf         |  kittens'
+		puts '                             |  asdf'
 		puts "-----------------------------------------------------------------------------"
-
-	# EXTRACT ARGUMENTS
-	else
-		filename, pattern = arguments.args[0], %r(#{arguments.args[1]})
-		new_text = arguments.args.drop(2).join(" ") # TREAT ALL TEXT AFTER FIRST 2 ARGS AS REPLACEMENT TEXT
-		bk_filename = "#{filename}__bk"
-
-		# COPY ORIGINAL FILE TO BACKUP
-		FileUtils.mv(filename, bk_filename)
-		newfile = []
-
-		File.open(bk_filename, 'r').each_line do |line|
-			if arguments.before
-			  newfile << ("#{new_text}\n") if line.match(pattern)
-				newfile << line
-			else
-				newfile << line
-			  newfile << ("#{new_text}\n") if line.match(pattern)
-			end
-		end.close
-
-		puts "OUTPUT\n-------"
-		puts newfile
-
-		File.new(filename, "w+").write(newfile.join(""))
-
-		if arguments.wildside
-			File.delete(bk_filename)
-		end
-
 	end
+end
+
+################################## RUN IF EXECUTING AS CLI TOOL ##################################
+if __FILE__ == $0
+	# prep CLI args for public InjectAtMatch::inject method
+	def __inject__(arguments)
+		# note: treats all text after first 2 args as replacement text
+		InjectAtMatch::inject arguments.args[0], arguments.args[1], arguments.args.drop(2).join(" "),
+													before: arguments.before, wildside: arguments.wildside
+	end
+
+	arguments = Arguments.new ARGV
+	if arguments.valid_input
+		InjectAtMatch::usage                   # SHOW HELP
+	else
+		__inject__ arguments	      # EXTRACT ARGUMENTS
+	end
+##################################################################################################
+
+##################### IMPORTED LIBRARY MESSAGE, IF NOT EXECUTING AS CLI TOOL #####################
+else
+	puts "inject_at_match imported"
 end
