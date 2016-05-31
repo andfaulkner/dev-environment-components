@@ -1,0 +1,8 @@
+<snippet>
+	<description>Output current line in file</description>
+	<content><![CDATA[
+__LINE__
+]]></content>
+	<tabTrigger>line__</tabTrigger>
+	<scope>source.ruby</scope>
+</snippet>

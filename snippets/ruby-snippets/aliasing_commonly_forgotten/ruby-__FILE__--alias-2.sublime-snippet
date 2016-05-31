@@ -1,0 +1,8 @@
+<snippet>
+	<description>Name of current file. Includes extension, excludes path. E.g. asdf.rb</description>
+	<content><![CDATA[
+__FILE__
+]]></content>
+	<tabTrigger>_FILE</tabTrigger>
+	<scope>source.ruby</scope>
+</snippet>

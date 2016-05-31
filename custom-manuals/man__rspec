@@ -23,10 +23,6 @@ echo "    odd, even:           expect(3).to (be_odd)"
 echo "    <, >:                expect(9).to (be < 10)"
 echo "    be_an Integer:       expect(4).to (be_an(Integer))"
 echo '    be_within:           expect(8).be_within(0.5).of(8.3)'
-echo " ALL [NO ANY!]"
-echo '    all:                 expect([1, 3, 5].to all(be_odd)'
-echo '    all: compound AND:   expect([1, 3, 5].to all(be_odd.and be < 10)'
-echo '    all: compound OR:    expect([1, 3, 5].to all(be_even.or be < 10)'
 echo " ERRORS"
 echo '    raise_error:         expect { 3 / 0 }.to raise_error'
 echo ""

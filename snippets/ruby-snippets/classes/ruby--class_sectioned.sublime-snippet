@@ -2,12 +2,12 @@
 	<description>Class lifecycle method that runs when method added to class</description>
 	<content><![CDATA[
 class ${1:${TM_FILENAME/(?<______first =>^[a-z])(?<W1_rest -=>[^\._]*)?_?(?<_w2L1 -=>[a-z])?(?<___W2_rest -=>[^\._]*)?_?(?<_w3L1 -=>[a-z])?(?<___W3_rest -=>[^\._]*)?_?(?<_w4L1 -=>[a-z])?(?<___W4_rest -=>[^\._]*)?\.rb/\U$+{______first =}\L$+{W1_rest -=}\U$+{_w2L1 -=}\L$+{___W2_rest -=}\U$+{_w3L1 -=}\L$+{___W3_rest -=}\U$+{_w4L1 -=}\L$+{___W4_rest -=}/g}}${2/(.+)/ < /}${2: OptionalClassToExtendFrom}
-	${3:includes SomeModule}${3/(.+)/ # mixins/g}
+	${3:include SomeModule}${3/(.+)/ # mixins/g}
 
 	${4:attr_accessor :name_of_accessor}${4/(.+)/ # accessors/g}
 
-	${3:def initialize(${6:arguments})
-		${7:initialize_content}
+	${5:def initialize(${6:arguments})
+		${6:initialize_content}
 	end}
 
 	# class methods here
@@ -16,8 +16,8 @@ class ${1:${TM_FILENAME/(?<______first =>^[a-z])(?<W1_rest -=>[^\._]*)?_?(?<_w2L
 
 	# private methods here
 	private
-	${5/(.+)/private/g}
-	${5:def }
+	${7/(.+)/private/g}
+	${8:def }
 
 end
 ]]></content>

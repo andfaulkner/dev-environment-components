@@ -4,23 +4,28 @@ require 'rspec'
 require 'factory_girl'
 require 'pry'
 
-require '../../scripts/ruby/inject_at_match.rb'
+inject_at_match_path = "../../scripts/ruby/inject_at_match.rb"
+
+require inject_at_match_path
 
 require './scripts/filesystem'
 
 # auto-require all ruby files in a given directory. Recursively requires "depth" # of dirs deep.
 # when depth is one, it only requires files directly inside the given dir - no files in subdirs.
-def require_dir_relative_to_pwd(dir, depth=1)
+def require_dir_relative_to_pwd(dir, depth=1, ext="rb")
+	ext.chop! if ext.start_with?(".")
+
 	levels = ((depth > 0) ? depth : 1).to_i
 	levels.times do |i|
-		depth_path = "/*" * i
-		Dir.glob("#{Dir.pwd}/#{dir}#{depth_path}/*.rb").each {|test_file|
-			require "#{test_file.sub(/#{Dir.pwd.to_s}\/#{dir}\/(.+)\.rb/, "./#{dir}/\\1")}"
+		Dir.glob("#{Dir.pwd.to_s}/#{dir}#{"/*" * i}/*.#{ext}").each {|test_file|
+			require "#{test_file.sub(/#{Dir.pwd.to_s}\/#{dir}\/(.+)\.#{ext}/, "./#{dir}/\\1")}"
+			puts "success! got #{test_file} from #{dir}!"
 		}
 	end
 end
 
 require_dir_relative_to_pwd("scripts", 2)
+require_dir_relative_to_pwd("spec/helpers", 1)
 
 puts FileHandlers
 
@@ -67,16 +72,16 @@ describe "inject_at_match" do
 
 	describe "responds with usage when incorrect args given" do
 		it "displays help file if no args given" do
-			expect(`inject_at_match.rb`).to include(*inclusions)
+			expect(`#{inject_at_match_path}`).to include(*inclusions)
 		end
 		it "displays help file if only 1 arg given" do
-			expect(`inject_at_match.rb`).to include(*inclusions)
+			expect(`#{inject_at_match_path}`).to include(*inclusions)
 		end
 		it "displays help file if only 2 args given" do
-			expect(`inject_at_match.rb`).to include(*inclusions)
+			expect(`#{inject_at_match_path}`).to include(*inclusions)
 		end
 		it "displays help file if only 3 args given" do
-			expect(`inject_at_match.rb`).to include(*inclusions)
+			expect(`#{inject_at_match_path}`).to include(*inclusions)
 			# you could also do this but it's slow:
 			# 	inclusions.each {|inclusion| expect(`inject_at_match.rb`).to include(inclusion) }			
 		end
@@ -88,20 +93,23 @@ describe "inject_at_match" do
 		end
 		it "has a default 'wildside' value that is falsey" do
 			arguments = build(:arguments)
-			expect(arguments.wildside).to be_falsey
+			expect(arguments.wildside).to be false
 		end
 		it "has a factory with a default 'before' value that is truthy" do
 			arguments = build(:arguments)
-			expect(arguments.before).to be_truthy
+			expect(arguments.before).to be true
 		end
 		it "has a factory with a default 'after' value that is falsey" do
 			arguments = build(:arguments)
-			expect(arguments.after).to be_falsey
+			expect(arguments.after).to be_falsy
 		end
 		it "has factory w/ 'args' containing ['hello', 'goodbye'] (both strings); excludes '--before'" do
 			arguments = build(:arguments)
-			expect(arguments.args).to contain_exactly('hello', 'goodbye')
-			expect(arguments.args).to all(be_a(String)) # they must both be strings
+			expect(arguments.args).to eq(['hello', 'goodbye'])
+			puts "\n\narguments.args: #{arguments.args}\n\n"
+			binding.pry
+			arguments.args.each {|arg| puts arg.kind_of?(String)}
+			expect(arguments.args).to all(be_a_kind_of(String)) # they must both be strings
 		end
 	end
 

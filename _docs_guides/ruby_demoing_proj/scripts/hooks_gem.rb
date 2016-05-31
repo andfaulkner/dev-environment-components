@@ -1,1 +1,3 @@
 require "hooks"
+
+puts "OK"

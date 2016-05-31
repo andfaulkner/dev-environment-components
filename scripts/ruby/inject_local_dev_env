@@ -8,16 +8,11 @@ rspec_args = [
   "--format progress"
 ]
 
-local_gems = [
-  'pry-rails',
-  'pry-awesome_print',
-  'better_errors',
-  'hirb',
-  'rspec-instafail'
-]
+local_gems = %w(pry-rails pry-awesome_print hirb rspec-instafail)
+local_gems << "better_errors', '~> 1.1.0"
 
-def clean_temps
-  # `prepend_text Gemfile "source 'http://rubygems.org'"`
+def clean_temps(reverse = false)
+  `prepend_text Gemfile "source 'http://rubygems.org'"` if reverse
   puts `bundle install`
   `rm Gemfile.old`
   `rm .rspec.old`
@@ -27,6 +22,7 @@ if !ARGV.include?("--reverse") && !File.exists?(".injected_dev_env")
   rspec_args.each {|current_arg| `prepend_text .rspec "#{current_arg}"` }        #  `prepend_text .rspec "--require rspec/instafail"`
   `delete_line Gemfile 1`
   local_gems.each {|current_gem| `prepend_text Gemfile "gem '#{current_gem}'"` }
+  `prepend_text Gemfile " "` # nice blank space, avoid clutter
   `prepend_text Gemfile "source 'http://rubygems.org'"`
   clean_temps
   `touch .injected_dev_env`
@@ -37,7 +33,7 @@ elsif !ARGV.include?("--reverse") && File.exists?(".injected_dev_env")
 elsif File.exists?(".injected_dev_env")
   (local_gems.length + 2).times { `delete_line Gemfile 1` }
   rspec_args.length.times { `delete_line .rspec 1` }
-  clean_temps
+  clean_temps true
   `rm .injected_dev_env`
 
 else

@@ -19,7 +19,7 @@ alias bir="bundle install; rbenv rehash"
 
 
 function rspec_extract {
-    cat $1 | ack "([^a-zA-Z0-9_]*it )|([^a-zA-Z0-9_]*describe)|([^a-zA-Z0-9_]*context)"
+cat $1 | ack "(^[^a-zA-Z0-9_]* it )|([^a-zA-Z0-9_]*[^\(]*?describe[ \(])|([^a-zA-Z0-9_]*context[ \(])"
 }
 
 ########## AKR-SPECIFIC KILLS ############

@@ -14,3 +14,6 @@ gem 'rack'
 
 # build html
 gem 'arbre'
+
+gem 'sysinfo'
+gem 'hooks'

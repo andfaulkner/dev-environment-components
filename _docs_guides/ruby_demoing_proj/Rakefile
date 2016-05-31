@@ -10,14 +10,10 @@ namespace :task do
 	task :tasks do
 		puts Rake.application.tasks
 	end
-
 	desc 'Call a Rake task from a Rake task'
 	task :testcallothertask do
 				Rake::Task["multiply"].invoke(20, 20)
 	end
-
-	
-
 end
 
 desc 'Task to multiply two given numbers'
