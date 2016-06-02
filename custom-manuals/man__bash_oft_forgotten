@@ -5,7 +5,6 @@ echo '--------------------------------------------------------------------------
 echo '** BASH - OFTEN FORGOTTEN COMMANDS**'
 echo '---------------------------------------------------------------------------------'
 echo "rerun last command:                  !!"
-echo "suppress output:                     some_command 2>/dev/null"
 echo "create soft link:                    ln -s file_to_link_to shortcut_name_location"
 echo ""
 echo "********* popd & pushd *********"
@@ -48,4 +47,7 @@ echo ""
 echo "********* REMOVE AN ALIAS, FUNCTION, OR VARIABLE *********"
 echo "- remove an alias or method:        unalias aliasname"
 echo "- remove a variable:                unset variablename"
+echo ""
+echo "***************** SUPPRESS OUTPUT *****************"
+echo "- suppress output:                     some_command 2>/dev/null"
 echo '---------------------------------------------------------------------------------\n'

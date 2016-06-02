@@ -1,9 +1,0 @@
-<snippet>
-	<description>Call method on obj via send or public_send. W/ public_, can't call private mtds</description>
-	<content><![CDATA[
-${2:object}.${1:__pick__send__OR__public_send__}(${3:method_name_str}) if ${2:object}.respond_to? ${3:method_name_str}${0}
-]]></content>
-	<tabTrigger>metap_send_public</tabTrigger>
-	<scope>source.ruby</scope>
-</snippet>
-

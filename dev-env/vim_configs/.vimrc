@@ -5,6 +5,8 @@
 " SPLIT VERTICALLY:            <C-W><C-v>   ::   | pane1 | pane2 |
 "
 
+set tabstop=8 softtabstop=0 expandtab shiftwidth=4 smarttab
+
 " Note: Skip initialization for vim-tiny or vim-small.
 if 0 | endif
 
@@ -336,3 +338,22 @@ au FileType javascript call JavaScriptFold()
 if has("autocmd")
   au  BufNewFile,BufRead *.dust,*.dustjs,*.tl set filetype=dustjs
 endif
+
+	
+" "---------------------------------------------------------------" " 
+"""""""""""""""""""""""/ " SET TAB SIZE "  \"""""""""""""""""""""""
+filetype plugin indent on
+" show existing tab with 4 spaces width
+set tabstop=4
+" when indenting with '>', use 4 spaces width
+set shiftwidth=4
+" On pressing tab, insert 4 spaces
+set expandtab
+" "_____________________________________________________________" " 
+
+"au set expandtab
+"au set tabstop=4
+"au set softtabstop=4
+
+"autocmd Filetype *
+"    \ 

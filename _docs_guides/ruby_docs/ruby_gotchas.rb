@@ -69,16 +69,15 @@ class Object
   end
 end
 
-puts " ----- Create a class that has  -----"
+puts " ----- EVIL::: Create class w a class var overloading a global method name ('methods') -----"
 class Stupid < Object
 	@@app_type = "derp"
 	@@methods = "I\'m a moron because I did this"
 end
 
-puts " -----  -----"
+puts " ----- Calling Object.methods ANYWHERE now returns the value of our class var. BAD. -----"
 puts Object.app_type # => derp
 puts Object.methods # => I'm a moron
-
 puts " ----- This is unpredictable, confusing, and near impossible to debug -----"
 
 #################################### MODULE GOTCHAS ####################################

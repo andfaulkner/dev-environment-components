@@ -1,0 +1,2 @@
+item camera
+item laser

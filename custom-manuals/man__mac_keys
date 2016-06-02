@@ -1,0 +1,18 @@
+#!/usr/bin/env sh
+
+echo ''
+echo '---------------------------------------------------------------------------------'
+echo '** MAC KEYS **'
+echo '---------------------------------------------------------------------------------'
+echo '- SYMBOLS'
+echo '    ⌘     CMD'
+echo '    ⌥     OPTION / ALT'
+echo '    ^     CTRL / CONTROL'
+echo '    ⇧     SHIFT'
+echo '    ⇪     CAPS LOCK'
+echo '    Fn    FUNCTION'
+echo ''
+echo '- HOTKEYS'
+echo "    OPTION-CMD-ESCAPE     Open force quit app selector" 
+echo "    SHIFT--CMD-3          Take screenshot"
+echo '---------------------------------------------------------------------------------\n'

@@ -1,0 +1,48 @@
+Sandi Metz' Four Rules (for Ruby code)
+======================================
+
+1.  Your class can be no longer than 100 lines of code.
+
+2.  Your methods can be no longer than five lines of code.
+
+3.  You can pass no more than four parameters, including options hash members, to a method.
+
+4.  When a call comes into your Rails controller, you can only instantiate
+    one object to do whatever it is that needs to be done.
+    *   As a corollary, controller actions can only set 1 instance variable for the view.
+
+Caveats & Exceptions
+--------------------
+*   Any of these rules can be broken if you can convince your pair or pull request reviewer of the necessity.
+
+*   Must be enforced on existing methods & classes you touch. Untouched, they can remain as before,
+    but once you need to make a change, the whole method & class must be changed to meet the rules
+
+Extras
+======
+5. Your view can only know about one instance variable.
+6. Your Rails view should only send messages to that object i.e., no Demeter violations.
+  [ Follow the "thunder dome principle" - one model in, one model out ]
+
+
+Sandi Metz' rules of testing
+============================
+1.  Make assertions about state for incoming messages.
+2.  Make assertions that you send outgoing messages.  [
+    2a. Only do for outgoing /command/ messages. Don't bother testing query methods at all,
+        (though you may need to stub those to make your tests work right.)
+3.  Ignore private methods
+4.  Test roles. Make tests prove they are playing the correct role (and not just
+    testing the mock / double)
+
+
+
+Sources
+=======
+*   Transcript of her original comments: https://gist.github.com/henrik/4509394#file-transcript-md
+*   http://gist.io/4567190
+
+
+Further Reading
+===============
+*   Four Patterns at the Heart of Good Programming Style:   https://docs.google.com/file/d/0B58HKx0bzlVrOE5WZFh0elZMYUk/edit 

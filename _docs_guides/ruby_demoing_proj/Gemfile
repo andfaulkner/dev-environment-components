@@ -17,3 +17,6 @@ gem 'arbre'
 
 gem 'sysinfo'
 gem 'hooks'
+
+gem 'cane'
+gem 'rubocop'

@@ -27,6 +27,7 @@ alias killakr3="ps aux | ack rails | ack -v '3001' | awk '{print \$2}' | xargs k
 alias ka="killakr3"
 
 alias berspec="bundle exec rake spec"
+alias berspec_cleanslate="RAILS_ENV=test bundle exec rake db:setup; bundle exec rake spec"
 
 ################################################################################
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ RAILS ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

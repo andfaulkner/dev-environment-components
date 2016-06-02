@@ -1,0 +1,8 @@
+<snippet>
+	<description>Output name of file used to start program</description>
+	<content><![CDATA[
+\$0
+]]></content>
+	<tabTrigger>__LAUNCHER__</tabTrigger>
+	<scope>source.ruby</scope>
+</snippet>

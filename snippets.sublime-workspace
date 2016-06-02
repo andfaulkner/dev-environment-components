@@ -4,6 +4,14 @@
 		"selected_items":
 		[
 			[
+				"str_",
+				"str_squeeze	Remove all duplicates of given char from string"
+			],
+			[
+				"inject",
+				"inject_at_match_path"
+			],
+			[
 				"cla",
 				"cla_rich	Class lifecycle method that runs when method added to class"
 			],
@@ -439,6 +447,68 @@
 	},
 	"buffers":
 	[
+		{
+			"file": "_docs_guides/ruby_demoing_proj/spec/rspec_inject_at_match.rb",
+			"settings":
+			{
+				"buffer_size": 4015,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"contents": "#!/usr/bin/env ruby\nputs __FILE__\n\nputs \"#{File.dirname(__FILE__)}/inject_at_match\".squeeze(\"/\")\n\nrequire \"#{File.dirname(__FILE__)}/inject_at_match\".squeeze(\"/\")\n\n\n\nputs ARGV\n\nrspec_args = [\n  \"--require rspec/instafail\",\n  \"--format RSpec::Instafail\",\n  \"--format progress\"\n]\n\nlocal_gems = %w(pry-rails pry-awesome_print hirb rspec-instafail)\nlocal_gems << \"better_errors', '~> 1.1.0\"\n\ndef clean_temps(reverse = false)\n  `prepend_text Gemfile \"source 'http://rubygems.org'\"` if reverse\n  puts `bundle install`\n  `rm Gemfile.old`\n  `rm .rspec.old`\nend\n\nif !ARGV.include?(\"--reverse\") && !File.exists?(\".injected_dev_env\")\n  rspec_args.each {|current_arg| `prepend_text .rspec \"#{current_arg}\"` }        #  `prepend_text .rspec \"--require rspec/instafail\"`\n  `delete_line Gemfile 1`\n  local_gems.each {|current_gem| `prepend_text Gemfile \"gem '#{current_gem}'\"` }\n  `prepend_text Gemfile \" \"` # nice blank space, avoid clutter\n  `prepend_text Gemfile \"source 'http://rubygems.org'\"`\n  clean_temps\n  `touch .injected_dev_env`\n\nelsif !ARGV.include?(\"--reverse\") && File.exists?(\".injected_dev_env\")\n  puts \"CANNOT RE-INJECT LOCAL DEV ENVIRONMENT\"\n\nelsif File.exists?(\".injected_dev_env\")\n  (local_gems.length + 2).times { `delete_line Gemfile 1` }\n  rspec_args.length.times { `delete_line .rspec 1` }\n  clean_temps true\n  `rm .injected_dev_env`\n\nelse\n  puts \"CANNOT REVERSE DEV ENVIRONMENT, IT HAS NOT BEEN INJECTED\"  \nend\n\n",
+			"file": "scripts/ruby/inject_local_dev_env",
+			"file_size": 1420,
+			"file_write_time": 131091878320000000,
+			"settings":
+			{
+				"buffer_size": 1422,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "scripts/ruby/inject_at_match.rb",
+			"settings":
+			{
+				"buffer_size": 3755,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "snippets/markdown/markdown--bullet-level-1.sublime-snippet",
+			"settings":
+			{
+				"buffer_size": 326,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "snippets/markdown/markdown--bullet-level-2.sublime-snippet",
+			"settings":
+			{
+				"buffer_size": 330,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"contents": "Sockets - what are they?\n========================\n\n*   endpoints of a bidirectional communications channel\n    *   provide communication:\n        *   within a process\n        *   between processes on the same machine\n        *   between different machines",
+			"file": "_docs_guides/unix/sockets.md",
+			"file_size": 115,
+			"file_write_time": 131092241770000000,
+			"settings":
+			{
+				"buffer_size": 255,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"contents": "",
+			"settings":
+			{
+				"buffer_size": 0,
+				"line_ending": "Unix"
+			}
+		}
 	],
 	"build_system": "",
 	"build_system_choices":
@@ -447,10 +517,14 @@
 	"build_varint": "",
 	"command_palette":
 	{
-		"height": 67.0,
-		"last_filter": "markdownExte",
+		"height": 392.0,
+		"last_filter": "next",
 		"selected_items":
 		[
+			[
+				"next",
+				"SublimeLinter: Next Error"
+			],
 			[
 				"markdownExte",
 				"MarkdownEditing: Fix Underlined Headers"
@@ -660,7 +734,7 @@
 				"Package Control: Install Package"
 			]
 		],
-		"width": 632.0
+		"width": 854.0
 	},
 	"console":
 	{
@@ -687,10 +761,17 @@
 		"/Users/andrewfaulkner/Library/Application Support/Sublime Text 3/Packages/User/sublime-dev-environment-snippet/_docs_guides",
 		"/Users/andrewfaulkner/Library/Application Support/Sublime Text 3/Packages/User/sublime-dev-environment-snippet/_docs_guides/ruby_demoing_proj",
 		"/Users/andrewfaulkner/Library/Application Support/Sublime Text 3/Packages/User/sublime-dev-environment-snippet/_docs_guides/ruby_demoing_proj/experiments",
-		"/Users/andrewfaulkner/Library/Application Support/Sublime Text 3/Packages/User/sublime-dev-environment-snippet/_docs_guides/ruby_docs",
+		"/Users/andrewfaulkner/Library/Application Support/Sublime Text 3/Packages/User/sublime-dev-environment-snippet/_docs_guides/ruby_demoing_proj/scripts",
+		"/Users/andrewfaulkner/Library/Application Support/Sublime Text 3/Packages/User/sublime-dev-environment-snippet/_docs_guides/ruby_demoing_proj/spec",
+		"/Users/andrewfaulkner/Library/Application Support/Sublime Text 3/Packages/User/sublime-dev-environment-snippet/_docs_guides/ruby_demoing_proj/spec/helpers",
 		"/Users/andrewfaulkner/Library/Application Support/Sublime Text 3/Packages/User/sublime-dev-environment-snippet/_docs_guides/ruby_docs/ADVANCED",
 		"/Users/andrewfaulkner/Library/Application Support/Sublime Text 3/Packages/User/sublime-dev-environment-snippet/_docs_guides/ruby_docs/ADVANCED/ruby-tapas-episodes",
+		"/Users/andrewfaulkner/Library/Application Support/Sublime Text 3/Packages/User/sublime-dev-environment-snippet/_docs_guides/ruby_docs/metaprogramming",
+		"/Users/andrewfaulkner/Library/Application Support/Sublime Text 3/Packages/User/sublime-dev-environment-snippet/_docs_guides/unix",
+		"/Users/andrewfaulkner/Library/Application Support/Sublime Text 3/Packages/User/sublime-dev-environment-snippet/scripts",
+		"/Users/andrewfaulkner/Library/Application Support/Sublime Text 3/Packages/User/sublime-dev-environment-snippet/scripts/ruby",
 		"/Users/andrewfaulkner/Library/Application Support/Sublime Text 3/Packages/User/sublime-dev-environment-snippet/snippets",
+		"/Users/andrewfaulkner/Library/Application Support/Sublime Text 3/Packages/User/sublime-dev-environment-snippet/snippets/markdown",
 		"/Users/andrewfaulkner/Library/Application Support/Sublime Text 3/Packages/User/sublime-dev-environment-snippet/snippets/ruby-snippets",
 		"/Users/andrewfaulkner/Library/Application Support/Sublime Text 3/Packages/User/sublime-dev-environment-snippet/snippets/ruby-snippets/aliasing_commonly_forgotten",
 		"/Users/andrewfaulkner/Library/Application Support/Sublime Text 3/Packages/User/sublime-dev-environment-snippet/snippets/ruby-snippets/classes",
@@ -698,9 +779,18 @@
 	],
 	"file_history":
 	[
+		"/Users/andrewfaulkner/Library/Application Support/Sublime Text 3/Packages/User/sublime-dev-environment-snippet/_docs_guides/unix/sockets.md",
+		"/Users/andrewfaulkner/Library/Application Support/Sublime Text 3/Packages/User/sublime-dev-environment-snippet/snippets/ruby-snippets/metaprogramming/ruby-metaprogramming-public_send.sublime-snippet",
+		"/Users/andrewfaulkner/Library/Application Support/Sublime Text 3/Packages/User/sublime-dev-environment-snippet/snippets/ruby-snippets/aliasing_commonly_forgotten/ruby-current-dir--alias-1.sublime-snippet",
+		"/Users/andrewfaulkner/Library/Application Support/Sublime Text 3/Packages/User/sublime-dev-environment-snippet/snippets/ruby-snippets/aliasing_commonly_forgotten/ruby-current-dir--alias-2.sublime-snippet",
+		"/Users/andrewfaulkner/Library/Application Support/Sublime Text 3/Packages/User/sublime-dev-environment-snippet/snippets/ruby-snippets/aliasing_commonly_forgotten/ruby-current-dir--alias-3.sublime-snippet",
+		"/Users/andrewfaulkner/Library/Application Support/Sublime Text 3/Packages/User/sublime-dev-environment-snippet/_docs_guides/ruby_demoing_proj/scripts/hooks_gem.rb",
+		"/Users/andrewfaulkner/Library/Application Support/Sublime Text 3/Packages/User/sublime-dev-environment-snippet/_docs_guides/ruby_docs/metaprogramming/a004-reflection.rb",
+		"/Users/andrewfaulkner/Library/Application Support/Sublime Text 3/Packages/User/sublime-dev-environment-snippet/_docs_guides/ruby_demoing_proj/Gemfile",
+		"/Users/andrewfaulkner/Library/Application Support/Sublime Text 3/Packages/User/sublime-dev-environment-snippet/_docs_guides/ruby_demoing_proj/spec/helpers/patches.rb",
+		"/Users/andrewfaulkner/Library/Application Support/Sublime Text 3/Packages/User/sublime-dev-environment-snippet/snippets/ruby-snippets/aliasing_commonly_forgotten/ruby-current-dir--alias-4.sublime-snippet",
 		"/Users/andrewfaulkner/Library/Application Support/Sublime Text 3/Packages/User/sublime-dev-environment-snippet/_docs_guides/ruby_demoing_proj/Rakefile",
 		"/Users/andrewfaulkner/Library/Application Support/Sublime Text 3/Packages/User/sublime-dev-environment-snippet/snippets/ruby-snippets/metaprogramming/ruby-metaprogramming-define_singleton_method.sublime-snippet",
-		"/Users/andrewfaulkner/Library/Application Support/Sublime Text 3/Packages/User/sublime-dev-environment-snippet/snippets/ruby-snippets/metaprogramming/ruby-metaprogramming-public_send.sublime-snippet",
 		"/Users/andrewfaulkner/Library/Application Support/Sublime Text 3/Packages/User/sublime-dev-environment-snippet/_docs_guides/ruby_demoing_proj/spin-up.rb",
 		"/Users/andrewfaulkner/Library/Application Support/Sublime Text 3/Packages/User/sublime-dev-environment-snippet/_docs_guides/ruby_docs/ADVANCED/ruby-tapas-episodes/ruby--struct.rb",
 		"/Users/andrewfaulkner/Library/Application Support/Sublime Text 3/Packages/User/sublime-dev-environment-snippet/snippets/ruby-snippets/classes/ruby--class_sectioned.sublime-snippet",
@@ -816,16 +906,7 @@
 		"/home/andrew/.config/sublime-text-3/Packages/User/snippets/snippets/js/es6/export/es6-export-def-static-value.sublime-snippet",
 		"/home/andrew/.config/sublime-text-3/Packages/User/snippets/_docs_guides/js/ES2015/export_fns_in_export_block.js",
 		"/home/andrew/.config/sublime-text-3/Packages/User/snippets/_docs_guides/js/ES2015/import.js",
-		"/home/andrew/.config/sublime-text-3/Packages/User/snippets/_docs_guides/js/ES2015/export_default_fn.js",
-		"/home/andrew/.config/sublime-text-3/Packages/User/snippets/snippets/js/react/redux/redux--subscribe-cb-on-state-change.sublime-snippet",
-		"/home/andrew/.config/sublime-text-3/Packages/User/snippets/snippets/js/react/redux/redux--dispatch-action-to-store.sublime-snippet",
-		"/home/andrew/.config/sublime-text-3/Packages/User/snippets/snippets/js/node-specific/nodejs--readFile.sublime-snippet",
-		"/home/andrew/.config/sublime-text-3/Packages/User/snippets/snippets/clumped/test.sublime-completions",
-		"/home/andrew/.config/sublime-text-3/Packages/User/snippets/snippets/js/node-specific/nodejs--readfile-external-catch-error-function.sublime-snippet",
-		"/home/andrew/.config/sublime-text-3/Packages/User/snippets/_random-data/elasticsearch-query-samples-hp.js",
-		"/home/andrew/.config/sublime-text-3/Packages/User/snippets/snippets/js/react/methods/react--update-component-function.sublime-snippet",
-		"/home/andrew/.config/sublime-text-3/Packages/User/snippets/snippets/js/react/new-cmps/react-component-class-export--all-boiler.sublime-snippet",
-		"/home/andrew/.config/sublime-text-3/Packages/User/snippets/snippets/js/react/new-cmps/react-component-simple.sublime-snippet"
+		"/home/andrew/.config/sublime-text-3/Packages/User/snippets/_docs_guides/js/ES2015/export_default_fn.js"
 	],
 	"find":
 	{
@@ -876,6 +957,31 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"arguments",
+			"args",
+			"arguments",
+			"usage",
+			"no_output",
+			"arguments",
+			"i_nject",
+			"inject",
+			"__inject__",
+			"pattern",
+			"inject",
+			"regex",
+			"(?<!USD)10212",
+			"10212(?<!USD)",
+			"(?<!USD)10212",
+			"(?!<USD)10212",
+			"(?=[^a-z]*[a-z])",
+			"^(?=\\w{6,10}$)",
+			"\\A(?=\\w{6,10}\\z)",
+			"^(?=\\w{6,10}$)",
+			"\\A(?=\\w{6,10}\\z)",
+			"irb",
+			"filetype",
+			"eq",
+			"equal",
 			"arguments",
 			"AddsClassMethodsIfMixedIn",
 			"AddsInstanceMethodsIfMixedIn",
@@ -978,32 +1084,7 @@
 			"join",
 			"reverse",
 			"my_arr",
-			"item",
-			"combo",
-			"MAP",
-			"len",
-			"arg",
-			"_size",
-			"rpad_size",
-			"padding",
-			"# ",
-			"num",
-			"# ",
-			"scan",
-			"REPLACE",
-			"replace",
-			".tr",
-			"tr",
-			"scrub",
-			"sequence",
-			"iter",
-			"iterate",
-			"seq",
-			"reader",
-			"accessor",
-			"# should pass :)",
-			"mod",
-			"push"
+			"item"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -1080,8 +1161,202 @@
 	"groups":
 	[
 		{
+			"selected": 5,
 			"sheets":
 			[
+				{
+					"buffer": 0,
+					"file": "_docs_guides/ruby_demoing_proj/spec/rspec_inject_at_match.rb",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 4015,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								3266,
+								3266
+							]
+						],
+						"settings":
+						{
+							"side_bar_folders_auto_load_folder": 1,
+							"syntax": "Packages/Ruby/Ruby.sublime-syntax",
+							"tabs_extra_last_activated": 1464750558.02,
+							"tabs_extra_last_activated_sheet_index": 0,
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "scripts/ruby/inject_local_dev_env",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1422,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								553,
+								553
+							]
+						],
+						"settings":
+						{
+							"side_bar_folders_auto_load_folder": 1,
+							"syntax": "Packages/Ruby/Ruby.sublime-syntax",
+							"tab_size": 2,
+							"tabs_extra_last_activated": 1464750567.31,
+							"tabs_extra_last_activated_sheet_index": 1,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 25.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 5,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "scripts/ruby/inject_at_match.rb",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 3755,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								368,
+								368
+							]
+						],
+						"settings":
+						{
+							"side_bar_folders_auto_load_folder": 1,
+							"syntax": "Packages/Ruby/Ruby.sublime-syntax",
+							"tabs_extra_last_activated": 1464750557.69,
+							"tabs_extra_last_activated_sheet_index": 2,
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 4,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "snippets/markdown/markdown--bullet-level-1.sublime-snippet",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 326,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								194,
+								194
+							]
+						],
+						"settings":
+						{
+							"side_bar_folders_auto_load_folder": 1,
+							"syntax": "Packages/XML/XML.sublime-syntax",
+							"tabs_extra_last_activated": 1464750568.2,
+							"tabs_extra_last_activated_sheet_index": 3,
+							"tabs_extra_spawned": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "snippets/markdown/markdown--bullet-level-2.sublime-snippet",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 330,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								183,
+								183
+							]
+						],
+						"settings":
+						{
+							"side_bar_folders_auto_load_folder": 1,
+							"syntax": "Packages/XML/XML.sublime-syntax",
+							"tabs_extra_last_activated": 1464750572.24,
+							"tabs_extra_last_activated_sheet_index": 4,
+							"tabs_extra_spawned": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "_docs_guides/unix/sockets.md",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 255,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								255,
+								255
+							]
+						],
+						"settings":
+						{
+							"side_bar_folders_auto_load_folder": 1,
+							"syntax": "Packages/Markdown Extended/Syntaxes/Markdown Extended.sublime-syntax",
+							"tabs_extra_last_activated": 1464750572.58,
+							"tabs_extra_last_activated_sheet_index": 5,
+							"tabs_extra_spawned": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				}
 			]
 		},
 		{
@@ -1090,8 +1365,41 @@
 			]
 		},
 		{
+			"selected": 0,
 			"sheets":
 			[
+				{
+					"buffer": 6,
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 0,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"auto_name": "",
+							"color_scheme": "Packages/InactivePanes/Packages/User/SublimeLinter/Monokai (SL).tmTheme",
+							"default_dir": "/Users/andrewfaulkner/Library/Application Support/Sublime Text 3/Packages/User/sublime-dev-environment-snippet",
+							"syntax": "Packages/Text/Plain text.tmLanguage",
+							"tabs_extra_last_activated": 1464703841.33,
+							"tabs_extra_last_activated_sheet_index": 0
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 6,
+					"type": "text"
+				}
 			]
 		},
 		{
@@ -1102,7 +1410,7 @@
 	],
 	"incremental_find":
 	{
-		"height": 21.0
+		"height": 20.0
 	},
 	"input":
 	{
@@ -1140,7 +1448,7 @@
 		"cols":
 		[
 			0.0,
-			0.748409933515,
+			0.478130779552,
 			1.0
 		],
 		"rows":
@@ -1180,6 +1488,22 @@
 		"last_filter": "",
 		"selected_items":
 		[
+			[
+				"injectatmat",
+				"sublime-dev-environment-snippet/scripts/ruby/inject_at_match.rb"
+			],
+			[
+				"ruby-meta",
+				"sublime-dev-environment-snippet/snippets/ruby-snippets/metaprogramming/ruby-metaprogramming-public_send.sublime-snippet"
+			],
+			[
+				"injectlocal",
+				"sublime-dev-environment-snippet/scripts/ruby/inject_local_dev_env"
+			],
+			[
+				"injectatma",
+				"sublime-dev-environment-snippet/_docs_guides/ruby_demoing_proj/spec/rspec_inject_at_match.rb"
+			],
 			[
 				"metaprogramm",
 				"sublime-dev-environment-snippet/snippets/ruby-snippets/classes/ruby-metaprogramming-public_send.sublime-snippet"

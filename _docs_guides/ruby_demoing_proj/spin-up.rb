@@ -1,18 +1,16 @@
-require 'optparse'
+#!/usr/bin/env ruby
+require './app/config/logging'
+require './app/config/option_handler'
 
-options = {}
-OptionParser.new do |opts|
-  opts.banner = "Usage: example.rb [options]"
-  opts.on("-d", "--[no-]define_singleton_methods", "Run experiment showing singleton methods") do |v|
-    options[:singleton_experiment] = v
-  end
-  opts.on("-s", "--[no-]server", "launch the rack server") do |v|
-    options[:run_server] = v
-  end
-end.parse!
+puts "launch server!" if APP_OPTIONS[:run_server] 
 
-puts "launch server!" if options[:run_server] 
-
-require './experiments/define_singleton_methods' if options[:singleton_experiment] 
+require './experiments/define_singleton_methods' if APP_OPTIONS[:singleton_experiment] 
 require './experiments/access_private_methods'
 require './experiments/overriding_brackets'
+
+puts APP_OPTIONS[:log_level]
+puts "here!"
+
+if APP_OPTIONS[:log_level] >= LOG_LEVEL.DEBUG
+  puts "Debug mode is on!"
+end

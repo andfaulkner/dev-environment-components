@@ -99,7 +99,7 @@ function gems_security {
     gem install cancancan
 }
 
-functions gems_dbs {
+function gems_dbs {
     gem install pg
     gem install mysql2
     gem install redis
@@ -122,6 +122,9 @@ function gems {
     gem install rubyzip
     gem install chronic
     gem install yard
+    gem install racc
+    gem install ruby-growl
+    gem install dnssd -v "2.0.1"
     gems_scheduling 
     gems_dbs
     gems_web_servers
@@ -262,8 +265,9 @@ function unix_setup {
 #-----------------------------------------------------------------------------------------------------------------------------------------#
 ################################################################ MAC SETUP ################################################################
 #-----------------------------------------------------------------------------------------------------------------------------------------#
-function mac_setup {
-    echo "mac"
+function mac_setup { 
+    echo "mac"1
+    brew install the_silver_searcher
     MAIN_BASH_FILE=".bash_profile"
     brew install neovim/neovim/neovim
     brew cask install caskroom/versions/java7
@@ -311,6 +315,7 @@ function linux_setup {
     sudo add-apt-repository ppa:neovim-ppa/unstable
     sudo apt-get update
     sudo apt-get install neovim
+    sudo apt-get install silversearcher-ag
 
     # SHELL COMPLETIONS
     sudo apt-get install bash-completion
