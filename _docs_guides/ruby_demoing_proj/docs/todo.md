@@ -19,9 +19,24 @@ LIBS, MAKING RUBY LIFE EASIER
 *   partial application gem?
     +   at least learn how & know it well
 
-*   closures once and for all 
+*   ruby closures once and for all
+*   remove ** autoplacement in Sublime
+
+BASH
+!  schedule github push for +1 minute from now
+*  basic Shoes app
+*  cron backup bashrc, vimrc, bash_profile
+*  edit manual with simpler command
+
+Java
+!   test project
+*   snippets
+*   annotations
+*   Clojure from Java? Or Groovy from Java?
+*   Java code generation?
+*   Refactor one more file
 
 MISC OTHER
 ==========
-*   new sublime
-*   quora cleanup
+!   new sublime
+!   quora cleanup

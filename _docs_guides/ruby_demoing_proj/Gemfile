@@ -20,3 +20,5 @@ gem 'hooks'
 
 gem 'cane'
 gem 'rubocop'
+
+gem 'shoes', ">= 4.0.0.pre5"
