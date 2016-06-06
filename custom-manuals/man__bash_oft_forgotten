@@ -50,4 +50,12 @@ echo "- remove a variable:                unset variablename"
 echo ""
 echo "***************** SUPPRESS OUTPUT *****************"
 echo "- suppress output:                     some_command 2>/dev/null"
+echo ""
+echo "********** META-INFO (INFO ABT BASH CMDS INCL CUSTOM DEFs) ********************"
+echo " - Get type of command (function, alias, app, built-in cmd e.g. at /bin/ls etc)"
+echo "          type some-command" 
+echo "     * examples:   type ln     |||     type gorails    |||     type alias"
+echo "     * can return function, alias, application location,  "
+echo " - Output the actual code of a function or alias:   type function_name_here"
+echo ''
 echo '---------------------------------------------------------------------------------\n'

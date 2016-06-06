@@ -8,6 +8,7 @@ require './experiments/define_singleton_methods' if APP_OPTIONS[:singleton_exper
 require './experiments/access_private_methods'
 require './experiments/overriding_brackets'
 
+puts APP_OPTIONS
 puts APP_OPTIONS[:log_level]
 puts "here!"
 

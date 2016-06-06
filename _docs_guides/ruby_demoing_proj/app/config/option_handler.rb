@@ -28,7 +28,7 @@ class AppOptions
         options[:log_level] = LOG_LEVEL::ALL_OPTIONS.reverse.index(lvl) + 1
         (options[:log_level_setup] ||= {}).merge(name: lvl, number: options[:log_level])
       end
-
+      options[:log_level] ||= 3
       # Output help
       opts.on_tail("-h", "--help", "Show this message") do
         puts opts
@@ -45,7 +45,7 @@ class AppOptions
       puts opts
       exit(1)
     end
-    options
+    options ||= {log_level: 3}
   end # self.parse()
 
 end # class AppOptions

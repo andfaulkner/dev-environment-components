@@ -62,3 +62,7 @@ alias list_vimplugins="ls $VIMPLUGINS"
 alias goguides='pushd ./; cd "$SNIPPETS_DIR/_docs_guides"'
 
 alias ps_sort_by_res_use="ps aux --sort=pcpu,+pmem"
+
+# make it impossible to recursively define ln if this file gets loaded in more than once
+unalias ln 2>/dev/null
+alias ln="ln -s"

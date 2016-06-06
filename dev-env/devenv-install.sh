@@ -267,6 +267,7 @@ function unix_setup {
 #-----------------------------------------------------------------------------------------------------------------------------------------#
 function mac_setup { 
     echo "mac"1
+    brew install shellcheck
     brew install the_silver_searcher
     MAIN_BASH_FILE=".bash_profile"
     brew install neovim/neovim/neovim
@@ -303,6 +304,7 @@ function linux_setup {
     pushd ./
     cd ~/Downloads/tmux
     sudo apt-get install sendmail
+    sudo apt-get install shellcheck
 
     #awesome vim - neovim
     sudo apt-get install software-properties-common
