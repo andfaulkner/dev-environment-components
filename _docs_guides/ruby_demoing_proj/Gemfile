@@ -1,24 +1,65 @@
 # frozen_string_literal: true
 # A sample Gemfile
-source "https://rubygems.org"
+source 'https://rubygems.org'
 
-# testing
-gem "rspec"
-gem "factory_girl"
+gem 'bundler'
 
-# task running
-gem "rake"
+# task runner
+gem 'rake'
 
+################################ web servers ################################
 # serve to web
 gem 'rack'
+# rails
+gem 'rails', '~> 5.0.0.rc1'
+# frontend error display
+gem 'better_errors'
+#############################################################################
 
 # build html
 gem 'arbre'
 
-gem 'sysinfo'
+# parse html
+gem 'nokogiri'
+
+
+############ metaprogramming ############
+# custom callbacks
 gem 'hooks'
 
+gem 'sysinfo'
+
+# get the current os
+gem 'os'
+#########################################
+
+############ style ############
 gem 'cane'
 gem 'rubocop'
+###############################
 
-gem 'shoes', ">= 4.0.0.pre5"
+# ruby GUI - requires jRuby. Will need to sort this using forks / spawning
+gem 'shoes', '>= 4.0.0.pre5'
+
+# Call C code from Ruby
+gem 'RubyInline'
+
+group :development, :test do
+  gem 'pry'
+  gem 'pry-byebug'
+  gem 'pry-awesome_print'
+  gem 'pry-coolline'
+  gem 'pry-em'
+  gem 'pry-theme'
+  gem 'pry-macro'
+  gem 'pry-rails'
+  gem 'pry-pretty-numeric'
+  gem 'pry-stack_explorer'
+  gem 'hirb'
+end
+
+group :test do
+  # testing
+  gem 'rspec'
+  gem 'factory_girl'
+end

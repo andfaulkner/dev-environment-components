@@ -113,7 +113,6 @@ class OptparseExample
         puts OptionParser::Version.join('.')
         exit
       end
-
     end
 
     begin
@@ -129,7 +128,6 @@ class OptparseExample
     end
     options
   end  # parse()
-
 end  # class OptparseExample
 
 options = OptparseExample.parse(ARGV)

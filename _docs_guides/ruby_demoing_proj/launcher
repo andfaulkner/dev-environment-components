@@ -1,0 +1,35 @@
+#!/usr/bin/env jruby
+require './app/config/monkey_patches/monkey_patches'
+puts "Launcher initialized!"
+
+require './app/config/logging'
+require './app/config/option_handler'
+
+puts "launch server!" if APP_OPTIONS[:run_server]
+
+# Display log level
+if APP_OPTIONS[:log_level] >= LOG_LEVEL.DEBUG
+  puts "Debug mode is on!"
+end
+
+puts "\n************** about to launch subapp **************"
+require 'bundler'
+Bundler.require(:development)
+
+require 'pry'
+sleep 5000
+binding.pry;
+
+case APP_OPTIONS[:subapp]
+when :pty_experiment
+  require './app/pty_experiment'
+when :drb_server
+  require './app/servers/drb_process_test.rb'
+when :singleton_experiment
+  require './experiments/define_singleton_methods'
+when :rack_server
+  require './rack_tests/test_apps/test_app_1/config_2.ru'
+else
+  require './experiments/access_private_methods'
+  require './experiments/overriding_brackets'
+end

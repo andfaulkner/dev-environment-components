@@ -6,15 +6,31 @@ DONE - June 2nd 2016
 !   Java Generics - mini-doc
 !   Java Generics - Collections basics
 !  setup shellcheck
-*   pull https://gitlab.com/ackroo/akr-3-ios-cardholder-1/tree/williams-fresh-cafe
-*  basic Shoes app
+!  basic Shoes app
+!   pull https://gitlab.com/ackroo/akr-3-ios-cardholder-1/tree/williams-fresh-cafe
+!X  Retrofit Java library: turn HTTP API into a Java interface (WAY nicer): http://square.github.io/retrofit/
+!  OKHTTP
+!  Retrolambda Java library, or alternatively Jack (Jack worked)
+!  alias_method alias
+*  alias_method only call within certain subclass
+*  inline C in Ruby
+*  install 2.4.0-dev
+*  Fork ruby - make different ruby version on fork
+  -  pty spawn
+*  Config file
+
+*  hook on class when subclass created?
+*  hook snippets ruby
+*  custom hook ruby
+*  ruby: Objectspace
+*  drb
+*  TracePoint.trace(:end) equivalent for 1.9.3? << custom callbacks
+* ruby select from & run file list
 *  Kotlin - learn basics
 *  Effective Java dwl. This is the book: https://www.amazon.ca/Effective-Java-2nd-Joshua-Bloch/dp/0321356683/184-5366283-0511662?ie=UTF8&*Version*=1&*entries*=0
-*  Retrofit Java library: turn HTTP API into a Java interface (WAY nicer): http://square.github.io/retrofit/
-*  Retrolambda Java library
+!  
 *  dex-method-counts: cli tool. Tells you how many methods you have (to stay under the Android limit for - of ~65000): https://github.com/mihaip/dex-method-counts
 *  test your main shell scripts in shellcheck: http://www.shellcheck.net/
-*  
 
 ---------
 

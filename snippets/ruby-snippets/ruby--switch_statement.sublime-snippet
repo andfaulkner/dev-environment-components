@@ -1,0 +1,13 @@
+<snippet>
+	<description>Ruby equivalent of switch statement</description>
+	<content><![CDATA[
+case ${1:expression_to_evaluate}
+when ${2:'this is the value of expression is this - unlimited whens allowed'}
+  ${3:# Do something in this case}
+else
+  ${4:# Do something for cases not matching any others}
+end
+]]></content>
+	<tabTrigger>switch</tabTrigger>
+	<scope>source.ruby</scope>
+</snippet>
