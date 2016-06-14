@@ -27,6 +27,7 @@ class Hash
   def initialize(*args)
     @added_methods ||= []
     puts "making new hash: #{args}" if $HASH_VERBOSE
+    puts "About to call super"
     super(*args)
   end
 
@@ -49,7 +50,7 @@ class Hash
       @added_methods.delete_if {|i| i == name.to_sym }
     else
       puts "#{name} added!" if $HASH_VERBOSE
-      @added_methods << name.to_sym
+      (@added_methods ||= []) << name.to_sym
     end
     puts @added_methods if $HASH_VERBOSE
   end
@@ -79,4 +80,4 @@ def depatch_hash
   end
 end
 
-depatch_hash
+# depatch_hash

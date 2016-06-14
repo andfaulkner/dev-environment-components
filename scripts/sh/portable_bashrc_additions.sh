@@ -130,3 +130,4 @@ function insertfirstline {
     echo $2 | cat - $1 > temp && mv temp $1
 }
 
+alias goios="cd /Users/andrewfaulkner/projects/ackroo/akr-3-ios-cardholder-1"

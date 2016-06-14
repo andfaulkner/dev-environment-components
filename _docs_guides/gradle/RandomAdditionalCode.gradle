@@ -1,0 +1,134 @@
+////////////////////////////////////////////////////////////////////////////////////////////
+////////////////////////// WilliamsAndroidBuildUtilsPlugin.groovy //////////////////////////
+////////////////////////////////////////////////////////////////////////////////////////////
+/**
+ * Print a line made up repetitions of a single given character e.g. @@@@@@@@@@@@
+ * @param numLines Number of lines in a row to display. Defaults to one.
+ * @param outChar Character the line will be comprised of.
+ * @param lineWidth Width of the line - i.e. number of repetitions of outChar
+ */
+static def printWideFlatLines(int numLines = 1, String outChar = '-', int lineWidth = 80) {
+    numLines.times {
+        println outChar.multiply(lineWidth)
+    }
+}
+
+/**
+ * Pad a title string up to provided length with given char. Centers title. E.g. *** title ***
+ * @param title
+ * @param outChar
+ * @param width
+ * @param preSpace
+ */
+static def center(String title, String outChar = '-', int width = 80, boolean preSpace = true) {
+    width = Math.round((width - title.length() - 2) / 2)
+    if (preSpace) println ""
+    print("${outChar.multiply(width)} ${title} ${outChar.multiply(width)}\n")
+}
+
+/**
+ * Run given function preAndPost before and after running mainFunction. Execute immediately.
+ * @param mainFunction function to run between 2 runs of the function in param preAndPost
+ * @param preAndPost function to run before and after the main function
+ */
+static void bookendFunction(Closure mainFunction, Closure preAndPost) {
+    preAndPost
+    mainFunction
+    preAndPost
+}
+
+static def display_directories() {
+    println "User home: ${System.getProperty('user.home')}\n"
+    println "Java home: ${System.getProperty('java.home')}\n"
+    println "User directory: ${System.getProperty('user.dir')}\n"
+}
+
+static def showBashProfile() {
+    String content = new File("${System.getProperty('user.home')}/.bash_profile").getText('UTF-8')
+    println content
+}
+
+task printVars << {
+    bookendFunction({ printWideFlatLines(2, '%', 160) }, {
+        center("IMPORTANT DIRECTORIES", "-", 160)
+        display_directories()
+        printWideFlatLines(1, "-", 160)
+
+        center(".bash_profile - raw file", "#", 60)
+        showBashProfile()
+        printWideFlatLines(1, "#", 60)
+    })
+}
+/////////////////////////////////////////////////////////////////////////////////
+
+
+
+/////////////////////////////////////////////////////////////////////////////////
+///////////////////////////// GreetingMeTask.groovy /////////////////////////////
+/////////////////////////////////////////////////////////////////////////////////
+package org.gradle
+
+import org.gradle.api.DefaultTask
+import org.gradle.api.tasks.TaskAction
+
+class GreetingMeTask extends DefaultTask {
+    String greeting = 'hello from GreetingTask'
+
+    @TaskAction
+    def greet() {
+        println greeting
+    }
+}
+/////////////////////////////////////////////////////////////////////////////////
+
+
+/////////////////////////////////////////////////////////////////////////////////
+////////////////////////// RandomAdditionalCode.gradle //////////////////////////
+/////////////////////////////////////////////////////////////////////////////////
+import org.gradle.api.DefaultTask
+import org.gradle.api.tasks.TaskAction
+
+// SIMPLE TASK
+task hello {
+    println("hello!")
+}
+
+// SIMPLE TASK DEFINED BY CLASS
+task hellohello(type: GreetingTask)
+
+class GreetingTask extends DefaultTask {
+    @TaskAction
+    def greet() {
+        println 'hello from GreetingTask'
+    }
+}
+/////////////////////////////////////////////////////////////////////////////////
+
+
+/* BELOW:
+ *   This next one actually worked when combined with WilliamsAndroidBuildUtilsPlugin scripts
+ *   when they were pasted into the file. The issue was importing, everything else was OK.
+ *
+/////////////////////////////////////////////////////////////////////////////////
+//////////////////// directly in project root build.gradle //////////////////////
+/////////////////////////////////////////////////////////////////////////////////
+//task greeting(type: GreetingMeTask) {
+//    greeting = 'howdy!'
+//}
+
+//task printVars << {
+//    WilliamsAndroidBuildUtils utils = new WilliamsAndroidBuildUtils();
+//    utils.apply()
+//    project.task('printVars') << {
+//        bookendFunction({ printWideFlatLines(2, '%', 160) }, {
+//            center("IMPORTANT DIRECTORIES", "-", 160)
+//            display_directories()
+//            printWideFlatLines(1, "-", 160)
+//
+//            center(".bash_profile - raw file", "#", 60)
+//            showBashProfile()
+//            printWideFlatLines(1, "#", 60)
+//        })
+//    }
+//}
+/////////////////////////////////////////////////////////////////////////////////

@@ -34,4 +34,8 @@ echo '    * Replace multiline split-up else statements (   } \n  else  \n  { ) w
 echo '         \}\n[^a-zA-Z0-9_\n]*else\n[^a-zA-Z0-9\n_]*\{ '
 echo '    * Replace if(  with if (  << add a space '
 echo '         FIND:     if\(      REPLACE:     if ( '
+echo ''
+echo '## Android app log filtering'
+echo '    * exclude all lines containing pointless OS-level getSlotFromBufferLocked C++ error:'
+echo '        ^(?:(?! E/Surface: getSlotFromBufferLocked: unknown buffer: ).)*$\r?\n? '
 echo '----------------------------------------------------------------------------------------------'

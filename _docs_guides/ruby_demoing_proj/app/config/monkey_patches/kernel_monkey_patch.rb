@@ -31,6 +31,7 @@ module Kernel
 
   old_puts = instance_method(:puts)
   define_method(:puts) do |str, *strs|
+    # puts ":::CALLER::: #{caller}"
     old_puts.bind(self).("#{caller_filename(caller)}: #{str}", *strs)
   end
 end

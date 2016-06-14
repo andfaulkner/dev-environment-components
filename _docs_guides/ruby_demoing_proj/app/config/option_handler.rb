@@ -3,6 +3,8 @@
 # options parser handling
 require 'optparse'
 
+puts "\n************** About to handle options **************"
+
 # Handle arguments passed to app launcher
 class AppOptions
   def parse(args)

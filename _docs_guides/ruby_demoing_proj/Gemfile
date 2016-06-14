@@ -22,7 +22,6 @@ gem 'arbre'
 # parse html
 gem 'nokogiri'
 
-
 ############ metaprogramming ############
 # custom callbacks
 gem 'hooks'
@@ -44,17 +43,21 @@ gem 'shoes', '>= 4.0.0.pre5'
 # Call C code from Ruby
 gem 'RubyInline'
 
+gem 'prettyprint'
+
+gem 'awesome_print'
+
 group :development, :test do
-  gem 'pry'
-  gem 'pry-byebug'
-  gem 'pry-awesome_print'
-  gem 'pry-coolline'
-  gem 'pry-em'
-  gem 'pry-theme'
-  gem 'pry-macro'
-  gem 'pry-rails'
-  gem 'pry-pretty-numeric'
-  gem 'pry-stack_explorer'
+  gem 'pry', '0.10.3'
+  # gem 'pry-byebug'
+  # gem 'pry-awesome_print'
+  # gem 'pry-coolline'
+  # gem 'pry-em'
+  # gem 'pry-theme'
+  # gem 'pry-macro'
+  # gem 'pry-rails'
+  # gem 'pry-pretty-numeric'
+  # gem 'pry-stack_explorer'
   gem 'hirb'
 end
 

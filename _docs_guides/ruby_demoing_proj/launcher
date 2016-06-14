@@ -14,7 +14,7 @@ end
 
 puts "\n************** about to launch subapp **************"
 require 'bundler'
-Bundler.require(:development)
+# Bundler.require(:development)
 
 require 'pry'
 sleep 5000
@@ -28,7 +28,8 @@ when :drb_server
 when :singleton_experiment
   require './experiments/define_singleton_methods'
 when :rack_server
-  require './rack_tests/test_apps/test_app_1/config_2.ru'
+  puts "can't atm"
+  # require './rack_tests/test_apps/test_app_1/config_2.ru'
 else
   require './experiments/access_private_methods'
   require './experiments/overriding_brackets'
