@@ -12,6 +12,16 @@ DONE - June 2nd 2016
 !  OKHTTP
 !  Retrolambda Java library, or alternatively Jack (Jack worked)
 !  alias_method alias
+*  fix ruby project
+*  drb
+*  ruby select from & run file list
+*  Ruby site with grape
+
+*  Tetris!
+  -  
+
+
+
 *  alias_method only call within certain subclass
 *  inline C in Ruby
 *  install 2.4.0-dev

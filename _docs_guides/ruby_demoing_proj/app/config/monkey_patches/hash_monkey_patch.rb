@@ -33,6 +33,7 @@ class Hash
 
   def self.aliased_methods
     instance_methods.group_by {|m| instance_method(m) }
+    
                     .map(&:last)
                     .keep_if {|symbols| symbols.length > 1 }
   end
@@ -68,6 +69,7 @@ end
 
 puts "aliased Hash methods: #{Hash.aliased_methods}" if $HASH_VERBOSE
 
+# reverse the monkey patches here
 def depatch_hash
   Hash.class_eval do
     puts "added methods: #{@added_methods ? @added_methods : 'none' }" if $HASH_VERBOSE

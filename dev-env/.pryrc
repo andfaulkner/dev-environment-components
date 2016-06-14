@@ -25,9 +25,9 @@ end
 
 require 'pry-rails'
 # require 'pry-macro'
-require 'pry-theme'
-require 'pry-awesome_print'
-require 'pry-stack_explorer'
+# require 'pry-theme'
+# require 'pry-awesome_print'
+# require 'pry-stack_explorer'
 require 'hirb'
 require 'rubygems'
 #require 'awesome_print'
@@ -52,12 +52,12 @@ Pry.config.theme = "solarized"
 ################################################################################
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ ALIASES ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 ################################################################################
-Pry.commands.alias_command 'bt', 'pry-backtrace' rescue nil
-Pry.commands.alias_command 'c', 'continue'
-Pry.commands.alias_command 'step-in', 'step'
-Pry.commands.alias_command 'step-over', 'next'
-Pry.commands.alias_command 'f', 'finish'
-Pry.commands.alias_command 'step-out', 'finish'
+#Pry.commands.alias_command 'bt', 'pry-backtrace' rescue nil
+#Pry.commands.alias_command 'c', 'continue'
+#Pry.commands.alias_command 'step-in', 'step'
+#Pry.commands.alias_command 'step-over', 'next'
+#Pry.commands.alias_command 'f', 'finish'
+#Pry.commands.alias_command 'step-out', 'finish'
 Pry.commands.alias_command 'nuke', 'exit-program'
 Pry.commands.alias_command 'vim', 'edit'            # because I keep forgetting :(
 
