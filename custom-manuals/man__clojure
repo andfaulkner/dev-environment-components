@@ -1,0 +1,10 @@
+#!/usr/bin/env sh
+
+echo ''
+echo '---------------------------------------------------------------------------------'
+echo '** CLOJURE CLI **'
+echo '---------------------------------------------------------------------------------'
+echo "## run built clojure script" 
+echo "   -- java -jar target/uberjar/#{PROJECT_NAME}-#{VERSION}-SNAPSHOT-standalone.jar" 
+echo ""
+echo '---------------------------------------------------------------------------------\n'

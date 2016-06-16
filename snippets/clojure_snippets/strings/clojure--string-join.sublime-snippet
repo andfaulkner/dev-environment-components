@@ -1,0 +1,10 @@
+<snippet>
+  <description>string join operation</description>
+  <content><![CDATA[
+(clojure.string/join "${1:join-string}" [${2:"values" "to" "join"}])
+]]></content>
+  <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+  <tabTrigger>strjoin</tabTrigger>
+  <!-- Optional: Set a scope to limit where the snippet will trigger -->
+  <scope>source.clojure</scope>
+</snippet>

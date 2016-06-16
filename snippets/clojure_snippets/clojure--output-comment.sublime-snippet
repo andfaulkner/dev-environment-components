@@ -1,0 +1,8 @@
+<snippet>
+  <description>Create comment implying output of previous line</description>
+  <content><![CDATA[
+; => 
+]]></content>
+  <tabTrigger>;=</tabTrigger>
+  <scope>source.clojure</scope>
+</snippet>
