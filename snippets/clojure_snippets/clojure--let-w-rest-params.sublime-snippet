@@ -1,0 +1,9 @@
+<snippet>
+  <description>Bind name to value, but only in the scope of the full let statement</description>
+  <content><![CDATA[
+(let [[${1:new-var-name} & ${2:var-holding-rest-of-vals}] ${3:list-to-destructure-into-let}]
+  ${4:return-value-e.g._[(get var-holding-rest-of-vals 1)]})
+]]></content>
+  <tabTrigger>let_rest</tabTrigger>
+  <scope>source.clojure</scope>
+</snippet>

@@ -1,0 +1,8 @@
+<snippet>
+  <description>grab every Nth item in coll incl 1st item. (take-nth 2 [1 2 3 4]) => 1 3</description>
+  <content><![CDATA[
+(take ${1:#-of-items} ${2:some-collection})
+]]></content>
+  <tabTrigger>col_take-nth</tabTrigger>
+  <scope>source.clojure</scope>
+</snippet>

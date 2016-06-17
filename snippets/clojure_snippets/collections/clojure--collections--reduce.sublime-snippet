@@ -1,0 +1,8 @@
+<snippet>
+  <description>collapse coll into single val w a function</description>
+  <content><![CDATA[
+(reduce ${1:reducing-function-eg-+} 2:{collection-to-reduce})
+]]></content>
+  <tabTrigger>col_reduce</tabTrigger>
+  <scope>source.clojure</scope>
+</snippet>

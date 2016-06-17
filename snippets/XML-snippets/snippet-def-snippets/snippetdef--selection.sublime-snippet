@@ -1,0 +1,8 @@
+<snippet>
+  <description>Selected text</description>
+<content><![CDATA[
+\$SELECTION
+]]></content>
+  <tabTrigger>snip_sel</tabTrigger>
+  <scope>text.xml</scope>
+</snippet>

@@ -1,0 +1,8 @@
+<snippet>
+  <description>Return reverse of string</description>
+  <content><![CDATA[
+(clojure.string/reverse ${1:str-to-reverse})
+]]></content>
+  <tabTrigger>str_reverse</tabTrigger>
+  <scope>source.clojure</scope>
+</snippet>

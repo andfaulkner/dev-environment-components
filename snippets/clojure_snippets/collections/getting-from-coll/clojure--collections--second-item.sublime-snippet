@@ -1,0 +1,8 @@
+<snippet>
+  <description>Return 2nd item in collection</description>
+  <content><![CDATA[
+(second ${1:some-collection})
+]]></content>
+  <tabTrigger>col_second</tabTrigger>
+  <scope>source.clojure</scope>
+</snippet>

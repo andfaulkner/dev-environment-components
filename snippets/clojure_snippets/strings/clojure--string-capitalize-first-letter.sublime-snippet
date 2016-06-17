@@ -3,6 +3,6 @@
   <content><![CDATA[
 (clojure.string/capitalize ${1:string-to-capitalize})
 ]]></content>
-  <tabTrigger>strcapitalize</tabTrigger>
+  <tabTrigger>str_capitalize</tabTrigger>
   <scope>source.clojure</scope>
 </snippet>

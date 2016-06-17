@@ -1,0 +1,8 @@
+<snippet>
+  <description>Remove whitespace from both sides of string</description>
+  <content><![CDATA[
+(clojure.string/trim ${1:string-to-trim})
+]]></content>
+  <tabTrigger>str_trim</tabTrigger>
+  <scope>source.clojure</scope>
+</snippet>

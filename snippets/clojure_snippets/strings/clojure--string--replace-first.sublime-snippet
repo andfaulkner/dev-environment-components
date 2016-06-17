@@ -1,0 +1,8 @@
+<snippet>
+  <description>Replace first instance of match with replacement</description>
+  <content><![CDATA[
+(clojure.string/replace-first ${1:str-to-check} ${2:substr-to-check-for} ${3:substr-to-replace-match-with})
+]]></content>
+  <tabTrigger>str_replace-first</tabTrigger>
+  <scope>source.clojure</scope>
+</snippet>

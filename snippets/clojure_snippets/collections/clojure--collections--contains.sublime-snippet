@@ -1,0 +1,8 @@
+<snippet>
+  <description>Determine if item contained in coll</description>
+  <content><![CDATA[
+(contains? ${1:coll-to-check} 2:{item-to-search for})
+]]></content>
+  <tabTrigger>col_contains?</tabTrigger>
+  <scope>source.clojure</scope>
+</snippet>

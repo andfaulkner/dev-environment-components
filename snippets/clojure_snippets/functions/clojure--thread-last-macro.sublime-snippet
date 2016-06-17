@@ -1,0 +1,10 @@
+<snippet>
+  <description>Use the thread-last (->>) macro to make a fn "chain"</description>
+  <content><![CDATA[
+(->> ${1:some-collection}
+  ${2:fn-taking-coll-as-last-arg}
+  (${3:fn-taking-coll-as-2nd-arg-plus-1-other-arg} ${4:first-arg}))
+]]></content>
+  <tabTrigger>->></tabTrigger>
+  <scope>source.clojure</scope>
+</snippet>

@@ -1,0 +1,9 @@
+<snippet>
+  <description>Substitute text from variable</description>
+<content><![CDATA[
+\${${1:var_name_or_num__eg_1}/${2:regex}/${3:format_string\}/}
+]]></content>
+  <tabTrigger>snip_sel</tabTrigger>
+  <scope>text.xml</scope>
+</snippet>
+

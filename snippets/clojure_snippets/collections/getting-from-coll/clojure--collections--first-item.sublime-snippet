@@ -1,0 +1,8 @@
+<snippet>
+  <description>Return 1st item of collection</description>
+  <content><![CDATA[
+(first ${1:some-collection})
+]]></content>
+  <tabTrigger>col_first</tabTrigger>
+  <scope>source.clojure</scope>
+</snippet>

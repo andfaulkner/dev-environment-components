@@ -1,0 +1,8 @@
+<snippet>
+  <description>Create set: coll of unique vals -- from list</description>
+  <content><![CDATA[
+(set [${1:hash set items}])
+]]></content>
+  <tabTrigger>coln_set</tabTrigger>
+  <scope>source.clojure</scope>
+</snippet>

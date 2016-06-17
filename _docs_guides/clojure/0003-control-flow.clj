@@ -149,28 +149,6 @@ poop
 (println (reduce + [1 3 2 4 5 6 7]))
 ; => 28
 
-;----------------------------------------------------------
-; define functions
-(defn woohoo
-  "express extreme excitement" ; built-in documentation - docstring
-  [name]
-  (str "yay! hooray! " name " said, for virtually no reason"))
 
-(println (woohoo "meeka"))
-; => yay! hooray! meeka said, for virtually no reason
-
-; varargs function
-(defn add-multiple
-  "add as many parameters as you'd like"
-  [& values]
-  (reduce + values))
-
-(println (add-multiple 1 3 2 5 4 2 1))
-; => 18
-
-
-
-
-
-
-
+;------------------------------------------------------------------------------
+; loops

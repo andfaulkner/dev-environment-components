@@ -1,0 +1,8 @@
+<snippet>
+  <description>Convert string to uppercase</description>
+  <content><![CDATA[
+(clojure.string/upper-case ${1:string-to-make-upper-case})
+]]></content>
+  <tabTrigger>str_uppercase</tabTrigger>
+  <scope>source.clojure</scope>
+</snippet>

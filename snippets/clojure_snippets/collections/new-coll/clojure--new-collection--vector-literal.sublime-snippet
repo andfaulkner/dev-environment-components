@@ -1,0 +1,8 @@
+<snippet>
+  <description>Create new vector literal. Prefer over lists. E.g. Can use get w them.</description>
+  <content><![CDATA[
+'(${1:list items in here})
+]]></content>
+  <tabTrigger>coln_vector</tabTrigger>
+  <scope>source.clojure</scope>
+</snippet>

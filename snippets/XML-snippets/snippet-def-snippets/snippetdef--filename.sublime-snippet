@@ -1,0 +1,8 @@
+<snippet>
+  <description>Filename of file currently being edited</description>
+<content><![CDATA[
+\$TM_FILENAME
+]]></content>
+  <tabTrigger>snip_filename</tabTrigger>
+  <scope>text.xml</scope>
+</snippet>

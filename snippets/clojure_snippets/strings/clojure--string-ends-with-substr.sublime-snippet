@@ -1,0 +1,8 @@
+<snippet>
+  <description>true if str ends with substring</description>
+  <content><![CDATA[
+(clojure.string/ends-with? ${1:string-to-check} ${2:substring-to-look-for})
+]]></content>
+  <tabTrigger>str_ends-with?</tabTrigger>
+  <scope>source.clojure</scope>
+</snippet>

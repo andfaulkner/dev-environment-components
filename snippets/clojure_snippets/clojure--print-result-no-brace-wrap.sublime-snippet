@@ -1,0 +1,8 @@
+<snippet>
+  <description>CLOJURE: Print item out</description>
+  <content><![CDATA[
+(println ${1:$SELECTION}${/1/})
+]]></content>
+  <tabTrigger>pl</tabTrigger>
+  <scope>source.clojure</scope>
+</snippet>

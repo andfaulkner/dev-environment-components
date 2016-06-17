@@ -1,0 +1,8 @@
+<snippet>
+  <description>Create new hash map: same as JS object</description>
+  <content><![CDATA[
+(hash-map ${1:key} ${2:value} #{3:key} #{4:value})
+]]></content>
+  <tabTrigger>coln_hashmap_lf</tabTrigger>
+  <scope>source.clojure</scope>
+</snippet>

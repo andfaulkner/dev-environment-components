@@ -1,0 +1,8 @@
+<snippet>
+  <description>Return last item of collection</description>
+  <content><![CDATA[
+(last ${1:some-collection})
+]]></content>
+  <tabTrigger>col_last</tabTrigger>
+  <scope>source.clojure</scope>
+</snippet>

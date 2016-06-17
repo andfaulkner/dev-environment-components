@@ -1,0 +1,8 @@
+<snippet>
+  <description>true if str includes substring</description>
+  <content><![CDATA[
+(clojure.string/includes? ${1:string-to-check} ${2:substring-to-look-for})
+]]></content>
+  <tabTrigger>str_includes?</tabTrigger>
+  <scope>source.clojure</scope>
+</snippet>

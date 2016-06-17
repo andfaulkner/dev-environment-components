@@ -1,0 +1,8 @@
+<snippet>
+  <description>Return all but 1st item of collection</description>
+  <content><![CDATA[
+(rest ${1:some-collection})
+]]></content>
+  <tabTrigger>col_rest</tabTrigger>
+  <scope>source.clojure</scope>
+</snippet>

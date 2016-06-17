@@ -1,0 +1,8 @@
+<snippet>
+  <description>Create new hash set - collection of unique values</description>
+  <content><![CDATA[
+(hash-set ${1:hash set items})
+]]></content>
+  <tabTrigger>coln_hash_set</tabTrigger>
+  <scope>source.clojure</scope>
+</snippet>

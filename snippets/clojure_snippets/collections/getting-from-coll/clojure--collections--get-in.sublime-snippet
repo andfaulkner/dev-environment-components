@@ -1,0 +1,8 @@
+<snippet>
+  <description>Deep grab item from nested map via list of keys to traverse down</description>
+  <content><![CDATA[
+(get-in ${1:nested-map_e.g._{:k1 0 :k2 {:k3 1\}\}} [${2:keylist-for-traversal_e.g._[:k2 :k3]}])
+]]></content>
+  <tabTrigger>col_get-in</tabTrigger>
+  <scope>source.clojure</scope>
+</snippet>

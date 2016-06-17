@@ -1,0 +1,8 @@
+<snippet>
+  <description>Create new list in long form. Can't use get to grab vals w lists</description>
+  <content><![CDATA[
+(list ${1:list items in here w no braces around them})
+]]></content>
+  <tabTrigger>coln_list</tabTrigger>
+  <scope>source.clojure</scope>
+</snippet>

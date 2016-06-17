@@ -1,0 +1,8 @@
+<snippet>
+  <description>Print something out - including operation or set of operations</description>
+  <content><![CDATA[
+(println (${1:some operation or set of operations}))
+]]></content>
+  <tabTrigger>po</tabTrigger>
+  <scope>source.clojure</scope>
+</snippet>

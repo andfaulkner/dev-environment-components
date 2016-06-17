@@ -1,0 +1,8 @@
+<snippet>
+  <description>Create new list - shorthand.  Can't use get to grab vals w lists.</description>
+  <content><![CDATA[
+'(${1:list items in here})
+]]></content>
+  <tabTrigger>coln_list_sh</tabTrigger>
+  <scope>source.clojure</scope>
+</snippet>

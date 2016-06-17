@@ -1,0 +1,8 @@
+<snippet>
+  <description>true if str starts with substring</description>
+  <content><![CDATA[
+(clojure.string/starts-with? ${1:string-to-check} ${2:substring-to-look-for})
+]]></content>
+  <tabTrigger>str_starts-with?</tabTrigger>
+  <scope>source.clojure</scope>
+</snippet>

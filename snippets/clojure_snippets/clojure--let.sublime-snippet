@@ -1,0 +1,9 @@
+<snippet>
+  <description>Bind name to value, but only in the scope of the full let statement</description>
+  <content><![CDATA[
+(let [${1:named-var} ${2:item-to-bind-to-name}] 
+  ${3:operations-in-scope-of-let})
+]]></content>
+  <tabTrigger>let</tabTrigger>
+  <scope>source.clojure</scope>
+</snippet>

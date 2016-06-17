@@ -1,0 +1,11 @@
+<snippet>
+  <description>Create set of conditional branches</description>
+  <content><![CDATA[
+(cond
+  (${1:test-condition-1}) ${2:action-or-ret-if-test-1-matches}
+  (${3:test-condition-2}) ${4:action-or-ret-if-test-2-matches}
+  :else ${5:(action-or-ret-on-else)})
+]]></content>
+  <tabTrigger>cond</tabTrigger>
+  <scope>source.clojure</scope>
+</snippet>

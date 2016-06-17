@@ -1,0 +1,8 @@
+<snippet>
+  <description>exclude first N # of items from coll</description>
+  <content><![CDATA[
+(drop ${1:#-of-items} ${2:some-collection})
+]]></content>
+  <tabTrigger>col_drop</tabTrigger>
+  <scope>source.clojure</scope>
+</snippet>

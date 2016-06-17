@@ -1,8 +1,8 @@
 <snippet>
-  <description>Make first letter of string upper case, all others lowercase</description>
+  <description>true if str is nil, empty, or only has whitespace</description>
   <content><![CDATA[
-(clojure.string/capitalize ${1:string-to-capitalize})
+(clojure.string/blank? ${1:string-to-check-if-blank})
 ]]></content>
-  <tabTrigger>strcapitalize</tabTrigger>
+  <tabTrigger>str_blank?</tabTrigger>
   <scope>source.clojure</scope>
 </snippet>
