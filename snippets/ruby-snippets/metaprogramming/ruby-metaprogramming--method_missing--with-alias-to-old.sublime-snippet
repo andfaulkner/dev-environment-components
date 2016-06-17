@@ -1,0 +1,13 @@
+<snippet>
+  <description>Create method_missing method for a class. Call overridden method_missing.</description>
+<content><![CDATA[
+alias_method :orig_method_missing, :method_missing
+
+def method_missing(method_name, *args, &block)
+  ${0}
+  orig_method_missing(sym, *args, block) # acts as call to "super"
+end
+]]></content>  
+  <tabTrigger>metap_method_missing_w_super</tabTrigger>
+  <scope>source.ruby</scope>
+</snippet>

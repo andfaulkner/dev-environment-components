@@ -1,0 +1,8 @@
+<snippet>
+  <description>add item to end of collection</description>
+  <content><![CDATA[
+(conj ${1:coll-to-add-to-end-of} ${2:item-to-add-to-end-of-coll})
+]]></content>
+  <tabTrigger>col_conj</tabTrigger>
+  <scope>source.clojure</scope>
+</snippet>

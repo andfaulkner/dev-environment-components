@@ -1,0 +1,8 @@
+<snippet>
+  <description>Get source code of a function</description>
+  <content><![CDATA[
+(clojure.repl/source ${1:name-of-fn})
+]]></content>
+  <tabTrigger>src</tabTrigger>
+  <scope>source.clojure</scope>
+</snippet>

@@ -1,0 +1,8 @@
+<snippet>
+  <description>Add key-value pair to hashmap</description>
+  <content><![CDATA[
+(assoc ${1:initial-hashmap} ${2:key-to-add-to-hashmap} ${3:val-to-associate-w-added-key})
+]]></content>
+  <tabTrigger>col_map_assoc</tabTrigger>
+  <scope>source.clojure</scope>
+</snippet>

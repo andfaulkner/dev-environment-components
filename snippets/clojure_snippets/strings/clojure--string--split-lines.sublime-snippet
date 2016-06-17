@@ -1,0 +1,8 @@
+<snippet>
+  <description>Split string on newline chars</description>
+<content><![CDATA[
+(clojure.string/split-lines ${1:string})
+]]></content>  
+  <tabTrigger>str_split-lines</tabTrigger>
+  <scope>source.clojure</scope>
+</snippet>

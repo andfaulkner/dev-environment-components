@@ -1,0 +1,5 @@
+puts "configuring ripl"
+
+require 'ripl/multi_line'
+require 'ripl/irb'
+

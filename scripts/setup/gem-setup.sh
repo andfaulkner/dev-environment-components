@@ -153,6 +153,9 @@ gem install acts_as_paranoid
 
 
 # rails 3
-gem install anima -v "0.2.0"; gem install morpher -v "0.2.3"; gem install mutant -v "0.5.26"; gem install mutant-rspec -v "0.5.26"
+# gem install anima -v "0.2.0";
+# gem install morpher -v "0.2.3";
+# gem install mutant -v "0.5.26";
+# gem install mutant-rspec -v "0.5.26"
 
 

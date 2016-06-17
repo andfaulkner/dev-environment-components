@@ -152,3 +152,28 @@ poop
 
 ;------------------------------------------------------------------------------
 ; loops
+; all recursive
+
+; basic loop - takes one arg, gives default val of 1, keeps going until 5 is reached
+(loop [x 1]
+  (when (<= x 5)
+    (println x)
+    (recur (+ x 1))))
+
+; Fibonacci. Because recursion & functional programming tradition.
+(loop [x 1                                 ; loop takes 2 args. 1st arg = x, 2nd = y. Default
+       y 1]                                ; vals given, but each recur provides new vals.
+  (when (<= x 2000)                        ; prevents looping forever
+    (println (str "x: " x ";  y: " y))     ; output current values of x and y
+    (recur y                               ; for next iteration: x is now equal to y;     and
+          (+ x y))))                       ;                     y is now equal to x + y
+
+; Another Fibonacci, this time building a list
+(loop [fib-list [0 1]]
+  (println fib-list)
+  (when (< (count fib-list) 20)
+    (recur (conj fib-list 
+                 (+ (last fib-list) 
+                    (second (rseq fib-list)))))))
+
+

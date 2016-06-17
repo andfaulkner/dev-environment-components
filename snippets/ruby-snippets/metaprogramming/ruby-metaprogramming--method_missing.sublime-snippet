@@ -1,0 +1,10 @@
+<snippet>
+  <description>Create method_missing method for a class</description>
+<content><![CDATA[
+def method_missing(method_name, *arguments, &block)
+  ${0}
+end
+]]></content>  
+  <tabTrigger>metap_method_missing</tabTrigger>
+  <scope>source.ruby</scope>
+</snippet>

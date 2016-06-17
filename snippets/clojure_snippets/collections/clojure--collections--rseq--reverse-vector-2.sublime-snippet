@@ -1,0 +1,8 @@
+<snippet>
+  <description>Reverse a vector</description>
+  <content><![CDATA[
+(rseq ${1:some-vector-e.g.__[1 2 3 4]})
+]]></content>
+  <tabTrigger>col_vec_rev</tabTrigger>
+  <scope>source.clojure</scope>
+</snippet>

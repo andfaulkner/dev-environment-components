@@ -1,0 +1,8 @@
+<snippet>
+  <description>Split a string on all matching regexes</description>
+<content><![CDATA[
+(clojure.string/split ${1:string} #"${2:regex}")
+]]></content>  
+  <tabTrigger>str_split</tabTrigger>
+  <scope>source.clojure</scope>
+</snippet>

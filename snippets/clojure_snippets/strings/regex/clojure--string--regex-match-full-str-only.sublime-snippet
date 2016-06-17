@@ -1,0 +1,8 @@
+<snippet>
+  <description>Return string if regex matches the entire thing</description>
+  <content><![CDATA[
+(re-matches #"${1:regex content}" ${2:string-to-match-on})
+]]></content>
+  <tabTrigger>str_regex_match-full</tabTrigger>
+  <scope>source.clojure</scope>
+</snippet>

@@ -1,0 +1,8 @@
+<snippet>
+  <description>Create a regular expression literal</description>
+  <content><![CDATA[
+#"${1:regex content}"
+]]></content>
+  <tabTrigger>regex</tabTrigger>
+  <scope>source.clojure</scope>
+</snippet>

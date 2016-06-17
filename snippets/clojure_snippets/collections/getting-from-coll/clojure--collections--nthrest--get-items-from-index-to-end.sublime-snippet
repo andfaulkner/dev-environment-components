@@ -1,0 +1,8 @@
+<snippet>
+  <description>Get all items from index to end</description>
+  <content><![CDATA[
+(nthrest ${1:collection} ${2:index-to-start-grabbing-from})
+]]></content>
+  <tabTrigger>col_nthrest</tabTrigger>
+  <scope>source.clojure</scope>
+</snippet>

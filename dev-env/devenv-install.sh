@@ -6,7 +6,7 @@ SNIPPETS_DIR=$(pwd | sed s/\\/snippets\\/.*/\\/snippets/g)
 
 
 
-# THESE MUST RUN AFTER REGULAR UNIX SETUP
+# LIFECYCLE: POINT 4:: THESE MUST RUN AFTER REGULAR UNIX SETUP
 function unix_post_setup {
     vim +VundleInstall
 }
@@ -115,6 +115,12 @@ function gems_scheduling {
     gem install delayed_job
 }
 
+function gems_irb {
+    gem install wirble
+    gem install colorize
+    gem install bond 
+}
+
 function gems {
     gem install capistrano
     gem install mime-types
@@ -141,6 +147,7 @@ function gems {
 #-----------------------------------------------------------------------------------------------------------------------------------------#
 ############################################### UNIX SETUP: COMMON TO BOTH MAC AND LINUX ##################################################
 #-----------------------------------------------------------------------------------------------------------------------------------------#
+# LIFECYCLE: POINT 2
 function unix_setup {
     # MAKE ESSENTIAL BASH CONFIG FILES
     touch ~/.bashrc
@@ -283,6 +290,9 @@ function mac_setup {
    
     # python virtualenv
     brew install pyenv-virtualenv
+
+    # taps
+    brew tap homebrew/completions
 
     unix_setup
 }

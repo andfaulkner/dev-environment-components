@@ -1,0 +1,8 @@
+<snippet>
+  <description>Create list from range of numbers</description>
+  <content><![CDATA[
+(range ${1:end-val_OR_start-val-if->1-arg} ${2:OP:end_val} ${3:OP:step})
+]]></content>
+  <tabTrigger>coln_range_list</tabTrigger>
+  <scope>source.clojure</scope>
+</snippet>

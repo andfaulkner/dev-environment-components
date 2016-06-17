@@ -1,0 +1,8 @@
+<snippet>
+  <description>Import string lib into scope as "str" - allow str/some-fn</description>
+  <content><![CDATA[
+(require '[clojure.string :as str])
+]]></content>
+  <tabTrigger>str_IMPORT</tabTrigger>
+  <scope>source.clojure</scope>
+</snippet>

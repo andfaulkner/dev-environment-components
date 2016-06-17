@@ -1,0 +1,8 @@
+<snippet>
+  <description>Return first regex match in a string</description>
+  <content><![CDATA[
+(re-find #"${1:regex content}" ${2:string-to-match-on})
+]]></content>
+  <tabTrigger>str_regex_first-match</tabTrigger>
+  <scope>source.clojure</scope>
+</snippet>

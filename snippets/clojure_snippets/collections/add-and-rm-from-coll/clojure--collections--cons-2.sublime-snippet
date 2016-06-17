@@ -1,0 +1,8 @@
+<snippet>
+  <description>Add item to start of collection</description>
+  <content><![CDATA[
+(cons ${2:item-to-add-to-start-of-coll} ${1:coll-to-add-to-start-of})
+]]></content>
+  <tabTrigger>col_cons</tabTrigger>
+  <scope>source.clojure</scope>
+</snippet>

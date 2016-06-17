@@ -1,7 +1,7 @@
 <snippet>
   <description>CLOJURE: Print item out</description>
   <content><![CDATA[
-(println ${1:$SELECTION}${/1/})
+(println ${1:$SELECTION})
 ]]></content>
   <tabTrigger>pl</tabTrigger>
   <scope>source.clojure</scope>

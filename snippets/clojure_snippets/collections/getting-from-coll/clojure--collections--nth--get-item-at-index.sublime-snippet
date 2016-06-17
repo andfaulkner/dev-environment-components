@@ -1,0 +1,8 @@
+<snippet>
+  <description>Get item at index</description>
+  <content><![CDATA[
+(nth ${1:collection} ${2:index})
+]]></content>
+  <tabTrigger>col_nth</tabTrigger>
+  <scope>source.clojure</scope>
+</snippet>
