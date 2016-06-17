@@ -136,3 +136,12 @@ puts "setting up reload required files"
 def reload(require_regex)
    $".grep(/#{require_regex}/).each {|e| $".delete(e) && require(e) }
 end
+
+def view_aliases(output_alias_list=false)
+    ap IRB::ExtendCommandBundle.instance_eval("@ALIASES").map{|aliases| "ALIAS : #{aliases[0].to_s.ljust(33)} <-->    #{aliases[1]}"}
+    if output_alias_list
+        IRB::ExtendCommandBundle.instance_eval("@ALIASES")
+    else
+        ""
+    end
+end
