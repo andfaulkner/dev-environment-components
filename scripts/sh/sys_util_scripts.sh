@@ -66,3 +66,5 @@ alias ps_sort_by_res_use="ps aux --sort=pcpu,+pmem"
 # make it impossible to recursively define ln if this file gets loaded in more than once
 unalias ln 2>/dev/null
 alias ln="ln -s"
+
+alias show_servers_running='lsof -Pni4 | ack "TCP\s\*:[0-9].+\s\(LISTEN\)" | ack -v "Growl|BetterTou|Dropbox"'

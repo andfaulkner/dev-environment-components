@@ -1,0 +1,16 @@
+{
+  :modes {:+ #{:editor.javascript}}
+  :helper "clojure-helper.js"             ; optional
+  :snippets [
+    {:name "Buster TestCase"
+    :key "tc"
+    :snippet-file "testcase.snip"
+    :modes {:+ #{:editor.typescript}}}
+
+    {:name "Buster Assert Equals"
+    :key "ae"
+    :no-indent true                       ; optional
+    :snippet "assert.equals($1, $2);$0"}
+  ]
+}
+

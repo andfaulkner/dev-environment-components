@@ -177,3 +177,22 @@ poop
                     (second (rseq fib-list)))))))
 
 
+;------------------------------------------------------------------------------
+; dotimes
+;   Run block n # of times, providing access to current iteration #. Has no output.
+
+; 
+(dotimes [n 4] (println n))
+; => 0
+; => 1
+; => 2
+; => 3
+; => nil
+
+(dotimes [n 4] (println ((juxt take drop) n [1 2 3])))
+; => [() (1 2 3)]
+; => [(1) (2 3)]
+; => [(1 2) (3)]
+; => [(1 2 3) ()]
+; => nil
+

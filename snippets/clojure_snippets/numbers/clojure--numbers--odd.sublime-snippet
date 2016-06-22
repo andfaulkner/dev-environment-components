@@ -1,0 +1,8 @@
+<snippet>
+  <description>True if integer is odd; throw except if val not given an integer</description>
+<content><![CDATA[
+(odd? ${1:my-integer_eg__3})
+]]></content>  
+  <tabTrigger>num_odd?</tabTrigger>
+  <scope>source.clojure</scope>
+</snippet>

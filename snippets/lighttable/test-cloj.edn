@@ -1,0 +1,21 @@
+{
+    :modes {:+ #{:editor}}
+    :snippets [
+        {:name "TestTest"
+        :key "ttt"
+        :snippet "(test snippet here)"}
+        {:name "type"
+        :key "type" 
+        :snippet "(type ${1:var})"}
+        {:name "namespace"
+        :key "ns"
+        :snippet "(ns ${1:namespace-name.eg.core})
+  ${2:require [some-long-lib-name :as short-name]}"}
+        {:name "define function"
+        :key "defin"
+        :snippet "(defn ${1:fn-name}
+  [${2:params here}]
+  ${2:actual code here})"}
+    ]
+
+}

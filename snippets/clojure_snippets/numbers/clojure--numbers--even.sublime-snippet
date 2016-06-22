@@ -1,0 +1,8 @@
+<snippet>
+  <description>True if integer is even; throw except if val not given an integer</description>
+<content><![CDATA[
+(even? ${1:my-integer_eg__3})
+]]></content>  
+  <tabTrigger>num_even?</tabTrigger>
+  <scope>source.clojure</scope>
+</snippet>

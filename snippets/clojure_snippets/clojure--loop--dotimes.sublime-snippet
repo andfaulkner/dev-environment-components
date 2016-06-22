@@ -1,0 +1,8 @@
+<snippet>
+  <description>Run block n # of times w/ access provided to current iteration #. no output.</description>
+<content><![CDATA[
+(dotimes [n ${1:num-times-to-run-fn_eg_5}] ${2:fn-to-repeat_has-access-to-iteration-#--n})
+]]></content>  
+  <tabTrigger>loop_dotimes</tabTrigger>
+  <scope>source.clojure</scope>
+</snippet>

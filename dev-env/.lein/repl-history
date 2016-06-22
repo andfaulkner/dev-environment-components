@@ -1,0 +1,500 @@
+(take-nth 3 [1 2 3 4 5 6 7 8 9 10 11 12 13 14])
+(next (next (next [1 2 3 4 5 6 7 8 9 10 11 12 13 14])))
+(first (next (next [1 2 3 4 5 6 7 8 9 10 11 12 13 14])))
+(def third (first (next (next [1 2 3 4 5 6 7 8 9 10 11 12 13 14]))))
+(third [1 2 3 4 5 6 7 8 9 10 11 12 13 14])
+(defn third [arr] (first (next (next arr))))
+(third [1 2 3 4 5 6 7 8 9 10 11 12 13 14])
+(defprotocol Fruit (name [item]))
+(defprotocol Fruit (fruit-name [item]))
+Fruit
+Fruit name
+(Fruit name)
+(Fruit::name)
+(Fruit :name)
+(Fruit ::name)
+(Fruit .name)
+(Fruit.name)
+Fruit
+(extend-type Banana
+Fruit
+(fruit-name [item]
+"banana")
+)
+(extend-type Banana
+Fruit
+(fruit-name [item]
+("banana")
+)
+Banaca
+Banana
+(defrecord Banana [qty])
+(extend-type Banana
+Fruit
+(fruit-name [item]
+("banana")
+)
+Banana
+(Banana)
+(expand Banana)
+(reify Banana)
+(Banana. 10)
+(Banana. 20)
+(Banana. fruit-name)
+(Banana. (fruit-name "ok")))
+(Banana. (fruit-name "ok"))
+(Banana. fruit-name "ok"))
+(Banana. fruit-name "ok")
+(Banana. (fruit-name "ok"))
+(Banana. (.fruit-name "ok"))
+(Banana (.fruit-name "ok"))
+(Banana. (.fruit-name "ok"))
+(Banana. 10)
+(fruit-name Banana. 10)
+(fruit-name "ban" Banana. 10)
+(defn turn-to-swears
+  "Turn letter into swear word, if a swear word exists starting with that letter"
+  [array-of-chars]
+  (map
+    #(cond
+      (or (= % "f") (= % "F")) "fuck"
+      (or (= % "s") (= % "S")) "shit"
+      (or (= % "a") (= % "A")) "asshole"
+      :else (str % "::not_a_swear"))
+    array-of-chars))
+(turn-to-swears ["asdf" "brtb" "nrtn"])
+(turn-to-swears ["asdf" "brtb" "nrtn" "a"])
+(clojure.string/lowercase "AEUWIS ahijsuef F huF IOJ fEF")
+(lowercase "AEUWIS ahijsuef F huF IOJ fEF")
+(clojure.string/lower-case "AEUWIS ahijsuef F huF IOJ fEF")
+(clojure.string/upper-case "AEUWIS ahijsuef F huF IOJ fEF")
+(defn turn-to-swears
+  "Turn letter into swear word, if a swear word exists starting with that letter"
+  [array-of-chars]
+  (map
+    #(cond
+      (or (= (clojure.string/lower-case %) "f") (= (clojure.string/lower-case %) "fuck")) "fuck"
+      (or (= (clojure.string/lower-case %) "s") (= (clojure.string/lower-case %) "shit")) "shit"
+      (or (= (clojure.string/lower-case %) "a") (= (clojure.string/lower-case %) "asshole")) "asshole"
+      :else (str % "::not_a_swear"))
+    array-of-chars))
+(turn-to-swears ["asdf" "f" "bvertb" "a" "fuck"]
+)
+(ns str
+)
+in-ns
+ns-publics
+ns
+ns-resolve
+(doc ns-resolve)
+(docs ns-resolve)
+(doc ns-resolve)
+doc ns-resolve
+history
+hist
+*ns*
+*ns* here
+*ns* "here"
+(*ns* "here")
+macroexpand *ns* "here")
+(macroexpand *ns* "here")
+(macroexpand (*ns* "here"))
+docs
+foc
+doc
+exit
+(doc ns)
+(doc str)
+(doc string)
+(doc string?)
+(doc integer?)
+(doc interleave)
+coll-fold
+repl
+main
+clojure.main/MAIN
+clojure.main/REQUIRE
+clojure.main/main
+clojure.main/demunge
+ns main
+(ns main)
+show
+repl
+ns repl
+(ns repl)
+main
+assert
+ns-unmap
+ns-unmap repl
+(ns-unmap repl) 
+(ns-unmap "repl") 
+exit
+cond
+      (or (= (clojure.string/lower-case %) "f") (= (clojure.string/lower-case %) "fuck")) "fuck"
+      (or (= (clojure.string/lower-case %) "s") (= (clojure.string/lower-case %) "shit")) "shit"
+      (or (= (clojure.string/lower-case %) "a") (= (clojure.string/lower-case %) "asshole")) "asshole"
+      :else (str % "::not_a_swear")
+(defn turn-to-swears
+  "Turn letter into swear word, if a swear word exists starting with that letter"
+  [array-of-chars]
+  (map
+    #(cond
+      (or (= (clojure.string/lower-case %) "f") (= (clojure.string/lower-case %) "fuck")) "fuck"
+      (or (= (clojure.string/lower-case %) "s") (= (clojure.string/lower-case %) "shit")) "shit"
+      (or (= (clojure.string/lower-case %) "a") (= (clojure.string/lower-case %) "asshole")) "asshole"
+      :else (str % "::not_a_swear"))
+    array-of-chars))
+(cond
+(= true) "TRUE!"
+(= false) "FALSE!")
+exit
+(hash-set 1 1 2 2)
+#{1 2}
+#{1 2 2}
+#{1 2 2 1}
+#{1 2 1}
+#{1 2 3}
+#{1 2 3 4}
+#{1 2 3 4 5}
+(set [33 22 11 1 2 3 1 2 3 44 33])
+(reduce + [1 2 3 4])
+(sum 1 2 3)
+(sum 1 2)
+(def sum +)
+(sum 1 2 3 4)
+(conj [1 2 3] 4)
+(contains? [1 2 3] 2)
+{:a 1 :b 2}
+{
+:a 1
+:b 2
+}
+{ :a 1
+  :b 2 }
+{ :a 1
+  :b 2 }
+(get-in {:a 0 :b {:c 1 :d 2 :e {:f 3 :g 4}} } [:b :e :f])
+(def asym-hobbit-body-parts [{:name "head" :size 3}
+                             {:name "left-eye" :size 1}
+                             {:name "left-ear" :size 1}
+                             {:name "mouth" :size 1}
+                             {:name "nose" :size 1}
+                             {:name "neck" :size 2}
+                             {:name "left-shoulder" :size 3}
+                             {:name "left-upper-arm" :size 3}
+                             {:name "chest" :size 10}
+                             {:name "back" :size 10}
+                             {:name "left-forearm" :size 3}
+                             {:name "abdomen" :size 6}
+                             {:name "left-kidney" :size 1}
+                             {:name "left-hand" :size 2}
+                             {:name "left-knee" :size 2}
+                             {:name "left-thigh" :size 4}
+                             {:name "left-lower-leg" :size 3}
+                             {:name "left-achilles" :size 1}
+                             {:name "left-foot" :size 2}])
+(defn matching-part
+  [part]
+  {:name (clojure.string/replace (:name part) #"^left-" "right-")
+   :size (:size part)})
+(defn symmetrize-body-parts
+  "Expects a seq of maps that have a :name and :size"
+  [asym-body-parts]
+  (loop [remaining-asym-parts asym-body-parts
+         final-body-parts []]
+    (if (empty? remaining-asym-parts)
+      final-body-parts
+      (let [[part & remaining] remaining-asym-parts]
+        (recur remaining
+               (into final-body-parts
+                     (set [part (matching-part part)])))))))
+(symmetrize-body-parts asym-hobbit-body-parts)
+pp
+(pp (symmetrize-body-parts asym-hobbit-body-parts))
+(let [x 3]
+x)
+x
+(let [x 88] 
+  x)
+(let [[pongo & dalmatians] dalmatian-list]
+  [pongo dalmatians])
+(dog-list "meeka" "callie" "jake" "squeaker")
+(def dog-list "meeka" "callie" "jake" "squeaker")
+(def dog-list ["meeka" "callie" "jake" "squeaker"])
+(let [[meeksy & dogs] dog-list]
+[meeksy dogs])
+(let [[meeksy & dogs] dog-list]
+(map #(str (% " << dog") dog-list))
+)
+(let [[meeksy & dogs] dog-list]
+map #(str (% " << dog") dog-list)
+_
+)
+(let [[meeksy & dogs] dog-list]
+map #(str (% " << dog") dog-list))
+(let [[meeksy & dogs] dog-list]
+(get dog-list 1))
+(let [[meeksy & dogs] dog-list]
+(map #(str (% " << dog") dog-list))
+)
+(let [[meeksy & dogs] dog-list]
+[(map #(str (% " << dog") dog-list)])
+(let [[meeksy & dogs] dog-list]
+[(map #(str % " << dog") dog-list)])
+(let [[meeksy & dogs] dog-list]
+[(map #(str % " << dog") dogs)])
+(let [[meeksy & dogs] dog-list]
+[meeksy (map #(str % " << dog") dogs)])
+(let [[meeksy & dogs] dog-list]
+  [meeksy (map #(str % " the dog")) dogs])
+(let [[meeksy & dogs] dog-list]
+  [meeksy (map #(str % " the dog") dogs)])
+(let [[meeksy & dogs] dog-list]
+  (map #(str % " the dog") dogs))
+(let [[meeksy & dogs] dog-list]
+  (map #(str % " the dog")
+    dogs))
+(let [[meeksy & dogs] dog-list]
+  [meeksy (map #(str % " the dog") dogs)])
+exit
+(> 9 2)
+(loop [x 10]
+  (when (> x 1)
+    (println x)
+    (recur (- x 2))))
+(loop [x 1]
+  (when (< x 5)
+    (println x)
+    (recur (+ x 1))))
+(loop [x 1]
+  (when (<= x 5)
+    (println x)
+    (recur (+ x 1))))
+(def x 4)
+(def y 6)
+(str "x: " x ";   y: " y)
+(loop [x 1
+       y 1]
+  (when (<= x 200)
+    (println (str "x: " x ";   y: " y))
+    (recur y (+ x y))))
+(loop [x 1
+       y 1]
+  (when (< x 2000)                       ; prevents looping forever
+    (println (str "x: " x ";   y: " y))  ; output current values of x and y
+    (recur y                             ; for next iteration, x is now equal to y
+          (+ x y))))                     ; for next iteration, y is now equal to x + y
+(loop [x 1
+       y 1]
+  (when (< x 2000)                       ; prevents looping forever
+    (println (str y))  ; output current values of x and y
+    (recur y                             ; for next iteration, x is now equal to y
+          (+ x y))))                     ; for next iteration, y is now equal to x + y
+(count [1 7 213])
+(loop [fib-list [0 1]]
+  (when (< (count fib-list) 2000))
+    (recur
+      (conj fib-list
+            (+ (last fib-list) 
+               (second (reverse fib-list))))))
+(reverse [1 2 3])
+[(reverse [1 2 3])]
+(vector (reverse [1 2 3]))
+(reverse [1 2 3]
+))
+(reverse [1 2 3]
+)
+[0 1 2]
+(loop [fib-list [0 1]]
+  (println (last fib-list))
+  (when (< (count fib-list) 2000))
+    (recur
+      (conj fib-list 
+            (+ (last fib-list) 
+               (second (rseq fib-list))))))
+(loop [fib-list [0 1]]
+  (println (last fib-list))
+  (when (< (count fib-list) 50))
+    (recur
+      (conj fib-list 
+            (+ (last fib-list) 
+               (second (rseq fib-list))))))
+(loop [fib-list [0 1]]
+  (println (last fib-list))
+  (when (< (count fib-list) 20))
+    (recur
+      (conj fib-list 
+            (+ (last fib-list) 
+               (second (rseq fib-list))))))
+(loop [fib-list [0 1]]
+  (println fib-list)
+  (when (< (count fib-list) 20))
+    (recur
+      (conj fib-list 
+            (+ (last fib-list) 
+               (second (rseq fib-list))))))
+(count [1 2 3])
+(count [1 2 3 4 5 6])
+(loop [fib-list [0 1]]
+  (println fib-list)
+  (when (< (count fib-list) 20)
+    (recur
+      (conj fib-list 
+            (+ (last fib-list) 
+               (second (rseq fib-list)))))))
+(loop [fib-list [0 1]]
+  (println fib-list)
+  (when (< (count fib-list) 20)
+    (recur
+      (conj fib-list 
+            (+ (last fib-list) 
+               (second (rseq fib-list)))))))
+(loop [fib-list [0 1]]
+  (println fib-list)
+  (when (< (count fib-list) 20)
+    (recur (conj fib-list 
+                 (+ (last fib-list) 
+                    (second (rseq fib-list))
+                 )
+    ))
+  )
+)
+(loop [fib-list [0 1]]
+  (println fib-list)
+  (when (< (count fib-list) 20)
+    (recur (conj fib-list 
+                 (+ (last fib-list) 
+                    (second (rseq fib-list)))))))
+(println (let [[meeksy & dogs] ["meeka" "callie" "jake"]]
+  (get dogs 1)))
+(println (let [[meeksy & dogs] ["meeka" "callie" "jake"]]
+  (get dogs 1)))
+(println (let [[meeksy & dogs] ["meeka" "callie" "jake"]]
+  ((take 2 dogs))))
+(println (let [[meeksy & dogs] ["meeka" "callie" "jake"]]
+  (take 2 dogs)))
+(get [1 2 3] 1)
+(println (let [[meeksy & dogs] ["meeka" "callie" "jake"]]
+  (get dogs 1)))
+  (get dogs 0)))
+  (get dogs 2)))
+(println (let [[meeksy & dogs] ["meeka" "callie" "jake"]]
+  (get dogs 1)))
+(println (let [[meeksy & dogs] ["meeka" "callie" "jake"]]
+  (get dogs 0)))
+(println (let [[meeksy & dogs] ["meeka" "callie" "jake"]]
+  (get [dogs] 0)))
+(println (let [[meeksy & dogs] ["meeka" "callie" "jake"]]
+  (nth [dogs] 1)))
+  (nth dogs 1)))
+(println (let [[meeksy & dogs] ["meeka" "callie" "jake"]]
+  (nth dogs 1)))
+(nth [5 10 15 20] 2)
+(nth '(5 10 15 20) 2)
+(range 10)
+((range 10) 5)
+(nthrest (range 10) 5)
+((range 5 50 5) 5)
+(nthrest (range 5 50 5) 5)
+(nthrest [1 2 3 4 5 6 7 8 9] 5)
+(range)
+(range 10 30 5)
+(range 10 30)
+(range 10)
+(re-find #"^poop-[a-zA-Z]*" "poop-stick in a bum")
+(re-find #"poop-[a-zA-Z]*" "poop-stick in a bum; poop-chicken just why?")
+(re-matches #"poop-[a-zA-Z]*" "poop-stick in a bum; poop-chicken just why?")
+(re-matches #"poop-.*" "poop-stick in a bum; poop-chicken just why?")
+(re-matches #"poop-.*" "poop-stick in a poop-tree")
+(re-matches #"^poop-[a-zA-Z]*" "poop-stick in a poop-tree")
+(re-match #"ok" "ok yesm ok ok er ok")
+(re-matches #"ok" "ok yesm ok ok er ok")
+(re-seq #"ok" "ok yesm ok ok er ok")
+(re-seq #"poop-[a-zA-Z]*" "poop-stick in a poop-tree")
+(split "can I get a what what?" #"[\w]")
+(split "can I get a what what?" #"[^\w]")
+(clojure.string/split "can I get a what what?" #"[^\w]")
+exit
+(println (count (str/split-lines "test \n string of crap \n or something")))
+(require '[clojure.string :as str]) 
+(println (count (str/split-lines "test \n string of crap \n or something")))
+(println (str/split-lines "test \n string of crap \n or something"))
+(println (count (str/split-lines "test \n string that is \n multiple lines")))
+(println (str/split-lines "test \n string that is \n multiple lines"))
+(assoc {:a 1 :b 2} :c 3)
+exit
+(defmacro assert-equals [actual expected]
+(= expected actual))
+(assert-equals 2 3)
+(assert-equals 3 3)
+(def a 3)
+(assert-equals a 3)
+a
+3
+(assert-equals a 3)
+(macroexpand assert-equals)
+(macroexpand assert-equals 3 3)
+(macroexpand (assert-equals 3 3))
+(macroexpand (assert-equals))
+(macroexpand '(assert-equals))
+(macroexpand '(assert-equals 3 3))
+(macroexpand '(assert-equals a 3))
+(macroexpand-1 '(assert-equals a 3))
+(macroexpand '(assert-equals a 3))
+(macroexpand "(assert-equals a 3)")
+(macroexpand '(assert-equals a 3))
+(defmacro assert-equals [actual expected] (list '= expected actual))
+(macroexpand '(assert-equals a 3))
+(defmacro assert-equals [actual expected] (list '= expected actual))
+(defmacro assert-equals [actual expected] (list "=" expected actual))
+(macroexpand '(assert-equals a 3))
+(defmacro assert-equals [actual expected] (list '= expected actual))
+(macroexpand '(assert-equals a 3))
+(macroexpand-1 '(assert-equals a 3))
+(macroexpand-1 '(assert-equals))
+(println (macroexpand assert-equals 1 3))
+(macroexpand assert-equals 1 3)
+(macroexpand '(assert-equals 1 3))
+(println (macroexpand '(assert-equals 1 3)))
+(assert-equals 4 5)
+(assert-equals 5 6)
+(defmacro assert-equals [actual expected] 
+    `(when-not (= ~actual ~expected) 
+        (throw 
+            (AssertionError.
+                (str "Expected " ~expected " but was " ~actual)))))
+(defmacro assert-equals [actual expected]
+`(when-not (= ~actual ~expected)
+(throw
+(AssertionError.
+(str "Expected " ~expected " but was ~actual)))))
+)
+(defmacro assert-equals [actual expected]
+`(when-not (= ~actual ~expected)
+(throw
+(AssertionError.
+(str "Expected " ~expected " but was " ~actual)))))
+(defmacro wtf-error
+[]
+"This is a wtf error")
+wtf-error
+(wtf-error)
+(macroexpand (wtf-error))
+(defmacro wtf-error
+[arg]
+(str "This is a wtf-error. It should not happen, ever. Has to do with: " arg))
+(macroexpand (wtf-error))
+(macroexpand (wtf-error "WTF"))
+(macroexpand (wtf-error "TabActivity"))
+(when true
+(println "wtf"))
+(macroexpand (when true (println "wtf")))
+(macroexpand (when (println "wtf")))
+(macroexpand (when true (println "wtf")))
+(clojure.repl/source when)
+(clojure.repl/source cons)
+(cons [1 2 3] 0)
+(cons '(1 2 3) 0)
+(cons 0 '(1 2 3))
+(cons 0 [1 2 3])
+exit

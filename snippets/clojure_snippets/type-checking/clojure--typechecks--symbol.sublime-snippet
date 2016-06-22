@@ -1,0 +1,8 @@
+<snippet>
+  <description>True if arg is a symbol</description>
+<content><![CDATA[
+(symbol? ${1:value-to-check})
+]]></content>  
+  <tabTrigger>typechk_sym?</tabTrigger>
+  <scope>source.clojure</scope>
+</snippet>

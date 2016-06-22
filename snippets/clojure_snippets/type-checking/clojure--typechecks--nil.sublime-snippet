@@ -1,0 +1,8 @@
+<snippet>
+  <description>True if arg is nil</description>
+<content><![CDATA[
+(nil? ${1:value-to-check})
+]]></content>  
+  <tabTrigger>typechk_nil?</tabTrigger>
+  <scope>source.clojure</scope>
+</snippet>

@@ -1,0 +1,8 @@
+<snippet>
+  <description>True if arg is a float</description>
+<content><![CDATA[
+(float? ${1:value-to-check})
+]]></content>  
+  <tabTrigger>typechk_float?</tabTrigger>
+  <scope>source.clojure</scope>
+</snippet>

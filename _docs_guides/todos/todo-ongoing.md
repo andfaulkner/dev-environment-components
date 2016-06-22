@@ -23,11 +23,25 @@
 *   ! clojure get source: clojure.repl/source
 *   ! clojure cons
 
+*   ! clojure even
+*   ! clojure odd
+*   ! clojure typecheck snippets
+*   ! clojure filter snippet
+*   ! clojure juxt
+*   clojure dotimes
+*   clojure go
+*   clojure into
+*   
+*   clojure sort-by
+
 *   clojure templates <<< eh, do later
 *   clojure doseq
 
+*   ! get unarchiver
+
 *   clojure copy file
 *   clojure import file as library
+*   clojure drip or nailgun
 *   
 *   
 *   clojure basic i/o

@@ -1,0 +1,8 @@
+<snippet>
+  <description>True if arg is a map</description>
+<content><![CDATA[
+(map? ${1:value-to-check})
+]]></content>  
+  <tabTrigger>typechk_map?</tabTrigger>
+  <scope>source.clojure</scope>
+</snippet>

@@ -1,0 +1,8 @@
+<snippet>
+  <description>True if arg is an integer</description>
+<content><![CDATA[
+(integer? ${1:value-to-check})
+]]></content>  
+  <tabTrigger>typechk_int?</tabTrigger>
+  <scope>source.clojure</scope>
+</snippet>

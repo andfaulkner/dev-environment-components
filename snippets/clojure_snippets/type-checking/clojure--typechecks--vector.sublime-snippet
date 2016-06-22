@@ -1,0 +1,8 @@
+<snippet>
+  <description>True if arg is a vector</description>
+<content><![CDATA[
+(vector? ${1:value-to-check})
+]]></content>  
+  <tabTrigger>typechk_vect?</tabTrigger>
+  <scope>source.clojure</scope>
+</snippet>

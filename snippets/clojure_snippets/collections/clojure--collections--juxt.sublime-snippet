@@ -1,0 +1,8 @@
+<snippet>
+  <description>Run all fns IN juxt sexp w all args given TO juxt sexp ((juxt f f2) a b) -> vec</description>
+<content><![CDATA[
+((juxt ${1:any # of fns}) ${2:args_received_by_each_fn_in_juxt_sexp})
+]]></content>  
+  <tabTrigger>col_fn_juxt</tabTrigger>
+  <scope>source.clojure</scope>
+</snippet>

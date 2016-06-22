@@ -1,0 +1,8 @@
+<snippet>
+  <description>True if arg is a list</description>
+<content><![CDATA[
+(list? ${1:value-to-check})
+]]></content>  
+  <tabTrigger>typechk_list?</tabTrigger>
+  <scope>source.clojure</scope>
+</snippet>

@@ -1,0 +1,8 @@
+<snippet>
+  <description>Return new collection, containing all vals where filter was true</description>
+  <content><![CDATA[
+(filter ${1:predicate} ${2:coll-to-filter_ie-keep-vals-where-pred-true})
+]]></content>
+  <tabTrigger>col_filter</tabTrigger>
+  <scope>source.clojure</scope>
+</snippet>
