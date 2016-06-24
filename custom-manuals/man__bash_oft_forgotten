@@ -38,21 +38,24 @@ echo "        if [[ \$value -gt 4 ]]; then ...; fi"
 echo "- 'less than' numeric test conditional:"
 echo "        if [[ \$value -lt 4 ]]; then ...; fi"
 echo "- check if a variable has something assigned to it:"
-echo "        if [[ -n \$woot ]]; then echo 'win!'; else echo \"nothing assigned\"; fi"
+echo '        if [[ -n $woot ]]; then echo "win!"; else echo "nothing assigned"; fi'
+echo ''
 echo "## File Tests"
 echo "-  check that a file exists: "
-echo "       if [[ -e ~/.android/android.keystore ]]; then echo \"exists\"; fi "
-echo "-  check that a file is not 0 size : "
-echo "        if [[ -s ~/.android/android.keystore ]]; then echo \"file isn't 0 size\"; fi "
-echo "-  check that a file is not a directory or device file: "
-echo "        if [[ -f ~/.android/android.keystore ]]; then echo \"file isn't a dir or device file\"; fi "
-echo "-  check if a file is a directory:"
-echo "        if [[ -d ~/.android/android.keystore ]]; then echo \"file is a dir\"; fi "
-echo "-  check if a file is a symbolic link:"
-echo "        if [[ -h ~/.android/android.keystore ]]; then echo \"file is a symbolic link\"; fi "
-echo "-  permissions tests: same as prev in this section, with the following flags:"
-echo"         for usr running test, file has read perm?:  -r     write perm?:  -w     exec perm?: -x "
-
+echo '       if [[ -e ~/.android/android.keystore ]]; then echo \"exists\"; fi '
+echo '-  check that a file is not 0 size : '
+echo '        if [[ -s ~/.android/android.keystore ]]; then echo "file isnt 0 size"; fi '
+echo '-  check that a file is not a directory or device file: '
+echo '        if [[ -f ~/.android/android.keystore ]]; then echo "file isnt a dir or device file"; fi'
+echo '-  check if a file is a directory:'
+echo '        if [[ -d ~/.android/android.keystore ]]; then echo \"file is a dir\"; fi '
+echo '-  check if a file is a symbolic link:'
+echo '        if [[ -h ~/.android/android.keystore ]]; then echo \"file is a symbolic link\"; fi '
+echo '-  permissions tests: same as prev in this section, with the following flags:'
+echo '         for usr running test, file has read perm?:  -r     write perm?:  -w     exec perm?: -x '
+echo ''
+echo '## Multiple conditions in one test:'
+echo '    if [[ "${RELEASE_MODE}" == "true" ]]; then echo "RELEASE MODE IS TRUE!!!!"; fi' 
 echo "********************************"
 echo ""
 echo "********* VIEW HISTORY WITHIN BACKTICKS OR IN EVAL *********"
@@ -64,6 +67,7 @@ echo "- remove a variable:                unset variablename"
 echo ""
 echo "***************** SUPPRESS OUTPUT *****************"
 echo "- suppress output:                     some_command 2>/dev/null"
+echo "- run app detached from terminal:      nohup some-app-eg-gimp &"
 echo ""
 echo "********** META-INFO (INFO ABT BASH CMDS INCL CUSTOM DEFs) ********************"
 echo " - Get type of command (function, alias, app, built-in cmd e.g. at /bin/ls etc)"

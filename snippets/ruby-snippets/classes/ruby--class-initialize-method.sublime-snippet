@@ -1,0 +1,10 @@
+<snippet>
+  <description>Create a class constructor method (def initialize)</description>
+<content><![CDATA[
+def initialize(${1:args})
+  ${0}
+end
+]]></content>  
+  <tabTrigger>init</tabTrigger>
+  <scope>source.ruby</scope>
+</snippet>

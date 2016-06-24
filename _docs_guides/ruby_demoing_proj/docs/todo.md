@@ -12,6 +12,12 @@ DONE - June 2nd 2016
 !  OKHTTP
 !  Retrolambda Java library, or alternatively Jack (Jack worked)
 !  alias_method alias
+
+- 5 array snippets
+- 5 metaprogramming snippets
+- 10 hash snippets
+- 2 design patterns
+
 *  fix ruby project
 *  drb
 *  ruby select from & run file list
