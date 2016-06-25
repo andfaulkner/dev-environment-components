@@ -76,4 +76,7 @@ echo "     * examples:   type ln     |||     type gorails    |||     type alias"
 echo "     * can return function, alias, application location,  "
 echo " - Output the actual code of a function or alias:   type function_name_here"
 echo ''
+echo '********** CURL ************'
+echo ' - Save file received via curl by the name it is stored as on the server: example:'
+echo '   curl --remote-name --location http://pilotfiber.dl.sourceforge.net/project/mcrypt/Libmcrypt/2.5.8/libmcrypt-2.5.8.tar.gz'
 echo '---------------------------------------------------------------------------------\n'

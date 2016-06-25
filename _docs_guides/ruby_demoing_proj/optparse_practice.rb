@@ -134,3 +134,10 @@ options = OptparseExample.parse(ARGV)
 pp options
 
 pp options.ver
+
+
+
+
+# def opt_lint(opts)
+#   opts.on('-l', '--[no-]lint', 'Show output of gradle lint') {|lint| @lint = lint }
+# end

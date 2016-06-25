@@ -13,10 +13,14 @@ DONE - June 2nd 2016
 !  Retrolambda Java library, or alternatively Jack (Jack worked)
 !  alias_method alias
 
-- 5 array snippets
-- 5 metaprogramming snippets
+- 5 array snippets < 7
+- 3 date & time snippets
+- 5 metaprogramming snippets < 3
 - 10 hash snippets
 - 2 design patterns
+
+- rake
+
 
 *  fix ruby project
 *  drb
