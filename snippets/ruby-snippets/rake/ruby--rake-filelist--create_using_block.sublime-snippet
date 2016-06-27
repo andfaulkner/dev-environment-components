@@ -1,0 +1,10 @@
+<snippet>
+  <description>Create file list using a block</description>
+<content><![CDATA[
+${1:SOURCE_FILES} = Rake::FileList.new(${2:'list_of_file_paths.ext', 'subdir/path_2.ext2'}) do |fl|
+  ${3:#operations to run on base filelist fl: often fl.exclude to reduce the base list}
+end
+]]></content>  
+  <tabTrigger>rake_filelist_newblock</tabTrigger>
+  <scope>source.ruby</scope>
+</snippet>

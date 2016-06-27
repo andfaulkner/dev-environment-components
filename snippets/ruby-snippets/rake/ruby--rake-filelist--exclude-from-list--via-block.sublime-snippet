@@ -1,0 +1,10 @@
+<snippet>
+  <description>Exclude items from a file list via a boolean-ret block</description>
+<content><![CDATA[
+${1:my_existing_filelist}.exclude do |f|
+  ${2:#operation on file stored in file f eg `git ls-files #\{f\}`.empty?}
+end
+]]></content>  
+  <tabTrigger>rake_filelist_exclude_block</tabTrigger>
+  <scope>source.ruby</scope>
+</snippet>

@@ -13,21 +13,23 @@ echo ''
 echo "## RAKE GEM:"
 echo ' - args for rake tasks:'
 echo "    * passing args to rake from terminal:"
-echo "        *   one arg:                       rake sometask[arg]"
-echo "        *   multiple args:                 rake sometask[arg1,arg2,arg3]"
+echo "        *   one arg:                           rake sometask[arg]"
+echo "        *   multiple args:                     rake sometask[arg1,arg2,arg3]"
 echo "    * get rake task to access args (in Rakefile):"
 echo "        task :sometask, [:arg1, arg2, ...] do |task, args|"
 echo "            # all args  accessible through args.argname e.g. args.arg1"
 echo "        end"
+echo " - list rake tasks in a namespace e.g.:        rake -T db"
+echo " - display rake task path e.g.:                rake -W db:migrate"
+echo " - set environment to run rake task in e.g.:   RAILS_ENV=test rake db:migrate"
+echo ' - view list of rake task prerequisites:       rake -P '
+echo ' - view general rake tracing info:             rake --trace'
+echo ' - view tracing info about rake rules:         rake --rules'
 echo ""
-echo " - list rake tasks in a namespace e.g.:    rake -T db"
-echo " - display task path e.g.:                 rake -W db:migrate"
-echo " - set environment to run task in e.g.:    RAILS_ENV=test rake db:migrate"
-echo ""
-echo " ## pipe to ruby one-liner"
+echo " ## PIPE TO RUBY ONE-LINER:"
 echo "        some_cmd | ruby -pe 'pipe to ruby one-liner, modify in some way' | cmd"
 echo ""
-echo " ## parse JSON response from curl - example:"
+echo " ## PARSE JSON RESPONSE FROM curl - EXAMPLE:" 
 echo "        cat jsonfile.txt | ruby -pe 'require \"json\"; \$_ = JSON.parse(\$_)[0][\"cardnumber\"]'"
 echo ""
 echo ' ## RBENV'

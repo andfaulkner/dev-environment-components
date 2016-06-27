@@ -3,7 +3,7 @@
 require './tasks/helpers/rake_helpers.rb'
 
 # grab all items in tasks folder
-Dir['tasks/*.rake'].sort.each do |file|
+Dir['tasks/**/*.rake'].sort.each do |file|
   puts file
   load file
 end
