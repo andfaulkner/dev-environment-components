@@ -1,0 +1,8 @@
+<snippet>
+  <description>Exclude items from a file list</description>
+<content><![CDATA[
+${1:my_existing_filelist}.exclude('${2:regex_or_glob__rm_matches_from_filelist__eg__~*__or__/IG/}')
+]]></content>  
+  <tabTrigger>rake_filelist_exclude</tabTrigger>
+  <scope>source.ruby</scope>
+</snippet>

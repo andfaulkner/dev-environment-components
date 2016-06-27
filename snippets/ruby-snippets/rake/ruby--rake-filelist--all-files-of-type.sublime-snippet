@@ -1,0 +1,8 @@
+<snippet>
+  <description>Get all files of a given type in current dir or deeper</description>
+<content><![CDATA[
+Rake::FileList['**/*.${1:ext}']
+]]></content>  
+  <tabTrigger>rake_filelist_deep</tabTrigger>
+  <scope>source.ruby</scope>
+</snippet>

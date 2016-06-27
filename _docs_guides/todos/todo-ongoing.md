@@ -41,6 +41,9 @@
   -   ! fix double quotes in rake snippets
 *   ! at least 20 new hash snippets (21 newly created, 22 existing in total)
 *   ! reorg docs, projects in snippets (including books!)
+*   10 new array snippets - 2
+*   singleton snippet
+
 *   rake
 *   include C code in ruby?
 

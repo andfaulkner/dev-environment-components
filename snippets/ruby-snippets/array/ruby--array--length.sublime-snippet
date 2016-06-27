@@ -1,0 +1,8 @@
+<snippet>
+	<description>Return number of items in array</description>
+	<content><![CDATA[
+${1:some_arr}.length
+]]></content>
+	<tabTrigger>arr_length</tabTrigger>
+	<scope>source.ruby</scope>
+</snippet>

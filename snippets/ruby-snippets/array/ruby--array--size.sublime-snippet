@@ -1,0 +1,8 @@
+<snippet>
+	<description>Return number of items in array (identical to length)</description> 
+	<content><![CDATA[
+${1:some_arr}.size
+]]></content>
+	<tabTrigger>arr_size</tabTrigger>
+	<scope>source.ruby</scope>
+</snippet>

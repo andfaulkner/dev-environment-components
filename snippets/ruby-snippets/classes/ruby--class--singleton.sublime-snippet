@@ -1,0 +1,15 @@
+<snippet>
+  <description>Create a singleton class</description>
+<content><![CDATA[
+class ${1:${TM_FILENAME/(?<______first =>^[a-z])(?<W1_rest -=>[^\._]*)?_?(?<_w2L1 -=>[a-z])?(?<___W2_rest -=>[^\._]*)?_?(?<_w3L1 -=>[a-z])?(?<___W3_rest -=>[^\._]*)?_?(?<_w4L1 -=>[a-z])?(?<___W4_rest -=>[^\._]*)?\.rb/\U$+{______first =}\L$+{W1_rest -=}\U$+{_w2L1 -=}\L$+{___W2_rest -=}\U$+{_w3L1 -=}\L$+{___W3_rest -=}\U$+{_w4L1 -=}\L$+{___W4_rest -=}/g}}
+  def initialize
+    ${2:#initialization code, run once on first call to ${1:${TM_FILENAME/(?<______first =>^[a-z])(?<W1_rest -=>[^\._]*)?_?(?<_w2L1 -=>[a-z])?(?<___W2_rest -=>[^\._]*)?_?(?<_w3L1 -=>[a-z])?(?<___W3_rest -=>[^\._]*)?_?(?<_w4L1 -=>[a-z])?(?<___W4_rest -=>[^\._]*)?\.rb/\U$+{______first =}\L$+{W1_rest -=}\U$+{_w2L1 -=}\L$+{___W2_rest -=}\U$+{_w3L1 -=}\L$+{___W3_rest -=}\U$+{_w4L1 -=}\L$+{___W4_rest -=}/g}}.instance. Takes no arguments.}
+  end
+end
+
+${3:${1:${TM_FILENAME/(?<______first =>^[a-z])(?<W1_rest -=>[^\._]*)?_?(?<_w2L1 -=>[a-z])?(?<___W2_rest -=>[^\._]*)?_?(?<_w3L1 -=>[a-z])?(?<___W3_rest -=>[^\._]*)?_?(?<_w4L1 -=>[a-z])?(?<___W4_rest -=>[^\._]*)?\.rb/\U$+{______first =}\L$+{W1_rest -=}\U$+{_w2L1 -=}\L$+{___W2_rest -=}\U$+{_w3L1 -=}\L$+{___W3_rest -=}\U$+{_w4L1 -=}\L$+{___W4_rest -=}/g}}.instance # call here to run initialize code right away}
+]]></content>  
+  <tabTrigger>class_singleton</tabTrigger>
+  <scope>source.ruby</scope>
+</snippet>
+ 

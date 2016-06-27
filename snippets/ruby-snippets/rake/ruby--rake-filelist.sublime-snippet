@@ -1,0 +1,8 @@
+<snippet>
+  <description>Get list of files via a glob</description>
+<content><![CDATA[
+Rake::FileList['${1:some_glob}']
+]]></content>  
+  <tabTrigger>rake_filelist</tabTrigger>
+  <scope>source.ruby</scope>
+</snippet>

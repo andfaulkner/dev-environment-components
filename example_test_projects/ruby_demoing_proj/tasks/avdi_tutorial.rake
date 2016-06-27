@@ -39,8 +39,39 @@ end
 
 # EX. 3: FILE LISTS
 # ==================
+project_root = Dir.pwd
 
-# 'enter' new directory to avoid mucking around with file paths
-Dir.chdir 'rake_test_files'
-files = Rake::FileList['*.erko']
+# 'enter' new dir to avoid mucking with file paths (see rake_helpers for how I did this)
+pushd 'rake_test_files'
 
+files_one_level = Rake::FileList['*.erko']
+puts files_one_level
+# => test1.erko
+# => test2.erko
+
+files = Rake::FileList['**/*.erko']
+puts "files: initial list: #{files}"
+# => level_2_test/test3.erko level_2_test/~test4.erko scratch/test5.erko test1.erko test2.erko
+files.exclude('~*') # exclude all files starting with a tilde - remove them from list
+puts "files after exclusion 1: #{files}"
+# => files after exclusion 1: level_2_test/test3.erko scratch/test5.erko test1.erko test2.erko
+files.exclude('^scratch\/') # exclude all files in a scratch directory
+puts "files after both exclusions: #{files}"
+# => files after both exclusions: level_2_test/test3.erko test1.erko test2.erko
+
+# select files with a block instead
+files = Rake::FileList.new('**/*.erko') do |fl|
+  fl.exclude('~*')
+  fl.exclude(/^scratch\//)
+  # exclude all files not included in git
+  fl.exclude do |f|
+    `git ls-files #{f}`.empty?
+  end
+end
+puts "final filelist: #{files}"
+# => final filelist: level_2_test/test3.erko test1.erko test2.erko
+
+
+
+# return to root directory (again, see rake_helpers)
+popd
