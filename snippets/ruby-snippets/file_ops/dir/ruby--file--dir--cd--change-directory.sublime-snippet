@@ -1,0 +1,8 @@
+<snippet>
+	<description>Change directory like cd does in the terminal</description>
+	<content><![CDATA[
+File.chdir(${1:new_directory})
+]]></content>
+	<tabTrigger>file_dir_cd</tabTrigger>
+	<scope>source.ruby</scope>
+</snippet>

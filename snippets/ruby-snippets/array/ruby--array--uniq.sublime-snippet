@@ -1,0 +1,8 @@
+<snippet>
+	<description>Return array with duplicates removed. ! makes it mutative</description>
+	<content><![CDATA[
+${1:some_arr}.uniq{$1:!}
+]]></content>
+	<tabTrigger>arr_uniq</tabTrigger>
+	<scope>source.ruby</scope>
+</snippet>

@@ -1,0 +1,8 @@
+<snippet>
+  <description>Get default val for hash (ret if key lookup done on nonexistent key)</description>
+<content><![CDATA[
+${1:some_hash}.default = ${2:some_value}
+]]></content>  
+  <tabTrigger>hash_default_set</tabTrigger>
+  <scope>source.ruby</scope>
+</snippet>

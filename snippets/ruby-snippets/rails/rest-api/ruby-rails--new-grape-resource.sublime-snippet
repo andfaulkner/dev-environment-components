@@ -2,7 +2,7 @@
 	<description>Create new grape api class</description>
 	<content><![CDATA[
 resource :${1:resource_name} do
-	desc "${2:description of resource}"
+	desc '${2:description of resource}'
 	${0}
 end
 ]]></content>

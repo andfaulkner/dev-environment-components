@@ -1,0 +1,8 @@
+<snippet>
+	<description>Get name of currently executing method</description>
+	<content><![CDATA[
+__method__
+]]></content>
+	<tabTrigger>__method__</tabTrigger>
+	<scope>source.ruby</scope>
+</snippet>

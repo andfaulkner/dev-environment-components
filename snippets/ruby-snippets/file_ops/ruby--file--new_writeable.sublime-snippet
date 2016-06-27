@@ -1,5 +1,5 @@
 <snippet>
-	<description>Create new writeable file, or wipe existing file & get handle</description>
+	<description>Make new writable file or wipe existing file and get handle</description>
 	<content><![CDATA[
 f = File.new(filename, "w+")
 ]]></content>

@@ -1,0 +1,8 @@
+<snippet>
+  <description>Get name of file minus path and optionally extension</description>
+<content><![CDATA[
+File.basename('${1:file}', '${2:optional_file_ext_to_remove_eg__.md}')
+]]></content>  
+  <tabTrigger>file_basename</tabTrigger>
+  <scope>source.ruby</scope>
+</snippet>

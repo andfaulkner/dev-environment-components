@@ -1,0 +1,8 @@
+<snippet>
+  <description>List all files in given dir, optionally of a given type</description>
+<content><![CDATA[
+Dir['${1:path/to/search}/*${2/.+/\./}${2:OPTIONALrb}']
+]]></content>  
+  <tabTrigger>file_dir_list_files</tabTrigger>
+  <scope>source.ruby</scope>
+</snippet>

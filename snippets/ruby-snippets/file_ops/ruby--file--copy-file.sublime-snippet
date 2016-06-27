@@ -1,0 +1,8 @@
+<snippet>
+  <description>Copy file from one location to another</description>
+<content><![CDATA[
+FileUtils.copy_file('${1:file}', '${2:destination_including_filename__NOT_JUST_DIRECTORY}')
+]]></content>  
+  <tabTrigger>file_copy</tabTrigger>
+  <scope>source.ruby</scope>
+</snippet>

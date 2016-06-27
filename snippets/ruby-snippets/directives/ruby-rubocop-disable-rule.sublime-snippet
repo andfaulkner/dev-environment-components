@@ -1,0 +1,8 @@
+<snippet>
+  <description>Disable a </description>
+<content><![CDATA[
+# rubocop:disable ${1:RuleName__eg__HashSyntax}${2/.+/, /}${2:SecondRuleName__eg__LineLength}
+]]></content>  
+  <tabTrigger>rubocop_disable</tabTrigger>
+  <scope>source.ruby</scope>
+</snippet>

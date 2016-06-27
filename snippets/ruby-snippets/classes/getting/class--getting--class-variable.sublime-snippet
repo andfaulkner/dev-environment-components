@@ -1,0 +1,8 @@
+<snippet>
+  <description>Get a class variable from a class</description>
+<content><![CDATA[
+${1:NameOfClass}.class_variable_get(:@@${2:name_of_class_variable})
+]]></content>  
+  <tabTrigger>class_get_classvar</tabTrigger>
+  <scope>source.ruby</scope>
+</snippet>

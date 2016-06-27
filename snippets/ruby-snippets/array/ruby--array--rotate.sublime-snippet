@@ -1,0 +1,8 @@
+<snippet>
+	<description>Move item (i) 1 -> last i's pos; i 2 -> i 1's pos, etc.. ! makes it mutative</description>
+	<content><![CDATA[
+${1:some_arr}.rotate${1:!}(${2:number_or_items_to_rotate_by})
+]]></content>
+	<tabTrigger>arr_rotate</tabTrigger>
+	<scope>source.ruby</scope>
+</snippet>

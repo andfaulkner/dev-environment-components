@@ -1,0 +1,8 @@
+<snippet>
+  <description>Ret new hash w another hsh’s vals as its keys and keys as its vals</description>
+<content><![CDATA[
+${1:some_hash}.invert
+]]></content>  
+  <tabTrigger>hash_invert</tabTrigger>
+  <scope>source.ruby</scope>
+</snippet>

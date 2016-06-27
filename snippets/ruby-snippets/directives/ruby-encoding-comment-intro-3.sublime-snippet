@@ -1,0 +1,8 @@
+<snippet>
+  <description>Required 1st-line def of rb file encoding</description>
+<content><![CDATA[
+# encoding: utf-8
+]]></content>  
+  <tabTrigger>utf8_enc_comment</tabTrigger>
+  <scope>source.ruby</scope>
+</snippet>

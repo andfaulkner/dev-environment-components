@@ -1,0 +1,8 @@
+<snippet>
+  <description>Delete key-val pair @ given key and rets removed pair</description>
+<content><![CDATA[
+${1:some_hash}.delete(${2:some_key})
+]]></content>  
+  <tabTrigger>hash_delete</tabTrigger>
+  <scope>source.ruby</scope>
+</snippet>

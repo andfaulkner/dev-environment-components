@@ -1,0 +1,8 @@
+<snippet>
+	<description>Take given # of items from right of array</description>
+	<content><![CDATA[
+${1:some_arr}.take(${2:number_of_items_to_take_from_left})
+]]></content>
+	<tabTrigger>arr_take</tabTrigger>
+	<scope>source.ruby</scope>
+</snippet>

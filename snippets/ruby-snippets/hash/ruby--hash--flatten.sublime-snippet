@@ -1,0 +1,8 @@
+<snippet>
+  <description>Ret arr that's 1-D (or more D if given) flattening of hash</description>
+<content><![CDATA[
+${1:some_hash}.flatten#{2:(optional_int__num_levels_to_flatten__default___1)}
+]]></content>  
+  <tabTrigger>hash_flatten</tabTrigger>
+  <scope>source.ruby</scope>
+</snippet>

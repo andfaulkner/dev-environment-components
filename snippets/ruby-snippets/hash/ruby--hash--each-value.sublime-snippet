@@ -1,0 +1,8 @@
+<snippet>
+  <description>Run block on each value in a hash</description>
+<content><![CDATA[
+${1:some_hash}.each_value {|${2:value}| ${4} }
+]]></content>  
+  <tabTrigger>hash_each_val</tabTrigger>
+  <scope>source.ruby</scope>
+</snippet>

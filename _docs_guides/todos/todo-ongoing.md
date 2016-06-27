@@ -1,7 +1,7 @@
 *   ! clojure lambdas
 *   ! clojure flip args
 *   ! -> operator in clojure (works like chaining)
-*   ! ->> operator in clojure  (thread-last - like reverse chaining)
+*   ! ->> operator in clojure (thread-last - like reverse chaining)
 *   ! clojure: basic sequence drop & take snippets
 *   ! only get first {some-number} or last {some-number} of items from a collection
 *   ! Kotlin:: new Kotlin project
@@ -28,6 +28,26 @@
 *   ! clojure typecheck snippets
 *   ! clojure filter snippet
 *   ! clojure juxt
+*   ! get unarchiver
+
+*   rubocop
+  -   ! show cop names
+  -   ! get working for snippets proj
+  -   ! 10 new style rules / fixes: 10
+  -   ! encoding snippet
+  -   ! fix puts comment snippets to use single-quotes
+  -   ! fix double quotes in metaprogramming snippets
+  -   ! fix double quotes in rails snippets
+  -   ! fix double quotes in rake snippets
+*   ! at least 20 new hash snippets (21 newly created, 22 existing in total)
+*   ! reorg docs, projects in snippets (including books!)
+*   rake
+*   include C code in ruby?
+
+*   drb
+*   make own gem
+*   nokogiri
+
 *   clojure dotimes
 *   clojure go
 *   clojure into
@@ -37,7 +57,6 @@
 *   clojure templates <<< eh, do later
 *   clojure doseq
 
-*   ! get unarchiver
 
 *   clojure copy file
 *   clojure import file as library

@@ -1,0 +1,8 @@
+<snippet>
+  <description>Ret key-val pair in array where given key == hash key</description>
+<content><![CDATA[
+${1:some_hash}.assoc({2:key})
+]]></content>  
+  <tabTrigger>hash_key_value</tabTrigger>
+  <scope>source.ruby</scope>
+</snippet>

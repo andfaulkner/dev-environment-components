@@ -130,7 +130,7 @@ def source_for(klass, method_sym)
 end
 #######################################
 
-puts "setting up reload required files"
+puts "setting up -- reload required files"
 
 #reload required files into the console
 def reload(require_regex)
@@ -145,3 +145,30 @@ def view_aliases(output_alias_list=false)
         ""
     end
 end
+
+class IrbMode
+    def initialize(mode = 'basic')
+        @mode = mode
+    end
+    # options that are useful in console but won't be available in apps
+    def explore_mode(switch_off = false)
+        # switch the mode off by resetting irb
+        if switch_off
+            basic_mode
+        else
+            @mode = 'explore'
+            require 'what_methods'
+        end
+    end
+    
+    def basic_mode
+        if (@mode != 'basic')
+            @mode = 'basic'
+            puts "\nswitching back to standard mode\n"
+            exec('irb')
+        else
+            puts "\nalready in standard mode, no change\n"
+        end
+    end
+end
+

@@ -33,7 +33,7 @@ alias berspec_cleanslate="RAILS_ENV=test bundle exec rake db:setup; bundle exec 
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ RAILS ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 ################################################################################
 # Turns off ruby's verbose mode for testing - this just causes useless errors from bugs in gems
-alias rake="RUBYOPT=-W0 rake"
+alias rake_no_err="RUBYOPT=-W0 rake"
 
 # run with defined server
 alias rs="bundle exec rails server"
@@ -67,6 +67,8 @@ alias bert="RUBYOPT=-W0 bundle exec rake -T"
 
 # run rake
 alias ber="RUBYOPT=-W0 bundle exec rake"
+
+alias rbegi="RUBYOPT=-W0 rbenv exec gem install"
 
 # db migration status
 alias berms="RUBYOPT=-W0 bundle exec rake db:migrate:status"
@@ -265,3 +267,5 @@ alias manol_rbenv="curl https://raw.githubusercontent.com/rbenv/rbenv/master/REA
 #     echo $INS_INTO_CURL_ADDRESS
 #     curl "$INS_INTO_CURL_ADDRESS" 
 # }
+
+alias irbrc="vim ~/.irbrc"

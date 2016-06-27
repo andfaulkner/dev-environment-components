@@ -1,0 +1,8 @@
+<snippet>
+  <description>Ret arr of all values in a hash corresponding to given keys</description>
+<content><![CDATA[
+${1:some_hash}.values_at(${2:'first_key', 'optional_key', 'optional_key_2', 'etc'})
+]]></content>  
+  <tabTrigger>hash_vals_at</tabTrigger>
+  <scope>source.ruby</scope>
+</snippet>

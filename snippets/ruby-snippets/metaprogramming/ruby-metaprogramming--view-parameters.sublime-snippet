@@ -1,0 +1,8 @@
+<snippet>
+	<description>View args a method takes. Gives arg name and what args are req or 'rest'</description>
+	<content><![CDATA[
+${1:class_or_object_name}.method(${2:method_name}).parameters
+]]></content>
+	<tabTrigger>metap_method_parameters</tabTrigger>
+	<scope>source.ruby</scope>
+</snippet>

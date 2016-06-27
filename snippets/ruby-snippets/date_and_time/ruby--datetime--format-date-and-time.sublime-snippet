@@ -1,0 +1,8 @@
+<snippet>
+  <description>Format date and time to str ("require 'date'" needed)</description>
+<content><![CDATA[
+${1:some_datetime_eg__DateTime.now}.strftime("${2:%Y-%m-%d__%H:%M:%S}")${3: # => 2016-06-24___01:37:41}
+]]></content>  
+  <tabTrigger>datetime_format</tabTrigger>
+  <scope>source.ruby</scope>
+</snippet>

@@ -1,7 +1,7 @@
 <snippet>
 	<description>Create new basic rake task</description>
 	<content><![CDATA[
-desc "${2:What the task actually does}"
+desc '${2:What the task actually does}'
 task :${1:name_of_task} do
 	${0}
 end

@@ -1,7 +1,7 @@
 <snippet>
 	<description>Define method dynamically - can call right on a class object</description>
 	<content><![CDATA[
-define_method(${1:"method_name"}) do |${2:method_params = "default if you want", *rest_params}|
+define_method(${1:"method_name"}) do |${2:method_params = 'default if you want', *rest_params}|
   ${0}
 end
 ]]></content>

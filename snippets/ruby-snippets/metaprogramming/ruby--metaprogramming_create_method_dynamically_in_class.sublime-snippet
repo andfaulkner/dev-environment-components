@@ -4,7 +4,7 @@
 def create_method(name, &block)
 	self.class.send(:define_method, name, &block)
 end
-${1:# use: inst.create_method(:clearly_you_want_ants) { p "why are there donuts everywhere?" \}}
+${1:# use: inst.create_method(:clearly_you_want_ants) { p 'why are there donuts everywhere?' \}}
 ]]></content>
 	<tabTrigger>metap_method_maker</tabTrigger>
 	<scope>source.ruby</scope>

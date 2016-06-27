@@ -1,0 +1,8 @@
+<snippet>
+  <description>Ret # of key-val pairs in hash</description>
+<content><![CDATA[
+${1:some_hash}.size
+]]></content>  
+  <tabTrigger>hash_size</tabTrigger>
+  <scope>source.ruby</scope>
+</snippet>

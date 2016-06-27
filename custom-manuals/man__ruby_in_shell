@@ -29,4 +29,7 @@ echo "        some_cmd | ruby -pe 'pipe to ruby one-liner, modify in some way' |
 echo ""
 echo " ## parse JSON response from curl - example:"
 echo "        cat jsonfile.txt | ruby -pe 'require \"json\"; \$_ = JSON.parse(\$_)[0][\"cardnumber\"]'"
+echo ""
+echo ' ## RBENV'
+echo ' - list all gems available to install:    rbenv install --list'
 echo '---------------------------------------------------------------------------------\n'

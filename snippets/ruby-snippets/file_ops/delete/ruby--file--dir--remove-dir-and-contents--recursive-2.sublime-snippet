@@ -1,0 +1,8 @@
+<snippet>
+  <description>Remove directory and its contents, recursively</description>
+<content><![CDATA[
+FileUtils.rm_rf(${1:'dir/to/remove'})
+]]></content>  
+  <tabTrigger>file_del_dir_recursive</tabTrigger>
+  <scope>source.ruby</scope>
+</snippet>

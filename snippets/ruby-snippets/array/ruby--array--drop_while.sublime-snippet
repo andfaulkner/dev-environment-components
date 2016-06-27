@@ -1,0 +1,8 @@
+<snippet>
+	<description>Ret all arr items after 1st item to ret false for given block</description>
+	<content><![CDATA[
+${1:some_arr}.drop_while {|${2:arr_item}| ${0} }
+]]></content>
+	<tabTrigger>arr_dropwhile</tabTrigger>
+	<scope>source.ruby</scope>
+</snippet>

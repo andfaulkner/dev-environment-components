@@ -1,7 +1,7 @@
 <snippet>
 	<description>add a gem</description>
 	<content><![CDATA[
-gem "${1}"${0}
+gem '${1}'${0}
 ]]></content>
 	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
 	<tabTrigger>gem</tabTrigger>

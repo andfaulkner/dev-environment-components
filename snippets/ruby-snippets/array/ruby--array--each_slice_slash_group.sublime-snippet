@@ -1,0 +1,8 @@
+<snippet>
+	<description>Slice arr into groups of given size & iterate thru the groups</description>
+	<content><![CDATA[
+${1:some_arr}.each_slice(${2:number_of_items_in_each_iter}) {|{$3:item_param}| ${0} }
+]]></content>
+	<tabTrigger>arr_each_slice</tabTrigger>
+	<scope>source.ruby</scope>
+</snippet>

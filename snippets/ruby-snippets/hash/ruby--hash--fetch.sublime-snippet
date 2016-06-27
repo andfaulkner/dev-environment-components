@@ -1,0 +1,8 @@
+<snippet>
+  <description>Get val from hash for given key, w optional default if no match</description>
+<content><![CDATA[
+${1:some_hash}.fetch(${2:key}${3/.+/, /}${3:optional__value_if_no_match})
+]]></content>  
+  <tabTrigger>hash_fetch</tabTrigger>
+  <scope>source.ruby</scope>
+</snippet>

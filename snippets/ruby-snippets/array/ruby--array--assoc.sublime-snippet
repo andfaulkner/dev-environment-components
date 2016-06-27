@@ -1,0 +1,8 @@
+<snippet>
+	<description>Checks 1st item of each array in an array of arrays, rets 1st matchin array</description>
+	<content><![CDATA[
+${1:some_array_of_arrays}.assoc(${2:match_to_check_for_in_first_item_of_each_array})
+]]></content>
+	<tabTrigger>arr_assoc</tabTrigger>
+	<scope>source.ruby</scope>
+</snippet>

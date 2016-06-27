@@ -1,0 +1,8 @@
+<snippet>
+  <description>Ret array of all values from a hash</description>
+<content><![CDATA[
+${1:some_hash}.values
+]]></content>  
+  <tabTrigger>hash_vals</tabTrigger>
+  <scope>source.ruby</scope>
+</snippet>

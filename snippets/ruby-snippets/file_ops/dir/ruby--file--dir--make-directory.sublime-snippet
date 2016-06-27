@@ -1,0 +1,8 @@
+<snippet>
+  <description>Make a directory</description>
+  <content><![CDATA[
+FileUtils.mkdir_p('${1:dir_name}')
+]]></content>  
+  <tabTrigger>file_dir_mkdir</tabTrigger>
+  <scope>source.ruby</scope>
+</snippet>

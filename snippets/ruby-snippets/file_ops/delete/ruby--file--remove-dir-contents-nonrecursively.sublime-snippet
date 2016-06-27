@@ -1,0 +1,8 @@
+<snippet>
+  <description>Remove directory contents non-recursively: leave subdirs intact</description>
+<content><![CDATA[
+FileUtils.rm(Dir.glob("${1:dir/to/remove}/*"))
+]]></content>  
+  <tabTrigger>file_del_dir_cont_1lvl</tabTrigger>
+  <scope>source.ruby</scope>
+</snippet>

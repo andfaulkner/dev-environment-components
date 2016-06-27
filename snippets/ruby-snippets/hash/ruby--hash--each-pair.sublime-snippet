@@ -1,0 +1,8 @@
+<snippet>
+  <description>Run block for each key-value pair in a hash</description>
+<content><![CDATA[
+${1:some_hash}.each_pair {|${2:key}, ${3:value}| ${4} }
+]]></content>  
+  <tabTrigger>hash_each_pair</tabTrigger>
+  <scope>source.ruby</scope>
+</snippet>

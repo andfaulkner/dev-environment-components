@@ -1,0 +1,8 @@
+<snippet>
+	<description>Return all matching items in an arr. Optionally run matches thru block b4 ret</description>
+	<content><![CDATA[
+${1:some_arr}.grep(${2:some_regex_or_string}) 
+]]></content>
+	<tabTrigger>arr_grep</tabTrigger>
+	<scope>source.ruby</scope>
+</snippet>

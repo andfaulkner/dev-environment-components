@@ -1,0 +1,8 @@
+<snippet>
+  <description>Ret true if hash has given value</description>
+<content><![CDATA[
+${1:some_hash}.has_value?(${2:value})
+]]></content>  
+  <tabTrigger>hash_has_val?</tabTrigger>
+  <scope>source.ruby</scope>
+</snippet>

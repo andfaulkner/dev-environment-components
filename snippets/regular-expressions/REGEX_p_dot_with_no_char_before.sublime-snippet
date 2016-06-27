@@ -1,10 +1,10 @@
 <snippet>
-	<!-- Regex to select all instances of "p." not preceded by a character -->
+	<description>Match all inst of some chars not preceded by a char</description>
 	<content><![CDATA[
-(?<!\w)p\.
+(?<!\w)${1:SOME_CHARS_GO_HERE__eg__p\.g\.a}
 ]]></content>
 	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
-	<!-- <tabTrigger>hello</tabTrigger> -->
+	<tabTrigger>regex_chars_w_no_prev_char</tabTrigger>
 	<!-- Optional: Set a scope to limit where the snippet will trigger -->
 	<!-- <scope>source.python</scope> -->
 </snippet>
