@@ -68,3 +68,5 @@ unalias ln 2>/dev/null
 alias ln="ln -s"
 
 alias show_servers_running='lsof -Pni4 | ack "TCP\s\*:[0-9].+\s\(LISTEN\)" | ack -v "Growl|BetterTou|Dropbox"'
+
+alias startpostgres_mac="pg_ctl -D /usr/local/var/postgres -l /usr/local/var/postgres/server.log start"

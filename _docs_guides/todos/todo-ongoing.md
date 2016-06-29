@@ -60,6 +60,7 @@
 *   ! 1 class snippet
 *   1 import snippet
 *   5 'file' snippets
+*   ! rescue snippet
 
 *   1/2 drb
 *   ruby Queue data structure

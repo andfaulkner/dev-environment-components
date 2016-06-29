@@ -1,0 +1,12 @@
+<snippet>
+  <description>Run rescue block and keep executing if err occurs in begin block</description>
+<content><![CDATA[
+begin
+  ${1:# code that could throw an error}
+rescue${2: StandardError => e}
+  ${3:puts "Error: #\{e\}" # error handling code example} 
+end
+]]></content>  
+  <tabTrigger>rescue</tabTrigger>
+  <scope>source.ruby</scope>
+</snippet>

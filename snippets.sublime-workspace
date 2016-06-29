@@ -1570,15 +1570,15 @@
 						"selection":
 						[
 							[
-								47,
-								47
+								264,
+								264
 							]
 						],
 						"settings":
 						{
 							"side_bar_folders_auto_load_folder": 1,
 							"syntax": "Packages/Markdown Extended/Syntaxes/Markdown Extended.sublime-syntax",
-							"tabs_extra_last_activated": 1467181924.49,
+							"tabs_extra_last_activated": 1467182071.5,
 							"tabs_extra_last_activated_sheet_index": 1,
 							"tabs_extra_spawned": true
 						},

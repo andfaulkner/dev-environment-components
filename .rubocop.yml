@@ -55,6 +55,12 @@ Metrics/LineLength:
   URISchemes:
     - http
     - https
+    - ftp
+    - telnet
+    - file
+    - druby
+    - mongodb
+
 #################################### SPACES ####################################
 Style/SpaceInsideBlockBraces:
   EnforcedStyle: space
@@ -76,8 +82,8 @@ Style/AlignHash:
   EnforcedColonStyle: table
   EnforcedLastArgumentStyle: always_ignore
 
-Style/GlobalVars:
-  AllowedVariables: [HASH_VERBOSE, $HASH_VERBOSE]
+# Style/GlobalVars:
+  # AllowedVariables: [HASH_VERBOSE, $HASH_VERBOSE]
 
 # Shadowing outer local vars w/ block params can be useful to avoid superfluous names for the
 # same thing. Random slight variables of var names is much more confusing that shadowing.
@@ -86,6 +92,7 @@ Lint/ShadowingOuterLocalVariable:
 
 Style/MethodDefParentheses:
   EnforcedStyle: require_parentheses
+  Enabled: true
 
 Style/Alias:
   Enabled: false
@@ -100,6 +107,7 @@ Style/AlignParameters:
   EnforcedStyle: with_first_parameter
 
 Style/IndentationConsistency:
+  AllowProtectedAndPrivateMethodsBeIndented: true
   EnforcedStyle: rails
 
 Style/IndentationWidth:
@@ -123,14 +131,3 @@ Style/Semicolon:
 # Metrics/ModuleLength:
 
 # Metrics/CyclomaticComplexity:
-
-Metrics/LineLength:
-  Max: 100
-  URISchemes:
-    - http
-    - https
-    - ftp
-    - telnet
-    - file
-    - druby
-    - mongodb
