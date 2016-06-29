@@ -1,0 +1,8 @@
+<snippet>
+  <description>Get an array of all local variables</description>
+<content><![CDATA[
+local_variables
+]]></content>  
+  <tabTrigger>lvs</tabTrigger>
+  <scope>source.ruby</scope>
+</snippet>

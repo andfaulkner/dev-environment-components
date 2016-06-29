@@ -1,0 +1,8 @@
+<snippet>
+	<description>Reset Rake task called in-code to allow calling it again</description>
+	<content><![CDATA[
+Rake::Task['${1:namespace:task_to_call}'].reenable
+]]></content>
+	<tabTrigger>rake_calltask_reenable</tabTrigger>
+	<scope>source.ruby</scope>
+</snippet>

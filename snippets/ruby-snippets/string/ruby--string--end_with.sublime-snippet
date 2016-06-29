@@ -1,0 +1,8 @@
+<snippet>
+	<description>Ret true if given string ends with given substring</description>
+	<content><![CDATA[
+${1:some_string}.end_with?(${2:substring_to_test})
+]]></content>
+	<tabTrigger>str_end_with?</tabTrigger>
+	<scope>source.ruby</scope>
+</snippet>

@@ -1,0 +1,8 @@
+<snippet>
+  <description>Determine if object is a method</description>
+<content><![CDATA[
+${1:my_object}.is_a?(Method)
+]]></content>  
+  <tabTrigger>is_a_method</tabTrigger>
+  <scope>source.ruby</scope>
+</snippet>

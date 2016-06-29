@@ -1,0 +1,11 @@
+<snippet>
+	<description>Create rake task with multiple dependencies on other tasks</description>
+	<content><![CDATA[
+desc '${1:What the task actually does}'
+task :${2:name_of_task} => [:${3:task_that_runs_before}, :${4:another_task_that_runs_before}] do
+	${0}
+end
+]]></content>
+	<tabTrigger>rake_task_w_deps</tabTrigger>
+	<scope>source.ruby</scope>
+</snippet>

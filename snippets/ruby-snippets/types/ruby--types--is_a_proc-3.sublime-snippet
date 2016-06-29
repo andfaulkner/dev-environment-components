@@ -1,0 +1,8 @@
+<snippet>
+  <description>Determine if object is a proc (lambdas are procs)</description>
+<content><![CDATA[
+${1:my_object}.is_a?(Proc)
+]]></content>  
+  <tabTrigger>is_a_lambda</tabTrigger>
+  <scope>source.ruby</scope>
+</snippet>

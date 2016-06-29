@@ -1,0 +1,8 @@
+<snippet>
+	<description>Return all items where given block does not return true</description>
+	<content><![CDATA[
+${1:some_arr}.reject {|${2:item}| ${3:truthiness_test_eg_item.is_a?(String)} }
+]]></content>
+	<tabTrigger>arr_reject</tabTrigger>
+	<scope>source.ruby</scope>
+</snippet>

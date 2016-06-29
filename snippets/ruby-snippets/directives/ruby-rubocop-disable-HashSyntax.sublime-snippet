@@ -1,0 +1,8 @@
+<snippet>
+  <description>Disable HashSyntax rule (useful in Rake files).</description>
+<content><![CDATA[
+# rubocop:disable HashSyntax
+]]></content>  
+  <tabTrigger>rubocop_disable_hashsyntax</tabTrigger>
+  <scope>source.ruby</scope>
+</snippet>

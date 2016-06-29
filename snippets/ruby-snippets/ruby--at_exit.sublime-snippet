@@ -1,0 +1,8 @@
+<snippet>
+  <description>Run the code in the given block before this ruby process exits</description>
+<content><![CDATA[
+at_exit { ${1:#run this code before exit, and after all other at_exit blocks} }
+]]></content>  
+  <tabTrigger>at_exit</tabTrigger>
+  <scope>source.ruby</scope>
+</snippet>

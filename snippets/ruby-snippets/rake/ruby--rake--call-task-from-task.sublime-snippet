@@ -1,0 +1,8 @@
+<snippet>
+	<description>Call a Rake task from a Rake task</description>
+	<content><![CDATA[
+Rake::Task['${1:namespace:task_to_call}'].invoke
+]]></content>
+	<tabTrigger>rake_calltask</tabTrigger>
+	<scope>source.ruby</scope>
+</snippet>

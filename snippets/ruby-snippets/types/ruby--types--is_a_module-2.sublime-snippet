@@ -1,0 +1,8 @@
+<snippet>
+  <description>Determine if object is a module</description>
+<content><![CDATA[
+${1:my_object}.is_a?(Module)
+]]></content>  
+  <tabTrigger>is_a_module</tabTrigger>
+  <scope>source.ruby</scope>
+</snippet>

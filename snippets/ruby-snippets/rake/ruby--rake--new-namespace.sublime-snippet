@@ -1,0 +1,13 @@
+<snippet>
+	<description>Create new rake namespace</description>
+	<content><![CDATA[
+namespace '${1:name_of_namespace}' do
+  desc '${2:new task description}'
+  task :${3:name_of_new_task} do
+    ${0}
+  end
+end
+]]></content>
+	<tabTrigger>rake_namespace</tabTrigger>
+	<scope>source.ruby</scope>
+</snippet>

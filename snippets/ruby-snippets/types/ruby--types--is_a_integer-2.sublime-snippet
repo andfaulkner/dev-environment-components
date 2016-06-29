@@ -1,0 +1,8 @@
+<snippet>
+  <description>Determine if object is an integer</description>
+<content><![CDATA[
+${1:my_object}.is_a?(Integer)
+]]></content>  
+  <tabTrigger>is_a_int</tabTrigger>
+  <scope>source.ruby</scope>
+</snippet>

@@ -1,5 +1,5 @@
 <snippet>
-  <description>Disable a </description>
+  <description>Disable a rubocop rule (or rules)</description>
 <content><![CDATA[
 # rubocop:disable ${1:RuleName__eg__HashSyntax}${2/.+/, /}${2:SecondRuleName__eg__LineLength}
 ]]></content>  

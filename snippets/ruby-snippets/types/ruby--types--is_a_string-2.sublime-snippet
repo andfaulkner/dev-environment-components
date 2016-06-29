@@ -1,0 +1,8 @@
+<snippet>
+  <description>Determine if object is a string</description>
+<content><![CDATA[
+${1:my_object}.is_a?(String)
+]]></content>  
+  <tabTrigger>is_a_str</tabTrigger>
+  <scope>source.ruby</scope>
+</snippet>

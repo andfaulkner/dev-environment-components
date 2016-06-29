@@ -1,0 +1,8 @@
+<snippet>
+  <description>Determine if object is a hash</description>
+<content><![CDATA[
+${1:my_object}.is_a?(Hash)
+]]></content>  
+  <tabTrigger>is_a_hash</tabTrigger>
+  <scope>source.ruby</scope>
+</snippet>

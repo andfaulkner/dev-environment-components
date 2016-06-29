@@ -1,0 +1,11 @@
+<snippet>
+	<description>Create new rake task with a dependency on another task</description>
+	<content><![CDATA[
+desc '${1:What the task actually does}'
+task :${2:name_of_task} => :${3:task_that_autoruns_before_this_task} do
+	${0}
+end
+]]></content>
+	<tabTrigger>rake_task_w_dep</tabTrigger>
+	<scope>source.ruby</scope>
+</snippet>

@@ -1,0 +1,8 @@
+<snippet>
+  <description>Get an array of all global variables</description>
+<content><![CDATA[
+global_variables
+]]></content>  
+  <tabTrigger>gvs</tabTrigger>
+  <scope>source.ruby</scope>
+</snippet>

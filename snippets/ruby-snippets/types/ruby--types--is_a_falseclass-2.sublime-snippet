@@ -1,0 +1,8 @@
+<snippet>
+  <description>Determine if object is a FalseClass (bare false value)</description>
+<content><![CDATA[
+${1:my_object}.is_a?(FalseClass)
+]]></content>  
+  <tabTrigger>is_a_falseclass</tabTrigger>
+  <scope>source.ruby</scope>
+</snippet>

@@ -1,0 +1,8 @@
+<snippet>
+  <description>Determine if object is a NilClass (bare nil value)</description>
+<content><![CDATA[
+${1:my_object}.is_a?(NilClass)
+]]></content>  
+  <tabTrigger>is_a_nilclass</tabTrigger>
+  <scope>source.ruby</scope>
+</snippet>

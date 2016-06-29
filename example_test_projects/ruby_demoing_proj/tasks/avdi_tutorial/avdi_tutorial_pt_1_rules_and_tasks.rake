@@ -25,6 +25,7 @@ task :reset do
   FileUtils.rm(Dir.glob('./*.ok'))
   FileUtils.rm(Dir.glob('./**/*.htm'))
   FileUtils.rm(Dir.glob('./**/**.erk'))
+  FileUtils.rm_rf('./new_struct')
 end
 
 # EX. 2: CONVERT .md FILES TO .html FILES

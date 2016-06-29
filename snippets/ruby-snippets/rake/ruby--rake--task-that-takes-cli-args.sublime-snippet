@@ -1,0 +1,12 @@
+<snippet>
+	<description>Create rake task that takes cli params</description>
+	<content><![CDATA[
+desc '${1:What the task actually does}. Call via:  rake "${2}[Argument_here]"'
+task :${2:task_name}, [:${3:param_1}] do |t, args|
+  args.with_defaults(:${3} => '${4:default_val_for_param}')
+  ${0}
+end
+]]></content>
+	<tabTrigger>rake_task_w_args</tabTrigger>
+	<scope>source.ruby</scope>
+</snippet>

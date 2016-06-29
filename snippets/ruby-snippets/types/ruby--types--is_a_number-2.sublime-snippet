@@ -1,0 +1,8 @@
+<snippet>
+  <description>Determine if object is a number</description>
+<content><![CDATA[
+${1:my_object}.is_a?(Numeric)
+]]></content>  
+  <tabTrigger>is_a_num</tabTrigger>
+  <scope>source.ruby</scope>
+</snippet>

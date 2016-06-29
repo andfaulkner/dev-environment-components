@@ -1,0 +1,8 @@
+<snippet>
+  <description>Determine if object is a class</description>
+<content><![CDATA[
+${1:my_object}.is_a?(Class)
+]]></content>  
+  <tabTrigger>is_a_class</tabTrigger>
+  <scope>source.ruby</scope>
+</snippet>
