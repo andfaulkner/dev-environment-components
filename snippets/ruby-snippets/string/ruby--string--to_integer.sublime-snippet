@@ -1,0 +1,8 @@
+<snippet>
+  <description>Convert str to int. Ignores chars after 1st non-int. e.g. 3/4 -> 3</description>
+	<content><![CDATA[
+${1:some_string}.to_i
+]]></content>
+	<tabTrigger>str_to_i</tabTrigger>
+	<scope>source.ruby</scope>
+</snippet>

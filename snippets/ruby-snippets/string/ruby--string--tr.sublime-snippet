@@ -1,0 +1,8 @@
+<snippet>
+	<description>For str_base, repl str1 chars w corresponding (by pos) str2 chars</description>
+	<content><![CDATA[
+'${1:string_receiving_replacements}'.tr('${2:chars_to_replace_}', '${3:replacement_chars}')
+]]></content>
+	<tabTrigger>str_tr</tabTrigger>
+	<scope>source.ruby</scope>
+</snippet>

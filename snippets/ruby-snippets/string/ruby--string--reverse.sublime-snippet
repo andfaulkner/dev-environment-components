@@ -1,0 +1,8 @@
+<snippet>
+	<description>Reverse a string</description>
+	<content><![CDATA[
+${1:some_string}.reverse${2:! # include ! to mutate original string}
+]]></content>
+	<tabTrigger>str_reverse</tabTrigger>
+	<scope>source.ruby</scope>
+</snippet>

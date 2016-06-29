@@ -1,7 +1,7 @@
 <snippet>
-	<description>Replace 1st match on pattern</description>
+	<description>Replace first match of pattern</description>
 	<content><![CDATA[
-${1:some_string}.sub(${2:str_or_/regex/_to_match_on}, ${3:replacement_string})
+${1:some_string}.sub(${2:str_or_/regex/_to_match_on}, "${3:replacement_string}")
 ]]></content>
 	<tabTrigger>str_sub</tabTrigger>
 	<scope>source.ruby</scope>

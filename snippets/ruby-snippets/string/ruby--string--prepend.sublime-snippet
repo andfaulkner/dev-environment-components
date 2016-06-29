@@ -1,0 +1,8 @@
+<snippet>
+	<description>Prepend substring to string</description>
+	<content><![CDATA[
+${1:some_string}.prepend(${2:string_to_prepend})
+]]></content>
+	<tabTrigger>str_prepend</tabTrigger>
+	<scope>source.ruby</scope>
+</snippet>

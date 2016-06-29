@@ -10,4 +10,3 @@ SOURCE_FILES = Rake::FileList.new('./ch*.md', 'rake_test_files/**/*.markdown',
 end
 
 puts SOURCE_FILES
-

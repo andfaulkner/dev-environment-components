@@ -1,0 +1,10 @@
+<snippet>
+  <description>Basic new class</description>
+<content><![CDATA[
+class ${1:NameOfClass}
+  ${0}
+end
+]]></content>  
+  <tabTrigger>class</tabTrigger>
+  <scope>source.ruby</scope>
+</snippet>

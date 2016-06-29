@@ -1,0 +1,8 @@
+<snippet>
+  <description>Import a ruby file, library, or gem</description>
+<content><![CDATA[
+require '${1:name_of_file}'
+]]></content>  
+  <tabTrigger>req</tabTrigger>
+  <scope>source.ruby</scope>
+</snippet>

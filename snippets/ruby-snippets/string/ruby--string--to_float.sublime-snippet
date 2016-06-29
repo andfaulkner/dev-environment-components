@@ -1,0 +1,10 @@
+<snippet>
+  <description>Convert string to floating point number, with minimum 1 decimal point</description>
+	<content><![CDATA[
+${1:some_string}.to_f
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>str_to_f</tabTrigger>
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<scope>source.ruby</scope>
+</snippet>

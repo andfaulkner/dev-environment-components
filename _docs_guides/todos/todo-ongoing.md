@@ -48,15 +48,31 @@
 *   ! 10 is_a type snippets
 *   ! 1 trap snippet
 
-*   5 rake snippets - 3
-*   1 'directive' snippet
+*   ! avdi rake tutorial - pt 1
+*   ! avdi rake tutorial - pt 2
+*   ! avdi rake tutorial - pt 3
+*   ! avdi rake tutorial - pt 4
 
-*   rake
+## June 29th
+*   ! 5 rake snippets - 5
+*   ! 1 'directive' snippet
+*   ! 5 'string' snippets - 5
+*   ! 1 class snippet
+*   1 import snippet
+*   5 'file' snippets
+
+*   1/2 drb
+*   ruby Queue data structure
+
+IDLE GAME
+*   
+
+*   nokogiri
+
+*   avdi rake tutorial - pt 5
 *   include C code in ruby?
 
-*   drb
 *   make own gem
-*   nokogiri
 
 *   clojure dotimes
 *   clojure go

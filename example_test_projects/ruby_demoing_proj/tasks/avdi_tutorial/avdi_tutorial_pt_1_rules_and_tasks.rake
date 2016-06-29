@@ -17,7 +17,7 @@ rule '.ok' => '.crap' do |t|
   sh "cp #{t.source} #{t.name}"
   # sh "pandoc -o #{t.name} #{t.source}"
 end
-
+str_tr
 # A very basic task, full standard
 desc 'Remove .html, .erk, & .ok files in root dir'
 task :reset do
