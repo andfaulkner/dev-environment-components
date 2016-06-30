@@ -67,6 +67,7 @@
 
 ## June 30th
 *   ! fix your git snippets repo!
+*   ! 4 code load snippets
 *   'methadone' CLI app
 *   dotenv
 *   simple form
@@ -76,6 +77,8 @@
 *   2 more hash snippets
 *   2 more string snippets
 *   5 number snippets
+*   re-include books
+*   rm some of the vim crap from the repo
 *   nokogiri
 
 *   ruby Queue data structure
