@@ -4,3 +4,4 @@ dev-env/vim_configs/.vim/backup_files/**
 **=+.git=+COMMIT_EDITMSG=
 **=+.git=+MERGE_MSG=
 **=+.git=+rebase-merge=+git-rebase-todo=
+dev-env/.lein/indices/**
