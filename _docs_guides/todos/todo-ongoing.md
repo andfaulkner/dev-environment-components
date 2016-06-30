@@ -59,16 +59,31 @@
 *   ! 5 'string' snippets - 5
 *   ! 1 class snippet
 *   1 import snippet
-*   5 'file' snippets
 *   ! rescue snippet
+*   ! 1st 1/2 of drb
+*   ! learn trollop
+*   ! get cli args working in Android build script again
+*   ! get rake & trollop to interop
 
-*   1/2 drb
+## June 30th
+*   ! fix your git snippets repo!
+*   'methadone' CLI app
+*   dotenv
+*   simple form
+*   rails best practices analysis: https://github.com/railsbp/rails_best_practices
+*   5 'file' snippets
+*   2 more array snippets
+*   2 more hash snippets
+*   2 more string snippets
+*   5 number snippets
+*   nokogiri
+
 *   ruby Queue data structure
+*   2nd 1/2 of drb
+
 
 IDLE GAME
-*   
 
-*   nokogiri
 
 *   avdi rake tutorial - pt 5
 *   include C code in ruby?

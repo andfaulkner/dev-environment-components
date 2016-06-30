@@ -1,0 +1,8 @@
+<snippet>
+  <description>Import ruby file, lib, or gem, via path relative to current src file. Doesn't rerun code.</description>
+<content><![CDATA[
+require_relative '${1:path_to_file__relative_to_current_file}'
+]]></content>  
+  <tabTrigger>reqrel</tabTrigger>
+  <scope>source.ruby</scope>
+</snippet>

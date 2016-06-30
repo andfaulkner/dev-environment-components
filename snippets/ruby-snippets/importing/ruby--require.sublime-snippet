@@ -1,5 +1,5 @@
 <snippet>
-  <description>Import a ruby file, library, or gem</description>
+  <description>Import a ruby file, library, or gem. Doesn't rerun code previously require'd</description>
 <content><![CDATA[
 require '${1:name_of_file}'
 ]]></content>  

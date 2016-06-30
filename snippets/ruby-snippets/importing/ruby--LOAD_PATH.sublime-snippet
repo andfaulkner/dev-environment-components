@@ -1,0 +1,8 @@
+<snippet>
+  <description>Access load path, a global var w all paths ruby scans when you require a file.</description>
+<content><![CDATA[
+\$LOAD_PATH
+]]></content>  
+  <tabTrigger>loadpath</tabTrigger>
+  <scope>source.ruby</scope>
+</snippet>

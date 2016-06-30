@@ -2,7 +2,7 @@
 #       NEW RAILS PROJECT        #
 ##################################
 rails new projname 
-# or to use a different database from sqlite3:     rails new --database=postgresql projname
+# or to use a different database from sqlite3:     rails new --git --database=postgresql projname
 # or to make a new project with specific version rails _3.2.12_ new projname
 
 cd projname
@@ -14,7 +14,7 @@ rbenv rehash													 # << ...also required for rbenv-friendliness
 skylight disable_dev_warning					  # << prevents this constant annoying error msg in the cli			
 
 # set up rspec to work with app testing
-rspec --init
+rspec --inits
 
 # avoid having the default page always show
 mv ./public/index.html ./public/index__old.html

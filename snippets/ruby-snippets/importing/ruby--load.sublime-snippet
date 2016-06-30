@@ -1,0 +1,8 @@
+<snippet>
+  <description>Run code in given file. Each time load calls a file it is rerun (unlike require)</description>
+<content><![CDATA[
+load '${1:name_of_file}'
+]]></content>  
+  <tabTrigger>load</tabTrigger>
+  <scope>source.ruby</scope>
+</snippet>

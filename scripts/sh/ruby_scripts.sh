@@ -269,3 +269,5 @@ alias manol_rbenv="curl https://raw.githubusercontent.com/rbenv/rbenv/master/REA
 # }
 
 alias irbrc="vim ~/.irbrc"
+alias rv="ruby --version"
+alias gi="gem install "
