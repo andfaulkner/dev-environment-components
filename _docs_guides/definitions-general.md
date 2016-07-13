@@ -126,3 +126,17 @@
 *   Makes common operations faster and easier in code
 *   example: has_many :books, dependent: :destroy
 
+
+### IDEMPOTENCE ###
+*    an action that is idempotent should deliver identical results if the action is repeated.
+*    GET, PUT, and DELETE requests should be idempotent. POST requests, however, needn't be
+
+############################ HTTP REQUESTS ################################
+### PUT REQUESTS   AND    POST REQUESTS
+*   ...vs. POST requests: A POST indicates what location on the server will handle the process, but
+    doesn’t necessarily map to any one particular resource.
+    *   A PUT request, by contrast, should refer to one (and only one) resource in particular.
+*   A POST indicates what location on the server will handle the process, but doesn’t
+    necessarily map to any one particular resource.
+    *   A PUT request, by contrast, should refer to one (and only one) resource in particular.
+
