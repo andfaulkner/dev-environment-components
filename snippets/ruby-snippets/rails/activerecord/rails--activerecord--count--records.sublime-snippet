@@ -1,0 +1,8 @@
+<snippet>
+  <description>Return number of rows in given table</description>
+<content><![CDATA[
+${1:NameOfModel}.count
+]]></content>  
+  <tabTrigger>rl_ar_count</tabTrigger>
+  <scope>source.ruby</scope>
+</snippet>

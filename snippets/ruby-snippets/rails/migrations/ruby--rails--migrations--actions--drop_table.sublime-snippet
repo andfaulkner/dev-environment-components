@@ -1,0 +1,8 @@
+<snippet>
+  <description>Destroy a table.</description>
+<content><![CDATA[
+drop_table :${1:name_of_table}${2/.+/, /}${2::if_exists}
+]]></content>  
+  <tabTrigger>rails_mig_act_drop_table</tabTrigger>
+  <scope>source.ruby</scope>
+</snippet>

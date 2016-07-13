@@ -57,7 +57,7 @@ end
 require 'irb/completion'
 require 'bond'
 #require 'bond/completion'
-require 'rubygems'
+require 'rubygems' unless defined? Gem 
 
 ########## PRETTIFY OUTPUT ##########
 # pp = prints nested hashes & arrays in a readable, indented format
@@ -137,38 +137,46 @@ def reload(require_regex)
    $".grep(/#{require_regex}/).each {|e| $".delete(e) && require(e) }
 end
 
-def view_aliases(output_alias_list=false)
-    ap IRB::ExtendCommandBundle.instance_eval("@ALIASES").map{|aliases| "ALIAS : #{aliases[0].to_s.ljust(33)} <-->    #{aliases[1]}"}
-    if output_alias_list
-        IRB::ExtendCommandBundle.instance_eval("@ALIASES")
+def view_aliases(output_alias_list=false, name_of_irb_class=IRB)
+    if defined? irb_class
+        ap IRB::ExtendCommandBundle.instance_eval("@ALIASES").map{|aliases| "ALIAS : #{aliases[0].to_s.ljust(33)} <-->    #{aliases[1]}"}
+        if output_alias_list
+            IRB::ExtendCommandBundle.instance_eval("@ALIASES")
+        else
+            ""
+        end
+    elsif irb_class == IRB
+        view_aliases(output_alias_list, Irb)
+    elsif irb_class == Irbtools
+        view_aliases(output_alias_list, Irbtools)
     else
-        ""
+        ap "Could not find Any irb object, so cannot show aliases." 
     end
 end
 
-class IrbMode
-    def initialize(mode = 'basic')
-        @mode = mode
-    end
-    # options that are useful in console but won't be available in apps
-    def explore_mode(switch_off = false)
-        # switch the mode off by resetting irb
-        if switch_off
-            basic_mode
-        else
-            @mode = 'explore'
-            require 'what_methods'
-        end
-    end
+#class IrbMode
+#    def initialize(mode = 'basic')
+#        @mode = mode
+#    end
+#    # options that are useful in console but won't be available in apps
+#    def explore_mode(switch_off = false)
+#        # switch the mode off by resetting irb
+#        if switch_off
+#            basic_mode
+#        else
+#            @mode = 'explore'
+#            require 'what_methods'
+#        end
+#    end
     
-    def basic_mode
-        if (@mode != 'basic')
-            @mode = 'basic'
-            puts "\nswitching back to standard mode\n"
-            exec('irb')
-        else
-            puts "\nalready in standard mode, no change\n"
-        end
-    end
-end
+#    def basic_mode
+#        if (@mode != 'basic')
+#            @mode = 'basic'
+#            puts "\nswitching back to standard mode\n"
+#            exec('irb')
+#        else
+#            puts "\nalready in standard mode, no change\n"
+#        end
+#    end
+#end
 

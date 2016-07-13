@@ -1,0 +1,8 @@
+<snippet>
+  <description>Get the year as a Fixnum</description>
+<content><![CDATA[
+${1:some_date}.year
+]]></content>  
+  <tabTrigger>rails_datetime_year</tabTrigger>
+  <scope>source.ruby</scope>
+</snippet>

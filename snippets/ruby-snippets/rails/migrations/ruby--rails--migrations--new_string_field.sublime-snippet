@@ -1,0 +1,8 @@
+<snippet>
+  <description>String field type. Used in creating, editing, destroying, etc. tables</description>
+<content><![CDATA[
+${2:t}.string :${1:name_of_field}
+]]></content>  
+  <tabTrigger>rails_mig_field_str</tabTrigger>
+  <scope>source.ruby</scope>
+</snippet>

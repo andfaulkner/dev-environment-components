@@ -1,0 +1,8 @@
+<snippet>
+  <description>Get a datetime object's minute as a Fixnum</description>
+<content><![CDATA[
+${1:some_date}.minute
+]]></content>  
+  <tabTrigger>rails_datetime_minute</tabTrigger>
+  <scope>source.ruby</scope>
+</snippet>

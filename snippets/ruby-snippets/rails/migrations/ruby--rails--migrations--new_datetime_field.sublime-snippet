@@ -1,0 +1,8 @@
+<snippet>
+  <description>Datetime field type. Used in creating, editing, destroying, etc. tables</description>
+<content><![CDATA[
+${2:t}.datetime :${1:name_of_field}
+]]></content>
+  <tabTrigger>rails_mig_field_datetime</tabTrigger>
+  <scope>source.ruby</scope>
+</snippet>

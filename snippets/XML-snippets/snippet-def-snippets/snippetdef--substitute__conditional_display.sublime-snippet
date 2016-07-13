@@ -1,0 +1,8 @@
+<snippet>
+  <description>Only display a given string if the following var isn't empty</description>
+<content><![CDATA[
+\${${1:var_name_or_num__eg_1}/.+/${2:, }/\}\${${1}:${3:text_replacement_in_prev_sect_depends_on}}${0}
+]]></content>
+  <tabTrigger>snip_sub_cond</tabTrigger>
+  <scope>text.xml</scope>
+</snippet>

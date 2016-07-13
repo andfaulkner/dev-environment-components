@@ -1,0 +1,8 @@
+<snippet>
+  <description>Return current date and time ("require 'date'" to enable this)</description>
+<content><![CDATA[
+DateTime.now
+]]></content>  
+  <tabTrigger>rails_datetime</tabTrigger>
+  <scope>source.ruby</scope>
+</snippet>

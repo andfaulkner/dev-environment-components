@@ -1,0 +1,8 @@
+<snippet>
+  <description>Return rows where the given column has the given value.</description>
+<content><![CDATA[
+${1:NameOfModel}.where(${2:column_name}: "${3:column_value}")
+]]></content>  
+  <tabTrigger>rl_ar_find_by_col_val</tabTrigger>
+  <scope>source.ruby</scope>
+</snippet>

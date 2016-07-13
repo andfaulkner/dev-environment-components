@@ -1,0 +1,8 @@
+<snippet>
+  <description>Create a belongs_to association. Place right under class name.</description>
+<content><![CDATA[
+belongs_to :${1:name_of_associated_model__lowercase}${2/.+/, index: /}${2:true}
+]]></content>  
+  <tabTrigger>rails_model_assoc_bt</tabTrigger>
+  <scope>source.ruby</scope>
+</snippet>

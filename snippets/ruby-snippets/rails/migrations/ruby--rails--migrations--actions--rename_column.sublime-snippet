@@ -1,0 +1,8 @@
+<snippet>
+  <description>Rename a column.</description>
+<content><![CDATA[
+rename_column :${1:name_of_table}, :${2:old_name}, :{3:new_name}
+]]></content>  
+  <tabTrigger>rails_mig_act_rename_col</tabTrigger>
+  <scope>source.ruby</scope>
+</snippet>

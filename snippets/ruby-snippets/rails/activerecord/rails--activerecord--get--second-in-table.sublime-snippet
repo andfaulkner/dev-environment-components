@@ -1,0 +1,8 @@
+<snippet>
+  <description>Get and return 2nd entry in the given database table</description>
+<content><![CDATA[
+${1:NameOfModel}.second
+]]></content>  
+  <tabTrigger>rails_ar_get_second</tabTrigger>
+  <scope>source.ruby</scope>
+</snippet>

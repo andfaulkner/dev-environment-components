@@ -93,3 +93,36 @@
 	by a thread, and unset when the thread stops accessing it. It is not possible to access the
 	resource while the flag is set. The mutex is the flag.
 #######################################################################################
+
+#######################################################################################
+### Scaffold (Rails) ###
+*   Model:     rails g scaffold Test name:text
+    -   model file test.rb in models dir
+    -   migration file timestamp_create_tests.rb in db/migrate
+    -   a model test (potentially) in your spec folder
+*   Resource:   rails g resource Test name:text
+    -   model test.rb in models dir
+    -   migration file timestamp_create_tests.rb in db/migrate
+    -   a model test (potentially) in your spec folder
+    -   tests_controller.rb in controllers dir - empty
+    -   controller test in spec folder (potentially)
+    -   resources :tests in routes.rb file
+*   Scaffolds:   rails g scaffold Test name:text
+    -   model test.rb in models dir
+    -   migration file timestamp_create_tests.rb in db/migrate
+    -   a model test (potentially) in your spec folder
+    -   tests_controller.rb in controllers dir, with 7 public and 2 private CRUD methods.
+    -   7 view files (1/pub method) in views dir:  (a) _form.html.erb, (b) edit.html.erb, (e) new.html.erb,
+    -   (c) index.html.erb, (d) index.json.jbuilder, (f) show.html.erb and (g) show.json.jbuilder 
+    -   resources :tests in routes.rb file
+    -   controller test in spec folder (potentially)
+    -   resources :tests in routes.rb file
+
+### Resource (Rails) ###
+*   see Scaffold (Rails)
+
+### Associations (Rails) ###
+*   connection between two Active Record models
+*   Makes common operations faster and easier in code
+*   example: has_many :books, dependent: :destroy
+

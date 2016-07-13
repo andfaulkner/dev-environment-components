@@ -1,0 +1,10 @@
+<snippet>
+  <description>Create a new style definition for a class</description>
+<content><![CDATA[
+.${1:classname} {
+  ${2:first_attribute}: ${3:first_attribute_value};${0}
+}
+]]></content>  
+  <tabTrigger>cl</tabTrigger>
+  <scope>source.scss</scope>
+</snippet>

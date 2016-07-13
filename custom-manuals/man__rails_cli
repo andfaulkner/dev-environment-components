@@ -4,12 +4,38 @@
 
 echo ''
 echo '---------------------------------------------------------------------------------'
-echo '** Ruby: often forgotten commands cheatsheet **'
+echo '** Rails cli'
 echo '---------------------------------------------------------------------------------'
-echo '- things I just cannot seem to remember in Ruby'
+echo "rails new appname --database=postgresql"
+echo 'rails g controller Name'
+echo 'rails destroy controller Name'
+echo ''
+echo "rails g devise:install"
+echo "rails g devise User"
+echo "  -- models/user.rb is all good to go now"
+echo "  ---- add confirmable to req email conf; lockable locks usrs out after a few tries"
+echo "  -- config/initializers/devise.rb to configure things."
+echo "  ------ put from email in mailer_sender"
+echo "  ------ slightly tweak a random token generation key in config.secret_key "
+echo "rails g devise:views"
 echo ""
-echo "## Multiline strings                      <<-STRINGNAME"
-echo "                                              text goes here"
-echo "                                          STRINGNAME"
+echo "rake db:migrate after all the things"
 echo ""
+echo "key gems: devise, rabl, delayed_job, grape, jquery-turbolinks, better_errors, meta_request, rspec-rails, factory_girl_rails, simple_form" 
+echo "----careful with draper, use these:"
+echo "--------gem 'activemodel-serializers-xml', github: 'rails/activemodel-serializers-xml'" 
+echo "--------gem 'draper', github: 'audionerd/draper', branch: 'rails5'"
+echo ""
+echo "simple_form"
+echo "rails generate simple_form:install --bootstrap"
+echo ""
+echo "### rails data types ###  << accepted by items in rails model or scaffold generation"
+echo ":binary, :boolean, :date, :datetime, :decimal, :float, :integer, :primary_key, :string, :text, :time, :timestamp"
+echo ""
+echo 'Scaffold: complex example'
+echo "rails g scaffold BearInfo name:string years_species_existed:integer bear_celebratory_day:date description:text latin_name:string locations_found:string favorite_foods:string eats_meat:binary eats_nonmeat:binary"
+echo ""
+echo "Destroy scaffold example: rails destroy scaffold BearInfo"
+echo ""
+echo "Rollback db: rake db:rollback"
 echo '---------------------------------------------------------------------------------\n'

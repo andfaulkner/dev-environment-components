@@ -68,10 +68,13 @@
 ## June 30th
 *   ! fix your git snippets repo!
 *   ! 4 code load snippets
-*   'methadone' CLI app
+*   ! generate 'methadone' CLI app
 *   dotenv
 *   simple form
+*   cancancan: https://github.com/CanCanCommunity/cancancan
+*   delayed_job: https://github.com/collectiveidea/delayed_job
 *   rails best practices analysis: https://github.com/railsbp/rails_best_practices
+*   rspec-rails?: https://github.com/rspec/rspec-rails
 *   5 'file' snippets
 *   2 more array snippets
 *   2 more hash snippets
@@ -83,6 +86,8 @@
 
 *   ruby Queue data structure
 *   2nd 1/2 of drb
+*   !X! learn 'methadone' CLI app generate  << I dislike methadone
+*   learn CLI app testing
 
 
 IDLE GAME

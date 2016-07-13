@@ -1,0 +1,8 @@
+<snippet>
+  <description>Create new DateTime object from given string in YYYY-MM-DD format</description>
+<content><![CDATA[
+DateTime.parse(${1:string_in_yyyy-mm-dd_format})
+]]></content>  
+  <tabTrigger>rails_datetime_parse</tabTrigger>
+  <scope>source.ruby</scope>
+</snippet>

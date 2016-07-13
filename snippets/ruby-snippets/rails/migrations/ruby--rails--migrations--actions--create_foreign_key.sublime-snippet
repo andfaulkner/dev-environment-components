@@ -1,0 +1,8 @@
+<snippet>
+  <description>Add a foreign key to link 2 tables together. Creates reffedtable_id col</description>
+<content><![CDATA[
+add_foreign_key :${1:table_getting_the_foreign_key}, :${2:table_being_referenced}
+]]></content>  
+  <tabTrigger>rails_mig_act_add_foreign</tabTrigger>
+  <scope>source.ruby</scope>
+</snippet>

@@ -1,0 +1,8 @@
+<snippet>
+  <description>Get the day (date - numeric) as a Fixnum</description>
+<content><![CDATA[
+${1:some_date}.day
+]]></content>  
+  <tabTrigger>rails_datetime_day</tabTrigger>
+  <scope>source.ruby</scope>
+</snippet>

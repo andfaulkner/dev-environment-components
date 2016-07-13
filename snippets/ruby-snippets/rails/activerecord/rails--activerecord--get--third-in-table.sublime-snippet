@@ -1,0 +1,8 @@
+<snippet>
+  <description>Get and return 3rd entry in the given database table</description>
+<content><![CDATA[
+${1:NameOfModel}.third
+]]></content>  
+  <tabTrigger>rails_ar_get_third</tabTrigger>
+  <scope>source.ruby</scope>
+</snippet>

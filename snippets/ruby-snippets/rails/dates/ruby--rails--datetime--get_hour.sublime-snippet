@@ -1,0 +1,8 @@
+<snippet>
+  <description>Get the hour as a Fixnum</description>
+<content><![CDATA[
+${1:some_date}.hour
+]]></content>  
+  <tabTrigger>rails_datetime_hour</tabTrigger>
+  <scope>source.ruby</scope>
+</snippet>

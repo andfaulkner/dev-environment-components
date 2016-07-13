@@ -1,0 +1,10 @@
+<snippet>
+  <description>Set up a route handler for a GET request</description>
+<content><![CDATA[
+get ${1:route_as_a_string__eg_'/'} do
+  ${2: # code to handle the route}
+end
+]]></content>  
+  <tabTrigger>sin_req_get</tabTrigger>
+  <scope>source.ruby</scope>
+</snippet>

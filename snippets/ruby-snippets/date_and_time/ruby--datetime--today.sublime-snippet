@@ -1,8 +1,8 @@
 <snippet>
-  <description>Ret current date as YYYY-MM-DD ("require 'date'" to enable)</description>
+  <description>Ret current date as Date obj e.g. Tue, 12 Jul 2016</description>
 <content><![CDATA[
 Date.today
 ]]></content>  
-  <tabTrigger>datetime_today</tabTrigger>
+  <tabTrigger>rails_datetime_today</tabTrigger>
   <scope>source.ruby</scope>
 </snippet>

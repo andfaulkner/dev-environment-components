@@ -4,8 +4,11 @@ echo ''
 echo '---------------------------------------------------------------------------------'
 echo '** postgres cli cheatsheet **'
 echo '---------------------------------------------------------------------------------'
+echo '- default pg port: 5432'
+echo ''
 echo '- open from shell:                psql postgres               <<< where postgres is the db'
 echo '- open from shell with username:  psql postgres -U postgres   <<< 2nd postgres is the user'
+echo '- create a db:                    createdb name-of-db__here'
 echo ""
 echo "- once in the cli..."
 echo "- quit:              \q"

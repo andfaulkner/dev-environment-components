@@ -1,0 +1,8 @@
+<snippet>
+  <description>Get the timezone in this format e.g. "-04:00"</description>
+<content><![CDATA[
+${1:some_date}.zone
+]]></content>  
+  <tabTrigger>rails_datetime_timezone</tabTrigger>
+  <scope>source.ruby</scope>
+</snippet>

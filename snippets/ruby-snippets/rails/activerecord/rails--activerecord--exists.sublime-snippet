@@ -1,0 +1,8 @@
+<snippet>
+  <description>Determine if matching item exists</description>
+<content><![CDATA[
+${1:NameOfModel}.exists?(${2:id number(s) here, e.g.: 4 OR "4" OR [4] OR 4, 7 OR some search criteria e.g.: name: 'Joe'})${0}
+]]></content>  
+  <tabTrigger>rl_ar_exists?</tabTrigger>
+  <scope>source.ruby</scope>
+</snippet>

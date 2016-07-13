@@ -1,0 +1,119 @@
+# This is the configuration used to check the rubocop source code.
+
+# inherit_from: .rubocop_todo.yml
+
+AllCops:
+  Include:
+    - '**/*.rb'
+    - '**/*.gemspec'
+    - '**/*.podspec'
+    - '**/*.jbuilder'
+    - '**/*.rake'
+    - '**/*.opal'
+    - '**/config.ru'
+    - '**/config*.ru'
+    - '**/Gemfile'
+    - '**/Rakefile'
+    - '**/Capfile'
+    - '**/Guardfile'
+    - '**/Podfile'
+    - '**/Thorfile'
+    - '**/Vagrantfile'
+    - '**/Berksfile'
+    - '**/Cheffile'
+    - '**/Vagabondfile'
+    - '**/Fastfile'
+    - '**/*Fastfile'
+    - './launcher'
+  Exclude:
+    - 'vendor/**/*'
+    - 'spec/fixtures/**/*'
+    - 'tmp/**/*'
+    - 'Gemfile.lock'
+    - '**/.ruby-version'
+    - '**/.cane'
+  TargetRubyVersion: 2.3
+  ExtraDetails: true
+  DisplayCopNames: true
+
+Style/Encoding:
+  EnforcedStyle: always
+  Enabled: false
+
+Style/FrozenStringLiteralComment:
+  EnforcedStyle: always
+  Enabled: false
+
+Metrics/MethodLength:
+  Max: 20
+
+Metrics/LineLength:
+  Max: 100
+  AllowHeredoc: true
+  AllowURI: true
+  URISchemes:
+    - http
+    - https
+    - ftp
+    - telnet
+    - file
+    - druby
+    - mongodb
+
+Style/SpaceInsideBlockBraces:
+  EnforcedStyle: space
+  # Valid values are: space, no_space
+  EnforcedStyleForEmptyBraces: no_space
+  # Space between { and |. Overrides EnforcedStyle if there is a conflict.
+  SpaceBeforeBlockParameters: false
+
+Style/SpaceInsideHashLiteralBraces:
+  EnforcedStyle: no_space
+
+Style/HashSyntax:
+  EnforcedStyle: ruby19_no_mixed_keys
+
+Style/AlignHash:
+  EnforcedHashRocketStyle: table
+  EnforcedColonStyle: table
+
+Style/GlobalVars:
+  AllowedVariables: [HASH_VERBOSE, $HASH_VERBOSE]
+
+# Shadowing outer local vars w/ block params can be useful to avoid superfluous names for the
+# same thing. Random slight variables of var names is much more confusing that shadowing.
+Lint/ShadowingOuterLocalVariable:
+  Enabled: false
+
+Style/MethodDefParentheses:
+  Enabled: true
+
+Style/Alias:
+  Enabled: false
+
+# Use { } for blocks that return values. Use do / end for blocks that are executed for side effects
+# web.archive.org/web/20140221124509/http://onestepback.org/index.cgi/Tech/Ruby/BraceVsDoEnd.rdoc
+Style/BlockDelimiters:
+  Enabled: false
+
+Style/IndentationConsistency:
+  AllowProtectedAndPrivateMethodsBeIndented: true
+
+Style/IndentationConsistency:
+  EnforcedStyle: rails
+
+Style/IndentationWidth:
+  Width: 2
+  
+# Allow ; to separate several expressions on the same line.
+Style/Semicolon:
+  AllowAsExpressionSeparator: true
+
+MethodName:
+  EnforcedStyle: snake_case
+
+# hash literals with braces that have their opening brace on the same line as a
+# surrounding opening round parenthesis shall have their 1st key indented
+# relative to the first position inside the parenthesis.
+Style/IndentHash:
+  EnforcedStyle: special_inside_parentheses

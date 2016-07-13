@@ -1,0 +1,8 @@
+<snippet>
+  <description>Get last entry in the given database table</description>
+<content><![CDATA[
+${1:NameOfModel}.last
+]]></content>  
+  <tabTrigger>rails_ar_get_last</tabTrigger>
+  <scope>source.ruby</scope>
+</snippet>

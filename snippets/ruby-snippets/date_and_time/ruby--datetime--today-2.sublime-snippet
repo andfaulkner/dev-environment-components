@@ -1,0 +1,8 @@
+<snippet>
+  <description>Ret current date as e.g. Tue, 12 Jul 2016 ("require 'date'" to enable)</description>
+<content><![CDATA[
+Date.today
+]]></content>  
+  <tabTrigger>datetime_today</tabTrigger>
+  <scope>source.ruby</scope>
+</snippet>

@@ -1,0 +1,8 @@
+<snippet>
+  <description>Add timestamps to a table. Always do it. Adds created_at and updated_at cols.</description>
+<content><![CDATA[
+t.timestamps
+]]></content>  
+  <tabTrigger>rails_mig_types_timestamps</tabTrigger>
+  <scope>source.ruby</scope>
+</snippet>

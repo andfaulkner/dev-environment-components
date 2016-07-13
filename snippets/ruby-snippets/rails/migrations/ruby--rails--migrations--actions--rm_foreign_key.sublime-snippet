@@ -1,0 +1,8 @@
+<snippet>
+  <description>Remove a foreign key.</description>
+<content><![CDATA[
+remove_foreign_key :${1:table_with_the_foreign_key}, column: :${2:foreign_key_column_name}
+]]></content>  
+  <tabTrigger>rails_mig_act_rm_foreign</tabTrigger>
+  <scope>source.ruby</scope>
+</snippet>

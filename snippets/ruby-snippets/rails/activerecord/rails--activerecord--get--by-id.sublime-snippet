@@ -1,0 +1,8 @@
+<snippet>
+  <description>Get item with given id, return it</description>
+<content><![CDATA[
+${1:NameOfModel}.find(${2:id_number(s)_here__eg__4__OR__"4"__OR__[4]__OR__4, 5, 7})${0}
+]]></content>  
+  <tabTrigger>rl_ar_get_by_id</tabTrigger>
+  <scope>source.ruby</scope>
+</snippet>

@@ -1,0 +1,8 @@
+<snippet>
+  <description>Get # of days in given month (requires date)</description>
+<content><![CDATA[
+${1:date}.end_of_month.day
+]]></content>  
+  <tabTrigger>rails_datetime_days_in_month_fromdate</tabTrigger>
+  <scope>source.ruby</scope>
+</snippet>

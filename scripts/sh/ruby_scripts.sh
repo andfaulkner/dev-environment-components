@@ -271,3 +271,29 @@ alias manol_rbenv="curl https://raw.githubusercontent.com/rbenv/rbenv/master/REA
 alias irbrc="vim ~/.irbrc"
 alias rv="ruby --version"
 alias gi="gem install "
+
+function basic_ruby_project {
+  if [[ $3 == "--name" ]]; then if [[ -n $4 ]]; then mkdir $4; cd $4; echo "had a name"; fi; fi;
+  echo "done checking for name"
+  bundle init
+  echo "touched bundle"
+  touch Rakefile
+  echo "touched Rakefile"
+  echo "
+  gem 'rake'
+  gem 'thin'
+  " >> Gemfile
+  touch .ruby-version
+  echo "touched ruby version"
+  if [[ $1 == "--version" ]]; then if [[ -n $2 ]]; then echo "$2" >> .ruby-version; else echo "2.3.1p112" >> .ruby-version; fi; fi
+  echo "done checking for version"
+  bundle install
+  echo "done bundle installing"
+  mkdir doc
+  echo "done creating docs dir"
+  touch README.rdoc
+  touch app.rb
+  rubify app.rb
+  echo "done creating launch file"
+  if [[ $3 == "--name" ]]; then if [[ -n $4 ]]; then cd ..; fi; fi;
+}
