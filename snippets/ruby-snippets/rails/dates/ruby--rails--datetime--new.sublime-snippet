@@ -3,6 +3,6 @@
 <content><![CDATA[
 ${1:date_holding_var}${1/.+/ = /}DateTime.civil_from_format :${2::local_OR_:utc}, ${3:year_eg_2016}, ${4:mon_eg_04}, ${5:date_eg_01}, ${6:hour_eg_10}, ${7:min_eg_10}, ${8:sec_eg_10}
 ]]></content>  
-  <tabTrigger>rails_datetime_new</tabTrigger>
+  <tabTrigger>rl_dtime_new</tabTrigger>
   <scope>source.ruby</scope>
 </snippet>

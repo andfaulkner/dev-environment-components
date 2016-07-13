@@ -3,6 +3,6 @@
 <content><![CDATA[
 ${1:some_date}.zone
 ]]></content>  
-  <tabTrigger>rails_datetime_timezone</tabTrigger>
+  <tabTrigger>rl_dtime_timezone</tabTrigger>
   <scope>source.ruby</scope>
 </snippet>

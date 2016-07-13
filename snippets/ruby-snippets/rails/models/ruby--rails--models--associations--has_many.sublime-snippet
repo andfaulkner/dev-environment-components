@@ -3,6 +3,6 @@
 <content><![CDATA[
 has_many :${1:name_of_associated_model__lowercase}
 ]]></content>  
-  <tabTrigger>rails_model_assoc_hm</tabTrigger>
+  <tabTrigger>rl_model_assoc_hm</tabTrigger>
   <scope>source.ruby</scope>
 </snippet>

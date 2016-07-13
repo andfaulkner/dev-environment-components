@@ -3,6 +3,6 @@
 <content><![CDATA[
 t.timestamps
 ]]></content>  
-  <tabTrigger>rails_mig_types_timestamps</tabTrigger>
+  <tabTrigger>rl_mig_types_timestamps</tabTrigger>
   <scope>source.ruby</scope>
 </snippet>

@@ -8,6 +8,6 @@ change_table :${1:name_of_table} do |t|
   t.column :col_to_add :string                  # add column example}
 end
 ]]></content>  
-  <tabTrigger>rails_mig_act_change_table</tabTrigger>
+  <tabTrigger>rl_mig_act_change_table</tabTrigger>
   <scope>source.ruby</scope>
 </snippet>

@@ -3,6 +3,6 @@
 <content><![CDATA[
 ${1:NameOfModel}.first
 ]]></content>  
-  <tabTrigger>rails_ar_get_first</tabTrigger>
+  <tabTrigger>rl_ar_get_first</tabTrigger>
   <scope>source.ruby</scope>
 </snippet>

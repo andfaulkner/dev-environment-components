@@ -3,6 +3,6 @@
 <content><![CDATA[
 ${1:some_date}.day
 ]]></content>  
-  <tabTrigger>rails_datetime_day</tabTrigger>
+  <tabTrigger>rl_dtime_day</tabTrigger>
   <scope>source.ruby</scope>
 </snippet>

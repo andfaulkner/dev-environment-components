@@ -3,6 +3,6 @@
 <content><![CDATA[
 add_reference :${1:table_name__eg_products}, :${2:column_name}, index: true, foreign_key: true
 ]]></content>  
-  <tabTrigger>rails_mig_act_ref_col</tabTrigger>
+  <tabTrigger>rl_mig_act_ref_col</tabTrigger>
   <scope>source.ruby</scope>
 </snippet>

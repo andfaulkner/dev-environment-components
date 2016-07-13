@@ -3,6 +3,6 @@
 <content><![CDATA[
 ${2:t}.datetime :${1:name_of_field}
 ]]></content>
-  <tabTrigger>rails_mig_field_datetime</tabTrigger>
+  <tabTrigger>rl_mig_field_datetime</tabTrigger>
   <scope>source.ruby</scope>
 </snippet>

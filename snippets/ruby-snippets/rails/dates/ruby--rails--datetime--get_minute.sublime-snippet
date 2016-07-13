@@ -3,6 +3,6 @@
 <content><![CDATA[
 ${1:some_date}.minute
 ]]></content>  
-  <tabTrigger>rails_datetime_minute</tabTrigger>
+  <tabTrigger>rl_dtime_minute</tabTrigger>
   <scope>source.ruby</scope>
 </snippet>

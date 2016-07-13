@@ -3,6 +3,6 @@
 <content><![CDATA[
 ${1:some_date}.month
 ]]></content>  
-  <tabTrigger>rails_datetime_month</tabTrigger>
+  <tabTrigger>rl_dtime_month</tabTrigger>
   <scope>source.ruby</scope>
 </snippet>

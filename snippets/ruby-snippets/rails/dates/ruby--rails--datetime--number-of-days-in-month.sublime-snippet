@@ -3,6 +3,6 @@
 <content><![CDATA[
 Time.days_in_month(${1:current_month__e.g._2}, ${2:current_year__e.g._2016})
 ]]></content>  
-  <tabTrigger>rails_datetime_days_in_month</tabTrigger>
+  <tabTrigger>rl_dtime_days_in_month</tabTrigger>
   <scope>source.ruby</scope>
 </snippet>

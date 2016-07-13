@@ -5,6 +5,6 @@ create_table :${1:name_of_table} do |t|
   t.${2:data_type__eg_string} :${3:name_of_column}{$0}
 end
 ]]></content>  
-  <tabTrigger>rails_mig_act_create_table</tabTrigger>
+  <tabTrigger>rl_mig_act_create_table</tabTrigger>
   <scope>source.ruby</scope>
 </snippet>
