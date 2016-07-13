@@ -1,58 +1,14 @@
+@### Associations (Rails) ###@
+*   connection between two Active Record models
+*   Makes common operations faster and easier in code
+*   example: has_many :books, dependent: :destroy
 
-### Ladda ###
-*   A UI concept which merges loading indicators into the action that invoked them.
-*   isight uses it in via the jQuery.ladda library
 #######################################################################################
-
-### Secret (auth) ###
-*   connect auth in particular, but also encryption in general 
-*   Essentially salt for the hash
-#######################################################################################
-
-### Serialization ###
-*   converting an object into a stream of bytes in order to store the object or transmit
-    it to memory, a database, or a file. Its main purpose is to save the state of an object
-    in order to be able to recreate it when needed. The reverse process is called deserialization.
-#######################################################################################
-
-### Database Integrity ###
-*   guarantees that database is perfect and complete
-*   Integrity types:
-    *   Referential Integrity:   requires every value of 1 column of a table to exist as a value of
-    *                            another column in a different (or the same) table   
-#######################################################################################
-
-### Database key ###
-*   column name
-#######################################################################################
-
-### Stored procedure ###
-*   subroutine available to applications that access a relational database management system
-*   stored in the database data dictionary
-*   typical uses: data validation, access control mechanisms
-#######################################################################################
-
-
-### Etag ###
-*   opaque identifier assigned by a web server to a specific version of a resource found at
-		a URL. If the resource representation at that URL ever changes, a new and different ETag
-		is assigned. Used in this manner ETags are similar to fingerprints, and they can be
-		quickly compared to determine whether two representations of a resource are the same.
-#######################################################################################
-
-### ER-model ###
-*   entity–relationship model
-*   defines the conceptual view of a database
-*   a way of graphically representing the logical relationships of entities (or objects) in order to create a database
-*   graphical representation of entities and their relationships to each other
-*   http://www.webopedia.com/TERM/E/entity_relationship_diagram.html
-#######################################################################################
-
-### Constraints (database) ###
+@### Constraints (database) ###@
 *   conditions forced on the columns of the (db) table to meet the data integrity
 *   types of constraints:
-    *   NOT NULL:		 forces the column to have non-null value
-    *   UNIQUE:			 forces the column to have a unique value for each row
+    *   NOT NULL:        forces the column to have non-null value
+    *   UNIQUE:          forces the column to have a unique value for each row
     *   PRIMARY KEY: forces column to have unique value w/ which we can uniquely determine each row
     *   FOREIGN KEY: helps to map two or more tables in the database. [See "Foreign key" definition]
     *   DEFAULT:     specifies default value for a column when no value is given
@@ -61,7 +17,29 @@
                                             CREATED_DATE DATE DEFAULT SYSDATE)
 #######################################################################################
 
-### Foreign key ###
+@### Database key ###@
+*   column name
+
+@### Database Integrity ###@
+*   guarantees that database is perfect and complete
+*   Integrity types:
+    *   Referential Integrity:   requires every value of 1 column of a table to exist as a value of
+    *                            another column in a different (or the same) table   
+
+@### Etag ###@
+*   opaque identifier assigned by a web server to a specific version of a resource found at
+		a URL. If the resource representation at that URL ever changes, a new and different ETag
+		is assigned. Used in this manner ETags are similar to fingerprints, and they can be
+		quickly compared to determine whether two representations of a resource are the same.
+
+@### ER-model ###@
+*   entity–relationship model
+*   defines the conceptual view of a database
+*   a way of graphically representing the logical relationships of entities (or objects) in order to create a database
+*   graphical representation of entities and their relationships to each other
+*   http://www.webopedia.com/TERM/E/entity_relationship_diagram.html
+
+@### Foreign key ###@
 *   a type of database constraint
 *   helps to map two or more tables in the database
 *   enforces parent-child relationship in the database
@@ -75,7 +53,15 @@
         *   Child table:  EMPLOYEE
 #######################################################################################
 
-### Mutex ###
+@### Idempotence ###@
+*    an action that is idempotent should deliver identical results if the action is repeated.
+*    GET, PUT, and DELETE requests should be idempotent. POST requests, however, needn't be
+
+@### Ladda ###@
+*   A UI concept which merges loading indicators into the action that invoked them.
+*   isight, for example, uses it in via the jQuery.ladda library
+
+@### Mutex ###@
 *	program object that allows multiple program threads to share the same resource, such as file
 	access, but not simultaneously. When a program is started, a mutex is created with a unique name
 
@@ -94,8 +80,10 @@
 	resource while the flag is set. The mutex is the flag.
 #######################################################################################
 
-#######################################################################################
-### Scaffold (Rails) ###
+@### Resource (Rails) ###@
+*   see Scaffold (Rails)
+
+@### Scaffold (Rails) ###@
 *   Model:     rails g scaffold Test name:text
     -   model file test.rb in models dir
     -   migration file timestamp_create_tests.rb in db/migrate
@@ -117,26 +105,30 @@
     -   resources :tests in routes.rb file
     -   controller test in spec folder (potentially)
     -   resources :tests in routes.rb file
+#######################################################################################
 
-### Resource (Rails) ###
-*   see Scaffold (Rails)
+@### Secret (auth) ###@
+*   connect auth in particular, but also encryption in general 
+*   Essentially salt for the hash
 
-### Associations (Rails) ###
-*   connection between two Active Record models
-*   Makes common operations faster and easier in code
-*   example: has_many :books, dependent: :destroy
+@### Serialization ###@
+*   converting an object into a stream of bytes in order to store the object or transmit
+    it to memory, a database, or a file. Its main purpose is to save the state of an object
+    in order to be able to recreate it when needed. The reverse process is called deserialization.
 
-
-### IDEMPOTENCE ###
-*    an action that is idempotent should deliver identical results if the action is repeated.
-*    GET, PUT, and DELETE requests should be idempotent. POST requests, however, needn't be
+@### Stored procedure ###@
+*   subroutine available to applications that access a relational database management system
+*   stored in the database data dictionary
+*   typical uses: data validation, access control mechanisms
 
 ############################ HTTP REQUESTS ################################
-### PUT REQUESTS   AND    POST REQUESTS
+@### PUT requests ###@        AND        @### POST requests ###@
 *   ...vs. POST requests: A POST indicates what location on the server will handle the process, but
     doesn’t necessarily map to any one particular resource.
     *   A PUT request, by contrast, should refer to one (and only one) resource in particular.
 *   A POST indicates what location on the server will handle the process, but doesn’t
     necessarily map to any one particular resource.
     *   A PUT request, by contrast, should refer to one (and only one) resource in particular.
+*  PUT requests are Idempotent, while POST requests are not
+#######################################################################################
 
