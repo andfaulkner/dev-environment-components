@@ -1,0 +1,8 @@
+<snippet>
+  <description>Get name of current user - 2nd method</description>
+<content><![CDATA[
+ENV['USER']
+]]></content>  
+  <tabTrigger>sys_user_2</tabTrigger>
+  <scope>source.ruby</scope>
+</snippet>

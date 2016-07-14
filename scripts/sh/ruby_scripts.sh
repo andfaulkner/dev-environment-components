@@ -17,7 +17,6 @@ alias localgems='cat Gemfile | ack "^ *gem.*" | sort'
 
 alias bir="bundle install; rbenv rehash"
 
-
 function rspec_extract {
 cat $1 | ack "(^[^a-zA-Z0-9_]* it )|([^a-zA-Z0-9_]*[^\(]*?describe[ \(])|([^a-zA-Z0-9_]*context[ \(])"
 }
@@ -92,9 +91,9 @@ alias rsp="bundle exec rails server puma"
 alias rreset="bundle exec rake db:migrate:reset"
 alias rreset_db_full_DANGER="bundle exec rake db:migrate:reset"
 
-alias rjw="bundle exec rake jobs:work"
-alias berjw="bundle exec rake jobs:work"
-alias rw="killrakeworker; rjw"
+alias rjw="killrakeworker; bundle exec rake jobs:work"
+alias berjw="killrakeworker; bundle exec rake jobs:work"
+# alias rw="killrakeworker; rjw"
 
 # view all running ruby processes
 alias rubyps='ps aux | ack "ruby|rails|guard|rake|rack|puma|passenger|rbenv|irb|pry|bundler|rerun|rspec|zeus"'

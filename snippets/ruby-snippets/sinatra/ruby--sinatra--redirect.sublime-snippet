@@ -1,0 +1,8 @@
+<snippet>
+  <description>Redirect a request to another URL</description>
+<content><![CDATA[
+redirect '${1:http://www.google.com}'${2/.+/, }${2:301}
+]]></content>  
+  <tabTrigger>sin_redirect</tabTrigger>
+  <scope>source.ruby</scope>
+</snippet>

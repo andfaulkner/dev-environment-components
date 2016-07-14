@@ -1,0 +1,8 @@
+<snippet>
+  <description>Return name of current directory, from which the app was launched in the cli</description>
+<content><![CDATA[
+Dir.pwd
+]]></content>  
+  <tabTrigger>file_pwd</tabTrigger>
+  <scope>source.ruby</scope>
+</snippet>

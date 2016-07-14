@@ -1,0 +1,8 @@
+<snippet>
+  <description>Insert directive to freeze string literals - for 1st line of file</description>
+<content><![CDATA[
+# frozen_string_literal: true
+]]></content>  
+  <tabTrigger>startline_frozen_str_lit</tabTrigger>
+  <scope>source.ruby</scope>
+</snippet>

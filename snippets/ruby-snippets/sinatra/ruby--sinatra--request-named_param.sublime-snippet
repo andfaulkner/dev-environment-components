@@ -1,0 +1,10 @@
+<snippet>
+  <description>Set up a route handler for a request, with a named path param</description>
+<content><![CDATA[
+${1:get|post|put|patch|delete} '/${2:optional_first_route_parts_here}${2/.+/\//}:${3:named_param}' do
+  # you get access to this param via: params[:${3:named_param}]${0}
+end
+]]></content>  
+  <tabTrigger>sin_req_w_param</tabTrigger>
+  <scope>source.ruby</scope>
+</snippet>

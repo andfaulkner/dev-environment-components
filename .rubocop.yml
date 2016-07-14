@@ -74,7 +74,6 @@ Style/SpaceInsideHashLiteralBraces:
 ################################################################################
 
 Style/HashSyntax:
-  
   EnforcedStyle: ruby19
 
 Style/AlignHash:

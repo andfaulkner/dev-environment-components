@@ -28,4 +28,7 @@ echo ""
 echo "*** PAUSE EXECUTION ***"
 echo "sleep(numseconds)"
 echo "   *   does not work properly in rake tasks!"
+echo ""
+echo "require 'something/somethingelse/file' calls are relative to the project root, not the current file"
 echo '---------------------------------------------------------------------------------\n'
+

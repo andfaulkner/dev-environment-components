@@ -1,0 +1,10 @@
+<snippet>
+  <description>Set up a route handler for a request</description>
+<content><![CDATA[
+${1:get|post|put|patch|delete} '/${2:route_here}' do
+  ${3: # code to handle the route, contains query params in params[:some_param] etc.}
+end
+]]></content>  
+  <tabTrigger>sin_req</tabTrigger>
+  <scope>source.ruby</scope>
+</snippet>

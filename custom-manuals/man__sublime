@@ -1,0 +1,15 @@
+#!/usr/bin/env sh
+
+echo ''
+echo '---------------------------------------------------------------------------------'
+echo '** EXTRA SUBLIME INFO, HOTKEYS'
+echo '---------------------------------------------------------------------------------'
+echo 'HOTKEYS'
+echo ''
+echo "# Macros"
+echo "   -- Start & stop recording macro:        CTRL-Q"
+echo "   -- Playback macro:                      CTRL-SHIFT-Q"
+echo ""
+echo "Go to definition using mouse click only:   ALT-LEFT_CLICK"
+echo ""
+echo '---------------------------------------------------------------------------------\n'

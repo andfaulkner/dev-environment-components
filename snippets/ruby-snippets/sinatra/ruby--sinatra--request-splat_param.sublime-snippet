@@ -1,0 +1,10 @@
+<snippet>
+  <description>Set up a route handler for a request, with a wildcard param path</description>
+<content><![CDATA[
+${1:get|post|put|patch|delete} '/${2:optional_first_route_parts_here}${2/.+/\//}*${3/.+/\//}${3:optional_later_route_parts_here}' do
+  # you get access to splat contents via: params[:splat]${0}
+end
+]]></content>  
+  <tabTrigger>sin_req_w_*</tabTrigger>
+  <scope>source.ruby</scope>
+</snippet>

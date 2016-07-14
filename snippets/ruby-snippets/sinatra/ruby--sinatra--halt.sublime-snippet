@@ -1,0 +1,8 @@
+<snippet>
+  <description>Stop a request in its tracks, return error</description>
+<content><![CDATA[
+halt ${1:error_num__500_or_403__usually}${2/.+/, /}${2:optional_error_message_here}
+]]></content>  
+  <tabTrigger>sin_halt</tabTrigger>
+  <scope>source.ruby</scope>
+</snippet>

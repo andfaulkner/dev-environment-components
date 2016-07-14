@@ -1,0 +1,8 @@
+<snippet>
+  <description>Return the currently runinng process' PID</description>
+<content><![CDATA[
+Process.pid
+]]></content>  
+  <tabTrigger>sys_pid</tabTrigger>
+  <scope>source.ruby</scope>
+</snippet>

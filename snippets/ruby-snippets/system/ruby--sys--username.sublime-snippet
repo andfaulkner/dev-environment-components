@@ -1,0 +1,9 @@
+<snippet>
+  <description>Get name of current user</description>
+<content><![CDATA[
+require 'etc'
+Etc.getlogin
+]]></content>  
+  <tabTrigger>sys_user</tabTrigger>
+  <scope>source.ruby</scope>
+</snippet>

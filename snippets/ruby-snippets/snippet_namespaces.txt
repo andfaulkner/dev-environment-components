@@ -1,0 +1,11 @@
+sinatra:                            sin_
+rails:                              rls_
+array:                              arr_
+hash:                               hash_
+string:                             str_
+file and dir-related:               file_
+metaprogramming:                    metap_
+methods:                            meth_
+rake:                               rake_
+type detection:                     is_a_
+system & process info & handling:   sys_

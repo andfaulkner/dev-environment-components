@@ -1,0 +1,8 @@
+<snippet>
+	<description>Load all rake tasks in task dir into root Rakefile. Goes in [proj]/Rakefile</description>
+	<content><![CDATA[
+Dir.glob('tasks/*.rake').each { |r| import r }
+]]></content>
+	<tabTrigger>rake_loadalltasks</tabTrigger>
+	<scope>source.ruby</scope>
+</snippet>
