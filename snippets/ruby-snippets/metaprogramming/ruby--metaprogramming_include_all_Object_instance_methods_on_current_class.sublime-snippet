@@ -1,0 +1,8 @@
+<snippet>
+  <description>Include all safe Object instance methods in cur class</description>
+<content><![CDATA[
+private *instance_methods.select { |m| m !~ /(^__|^\W|^binding$)/ }
+]]></content>  
+  <tabTrigger>metap_incl_Obj_inst_meth_on_cur_obj</tabTrigger>
+  <scope>source.ruby</scope>
+</snippet>

@@ -3,6 +3,6 @@
 <content><![CDATA[
 Date.today
 ]]></content>  
-  <tabTrigger>rails_datetime_today</tabTrigger>
+  <tabTrigger>rl_datetime_today</tabTrigger>
   <scope>source.ruby</scope>
 </snippet>

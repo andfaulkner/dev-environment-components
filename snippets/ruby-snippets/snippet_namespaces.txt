@@ -1,5 +1,5 @@
 sinatra:                            sin_
-rails:                              rls_
+rails:                              rl_
 array:                              arr_
 hash:                               hash_
 string:                             str_
@@ -9,3 +9,4 @@ methods:                            meth_
 rake:                               rake_
 type detection:                     is_a_
 system & process info & handling:   sys_
+

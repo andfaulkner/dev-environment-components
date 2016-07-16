@@ -35,7 +35,8 @@ alias berspec_cleanslate="RAILS_ENV=test bundle exec rake db:setup; bundle exec 
 alias rake_no_err="RUBYOPT=-W0 rake"
 
 # run with defined server
-alias rs="bundle exec rails server"
+alias rs="killakr3; bundle exec rails server"
+alias rsv="bundle exec rails server -p 3001"
 alias rsakr="killakr3; bundle exec rails server"
 # run with puma server
 alias rsp="bundle exec rails server puma"

@@ -1,0 +1,103 @@
+cd [enter folder]
+bundle install
+createdb text-adventure-game-1_development      # construct a db
+rails generate simple_form:install              # bring in simple_form
+rails db:migrate
+rails db:setup
+
+
+######## load in bootstrap for styling ########
+touch app/assets/stylesheets/application.scss
+cat << 'EOF' >> app/assets/stylesheets/application.scss
+@import "bootstrap-sprockets";
+@import "bootstrap";
+@import "bootstrap/theme";
+EOF
+
+cat << 'EOF' >> app/assets/stylesheets/home.scss
+@import "bootstrap-sprockets";
+@import "bootstrap";
+@import "bootstrap/theme";
+EOF
+
+
+######## application.html.erb groundwork - give it new content ########
+rm app/views/layouts/application.html.erb
+cat << 'EOF' >> app/views/layouts/application.html.erb
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>TextAdventureGame1</title>
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+    <div class="container">
+      <% flash.each do |key, value| %>
+        <div class="alert alert-<%= key %>">
+          <%= value %>
+        </div>
+      <% end %>
+    </div>
+
+    <%= yield :top_content %>
+
+    <div class="container">
+        <h1><%= yield :header %></h1>
+      <%= yield %>
+    </div>
+  </body>
+</html>
+EOF
+
+
+######## Basic helper to render the app header ######## 
+rm app/helpers/application_helper.rb
+cat << 'EOF' >> app/helpers/application_helper.rb
+module ApplicationHelper
+  def header(text)
+    content_for(:header) { text.to_s }
+  end
+end
+EOF
+
+######## Basic re-route of application root ######## 
+rm config/routes.rb
+cat << 'EOF' >> config/routes.rb
+Rails.application.routes.draw do
+  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+  root to: 'home#index'
+end
+EOF
+
+################################ DEVISE ################################
+## Install devise
+rails generate devise:install
+
+# provide default url for action mailer
+inject_at_match.rb --before config/environments/development.rb "^[^a-zA-Z0-9@#]+config\.action_mailer\.perform_caching = " "  config.action_mailer.default_url_options = { host: '127.0.0.1', port: 3000 }
+"
+
+## Create user model for devise
+rails generate devise User
+
+## allow user to provide their name as an option 
+inject_at_match.rb --before db/migrate/*_devise_create_users.rb "^[^a-zA-Z0-9#]+t\.timestamps null: " "      t.string  :name
+"
+
+rake db:migrate
+
+# Generate the devise views
+rails generate devise:views
+
+# live reloading!
+guard init livereload
+
+## # inject livereload middleware hook into config/environments/development.rb
+## inject_at_match.rb --after config/environments/development.rb "^[^a-zA-Z0-9]+config\.file_watcher = ActiveSupport::EventedFileUpdateChecker" "
+##   # Inject middleware for live reloading pages in browser into rack stack
+##   config.middleware.insert_before ActionDispatch::Static, Rack::LiveReload"
+

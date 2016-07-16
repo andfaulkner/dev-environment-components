@@ -1,0 +1,8 @@
+<snippet>
+  <description>Send a message to an object. Can e.g. run methods</description>
+<content><![CDATA[
+${1:obj}${1/.+/./}send(${2:method_name_as_sym_or_str}, ${3:args})
+]]></content>
+  <tabTrigger>send</tabTrigger>
+  <scope>source.ruby</scope>
+</snippet>

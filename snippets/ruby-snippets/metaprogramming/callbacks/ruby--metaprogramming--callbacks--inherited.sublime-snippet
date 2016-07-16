@@ -1,0 +1,10 @@
+<snippet>
+  <description>Callback run whenever a given class is subclassed</description>
+<content><![CDATA[
+def self.inherited(new_child_class)
+  ${0}
+end
+]]></content>  
+  <tabTrigger>cb_inherited</tabTrigger>
+  <scope>source.ruby</scope>
+</snippet>

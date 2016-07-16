@@ -1,0 +1,8 @@
+<snippet>
+  <description>Detect if user is currently logged in or not. Usable in views.</description>
+<content><![CDATA[
+if ${1:!}user_signed_in?${0}
+]]></content>  
+  <tabTrigger>user_logged_in</tabTrigger>
+  <scope>source.ruby</scope>
+</snippet>

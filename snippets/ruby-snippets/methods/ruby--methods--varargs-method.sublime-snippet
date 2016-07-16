@@ -1,0 +1,10 @@
+<snippet>
+  <description>method that takes in varargs</description>
+<content><![CDATA[
+def ${1:name_of_method}(${2:other args, }*${3:name_of_varargs_param})
+  ${4:# use ${3:name_of_varargs_param} here}
+end
+]]></content>  
+  <tabTrigger>fn_varargs</tabTrigger>
+  <scope>source.ruby</scope>
+</snippet>

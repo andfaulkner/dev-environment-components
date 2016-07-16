@@ -1,5 +1,7 @@
 #!/usr/bin/env ruby
 
+## TODO: FIXME: NOT WORKING AT ALL ATM ##
+
 require 'fileutils'
 
 def prepend_line_to_file(file, line_number_to_delete)
@@ -22,7 +24,7 @@ end
 def usage(error)
   puts error
   puts "-- delete_line -------------------------------------------"
-  puts "USAGE:       prepend_text filename \"line to delete\""
+  puts "USAGE:       delete_line filename \"line to delete\""
   puts "-----------------------------------------------------------"
 end
 

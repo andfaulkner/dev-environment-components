@@ -58,7 +58,7 @@ module InjectAtMatch
 		File.delete bk_filename if options[:wildside]
 	end
 
-	def usage
+	def self.usage
 		puts "-----------------------------------------------------------------------------"
 		puts "USAGE:        inject_at_match [opts] filename regex text"
 		puts "------------------------------------------------"
