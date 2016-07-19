@@ -5,9 +5,9 @@ change_table :${1:name_of_table} do |t|
   ${2:t.references :company, foreign_key: true  # foreign key example
   t.belongs_to :company, polymorphic: true      # polymorphic association example
   t.remove :col_to_remove                       # remove column example
-  t.column :col_to_add :string                  # add column example}
+  t.column :col_to_add, :string                  # add column example}
 end
 ]]></content>  
-  <tabTrigger>rl_mig_act_change_table</tabTrigger>
+  <tabTrigger>rl_mig_change_table</tabTrigger>
   <scope>source.ruby</scope>
 </snippet>

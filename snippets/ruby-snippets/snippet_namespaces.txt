@@ -1,12 +1,19 @@
 sinatra:                            sin_
-rails:                              rl_
 array:                              arr_
 hash:                               hash_
 string:                             str_
 file and dir-related:               file_
 metaprogramming:                    metap_
-methods:                            meth_
+methods:                            func_
 rake:                               rake_
 type detection:                     is_a_
 system & process info & handling:   sys_
-
+rails:                              rl_
+rails views:                        rlv_
+rails routing:                      rl_route_
+rails migrations:                   rl_mig_
+rails activerecord:                 rl_ar_
+rails dates:                        rl_datetime_
+rails models:                       rl_model_
+rails sessions:                     rl_sess_
+rails squeel:                       rl_sq_

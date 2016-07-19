@@ -1,0 +1,10 @@
+<snippet>
+  <description>Create new method / function</description>
+<content><![CDATA[
+def ${1:name_of_method}${2/.+/\(/}${2:params}${2/.+/\)/}
+  ${0}
+end
+]]></content>  
+  <tabTrigger>func</tabTrigger>
+  <scope>source.ruby</scope>
+</snippet>

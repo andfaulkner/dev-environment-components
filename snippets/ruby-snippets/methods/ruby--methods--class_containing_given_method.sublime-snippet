@@ -1,0 +1,8 @@
+<snippet>
+  <description>Get class containing the given method</description>
+<content><![CDATA[
+${1:name_of_method}.receiver
+]]></content>  
+  <tabTrigger>func_receiver</tabTrigger>
+  <scope>source.ruby</scope>
+</snippet>

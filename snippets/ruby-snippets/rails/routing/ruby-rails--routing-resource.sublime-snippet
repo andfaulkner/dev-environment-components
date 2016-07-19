@@ -3,8 +3,6 @@
 	<content><![CDATA[
 resources :${1:resource_name}
 ]]></content>
-	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
-	<tabTrigger>rrtres</tabTrigger>
-	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<tabTrigger>rl_route_tres</tabTrigger>
 	<scope>source.ruby</scope>
 </snippet>

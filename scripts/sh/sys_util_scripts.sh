@@ -52,6 +52,7 @@ alias clean_mega_level6='nukeruby; nukenode; nukelisp; nukepython; nukemisc_util
 
 alias startpostgres="sudo service postgresql-9.4 start"
 alias startmysql="sudo service mysql start"
+alias startmysql_mac="mysql.server start"
 alias startmongo="sudo service mongodb start"
 
 VIMPLUGINS=$HOME/.config/sublime-text-3/Packages/User/snippets/dev-env/vim_configs/.vim/bundle

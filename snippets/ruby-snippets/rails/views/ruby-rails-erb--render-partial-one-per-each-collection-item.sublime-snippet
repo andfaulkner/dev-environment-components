@@ -1,0 +1,9 @@
+<snippet>
+	<description>Render partial once for each item in collection</description>
+	<content><![CDATA[
+<%= render partial: ${1:name_of_partial}, collection: @${2:variable_containing_collection} %>
+<%= ${0} %>
+]]></content>
+	<tabTrigger>rlv_rend_partial_coll</tabTrigger>
+	<scope>text.html.ruby</scope>
+</snippet>

@@ -1,0 +1,8 @@
+<snippet>
+  <description>Validation: ensure a given checkbox is checked</description>
+<content><![CDATA[
+validates :${1:field_name_usually_terms_of_service}, acceptance: true${2/.+/, message: /}${2:'optional error message here'}
+]]></content>  
+  <tabTrigger>rl_model_val_accepted</tabTrigger>
+  <scope>source.ruby</scope>
+</snippet>

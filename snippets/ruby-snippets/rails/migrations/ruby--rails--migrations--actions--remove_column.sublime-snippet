@@ -3,6 +3,6 @@
 <content><![CDATA[
 remove_column :${1:table_name__eg_products}, :${2:column_name}, :${3:column_type__eg_string}
 ]]></content>  
-  <tabTrigger>rl_mig_act_rm_col</tabTrigger>
+  <tabTrigger>rl_mig_rm_col</tabTrigger>
   <scope>source.ruby</scope>
 </snippet>

@@ -3,6 +3,6 @@
 <content><![CDATA[
 ${1:name_of_new_partial_method} = method(:${2:name_of_method}).curry
 ]]></content>  
-  <tabTrigger>meth_curry</tabTrigger>
+  <tabTrigger>func_curry</tabTrigger>
   <scope>source.ruby</scope>
 </snippet>

@@ -3,6 +3,6 @@
 <content><![CDATA[
 if ${1:!}user_signed_in?${0}
 ]]></content>  
-  <tabTrigger>rls_sess_is_user_loggedin</tabTrigger>
+  <tabTrigger>rl_sess_is_user_loggedin</tabTrigger>
   <scope>source.ruby</scope>
 </snippet>

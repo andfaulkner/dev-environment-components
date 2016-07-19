@@ -1,7 +1,7 @@
 cd [enter folder]
 bundle install
 createdb text-adventure-game-1_development      # construct a db
-rails generate simple_form:install              # bring in simple_form
+rails generate simple_form:install --bootstrap              # bring in simple_form
 rails db:migrate
 rails db:setup
 
@@ -101,3 +101,25 @@ guard init livereload
 ##   # Inject middleware for live reloading pages in browser into rack stack
 ##   config.middleware.insert_before ActionDispatch::Static, Rack::LiveReload"
 
+# set up application_controller to allow creation of users that have a username
+rm app/controllers/application_controller.rb
+cat << 'EOF' >> app/controllers/application_controller.rb
+class ApplicationController < ActionController::Base
+  protect_from_forgery with: :exception
+
+  before_filter :configure_permitted_parameters, if: :devise_controller?
+
+  protected
+
+    def configure_permitted_parameters
+      devise_parameter_sanitizer.permit(:sign_up, keys: [:email, :password, :username])
+      devise_parameter_sanitizer.permit(:account_update, keys: [:email, :password, :username])
+    end
+end
+EOF
+
+# reactJS
+rails g react:install
+
+mkdir app/assets/javascripts/components
+touch app/assets/javascripts/components/components.js

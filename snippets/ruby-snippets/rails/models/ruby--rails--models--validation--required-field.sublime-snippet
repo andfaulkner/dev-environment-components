@@ -1,0 +1,8 @@
+<snippet>
+  <description>Validation: ensure a given field is present on a model</description>
+<content><![CDATA[
+validates :${1:field_name}, presence: true${0}
+]]></content>  
+  <tabTrigger>rl_model_val_req</tabTrigger>
+  <scope>source.ruby</scope>
+</snippet>

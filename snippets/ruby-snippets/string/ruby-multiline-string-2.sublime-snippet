@@ -1,10 +1,12 @@
 <snippet>
-	<description>Squeel: search for items matching on a field</description>
+	<description>Create multiline string</description>
 	<content><![CDATA[
-User.where{${1:field} =~ "${2:value}}
+<<-${1:STRING_NAME}
+	${0:STRING_CONTENT}
+${1}
 ]]></content>
 	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
-	<tabTrigger>rl_sq_where</tabTrigger>
+	<tabTrigger>str_multiline</tabTrigger>
 	<!-- Optional: Set a scope to limit where the snippet will trigger -->
-	<scope>text.html.ruby</scope>
+	<scope>source.ruby</scope>
 </snippet>

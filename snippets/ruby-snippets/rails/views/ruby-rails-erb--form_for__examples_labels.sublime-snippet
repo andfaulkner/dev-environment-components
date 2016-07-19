@@ -33,7 +33,7 @@ ${0}
 <%= f.submit "${19:Submit Button Text}", class: "btn btn-primary" %>
 ]]></content>
 	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
-	<tabTrigger>formf_examples_of_all</tabTrigger>
+	<tabTrigger>rlv_formf_examples_of_all</tabTrigger>
 	<!-- Optional: Set a scope to limit where the snippet will trigger -->
 	<scope>text.html.ruby</scope>
 </snippet>

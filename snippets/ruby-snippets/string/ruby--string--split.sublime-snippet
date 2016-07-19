@@ -1,0 +1,8 @@
+<snippet>
+	<description>Split string into array; each match = cutoff for new arr item</description>
+	<content><![CDATA[
+${1:some_string}.split(${2:string_to_split_on__''_to_split_to_one_char_per_item})
+]]></content>
+	<tabTrigger>str_split</tabTrigger>
+	<scope>source.ruby</scope>
+</snippet>

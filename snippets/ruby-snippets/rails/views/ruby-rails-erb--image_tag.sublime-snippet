@@ -3,8 +3,6 @@
 	<content><![CDATA[
 image_tag("${1:relative/path/to/img.png}"${2/.+/, /g}${2:'http://www.optional.root.path.com'})${0}
 ]]></content>
-	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
-	<tabTrigger>imgt</tabTrigger>
-	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<tabTrigger>rlv_imgt</tabTrigger>
 	<scope>text.html.ruby</scope>
 </snippet>

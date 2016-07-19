@@ -3,6 +3,6 @@
 <content><![CDATA[
 add_foreign_key :${1:table_getting_the_foreign_key}, :${2:table_being_referenced}
 ]]></content>  
-  <tabTrigger>rl_mig_act_add_foreign</tabTrigger>
+  <tabTrigger>rl_mig_add_foreign</tabTrigger>
   <scope>source.ruby</scope>
 </snippet>

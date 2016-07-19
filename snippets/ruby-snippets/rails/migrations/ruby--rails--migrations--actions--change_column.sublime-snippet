@@ -3,6 +3,6 @@
 <content><![CDATA[
 change_column :${1:name_of_table}, ${2:name_of_column}, ${3::new_type__OR__'new_default'__OR__nil(rms default)__OR__true/false_to_allow_or_ban_null}
 ]]></content>  
-  <tabTrigger>rl_mig_act_change_col</tabTrigger>
+  <tabTrigger>rl_mig_change_col</tabTrigger>
   <scope>source.ruby</scope>
 </snippet>
