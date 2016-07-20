@@ -100,3 +100,16 @@ end
 def own_methods_only(object)
   object.methods - Class.methods - Object.methods - BasicObject.methods - Module.methods
 end
+
+def metaprog_methods(object)
+    %w(methods class_methods private_methods singleton_methods protected_methods public_methods instance_variables global_variables instance_values).reduce([]) {|total, meth_type| 
+        if object.respond_to?(meth_type.to_sym) 
+            total + [method(meth_type.to_sym)] 
+        else
+            total
+        end
+    }.reduce([]) {|all, meth_type| 
+        all + meth_type.call.grep(/(instance)|(variable)|(method)|(class)|(module)|(public)|(private)|(protected)|(access)|(propert)|(super)|(singleton)|(value)|(get)|(set)|(eval)|(exec)|(env)|(func)/).sort
+    }.uniq.sort
+end
+

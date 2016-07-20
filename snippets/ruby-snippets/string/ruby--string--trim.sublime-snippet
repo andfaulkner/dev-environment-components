@@ -1,0 +1,8 @@
+<snippet>
+  <description>Trim == strip. Remove whitespace around string</description>
+<content><![CDATA[
+${1:str}${1/.+/./}strip${0}
+]]></content>  
+  <tabTrigger>trim</tabTrigger>
+  <scope>source.ruby</scope>
+</snippet>

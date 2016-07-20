@@ -1,10 +1,39 @@
-cd [enter folder]
+########### setup -- only do once ########### 
+npm install -g avn avn-nvm avn-n
+avn setup
+brew install nvm
+echo '  export NVM_DIR="$HOME/.nvm"
+ . "$(brew --prefix nvm)/nvm.sh"'
+nvm install v6.3.0
+echo "nvm use v6.3.0" >> .bash_profile
+npm install -g gulp webpack mimosa grunt
+#############################################
+
+# new rails project
+rails new --database=postgresql [name-of-project]
+
+cd [name-of-project]
 bundle install
-createdb text-adventure-game-1_development      # construct a db
-rails generate simple_form:install --bootstrap              # bring in simple_form
+createdb [name-of-project]_development              # construct a db
 rails db:migrate
 rails db:setup
 
+# set up node
+nvm use --delete-prefix v6.3.0
+touch .node-version
+touch .nvmrc
+echo 'v6.3.0' > .node-version
+echo '6.3.0' > .nvmrc
+
+
+# IF DOING REACT-ON-RAILS
+# install react_on_rails first
+# inject_at_match.rb --before Gemfile "^# Use jquery as the JavaScript library" "gem 'react_on_rails', '~> 5'"
+# bundle install
+# rails generate react_on_rails:install
+
+# bring in simple_form with bootstrap
+rails generate simple_form:install --bootstrap
 
 ######## load in bootstrap for styling ########
 touch app/assets/stylesheets/application.scss
@@ -80,6 +109,8 @@ rails generate devise:install
 # provide default url for action mailer
 inject_at_match.rb --before config/environments/development.rb "^[^a-zA-Z0-9@#]+config\.action_mailer\.perform_caching = " "  config.action_mailer.default_url_options = { host: '127.0.0.1', port: 3000 }
 "
+
+inject_at_match.rb --before Gemfile "^# Use jquery as the JavaScript library" "gem 'react_on_rails', '~> 5'"
 
 ## Create user model for devise
 rails generate devise User

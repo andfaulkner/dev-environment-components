@@ -4,7 +4,7 @@
 
 require 'fileutils'
 
-def prepend_line_to_file(file, line_number_to_delete)
+def delete_line_number(file, line_number_to_delete)
   original_file = "./#{file}"
   new_file = "#{original_file}.new"
   counter = 1
@@ -23,9 +23,10 @@ end
 
 def usage(error)
   puts error
-  puts "-- delete_line -------------------------------------------"
-  puts "USAGE:       delete_line filename \"line to delete\""
-  puts "-----------------------------------------------------------"
+  puts '-- delete_line -------------------------------------------'
+  puts 'USAGE:       delete_line filename line_number_to_delete'
+  puts 'Example:     delete_line test.txt 4'
+  puts '-----------------------------------------------------------'
 end
 
 if __FILE__ == $0
@@ -34,7 +35,7 @@ if __FILE__ == $0
   elsif !File.exists?("./#{ARGV[0]}") && !ARGV.include?("-f")
     usage "file does not exist"
   else
-    prepend_line_to_file(ARGV[0], ARGV[1])
+    delete_line_number(ARGV[0], ARGV[1])
     puts "END!"
   end
 end

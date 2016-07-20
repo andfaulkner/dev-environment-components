@@ -1,0 +1,10 @@
+<snippet>
+  <description>Callback run whenever a method is added to the current class or module</description>
+<content><![CDATA[
+def self.method_added(method_name)
+  ${0}
+end
+]]></content>  
+  <tabTrigger>cb_method_added</tabTrigger>
+  <scope>source.ruby</scope>
+</snippet>

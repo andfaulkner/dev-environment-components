@@ -1,0 +1,10 @@
+<snippet>
+  <description>Callback run whenever a given module is extended</description>
+<content><![CDATA[
+def self.extended(class_or_module)
+  ${0}
+end
+]]></content>  
+  <tabTrigger>cb_extended</tabTrigger>
+  <scope>source.ruby</scope>
+</snippet>

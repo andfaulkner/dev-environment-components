@@ -1,0 +1,10 @@
+<snippet>
+  <description>Callback run whenever a given module is included</description>
+<content><![CDATA[
+def self.included(class_or_module)
+  ${0}
+end
+]]></content>  
+  <tabTrigger>cb_included</tabTrigger>
+  <scope>source.ruby</scope>
+</snippet>

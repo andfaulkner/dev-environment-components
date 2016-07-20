@@ -1,0 +1,11 @@
+<snippet>
+	<description>Create new basic rake task that takes args</description>
+	<content><![CDATA[
+desc '${3:What the task actually does}'
+task :${1:name_of_task}, [${2::arg}] do |_t, args|
+  ${0:# access args via args[${2}]}
+end
+]]></content>
+	<tabTrigger>rake_newtask_args</tabTrigger>
+	<scope>source.ruby</scope>
+</snippet>

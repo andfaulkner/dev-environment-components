@@ -9,6 +9,8 @@ SNIPPETS_DIR=$(pwd | sed s/\\/snippets\\/.*/\\/snippets/g)
 # LIFECYCLE: POINT 4:: THESE MUST RUN AFTER REGULAR UNIX SETUP
 function unix_post_setup {
     vim +VundleInstall
+    # rake is handy :)
+    ln -s "$SNIPPETS_DIR/dev-env/.rake" ~/.rake
 }
 
 function _gems_install_pry {

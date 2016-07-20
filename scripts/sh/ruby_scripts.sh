@@ -7,7 +7,7 @@ eval "$(rbenv init -)"
 # close ruby process that just refuses to
 alias killruby='ps aux | ack "(bin.?ruby)|(puma)" |  awk "{print \$2}" | xargs kill -9'
 alias rubypocalypse='ps aux | ack "ruby|passenger" | awk "{print \$2}" | xargs kill -9'
-alias nukeruby='ps aux | ack "[^a-zA-Z0-9_\/\$\.]ruby[^_a-zA-Z\/0-9\.\$]|passenger|rake|rack|rspec|spork|thin|puma|zeus|webrick|gem[^0-9a-zA-Z_\.]|minitest|capistrano|rbenv|rails|pry|irb|rerun|guard" | awk "{print \$2}" | xargs kill -9'
+alias nukeruby='ps aux | ack "[^a-zA-Z0-9_\/\$\.]ruby[^_a-zA-Z\/0-9\.\$]|passenger|rake|rack|rspec|spork|thin|puma|zeus|webrick|gem[^0-9a-zA-Z_\.]|minitest|capistrano|rbenv|rails|pry|irb|rerun|guard" | awk "{print \$2}" | xargs kill -9; spring stop'
 alias nukerspec='ps aux | ack "rspec" | ack -v "spork" | awk "{print \$2}" | xargs kill -9'
 
 # install a gem globally
@@ -297,3 +297,6 @@ function basic_ruby_project {
   echo "done creating launch file"
   if [[ $3 == "--name" ]]; then if [[ -n $4 ]]; then cd ..; fi; fi;
 }
+
+alias rakeg="rake -g"
+alias rakegt="rake -g -T -a" # list all rake tasks
