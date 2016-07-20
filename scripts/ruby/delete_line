@@ -1,6 +1,6 @@
 #!/usr/bin/env ruby
 
-## TODO: FIXME: NOT WORKING AT ALL ATM ##
+## TODO: FIXME: ONY WORKING WITH LINE NUMBERS, NOT MATCHES ##
 
 require 'fileutils'
 
