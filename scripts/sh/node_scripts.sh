@@ -15,6 +15,8 @@ alias nrnt="export LOG_LEVEL=trace; npm run nodemon"
 alias nrns="export LOG_LEVEL=silly; npm run nodemon"
 alias nrne="export LOG_LEVEL=error; npm run nodemon"
 
+alias ni="npm install"
+
 alias mds="make dev-setup"
 alias mdsr="make dev-setup; npm run nodemon"
 alias mpt="make populate-translations"
@@ -52,6 +54,7 @@ alias killnpm="ps axu | grep npm | cut -d' ' -f3 | grep '$' | sudo xargs kill -9
 alias bombnode="killnode; killgulp; killnodemon; killnpm"
 
 alias nukenodesrv="ps aux | grep node | grep -v 'gulp' | awk '{print \$2}' | xargs kill -9"
+alias nukeember="ps aux | grep ember | awk '{print \$2}' | xargs kill -9"
 
 alias murdernode='ps aux | grep "gulp\|node\|npm" | grep -v "atom" | awk "{print \$2}" | sudo xargs kill -9'
 #alias murdernode='ps aux | grep "gulp\|node\|npm" | grep -v "atom" | cut -d" " -f2 | sudo xargs kill -9'
@@ -95,6 +98,22 @@ function slicesenerr {
 #       see     http://www.grymoire.com/unix/sed.html
 #####################################
 
+
+################################################################################
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ EMBER ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+################################################################################
+alias es="ember server"            # start ember server at port 4200
+alias esp="ember server --port"    # start ember server at given port #
+alias eg="ember generate"          # generate something with ember
+alias et="ember test --server"     # run ember tests
+alias egr="ember generate route"   # generate route with given name
+
+
+################################################################################
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ VERSION ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+################################################################################
+alias node_version='echo "$(eval node -v)" > .node-version' # set current version of node as project root node version
+
 # alias slicesenerr="cat test.txt | sed 's/     at/\n          at/g' | sed 's/trace=/\n\ntrace=/g'| sed 's/column=/\n    ---->COLUMN = /g' | sed 's/\/home\/andfaulkner\/Projects\/testbed\/testbed-seneca--4//g' | sed 's/, execPath=/,\n  execPath=/g' | sed 's/, argv=/,\n  argv=/g' | sed 's/, rss=/,\n  rss=/g' | sed 's/, heapTotal=/,\n  heapTotal=/g' | sed 's/, loadav
 #alias slicesenerr="cat test.txt | sed 's/     at/\n          at/g'" 
 
@@ -106,3 +125,6 @@ function slicesenerr {
 
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
 [[ -s "$HOME/.avn/bin/avn.sh" ]] && source "$HOME/.avn/bin/avn.sh" # load avn
+
+export NVM_DIR=~/.nvm
+nvm use v6.3.1
