@@ -1,0 +1,8 @@
+<snippet>
+  <description>Character code for left arrow key</description>
+<content><![CDATA[
+37
+]]></content>  
+  <tabTrigger>char_left_arrow</tabTrigger>
+  <scope>source.js</scope>
+</snippet>

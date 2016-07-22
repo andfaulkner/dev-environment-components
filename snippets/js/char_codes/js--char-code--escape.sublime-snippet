@@ -1,0 +1,8 @@
+<snippet>
+  <description>Character code for escape key</description>
+<content><![CDATA[
+27
+]]></content>  
+  <tabTrigger>char_escape</tabTrigger>
+  <scope>source.js</scope>
+</snippet>

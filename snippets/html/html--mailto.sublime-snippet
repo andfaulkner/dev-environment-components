@@ -1,0 +1,8 @@
+<snippet>
+  <description>mailto link</description>
+<content><![CDATA[
+<a href="mailto:${1:email_address@somewhere.com}">${2:email address link text}</a>${0}
+]]></content>  
+    <scope>text.html</scope>
+  <tabTrigger>mail</tabTrigger>
+</snippet>

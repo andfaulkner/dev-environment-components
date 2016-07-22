@@ -1,0 +1,10 @@
+<snippet>
+  <description>paragraph with a class</description>
+<content><![CDATA[
+<p${1/.+/ class="/}${1:class-name-goes-here}${1/.+/"/}>
+	${2:header-text-here}
+</p>${0}
+]]></content>  
+    <scope>text.html</scope>
+  <tabTrigger>pc</tabTrigger>
+</snippet>

@@ -1,0 +1,8 @@
+<snippet>
+  <description>Character code for 'l' (ell) key</description>
+<content><![CDATA[
+76
+]]></content>  
+  <tabTrigger>char_l</tabTrigger>
+  <scope>source.js</scope>
+</snippet>

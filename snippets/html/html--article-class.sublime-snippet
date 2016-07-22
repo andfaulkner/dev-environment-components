@@ -1,0 +1,8 @@
+<snippet>
+    <description>Article w/ classes defined. Article = self-contained content</description>
+    <content><![CDATA[
+<article class="${1:classname}">${0}</article>
+]]></content>
+    <tabTrigger>articlec</tabTrigger>
+    <scope>text.html</scope>
+</snippet>

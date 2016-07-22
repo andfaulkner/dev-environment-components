@@ -1,0 +1,8 @@
+<snippet>
+  <description>Character code for shift key</description>
+<content><![CDATA[
+16
+]]></content>  
+  <tabTrigger>char_shift</tabTrigger>
+  <scope>source.js</scope>
+</snippet>

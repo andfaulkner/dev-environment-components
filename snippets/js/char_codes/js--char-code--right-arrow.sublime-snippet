@@ -1,0 +1,8 @@
+<snippet>
+  <description>Character code for right arrow key</description>
+<content><![CDATA[
+39
+]]></content>  
+  <tabTrigger>char_right_arrow</tabTrigger>
+  <scope>source.js</scope>
+</snippet>

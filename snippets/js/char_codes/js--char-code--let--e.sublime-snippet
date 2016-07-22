@@ -1,0 +1,8 @@
+<snippet>
+  <description>Character code for 'e' key</description>
+<content><![CDATA[
+69
+]]></content>  
+  <tabTrigger>char_e</tabTrigger>
+  <scope>source.js</scope>
+</snippet>

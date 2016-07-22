@@ -1,0 +1,10 @@
+<snippet>
+  <description>Helper to link to an ember route</description>
+<content><![CDATA[
+{{#link-to '${1:route-with-no-preceding-slash}'${2/.+/class="/}${2:what_el_the_link_attached_to_e.g._button}${2/.+/"/}}}
+	${3:Link text}
+{{/link-to}}${0}
+]]></content>  
+  <tabTrigger>linkto</tabTrigger>
+  <scope>text.html.handlebars</scope>
+</snippet>

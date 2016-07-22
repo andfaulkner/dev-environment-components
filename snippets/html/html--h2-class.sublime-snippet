@@ -1,0 +1,10 @@
+<snippet>
+  <description>subheader with a class</description>
+<content><![CDATA[
+<h2${1/.+/ class="/}${1:class-name-goes-here}${1/.+/"/}>
+	${2:header-text-here}
+</h2>${0}
+]]></content>  
+    <scope>text.html</scope>
+  <tabTrigger>h2c</tabTrigger>
+</snippet>

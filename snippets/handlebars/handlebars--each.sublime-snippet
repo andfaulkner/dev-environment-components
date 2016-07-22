@@ -1,0 +1,10 @@
+<snippet>
+  <description>Each: iterate through data objects</description>
+<content><![CDATA[
+{{#each model as |${1:name_of_single_item_in_model}|}}
+	${0}
+{{/each}}
+]]></content>  
+  <tabTrigger>each</tabTrigger>
+  <scope>text.html.handlebars</scope>
+</snippet>

@@ -1,0 +1,8 @@
+<snippet>
+  <description>Character code for 'w' key</description>
+<content><![CDATA[
+87
+]]></content>  
+  <tabTrigger>char_w</tabTrigger>
+  <scope>source.js</scope>
+</snippet>

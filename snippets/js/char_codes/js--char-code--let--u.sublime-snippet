@@ -1,0 +1,8 @@
+<snippet>
+  <description>Character code for 'u' key</description>
+<content><![CDATA[
+85
+]]></content>  
+  <tabTrigger>char_u</tabTrigger>
+  <scope>source.js</scope>
+</snippet>

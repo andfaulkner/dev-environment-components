@@ -5,4 +5,5 @@ dev-env/vim_configs/.vim/backup_files/**
 **=+.git=+MERGE_MSG=
 **=+.git=+rebase-merge=+git-rebase-todo=
 dev-env/.lein/indices/**
-*.sublime-*
+*.sublime-project
+*.sublime-workspace

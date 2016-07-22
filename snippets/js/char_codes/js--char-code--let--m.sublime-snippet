@@ -1,0 +1,8 @@
+<snippet>
+  <description>Character code for 'm' key</description>
+<content><![CDATA[
+77
+]]></content>  
+  <tabTrigger>char_m</tabTrigger>
+  <scope>source.js</scope>
+</snippet>
