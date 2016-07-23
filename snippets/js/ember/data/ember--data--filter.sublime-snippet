@@ -1,0 +1,8 @@
+<snippet>
+  <description>Return all data from a model</description>
+<content><![CDATA[
+this.get('store').findAll('${1:name_of_model__eg__person}');${0}
+]]></content>  
+  <tabTrigger>emb_data_ret_model</tabTrigger>
+  <scope>source.js</scope>
+</snippet>

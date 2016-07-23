@@ -107,6 +107,10 @@ alias esp="ember server --port"    # start ember server at given port #
 alias eg="ember generate"          # generate something with ember
 alias et="ember test --server"     # run ember tests
 alias egr="ember generate route"   # generate route with given name
+alias egm="ember generate model" #name_of_model
+alias egcom="ember generate component" #name-of-component
+alias egcon="ember generate controller" #name-of-controller
+alias egh="ember generate helper" #name-of-helper - usually matches a model
 
 
 ################################################################################

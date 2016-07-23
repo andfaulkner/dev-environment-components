@@ -1,0 +1,8 @@
+<snippet>
+  <description>Call helper w/ data passed to it from view. Akin to decorator</description>
+<content><![CDATA[
+{{${1:name-of-helper-based-on-name-of-helper-file} ${2:data-property-to-pass-to-helper--eg--rental.type}}}${0}
+]]></content>
+  <tabTrigger>helper</tabTrigger>
+  <scope>text.html.handlebars</scope>
+</snippet>

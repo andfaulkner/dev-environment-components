@@ -1,0 +1,8 @@
+<snippet>
+  <description>unordered list with a class</description>
+<content><![CDATA[
+<ul${1/.+/ class="/}${1:name-of-class}${1/.+/"/}>${0}</ul>
+]]></content>
+  <tabTrigger>ulc</tabTrigger>
+  <scope>text.html.handlebars</scope>
+</snippet>
