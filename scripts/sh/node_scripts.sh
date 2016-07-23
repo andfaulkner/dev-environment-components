@@ -111,6 +111,8 @@ alias egm="ember generate model" #name_of_model
 alias egcom="ember generate component" #name-of-component
 alias egcon="ember generate controller" #name-of-controller
 alias egh="ember generate helper" #name-of-helper - usually matches a model
+alias egserv="ember generate service" #name-of-service
+alias egutil="ember generate util" #name-of-util
 
 
 ################################################################################
