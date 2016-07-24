@@ -7,9 +7,11 @@ echo '--------------------------------------------------------------------------
 echo 'HOTKEYS'
 echo ''
 echo "# Macros"
-echo "   -- Start & stop recording macro:        CTRL-Q"
-echo "   -- Playback macro:                      CTRL-SHIFT-Q"
+echo "   -- Start & stop recording macro:            CTRL-Q"
+echo "   -- Playback macro:                          CTRL-SHIFT-Q"
 echo ""
-echo "Go to definition using mouse click only:   ALT-LEFT_CLICK"
+echo "Go to definition using mouse click only:       ALT-LEFT_CLICK"
+echo "clear console if using ClearConsole plugin:    CTRL-alt-k"
+echo "see command name for each action, in console:  sublime.log_commands(True)"
 echo ""
 echo '---------------------------------------------------------------------------------\n'

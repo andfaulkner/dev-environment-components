@@ -335,12 +335,21 @@ function linux_setup {
     sudo apt-get install bash-completion
     echo '[[ $PS1 && -f /usr/share/bash-completion/bash_completion ]] && . /usr/share/bash-completion/bash_completion' >> ~/.bashrc
 
-
     # GET LATEST LUA
     lua > ~/Documents/.ERROR_OUTPUT_TEMP 2>&1; cat ~/Documents/.ERROR_OUTPUT_TEMP | head -2 | tail -1 | awk '{print $2}' | xargs sudo apt-get install
 
     # INSTALL REALPATH
     sudo apt-get install realpath
+
+    # INSTALL WATCHMAN
+    pushd ./; sudo cd ~/bin
+    git clone https://github.com/facebook/watchman.git
+    cd watchman
+    ./autogen.sh
+    ./configure
+    make
+    sudo make install
+    popd
 
     unix_setup
 }

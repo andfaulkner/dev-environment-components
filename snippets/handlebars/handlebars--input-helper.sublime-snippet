@@ -1,0 +1,8 @@
+<snippet>
+  <description>Create an input box</description>
+<content><![CDATA[
+{{input type="text"${2/.+/ value="/}${2:default text content}${2/.+/"/}${3/.+/ key-press|up|down="/}${3:fnToRunOnKeypress|up|down}${3/.+/"/}${4/.+/ enter="/}${4:fnToRunOnEnterKeyPressed}${4/.+/"/}}}
+]]></content>  
+  <tabTrigger>hb_inputtext</tabTrigger>
+  <scope>text.html.handlebars</scope>
+</snippet>

@@ -1,0 +1,8 @@
+<snippet>
+  <description>Turns puts into console.log, because I can't break my puts habit from ruby</description>
+<content><![CDATA[
+console.log('$TM_FILENAME:::${1/.+/ fn /}${1:fnName}${1/.+/::/}${2/.+/ /}${2:varToLog}${2/.+/:/} ${0}'${2/.+/ + /}${2});
+]]></content>  
+  <tabTrigger>puts</tabTrigger>
+  <scope>source.js</scope>
+</snippet>

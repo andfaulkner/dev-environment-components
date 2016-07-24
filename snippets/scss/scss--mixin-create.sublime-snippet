@@ -1,0 +1,13 @@
+<snippet>
+	<description>Create a mixin</description>
+	<content><![CDATA[
+@mixin ${1:name-of-mixin--eg--border-radius}(\$${2:variable--eg--radius}) {
+${3:  -webkit-border-radius: \$${2:variable--eg--radius};
+     -moz-border-radius: \$${2:variable--eg--radius};
+      -ms-border-radius: \$${2:variable--eg--radius};
+          border-radius: \$${2:variable--eg--radius};}
+}
+]]></content>
+	<tabTrigger>mixin</tabTrigger>
+	<scope>source.scss</scope>
+</snippet>

@@ -102,7 +102,8 @@ function slicesenerr {
 ################################################################################
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ EMBER ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 ################################################################################
-alias es="ember server"            # start ember server at port 4200
+alias eserv="nukeember; ember server"            # start ember server at port 4200
+alias es='eserv | ack -v "(^[0-9]+\serrors?$)|(^.*JSHint.*)|(^[a-zA-Z\._]+.*\.js:\sline\s[0-9]+,\scol\s[0-9]+,\s.*\.)"'
 alias esp="ember server --port"    # start ember server at given port #
 alias eg="ember generate"          # generate something with ember
 alias et="ember test --server"     # run ember tests
@@ -113,7 +114,37 @@ alias egcon="ember generate controller" #name-of-controller
 alias egh="ember generate helper" #name-of-helper - usually matches a model
 alias egserv="ember generate service" #name-of-service
 alias egutil="ember generate util" #name-of-util
+alias egt="ember generate template" #name-of-template
 
+function egvc {
+    ember generate route $1
+    # ember generate template $1
+    ember generate controller $1
+}
+
+function egmvc {
+    egvc $1
+    ember generate model $1
+}
+
+function rm_char {
+    CHAR_TO_REMOVE = $1
+    awk "{gsub(/$1/,\"\",\$0); print \$0}"
+    unset CHAR_TO_REMOVE
+}
+
+# remove ALL double quotes from a string, from beginning to end
+function rm_double_quotes {
+    awk '{gsub(/"/,"",$0); print $0}'
+}
+
+# list ember addons & dependencies used in current project. Finds package.json,
+# extracts info from it.
+function emb_proj_deps {
+    MAX_LENGTH=$(cat package.json | awk '{print length($1)}' | sort -n | tail -n1)
+    cat package.json | ack "\"ember-.+\".?:.?.?\".+\"" | trim | sort | awk '{print $1" "$2}' | column -t -s: | awk '{printf "%'$MAX_LENGTH's    %-11s\n", $1, $2}' | rm_double_quotes
+    unset MAX_LENGTH
+}
 
 ################################################################################
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ VERSION ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -134,3 +165,6 @@ alias node_version='echo "$(eval node -v)" > .node-version' # set current versio
 
 export NVM_DIR=~/.nvm
 nvm use v6.3.1
+
+alias ember_dep_surge="rm -rf dist; ember build --environment=development; cd dist; cp index.html 200.html; surge" # if site already exists, provide it here 
+

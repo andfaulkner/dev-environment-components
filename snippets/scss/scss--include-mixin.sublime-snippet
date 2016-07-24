@@ -1,0 +1,8 @@
+<snippet>
+	<description>Use a mixin, including passing it vars</description>
+	<content><![CDATA[
+@include ${1:name-of-mixin}(${2:args-for-mixin--eg--10px});${0}
+]]></content>
+	<tabTrigger>@include</tabTrigger>
+	<scope>source.scss</scope>
+</snippet>

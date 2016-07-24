@@ -1,6 +1,7 @@
 <snippet>
   <description>Create a single emberJS test</description>
 <content><![CDATA[
+/* jshint unused:vars */
 test('${1:should explain what should happen}', function(assert){
 	${0}
 });
