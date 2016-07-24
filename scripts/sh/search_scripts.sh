@@ -27,23 +27,29 @@ function lsrdeep {
 ################################################################################
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ TEXT PROCESSING  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~#
 ################################################################################
+# namespace: txt_
+
 # rm leading & trailing whitespace from output 
 #(yes, technically chomp only refers to removing trailing, but 'slice' was taken) 
 alias chomp="awk '{\$1=\$1}1'"  
+alias txt_chomp="chomp"
 
 function tp_appendtext {
     (cat $2 ; echo '$1') > .TEMP_1234561_123456_123456.txt; rm $2; mv .TEMP_1234561_123456_123456.txt $2
 }
+alias txt_tp_appendtext='tp_appendtext'
 
 #conglomerates 2 separate variables into a single string 
 function tp_glue_vars {
   $(echo ${1}${2})
 }
+alias txt_tp_glue_vars='tp_glue_vars'
 
 #trim whitespace before terminal output & condense large spaces into small ones [TOADD]
 function trim {
     awk '{$1=$1};1'
 }
+alias txt_trim="trim"
 
 #=== FUNCTION ==========================================================
 #        NAME:  tp_transpose
@@ -70,6 +76,17 @@ function tp_transpose {
 }
 #=======================================================================
 
+# remove all occurrences of the given character from the stream passed in
+function txt_rm_char {
+    CHAR_TO_REMOVE = $1
+    awk "{gsub(/$1/,\"\",\$0); print \$0}"
+    unset CHAR_TO_REMOVE
+}
+
+# remove ALL double quotes from a string (stream passed in), from beginning to end
+function txt_rm_double_quotes {
+    awk '{gsub(/"/,"",$0); print $0}'
+}
 
 
 ###############################################################################

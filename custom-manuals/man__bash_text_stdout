@@ -9,11 +9,15 @@ echo ''
 echo '## sort'
 echo "   -- by text (alphabetical):   cat mytext.txt | sort"
 echo "   -- by number:                cat mytext.txt | sort -n"
-echo "   -- example:                example goes here"
 echo ""
-echo "## List item title:"
-echo "   -- subitem here:           syntax here"
-echo "   -- subitem here:           syntax here"
-echo "   -- subitem here:           syntax here"
+echo "## column: arrange output into neat columns:"
+echo "   -- left-justified text in columns:  cat file.txt | column -t"
+echo ""
+echo "## gsub: replace one character or string in a stream with another"
+echo '   -- replace one string with another:     awk "{gsub(/text-to-replace/,\"replacement-text\",\$0); print \$0}"'
+echo '   -- replace on string stored in a var:   awk "{gsub(/$1/,\"replacement-text\",\$0); print \$0}'
+echo '   -- remove substring from a string:      awk "{gsub(/text-to-replace/,\"\",\$0); print \$0}'
+echo ''
+echo "## get number of chars in each line piped in:  awk '{print length($0)}'"
 echo ""
 echo '---------------------------------------------------------------------------------\n'
