@@ -102,8 +102,8 @@ function slicesenerr {
 ################################################################################
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ EMBER ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 ################################################################################
-alias eserv="nukeember; ember server"            # start ember server at port 4200
-alias es='eserv | ack -v "(^[0-9]+\serrors?$)|(^.*JSHint.*)|(^[a-zA-Z\._]+.*\.js:\sline\s[0-9]+,\scol\s[0-9]+,\s.*\.)"'
+alias es="nukeember; ember server"            # start ember server at port 4200
+# alias es='eserv | ack -v "(^[0-9]+\serrors?$)|(^.*JSHint.*)|(^[a-zA-Z\._]+.*\.js:\sline\s[0-9]+,\scol\s[0-9]+,\s.*\.)"'
 alias esp="ember server --port"    # start ember server at given port #
 alias eg="ember generate"          # generate something with ember
 alias et="ember test --server"     # run ember tests
@@ -123,7 +123,8 @@ function egvc {
 }
 
 function egmvc {
-    egvc $1
+    ember generate route $1s
+    # ember generate template $1s
     ember generate model $1
 }
 

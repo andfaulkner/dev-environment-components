@@ -1,0 +1,46 @@
+#!/usr/bin/env ruby
+# encoding: utf-8
+
+##### WIP: REMAINING TASKS #####
+# TODO handle cases where it fails
+# TODO handle cases where the gem already exists
+# TODO allow provision of version number to install
+
+def parse_args
+  require 'trollop'
+  Trollop::options do
+    # string --file name-of-file-here. Required.
+    opt :file, "File to inject text in", type: :string, required: true
+    # string --text "text to inject here". Required.
+    opt :gem, "Name of gem to install", type: :string, required: true 
+    # integer. e.g. use: --line 5. Optional. Injects at end of file by default
+    opt :line, "Line to inject gem at text at", type: :integer, default: nil
+  end
+end
+
+def inject_gem_text(opts)
+  # inject at last line if line # not given
+  opts[:line] ||= (num_lines_in_file opts) unless opts[:line]
+
+  cleaned_line = opts[:gem].gsub(/\?/, "\?")
+  gem_command = "gem '#{cleaned_line}'"
+  puts `insert_text #{opts[:file]} "#{gem_command}" #{opts[:line]}`
+end
+
+def show_result(opts)
+  output_head = "New contents of #{opts[:file]}:"
+  puts "\n#{'-' * output_head.size} \n#{output_head} \n#{'-' * output_head.size}"
+  puts `cat #{opts[:file]}`
+  puts '-' * output_head.size
+end
+
+def num_lines_in_file(opts)
+  `wc -l "#{opts[:file]}"`.strip.split(' ')[0].to_i + 1
+end
+
+if __FILE__ == $PROGRAM_NAME
+  opts = parse_args
+  inject_gem_text(opts)
+  show_result(opts)
+  puts `bundle install`
+end
