@@ -15,7 +15,7 @@ Late July 2016
 *   ! 10 python snippets
 *   ! 10 more python snippets
 
-*  10 js string snippets - 6
+*  10 js string snippets - 10
 *  10 NodeJS file snippets
 *  10 NodeJS other snippets
 *  10 jQuery snippets
