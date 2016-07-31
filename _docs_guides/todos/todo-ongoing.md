@@ -10,17 +10,18 @@ Late July 2016
 *   ! correct shebang for bash
 *   ! change case - better hotkeys
 
-*  ! 1 more hour of python
-*  ! 10 python snippets
-*  ! 10 more python snippets
+*   ! 10 js collection snippets - 11
+*   ! 1 more hour of python
+*   ! 10 python snippets
+*   ! 10 more python snippets
 
-*  10 js string snippets
-*  10 js hash snippets
+*  10 js string snippets - 4
 *  10 NodeJS file snippets
-*  10 NodeJS file snippets
+*  10 NodeJS other snippets
 *  10 jQuery snippets
 *  10 html snippets
 *  hotkey to pull up snippets like when you type
+*  ! unless empty snippet
 
 *   learn commander: https://developer.atlassian.com/blog/2015/11/scripting-with-node/
 *   get a react project working
