@@ -1,4 +1,48 @@
 ################################################################################
+#~~~~~~~~~~~~~~~~~~~~~~~~~~ LOAD OTHER SOURCE SCRIPTS ~~~~~~~~~~~~~~~~~~~~~~~~~~
+################################################################################
+ANDROID_SCRIPTS="$SNIPPETS_DIR/scripts/sh/android_scripts.sh"
+GIT_SCRIPTS="$SNIPPETS_DIR/scripts/sh/git_scripts.sh"
+RUBY_SCRIPTS="$SNIPPETS_DIR/scripts/sh/ruby_scripts.sh"
+NODE_SCRIPTS="$SNIPPETS_DIR/scripts/sh/node_scripts.sh"
+CLOJURE_SCRIPTS="$SNIPPETS_DIR/scripts/sh/clojure_scripts.sh"
+PYTHON_SCRIPTS="$SNIPPETS_DIR/scripts/sh/python_scripts.sh"
+
+SYSTEM_UTILITY_SCRIPTS="$SNIPPETS_DIR/scripts/sh/sys_util_scripts.sh"
+MISC_CLI_OPTIONS="$SNIPPETS_DIR/scripts/sh/cli_opts.sh"
+SEARCH_SCRIPTS="$SNIPPETS_DIR/scripts/sh/search_scripts.sh"
+WEB_SCRIPTS="$SNIPPETS_DIR/scripts/sh/web_scripts.sh"
+PORTABLE_BASHRC_ADDITIONS="$SNIPPETS_DIR/scripts/sh/portable_bashrc_additions.sh"
+
+source "$SNIPPETS_DIR/scripts/sh/sys_util_scripts.sh"
+source "$SNIPPETS_DIR/scripts/sh/cli_opts.sh"
+source "$SNIPPETS_DIR/scripts/sh/search_scripts.sh"
+source "$SNIPPETS_DIR/scripts/sh/web_scripts.sh"
+
+# LANGUAGE- OR TOOL-SPECIFIC SCRIPT SOURCES
+source "$SNIPPETS_DIR/scripts/sh/android_scripts.sh"
+source "$SNIPPETS_DIR/scripts/sh/git_scripts.sh"
+source "$SNIPPETS_DIR/scripts/sh/ruby_scripts.sh"
+source "$SNIPPETS_DIR/scripts/sh/node_scripts.sh"
+source "$SNIPPETS_DIR/scripts/sh/clojure_scripts.sh"
+source "$SNIPPETS_DIR/scripts/sh/python_scripts.sh"
+source ~/.profile
+
+# EDIT OTHER SCRIPT SOURCES
+alias bashrc_android='vim "$SNIPPETS_DIR/scripts/sh/android_scripts.sh"'
+alias bashrc_git='vim "$SNIPPETS_DIR/scripts/sh/git_scripts.sh"'
+alias bashrc_ruby='vim "$SNIPPETS_DIR/scripts/sh/ruby_scripts.sh"'
+alias bashrc_sysutil='vim "$SNIPPETS_DIR/scripts/sh/sys_util_scripts.sh"'
+alias bashrc_cli='vim "$SNIPPETS_DIR/scripts/sh/cli_opts.sh"'
+alias bashrc_node='vim "$SNIPPETS_DIR/scripts/sh/node_scripts.sh"'
+alias bashrc_search='vim "$SNIPPETS_DIR/scripts/sh/search_scripts.sh"'
+alias bashrc_web='vim "$SNIPPETS_DIR/scripts/sh/web_scripts.sh"'
+alias bashrc_clojure='vim "$SNIPPETS_DIR/scripts/sh/clojure_scripts.sh"'
+alias bashrc='vim "$SNIPPETS_DIR/scripts/sh/portable_bashrc_additions.sh"'
+alias bashrc_clojure='vim "$SNIPPETS_DIR/scripts/sh/clojure_scripts.sh"'
+
+
+################################################################################
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ QUICKNAV ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 ################################################################################
 alias ..="cd .."
@@ -111,6 +155,7 @@ function show_aliases {
 function show_aliases_mac {
   cat ~/.bashrc > ~/.all_src_scripts_tmp_holder
   cat ~/.bash_profile >> ~/.all_src_scripts_tmp_holder
+  cat "$SNIPPETS_DIR/" >> ~/.all_src_scripts_tmp_holder
   cat ~/.
 }
 
@@ -130,4 +175,15 @@ function insertfirstline {
     echo $2 | cat - $1 > temp && mv temp $1
 }
 
-alias goios="cd /Users/andrewfaulkner/projects/ackroo/akr-3-ios-cardholder-1"
+# bash completion
+if [[ -f $(brew --prefix)/etc/bash_completion ]]; then
+	. $(brew --prefix)/etc/bash_completion
+fi
+
+# Load RVM into a shell session *as a function*
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
+
+# load .bashrc file
+case $- in
+   *i*) source ~/.bashrc
+esac

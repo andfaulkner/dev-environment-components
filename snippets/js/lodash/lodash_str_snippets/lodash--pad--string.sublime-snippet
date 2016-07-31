@@ -1,0 +1,8 @@
+<snippet>
+		<description>Pad L & R of str w/ char, to make the ret str always a specific length</description>
+    <content><![CDATA[
+_.pad('${1:stringToPad}', ${2:lengthToMakeFullStrAfterPad}, ''${3:charToPadWith_optional}');
+]]></content>
+    <tabTrigger>_str_pad</tabTrigger>
+    <scope>source.js</scope>
+</snippet>

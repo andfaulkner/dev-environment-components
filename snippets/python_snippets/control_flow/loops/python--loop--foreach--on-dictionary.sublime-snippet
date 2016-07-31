@@ -1,0 +1,10 @@
+<snippet>
+  <description>for-each loop thru dictionary (aka hash)</description>
+<content><![CDATA[
+for ${1:key}, ${2:value} in ${3:dict__eg__\{"key1": "val1", "key2": "val2", "etc": "etcetc"\}}.items():
+  ${0:things_to_do_with_${1:key}_and_${2:value}}
+
+]]></content>  
+  <tabTrigger>loop_foreach_dict</tabTrigger>
+  <scope>source.python</scope>
+</snippet>

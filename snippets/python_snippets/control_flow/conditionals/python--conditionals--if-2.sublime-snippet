@@ -1,0 +1,10 @@
+<snippet>
+  <description>simple if statement</description>
+<content><![CDATA[
+if (${1:value1} == ${2:value2}):
+  ${0:# do these things if values are equal}
+
+]]></content>  
+  <tabTrigger>if</tabTrigger>
+  <scope>source.python</scope>
+</snippet>

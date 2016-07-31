@@ -1,0 +1,8 @@
+<snippet>
+  <description>Import library</description>
+<content><![CDATA[
+import ${1:name_of_library__NO_QUOTES}
+]]></content>  
+  <tabTrigger>import</tabTrigger>
+  <scope>source.python</scope>
+</snippet>

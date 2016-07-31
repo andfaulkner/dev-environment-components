@@ -1,3 +1,72 @@
+Late July 2016
+==============
+*   ! add snippets to default project
+*   ! paste mode vim again
+
+*   ! file permissions shell manual
+*   ! conditionals shell manual
+*   ! correct shebangs snippet
+*   ! 15 sh snippets
+*   ! correct shebang for bash
+*   ! change case - better hotkeys
+
+*  ! 1 more hour of python
+*  ! 10 python snippets
+*  ! 10 more python snippets
+
+*  10 js string snippets
+*  10 js hash snippets
+*  10 NodeJS file snippets
+*  10 NodeJS file snippets
+*  10 jQuery snippets
+*  10 html snippets
+*  hotkey to pull up snippets like when you type
+
+*   learn commander: https://developer.atlassian.com/blog/2015/11/scripting-with-node/
+*   get a react project working
+*   move client code into "client" directory
+*   create "server" for react
+
+*  2nd additional hour of python
+
+*   add bootstrap to react
+*   horizon.io? http://horizon.io/docs/getting-started/
+    *   open-source backend for JavaScript apps
+    *   see https://medium.com/front-end-hacking/react-webpack-and-horizon-quick-start-b9335c1ece53#.jt965piqk
+*   10 js snippets
+
+*   refresh ReactJS knowledge
+
+*   create generator making use of react generator
+*   JS to inject text into file?
+*   get react build going
+*   react-bootstrap?
+*   remove node_modules from default project
+*   vimrc alias
+
+
+TO ADD TO REACT GENERATOR
+=========================
+*    inject this into webpack file, inside loaders array:
+        {
+            test: /\.scss$/,
+            loaders: ['style', 'css', 'sass']
+        }
+
+
+
+
+
+
+
+
+
+--------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------------
+
+
+
+
 *   ! clojure lambdas
 *   ! clojure flip args
 *   ! -> operator in clojure (works like chaining)

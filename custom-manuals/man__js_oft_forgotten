@@ -1,0 +1,18 @@
+#!/usr/bin/env sh
+
+echo ''
+echo '---------------------------------------------------------------------------------'
+echo '** JS_OFT_FORGOTTEN **'
+echo '---------------------------------------------------------------------------------'
+echo 'join array into string:  .join("");'
+echo ''
+echo "## First item (title here):   general syntax of 'item'"
+echo "   -- (definition of first item goes here)"
+echo "   -- example:                example goes here"
+echo ""
+echo "## List item title:"
+echo "   -- subitem here:           syntax here"
+echo "   -- subitem here:           syntax here"
+echo "   -- subitem here:           syntax here"
+echo ""
+echo '---------------------------------------------------------------------------------\n'

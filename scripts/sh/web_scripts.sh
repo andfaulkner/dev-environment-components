@@ -1,3 +1,4 @@
+echo "* web request scripts loading..."
 
 # make a GET request
 function get {
@@ -35,3 +36,4 @@ function put {
     fi
 }
 
+echo "* web request scripts loaded!"

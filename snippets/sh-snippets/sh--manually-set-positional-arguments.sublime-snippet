@@ -1,0 +1,8 @@
+<snippet>
+	<description>Manually reset values of positional arguments ($1, $2, $3, etc.)</description>
+	<content><![CDATA[
+set ${1:value_of_dollarsign_1 value_of_dollarsign_2 etc}
+]]></content>
+	<tabTrigger>set_args</tabTrigger>
+	<scope>source.shell</scope>
+</snippet>

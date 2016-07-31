@@ -13,3 +13,6 @@ print addthree(x)
 
 def addfive(n=3):
 	return n + 5
+
+def hello(name):
+  print("hello " + name + "!")

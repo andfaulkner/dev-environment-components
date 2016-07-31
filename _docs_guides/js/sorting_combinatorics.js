@@ -11,22 +11,22 @@ console.log('-------------------------------------------------------------------
 //###################################
 console.log('***************** BASIC SORTING *****************');
 
-console.log(" ----- DEFINE AN ARRAY TO SORT -----");
+console.log(' ----- DEFINE AN ARRAY TO SORT -----');
 var colors = ['red', 'orange', 'yellow', 'green', 'blue'];
-console.log(colors)
+console.log(colors);
 
-console.log(" ----- PERFORM A BASIC ALPHANUMERIC SORT -----");
-console.log(colors.sort())
+console.log(' ----- PERFORM A BASIC ALPHANUMERIC SORT -----');
+console.log(colors.sort());
 
-console.log(" ----- PERFORM BASIC ALPHANUMERIC SORT ON NUBMERS, NOTICE IT FAILS -----");
+console.log(' ----- PERFORM BASIC ALPHANUMERIC SORT ON NUBMERS, NOTICE IT FAILS -----');
 var numbers = [14, 2, 64, 21, 12, 1, 9, 3, 8];
 console.log(numbers.sort());
 
-console.log(" ----- METHOD OF SORTING NUMBERS THAT WORKS -----");
+console.log(' ----- METHOD OF SORTING NUMBERS THAT WORKS -----');
 
 // Abstraction for numeric sorting
 var numericSorter = function numericSorter(a, b) {
-	return a - b;
+    return a - b;
 };
 // appears to just do piles of comparisons between items
 // ...but not EVERY comparison. Like 1/2. This doesn't scale.
@@ -38,9 +38,8 @@ console.log(numbers.sort(numericSorter));
 //   if it returns 0, a is considered equal to b
 //   if it returns -1 or less, b is considered greater than a.
 
-var incomplete = R.filter(R.whereEq({complete: false}));
-
-var colors = ['red', 'orange', 'yellow', 'green'];
+// var incomplete = R.filter(R.whereEq({complete: false}));
+// var colors = ['red', 'orange', 'yellow', 'green'];
 
 
 console.log('----------------------------------------------------------------------------------');
@@ -49,7 +48,7 @@ console.log('-------------------------------------------------------------------
 //###################################################
 console.log('***************** COMBINATIONS WITH npm MODULES *****************');
 var combo = require('combinations');
-console.log(" ----- combinations MODULE DOES ALL COMBOS OF ALL LENGTHS, NO DUPES -----");
+console.log(' ----- combinations MODULE DOES ALL COMBOS OF ALL LENGTHS, NO DUPES -----');
 console.log(combo(colors));
 // => [ [ 'red' ],
 //			[ 'orange' ],
@@ -67,7 +66,7 @@ console.log(combo(colors));
 //			[ 'orange', 'yellow', 'green' ],
 //			[ 'red', 'orange', 'yellow', 'green' ] ]
 
-console.log(" ----- combinations MODULE ALSO ALLOWS SPECIFYING MINIMUM COMBO TO OUTPUT -----");
+console.log(' ----- combinations MODULE ALSO ALLOWS SPECIFYING MINIMUM COMBO TO OUTPUT -----');
 console.log(combo(colors, 2));
 // => [ [ 'red', 'orange' ],
 //			[ 'red', 'yellow' ],
@@ -81,17 +80,36 @@ console.log(combo(colors, 2));
 //			[ 'orange', 'yellow', 'green' ],
 //			[ 'red', 'orange', 'yellow', 'green' ] ]
 
-
 console.log('----------------------------------------------------------------------------------');
 //###################################################
 //#          RAMDA SORTING & COMBINATORICS          #
 //###################################################
 console.log('***************** RAMDA SORTING & COMBINATORICS *****************');
 
-console.log(" ----- RAMDA APERTURE: get all combinations of the given length of an array -----");
-colors2 = colors.sort();
+console.log(' ----- RAMDA APERTURE: get all combinations of the given length of an array -----');
+var colors2 = colors.sort();
 console.log(R.aperture(5, colors2).sort()
 		.concat(R.aperture(4, colors2).sort())
 		.concat(R.aperture(3, colors2).sort())
 		.concat(R.aperture(2, colors2).sort())
-		.concat(R.aperture(1, colors2).sort()).reverse())
+		.concat(R.aperture(1, colors2).sort()).reverse());
+
+['asdf', 'eee', 'vbbt'].sort();
+
+console.log('----------------------------------------------------------------------------------');
+//#########################################
+//#          SORT OBJECT BY KEYS          #
+//#########################################
+console.log('***************** SORT OBJECT BY KEYS *****************');
+
+// sort environment variables by keys
+var sortedEnv = Object.keys(process.env)
+        .map((k) => [k, process.env[k]])
+        .sort()
+        .reduce(((total, v) => {
+            total[v[0]] = total[v[1]];
+            return total;
+        }), {});
+
+console.log(sortedEnv);
+

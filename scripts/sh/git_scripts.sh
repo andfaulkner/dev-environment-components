@@ -1,7 +1,7 @@
 ################################################################################
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ GIT ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 ################################################################################
-echo 'loaded git_scripts.sh!'
+echo '* git scripts loading...'
 
 alias gaa="git add --all"
 alias gca="git commit --all -m"
@@ -85,3 +85,5 @@ alias g_rao="git remote add origin" #[place remote repo uri here]
 
 #function reclaimbranch
 #git remote add origin git@andfaulkner.github.com:andfaulkner/$1"
+
+echo '* git scripts loaded!'

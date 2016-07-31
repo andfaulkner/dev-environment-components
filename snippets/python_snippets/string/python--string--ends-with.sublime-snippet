@@ -1,0 +1,8 @@
+<snippet>
+  <description>Determine if given string ends with given substring</description>
+<content><![CDATA[
+${1:"some-string"}.endswith(${2:"substring"})
+]]></content>  
+  <tabTrigger>str_endswith</tabTrigger>
+  <scope>source.python</scope>
+</snippet>

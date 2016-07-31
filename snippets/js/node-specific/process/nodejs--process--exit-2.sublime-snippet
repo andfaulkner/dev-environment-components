@@ -1,0 +1,8 @@
+<snippet>
+  <description>Immediately stop the application</description>
+<content><![CDATA[
+process.exit(1);${0}
+]]></content>  
+  <tabTrigger>exit</tabTrigger>
+  <scope>source.js</scope>
+</snippet>

@@ -1,0 +1,12 @@
+<snippet>
+  <description>if-else statement</description>
+<content><![CDATA[
+if (${1:value1} == ${2:value2}):
+  ${3:# do these things if the values are equal}
+else:
+  ${0:# do these things if the values are NOT equal}
+
+]]></content>  
+  <tabTrigger>cond_if_else</tabTrigger>
+  <scope>source.python</scope>
+</snippet>

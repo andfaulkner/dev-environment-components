@@ -1,0 +1,10 @@
+<snippet>
+	<description>If statement: block inside runs if var is greater than numeric value</description>
+	<content><![CDATA[
+if [[ \$${1:VARIABLE_TO_TEST} -gt ${2:NUMBER_TO_TEST_IF_VAR_GREATER_THAN_EG__4} ]]; then
+  ${3:# do this if ${1:VARIABLE_TO_TEST} is greater than ${2:NUMBER_TO_TEST_IF_VAR_GREATER_THAN_EG__4}}
+fi
+]]></content>
+	<tabTrigger>if_greater_than</tabTrigger>
+	<scope>source.shell</scope>
+</snippet>

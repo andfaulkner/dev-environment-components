@@ -1,7 +1,7 @@
 <snippet>
   <description>Require a NodeJS (or Webpack) module</description>
 	<content><![CDATA[
-var ${1:moduleName} = require('${1:moduleName}');
+${2/.+/var /}${2:${1:moduleName}}${2/.+/ = /}require('${1:moduleName}');${0}
 ]]></content>
 	<tabTrigger>req</tabTrigger>
     <scope>source.js</scope>

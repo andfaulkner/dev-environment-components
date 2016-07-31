@@ -1,0 +1,8 @@
+<snippet>
+  <description>Get all keys of a dictionary (aka hash). Output can be looped thru</description>
+<content><![CDATA[
+${1:var_name_to_assign_dict_keys_to}${1/.+/ = /}${2:\{"some": "dictionary", "like": "this_one"\}}.keys()${0}
+]]></content>  
+  <tabTrigger>dict_keys</tabTrigger>
+  <scope>source.python</scope>
+</snippet>

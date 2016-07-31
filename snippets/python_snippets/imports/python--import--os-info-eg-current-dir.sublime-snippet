@@ -1,0 +1,9 @@
+<snippet>
+  <description>Import os info e.g. current path</description>
+<content><![CDATA[
+import os
+${0}
+]]></content>  
+  <tabTrigger>import_os</tabTrigger>
+  <scope>source.python</scope>
+</snippet>

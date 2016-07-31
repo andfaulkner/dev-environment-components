@@ -1,3 +1,5 @@
+echo "* CLI options loading..."
+
 # get a huge history, preserve it across windows
 export HISTSIZE=100000
 export HISTFILESIZE=100000
@@ -41,4 +43,4 @@ fi
 
 export CLASSPATH;
 
-echo "cli opts loaded!"
+echo "* CLI options loaded!"

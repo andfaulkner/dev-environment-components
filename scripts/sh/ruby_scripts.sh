@@ -1,8 +1,8 @@
-export PATH="$HOME/.rbenv/bin:$PATH"
+# export PATH="$HOME/.rbenv/bin:$PATH"
 
-echo "in ruby_scripts"
+echo "* Ruby scripts loading..."
 
-eval "$(rbenv init -)"
+# eval "$(rbenv init -)"
 
 # close ruby process that just refuses to
 alias killruby='ps aux | ack "(bin.?ruby)|(puma)" |  awk "{print \$2}" | xargs kill -9'
@@ -201,6 +201,7 @@ function rubify {
           echo $1" is not a ruby script; cannot convert into standalone ruby executable"
           echo "    - file extension must be .rb"
       fi
+
     ##### LINUX #####
     else
       if [ $MAKERUBYEXE_FILE_EXTENSION != "js" ] && [ $MAKERUBYEXE_FILE_EXTENSION != "html" ] && \
@@ -300,3 +301,5 @@ function basic_ruby_project {
 
 alias rakeg="rake -g"
 alias rakegt="rake -g -T -a" # list all rake tasks
+
+echo "* Ruby scripts loaded!"

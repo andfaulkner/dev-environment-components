@@ -1,0 +1,10 @@
+<snippet>
+	<description>If statement: block inside runs if user has permission to write to given path</description>
+	<content><![CDATA[
+if [[ -w ${1:~/test/if/user/has/perm/to/write/this/path} ]]; then
+  ${2:# do this if user has permission to write to this path}
+fi
+]]></content>
+	<tabTrigger>if_user_write_perm</tabTrigger>
+	<scope>source.shell</scope>
+</snippet>

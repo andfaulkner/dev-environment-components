@@ -1,0 +1,69 @@
+#!/usr/bin/env sh
+
+echo ''
+echo '---------------------------------------------------------------------------------'
+echo '** BASH - CONDITIONALS (IF-THEN STATEMENTS, ETC.) **'
+echo '---------------------------------------------------------------------------------'
+echo "# CONTROL FLOW"
+echo "- if-then one-liner:"
+echo "      if [[ \"asdf\" = \"asdf\" ]]; then echo \"success!\"; fi"
+echo ""
+echo "- if-then-else one-liner:"
+echo "      if [[ \"asdf\" = \"asdf\" ]]; then echo \"success!\"; else; echo \"no match here\"; fi"
+echo ""
+echo "- run if previous 2 commands succeed:"
+echo "      if [[ cmd1 > /dev/null && cmd2 > /dev/null ]]; then echo success; else echo epic fail; fi"
+echo ""
+echo "- run if previous command - with an arg - succeeds:"
+echo "      if [[ \"touch ./cmd1\" > /dev/null ]]; then echo success; else echo epic fail; fi"
+echo ""
+echo "# CONDITIONAL TESTS - BASICS"
+echo "-  conditional equality test with variables:"
+echo "      if [[ \"$T1\" = \"$T2\" ]]; then cmd; fi"
+echo ""
+echo "-  conditional test operating on result of calling set of commands:"
+echo "      value=\$( grep -ic \"benjamin\" /etc/passwd )"
+echo "      if [[ \$value -eq 1 ]]"
+echo ""
+echo "-  'greater than' numeric test conditional:"
+echo "      if [[ \$value -gt 4 ]]; then ...; fi"
+echo ""
+echo "-  'less than' numeric test conditional:"
+echo "      if [[ \$value -lt 4 ]]; then ...; fi"
+echo ""
+echo "-  check if a variable has something assigned to it:"
+echo '      if [[ -n $woot ]]; then echo "win!"; else echo "nothing assigned"; fi'
+echo ''
+echo "# FILE TESTS"
+echo "-  check if file:"
+echo "    -- exists:                       if [[ -e ~/.android/android.keystore ]]; then"
+echo '                                       echo \"exists\"'
+echo '                                     fi '
+echo ''
+echo "    -- isn't 0 size:                 if [[ -s ~/.android/android.keystore ]]; then"
+echo '                                       echo "file isnt 0 size"'
+echo '                                     fi'
+echo ''
+echo "    -- isn't dir or device file:     if [[ -f ~/.android/android.keystore ]]; then"
+echo '                                       echo "file isnt a dir or device file"'
+echo '                                     fi'
+echo ''
+echo '    -- is a directory:               if [[ -d ~/.android/android.keystore ]]; then'
+echo '                                       echo "file is a dir"'
+echo '                                     fi'
+echo ''
+echo '    -- is a symbolic link:            if [[ -h ~/.android/android.keystore ]]; then'
+echo '                                       echo "file is a symbolic link"'
+echo '                                     fi'
+echo ""
+echo '# PERMISSION TESTS'
+echo '-  For given file, check if user running the test (same if tests as before, w/ diff flags):'
+echo '    -- has read perm:                -r'
+echo '    -- has write perm:               -w'
+echo '    -- has write perm:               -x'
+echo ''
+echo '# TODO:: MULTIPLE CONDITIONS IN ONE TEST'
+echo '      if [[ "${RELEASE_MODE}" == "true" ]]; then echo "Release mode is true!"; fi' 
+echo '                                                    '
+echo '---------------------------------------------------------------------------------'
+echo ''

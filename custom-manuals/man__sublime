@@ -4,14 +4,17 @@ echo ''
 echo '---------------------------------------------------------------------------------'
 echo '** EXTRA SUBLIME INFO, HOTKEYS'
 echo '---------------------------------------------------------------------------------'
-echo 'HOTKEYS'
+echo "-  see cmd name for each action in console:       sublime.log_commands(True)"
 echo ''
-echo "# Macros"
-echo "   -- Start & stop recording macro:            CTRL-Q"
-echo "   -- Playback macro:                          CTRL-SHIFT-Q"
+echo 'HOTKEYS'
+echo "-  Go to definition using mouse click only:       ALT-LEFT_CLICK"
+echo "-  clear console if using ClearConsole plugin:    CTRL-alt-k"
 echo ""
-echo "Go to definition using mouse click only:       ALT-LEFT_CLICK"
-echo "clear console if using ClearConsole plugin:    CTRL-alt-k"
-echo "see command name for each action, in console:  sublime.log_commands(True)"
+echo "# MACROS"
+echo "-  Start & stop recording macro:                  CTRL-Q"
+echo "-  Playback macro:                                CTRL-SHIFT-Q"
 echo ""
+echo "# STRINGS"
+echo "-  To uppercase:                                  CMD-k,CMD-u    << in sequence"
+echo "-  To lowercase:                                  CMD-k,CMD-l    << in sequence"
 echo '---------------------------------------------------------------------------------\n'

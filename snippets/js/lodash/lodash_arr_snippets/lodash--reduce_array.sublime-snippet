@@ -1,0 +1,13 @@
+<snippet>
+    <description>Iterate thru an arr, & 1 item @ a time collapse it to a single val & returns it</description>
+    <content><![CDATA[
+_.reduce(${1:arrayToReduce}, function(${2:accumulator}, ${3:item}) {
+	${4://code}
+	return ${2:accumulator}; //transformed accumulator
+}, ${2:accumulator});
+]]></content>
+    <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+    <tabTrigger>_reduceArray</tabTrigger>
+    <!-- Optional: Set a scope to limit where the snippet will trigger -->
+    <scope>source.js</scope>
+</snippet>

@@ -1,0 +1,8 @@
+<snippet>
+  <description>Ret arr w CLI args passed to this process. arg 1: execPath. arg 2: file running. Rest are CLI args</description>
+<content><![CDATA[
+process.argv${0}
+]]></content>  
+  <tabTrigger>argv</tabTrigger>
+  <scope>source.js</scope>
+</snippet>

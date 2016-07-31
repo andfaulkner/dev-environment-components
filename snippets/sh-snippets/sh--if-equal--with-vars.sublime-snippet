@@ -1,0 +1,10 @@
+<snippet>
+	<description>If statement: block inside runs if given vars are equal</description>
+	<content><![CDATA[
+if [[ "${1:\$VARIABLE_ONE}" = "${2:$VARIABLE_TWO}" ]]; then
+  ${3:# do this if variables are equal}
+fi
+]]></content>
+	<tabTrigger>if_equal_vars</tabTrigger>
+	<scope>source.shell</scope>
+</snippet>

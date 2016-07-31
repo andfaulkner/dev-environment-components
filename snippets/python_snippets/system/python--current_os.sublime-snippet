@@ -1,0 +1,8 @@
+<snippet>
+  <description>Output name of OS. darwin == mac; linux* == linux; nt == win; to use, must 1st: import sys</description>
+<content><![CDATA[
+sys.platform${0}
+]]></content>  
+  <tabTrigger>sys_os_name</tabTrigger>
+  <scope>source.python</scope>
+</snippet>

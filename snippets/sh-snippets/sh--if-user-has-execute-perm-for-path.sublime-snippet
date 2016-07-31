@@ -1,0 +1,10 @@
+<snippet>
+	<description>If statement: block inside runs if user has permission to execute file at given path</description>
+	<content><![CDATA[
+if [[ -x ${1:~/test/if/user/has/perm/to/execute/file/at/this/path} ]]; then
+  ${2:# do this if user has permission to execute file at this path}
+fi
+]]></content>
+	<tabTrigger>if_user_exec_perm</tabTrigger>
+	<scope>source.shell</scope>
+</snippet>

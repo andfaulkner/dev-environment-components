@@ -1,0 +1,8 @@
+<snippet>
+  <description>Determine if given string starts with given substring</description>
+<content><![CDATA[
+${1:"some-string"}.startswith(${2:"substring"})
+]]></content>  
+  <tabTrigger>str_startswith</tabTrigger>
+  <scope>source.python</scope>
+</snippet>

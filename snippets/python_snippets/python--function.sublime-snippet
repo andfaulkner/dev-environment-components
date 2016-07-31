@@ -1,0 +1,12 @@
+<snippet>
+  <description>Create a function</description>
+<content><![CDATA[
+def ${1:name_of_function}(${2:names, of, args, note__having_args_is_optional}):
+  ${3:code_to_run__note_that_space_below_fn_is_not_optional__space_ends_fn}
+  ${4/.+/return /}${4:value_to_return}
+
+${0}
+]]></content>  
+  <tabTrigger>fn</tabTrigger>
+  <scope>source.python</scope>
+</snippet>

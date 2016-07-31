@@ -1,0 +1,8 @@
+<snippet>
+  <description>Log string to the console</description>
+<content><![CDATA[
+print(${1:"string or var containing string to output"})
+]]></content>  
+  <tabTrigger>puts</tabTrigger>
+  <scope>source.python</scope>
+</snippet>

@@ -1,4 +1,4 @@
-echo "loaded search_scripts.sh!"
+echo "* search scripts loading..."
 
 alias regexes="gnome-terminal --title=~REGEXES --geometry 110x50-0-0 -x vim ~/regexes_helpful.txt"
 
@@ -175,3 +175,5 @@ function google {
   firefox "http://www.google.com/search?q=$1"
 }
 #=======================================================================
+
+echo "* search scripts loaded!"

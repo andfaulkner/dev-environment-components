@@ -7,72 +7,35 @@ echo '--------------------------------------------------------------------------
 echo "rerun last command:                  !!"
 echo "create soft link:                    ln -s file_to_link_to shortcut_name_location"
 echo ""
-echo "********* popd & pushd *********"
-echo "display popd + pushd stack:          dirs"
-echo "clear popd + pushd stack:            dirs -c"
-echo "display stack line-by-line           dirs -v"
+echo '# POPD AND PUSHD'
+echo "-  display popd + pushd stack:          dirs"
+echo "-  clear popd + pushd stack:            dirs -c"
+echo "-  display stack line-by-line           dirs -v"
 echo ""
-echo "********* REVERSE CTRL-R SEARCH ******"
-echo "cycle backward thru matches          <CTRL-SHIFT-R>"
-echo "cycle forward thru matches           <CTRL-SHIFT-R>"
+echo "# REVERSE CTRL-R SEARCH"
+echo "-  cycle backward thru matches          <CTRL-SHIFT-R>"
+echo "-  cycle forward thru matches           <CTRL-SHIFT-R>"
 echo ""
-echo "********* CONDITIONALS *********"
-echo "** CONTROL FLOW **"
-echo "- if-then one-liner:"
-echo "        if [[ \"asdf\" = \"asdf\" ]]; then echo \"success!\"; fi"
-echo "- if-then-else one-liner:"
-echo "        if [[ \"asdf\" = \"asdf\" ]]; then echo \"success!\"; else; echo \"no match here\"; fi"
-echo "- run if previous 2 commands succeed:"
-echo "        if [[ cmd1 > /dev/null && cmd2 > /dev/null ]]; then     echo success; else     echo epic fail; fi"
-echo "- run if previous command - with an arg - succeeds:"
-echo "        if [[ \"touch ./cmd1\" > /dev/null ]]; then     echo success; else     echo epic fail; fi"
+echo "# EXECUTE STRINGS AS CODE OR TREAT CODE OUTPUT AS EMBEDDED TEXT"
+echo "-  TODO: cover eval"
+echo "-  TODO: cover \${}"
+echo "-  TODO: cover \$()"
+echo "-  TODO: cover \$SOMETHING"
+echo "-  insert view history in backticks or eval:: example:         \`echo cat \$HOME/.bash_history\`"
 echo ""
-echo "** CONDITIONAL TESTS **"
-echo "- conditional equality test with variables:"
-echo "        if [[ \"$T1\" = \"$T2\" ]]; then cmd; fi"
-echo "- conditional test operating on result of calling set of commands:"
-echo "        value=\$( grep -ic \"benjamin\" /etc/passwd )"
-echo "        if [[ \$value -eq 1 ]]"
-echo "- 'greater than' numeric test conditional:"
-echo "        if [[ \$value -gt 4 ]]; then ...; fi"
-echo "- 'less than' numeric test conditional:"
-echo "        if [[ \$value -lt 4 ]]; then ...; fi"
-echo "- check if a variable has something assigned to it:"
-echo '        if [[ -n $woot ]]; then echo "win!"; else echo "nothing assigned"; fi'
-echo ''
-echo "## File Tests"
-echo "-  check that a file exists: "
-echo '       if [[ -e ~/.android/android.keystore ]]; then echo \"exists\"; fi '
-echo '-  check that a file is not 0 size : '
-echo '        if [[ -s ~/.android/android.keystore ]]; then echo "file isnt 0 size"; fi '
-echo '-  check that a file is not a directory or device file: '
-echo '        if [[ -f ~/.android/android.keystore ]]; then echo "file isnt a dir or device file"; fi'
-echo '-  check if a file is a directory:'
-echo '        if [[ -d ~/.android/android.keystore ]]; then echo \"file is a dir\"; fi '
-echo '-  check if a file is a symbolic link:'
-echo '        if [[ -h ~/.android/android.keystore ]]; then echo \"file is a symbolic link\"; fi '
-echo '-  permissions tests: same as prev in this section, with the following flags:'
-echo '         for usr running test, file has read perm?:  -r     write perm?:  -w     exec perm?: -x '
-echo ''
-echo '## Multiple conditions in one test:'
-echo '    if [[ "${RELEASE_MODE}" == "true" ]]; then echo "RELEASE MODE IS TRUE!!!!"; fi' 
-echo "********************************"
+echo "# REMOVE AN ALIAS, FUNCTION, OR VARIABLE"
+echo "-  remove an alias or method:                                  unalias aliasname"
+echo "-  remove a variable:                                          unset variablename"
 echo ""
-echo "********* VIEW HISTORY WITHIN BACKTICKS OR IN EVAL *********"
-echo "- example:                          \`echo cat \$HOME/.bash_history\`"
+echo "# SUPPRESS OR 'DISCONNECT' OUTPUT"
+echo "-  suppress output:                                            some_command 2>/dev/null"
+echo "-  run app detached from terminal:                             nohup some-app-eg-gimp &"
 echo ""
-echo "********* REMOVE AN ALIAS, FUNCTION, OR VARIABLE *********"
-echo "- remove an alias or method:        unalias aliasname"
-echo "- remove a variable:                unset variablename"
-echo ""
-echo "***************** SUPPRESS OUTPUT *****************"
-echo "- suppress output:                     some_command 2>/dev/null"
-echo "- run app detached from terminal:      nohup some-app-eg-gimp &"
-echo ""
-echo "********** META-INFO (INFO ABT BASH CMDS INCL CUSTOM DEFs) ********************"
-echo " - Get type of command (function, alias, app, built-in cmd e.g. at /bin/ls etc)"
-echo "          type some-command" 
-echo "     * examples:   type ln     |||     type gorails    |||     type alias"
+echo "# GET META-INFO:: i.e. INFO ABOUT BASH COMMANDS, INCLUDING CUSTOM DEFINITIONS"
+echo " -  Get command type:: fn, alias, app, built-in eg ls, etc:    type some-command" 
+echo "    -- examples:                                               type ln"
+echo "                                                               type gorails"
+echo "                                                               type alias"
 echo "     * can return function, alias, application location,  "
 echo " - Output the actual code of a function or alias:   type function_name_here"
 echo ''
