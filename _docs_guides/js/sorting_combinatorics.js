@@ -94,8 +94,6 @@ console.log(R.aperture(5, colors2).sort()
 		.concat(R.aperture(2, colors2).sort())
 		.concat(R.aperture(1, colors2).sort()).reverse());
 
-['asdf', 'eee', 'vbbt'].sort();
-
 console.log('----------------------------------------------------------------------------------');
 //#########################################
 //#          SORT OBJECT BY KEYS          #

@@ -10,12 +10,12 @@ Late July 2016
 *   ! correct shebang for bash
 *   ! change case - better hotkeys
 
-*   ! 10 js collection snippets - 11
+*   ! 20 js collection snippets - 20
 *   ! 1 more hour of python
 *   ! 10 python snippets
 *   ! 10 more python snippets
 
-*  10 js string snippets - 4
+*  10 js string snippets - 6
 *  10 NodeJS file snippets
 *  10 NodeJS other snippets
 *  10 jQuery snippets
