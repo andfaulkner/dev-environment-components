@@ -2,7 +2,8 @@
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ GIT ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 ################################################################################
 echo '* git scripts loading...'
-
+alias g="git"
+alias gpom="git push origin master"
 alias gaa="git add --all"
 alias gca="git commit --all -m"
 alias g_po="git push origin"
