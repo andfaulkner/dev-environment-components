@@ -1,0 +1,10 @@
+<snippet>
+	<description>Unless statement: block inside runs unless given values are equal</description>
+	<content><![CDATA[
+if [[ ! "${1:\$VARIABLE_ONE}" = "${2:some string}" ]]; then
+  ${3:# do this if values are equal}
+fi
+]]></content>
+	<tabTrigger>unless_equal</tabTrigger>
+	<scope>source.shell</scope>
+</snippet>

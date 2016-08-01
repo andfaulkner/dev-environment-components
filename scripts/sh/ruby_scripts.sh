@@ -302,4 +302,31 @@ function basic_ruby_project {
 alias rakeg="rake -g"
 alias rakegt="rake -g -T -a" # list all rake tasks
 
+#function ruby_versions_supported {
+#curl https://bugs.ruby-lang.org/projects/ruby/wiki/ReleaseEngineering | ack -v "(^<script.*)|(^<meta[^>]+>)|(^<link rel=\"stylesheet\".*>.*)|(^\$[\.\(].*)|(^[^a-zA-Z]*(<\/(div|body|html|ul)>)*[^a-zA-Z]*$)" | awk '{ getline currentline; gsub (/<((\\?ul)|(\\?li)|(\\?p))>/, "", currentline) ; gsub (/^<a name=\"/, "", currentline); gsub (/<?\/?\\?((li)|(a)|(p)|(h3)) ?>/, "", currentline); gsub (/">$/, "", currentline) ; gsub (/<a href=.*>/, "", currentline) ; gsub (/&para/, "", currentline) ; print currentline; }' | ack ".*[a-zA-Z].*" | ack '(^(((ABI Version)|(Status)|(201[\d]-[\d]*-[\d]*:)).*)|(.*[a-zA-Z]*\s[Mm]aintenance.*)|(ruby_[\d]_[\d].*)$)' | awk '{gsub(/ruby_/, "\nruby_", $0); print $0}'
+#}
+
+# list all ruby versions supported by parsing the website. A brutal hack.
+function ruby_versions_supported {
+    curl https://bugs.ruby-lang.org/projects/ruby/wiki/ReleaseEngineering \
+        | ack -v "(^<script.*)|(^<meta[^>]+>)|(^<link rel=\"stylesheet\".*>.*)|(^\$[\.\(].*)|(^[^a-zA-Z]*(<\/(div|body|html|ul)>)*[^a-zA-Z]*$)" \
+        | awk '{
+                getline currentline;
+                gsub (/<((\\?ul)|(\\?li)|(\\?p))>/, "", currentline);
+                gsub (/^<a name=\"/, "", currentline);
+                gsub (/<?\/?\\?((li)|(a)|(p)|(h3)) ?>/, "", currentline);
+                gsub (/">$/, "", currentline);
+                gsub (/<a href=.*>/, "", currentline);
+                gsub (/&para/, "", currentline);
+                print currentline;
+        }' \
+        | ack ".*[a-zA-Z].*" \
+        | ack '(^(((ABI Version)|(Status)|(201[\d]-[\d]*-[\d]*:)).*)|(.*[a-zA-Z]*\s[Mm]aintenance.*)|(ruby_[\d]_[\d].*)$)' \
+        | awk '{
+                gsub(/ruby_/, "\nruby_", $0);
+                print $0
+        }'
+}
+
+
 echo "* Ruby scripts loaded!"

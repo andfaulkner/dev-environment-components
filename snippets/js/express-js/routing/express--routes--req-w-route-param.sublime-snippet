@@ -1,0 +1,11 @@
+<snippet>
+  <description>Route that takes a 'path' arg (eg arg after last / in: example.com/id/arg_here)</description>
+<content><![CDATA[
+app.${1:get||post||put||delete}('${2:/path/to/handle}/:${3:param}', (req, res) => {
+  ${4://code to run on request arrival.
+  // Has access to val of ${3:param} via req.params.${3:param}}
+});
+]]></content>  
+  <tabTrigger>exp_routew_arg</tabTrigger>
+  <scope>source.js</scope>
+</snippet>

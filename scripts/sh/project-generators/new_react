@@ -1,3 +1,4 @@
+#!/usr/bin/env bash
 
 create-react-app $1
 cd $1
@@ -5,14 +6,17 @@ npm run eject
 
 # add redux
 npm install --save redux react-redux
+
 # add sass
 npm install --save-dev sass-loader css-loader style-loader
 
-#### TODO #########################################
-# FIND SOME WAY TO INJECT THIS:
-#        {
-#            test: /\.scss$/,
-#            loaders: ['style', 'css', 'sass']
-#        }
-####################################################
-#
+cat <<-HEREDOC
+-------------------------------------------------------------------------
+Add the following to your webpack config file, in the loaders section
+{
+   test: /\.scss$/,
+   loaders: ['style', 'css', 'sass']
+}
+-------------------------------------------------------------------------
+HEREDOC
+

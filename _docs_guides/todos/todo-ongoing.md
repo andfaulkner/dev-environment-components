@@ -14,21 +14,39 @@ Late July 2016
 *   ! 1 more hour of python
 *   ! 10 python snippets
 *   ! 10 more python snippets
+*   ! WTF is graphql?
+*   ! 'rename' hotkey
 
-*  10 js string snippets - 10
-*  10 NodeJS file snippets
-*  10 NodeJS other snippets
-*  10 jQuery snippets
-*  10 html snippets
-*  hotkey to pull up snippets like when you type
-*  ! unless empty snippet
+*   cut file hotkey
+
+*   graphql sample app
+
+*   ! heredoc snippet
+*   ! 10 js string snippets - 10
+*   ! unless empty snippet
+*   ! try a react-starter-kit app
+*   ! 10 new eslint rules
+*   ! lock down project ruby version
+*   20 Express snippets
+*   10 NodeJS file snippets
+*   10 NodeJS other snippets
+*   10 jQuery snippets - 2
+*   10 html snippets
+*   html dl, dd, and dt tags.
+
+*   Usage data snippet
+*   Learn enzyme
+*   prettyprint js
+*   HTML canvas basics
+*   hotkey to pull up snippets like when you type
+*   get crap out of snippets repo (read: vim plugins)
 
 *   learn commander: https://developer.atlassian.com/blog/2015/11/scripting-with-node/
 *   get a react project working
 *   move client code into "client" directory
 *   create "server" for react
 
-*  2nd additional hour of python
+*   2nd additional hour of python
 
 *   add bootstrap to react
 *   horizon.io? http://horizon.io/docs/getting-started/

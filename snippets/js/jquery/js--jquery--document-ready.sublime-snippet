@@ -1,0 +1,10 @@
+<snippet>
+  <description>document.ready - set up code that runs when page finishes loading</description>
+<content><![CDATA[
+\$(document).ready(() => {
+  ${0://code to run on page load}
+});
+]]></content>  
+  <tabTrigger>jq_ready</tabTrigger>
+  <scope>source.js</scope>
+</snippet>

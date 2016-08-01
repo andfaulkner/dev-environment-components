@@ -1,0 +1,10 @@
+<snippet>
+  <description>onClick event</description>
+<content><![CDATA[
+\$("${1:selectorForElementThatClickEventIsBoundTo").click((event) => {
+  ${0://action that occurs on click}
+});
+]]></content>  
+  <tabTrigger>jq_ev_click</tabTrigger>
+  <scope>source.js</scope>
+</snippet>

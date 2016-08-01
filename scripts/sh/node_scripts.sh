@@ -170,7 +170,7 @@ alias ember_dep_surge="rm -rf dist; ember build --environment=development; cd di
 # GLOBAL INSTALL
 alias nig="npm install -g"
 
-function react_setup_for_new_node_project {
+function react_setup_for_newnode_project {
   npm install react redux react-redux react-dom --save
   npm install 
   cat > .babelrc <<- BABELCONFIG
@@ -204,7 +204,7 @@ WEBPACKCONFIG
   mkdir server
 }
 
-function new_nodeproject {
+function newnode_project {
   echo "Building new NodeJS project with name $1"
   mkdir $1
   cd $1
@@ -222,11 +222,7 @@ function new_nodeproject {
   npm install --save-dev eslint babel-eslint  
   npm install --save-dev eslint-plugin-react
 
-  cat > .babelrc <<- BABELCONFIG
-{
-	"presets": ["es2015"]
-}
-BABELCONFIG
+  newnode__babel_config_base
 
   touch Gulpfile
 
@@ -248,7 +244,7 @@ WEBPACKCONFIG
 
   if [[ -n $2 ]]; then
       if [[ $2 -eq "react" ]]; then
-        react_setup_for_new_node_project
+        react_setup_for_newnode_project
       fi
       if [[ $2 -eq "express" ]]; then
         npm install --save express 
@@ -256,7 +252,7 @@ WEBPACKCONFIG
   fi
   if [[ -n $3 ]]; then
       if [[ $3 -eq "react" ]]; then
-        react_setup_for_new_node_project
+        react_setup_for_newnode_project
       fi
       if [[ $3 -eq "express" ]]; then
         npm install --save express 
@@ -272,22 +268,21 @@ WEBPACKCONFIG
   mkdir data/migrations
   mkdir doc
   
-  new__mocha_base_install_in_proj
-
+  newnode__mocha_base_install_in_proj 
   createdb --user postgres $1
   echo "new database named $1 created"
 
   if [[ `redis-cli ping` == "PONG" ]]; then echo "Redis running, ready for use in project"; fi
 
-  new_default_eslint
+  newnode_default_eslint
 
-  new_sublime_project_base
+  newnode_sublime_project_base
   open_in_sublime "$1.sublime-project"
 
   echo "** New NodeJS project created!"
 }
 
-function new__mocha_base_install_in_proj {
+function newnode__mocha_base_install_in_proj {
   npm install --save-dev mocha chai
   mocha init test
   mkdir test
@@ -297,7 +292,7 @@ function new__mocha_base_install_in_proj {
   mocha
 }
 
-function new__sublime_project_base {
+function newnode__sublime_project_base {
   if [[ -n $1 ]]; then
     cp "$TEMPLATES_DIR/project_name.sublime-project" "$PWD/$1.sublime-project"
   else
@@ -313,6 +308,14 @@ function open_in_sublime {
 function newnode__default_eslint {
   cp "$TEMPLATES_DIR/.eslintrc" "$PWD/.eslintrc"
   echo "default .eslintrc created!" 
+}
+
+function newnode__babel_config_base {
+  cat > .babelrc <<- BABELCONFIG
+{
+	"presets": ["es2015"]
+}
+BABELCONFIG
 }
 
 echo "* NodeJS scripts loaded!"

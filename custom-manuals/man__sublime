@@ -7,8 +7,11 @@ echo '--------------------------------------------------------------------------
 echo "-  see cmd name for each action in console:       sublime.log_commands(True)"
 echo ''
 echo 'HOTKEYS'
-echo "-  Go to definition using mouse click only:       ALT-LEFT_CLICK"
-echo "-  clear console if using ClearConsole plugin:    CTRL-alt-k"
+echo "-  Go to definition using mouse click only:       ALT--LEFT_CLICK"
+echo "-  clear console if using ClearConsole plugin:    CTRL-ALT-k"
+echo "-  rename currently selected file:                ALT-r"
+echo "-  duplicate currently selected file:             CTRL-ALT-d"
+echo "-  open autocompletions menu:                     CTRL-SPACE"
 echo ""
 echo "# MACROS"
 echo "-  Start & stop recording macro:                  CTRL-Q"
