@@ -1,0 +1,8 @@
+<snippet>
+  <description>Use given middleware fn or lib. Apply globally or to specific route</description>
+<content><![CDATA[
+app.use(${1:'/optional/route/to/apply/middleware/at'}${1/.+/, /}${2:some_middleware_fn_or_lib});${0}
+]]></content>
+  <tabTrigger>exp_use</tabTrigger>
+  <scope>source.js</scope>
+</snippet>

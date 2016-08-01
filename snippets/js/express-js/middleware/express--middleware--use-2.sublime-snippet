@@ -1,8 +1,0 @@
-<snippet>
-  <description>Use a given middleware function or library.</description>
-<content><![CDATA[
-app.use(${1:some_middleware_fn_or_lib});${0}
-]]></content>  
-  <tabTrigger>exp_use</tabTrigger>
-  <scope>source.js</scope>
-</snippet>
