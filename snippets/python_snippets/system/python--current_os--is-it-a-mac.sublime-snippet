@@ -1,0 +1,10 @@
+<snippet>
+  <description>Check if current OS is mac, do things if so</description>
+<content><![CDATA[
+if sys.platform() == "Darwin":
+  ${0:# do things if this is a mac}
+
+]]></content>  
+  <tabTrigger>sys_is_os_mac</tabTrigger>
+  <scope>source.python</scope>
+</snippet>
