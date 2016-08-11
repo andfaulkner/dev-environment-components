@@ -1,0 +1,8 @@
+<snippet>
+    <description>Div tag with id defined</description>
+    <content><![CDATA[
+<div id="${1:id}">${0}</div>
+]]></content>
+    <tabTrigger>divi</tabTrigger>
+    <scope>text.html</scope>
+</snippet>

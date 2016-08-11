@@ -1,0 +1,8 @@
+<snippet>
+  <description>Standalone .innerHTML method - set or get HTML in an element</description>
+<content><![CDATA[
+.innerHTML${0}
+]]></content>  
+  <tabTrigger>inh</tabTrigger>
+  <scope>source.js, source.ts</scope>
+</snippet>

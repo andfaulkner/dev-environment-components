@@ -1,0 +1,10 @@
+<snippet>
+  <description>Create new interface - aka an object "type"</description>
+<content><![CDATA[
+interface ${1:NameOfNewType} {
+  ${2:property}: ${3:type_eg_string_boolean_number_Object_any_number[]_any[]_[string, number]_void_Array<number>};${0}
+}
+]]></content>  
+  <tabTrigger>interface</tabTrigger>
+  <scope>source.ts</scope>
+</snippet>
