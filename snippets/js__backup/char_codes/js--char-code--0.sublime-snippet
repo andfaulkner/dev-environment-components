@@ -1,0 +1,8 @@
+<snippet>
+  <description>Character code for 0 (zero) key</description>
+<content><![CDATA[
+48
+]]></content>  
+  <tabTrigger>char_0</tabTrigger>
+  <scope>source.js</scope>
+</snippet>

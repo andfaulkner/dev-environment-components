@@ -1,0 +1,11 @@
+<snippet>
+  <description>Return array from running given fn on each key-val pair in a hash</description>
+<content><![CDATA[
+Object.keys(${1:variable_containing_object}).map(function(key, value) {
+  ${0}
+  return ${2};
+});
+]]></content>  
+  <tabTrigger>map</tabTrigger>
+  <scope>source.js</scope>
+</snippet>

@@ -7,5 +7,5 @@
 	});
 ]]></content>
 	<tabTrigger>expr_mid</tabTrigger>
-	<scope>source.js</scope>
+	<scope>source.js, source.ts</scope>
 </snippet>

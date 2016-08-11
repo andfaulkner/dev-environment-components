@@ -1,0 +1,8 @@
+<snippet>
+  <description>Import lodash.</description>
+<content><![CDATA[
+import _ from 'lodash';${0}
+]]></content>  
+  <tabTrigger>req_lodash</tabTrigger>
+  <scope>source.js</scope>
+</snippet>

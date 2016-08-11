@@ -4,5 +4,5 @@
 this._super(${1:params});${0}
 ]]></content>  
   <tabTrigger>embsuper</tabTrigger>
-  <scope>source.js</scope>
+  <scope>source.js, source.ts</scope>
 </snippet>

@@ -1,0 +1,8 @@
+<snippet>
+	<description>Redux: Subscribe a callback to fire on state change</description>
+	<content><![CDATA[
+${1:store}.subscribe(${2:fn});
+]]></content>
+	<tabTrigger>rxsub</tabTrigger>
+	<scope>source.js</scope>
+</snippet>

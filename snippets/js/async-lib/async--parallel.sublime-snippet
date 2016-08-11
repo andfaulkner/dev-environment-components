@@ -23,5 +23,5 @@ async.parallel([
 ]]></content>
 
 	<tabTrigger>async__parallel</tabTrigger>
-	<scope>source.js</scope>
+	<scope>source.js, source.ts</scope>
 </snippet>

@@ -9,5 +9,5 @@ ${1:sortedArr} = _.sortByAll(${2:arrObjOrStr}, ${3:keyOrSortFn1}, function ${4:o
     <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
     <tabTrigger>_sortByAll</tabTrigger>
     <!-- Optional: Set a scope to limit where the snippet will trigger -->
-    <scope>source.js</scope>
+    <scope>source.js, source.ts</scope>
 </snippet>

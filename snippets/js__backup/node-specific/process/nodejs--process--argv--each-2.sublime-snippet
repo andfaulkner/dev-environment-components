@@ -1,0 +1,10 @@
+<snippet>
+  <description>Loop thru CLI args --> this process. arg 1: execPath. arg 2: file running. Rest are CLI args</description>
+<content><![CDATA[
+process.argv.forEach((arg, index) => {
+  ${0}
+});
+]]></content>  
+  <tabTrigger>argv_each</tabTrigger>
+  <scope>source.js</scope>
+</snippet>

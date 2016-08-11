@@ -1,0 +1,10 @@
+<snippet>
+    <description>Node: Log obj to terminal, w filename and fn included</description>
+    <content><![CDATA[
+fnLog.trace('${1:varToLog}: ' + util.inspect(${1:varToLog}, { depth: 5, colors: true }));${2}
+]]></content>
+    <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+    <tabTrigger>logdeepfn</tabTrigger>
+    <!-- Optional: Set a scope to limit where the snippet will trigger -->
+    <scope>source.js</scope>
+</snippet>

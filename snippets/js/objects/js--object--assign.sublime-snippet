@@ -4,5 +4,5 @@
 ${1/.+/var /}${1:varToStoreNewObj}${1/.+/ = /}Object.assign(${3:target_object_usually__{\}}, ${4:any, number_of, source, objects, ...});${0}
 ]]></content>  
   <tabTrigger>obj_assign</tabTrigger>
-  <scope>source.js</scope>
+  <scope>source.js, source.ts</scope>
 </snippet>

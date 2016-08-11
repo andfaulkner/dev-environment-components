@@ -4,5 +4,5 @@
 process.exit(1);${0}
 ]]></content>  
   <tabTrigger>proc_exit</tabTrigger>
-  <scope>source.js</scope>
+  <scope>source.js, source.ts</scope>
 </snippet>

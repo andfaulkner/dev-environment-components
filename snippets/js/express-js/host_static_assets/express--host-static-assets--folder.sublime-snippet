@@ -4,5 +4,5 @@
 app.use(express.static(path.join(__dirname, ${2:'/hosted/dir/path'})));${0}
 ]]></content>  
   <tabTrigger>exp_host_dir</tabTrigger>
-  <scope>source.js</scope>
+  <scope>source.js, source.ts</scope>
 </snippet>

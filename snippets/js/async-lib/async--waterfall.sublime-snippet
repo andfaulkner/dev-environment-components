@@ -27,5 +27,5 @@ async.waterfall([
 ]]></content>
 
 	<tabTrigger>async__waterfall_noinitparams</tabTrigger>
-	<scope>source.js</scope>
+	<scope>source.js, source.ts</scope>
 </snippet>

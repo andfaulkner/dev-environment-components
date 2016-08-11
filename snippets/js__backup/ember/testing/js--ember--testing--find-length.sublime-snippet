@@ -1,0 +1,8 @@
+<snippet>
+  <description>Return # of DOM elements matching a selector in an Ember test</description>
+<content><![CDATA[
+find('${1:some_selector__eg_.listing__or__#id}').length${0}
+]]></content>  
+  <tabTrigger>emb_test_findlen</tabTrigger>
+  <scope>source.js</scope>
+</snippet>

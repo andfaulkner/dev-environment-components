@@ -1,0 +1,8 @@
+<snippet>
+	<description>require lodash</description>
+	<content><![CDATA[
+var _ = require('lodash');
+]]></content>
+	<tabTrigger>rqld</tabTrigger>
+	<scope>source.js</scope>
+</snippet>

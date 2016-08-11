@@ -1,0 +1,10 @@
+<snippet>
+	<description>es6: default export a class</description>
+	<content><![CDATA[
+export default class ${1:nameOfClass} {
+	${2}
+}
+]]></content>
+	<tabTrigger>expdefcl</tabTrigger>
+	<scope>source.js</scope>
+</snippet>

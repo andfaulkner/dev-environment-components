@@ -4,5 +4,5 @@
 click('${1:selector_eg_a:contains("Contact")}');
 ]]></content>  
   <tabTrigger>emb_test_click</tabTrigger>
-  <scope>source.js</scope>
+  <scope>source.js, source.ts</scope>
 </snippet>

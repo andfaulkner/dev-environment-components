@@ -4,5 +4,5 @@
 import DS from 'ember-data';{0}
 ]]></content>
   <tabTrigger>embimp_data</tabTrigger>
-  <scope>source.js</scope>
+  <scope>source.js, source.ts</scope>
 </snippet>

@@ -1,0 +1,8 @@
+<snippet>
+	<description>es6: import items exported from a module by name</description>
+	<content><![CDATA[
+import {${2:Item(s)ToImport}} from '${1:nameOfModule}';
+]]></content>
+	<tabTrigger>impnm</tabTrigger>
+	<scope>source.js</scope>
+</snippet>

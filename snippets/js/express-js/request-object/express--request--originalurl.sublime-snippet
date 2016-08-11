@@ -4,5 +4,5 @@
 ${1:req}.originalUrl${0:;}
 ]]></content>  
   <tabTrigger>exp_req_origurl</tabTrigger>
-  <scope>source.js</scope>
+  <scope>source.js, source.ts</scope>
 </snippet>

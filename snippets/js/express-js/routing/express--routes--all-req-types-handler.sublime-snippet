@@ -8,5 +8,5 @@ app.get(${1:'/path/to/handle'}, (req, res) => {
 });${0}
 ]]></content>  
   <tabTrigger>exp_route_all</tabTrigger>
-  <scope>source.js</scope>
+  <scope>source.js, source.ts</scope>
 </snippet>

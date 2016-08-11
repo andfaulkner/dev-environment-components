@@ -7,5 +7,5 @@ app.${1:get||post||put||delete}('${2:/path/to/handle}/:${3:param}', (req, res) =
 });
 ]]></content>  
   <tabTrigger>exp_routew_arg</tabTrigger>
-  <scope>source.js</scope>
+  <scope>source.js, source.ts</scope>
 </snippet>

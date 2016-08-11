@@ -1,0 +1,13 @@
+<snippet>
+    <content><![CDATA[
+//Do something after component update complete
+//prevProps & prevState: pre-update component properties & state, respectively;
+componentDidUpdate: function() {
+    ${1:actionToPerformAfterComponentUpdates};
+}
+]]></content>
+    <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+    <tabTrigger>rct_cdu</tabTrigger>
+    <!-- Optional: Set a scope to limit where the snippet will trigger -->
+    <!-- <scope>source.python</scope> -->
+</snippet>

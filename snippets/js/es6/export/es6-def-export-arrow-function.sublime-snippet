@@ -6,5 +6,5 @@ export default (${1:params}) => {
 };
 ]]></content>
 	<tabTrigger>expdefarrfn</tabTrigger>
-	<scope>source.js</scope>
+	<scope>source.js, source.ts</scope>
 </snippet>

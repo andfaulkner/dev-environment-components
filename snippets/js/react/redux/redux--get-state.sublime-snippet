@@ -4,5 +4,5 @@
 ${1:store}.getState();
 ]]></content>
 	<tabTrigger>rxgs</tabTrigger>
-	<scope>source.js</scope>
+	<scope>source.js, source.ts</scope>
 </snippet>

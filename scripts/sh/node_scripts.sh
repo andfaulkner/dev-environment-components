@@ -58,6 +58,8 @@ alias murdernode='ps aux | grep "gulp\|node\|npm" | grep -v "atom" | awk "{print
 #alias murdernode='ps aux | grep "gulp\|node\|npm" | grep -v "atom" | cut -d" " -f2 | sudo xargs kill -9'
 #alias murdernode="ps aux | grep '\(gulp\|node\|npm\)' | grep -v 'atom' | awk '{print $2}' | cut -d' ' -f2 | sudo xargs kill -9"
 
+alias ns="nukenodesrv; npm start"
+
 alias __slicesenerr_slicer="sed 's/     at/\n          at/g' | \
                     sed 's/trace=/\n\ntrace=/g'| \
                     sed 's/~\/Projects\/testbed\/testbed-seneca--4//g' | \
@@ -170,6 +172,9 @@ alias ember_dep_surge="rm -rf dist; ember build --environment=development; cd di
 # GLOBAL INSTALL
 alias nig="npm install -g"
 
+alias nis="npm install --save"
+alias nisd="npm install --save-dev"
+
 function react_setup_for_newnode_project {
   npm install react redux react-redux react-dom --save
   npm install 
@@ -200,33 +205,85 @@ var config = {
 module.exports = config;
 WEBPACKCONFIG
 
-  mkdir client
-  mkdir server
+    mkdir client
+    mkdir server
 }
 
 function newnode_project {
-  echo "Building new NodeJS project with name $1"
-  mkdir $1
-  cd $1
-  npm init $1 -f
-  git init
-  npm install --save lodash jquery
-  npm install --save fs-extra 
-  npm install --save moment
-  npm install --save-dev gulp webpack gulp-webpack
-  npm install --save-dev nodemon
-  npm install --save-dev mocha
-  npm install --save-dev gulp-mocha
-  npm install --save-dev chai
-  npm install --save-dev bower
-  npm install --save-dev eslint babel-eslint  
-  npm install --save-dev eslint-plugin-react
+    echo "Building new NodeJS project with name $1"
+    mkdir $1
+    cd $1
+    npm init $1 -f
+    git init
+    npm install --save lodash jquery
+    npm install --save fs-extra
+    npm install --save moment
+    npm install --save-dev gulp webpack gulp-webpack
+    npm install --save-dev nodemon
+    npm install --save-dev mocha
+    npm install --save-dev gulp-mocha
+    npm install --save-dev chai
+    npm install --save-dev bower
+    npm install --save-dev eslint babel-eslint
+    npm install --save-dev eslint-plugin-react
 
-  newnode__babel_config_base
+    newnode__babel_config_base
 
-  touch Gulpfile
+    touch Gulpfile
 
-  cat > webpack.config.js <<- WEBPACKCONFIG
+    newnode__webpack "$1"
+
+    touch app.js
+    echo "var _ = require('lodash');" > app.js
+
+    echo `node -v` > .node-version
+
+    if [[ -n $2 ]]; then
+        if [[ $2 -eq "react" ]]; then
+            react_setup_for_newnode_project
+        fi
+        if [[ $2 -eq "express" ]]; then
+            npm install --save express
+        fi
+    fi
+    if [[ -n $3 ]]; then
+        if [[ $3 -eq "react" ]]; then
+            react_setup_for_newnode_project
+        fi
+        if [[ $3 -eq "express" ]]; then
+            npm install --save express
+        fi
+    fi
+
+    echo "**/node_modules/**" > .gitignore
+
+    mkdir config
+    mkdir scripts
+    mkdir bin
+    mkdir data
+    mkdir data/migrations
+    mkdir doc
+    
+    newnode__mocha_base_install_in_proj 
+    newnode__postgres_base_install_in_proj "$1"
+
+    if [[ `redis-cli ping` == "PONG" ]]; then echo "Redis running, ready for use in project"; fi
+
+    newnode_default_eslint
+
+    newnode_sublime_project_base
+    open_in_sublime "$1.sublime-project"
+
+    echo "** New NodeJS project created!"
+}
+
+function newnode__postgres_base_install_in_proj {
+    createdb --user postgres $1
+    echo "new database named $1 created"
+}
+
+function newnode__webpack {
+      cat > webpack.config.js <<- WEBPACKCONFIG
 module.exports = {
   context: __dirname + "/BASE_DIRECTORY_FOR_RESOLVING_ENTRY",
   entry: "ENTRY_POINT_FOR_BUNDLE.js -- OR ['entry1.js', 'entry2.js']",
@@ -236,86 +293,75 @@ module.exports = {
   }
 }
 WEBPACKCONFIG
-
-  touch app.js
-  echo "var _ = require('lodash');" > app.js
-
-  echo `node -v` > .node-version
-
-  if [[ -n $2 ]]; then
-      if [[ $2 -eq "react" ]]; then
-        react_setup_for_newnode_project
-      fi
-      if [[ $2 -eq "express" ]]; then
-        npm install --save express 
-      fi
-  fi
-  if [[ -n $3 ]]; then
-      if [[ $3 -eq "react" ]]; then
-        react_setup_for_newnode_project
-      fi
-      if [[ $3 -eq "express" ]]; then
-        npm install --save express 
-      fi
-  fi
-
-  echo "**/node_modules/**" > .gitignore
-
-  mkdir config
-  mkdir scripts
-  mkdir bin
-  mkdir data
-  mkdir data/migrations
-  mkdir doc
-  
-  newnode__mocha_base_install_in_proj 
-  createdb --user postgres $1
-  echo "new database named $1 created"
-
-  if [[ `redis-cli ping` == "PONG" ]]; then echo "Redis running, ready for use in project"; fi
-
-  newnode_default_eslint
-
-  newnode_sublime_project_base
-  open_in_sublime "$1.sublime-project"
-
-  echo "** New NodeJS project created!"
 }
 
 function newnode__mocha_base_install_in_proj {
-  npm install --save-dev mocha chai
-  mocha init test
-  mkdir test
-  mv test/tests.js test/test.js
-  cp "$TEMPLATES_DIR/mochatestbase.js" "$PWD/test/test.js"
-  echo "Mocha test run - ensuring install succeeded:"
-  mocha
+    npm install --save-dev mocha chai
+    mocha init test
+    mkdir test
+    mv test/tests.js test/test.js
+    cp "$TEMPLATES_DIR/mochatestbase.js" "$PWD/test/test.js"
+    echo "Mocha test run - ensuring install succeeded:"
+    mocha
 }
 
 function newnode__sublime_project_base {
-  if [[ -n $1 ]]; then
-    cp "$TEMPLATES_DIR/project_name.sublime-project" "$PWD/$1.sublime-project"
-  else
-    cp "$TEMPLATES_DIR/project_name.sublime-project" "$PWD/$(curdir).sublime-project"
-  fi
+    if [[ -n $1 ]]; then
+        cp "$TEMPLATES_DIR/project_name.sublime-project" "$PWD/$1.sublime-project"
+    else
+        cp "$TEMPLATES_DIR/project_name.sublime-project" "$PWD/$(curdir).sublime-project"
+    fi
 }
 
 function open_in_sublime {
-  echo "** opening $1 in sublime text 3"
-  sublime --project "$1"
+    echo "** opening $1 in sublime text 3"
+    sublime --project "$1"
 }
 
 function newnode__default_eslint {
-  cp "$TEMPLATES_DIR/.eslintrc" "$PWD/.eslintrc"
-  echo "default .eslintrc created!" 
+    cp "$TEMPLATES_DIR/.eslintrc" "$PWD/.eslintrc"
+    echo "default .eslintrc created!"
 }
 
 function newnode__babel_config_base {
-  cat > .babelrc <<- BABELCONFIG
+    cat > .babelrc <<- BABELCONFIG
 {
 	"presets": ["es2015"]
 }
 BABELCONFIG
 }
 
+# CREATE BASIC NODE PROJECT
+function newnode__ultra_basic {
+    mkdir "$1"
+    cd "$1"
+
+    # BASIC FILES
+    newnode__default_eslint "$1"
+    newnode__sublime_project_base "$1"
+    newnode__postgres_base_install_in_proj "$1"
+    newnode__babel_config_base "$1"
+
+    # INITIALIZE PROJECT
+    git init
+    npm init "$1" -f
+
+    # NPM SETUP
+    npm install --save lodash jquery
+    npm install --save fs-extra
+    npm install --save moment
+    npm install --save-dev gulp webpack gulp-webpack
+    npm install --save-dev bower
+    npm install --save-dev nodemon
+    npm install --save-dev eslint babel-eslint
+    npm install --save-dev eslint-plugin-react
+
+    # CREATE DIRECTORY STRUCTURE
+    mkdir app
+    mkdir "test"
+    mkdir scripts
+    touch app.js
+}
+
 echo "* NodeJS scripts loaded!"
+

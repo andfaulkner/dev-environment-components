@@ -6,5 +6,5 @@ this.on('${1:action-occurring-in-template}', (val) => {
 });
 ]]></content>  
   <tabTrigger>emb_test_rend_listener</tabTrigger>
-  <scope>source.js</scope>
+  <scope>source.js, source.ts</scope>
 </snippet>

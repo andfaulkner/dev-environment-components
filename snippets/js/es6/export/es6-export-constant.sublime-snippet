@@ -4,5 +4,5 @@
 export const ${1:NAME_OF_CONSTANT} = ${2:valueOfConstant};${3}
 ]]></content>
 	<tabTrigger>expcs</tabTrigger>
-	<scope>source.js</scope>
+	<scope>source.js, source.ts</scope>
 </snippet>

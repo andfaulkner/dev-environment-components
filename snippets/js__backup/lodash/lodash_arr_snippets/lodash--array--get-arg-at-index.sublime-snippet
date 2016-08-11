@@ -1,0 +1,8 @@
+<snippet>
+    <description>Return item at given index of an array. Starts at 0.</description>
+    <content><![CDATA[
+${1/.+/var /}${1:nameOfOutputArray}${1/.+/ = /}_.nth(${2:arrayToGetValFrom}, ${3:indexToGrabValAt_eg_1});${0}
+]]></content>
+    <tabTrigger>_arr_nth</tabTrigger>
+    <scope>source.js</scope>
+</snippet>

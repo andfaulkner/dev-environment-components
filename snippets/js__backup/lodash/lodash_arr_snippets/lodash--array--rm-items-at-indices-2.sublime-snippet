@@ -1,0 +1,8 @@
+<snippet>
+    <description>Return array w vals at given indices rm. Indices given in arr of #s. Starts @ 0.</description>
+    <content><![CDATA[
+${1/.+/var /}${1:nameOfOutputArr}${1/.+/ = /}_.nth(${2:arrToRmValsFrom}, ${3:indicesToDropFromRetArr_eg_[1, 2, 6]});${0}
+]]></content>
+    <tabTrigger>_arr_drop_at_indices</tabTrigger>
+    <scope>source.js</scope>
+</snippet>

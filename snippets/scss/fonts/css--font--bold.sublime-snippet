@@ -1,0 +1,8 @@
+<snippet>
+  <description>Make text bold</description>
+<content><![CDATA[
+font-weight: bold;
+]]></content>  
+  <tabTrigger>bold</tabTrigger>
+  <scope>source.css</scope>
+</snippet>

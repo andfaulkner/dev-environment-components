@@ -6,5 +6,5 @@ describe('${1:message}', () => {
 });
 ]]></content>
 	<tabTrigger>edesc</tabTrigger>
-	<scope>source.js</scope>
+	<scope>source.js, source.ts</scope>
 </snippet>

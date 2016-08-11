@@ -4,5 +4,5 @@
 9
 ]]></content>  
   <tabTrigger>char_tab</tabTrigger>
-  <scope>source.js</scope>
+  <scope>source.js, source.ts</scope>
 </snippet>

@@ -1,0 +1,12 @@
+<snippet>
+  <description>Filter data from model, returning only data that gets thru.</description>
+<content><![CDATA[
+${1:model_name}.filter(function (i) {
+  return i.${2:path_to_data_in_object_e.g.__attributes.city.toLowerCase()}
+          .indexOf(request.queryParams.${3:data_col__e.g._city}
+          .toLowerCase()) !== -1;
+});${0}
+]]></content>  
+  <tabTrigger>emb_data_filter</tabTrigger>
+  <scope>source.js</scope>
+</snippet>

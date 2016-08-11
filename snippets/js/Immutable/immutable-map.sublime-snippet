@@ -4,5 +4,5 @@
 Map({${1:key}: ${2:val}});
 ]]></content>
 	<tabTrigger>imm</tabTrigger>
-	<scope>source.js</scope>
+	<scope>source.js, source.ts</scope>
 </snippet>

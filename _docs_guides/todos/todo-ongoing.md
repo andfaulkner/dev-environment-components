@@ -17,6 +17,73 @@ Late July 2016
 *   ! WTF is graphql?
 *   ! 'rename' hotkey
 
+
+====================================================
+DONE: mega-interview thing
+==========================
+*   ! make dynamic row generator
+*   ! make dynamic cell generator
+*   ! make dynamic grid generator: dynamically generates y # of rows
+
+*   ! Create events sub-object (akin to backboneJS')
+*   ! make input wrapper
+*   ! make input box to get height
+*   ! make input box to get width
+*   ! give squares key props
+*   ! add click handlers to squares
+*   ! add receiver for click handlers
+*   ! redux actions
+*   ! redux reducers
+*   ! redux provider - wire it in
+*   ! determine redux data store shape, document it
+*   ! define default redux data, put in data store
+*   ! wire redux into view grid
+*   ! wrap GridRow in a redux 'connector'
+*   ! map GridRow props to dispatch function
+*   ! get GridRow data to update the current data store state 
+
+TODO: mega-interview thing
+==========================
+*   ! hydrate grid with default data
+*   ! generate random data button
+*   ! generate random data onClick handler
+*   get new random data into store
+*   trigger UI updates with random data generated 
+*   hydrate rows and cols with default data
+*   get receiver for click handlers to run the flood algorithm
+*   get color grid into UI w/ redux
+*   add emitter that outputs the generated grid
+*   add colour selector dropdowns
+*   move grid generator to store
+*   get grid to render based on store contents
+
+
+*   immutability helpers (nice-to-have)
+*   split up redux (nice-to-have)
+*   proper containers & presentational component split-up (nice-to-have)
+*   muiCSS:
+    link(href="//cdn.muicss.com/mui-0.6.8/css/mui.min.css" rel="stylesheet" type="text/css")
+    script(src="//cdn.muicss.com/mui-0.6.8/js/mui.min.js")
+
+*   redux action generators ?
+
+====================================================
+
+
+
+*   ! Figure out how to make JSX snippets
+*   ! input box snippet (JSX)
+*   ! fix base snippets
+
+*   Write events subobj blog article: see FloodFillGridControlPanel
+*   dropdown snippet (JSX)
+
+
+
+
+
+*   import the generator
+
 *   cut file hotkey
 
 *   graphql sample app

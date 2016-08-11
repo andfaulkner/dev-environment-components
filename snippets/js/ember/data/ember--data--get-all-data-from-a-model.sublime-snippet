@@ -4,5 +4,5 @@
 this.get('store').findAll('${1:name_of_model__eg__person}');${0}
 ]]></content>  
   <tabTrigger>emb_data_ret_model</tabTrigger>
-  <scope>source.js</scope>
+  <scope>source.js, source.ts</scope>
 </snippet>

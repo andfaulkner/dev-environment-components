@@ -1,0 +1,8 @@
+<snippet>
+  <description>Deep compare 2 objects to determine if they're equal.</description>
+<content><![CDATA[
+_.isEqual(${1:object1}, ${1:object2});${0}
+]]></content>  
+  <tabTrigger>_isEqual</tabTrigger>
+  <scope>source.js</scope>
+</snippet>

@@ -1,0 +1,8 @@
+<snippet>
+  <description>Character code for tab key</description>
+<content><![CDATA[
+9
+]]></content>  
+  <tabTrigger>char_tab</tabTrigger>
+  <scope>source.js</scope>
+</snippet>

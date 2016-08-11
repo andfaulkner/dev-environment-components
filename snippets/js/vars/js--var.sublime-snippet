@@ -1,0 +1,8 @@
+<snippet>
+  <description>Create a variable</description>
+<content><![CDATA[
+var ${1:varName} = ${2:var value}; ${0}
+]]></content>
+  <tabTrigger>var</tabTrigger>
+  <scope>source.js, source.ts</scope>
+</snippet>

@@ -1,0 +1,12 @@
+<snippet>
+    <content><![CDATA[
+seneca.act('{${1:commandKey}:'${2:cmdVal}', ${3:param1Key}:'${4:p1Val}', function(err, result) {
+    if (err) return console.error(err);
+    ${3://handlingOfResult}
+});
+]]></content>
+    <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+    <tabTrigger>seneca_call_action</tabTrigger>
+    <!-- Optional: Set a scope to limit where the snippet will trigger -->
+    <!-- <scope>source.python</scope> -->
+</snippet>

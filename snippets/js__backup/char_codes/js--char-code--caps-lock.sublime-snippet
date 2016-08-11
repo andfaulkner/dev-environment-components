@@ -1,0 +1,8 @@
+<snippet>
+  <description>Character code for capslock key</description>
+<content><![CDATA[
+20
+]]></content>  
+  <tabTrigger>char_capslock</tabTrigger>
+  <scope>source.js</scope>
+</snippet>

@@ -1,0 +1,8 @@
+<snippet>
+  <description>Character code for 9 key</description>
+<content><![CDATA[
+57
+]]></content>  
+  <tabTrigger>char_9</tabTrigger>
+  <scope>source.js</scope>
+</snippet>

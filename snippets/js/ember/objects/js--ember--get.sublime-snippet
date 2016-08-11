@@ -4,5 +4,5 @@
 ${1:this}.get('${2:property_to_try_to_grab_from_obj}')
 ]]></content>  
   <tabTrigger>emb_obj_get</tabTrigger>
-  <scope>source.js</scope>
+  <scope>source.js, source.ts</scope>
 </snippet>

@@ -1,0 +1,8 @@
+<snippet>
+  <description>Character code for 'z' key</description>
+<content><![CDATA[
+90
+]]></content>  
+  <tabTrigger>char_z</tabTrigger>
+  <scope>source.js</scope>
+</snippet>

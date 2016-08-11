@@ -1,0 +1,8 @@
+<snippet>
+  <description>Character code for 'r' key</description>
+<content><![CDATA[
+82
+]]></content>  
+  <tabTrigger>char_r</tabTrigger>
+  <scope>source.js</scope>
+</snippet>

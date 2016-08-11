@@ -6,5 +6,5 @@
 ${2/.+/\t/g}${2}${2/.+/\n/g}}
 ]]></content>
 	<tabTrigger>rxact</tabTrigger>
-	<scope>source.js</scope>
+	<scope>source.js, source.ts</scope>
 </snippet>

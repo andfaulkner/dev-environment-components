@@ -3,5 +3,5 @@
 ${1:boolRetVal} = _.includes(${2:arrObjOrStr}, ${3:valToFind}, ${4:optionanlIndex2Strt_0AndUp});
 ]]></content>
     <tabTrigger>_contains</tabTrigger>
-    <scope>source.js</scope>
+    <scope>source.js, source.ts</scope>
 </snippet>

@@ -1,0 +1,8 @@
+<snippet>
+    <description>Check if value is in given array (also works on objs: checks their vals) </description>
+    <content><![CDATA[
+${1/.+/var /}${1:outVar}${1/.+/ = /}_.includes(${2:arrayToCheck}, ${3:valToCheckFor});${0}
+]]></content>
+    <tabTrigger>_arr_includes</tabTrigger>
+    <scope>source.js</scope>
+</snippet>

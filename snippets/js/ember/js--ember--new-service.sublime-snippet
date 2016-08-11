@@ -9,5 +9,5 @@ let ${1:ServiceName} = Ember.Service.extend({
 });
 ]]></content>  
   <tabTrigger>emb_service_new</tabTrigger>
-  <scope>source.js</scope>
+  <scope>source.js, source.ts</scope>
 </snippet>

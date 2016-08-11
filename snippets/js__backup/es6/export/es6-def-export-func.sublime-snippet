@@ -1,0 +1,10 @@
+<snippet>
+	<description>es6: default export function</description>
+	<content><![CDATA[
+export default function ${1:nameOfFn} (${2:params}) {
+	${3}
+}
+]]></content>
+	<tabTrigger>expdeffn</tabTrigger>
+	<scope>source.js</scope>
+</snippet>

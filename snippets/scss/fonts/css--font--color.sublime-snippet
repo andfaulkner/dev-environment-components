@@ -1,0 +1,8 @@
+<snippet>
+  <description>Color your text</description>
+<content><![CDATA[
+color: ${1:black|red|green|blue|#FFF(black)|#333(dark-gray)|#000(white)|#FF00FF(magenta)|orange|#800000(maroon)|etc.};
+]]></content>  
+  <tabTrigger>font_color</tabTrigger>
+  <scope>source.css</scope>
+</snippet>

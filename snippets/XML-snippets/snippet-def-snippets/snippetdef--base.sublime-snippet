@@ -8,7 +8,7 @@ ${4:content here}
 ]${4/.*//}]></content>  
   <tabTrigger>${3:triggering-text}</tabTrigger>
   <scope>${1:source.(js | clojure | ruby | ruby.rails | shell | sql | css | yaml | sass | 
-                         less | makefile | groovy | php | go | lisp | python | regexp)    OR
+                     js.jsx | less | makefile | groovy | php | go | lisp | python | regexp)    OR
            text.(html | html.markdown | xml | plain)}</scope>
 </snippet>
 ]]></content>

@@ -4,5 +4,5 @@
 ${1:req}.method${0:;}
 ]]></content>  
   <tabTrigger>exp_req_method</tabTrigger>
-  <scope>source.js</scope>
+  <scope>source.js, source.ts</scope>
 </snippet>

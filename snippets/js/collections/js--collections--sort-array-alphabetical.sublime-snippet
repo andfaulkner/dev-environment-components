@@ -4,5 +4,5 @@
 ${1/.+/var /}${1:someArray}${1/.+/ = /}${2:someOtherArray}.sort();
 ]]></content>  
   <tabTrigger>arr_sort_alpha</tabTrigger>
-  <scope>source.js</scope>
+  <scope>source.js, source.ts</scope>
 </snippet>

@@ -12,5 +12,5 @@ export default class ${1:${TM_FILENAME/(.+)\..+|.*/$1/:name}} extends React.Comp
     <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
     <tabTrigger>rct_cmpcls</tabTrigger>
     <!-- Optional: Set a scope to limit where the snippet will trigger -->
-    <scope>source.js</scope>
+    <scope>source.js, source.ts</scope>
 </snippet>

@@ -4,5 +4,5 @@
 process.argv${0}
 ]]></content>  
   <tabTrigger>argv</tabTrigger>
-  <scope>source.js</scope>
+  <scope>source.js, source.ts</scope>
 </snippet>

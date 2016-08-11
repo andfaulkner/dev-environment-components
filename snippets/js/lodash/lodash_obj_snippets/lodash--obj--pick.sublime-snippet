@@ -4,5 +4,5 @@
 ${1:newObject} = _.pick(${2:object}, ${3:propertyString__OR__arrayOfPropertyStrings_toPullFromObj});
 ]]></content>
     <tabTrigger>_obj_pick</tabTrigger>
-    <scope>source.js</scope>
+    <scope>source.js, source.ts</scope>
 </snippet>

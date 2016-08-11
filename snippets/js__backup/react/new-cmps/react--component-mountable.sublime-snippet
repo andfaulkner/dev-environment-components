@@ -1,0 +1,42 @@
+<snippet>
+	<description>Component that is fully mountable - full mount lifecycle</description>
+	<content><![CDATA[
+var ${1:MountableComponent} = React.createClass({
+
+	//Sets up the initial state of the component - e.g. the initial variables' values
+	getInitialState: function(){
+		return { ${3:someVar\}: ${4:someVal\} }
+	}
+
+	// Run on component update; i.e. when this.update is called in 'this.render' below
+	update: function() {
+	},
+
+	//[1] Run when mounting component
+	componentWillMount: function(){
+	},
+
+	//[2] Mount component
+	render: function() {
+		return (
+			${2:actualComponentHere...e.g.
+			<button onClick={this.update\}>
+				Button text
+			</button>}
+		);
+	},
+
+	//[3] Run directly after component mounted
+	componentDidMount: function(){
+	},
+
+	//[4] Run directly before component unmounts
+	componentWillUnmount: function(){
+	}
+});
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>rct_mountable</tabTrigger>
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<scope>source.js</scope>
+</snippet>

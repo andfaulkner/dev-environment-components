@@ -4,5 +4,5 @@
 export {${1:nameOfVariable}};${0}
 ]]></content>
 	<tabTrigger>expnm</tabTrigger>
-	<scope>source.js</scope>
+	<scope>source.js, source.ts</scope>
 </snippet>

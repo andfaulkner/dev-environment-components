@@ -6,5 +6,5 @@ export default function ${1:nameOfFn} (${2:params}) {
 }
 ]]></content>
 	<tabTrigger>expdeffn</tabTrigger>
-	<scope>source.js</scope>
+	<scope>source.js, source.ts</scope>
 </snippet>

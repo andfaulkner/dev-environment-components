@@ -6,5 +6,5 @@ ${1:NameOfClass}.reopen({
 });
 ]]></content>  
   <tabTrigger>reopen</tabTrigger>
-  <scope>source.js</scope>
+  <scope>source.js, source.ts</scope>
 </snippet>

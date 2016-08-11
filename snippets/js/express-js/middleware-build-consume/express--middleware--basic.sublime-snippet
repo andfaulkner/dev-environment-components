@@ -8,5 +8,5 @@ var ${1:middlewareFn} = (req, res, next) => {
 ${2/.+/\n/}${2/.+/app.use\(/}${2:${1:middlewareFn}}${2/.+/\);/}${2/.+/\n/}
 ]]></content>  
   <tabTrigger>exp_mid_base</tabTrigger>
-  <scope>source.js</scope>
+  <scope>source.js, source.ts</scope>
 </snippet>

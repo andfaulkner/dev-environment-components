@@ -6,5 +6,5 @@ let ${1:varName} = [{
 }];
 ]]></content>  
   <tabTrigger>letao</tabTrigger>
-  <scope>source.js</scope>
+  <scope>source.js, source.ts</scope>
 </snippet>

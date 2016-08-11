@@ -4,5 +4,5 @@
 var ${1:runOnceVersionOfFunctionName} = _.once(${2:someFunction});
 ]]></content>  
   <tabTrigger>_fn_once</tabTrigger>
-  <scope>source.js</scope>
+  <scope>source.js, source.ts</scope>
 </snippet>

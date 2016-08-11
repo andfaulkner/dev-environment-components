@@ -6,5 +6,5 @@ export class ${1:nameOfClass} {
 }
 ]]></content>
 	<tabTrigger>expcl</tabTrigger>
-	<scope>source.js</scope>
+	<scope>source.js, source.ts</scope>
 </snippet>

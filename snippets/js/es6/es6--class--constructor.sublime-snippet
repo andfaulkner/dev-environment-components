@@ -1,0 +1,10 @@
+<snippet>
+  <description>Create a class constructor</description>
+<content><![CDATA[
+constructor() {
+  ${0}
+}
+]]></content>  
+  <tabTrigger>init</tabTrigger>
+  <scope>source.js, source.ts</scope>
+</snippet>

@@ -1,0 +1,8 @@
+<snippet>
+    <description>Repeat the given string N number of times.</description>
+    <content><![CDATA[
+_.repeat('${1:stringToRepeat}', ${2:numberOfRepeats});
+]]></content>
+    <tabTrigger>times_to_repeat_text</tabTrigger>
+    <scope>source.js</scope>
+</snippet>

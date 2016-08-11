@@ -6,5 +6,5 @@ unknownProperty(keyName) {
 },
 ]]></content>
   <tabTrigger>emb_obj_unknown</tabTrigger>
-  <scope>source.js</scope>
+  <scope>source.js, source.ts</scope>
 </snippet>

@@ -1,0 +1,28 @@
+<snippet>
+    <description>new view extension file for a config project</description>
+    <content><![CDATA[
+define(function (require, exports, module) {
+	var ${2:NameOfClass} = require('${1:name-of-originalview}-view');
+
+	module.exports = ${2:NameOfClass}.extend({
+		// Overriding the standard template to apply custom acl
+		templateName: '${1:name-of-originalview-and-template}-tmpl-ex'
+	});
+});
+//Add to require-config.js file::
+// under paths:
+		'${1:name-of-originalview}-view-ex': 'custom/js/views/common/${1:name-of-originalview}-view-ex',
+// under map: *:
+		'${1:name-of-originalview}-view': '${1:name-of-originalview}-view-ex',
+// under map: (but past *):
+		'${1:name-of-originalview}-view-ex': {
+			'${1:name-of-originalview}-view': '${1:name-of-originalview}-view'
+		},
+
+
+]]></content>
+    <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+    <tabTrigger>isightconf_view_ex_base</tabTrigger>
+    <!-- Optional: Set a scope to limit where the snippet will trigger -->
+    <scope>source.js</scope>
+</snippet>

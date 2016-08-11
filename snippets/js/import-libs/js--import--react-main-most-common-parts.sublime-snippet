@@ -1,0 +1,8 @@
+<snippet>
+  <description>Import most commonly needed parts of React.</description>
+<content><![CDATA[
+import React, { Component, PropTypes } from 'react'; ${0}
+]]></content>  
+  <tabTrigger>req_react</tabTrigger>
+  <scope>source.js, source.ts</scope>
+</snippet>

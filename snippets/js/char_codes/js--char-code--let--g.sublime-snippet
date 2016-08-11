@@ -4,5 +4,5 @@
 71
 ]]></content>  
   <tabTrigger>char_g</tabTrigger>
-  <scope>source.js</scope>
+  <scope>source.js, source.ts</scope>
 </snippet>

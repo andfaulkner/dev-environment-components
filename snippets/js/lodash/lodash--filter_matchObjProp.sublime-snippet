@@ -8,5 +8,5 @@ var ${1:arrRetVal} = _(${2:arrOfObjs}})
     <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
     <tabTrigger>_filter_keep_if_matches</tabTrigger>
     <!-- Optional: Set a scope to limit where the snippet will trigger -->
-    <scope>source.js</scope>
+    <scope>source.js, source.ts</scope>
 </snippet>

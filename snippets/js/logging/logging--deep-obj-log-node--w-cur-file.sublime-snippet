@@ -7,5 +7,5 @@ console.log(util.inspect(${2:varToLog}, { depth: 5, colors: true }));
     <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
     <tabTrigger>logdeep</tabTrigger>
     <!-- Optional: Set a scope to limit where the snippet will trigger -->
-    <scope>source.js</scope>
+    <scope>source.js, source.ts</scope>
 </snippet>

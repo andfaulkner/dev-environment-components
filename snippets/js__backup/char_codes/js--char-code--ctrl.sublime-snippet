@@ -1,0 +1,8 @@
+<snippet>
+  <description>Character code for ctrl key</description>
+<content><![CDATA[
+17
+]]></content>  
+  <tabTrigger>char_ctrl</tabTrigger>
+  <scope>source.js</scope>
+</snippet>

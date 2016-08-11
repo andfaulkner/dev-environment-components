@@ -1,0 +1,17 @@
+<snippet>
+		<description>Simple class-free react component, no export</description>
+    <content><![CDATA[
+var ${1:componentName} = React.createClass({
+	render: function() {
+		return (
+			${0}
+		);
+	}
+});
+
+]]></content>
+    <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+    <tabTrigger>rct_newcmpsim</tabTrigger>
+    <!-- Optional: Set a scope to limit where the snippet will trigger -->
+    <scope>source.js</scope>
+</snippet>

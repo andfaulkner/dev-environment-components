@@ -8,6 +8,11 @@ DEFINITION
     *   static validation
     *   type introspection
 
+Type system
+===========
+
+
+
 SHORTHAND
 =========
 

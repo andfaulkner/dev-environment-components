@@ -17,4 +17,8 @@ echo "  -- place a backslash before:         $.*/[\]^"
 echo "  -- get single quote in output via:   '\''"
 echo "  -- get single quote in output via:   '\''"
 echo "  -- in replacement text, quote:       &\/"
+echo ""
+echo "## find and replace from all files, recursively from current dir"
+echo "  -- example:"
+echo "      find . -name '*.sublime-snippet' -print0 | xargs -0 sed -i \"\" \"s/>source.js</>source.js, source.ts</g\""
 echo '---------------------------------------------------------------------------------\n'

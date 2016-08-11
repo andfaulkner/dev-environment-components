@@ -8,5 +8,5 @@ _.reduce(${1:objToReduce}, function(${2:accumulator}, ${3:val}, ${4:key}) {
 }, ${2:accumulator_start_value__eg__[]});
 ]]></content>
     <tabTrigger>_reduceObject</tabTrigger>
-    <scope>source.js</scope>
+    <scope>source.js, source.ts</scope>
 </snippet>

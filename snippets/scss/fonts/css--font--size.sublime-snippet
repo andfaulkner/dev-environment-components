@@ -1,0 +1,8 @@
+<snippet>
+  <description>Resize your text</description>
+<content><![CDATA[
+font-size: ${1:e.g. 1.25em || 12px || small|medium|large|larger|smaller|x-large|x-small|xx-large|xx-small};
+]]></content>  
+  <tabTrigger>font_size</tabTrigger>
+  <scope>source.css</scope>
+</snippet>

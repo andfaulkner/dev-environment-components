@@ -6,5 +6,5 @@ process.argv.forEach((arg, index) => {
 });
 ]]></content>  
   <tabTrigger>proc_argv_each</tabTrigger>
-  <scope>source.js</scope>
+  <scope>source.js, source.ts</scope>
 </snippet>

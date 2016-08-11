@@ -6,5 +6,5 @@ export default ${1:Ember.Object__or_another_Ember_obj_if_making_subclass__eg_Emb
 });
 ]]></content>
   <tabTrigger>emb_class_extend_exp</tabTrigger>
-  <scope>source.js</scope>
+  <scope>source.js, source.ts</scope>
 </snippet>

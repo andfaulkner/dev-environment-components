@@ -1,0 +1,8 @@
+<snippet>
+  <description>Determine if value is a Number primitive (e.g. 3) or obj (e.g. Number.MIN_VALUE)</description>
+<content><![CDATA[
+_.isNumber(${1:valueToCheck});${0}
+]]></content>  
+  <tabTrigger>_isNumber</tabTrigger>
+  <scope>source.js</scope>
+</snippet>

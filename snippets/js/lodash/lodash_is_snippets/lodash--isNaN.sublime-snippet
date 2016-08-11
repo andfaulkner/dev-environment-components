@@ -4,5 +4,5 @@
 _.isNaN(${1:valueToCheck});${0}
 ]]></content>  
   <tabTrigger>_isNaN</tabTrigger>
-  <scope>source.js</scope>
+  <scope>source.js, source.ts</scope>
 </snippet>

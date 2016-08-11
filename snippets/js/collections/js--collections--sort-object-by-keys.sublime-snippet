@@ -10,5 +10,5 @@ var ${1:outputObj} = Object.keys(${2:objectToSort})
         }), {});${0}
 ]]></content>  
   <tabTrigger>obj_sort_by_keys</tabTrigger>
-  <scope>source.js</scope>
+  <scope>source.js, source.ts</scope>
 </snippet>

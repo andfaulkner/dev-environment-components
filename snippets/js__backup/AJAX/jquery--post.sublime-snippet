@@ -1,0 +1,13 @@
+<snippet>
+	<content><![CDATA[
+\$.post(\$(this)[0].action, {
+		${1:dataItemToSubmitFromForm1Key}: \$('[name="${2:sourceInputEl1Name}"]').val(),
+		${3:dataItemFromForm2Key}: \$('[name="[name="${4:sourceInputEl2Name}"]"]').val()
+	}, function(data, textStatus, xhr) {
+		${5://actions to do on receipt of response data from server}
+});
+]]></content>
+
+	<tabTrigger>jq_post</tabTrigger>
+	<scope>source.js</scope>
+</snippet>

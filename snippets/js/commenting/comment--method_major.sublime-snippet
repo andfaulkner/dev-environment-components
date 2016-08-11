@@ -10,5 +10,5 @@
 ]]></content>
 
 	<tabTrigger>comment_method_major</tabTrigger>
-	<scope>source.js</scope>
+	<scope>source.js, source.ts</scope>
 </snippet>

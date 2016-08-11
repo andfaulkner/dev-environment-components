@@ -1,0 +1,15 @@
+<snippet>
+	<description>Create new gulp task - within gulpfile.js</description>
+	<content><![CDATA[
+gulp.task('${1:taskname}', function ${1:taskName}Task() {
+	return gulp.src(${2:SRC})
+		.pipe(newerThanRootIfNotProduction())
+		.pipe(consoleTaskReport())
+		.pipe(${4:gulpPipelineAction()})
+		.pipe(gulp.dest(${3:DEST}));
+});
+]]></content>
+
+	<tabTrigger>gulptask</tabTrigger>
+	<scope>source.js</scope>
+</snippet>

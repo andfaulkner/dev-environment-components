@@ -4,5 +4,5 @@
 _.parseInt(${1:'stringToConvertToInteger'});
 ]]></content>
     <tabTrigger>_str_parseint</tabTrigger>
-    <scope>source.js</scope>
+    <scope>source.js, source.ts</scope>
 </snippet>

@@ -9,5 +9,5 @@
 ]]></content>
 
     <tabTrigger>comment_moduleheading</tabTrigger>
-    <scope>source.js</scope>
+    <scope>source.js, source.ts</scope>
 </snippet>

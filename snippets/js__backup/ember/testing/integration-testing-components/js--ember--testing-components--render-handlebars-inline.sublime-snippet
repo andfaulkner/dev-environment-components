@@ -1,0 +1,10 @@
+<snippet>
+  <description>Render handlebars template inline. Bind 'this' to the template DOM</description>
+<content><![CDATA[
+this.render(hbs`
+  ${0}
+`);
+]]></content>  
+  <tabTrigger>emb_test_rend</tabTrigger>
+  <scope>source.js</scope>
+</snippet>
