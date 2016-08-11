@@ -1,8 +1,0 @@
-<snippet>
-  <description>Character code for 't' key</description>
-<content><![CDATA[
-84
-]]></content>  
-  <tabTrigger>char_t</tabTrigger>
-  <scope>source.js</scope>
-</snippet>

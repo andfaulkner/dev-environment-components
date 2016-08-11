@@ -1,8 +1,0 @@
-<snippet>
-  <description>Character code for enter key</description>
-<content><![CDATA[
-13
-]]></content>  
-  <tabTrigger>char_enter</tabTrigger>
-  <scope>source.js</scope>
-</snippet>

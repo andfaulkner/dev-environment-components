@@ -1,8 +1,0 @@
-<snippet>
-		<description>Insert an img tag - for use in jsx files</description>
-    <content><![CDATA[
-<img src='/${1}'${2/.+/ className={/g}${2:className.MyComponent}${2/.+/\}/}${3/.+/ style={/g}${3:style.MyComponent}${3/.+/}/g} />${0}
-]]></content>
-    <tabTrigger>img</tabTrigger>
-    <scope>source.js.jsx</scope>
-</snippet>

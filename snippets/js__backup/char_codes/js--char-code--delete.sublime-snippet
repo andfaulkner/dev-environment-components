@@ -1,8 +1,0 @@
-<snippet>
-  <description>Character code for delete key</description>
-<content><![CDATA[
-46
-]]></content>  
-  <tabTrigger>char_delete</tabTrigger>
-  <scope>source.js</scope>
-</snippet>

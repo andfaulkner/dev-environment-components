@@ -1,8 +1,0 @@
-<snippet>
-  <description>Send data to the user.</description>
-<content><![CDATA[
-res.send(${1:'data to send to user'});${0}
-]]></content>  
-  <tabTrigger>exp_res_send</tabTrigger>
-  <scope>source.js</scope>
-</snippet>

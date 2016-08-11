@@ -1,8 +1,0 @@
-<snippet>
-    <description>Check if value is within given object's values (also works on arrs) </description>
-    <content><![CDATA[
-${1/.+/var /}${1:outVar}${1/.+/ = /}_.includes(${2:objToCheck}, ${3:valToCheckFor});${0}
-]]></content>
-    <tabTrigger>_obj_includes</tabTrigger>
-    <scope>source.js</scope>
-</snippet>

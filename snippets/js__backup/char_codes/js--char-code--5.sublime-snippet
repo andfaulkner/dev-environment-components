@@ -1,8 +1,0 @@
-<snippet>
-  <description>Character code for 5 key</description>
-<content><![CDATA[
-53
-]]></content>  
-  <tabTrigger>char_5</tabTrigger>
-  <scope>source.js</scope>
-</snippet>

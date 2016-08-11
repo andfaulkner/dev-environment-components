@@ -1,0 +1,10 @@
+<snippet>
+  <description>Immediately-invoked function expression (MINE)</description>
+<content><![CDATA[
+(function(window, document) {
+  ${0}
+}(window, document));
+]]></content>  
+  <tabTrigger>iife</tabTrigger>
+  <scope>source.js, source.ts</scope>
+</snippet>

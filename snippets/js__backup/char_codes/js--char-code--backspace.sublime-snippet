@@ -1,8 +1,0 @@
-<snippet>
-  <description>Character code for backspace key</description>
-<content><![CDATA[
-8
-]]></content>  
-  <tabTrigger>char_backspace</tabTrigger>
-  <scope>source.js</scope>
-</snippet>

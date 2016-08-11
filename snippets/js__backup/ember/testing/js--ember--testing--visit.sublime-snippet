@@ -1,8 +1,0 @@
-<snippet>
-  <description>Load a url in ember tests. Henceforth accessible in same test</description>
-<content><![CDATA[
-visit('${1}');${0}
-]]></content>  
-  <tabTrigger>emb_test_visit</tabTrigger>
-  <scope>source.js</scope>
-</snippet>

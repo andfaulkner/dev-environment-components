@@ -1,0 +1,8 @@
+<snippet>
+  <description>Get or set the HTML content of an HTML tag.</description>
+<content><![CDATA[
+document.body.innerHTML${0}
+]]></content>  
+  <tabTrigger>dom__doc__innerhtml</tabTrigger>
+  <scope>source.js, source.ts</scope>
+</snippet>

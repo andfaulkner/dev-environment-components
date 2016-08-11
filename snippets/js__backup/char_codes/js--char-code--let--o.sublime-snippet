@@ -1,8 +1,0 @@
-<snippet>
-  <description>Character code for 'o' key</description>
-<content><![CDATA[
-79
-]]></content>  
-  <tabTrigger>char_o</tabTrigger>
-  <scope>source.js</scope>
-</snippet>

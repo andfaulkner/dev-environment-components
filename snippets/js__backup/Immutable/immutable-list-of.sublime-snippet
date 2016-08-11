@@ -1,8 +1,0 @@
-<snippet>
-	<description>Create new immutable list, from a set of params</description>
-	<content><![CDATA[
-List.of('${1}', '${2}');
-]]></content>
-	<tabTrigger>imlof</tabTrigger>
-	<scope>source.js</scope>
-</snippet>

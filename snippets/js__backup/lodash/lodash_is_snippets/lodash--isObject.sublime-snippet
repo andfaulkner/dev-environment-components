@@ -1,8 +1,0 @@
-<snippet>
-  <description>Determine if value is lang Object type: arr, fn, obj, regex, new Number(0), or new String('')</description>
-<content><![CDATA[
-_.isObject(${1:valueToCheck});${0}
-]]></content>  
-  <tabTrigger>_isObject</tabTrigger>
-  <scope>source.js</scope>
-</snippet>

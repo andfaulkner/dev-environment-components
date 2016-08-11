@@ -1,0 +1,18 @@
+<snippet>
+  <description>Base starter for browser JS file</description>
+<content><![CDATA[
+"use strict";
+
+/**
+ * ${1:what the file does}
+ */
+(function(document, window, undefined) {
+
+  ${0}
+
+}(document, window, undefined));
+
+]]></content>  
+  <tabTrigger>base</tabTrigger>
+  <scope>source.js, source.ts</scope>
+</snippet>

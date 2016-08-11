@@ -1,8 +1,0 @@
-<snippet>
-  <description>Character code for down arrow key</description>
-<content><![CDATA[
-40
-]]></content>  
-  <tabTrigger>char_down_arrow</tabTrigger>
-  <scope>source.js</scope>
-</snippet>

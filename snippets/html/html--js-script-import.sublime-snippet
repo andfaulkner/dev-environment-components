@@ -1,0 +1,8 @@
+<snippet>
+  <description>Import JS script</description>
+<content><![CDATA[
+<script src="${1:path/to/script.js}"></script>
+]]></content>  
+  <tabTrigger>js</tabTrigger>
+  <scope>text.html</scope>
+</snippet>

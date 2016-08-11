@@ -1,8 +1,0 @@
-<snippet>
-		<description>Split string into array of words (rm whitespace and punctuation)</description>
-    <content><![CDATA[
-${1/.+/var /}${1:arrayOfWords}${1/.+/ = /}_.words(${2:stringToSplitIntoWords});${0}
-]]></content>
-    <tabTrigger>_str_words</tabTrigger>
-    <scope>source.js</scope>
-</snippet>

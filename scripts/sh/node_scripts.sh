@@ -365,3 +365,5 @@ function newnode__ultra_basic {
 
 echo "* NodeJS scripts loaded!"
 
+alias typescript='find . -name "*.ts" | xargs tsc -w'
+

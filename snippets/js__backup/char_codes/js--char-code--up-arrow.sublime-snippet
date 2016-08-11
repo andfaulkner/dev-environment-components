@@ -1,8 +1,0 @@
-<snippet>
-  <description>Character code for up arrow key</description>
-<content><![CDATA[
-38
-]]></content>  
-  <tabTrigger>char_up_arrow</tabTrigger>
-  <scope>source.js</scope>
-</snippet>

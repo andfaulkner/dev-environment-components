@@ -1,8 +1,0 @@
-<snippet>
-  <description>Determine if value is NaN</description>
-<content><![CDATA[
-_.isNaN(${1:valueToCheck});${0}
-]]></content>  
-  <tabTrigger>_isNaN</tabTrigger>
-  <scope>source.js</scope>
-</snippet>

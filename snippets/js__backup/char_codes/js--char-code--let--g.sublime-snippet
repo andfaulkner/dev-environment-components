@@ -1,8 +1,0 @@
-<snippet>
-  <description>Character code for 'g' key</description>
-<content><![CDATA[
-71
-]]></content>  
-  <tabTrigger>char_g</tabTrigger>
-  <scope>source.js</scope>
-</snippet>

@@ -1,8 +1,0 @@
-<snippet>
-  <description>Character code for 's' key</description>
-<content><![CDATA[
-83
-]]></content>  
-  <tabTrigger>char_s</tabTrigger>
-  <scope>source.js</scope>
-</snippet>

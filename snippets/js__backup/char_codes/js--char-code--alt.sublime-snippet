@@ -1,8 +1,0 @@
-<snippet>
-  <description>Character code for alt key</description>
-<content><![CDATA[
-18
-]]></content>  
-  <tabTrigger>char_alt</tabTrigger>
-  <scope>source.js</scope>
-</snippet>

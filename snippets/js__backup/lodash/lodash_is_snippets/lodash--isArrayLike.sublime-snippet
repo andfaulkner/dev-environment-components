@@ -1,8 +1,0 @@
-<snippet>
-  <description>Determine if val is array-like: has length prop that's gt or eq 0, & lt MAX_SAFE_INTEGER</description>
-<content><![CDATA[
-_.isArrayLike(${1:valueToCheck});${0}
-]]></content>  
-  <tabTrigger>_isArrayLike</tabTrigger>
-  <scope>source.js</scope>
-</snippet>

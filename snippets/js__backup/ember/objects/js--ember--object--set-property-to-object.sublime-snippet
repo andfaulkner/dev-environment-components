@@ -1,8 +1,0 @@
-<snippet>
-  <description>Set the value of a property on an object</description>
-<content><![CDATA[
-this.set('${1:key-to-set-value-on}', ${2:valueToSet__can_be_anything});${0}
-]]></content>  
-  <tabTrigger>emb_data_set_prop</tabTrigger>
-  <scope>source.js</scope>
-</snippet>

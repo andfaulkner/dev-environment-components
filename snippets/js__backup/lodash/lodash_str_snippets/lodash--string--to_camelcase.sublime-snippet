@@ -1,8 +1,0 @@
-<snippet>
-		<description>Return camelCase version of a string</description>
-    <content><![CDATA[
-${1/.+/var /}${1:camelcaseVersionOfStringVariable}${1/.+/ = /}_.camelCase(${2:someString});${0}
-]]></content>
-    <tabTrigger>_str_camelcase</tabTrigger>
-    <scope>source.js</scope>
-</snippet>

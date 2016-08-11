@@ -1,8 +1,0 @@
-<snippet>
-  <description>Get params sent w request (i.e. if rt def path == /user/:id, arg id exists)</description>
-<content><![CDATA[
-${1:req}.params${0:;}
-]]></content>  
-  <tabTrigger>exp_req_params</tabTrigger>
-  <scope>source.js</scope>
-</snippet>
