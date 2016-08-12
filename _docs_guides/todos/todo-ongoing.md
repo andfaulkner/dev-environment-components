@@ -248,6 +248,10 @@ TO ADD TO REACT GENERATOR
 IDLE GAME
 
 
+## Mid-July
+*    10 more JS arr functions
+
+
 *   avdi rake tutorial - pt 5
 *   include C code in ruby?
 

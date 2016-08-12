@@ -1,0 +1,8 @@
+<snippet>
+  <description>Determine if variable is an array</description>
+<content><![CDATA[
+Array.isArray(${1:someArray});${0}
+]]></content>  
+  <tabTrigger>arr_isArray</tabTrigger>
+  <scope>source.js, source.ts</scope>
+</snippet>

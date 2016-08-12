@@ -1,0 +1,10 @@
+<snippet>
+  <description>Call function on each item in array</description>
+<content><![CDATA[
+${1:someArray}.forEach((${2:item, index}) => {
+  ${0://code to run on each item}
+});
+]]></content>  
+  <tabTrigger>arr_each</tabTrigger>
+  <scope>source.js, source.ts</scope>
+</snippet>

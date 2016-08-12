@@ -1,0 +1,8 @@
+<snippet>
+  <description>Create arr with same item repeated multiple times</description>
+<content><![CDATA[
+Array(${1:numRepeats}).fill(${2:valueToFillArrayWith});${0}
+]]></content>  
+  <tabTrigger>arr_fill</tabTrigger>
+  <scope>source.js, source.ts</scope>
+</snippet>

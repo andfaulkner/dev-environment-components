@@ -1,0 +1,10 @@
+<snippet>
+  <description>Return val of 1st element passing given test</description>
+<content><![CDATA[
+${1/.+/let /}${1:someVar}${1/.+/ = /}${2:someArray}.find((${3:arrItem}) => {
+  ${0://code to run on each arr item. When it ret true, loop ends, & val at given arr location returned}
+});
+]]></content>  
+  <tabTrigger>arr_find</tabTrigger>
+  <scope>source.js, source.ts</scope>
+</snippet>
