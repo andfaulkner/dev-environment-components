@@ -1,0 +1,8 @@
+<snippet>
+  <description>Insert ref path for js lib import. Remember tsd install _lib_ --save</description>
+<content><![CDATA[
+/// <reference path="${1:rel_path_2_type_declarations_eg: ../../typings/lodash/lodash.d.ts}" />${0}
+]]></content>  
+  <tabTrigger>ref_path</tabTrigger>
+  <scope>source.ts</scope>
+</snippet>

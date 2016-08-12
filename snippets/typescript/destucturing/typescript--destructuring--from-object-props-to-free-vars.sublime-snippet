@@ -1,0 +1,8 @@
+<snippet>
+  <description>Pull properties out of an object</description>
+<content><![CDATA[
+TODO: MAKE THIS SNIPPET
+]]></content>  
+  <tabTrigger>destr</tabTrigger>
+  <scope>source.ts</scope>
+</snippet>
