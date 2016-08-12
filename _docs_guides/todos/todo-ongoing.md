@@ -249,7 +249,13 @@ IDLE GAME
 
 
 ## Mid-July
-*    10 more JS arr functions
+*    ! 5 more JS arr functions
+*    5 more JS arr functions
+
+*    Typescript generic functions
+*    Typescript generic interfaces
+*    Typescript generic classes
+
 
 
 *   avdi rake tutorial - pt 5

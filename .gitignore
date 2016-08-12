@@ -7,3 +7,4 @@ dev-env/vim_configs/.vim/backup_files/**
 dev-env/.lein/indices/**
 *.sublime-project
 *.sublime-workspace
+**/.DS_Store
