@@ -12,8 +12,11 @@ var PATHS = {
 };
 
 var tsConfig = {
-  noImplicitAny:          false,
-  experimentalDecorators: true
+  target:                     'ES5',
+  noImplicitAny:              false,
+  experimentalDecorators:     true,
+  experimentalAsyncFunctions: true,
+  allowJs:                    true
   // experimentalAsyncFunctions: true,
   // allowJS:                    true
 };

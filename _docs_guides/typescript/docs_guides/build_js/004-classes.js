@@ -3,42 +3,43 @@ var __extends = (this && this.__extends) || function (d, b) {
     function __() { this.constructor = d; }
     d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
 };
-console.log('----------------------------------------------------------------------------------');
+var cLog = console.log;
+cLog('----------------------------------------------------------------------------------');
 //###################################
 //#          BASIC CLASSES          #
 //###################################
-console.log('***************** BASIC CLASSES *****************');
+cLog('***************** BASIC CLASSES *****************');
 var Greeter = (function () {
     // CONSTRUCTOR
     function Greeter(greeting, name) {
         this.greeting = greeting;
         this.name = name;
-        console.log("Created new Greeter. Name: " + this.name + ". Unique greeting: " + this.greeting + ".");
+        cLog("Created new Greeter. Name: " + this.name + ". Unique greeting: " + this.greeting + ".");
     }
     // METHODS
     Greeter.prototype.greet = function (doUseName) {
         if (doUseName === void 0) { doUseName = false; }
         var greeting = "Hello, " + this.greeting + (doUseName ? (', my name is ' + this.name) : '') + "!";
-        console.log("Greeting returned from greet method on Greeter instance:\n    " + greeting);
+        cLog("Greeting returned from greet method on Greeter instance:\n    " + greeting);
         return greeting;
     };
     Greeter.prototype.hello = function (doLog) {
         if (doLog === void 0) { doLog = true; }
         if (doLog) {
-            console.log('hello');
+            cLog('hello');
         }
         return 'hello';
     };
     return Greeter;
 }());
-console.log(" ----- Classes can have constructors w/ typed params. To assign val of an arg -----");
-console.log(" ----- given to constructor->the instance, prop must be defined on the class. -----");
+cLog(" ----- Classes can have constructors w/ typed params. To assign val of an arg -----");
+cLog(" ----- given to constructor->the instance, prop must be defined on the class. -----");
 var BigBubbaBlob = new Greeter('aloha', 'Bubba');
-console.log(" ----- Methods can have default param values -----");
-console.log(BigBubbaBlob.greet());
-console.log(" ----- Passing a val to a fn param w a default val overrides the default val -----");
-console.log(BigBubbaBlob.greet(true));
-console.log('----------------------------------------------------------------------------------');
+cLog(" ----- Methods can have default param values -----");
+cLog(BigBubbaBlob.greet());
+cLog(" ----- Passing a val to a fn param w a default val overrides the default val -----");
+cLog(BigBubbaBlob.greet(true));
+cLog('----------------------------------------------------------------------------------');
 var GeneralProduct;
 (function (GeneralProduct) {
     GeneralProduct[GeneralProduct["Food"] = 0] = "Food";
@@ -55,25 +56,25 @@ var AmericanProduct;
     AmericanProduct[AmericanProduct["Semiautomatics"] = 3] = "Semiautomatics";
     AmericanProduct[AmericanProduct["Handguns"] = 4] = "Handguns";
 })(AmericanProduct || (AmericanProduct = {}));
-console.log('----------------------------------------------------------------------------------');
+cLog('----------------------------------------------------------------------------------');
 //#######################################
 //#          CLASS INHERITANCE          #
 //#######################################
-console.log('***************** CLASS INHERITANCE *****************');
-console.log(" ----- Create class that inherits from another class -----");
+cLog('***************** CLASS INHERITANCE *****************');
+cLog(" ----- Create class that inherits from another class -----");
 var WalmartGreeter = (function (_super) {
     __extends(WalmartGreeter, _super);
     function WalmartGreeter(greeting, name, product) {
         _super.call(this, greeting, name); // runs parent constructor (in class Greeter)
         this.product = product;
-        console.log('Product: ', AmericanProduct[product]);
+        cLog('Product: ', AmericanProduct[product]);
     }
     WalmartGreeter.prototype.sell = function (additionalProduct) {
         if (additionalProduct === void 0) { additionalProduct = null; }
         var product = AmericanProduct[this.product];
-        console.log("What in tarnation? Looks like we got some runaway deals on " + product + "!");
+        cLog("What in tarnation? Looks like we got some runaway deals on " + product + "!");
         if (additionalProduct !== null) {
-            console.log("And what the darn tootin' are we gonna do with all these extra savings on " +
+            cLog("And what the darn tootin' are we gonna do with all these extra savings on " +
                 (AmericanProduct[additionalProduct] + "?"));
         }
     };
@@ -81,55 +82,143 @@ var WalmartGreeter = (function (_super) {
         var oldHello = _super.prototype.hello.call(this, false);
         var newHello = (oldHello + " is what they say in the hoity-toity north. But this is real") +
             '\'Murica! Here we say "Hey Billy-bob, get off ma roof, Imma tryin to roll ma John Deere"';
-        console.log(newHello);
+        cLog(newHello);
         return newHello;
     };
     return WalmartGreeter;
 }(Greeter));
-console.log(" ----- Instantiate new child (inheriting) class: -----");
+cLog(" ----- Instantiate new child (inheriting) class: -----");
 var jimBob = new WalmartGreeter('yo homie', 'Jim Bob', AmericanProduct.Revolvers);
-console.log(" ----- Call instance method on child class from new (child) instance -----");
+cLog(" ----- Call instance method on child class from new (child) instance -----");
 jimBob.sell(AmericanProduct.Shotguns);
-console.log(" ----- Call instance method on original parent class from new (child) instance -----");
+cLog(" ----- Call instance method on original parent class from new (child) instance -----");
 jimBob.greet();
-console.log(" ----- Call parent class-overriding instance method on child class -----");
-console.log(" ----- Note that the overriding method calls the parent method (calls super) -----");
+cLog(" ----- Call parent class-overriding instance method on child class -----");
+cLog(" ----- Note that the overriding method calls the parent method (calls super) -----");
 jimBob.hello();
-console.log('----------------------------------------------------------------------------------');
+cLog('----------------------------------------------------------------------------------');
+//#########################################
+//#          GETTERS AND SETTERS          #
+//#########################################
+cLog('***************** GETTERS AND SETTERS *****************');
+cLog(" ----- Def 'chest of marbles' class where marbles are viewed & added via get & set -----");
+var ChestOfMarbles = (function () {
+    function ChestOfMarbles(_name) {
+        this._name = _name;
+        this._marbles = [];
+        this._verbose = false;
+    }
+    ;
+    Object.defineProperty(ChestOfMarbles.prototype, "marbleQuantity", {
+        get: function () {
+            this._log('marbleQuantity: ', this._name + " contains " + this._marbles.length + " marbles.");
+            return this._marbles.length;
+        },
+        enumerable: true,
+        configurable: true
+    });
+    ;
+    Object.defineProperty(ChestOfMarbles.prototype, "latestMarble", {
+        get: function () {
+            this._log('get latestMarble:', 'Most recently added marble:', (this._latestMarble) ? this._latestMarble : ' null');
+            return this._latestMarble;
+        },
+        set: function (marble) {
+            this._marbles = this._marbles.concat(marble);
+            this._latestMarble = marble;
+            this._log('set latestMarble: ', "New marble added to " + this._name + "!");
+        },
+        enumerable: true,
+        configurable: true
+    });
+    ;
+    ;
+    Object.defineProperty(ChestOfMarbles.prototype, "verbose", {
+        set: function (isVerbose) {
+            if (this._verbose !== isVerbose) {
+                this._verbose = isVerbose;
+                if (this._verbose) {
+                    cLog("* " + this._name + " now has verbose mode set to on. All actions will be logged.");
+                }
+                else {
+                    cLog("* " + this._name + " now has verbose mode set to off. No actions will be logged.");
+                }
+            }
+        },
+        enumerable: true,
+        configurable: true
+    });
+    ChestOfMarbles.prototype._log = function (msg, obj1, obj2) {
+        if (!this._verbose) {
+            return;
+        }
+        if (obj2) {
+            cLog(msg, obj1, obj2);
+        }
+        else if (obj1) {
+            cLog(msg, obj1);
+        }
+        else {
+            cLog(msg);
+        }
+    };
+    return ChestOfMarbles;
+}());
+cLog(" ----- Instantiate a (empty to start) chest of marbles, put in var marbleBox -----");
+var marbleBox = new ChestOfMarbles('Johnny the Marble Box');
+cLog(" ----- Get # of marbles inside & the most recent added. Should be 0 & undefined. -----");
+cLog(marbleBox.marbleQuantity);
+cLog(marbleBox.latestMarble);
+cLog(" ----- Add a marble to marbleBox. -----");
+marbleBox.latestMarble = { color: 'red', age: 10, material: 'glass' };
+cLog(" ----- No log the that marble was added because verbose prop on ChestOfMarbles defaults to false -----");
+cLog(" ----- Get # of marbles. We just added 1 & instance was empty before, so it should return 1 -----");
+cLog(marbleBox.marbleQuantity);
+cLog(" ----- Get most recently added marble, i.e. the one we just set. -----");
+cLog(marbleBox.latestMarble);
+cLog(" ----- Set marbleBox.verbose to true -----");
+marbleBox.verbose = true;
+cLog(" ----- Add marble to marbleBox. Action gets logged since marbleBox.verbose === true now -----");
+marbleBox.latestMarble = { color: 'green', age: 2, material: 'wood' };
+cLog(" ----- Get # of marbles. Should be 2 this time. Should also log that you requested this. -----");
+cLog(marbleBox.marbleQuantity);
+cLog(" ----- Get most recently added marble. Should also log that you requested this. -----");
+cLog(marbleBox.latestMarble);
+cLog('----------------------------------------------------------------------------------');
 //######################################
 //#          ABSTRACT CLASSES          #
 //######################################
-console.log('***************** ABSTRACT CLASSES *****************');
-console.log(" -- Uninstantiable base classes to derive other classes from (Note that a class derived");
-console.log("    from an abstract class is instantiable - only abstract classes themselves are not)");
-console.log('***************** ABSTRACT METHODS *****************');
-console.log(" -- Only available in abstract classes");
-console.log(" -- Methods marked abstract must have no implementation: that is provided by");
-console.log(" -- subclasses. However, you can declare the yet-unimplemented method's type info.");
-console.log(" ----- Create an abstract class with an abstract method & an implmented method -----");
+cLog('***************** ABSTRACT CLASSES *****************');
+cLog(" -- Uninstantiable base classes to derive other classes from (Note that a class derived");
+cLog("    from an abstract class is instantiable - only abstract classes themselves are not)");
+cLog('***************** ABSTRACT METHODS *****************');
+cLog(" -- Only available in abstract classes");
+cLog(" -- Methods marked abstract must have no implementation: that is provided by");
+cLog(" -- subclasses. However, you can declare the yet-unimplemented method's type info.");
+cLog(" ----- Create an abstract class with an abstract method & an implmented method -----");
 var Animal = (function () {
     function Animal() {
     }
     Animal.prototype.move = function () {
-        console.log('roamity roam roam roam...');
+        cLog('roamity roam roam roam...');
     };
     return Animal;
 }());
-console.log(" ----- Examine the var the abstract class object is assigned to: -----");
-console.log('abstract class Animal is a function: ', Animal instanceof Function);
-console.log('Note that abstract class Animal is an empty fn @ runtime: ', Animal);
-console.log(" ----- See below (in public, protected, private section) for a larger example -----");
-console.log('----------------------------------------------------------------------------------');
+cLog(" ----- Examine the var the abstract class object is assigned to: -----");
+cLog('abstract class Animal is a function: ', Animal instanceof Function);
+cLog('Note that abstract class Animal is an empty fn @ runtime: ', Animal);
+cLog(" ----- See below (in public, protected, private section) for a larger example -----");
+cLog('----------------------------------------------------------------------------------');
 //################################################
 //#          PUBLIC, PROTECTED, PRIVATE          #
 //################################################
-console.log('***************** PUBLIC, PROTECTED, PRIVATE *****************');
-console.log("-- Almost the same as in Java.");
-console.log("-- Note that methods & properties are public by default.");
-console.log("-- Public & protected (but not private) members are accessable in derived classes.");
-console.log("-- Public (but not protected & private) members are accessible outside the class");
-console.log(" ----- EXAMPLE USE OF PUBLIC, PROTECTED, PRIVATE MODIFIERS -----");
-console.log(" ----- Access modifiers on constructor args auto-assigns them to the instance -----");
+cLog('***************** PUBLIC, PROTECTED, PRIVATE *****************');
+cLog("-- Almost the same as in Java.");
+cLog("-- Note that methods & properties are public by default.");
+cLog("-- Public & protected (but not private) members are accessable in derived classes.");
+cLog("-- Public (but not protected & private) members are accessible outside the class");
+cLog(" ----- EXAMPLE USE OF PUBLIC, PROTECTED, PRIVATE MODIFIERS -----");
+cLog(" ----- Access modifiers on constructor args auto-assigns them to the instance -----");
 var PowerStation;
 (function (PowerStation) {
     PowerStation[PowerStation["Solar"] = 2] = "Solar";
@@ -157,12 +246,12 @@ var WaterTreatmentPlant = (function (_super) {
         this.name = name;
         this.storedVolts = 0;
         this.squareMetres = squareMetres;
-        console.log("New water treatment plant, thy gates hath opened! I shall dub thee... " + this.name + ".");
+        cLog("New water treatment plant, thy gates hath opened! I shall dub thee... " + this.name + ".");
     }
     // public API, takes request to create clean water
     WaterTreatmentPlant.prototype.processWater = function (daysOfTreatment) {
         var amountTreated = this.runTreatment(daysOfTreatment);
-        console.log("WaterTreatmentPlant#processWater: amountTreated (return val): " + amountTreated + "L");
+        cLog("WaterTreatmentPlant#processWater: amountTreated (return val): " + amountTreated + "L");
         return amountTreated;
     };
     // Increase # of storedVolts based on power station type used, and days it charged the water
@@ -181,13 +270,13 @@ var WaterTreatmentPlant = (function (_super) {
     };
     // run the full requested treatment (no resource shortages), return litres of water produced
     WaterTreatmentPlant.prototype.runFullTreatment = function (requiredVolts, daysOfTreatment) {
-        console.log('There was enough power! yay!');
+        cLog('There was enough power! yay!');
         this.storedVolts = this.storedVolts - requiredVolts;
         return this.dailyLitres * daysOfTreatment;
     };
     // run treatment until plant runs out of power, return litres of water produced
     WaterTreatmentPlant.prototype.runTreatmentVoltShortage = function () {
-        console.log('Not enough power - how sad :(');
+        cLog('Not enough power - how sad :(');
         var daysBeforeNoPower = this.storedVolts / this.dailyVoltUse();
         this.storedVolts = 0;
         return daysBeforeNoPower * this.dailyLitres;
@@ -195,23 +284,23 @@ var WaterTreatmentPlant = (function (_super) {
     // calculate number of stored volts required to completed the requested treatment
     WaterTreatmentPlant.prototype.voltsRequired = function (daysOfTreatment) {
         var requiredVolts = this.dailyVoltUse() * daysOfTreatment;
-        console.log('requiredVolts: ', requiredVolts);
+        cLog('requiredVolts: ', requiredVolts);
         return requiredVolts;
     };
     return WaterTreatmentPlant;
 }(IndustrialPlant));
 var CobourgPoosucker = new WaterTreatmentPlant(1000, 500, 'Cobourg Poosucker');
-console.log(" ----- Should make no water since we haven't charged the plant yet. -----");
+cLog(" ----- Should make no water since we haven't charged the plant yet. -----");
 CobourgPoosucker.processWater(4);
-console.log(" ----- We use the public api to charge the plant, but not quite enough for the full order... -----");
+cLog(" ----- Uses public api to charge plant. Gives not quite enough power to do the full order. -----");
 CobourgPoosucker.chargeBatteries(PowerStation.Oil, 1);
-console.log(" ----- Now when we run it again there's enough power to produce some water, but not the whole order -----");
+cLog(" ----- Now has enough volts to produce some (but not all req) water if order run again -----");
 CobourgPoosucker.processWater(4);
-console.log(" ----- View leftover voltage stored via public accessor, should be 0 -----");
-console.log(CobourgPoosucker.storedVolts);
-console.log(" ----- We use the public api to charge the plant, with enough power this time... -----");
+cLog(" ----- View leftover voltage stored via public accessor, should be 0 -----");
+cLog(CobourgPoosucker.storedVolts);
+cLog(" ----- We use the public api to charge the plant, with enough power this time... -----");
 CobourgPoosucker.chargeBatteries(PowerStation.Fusion, 1);
-console.log(" ----- Now when we run it again there's enough power to produce the whole order -----");
+cLog(" ----- Now when we run it again there's enough power to produce the whole order -----");
 CobourgPoosucker.processWater(6);
-console.log(" ----- View leftover voltage stored via public accessor again, should be 40 this time: -----");
-console.log(CobourgPoosucker.storedVolts);
+cLog(" ----- View leftover voltage stored via public accessor again, should be 40 this time: -----");
+cLog(CobourgPoosucker.storedVolts);
