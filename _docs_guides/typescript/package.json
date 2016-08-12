@@ -1,0 +1,21 @@
+{
+  "name": "typescript_docs_guides",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "gulp": "^3.9.1",
+    "gulp-typescript": "^2.13.6",
+    "lodash": "^4.14.2",
+    "typescript": "^1.8.10"
+  },
+  "devDependencies": {
+    "nodemon": "^1.10.0",
+    "rootpath": "^0.1.2"
+  }
+}
