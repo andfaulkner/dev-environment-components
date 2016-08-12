@@ -1,0 +1,8 @@
+<snippet>
+  <description>Reverse an array</description>
+<content><![CDATA[
+${1:someArray}.reverse();${0}
+]]></content>  
+  <tabTrigger>arr_rev</tabTrigger>
+  <scope>source.js, source.ts</scope>
+</snippet>

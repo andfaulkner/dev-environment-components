@@ -1,0 +1,10 @@
+<snippet>
+  <description>Return array from running given fn on each item in an array</description>
+<content><![CDATA[
+${1/.+/let /}${1:someNewArr}${1/.+/ = /}${2:someArray}.map((${3:item, index, fullArray}) => {
+  ${0:return newArrayValue;}
+});
+]]></content>  
+  <tabTrigger>arr_map</tabTrigger>
+  <scope>source.js, source.ts</scope>
+</snippet>

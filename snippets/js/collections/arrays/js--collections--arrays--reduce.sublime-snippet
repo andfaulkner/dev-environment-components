@@ -1,0 +1,10 @@
+<snippet>
+  <description>Return aggregate value from collapsing all arr items via a function</description>
+<content><![CDATA[
+${1/.+/let /}${1:someNewVal}${1/.+/ = /}${2:someArray}.reduce((${4:total, currentVal, index, fullArr}) => {
+  ${0:return total.concat([currentVal]);}
+}, ${3:initialValue});
+]]></content>  
+  <tabTrigger>arr_reduce</tabTrigger>
+  <scope>source.js, source.ts</scope>
+</snippet>
