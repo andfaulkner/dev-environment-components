@@ -1,0 +1,8 @@
+<snippet>
+  <description>Set margin around all sides of item.</description>
+<content><![CDATA[
+margin: ${1:1val_allsides_eg_10px  }${2:${3:top_0px} ${4:right_0px} ${5:bottom_0px} ${6:left_0px}};${0}
+]]></content>
+  <tabTrigger>margin</tabTrigger>
+  <scope>source.css</scope>
+</snippet>

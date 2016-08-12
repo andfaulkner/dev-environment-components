@@ -1,0 +1,8 @@
+<snippet>
+  <description>Programatically click element(s) matched by selector (e.g. button)</description>
+<content><![CDATA[
+${1:some_selector_eg___document.getElementById('some_id')}.click();${0}
+]]></content>  
+  <tabTrigger>dom_do_click</tabTrigger>
+  <scope>source.js, source.ts</scope>
+</snippet>

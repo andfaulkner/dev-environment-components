@@ -3,6 +3,6 @@
 <content><![CDATA[
 document.body.innerHTML${0}
 ]]></content>  
-  <tabTrigger>dom__doc__innerhtml</tabTrigger>
+  <tabTrigger>dom_doc_innerhtml</tabTrigger>
   <scope>source.js, source.ts</scope>
 </snippet>

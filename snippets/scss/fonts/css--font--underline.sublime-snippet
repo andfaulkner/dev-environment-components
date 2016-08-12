@@ -1,0 +1,8 @@
+<snippet>
+  <description>Add or rm underline, overline, or line-thru</description>
+<content><![CDATA[
+text-decoration: ${1:none|underline|overline|line-through};${0}
+]]></content>  
+  <tabTrigger>font_underline</tabTrigger>
+  <scope>source.css</scope>
+</snippet>

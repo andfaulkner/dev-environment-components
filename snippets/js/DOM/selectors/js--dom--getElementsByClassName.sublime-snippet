@@ -1,0 +1,8 @@
+<snippet>
+  <description>Get all DOM elements w the given class. Append [0] to get 1st only.</description>
+<content><![CDATA[
+document.getElementsByClassName(${1:e.g. 'home-button'|e.g. 'home-button round-edge'})${2:[0]}${0}
+]]></content>  
+  <tabTrigger>dom_sel_class</tabTrigger>
+  <scope>source.js, source.ts</scope>
+</snippet>

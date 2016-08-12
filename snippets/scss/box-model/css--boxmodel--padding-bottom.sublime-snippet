@@ -1,0 +1,8 @@
+<snippet>
+  <description>Set padding below item.</description>
+<content><![CDATA[
+padding-bottom: ${1:10px};${0}
+]]></content>
+  <tabTrigger>padding_bottom</tabTrigger>
+  <scope>source.css</scope>
+</snippet>

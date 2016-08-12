@@ -1,0 +1,8 @@
+<snippet>
+  <description>Set padding to right of item.</description>
+<content><![CDATA[
+padding-right: ${1:10px};${0}
+]]></content>
+  <tabTrigger>padding_right</tabTrigger>
+  <scope>source.css</scope>
+</snippet>

@@ -1,0 +1,8 @@
+<snippet>
+  <description>Get an HTML tag by the ID it's identified with.</description>
+<content><![CDATA[
+document.getElementById(${1:'id_no_hash_before'})${0}
+]]></content>  
+  <tabTrigger>dom_sel_id</tabTrigger>
+  <scope>source.js, source.ts</scope>
+</snippet>

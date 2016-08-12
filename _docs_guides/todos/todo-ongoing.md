@@ -1,21 +1,53 @@
-Late July 2016
-==============
-*   ! add snippets to default project
-*   ! paste mode vim again
 
-*   ! file permissions shell manual
-*   ! conditionals shell manual
-*   ! correct shebangs snippet
-*   ! 15 sh snippets
-*   ! correct shebang for bash
-*   ! change case - better hotkeys
+August
+======
 
-*   ! 20 js collection snippets - 20
-*   ! 1 more hour of python
-*   ! 10 python snippets
-*   ! 10 more python snippets
-*   ! WTF is graphql?
-*   ! 'rename' hotkey
+August 12th
+-----------
+*   ! 5 more JS arr functions
+*   ! Typescript generic functions
+*   ! get crap out of snippets repo (read: vim plugins)
+*   ! 5 css box-model snippets
+*   ! 5 more css box-model snippets
+*   ! 5 more more css box-model snippets
+*   ! 5 more css font snippets
+*   5 css layout snippets
+
+*   5 more JS arr functions
+
+*   Typescript generic interfaces
+*   Typescript generic classes
+*   Learn enzyme
+*   Supertest (high-level abstraction for testing http) ::: https://github.com/visionmedia/supertest
+             - ultra-simple http-based assertions. Great for testing express.
+*   Chai  (assertion library)
+*   Sinon:                                              ::: https://www.codementor.io/nodejs/tutorial/unit-testing-nodejs-tdd-mocha-sinon
+*   Handlebars
+*   ZombieJS?                                           ::: https://github.com/assaf/zombie
+*   WebDriverIO?  (control a browser)  [ testing ]      ::: http://webdriver.io/
+*   Chimp                                               ::: http://xolv.io/products/chimp
+*   NightmareJS  (control a browser w a UI thru code)   ::: http://www.nightmarejs.org/
+*   node-walk  (recursive file-walking)                 ::: https://github.com/coolaj86/node-walk
+*   Mocha relearn
+*   Axios (ultra-simple AJAX requests) ::: https://github.com/mzabriskie/axios
+
+*   js-beautify into new irjs repl? (make the outputs prettier) ::: https://www.npmjs.com/package/js-beautify
+*   cli-table for prettier irjs repl output of arrays & objs?   ::: https://www.npmjs.com/package/cli-table
+*   ls in new irjs repl?
+*   cd in new irjs repl?
+*   whereami in new irjs repl?
+
+*   just for fun...control serial port with NodeJS ::: https://www.npmjs.com/package/serialport
+
+*   prettyprint js
+*   HTML canvas basics
+*   hotkey to pull up snippets like when you type
+*   learn commander: https://developer.atlassian.com/blog/2015/11/scripting-with-node/
+
+YAGNI (probably) - for TOHRI position
+*   Cheerio
+*   Cucumber.js
+
 
 
 ====================================================
@@ -88,12 +120,23 @@ TODO: mega-interview thing
 
 *   graphql sample app
 
-*   ! heredoc snippet
+*   ! get a react project working
+*   ! move client code into "client" directory
+*   ! create "server" for react*   ! heredoc snippet
 *   ! 10 js string snippets - 10
 *   ! unless empty snippet
 *   ! try a react-starter-kit app
 *   ! 10 new eslint rules
 *   ! lock down project ruby version
+*   ! add bootstrap to react
+*   ! create generator making use of react generator
+*   ! JS to inject text into file?
+*   ! get react build going
+*   ! react-bootstrap?
+*   ! remove node_modules from default project
+*   ! vimrc alias
+*   ?X Usage data snippet
+
 *   20 Express snippets
 *   10 NodeJS file snippets
 *   10 NodeJS other snippets
@@ -101,34 +144,15 @@ TODO: mega-interview thing
 *   10 html snippets
 *   html dl, dd, and dt tags.
 
-*   Usage data snippet
-*   Learn enzyme
-*   prettyprint js
-*   HTML canvas basics
-*   hotkey to pull up snippets like when you type
-*   get crap out of snippets repo (read: vim plugins)
-
-*   learn commander: https://developer.atlassian.com/blog/2015/11/scripting-with-node/
-*   get a react project working
-*   move client code into "client" directory
-*   create "server" for react
 
 *   2nd additional hour of python
 
-*   add bootstrap to react
 *   horizon.io? http://horizon.io/docs/getting-started/
     *   open-source backend for JavaScript apps
     *   see https://medium.com/front-end-hacking/react-webpack-and-horizon-quick-start-b9335c1ece53#.jt965piqk
 *   10 js snippets
 
 *   refresh ReactJS knowledge
-
-*   create generator making use of react generator
-*   JS to inject text into file?
-*   get react build going
-*   react-bootstrap?
-*   remove node_modules from default project
-*   vimrc alias
 
 
 TO ADD TO REACT GENERATOR
@@ -146,6 +170,26 @@ TO ADD TO REACT GENERATOR
 
 
 
+
+
+Late July 2016
+==============
+*   ! add snippets to default project
+*   ! paste mode vim again
+
+*   ! file permissions shell manual
+*   ! conditionals shell manual
+*   ! correct shebangs snippet
+*   ! 15 sh snippets
+*   ! correct shebang for bash
+*   ! change case - better hotkeys
+
+*   ! 20 js collection snippets - 20
+*   ! 1 more hour of python
+*   ! 10 python snippets
+*   ! 10 more python snippets
+*   ! WTF is graphql?
+*   ! 'rename' hotkey
 
 --------------------------------------------------------------------------------------------------
 --------------------------------------------------------------------------------------------------
@@ -213,8 +257,9 @@ TO ADD TO REACT GENERATOR
 *   ! 1 'directive' snippet
 *   ! 5 'string' snippets - 5
 *   ! 1 class snippet
-*   1 import snippet
+*   ! 1 import snippet
 *   ! rescue snippet
+*   !X! learn 'methadone' CLI app generate  << I dislike methadone
 *   ! 1st 1/2 of drb
 *   ! learn trollop
 *   ! get cli args working in Android build script again
@@ -224,44 +269,11 @@ TO ADD TO REACT GENERATOR
 *   ! fix your git snippets repo!
 *   ! 4 code load snippets
 *   ! generate 'methadone' CLI app
-*   dotenv
-*   simple form
-*   cancancan: https://github.com/CanCanCommunity/cancancan
-*   delayed_job: https://github.com/collectiveidea/delayed_job
-*   rails best practices analysis: https://github.com/railsbp/rails_best_practices
-*   rspec-rails?: https://github.com/rspec/rspec-rails
-*   5 'file' snippets
-*   2 more array snippets
-*   2 more hash snippets
-*   2 more string snippets
-*   5 number snippets
-*   re-include books
-*   rm some of the vim crap from the repo
-*   nokogiri
-
-*   ruby Queue data structure
-*   2nd 1/2 of drb
-*   !X! learn 'methadone' CLI app generate  << I dislike methadone
-*   learn CLI app testing
-
-
-IDLE GAME
-
-
-## Mid-July
-*    ! 5 more JS arr functions
-*    5 more JS arr functions
-
-*    Typescript generic functions
-*    Typescript generic interfaces
-*    Typescript generic classes
 
 
 
-*   avdi rake tutorial - pt 5
-*   include C code in ruby?
 
-*   make own gem
+
 
 *   clojure dotimes
 *   clojure go
@@ -290,8 +302,10 @@ IDLE GAME
 *   clojure forms
 *   simple clojure print
 
-----
 
+
+------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------
 Ruby
 ====
 
@@ -300,6 +314,26 @@ Ruby
 *   delve into method_missing: https://www.leighhalliday.com/ruby-metaprogramming-method-missing
 *   ruby macros - try them out:: gem install macros
     +   see http://devblog.arnebrasseur.net/2015-10-Exploring-Ruby-Macros
+*   dotenv
+*   simple form
+*   cancancan: https://github.com/CanCanCommunity/cancancan
+*   delayed_job: https://github.com/collectiveidea/delayed_job
+*   rails best practices analysis: https://github.com/railsbp/rails_best_practices
+*   rspec-rails?: https://github.com/rspec/rspec-rails
+*   5 'file' snippets
+*   2 more array snippets
+*   2 more hash snippets
+*   2 more string snippets
+*   5 number snippets
+*   re-include books
+*   rm some of the vim crap from the repo
+*   nokogiri
+*   ruby Queue data structure
+*   2nd 1/2 of drb
+*   learn CLI app testing
+*   include C code in ruby?
+*   avdi rake tutorial - pt 5
+*   make own gem
 
 
 

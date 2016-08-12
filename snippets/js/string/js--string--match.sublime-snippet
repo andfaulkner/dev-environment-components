@@ -1,0 +1,8 @@
+<snippet>
+  <description>Ret all (or 1st) matching substr(s) in an str, or null if no match.</description>
+<content><![CDATA[
+${1:str}.match(/${3:regex_content_here}/${2:flags__g_for_match_all__i_for_ignore_case});${0}
+]]></content>  
+  <tabTrigger>str_match</tabTrigger>
+  <scope>source.js, source.ts</scope>
+</snippet>

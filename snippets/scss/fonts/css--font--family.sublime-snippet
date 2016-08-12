@@ -1,0 +1,8 @@
+<snippet>
+  <description>Change the font type (family) e.g. Arial, Helvetica</description>
+<content><![CDATA[
+font-family: "${1:Times New Roman|Book Antiqua|Helvetica|Arial|Lucida Sans Unicode|Courier New}"
+]]></content>  
+  <tabTrigger>font_family</tabTrigger>
+  <scope>source.css</scope>
+</snippet>

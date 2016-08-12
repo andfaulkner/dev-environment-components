@@ -1,0 +1,8 @@
+<snippet>
+  <description>Set margin to left of item.</description>
+<content><![CDATA[
+margin-left: ${1:10px};${0}
+]]></content>
+  <tabTrigger>margin_left</tabTrigger>
+  <scope>source.css</scope>
+</snippet>

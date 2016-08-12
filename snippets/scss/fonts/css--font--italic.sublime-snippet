@@ -1,0 +1,8 @@
+<snippet>
+  <description>Make text italic</description>
+<content><![CDATA[
+font-style: italic;${0}
+]]></content>  
+  <tabTrigger>font_italic</tabTrigger>
+  <scope>source.css</scope>
+</snippet>

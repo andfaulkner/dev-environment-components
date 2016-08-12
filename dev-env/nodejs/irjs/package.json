@@ -1,0 +1,16 @@
+{
+  "name": "irjs",
+  "version": "1.0.0",
+  "description": "",
+  "main": "irjs.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "async": "^2.0.1",
+    "lodash": "^4.15.0",
+    "moment": "^2.14.1"
+  }
+}

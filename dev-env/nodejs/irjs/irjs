@@ -1,0 +1,49 @@
+#!/usr/bin/env node
+
+// boot node repl with a few libraries auto-loaded and some top-level convenience functions
+(function () {
+  "use strict";
+
+  var repl = require("repl");
+  var context = repl.start("irjs> ").context;
+  var path = require('path');
+  var fs = require('fs');
+  
+  // http://stackoverflow.com/questions/9080085/node-js-find-home-directory-in-platform-agnostic-way
+  var getUserHome = () => process.env[/^win/.test(process.platform) ? 'USERPROFILE' : 'HOME'];
+
+  var nodercPath = path.join(getUserHome(), '.noderc.js');
+
+  var libs = {
+    async:  require('async'),
+    l_:     require('lodash'), // l_ used since repl already uses _ for previous output
+    lodash: require('lodash'),
+    moment: require('moment')
+  };
+
+  var helpers = {
+    exit: () => process.exit(1),
+    pwd: () => process.argv[1].split(/\/[^\/]*$/).join('')
+  };
+
+  // merge lib namespaces & helper functions into repl context.
+  // each key in both helpers and libs becomes a top-level var in the repl.
+  var mergeIntoContext = (objToMerge) => {
+    Object.keys(objToMerge).forEach((key) => context[key] = objToMerge[key]);
+  };
+  mergeIntoContext(libs);
+  mergeIntoContext(helpers);
+
+  // try to load in all functions defined in .noderc file
+  if (!fs.existsSync(nodercPath)) {
+    if (process.argv.find((item) => item === '--debug')) {
+      console.log(`noderc not found at ${nodercPath}`);
+    }
+    return;
+  }
+  try {
+    mergeIntoContext(require(nodercPath));
+  } catch(e) {
+    console.error("Failed to load noderc file, at: '" + nodercPath + "'");
+  }
+}());
