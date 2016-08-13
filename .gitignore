@@ -8,3 +8,4 @@ dev-env/.lein/indices/**
 *.sublime-project
 *.sublime-workspace
 **/.DS_Store
+.history/**
