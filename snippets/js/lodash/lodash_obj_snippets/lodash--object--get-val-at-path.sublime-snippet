@@ -1,0 +1,8 @@
+<snippet>
+    <description>Get the val at path of obj. Optionally ret default val if path not found</description>
+    <content><![CDATA[
+${1/.+/var /}${1:valueAtPath}${1/.+/ = /}_.get(${2:objToQuery}, ${3:/*path_e.g. 'a' | 'a[0]' | 'a.b.c' | 'a.b[1].c' | ['a', '0', 'b'] */});${0}
+]]></content>
+    <tabTrigger>_obj_get</tabTrigger>
+    <scope>source.js, source.ts</scope>
+</snippet>

@@ -1,0 +1,11 @@
+<snippet>
+    <description>Run fn on all val:key pairs in obj, R->L. Ret orig obj: ignores iteratee ret vals</description>
+    <content><![CDATA[
+${1/.+/var /}${1:originalObject}${1/.+/ = /}_.forOwnRight(${2:objToIterateOver}, (${3:val}, ${4:key}${5/.+/, /}${5:origObj}) => {
+  ${0://do things with val & key here}
+  return 'ok';
+});
+]]></content>
+    <tabTrigger>_obj_forOwnRight</tabTrigger>
+    <scope>source.js, source.ts</scope>
+</snippet>
