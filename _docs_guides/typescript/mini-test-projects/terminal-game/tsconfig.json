@@ -1,0 +1,23 @@
+{
+    "compilerOptions": {
+        "module": "commonjs",
+        "target": "ES5",
+        "experimentalDecorators": true,
+        "noImplicitAny": false,
+        "removeComments": false,
+        "preserveConstEnums": true,
+        "sourceMap": true,
+        "allowJs": true,
+        "pretty": true
+    },
+    "exclude": [
+        "node_modules",
+        "docs_guides/build_js",
+        "*.js",
+        "*.json",
+        ".git",
+        ".eslintrc",
+        ".babelrc",
+        ".node-version"
+    ]
+}

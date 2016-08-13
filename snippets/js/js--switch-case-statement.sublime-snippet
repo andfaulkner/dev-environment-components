@@ -1,0 +1,14 @@
+<snippet>
+  <description>Switch-case statement based on string input</description>
+<content><![CDATA[
+switch(${1:some_var_oft_a_string}) {
+  case ${2:"some_string"}:
+    ${3://code run if value given to switch equals value given to case }
+    break;
+  default:
+    ${0://runs in default condition}
+}
+]]></content>  
+  <tabTrigger>switch</tabTrigger>
+  <scope>source.js, source.ts</scope>
+</snippet>

@@ -8,8 +8,8 @@ var ts = require('gulp-typescript');
 var path = require('path');
 
 var PATHS = {
-  typescript: './docs_guides/src_typescript/**/*.ts',
-  js_build:   './docs_guides/build_js'
+    typescript: './src_ts/**/*.ts',
+    js_build: './build_js'
 };
 
 var tsConfig = require(path.join(__dirname, 'tsconfig.json')).compilerOptions;
@@ -18,21 +18,21 @@ var tsConfig = require(path.join(__dirname, 'tsconfig.json')).compilerOptions;
  * Render typescript files to javascript - for NodeJS-only (non-browser) code
  */
 gulp.task('typescript', () => {
-  return gulp.src(PATHS.typescript)
-    .pipe(ts(tsConfig))
-    .pipe(gulp.dest(PATHS.js_build));
+    return gulp.src(PATHS.typescript)
+        .pipe(ts(tsConfig))
+        .pipe(gulp.dest(PATHS.js_build));
 });
 
 /**
  * Watch for changes
  */
 var rerunOnChange = (() => {
-  gulp.watch(PATHS.typescript, ['typescript']);
+    gulp.watch(PATHS.typescript, ['typescript']);
 });
 
 /**
  * Build the app
  */
 gulp.task('default', ['typescript'], function() {
-  return rerunOnChange();
+    return rerunOnChange();
 });

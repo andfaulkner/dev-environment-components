@@ -1,0 +1,18 @@
+{
+  "name": "terminal-game",
+  "version": "1.0.0",
+  "description": "",
+  "main": "Gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "keypress": "^0.2.1",
+    "lodash": "^4.15.0"
+  },
+  "devDependencies": {
+    "retyped-keypress-tsd-ambient": "^2.0.3-0"
+  }
+}

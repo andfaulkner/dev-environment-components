@@ -19,7 +19,10 @@ August 12th
 *   ! TYPESCRIPT::: get proper Typescript IDE set up
 
 *   ! snippet to repeat action given # of times
-*   switch-case snippet
+*   ! switch-case snippet
+*   ! respond to Tony Deluca re: Kinaxis
+
+*   definitions needed: Implicit Referencing, ambient modules / declarations?
 
 *   TYPESCRIPT::: interfaces:: extending interfaces
 *   TYPESCRIPT::: interfaces:: hybrid types
@@ -56,6 +59,7 @@ August 12th
 *   TYPESCRIPT::: decorators:: basic
 *   TYPESCRIPT::: decorators:: basic
 
+*   typescript-react
 
 *   5 css layout snippets
 
