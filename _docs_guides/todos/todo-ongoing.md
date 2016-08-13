@@ -1,4 +1,3 @@
-
 August
 ======
 
@@ -11,25 +10,67 @@ August 12th
 *   ! 5 more css box-model snippets
 *   ! 5 more more css box-model snippets
 *   ! 5 more css font snippets
+*   ! learn to use document.querySelector
+*   ! learn to use document.querySelectorAll
+*   ! document.querySelector snippet
+*   ! document.querySelectorAll snippet
+*   ! 5 more JS dom snippets
+
+*   TYPESCRIPT::: interfaces:: extending interfaces
+*   TYPESCRIPT::: interfaces:: hybrid types
+*   TYPESCRIPT::: interfaces:: interfaces extending classes
+
+*   TYPESCRIPT::: classes:: static properties
+*   TYPESCRIPT::: classes:: constructor functions
+*   TYPESCRIPT::: classes:: using classes as interfaces
+
+*   TYPESCRIPT::: generics:: generic classes
+*   TYPESCRIPT::: generics:: generic constraints: basics
+*   TYPESCRIPT::: generics:: generic constraints: using type params in generic constraints
+*   TYPESCRIPT::: generics:: generic constraints: using class types in generics
+
+*   TYPESCRIPT::: enums:: ambient enums
+
+*   TYPESCRIPT::: type inference:: contextual type
+
+*   TYPESCRIPT::: type guards:: type guards / differentiating types basics
+*   TYPESCRIPT::: type guards:: user-defined type guards
+*   TYPESCRIPT::: type guards:: typeof type guards
+*   TYPESCRIPT::: type guards:: instanceof type guards
+*   TYPESCRIPT::: intersection types
+*   TYPESCRIPT::: type aliases
+*   TYPESCRIPT::: string literal types
+*   TYPESCRIPT::: polymorphic this types
+
+*   TYPESCRIPT::: namespaces:: namespace basics
+*   TYPESCRIPT::: namespaces:: cross-file namespaces
+*   TYPESCRIPT::: namespaces:: namespace aliases
+*   TYPESCRIPT::: namespaces:: ambient namespaces
+
 *   5 css layout snippets
 
-*   5 more JS arr functions
+*   5 more JS arr snippets
 
 *   Typescript generic interfaces
 *   Typescript generic classes
+
+
 *   Learn enzyme
-*   Supertest (high-level abstraction for testing http) ::: https://github.com/visionmedia/supertest
+*   Supertest (high-level abstraction for testing http)  ::: https://github.com/visionmedia/supertest
              - ultra-simple http-based assertions. Great for testing express.
 *   Chai  (assertion library)
-*   Sinon:                                              ::: https://www.codementor.io/nodejs/tutorial/unit-testing-nodejs-tdd-mocha-sinon
+*   Sinon:                                               ::: https://www.codementor.io/nodejs/tutorial/unit-testing-nodejs-tdd-mocha-sinon
 *   Handlebars
-*   ZombieJS?                                           ::: https://github.com/assaf/zombie
-*   WebDriverIO?  (control a browser)  [ testing ]      ::: http://webdriver.io/
-*   Chimp                                               ::: http://xolv.io/products/chimp
-*   NightmareJS  (control a browser w a UI thru code)   ::: http://www.nightmarejs.org/
-*   node-walk  (recursive file-walking)                 ::: https://github.com/coolaj86/node-walk
+*   ZombieJS?                                            ::: https://github.com/assaf/zombie
+*   WebDriverIO?  (control a browser)  [ testing ]       ::: http://webdriver.io/
+*   Chimp                                                ::: http://xolv.io/products/chimp
+*   NightmareJS  (control a browser w a UI thru code)    ::: http://www.nightmarejs.org/
+*   node-walk  (recursive file-walking)                  ::: https://github.com/coolaj86/node-walk
 *   Mocha relearn
-*   Axios (ultra-simple AJAX requests) ::: https://github.com/mzabriskie/axios
+*   Axios (ultra-simple AJAX requests)                   ::: https://github.com/mzabriskie/axios
+*   Give Highland another look (srsly get better at streams dude) ::: https://github.com/mzabriskie/axios
+*   Kefir - nice looking FRP lib. Check out FRP again    ::: http://rpominov.github.io/kefir/
+*   Sequelize? (What looks like a way better NodeJS ORM) ::: https://www.npmjs.com/package/sequelize
 
 *   js-beautify into new irjs repl? (make the outputs prettier) ::: https://www.npmjs.com/package/js-beautify
 *   cli-table for prettier irjs repl output of arrays & objs?   ::: https://www.npmjs.com/package/cli-table

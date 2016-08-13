@@ -1,0 +1,8 @@
+<snippet>
+  <description>Get parent DOM node of another DOM node</description>
+<content><![CDATA[
+${1/.+/var /}${1:varToAssignParentNodeTo}${1/.+/ = /}${2:domNode e.g. document.getElementById('title-area')}.parentNode;${0}
+]]></content>  
+  <tabTrigger>dom_node_parent</tabTrigger>
+  <scope>source.js, source.ts</scope>
+</snippet>

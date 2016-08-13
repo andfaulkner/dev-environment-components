@@ -1,0 +1,8 @@
+<snippet>
+  <description>Grab all elements matching given jQuery-esque selector</description>
+<content><![CDATA[
+document.querySelectorAll('${1:sometag#some-id.some-class[someprop=someval]}')${0:;}
+]]></content>  
+  <tabTrigger>dom_sel_querySelAll</tabTrigger>
+  <scope>source.js, source.ts</scope>
+</snippet>
