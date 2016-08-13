@@ -21,6 +21,7 @@ August 12th
 *   ! snippet to repeat action given # of times
 *   ! switch-case snippet
 *   ! respond to Tony Deluca re: Kinaxis
+*   2 more lodash string snippets
 
 *   definitions needed: Implicit Referencing, ambient modules / declarations?
 

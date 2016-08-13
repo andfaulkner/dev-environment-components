@@ -1,5 +1,6 @@
-/// <reference path="../../typings/lodash/lodash.d.ts" />
 "use strict";
+/// <reference path="../../typings/lodash/lodash.d.ts" />
+var _ = require('lodash');
 console.log('----------------------------------------------------------------------------------');
 //################################
 //#          NAMESPACES          #
@@ -43,7 +44,6 @@ console.log(" ----- REFERENCE TYPE -----");
 console.log(" -- Reference types (/// comments) provide access to ambient declarations.");
 console.log("      E.g.: /// <reference path=\"../../typings/lodash/lodash.d.ts\" /> on 1st line");
 console.log(" -- However, libs this covers must still be explicitly imported, to use them. e.g.:");
-var _ = require('lodash');
 console.log((_ && _.startsWith) ? 'lodash successfully imported!' : "Unable to import lodash :(");
 // . E.g.
 //##     /// <reference path="../../typings/lodash/lodash.d.ts" />

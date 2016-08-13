@@ -1,0 +1,8 @@
+<snippet>
+		<description>Ret true if str ends w given substr, or if substr matches just b4 given index</description>
+    <content><![CDATA[
+${1/.+/var /}${1:boolResult}${1/.+/ = /}_.endsWith(${2:someString}, ${3:substr_to_check_for}${4/.+/, /}${4:optionalIndexToStartSrchFrom__eg__1});${0}
+]]></content>
+    <tabTrigger>_str_endsWith</tabTrigger>
+    <scope>source.js, source.ts</scope>
+</snippet>

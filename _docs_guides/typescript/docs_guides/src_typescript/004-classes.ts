@@ -313,7 +313,6 @@ class WaterTreatmentPlant extends IndustrialPlant {
   }
 }
 
-
 let CobourgPoosucker = new WaterTreatmentPlant(1000, 500, 'Cobourg Poosucker');
 
 cLog(" ----- Should make no water since we haven't charged the plant yet. -----");
