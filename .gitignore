@@ -9,3 +9,4 @@ dev-env/.lein/indices/**
 *.sublime-workspace
 **/.DS_Store
 .history/**
+.vscode

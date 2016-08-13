@@ -59,37 +59,3 @@ console.log(" -- However, libs this covers must still be explicitly imported, to
 import * as _ from 'lodash';
 console.log((_ && _.startsWith) ? 'lodash successfully imported!' : "Unable to import lodash :(");
 
-
-// . E.g.
-//##     /// <reference path="../../typings/lodash/lodash.d.ts" />
-
-
-
-
-
-var testObj = {
-  a: 'eeeeehhh',
-  b: () => console.log('bee!'),
-  c: 'see?',
-  d: 42,
-  e: function(name) {
-    console.log(`hello ${name}!`);
-    return _.capitalize(name);
-  }
-}
-
-testObj['f'] = () => console.log("you're inside function e!");
-
-_.forOwn(testObj, (val, key, origObj) => {
-  console.log('iterated! key: ', key, '; val: ', val);
-});
-
-console.log("\n\n");
-_.forOwnRight(testObj, (val, key, origObj) => {
-  console.log('key: ', key, ';  val: ', val);
-  return 'ok';
-});
-
-
-
-

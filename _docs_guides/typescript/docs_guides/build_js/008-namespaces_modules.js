@@ -45,24 +45,3 @@ console.log(" -- Reference types (/// comments) provide access to ambient declar
 console.log("      E.g.: /// <reference path=\"../../typings/lodash/lodash.d.ts\" /> on 1st line");
 console.log(" -- However, libs this covers must still be explicitly imported, to use them. e.g.:");
 console.log((_ && _.startsWith) ? 'lodash successfully imported!' : "Unable to import lodash :(");
-// . E.g.
-//##     /// <reference path="../../typings/lodash/lodash.d.ts" />
-var testObj = {
-    a: 'eeeeehhh',
-    b: function () { return console.log('bee!'); },
-    c: 'see?',
-    d: 42,
-    e: function (name) {
-        console.log("hello " + name + "!");
-        return _.capitalize(name);
-    }
-};
-testObj['f'] = function () { return console.log("you're inside function e!"); };
-_.forOwn(testObj, function (val, key, origObj) {
-    console.log('iterated! key: ', key, '; val: ', val);
-});
-console.log("\n\n");
-_.forOwnRight(testObj, function (val, key, origObj) {
-    console.log('key: ', key, ';  val: ', val);
-    return 'ok';
-});
