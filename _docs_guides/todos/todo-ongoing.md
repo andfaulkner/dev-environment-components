@@ -16,6 +16,11 @@ August 12th
 *   ! document.querySelectorAll snippet
 *   ! 5 more JS dom snippets
 
+*   ! TYPESCRIPT::: get proper Typescript IDE set up
+
+*   ! snippet to repeat action given # of times
+*   switch-case snippet
+
 *   TYPESCRIPT::: interfaces:: extending interfaces
 *   TYPESCRIPT::: interfaces:: hybrid types
 *   TYPESCRIPT::: interfaces:: interfaces extending classes
@@ -46,6 +51,11 @@ August 12th
 *   TYPESCRIPT::: namespaces:: cross-file namespaces
 *   TYPESCRIPT::: namespaces:: namespace aliases
 *   TYPESCRIPT::: namespaces:: ambient namespaces
+
+*   TYPESCRIPT::: decorators:: basic
+*   TYPESCRIPT::: decorators:: basic
+*   TYPESCRIPT::: decorators:: basic
+
 
 *   5 css layout snippets
 

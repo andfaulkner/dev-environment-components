@@ -5,21 +5,14 @@ require('rootpath')();
 var _ = require('lodash');
 var gulp = require('gulp');
 var ts = require('gulp-typescript');
+var path = require('path');
 
 var PATHS = {
-  typescript: './docs_guides/src_typescript/**/*.ts',
+  typescript: ['./docs_guides/src_typescript/**/*.ts', './mini-test-projects/**/*.ts'],
   js_build:   './docs_guides/build_js'
 };
 
-var tsConfig = {
-  target:                     'ES5',
-  noImplicitAny:              false,
-  experimentalDecorators:     true,
-  experimentalAsyncFunctions: true,
-  allowJs:                    true
-  // experimentalAsyncFunctions: true,
-  // allowJS:                    true
-};
+var tsConfig = require(path.join(__dirname, 'tsconfig.json')).compilerOptions;
 
 /**
  * Render typescript files to javascript - for NodeJS-only (non-browser) code

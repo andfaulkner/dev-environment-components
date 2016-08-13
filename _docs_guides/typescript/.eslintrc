@@ -92,6 +92,7 @@
   "ecmaFeatures": {
     "jsx": true,
     "experimentalObjectRestSpread": true,
+    "experimentalDecorators": true,
     "generators": true,
     "arrowFunctions": true,
     "defaultParams": true,
