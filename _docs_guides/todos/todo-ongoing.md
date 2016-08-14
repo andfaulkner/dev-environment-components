@@ -21,8 +21,12 @@ August 12th
 *   ! snippet to repeat action given # of times
 *   ! switch-case snippet
 *   ! respond to Tony Deluca re: Kinaxis
-*   5 more lodash string snippets
+*   ! 5 more lodash string snippets
+*   ! 5 more lodash obj snippets
 *   5 more lodash obj snippets
+
+*   look into ducks-modular-redux ::: https://github.com/erikras/ducks-modular-redux
+*   look into gameQuery for making games with JS ::: http://gamequeryjs.com/documentation/first-tutorial/first-tutorial-step-1/
 
 *   definitions needed: Implicit Referencing, ambient modules / declarations?
 

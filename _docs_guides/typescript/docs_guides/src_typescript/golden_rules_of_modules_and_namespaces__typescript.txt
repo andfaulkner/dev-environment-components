@@ -1,0 +1,56 @@
+
+// THE GOLDEN RULES OF MODULES AND NAMESPACES
+//
+//  1. thou shalt not pollute the holiest of holies, the global namespace
+//     *   Mostly self-explanatory.
+//     *   This also means not wrapping all your code up into namespaces hung off the global
+//         namespace. Having each utility and part of the app put into its own namespace is still
+//         pollution.
+//     *   Also pollution: namespacing everything in your app under one global app property then
+//         littering window.app with all your app's properties, variables, and functions
+//         *   This is still abusing a global namespace! All you've done there is change the app's
+//             global namespace from window to window.app. (obviously, it's than putting them on
+//             window since you won't clobber native functions, but you still have all the other
+//             issues caused by having a global namespace)
+//             *   Also not much better: having a big tree of namespaces all hanging under your
+//                 window.app global namespace property. You're reducing the odds of clobbering
+//                 your own code, but you still have the rest of the downsides of a global namespace.
+//     *   what to do instead: composition. This is really preaching to the choir, because that's
+//         how Node's CommonJS module system and Webpack both work.
+//
+//  2. modules shalt not have side-effects when loaded
+//  
+//  3. thou shalt not expose a module's implementation details
+//     *   Functions that are not part of a module's global API should not be accessible outside
+//         the module under any circumstances.
+//     *   Minimize the surface area of your module's API
+//
+//  4. thou shalt not allow the definition of thy module to wander in the gardens of instantiation
+//     and initialization
+//     *   i.e. don't initialize the module where you define it
+//     *   If you're using 'new' within a module to instantiate an object that is defined within the
+//         module, there's a good change you dun gon' and fucked up
+//
+//  5. thou shalt honour the labourious fruits of others and covet no dominion over the application
+//     object space, being but a shephard for objects fathered by thy neighbour, and thy shalt not
+//     hold in esteem the slings and arrows of those who seek to covet the jewels of thy
+//     implementation details.
+//     *   i.e. don't modify objects you didn't create and don't own, and don't encourage others to
+//         do this with your objects.
+//     *   To put it another way...
+//             !!! DON'T FUCKING MONKEY-PATCH !!!
+//                 (...unless you're doing a polyfill)
+//     *   Also, don't offer a "reopen" function to modify a previously defined object prototype,
+//         and if a framework you're using has one, don't use this function
+//   
+//   6. thou shalt not rely upon the false friends of complex inheritance, but instead bask in the
+//      glory of object composition.
+//      *   Subclassing should be done very rarely.
+
+
+// Note: inheritance is rarely the answer. If it seems like it is, you're either
+//     1) building a framework, in which case, carry on;
+//     2) doing a tutorial intended to teach you how to use inheritance;
+//     3) asking the wrong question; or
+//     4) not thinking about your problem enough. Seriously. Composition. Live it. Learn it. Love it.
+//

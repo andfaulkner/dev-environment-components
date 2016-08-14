@@ -1,6 +1,5 @@
-"use strict";
 /// <reference path="../../typings/lodash/lodash.d.ts" />
-var _ = require('lodash');
+"use strict";
 console.log('----------------------------------------------------------------------------------');
 //################################
 //#          NAMESPACES          #
@@ -17,6 +16,7 @@ console.log('***************** MODULES *****************');
 console.log(" ----- Like namespaces, modules contain code & declarations -----");
 console.log(" ----- Unlike namespaces, modules 'declare' their dependencies -----");
 console.log(" ----- Don't refer to module files with <reference ... /> syntax -----");
+console.log(" ----- Any file containing a top-level import or export is considered a module -----");
 // modules are executed in their own scope, not the global scope, so anything declared in a module
 // is inaccessible from outside unless explicitly exported.
 // Anything can be exported: vars, functions, classes, type alises, interfaces
@@ -35,13 +35,19 @@ console.log('-------------------------------------------------------------------
 //##########################################
 console.log('***************** AMBIENT DECLARATIONS *****************');
 console.log(" -- Compiler must know what modules & vars come from outside TS. Concept of ambient");
-console.log("    ambient declaration allows this. Ambient declarations are special declarations");
-console.log("    that provides type info abt APIs existing “ambiently” in the app's execution env");
-console.log(" -- created by prefixing normal declarations with the 'declare' keyword");
+console.log("    declaration allows this. Ambient declarations are special declarations that");
+console.log("    provide type info abt APIs existing “ambiently” in the app's execution env.");
+console.log(" -- created by prefixing normal declarations with the 'declare' keyword.");
 console.log(" -- Rarely req for popular libs: they're usually available via tsd thru the");
 console.log("    DefinitelyTyped project, & are grabbable via tsd install somelib --save");
 console.log(" ----- REFERENCE TYPE -----");
 console.log(" -- Reference types (/// comments) provide access to ambient declarations.");
 console.log("      E.g.: /// <reference path=\"../../typings/lodash/lodash.d.ts\" /> on 1st line");
 console.log(" -- However, libs this covers must still be explicitly imported, to use them. e.g.:");
+var _ = require('lodash');
 console.log((_ && _.startsWith) ? 'lodash successfully imported!' : "Unable to import lodash :(");
+console.log('----------------------------------------------------------------------------------');
+//############################################
+//#          DYNAMIC MODULE LOADING          #
+//############################################
+console.log('***************** DYNAMIC MODULE LOADING *****************');

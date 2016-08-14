@@ -1,0 +1,8 @@
+<snippet>
+    <description>Remove property at path of object.</description>
+    <content><![CDATA[
+${1/.+/var /}${1:boolTruefPropDelSuccess}${1/.+/ = /}_.unset(${2:objToRmPropFrom}, ${3:path_to_prop_to_rm e.g. 'a[0]' | 'a.b.c' | 'a', '0', 'b'});${0}
+]]></content>
+    <tabTrigger>_obj_rm_prop</tabTrigger>
+    <scope>source.js, source.ts</scope>
+</snippet>

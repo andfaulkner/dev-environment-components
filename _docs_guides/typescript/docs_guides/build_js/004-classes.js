@@ -1,8 +1,11 @@
+/// <reference path="../../typings/lodash/lodash.d.ts" />
+"use strict";
 var __extends = (this && this.__extends) || function (d, b) {
     for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p];
     function __() { this.constructor = d; }
     d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
 };
+var _ = require("lodash");
 var cLog = console.log;
 cLog('----------------------------------------------------------------------------------');
 //###################################
@@ -304,3 +307,64 @@ cLog(" ----- Now when we run it again there's enough power to produce the whole 
 CobourgPoosucker.processWater(6);
 cLog(" ----- View leftover voltage stored via public accessor again, should be 40 this time: -----");
 cLog(CobourgPoosucker.storedVolts);
+console.log('----------------------------------------------------------------------------------');
+//#######################################
+//#          STATIC PROPERTIES          #
+//#######################################
+console.log('***************** STATIC PROPERTIES *****************');
+// Static properties are accessible from all instances of a class.
+console.log(" ----- Define a class with static properties -----");
+var BandType;
+(function (BandType) {
+    BandType[BandType["AM"] = 0] = "AM";
+    BandType[BandType["FM"] = 1] = "FM";
+})(BandType || (BandType = {}));
+var allFmChannelFreqs = _.range(87.5, 108.0, 0.2).map(function (num) { return _.round(num, 1); });
+var RadioStation = (function () {
+    // constructor.
+    // Note: if no 'band' is provided, 1 is picked at random from remaining available frequency bands
+    function RadioStation(name, band) {
+        if (band === void 0) { band = RadioStation.randomFreeBand(); }
+        this.registerBand(RadioStation.isBandUsable(band) ? band : RadioStation.randomFreeBand());
+    }
+    Object.defineProperty(RadioStation, "numBandsFree", {
+        // static getters for static (class) properties
+        get: function () {
+            return RadioStation.freeBands.length;
+        },
+        enumerable: true,
+        configurable: true
+    });
+    Object.defineProperty(RadioStation, "numBandsTaken", {
+        get: function () {
+            return RadioStation.takenBands.length;
+        },
+        enumerable: true,
+        configurable: true
+    });
+    // private instance method
+    RadioStation.prototype.registerBand = function (band) {
+        this.broadcastBand = band;
+        RadioStation.takenBands.push(_.pull(RadioStation.freeBands, band)[0]);
+    };
+    // static (class) properties with default values assigned via property initializers
+    RadioStation.freeBands = _.range(87.5, 108.0, 0.2).map(function (num) { return _.round(num, 1); });
+    RadioStation.takenBands = [];
+    // static (class) properties with value assigned via a property initializer
+    RadioStation.LEGAL_BANDS = Object.freeze(_.range(87.5, 108.0, 0.2)
+        .map(function (num) { return _.round(num, 1); }));
+    // static (class) functions
+    RadioStation.randomFreeBand = function () { return _.sample(RadioStation.freeBands); };
+    RadioStation.isBandUsable = function (freq) { return _.includes(RadioStation.freeBands, freq); };
+    return RadioStation;
+}());
+console.log(" ----- Initial values of class RadioStation's static props before any instantiated -----");
+console.log('RadioStation.takenBands:       ', RadioStation.takenBands);
+console.log('RadioStation.freeBands.length: ', RadioStation.freeBands.length);
+console.log('RadioStation.numBandsFree:     ', RadioStation.numBandsFree);
+console.log(" ----- RadioStation instantiated, creating station nothinButTheHits -----");
+var nothinButThaHits = new RadioStation('Nothin\' But Tha Hitz', 91.1);
+console.log(" ----- Values of class RadioStation's static props after 1 instantiated -----");
+console.log('RadioStation.takenBands:       ', RadioStation.takenBands);
+console.log('RadioStation.freeBands.length: ', RadioStation.freeBands.length);
+console.log('RadioStation.numBandsFree:     ', RadioStation.numBandsFree);

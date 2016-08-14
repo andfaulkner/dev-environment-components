@@ -1,3 +1,7 @@
+/// <reference path="../../typings/lodash/lodash.d.ts" />
+
+import * as _ from "lodash";
+
 var cLog = console.log;
 cLog('----------------------------------------------------------------------------------');
 //###################################
@@ -335,3 +339,67 @@ CobourgPoosucker.processWater(6);
 
 cLog(" ----- View leftover voltage stored via public accessor again, should be 40 this time: -----");
 cLog(CobourgPoosucker.storedVolts);
+
+
+console.log('----------------------------------------------------------------------------------');
+//#######################################
+//#          STATIC PROPERTIES          #
+//#######################################
+console.log('***************** STATIC PROPERTIES *****************');
+// Static properties are accessible from all instances of a class.
+console.log(" ----- Define a class with static properties -----");
+
+enum BandType { AM, FM }
+
+const allFmChannelFreqs: number[] = _.range(87.5, 108.0, 0.2).map(num => _.round(num, 1));
+
+class RadioStation {
+
+  // static (class) properties with default values assigned via property initializers
+  static freeBands: number[] = _.range(87.5, 108.0, 0.2).map(num => _.round(num, 1));
+  static takenBands: number[] = [];
+
+  // static (class) properties with value assigned via a property initializer
+  static LEGAL_BANDS: number[] = Object.freeze(_.range(87.5, 108.0, 0.2)
+                                                .map(num => _.round(num, 1)));
+
+  // static getters for static (class) properties
+  static get numBandsFree() : number {
+    return RadioStation.freeBands.length;
+  }
+  static get numBandsTaken() : number {
+    return RadioStation.takenBands.length;
+  }
+
+  // static (class) functions
+  static randomFreeBand = () => _.sample(RadioStation.freeBands);
+  static isBandUsable = (freq) => _.includes(RadioStation.freeBands, freq);
+
+  // instance property with no default value
+  broadcastBand: number;
+
+  // constructor.
+  // Note: if no 'band' is provided, 1 is picked at random from remaining available frequency bands
+  constructor(name: string, band: number = RadioStation.randomFreeBand()) {
+      this.registerBand(RadioStation.isBandUsable(band) ? band : RadioStation.randomFreeBand());
+  }
+
+  // private instance method
+  private registerBand(band : number) {
+    this.broadcastBand = band;
+    RadioStation.takenBands.push(_.pull(RadioStation.freeBands, band)[0]);
+  }
+}
+
+console.log(" ----- Initial values of class RadioStation's static props before any instantiated -----");
+console.log('RadioStation.takenBands:       ', RadioStation.takenBands);
+console.log('RadioStation.freeBands.length: ', RadioStation.freeBands.length);
+console.log('RadioStation.numBandsFree:     ', RadioStation.numBandsFree);
+
+console.log(" ----- RadioStation instantiated, creating station nothinButTheHits -----");
+let nothinButThaHits = new RadioStation('Nothin\' But Tha Hitz', 91.1);
+
+console.log(" ----- Values of class RadioStation's static props after 1 instantiated -----");
+console.log('RadioStation.takenBands:       ', RadioStation.takenBands);
+console.log('RadioStation.freeBands.length: ', RadioStation.freeBands.length);
+console.log('RadioStation.numBandsFree:     ', RadioStation.numBandsFree);
