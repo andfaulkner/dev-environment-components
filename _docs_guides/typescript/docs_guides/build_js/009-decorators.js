@@ -23,7 +23,7 @@ function logTarget(target) {
     console.log('The target wrapped by this decorator is: ', target.name);
     var typeOfWrappedComponent = 'function';
     var startsWithCap = target.name.match(/^\s?[A-Z]/g) !== null;
-    var hasFnSharingTargetName = target.toString().match("function " + target.name);
+    var hasFnSharingTargetName = target.toString().match(`function ${target.name}`);
     var hasMultipleFns = target.toString().match(/.*function.*function.*/g);
     var hasEmptyFn = target.toString().match(/function[^\{]+?\{[^a-zA-Z0-9_]+?\}/);
     if (startsWithCap && hasFnSharingTargetName && !hasMultipleFns && hasEmptyFn) {
@@ -32,17 +32,14 @@ function logTarget(target) {
     console.log('This decorator is wrapping a ' + typeOfWrappedComponent + '.');
 }
 console.log(" ----- Use example decorator on a class -----");
-var Dog = (function () {
-    function Dog() {
-    }
-    Dog.prototype.bark = function () {
+let Dog = class Dog {
+    bark() {
         console.log('woof');
-    };
-    Dog = __decorate([
-        logTarget
-    ], Dog);
-    return Dog;
-}());
+    }
+};
+Dog = __decorate([
+    logTarget
+], Dog);
 console.log('----------------------------------------------------------------------------------');
 //#########################################
 //#          DECORATOR FACTORIES          #
@@ -50,22 +47,18 @@ console.log('-------------------------------------------------------------------
 console.log('***************** DECORATOR FACTORIES *****************');
 // a function that returns the expression that will be called by the decorator at runtime
 function logTargetWOpts(value) {
-    console.log("Decorator factory used rather than standard decorator. Received value: " + value);
+    console.log(`Decorator factory used rather than standard decorator. Received value: ${value}`);
     return logTarget; // this is the decorator
 }
-var Cat = (function () {
-    function Cat() {
-    }
-    Cat = __decorate([
-        logTargetWOpts('yep')
-    ], Cat);
-    return Cat;
-}());
+let Cat = class Cat {
+};
+Cat = __decorate([
+    logTargetWOpts('yep')
+], Cat);
 /**
  * NewClass
  */
-var NewClass = (function () {
-    function NewClass(parameters) {
+class NewClass {
+    constructor(parameters) {
     }
-    return NewClass;
-}());
+}

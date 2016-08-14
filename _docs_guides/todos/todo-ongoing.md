@@ -30,6 +30,9 @@ August 12th
 *   another 5 more lodash obj snippets
 *   5 more lodash fn snippets
 
+*   TYPESCRIPT::: symbols:: basics
+*   TYPESCRIPT::: symbols:: use in computed property declarations
+
 *   look into ducks-modular-redux ::: https://github.com/erikras/ducks-modular-redux
 *   look into gameQuery for making games with JS ::: http://gamequeryjs.com/documentation/first-tutorial/first-tutorial-step-1/
 

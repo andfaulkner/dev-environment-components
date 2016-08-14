@@ -434,5 +434,4 @@ let vect = new Vector3D({x: 0, y: 0, z: 0}, {x: 1, y: 1, z: 1})
 
 console.log(vect.vectLength);
 
-
 console.log(" ----- Note: interfaces that extend classes may have questionable utility -----");

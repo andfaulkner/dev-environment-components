@@ -32,7 +32,7 @@ console.log(" ----- Enums can be inspected (via console.log). E.g.: -----");
 console.log(Suit);
 console.log(" ----- Enums can be used as a type -----");
 function grabCard(suit, faceValue) {
-    return "You were dealt the " + FaceValue[faceValue] + " of " + Suit[suit] + "!";
+    return `You were dealt the ${FaceValue[faceValue]} of ${Suit[suit]}!`;
 }
 console.log(grabCard(Suit.Spades, FaceValue.King));
 console.log(" ----- Each enum val has an associated #. The # rets the val, & vice versa -----");

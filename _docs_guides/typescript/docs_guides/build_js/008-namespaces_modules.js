@@ -27,7 +27,7 @@ console.log('-------------------------------------------------------------------
 console.log('***************** IMPORT A DECLARATION *****************');
 console.log(" ----- Import a single value from a module -----");
 console.log(" ----- Import a single value from a module, but assign it a different name -----");
-var test_module_1_1 = require('./testmodules/test-module-1');
+const test_module_1_1 = require('./testmodules/test-module-1');
 test_module_1_1.testExportFunction('hey!');
 console.log('----------------------------------------------------------------------------------');
 //##########################################
@@ -42,9 +42,9 @@ console.log(" -- Rarely req for popular libs: they're usually available via tsd 
 console.log("    DefinitelyTyped project, & are grabbable via tsd install somelib --save");
 console.log(" ----- REFERENCE TYPE -----");
 console.log(" -- Reference types (/// comments) provide access to ambient declarations.");
-console.log("      E.g.: /// <reference path=\"../../typings/lodash/lodash.d.ts\" /> on 1st line");
+console.log(`      E.g.: /// <reference path="../../typings/lodash/lodash.d.ts" /> on 1st line`);
 console.log(" -- However, libs this covers must still be explicitly imported, to use them. e.g.:");
-var _ = require('lodash');
+const _ = require('lodash');
 console.log((_ && _.startsWith) ? 'lodash successfully imported!' : "Unable to import lodash :(");
 console.log('----------------------------------------------------------------------------------');
 //############################################

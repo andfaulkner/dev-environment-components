@@ -36,7 +36,7 @@ identity({ a: 'ok' });
 identity(true);
 console.log(" --- Generic that returns array containing required # of duplicates of given val ---");
 function duplicator(arg, numDuplicates) {
-    var arr = Array.apply(null, Array(numDuplicates)).map(function () { return arg; });
+    var arr = Array.apply(null, Array(numDuplicates)).map(() => arg);
     // let arr = Array(numDuplicates).fill(arg);
     console.log(arr);
     return arr;
@@ -53,19 +53,19 @@ function identity3(arg) {
     return arg;
 }
 //------------- 1 -------------\   /-- 2 --\ 
-var myIdentity = identity3;
+let myIdentity = identity3;
 //
 //1: generic function type definition
 //2: actual function assigned to generic function type definition. Must meet definition in 1.
 myIdentity('ok');
 console.log(" ----- Define complex generic function type right beside function expression -----");
-var identity4 = function identity4(arg) {
+let identity4 = function identity4(arg) {
     console.log('in identity4: ', arg);
     return arg;
 };
 identity4(42);
 // This madness is also valid, but seriously don't do it...this is what generic interfaces are for
-var identity5 = function (arg) { return arg; };
+let identity5 = (arg) => arg;
 console.log('Output of mad identity5 function w/ confusing typedef: ', identity5('YAY!'));
 console.log('----------------------------------------------------------------------------------');
 //########################################
@@ -73,17 +73,17 @@ console.log('-------------------------------------------------------------------
 //########################################
 console.log('***************** GENERIC INTERFACES *****************');
 console.log(" ----- Def generic function interface -----");
-var identity7 = function (arg) { return arg; };
+let identity7 = (arg) => arg;
 console.log('identity7 (using generic fn) output: ', identity7({ a: 'value of eeeeeeehhhh!!!' }));
 console.log(" ----- Purpose of generic fn interface: ensure vars using interface only get assigned matching fns -----");
-var someRandomFn1 = function (arg) { return arg; };
+let someRandomFn1 = (arg) => arg;
 console.log('someRandomFn1 can be assigned to identity8 because the types match');
-var identity8 = someRandomFn1;
+let identity8 = someRandomFn1;
 console.log('identity8 (using generic fn) output: ', identity8(['abc', 'def']));
-var someRandomFn2 = function someRandomFn2(thing, otherThing) {
+let someRandomFn2 = function someRandomFn2(thing, otherThing) {
     return "BEGIN\n  " + thing + "\n" + otherThing.toString() + "\nEND";
 };
-var identity9;
+let identity9;
 console.log("someRandomFn2 can't be assigned to identity9 because the types don't match");
 // This produces a compile-time error:
 //     identity9 = someRandomFn2;

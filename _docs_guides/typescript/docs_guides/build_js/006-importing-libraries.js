@@ -18,7 +18,7 @@
 //   A HORRIBLE SOLUTION. DON'T DO THIS.
 //
 /// <reference path="../../typings/lodash/lodash.d.ts" />
-var _ = require("lodash");
+const _ = require("lodash");
 console.log('----------------------------------------------------------------------------------');
 //#####################################################
 //#          IMPORTING THIRD-PARTY LIBRARIES          #

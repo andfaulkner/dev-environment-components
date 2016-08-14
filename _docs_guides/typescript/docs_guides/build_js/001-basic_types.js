@@ -1,30 +1,32 @@
 /// <reference path="../../typings/lodash/lodash.d.ts" />
 "use strict";
-var data = [
+let data = [
     { title: 'Boolean: ', item: 'asdf' }
 ];
-var i = 1;
+let i = 1;
 console.log('----------------------------------------------------------------------------------');
 //##################################
 //#          "PRIMITIVES"          #
 //##################################
 console.log('***************** "PRIMITIVES" *****************');
-var bool1 = false;
+let bool1 = false;
 console.log('boolean: ', bool1);
-var decimal = 6;
+let decimal = 6;
 console.log('decimal number: ', decimal);
-var hex = 0xf00d;
+let hex = 0xf00d;
 console.log('hexadecimal number: ', hex);
-var str = 'HELLO!';
+let str = 'HELLO!';
 console.log('string: ', str);
-var templateStr = "\n  string from template, with earlier string embedded: " + str + "\n  This can be multiline in the code!";
+let templateStr = `
+  string from template, with earlier string embedded: ${str}
+  This can be multiline in the code!`;
 console.log('string from a template: ', templateStr);
-var num_arr = [1, 2, 3, 4];
+let num_arr = [1, 2, 3, 4];
 console.log('number array: ', num_arr);
-var num_arr_generic = [1, 2, 3, 4, 5];
+let num_arr_generic = [1, 2, 3, 4, 5];
 console.log('number array from a generic: ', num_arr_generic);
 console.log(" ----- TUPLES -----");
-var string_number_tuple = ['Secret to life, the universe, & everything: ', 42];
+let string_number_tuple = ['Secret to life, the universe, & everything: ', 42];
 console.log('tuple first value: ', string_number_tuple[0]);
 console.log('tuple second value: ', string_number_tuple[1]);
 console.log('----------------------------------------------------------------------------------');
@@ -40,7 +42,7 @@ var Color;
     Color[Color["Blue"] = 2] = "Blue";
 })(Color || (Color = {}));
 ;
-var c = Color.Green;
+let c = Color.Green;
 console.log('ENUM: ', Color);
 console.log('ENUM value: ', c);
 // enums can have arbitrary numbers assigned to them (but not e.g. strings, etc.)
@@ -52,22 +54,22 @@ var Shape;
     Shape[Shape["Rectangle"] = 4] = "Rectangle";
 })(Shape || (Shape = {}));
 ;
-var square1 = Shape.Square;
-var rectangle1 = Shape.Rectangle;
+let square1 = Shape.Square;
+let rectangle1 = Shape.Rectangle;
 console.log('Shape: ', Shape);
 console.log('square one: ', square1);
 console.log('rectangle one: ', rectangle1);
 //
 // ANY
 //
-var notSureWhatType = 6;
+let notSureWhatType = 6;
 console.log('Var of type any: ', notSureWhatType);
 notSureWhatType = 'hello!';
 console.log('Same var of type any w/ value of diff type assigned: ', notSureWhatType);
 //
 // VOID
 //
-var useless = undefined;
+let useless = undefined;
 console.log('Useless var: it is type void, so it can only be undefined or null: ', useless);
 //
 // RETURN TYPES
@@ -86,8 +88,8 @@ console.log('-------------------------------------------------------------------
 //#####################################
 console.log('***************** TYPE ASSERTIONS *****************');
 // A way to tell the compiler that you know what a return value will be
-var someValue = "this is a string";
-var strLength = someValue.length;
+let someValue = "this is a string";
+let strLength = someValue.length;
 console.log('We know finding string length gives a #, & can assert this. Eg output: ', strLength);
 console.log('----------------------------------------------------------------------------------');
 //#################################
