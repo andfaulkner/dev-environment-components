@@ -27,11 +27,22 @@ August 12th
 *   ! TYPESCRIPT::: classes:: static properties
 *   ! TYPESCRIPT::: classes:: constructor functions
 *   ! TYPESCRIPT::: classes:: using classes as interfaces
+
+*   ! get an assembly program to compile
+*   ! 1 hour of assembly                  [OK, now I have some perspective, carrying on...]
+
+*   ! 5 more JS arr snippets
+
+
+
+
 *   another 5 more lodash obj snippets
 *   5 more lodash fn snippets
+*   new Error snippet
 
 *   TYPESCRIPT::: symbols:: basics
 *   TYPESCRIPT::: symbols:: use in computed property declarations
+*   TYPESCRIPT::: symbols:: transpile ES6->ES5 after Typescript->ES6 compilation step
 
 *   look into ducks-modular-redux ::: https://github.com/erikras/ducks-modular-redux
 *   look into gameQuery for making games with JS ::: http://gamequeryjs.com/documentation/first-tutorial/first-tutorial-step-1/
@@ -74,8 +85,6 @@ August 12th
 
 *   5 css layout snippets
 
-*   5 more JS arr snippets
-
 *   Typescript generic interfaces
 *   Typescript generic classes
 
@@ -114,6 +123,7 @@ YAGNI (probably) - for TOHRI position
 *   Cheerio
 *   Cucumber.js
 
+*   an hour of C, you need a bit of foundation
 
 
 ====================================================

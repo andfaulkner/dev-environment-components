@@ -3,6 +3,14 @@
 *   Makes common operations faster and easier in code
 *   example: has_many :books, dependent: :destroy
 
+
+@### Clock (CPU) ###@
+*   Essentially a pulser that "beats" at a fixed frequency (measured in Hz)
+    *   This fixed frequency is known as the clock speed
+*   Used to synchronize execution of instructions
+    *   The CPU performs one operation (i.e. follows one instruction) per pulse
+
+
 #######################################################################################
 @### Constraints (database) ###@
 *   conditions forced on the columns of the (db) table to meet the data integrity
@@ -25,6 +33,13 @@
 *   Integrity types:
     *   Referential Integrity:   requires every value of 1 column of a table to exist as a value of
     *                            another column in a different (or the same) table   
+
+@### Directives ###@
+*   An instruction solely for an interpreter, compiler, or assembler
+*   i.e. it doesn't eventually translate to machine code, it instead modifies the behaviour
+    of the interpreter, compiler, or assembler in some way
+*   Example: Javascript's 'use strict'; directive restricts what features are allowed in the code.
+
 
 @### Etag ###@
 *   opaque identifier assigned by a web server to a specific version of a resource found at
@@ -53,6 +68,15 @@
         *   Child table:  EMPLOYEE
 #######################################################################################
 
+@### Hertz ###@
+*    1Hz is one cycle per second
+*    Often used to measure CPU 'clock rate' - i.e. operations per second
+*    1 cycle is essential one operation
+     *    Thus Hz gives you the number of operations the CPU can do per second
+*    1kHz is ~1000 cycles per second
+*    1MHz is ~1,000,000 cycles per second
+*    1GHz is ~1,000,000,000 cycles per second
+
 @### Idempotence ###@
 *    an action that is idempotent should deliver identical results if the action is repeated.
 *    GET, PUT, and DELETE requests should be idempotent. POST requests, however, needn't be
@@ -79,6 +103,11 @@
 	by a thread, and unset when the thread stops accessing it. It is not possible to access the
 	resource while the flag is set. The mutex is the flag.
 #######################################################################################
+
+@### Register (CPU) [[noun - as in 'a register' not 'to register']] ##@
+*   Special storage locations in the CPU for holding small amounts of data
+*   Data in registers can be acted on ultra-rapidly, but CPUs have a very limited # of registers
+    *   thus only currently used data should be placed in registers
 
 @### Resource (Rails) ###@
 *   see Scaffold (Rails)

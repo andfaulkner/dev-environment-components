@@ -1,0 +1,8 @@
+<snippet>
+  <description>Add item to end of array</description>
+<content><![CDATA[
+${1:someArray}.push(${2:valueToAddToEndOfArray});${0}
+]]></content>  
+  <tabTrigger>arr_push</tabTrigger>
+  <scope>source.js, source.ts</scope>
+</snippet>
