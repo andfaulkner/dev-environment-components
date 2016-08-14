@@ -314,21 +314,16 @@ console.log('-------------------------------------------------------------------
 console.log('***************** STATIC PROPERTIES *****************');
 // Static properties are accessible from all instances of a class.
 console.log(" ----- Define a class with static properties -----");
-var BandType;
-(function (BandType) {
-    BandType[BandType["AM"] = 0] = "AM";
-    BandType[BandType["FM"] = 1] = "FM";
-})(BandType || (BandType = {}));
-var allFmChannelFreqs = _.range(87.5, 108.0, 0.2).map(function (num) { return _.round(num, 1); });
 var RadioStation = (function () {
-    // constructor.
-    // Note: if no 'band' is provided, 1 is picked at random from remaining available frequency bands
+    // @constructor
+    // Note: if 'band' val not given, 1 is picked at random from remaining available frequency bands
     function RadioStation(name, band) {
         if (band === void 0) { band = RadioStation.randomFreeBand(); }
+        this.name = name;
         this.registerBand(RadioStation.isBandUsable(band) ? band : RadioStation.randomFreeBand());
     }
     Object.defineProperty(RadioStation, "numBandsFree", {
-        // static getters for static (class) properties
+        // static (class) getter returning the number of legal frequency bands still available
         get: function () {
             return RadioStation.freeBands.length;
         },
@@ -336,13 +331,14 @@ var RadioStation = (function () {
         configurable: true
     });
     Object.defineProperty(RadioStation, "numBandsTaken", {
+        // static (class) getter returning the number of frequency bands so far registered 
         get: function () {
             return RadioStation.takenBands.length;
         },
         enumerable: true,
         configurable: true
     });
-    // private instance method
+    // private instance method. Registers a frequency band to this station (instance).
     RadioStation.prototype.registerBand = function (band) {
         this.broadcastBand = band;
         RadioStation.takenBands.push(_.pull(RadioStation.freeBands, band)[0]);
@@ -368,3 +364,28 @@ console.log(" ----- Values of class RadioStation's static props after 1 instanti
 console.log('RadioStation.takenBands:       ', RadioStation.takenBands);
 console.log('RadioStation.freeBands.length: ', RadioStation.freeBands.length);
 console.log('RadioStation.numBandsFree:     ', RadioStation.numBandsFree);
+console.log('----------------------------------------------------------------------------------');
+//#################################################
+//#          USE A CLASS AS AN INTERFACE          #
+//#################################################
+console.log('***************** USE A CLASS AS AN INTERFACE *****************');
+console.log(" ----- Define class to be used as interface -----");
+var Point2D = (function () {
+    function Point2D() {
+    }
+    return Point2D;
+}());
+console.log(" ----- Define interface 'extending' class being used as interface -----");
+console.log(" ----- Use the interface extending the class normally (used on class methods) -----");
+var Vector3D = (function () {
+    function Vector3D(startPoint, endPoint) {
+        this.startPoint = startPoint;
+        this.endPoint = endPoint;
+        this.calcVectLength = function (p1, p2) { return (Math.sqrt(Math.abs(p1.x - p2.x) ^ 2 + Math.abs(p1.y - p2.y) ^ 2 + Math.abs(p1.z - p2.z) ^ 2)); };
+        this.vectLength = this.calcVectLength(startPoint, endPoint);
+    }
+    return Vector3D;
+}());
+var vect = new Vector3D({ x: 0, y: 0, z: 0 }, { x: 1, y: 1, z: 1 });
+console.log(vect.vectLength);
+console.log(" ----- Note: interfaces that extend classes may have questionable utility -----");

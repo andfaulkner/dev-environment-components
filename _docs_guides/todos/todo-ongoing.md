@@ -23,7 +23,12 @@ August 12th
 *   ! respond to Tony Deluca re: Kinaxis
 *   ! 5 more lodash string snippets
 *   ! 5 more lodash obj snippets
-*   5 more lodash obj snippets
+
+*   ! TYPESCRIPT::: classes:: static properties
+*   ! TYPESCRIPT::: classes:: constructor functions
+*   ! TYPESCRIPT::: classes:: using classes as interfaces
+*   another 5 more lodash obj snippets
+*   5 more lodash fn snippets
 
 *   look into ducks-modular-redux ::: https://github.com/erikras/ducks-modular-redux
 *   look into gameQuery for making games with JS ::: http://gamequeryjs.com/documentation/first-tutorial/first-tutorial-step-1/
@@ -34,9 +39,6 @@ August 12th
 *   TYPESCRIPT::: interfaces:: hybrid types
 *   TYPESCRIPT::: interfaces:: interfaces extending classes
 
-*   TYPESCRIPT::: classes:: static properties
-*   TYPESCRIPT::: classes:: constructor functions
-*   TYPESCRIPT::: classes:: using classes as interfaces
 
 *   TYPESCRIPT::: generics:: generic classes
 *   TYPESCRIPT::: generics:: generic constraints: basics

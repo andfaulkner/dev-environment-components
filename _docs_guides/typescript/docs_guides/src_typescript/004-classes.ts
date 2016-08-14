@@ -349,42 +349,39 @@ console.log('***************** STATIC PROPERTIES *****************');
 // Static properties are accessible from all instances of a class.
 console.log(" ----- Define a class with static properties -----");
 
-enum BandType { AM, FM }
-
-const allFmChannelFreqs: number[] = _.range(87.5, 108.0, 0.2).map(num => _.round(num, 1));
-
 class RadioStation {
-
   // static (class) properties with default values assigned via property initializers
-  static freeBands: number[] = _.range(87.5, 108.0, 0.2).map(num => _.round(num, 1));
-  static takenBands: number[] = [];
+  static freeBands:   number[] = _.range(87.5, 108.0, 0.2).map(num => _.round(num, 1));
+  static takenBands:  number[] = [];
 
   // static (class) properties with value assigned via a property initializer
   static LEGAL_BANDS: number[] = Object.freeze(_.range(87.5, 108.0, 0.2)
                                                 .map(num => _.round(num, 1)));
 
-  // static getters for static (class) properties
+  // static (class) getter returning the number of legal frequency bands still available
   static get numBandsFree() : number {
     return RadioStation.freeBands.length;
   }
+
+  // static (class) getter returning the number of frequency bands so far registered 
   static get numBandsTaken() : number {
     return RadioStation.takenBands.length;
   }
 
   // static (class) functions
-  static randomFreeBand = () => _.sample(RadioStation.freeBands);
-  static isBandUsable = (freq) => _.includes(RadioStation.freeBands, freq);
+  static randomFreeBand = ()     => _.sample(RadioStation.freeBands);
+  static isBandUsable   = (freq) => _.includes(RadioStation.freeBands, freq);
 
-  // instance property with no default value
-  broadcastBand: number;
+  // instance property with no default value. Contains frequency station is registered to
+  public broadcastBand: number;
 
-  // constructor.
-  // Note: if no 'band' is provided, 1 is picked at random from remaining available frequency bands
-  constructor(name: string, band: number = RadioStation.randomFreeBand()) {
+  // @constructor
+  // Note: if 'band' val not given, 1 is picked at random from remaining available frequency bands
+  constructor(public name: string, band: number = RadioStation.randomFreeBand()) {
       this.registerBand(RadioStation.isBandUsable(band) ? band : RadioStation.randomFreeBand());
   }
 
-  // private instance method
+  // private instance method. Registers a frequency band to this station (instance).
   private registerBand(band : number) {
     this.broadcastBand = band;
     RadioStation.takenBands.push(_.pull(RadioStation.freeBands, band)[0]);
@@ -403,3 +400,39 @@ console.log(" ----- Values of class RadioStation's static props after 1 instanti
 console.log('RadioStation.takenBands:       ', RadioStation.takenBands);
 console.log('RadioStation.freeBands.length: ', RadioStation.freeBands.length);
 console.log('RadioStation.numBandsFree:     ', RadioStation.numBandsFree);
+
+console.log('----------------------------------------------------------------------------------');
+//#################################################
+//#          USE A CLASS AS AN INTERFACE          #
+//#################################################
+console.log('***************** USE A CLASS AS AN INTERFACE *****************');
+
+console.log(" ----- Define class to be used as interface -----");
+class Point2D {
+  x: number;
+  y: number;
+}
+
+console.log(" ----- Define interface 'extending' class being used as interface -----");
+interface Point3D extends Point2D {
+  z: number;
+}
+
+console.log(" ----- Use the interface extending the class normally (used on class methods) -----");
+class Vector3D {
+  vectLength: number;
+
+  constructor(public startPoint: Point3D, public endPoint: Point3D) {
+    this.vectLength = this.calcVectLength(startPoint, endPoint);
+  }
+
+  private calcVectLength = (p1: Point3D, p2: Point3D) => (
+      Math.sqrt(Math.abs(p1.x - p2.x)^2 + Math.abs(p1.y - p2.y)^2 + Math.abs(p1.z - p2.z)^2));
+}
+
+let vect = new Vector3D({x: 0, y: 0, z: 0}, {x: 1, y: 1, z: 1})
+
+console.log(vect.vectLength);
+
+
+console.log(" ----- Note: interfaces that extend classes may have questionable utility -----");
