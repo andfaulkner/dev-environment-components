@@ -1,0 +1,8 @@
+<snippet>
+  <description>Define property of type string inside interface definition.</description>
+<content><![CDATA[
+(${1:fn_arg_prop}: ${2:fn_arg_prop_type}): ${3:fn_ret_type};${0}
+]]></content>  
+  <tabTrigger>itf_fn</tabTrigger>
+  <scope>source.js, source.ts</scope>
+</snippet>

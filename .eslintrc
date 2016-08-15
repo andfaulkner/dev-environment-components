@@ -1,7 +1,7 @@
 {
   "rules": {
     "indent": [1, 2, { "SwitchCase": 1}],
-    "quotes": [1, "single"],
+    "quotes": [0, "single"],
     "linebreak-style": [2, "unix"],
     "semi": [2, "always"],
     "no-console": 0,

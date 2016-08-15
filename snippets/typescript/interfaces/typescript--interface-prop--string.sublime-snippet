@@ -1,0 +1,8 @@
+<snippet>
+  <description>Define property of type string inside interface definition.</description>
+<content><![CDATA[
+${1:nameOfProp}: string;${0}
+]]></content>  
+  <tabTrigger>itf_str</tabTrigger>
+  <scope>source.js, source.ts</scope>
+</snippet>

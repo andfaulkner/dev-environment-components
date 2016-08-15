@@ -32,6 +32,19 @@ August 12th
 *   ! 1 hour of assembly                  [OK, now I have some perspective, carrying on...]
 
 *   ! 5 more JS arr snippets
+*   ! TYPESCRIPT/ES6::: for-of loop
+*   ! TYPESCRIPT/ES6::: for-of destructuring
+*   ! TYPESCRIPT/ES6::: template string tags
+
+*   ! TYPESCRIPT::: modules:: basic in-file module
+*   ! TYPESCRIPT::: interfaces:: extending interfaces
+
+*   create 5 more interface snippets
+
+*   iterators
+*   Iterating with existing variables, object properties and Array elements
+*   for-of snippet
+*   Object.keys snippet
 
 
 
@@ -49,7 +62,6 @@ August 12th
 
 *   definitions needed: Implicit Referencing, ambient modules / declarations?
 
-*   TYPESCRIPT::: interfaces:: extending interfaces
 *   TYPESCRIPT::: interfaces:: hybrid types
 *   TYPESCRIPT::: interfaces:: interfaces extending classes
 

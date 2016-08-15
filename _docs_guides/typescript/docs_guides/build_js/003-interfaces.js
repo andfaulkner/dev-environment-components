@@ -151,7 +151,7 @@ let genPass2 = ((mandatory, lengths) => ({
 }));
 console.log(" ----- Interfaces can handle any lvl of nesting. e.g. below used an interface: -----");
 console.log(genPass2(['1234567890', 'a-zA-Z', '(#$*'], { min: 5, max: 10 }));
-console.log('----------------------------------------------------------------------------------');
+console.log('\n----------------------------------------------------------------------------------');
 //##########################################
 //#          INDEXABLE INTERFACES          #
 //##########################################
@@ -172,3 +172,75 @@ console.log('myChar - index from myLetterClump: ', myChar); // => "B"
 console.log(" ----- INDEXABLE INTERFACES: EXAMPLE 2: STRING INDEX -----");
 let dict = { name: 'Smokey', bearType: 'Forest Fire Preventer Bear' };
 console.log(dict);
+console.log('\n----------------------------------------------------------------------------------');
+//##########################################
+//#          EXTENDING INTERFACES          #
+//##########################################
+console.log('***************** EXTENDING INTERFACES *****************');
+console.log(" ---- Define interface inheriting from another (Square inheriting from Shape) ----");
+console.log(" ----- Create & log obj of type Square (obj conforming to interface Square) -----");
+let square = {
+    bgColor: "blue",
+    sideLength: 10
+};
+console.log(" ----- Output new obj of type Square -----");
+console.log(square);
+//=> { bgColor: 'blue', sideLength: 10 }
+console.log(" ----- Create interface inheriting from multiple (2) interfaces -----");
+var BorderStyle;
+(function (BorderStyle) {
+    BorderStyle[BorderStyle["solid"] = 0] = "solid";
+    BorderStyle[BorderStyle["dashed"] = 1] = "dashed";
+    BorderStyle[BorderStyle["dotted"] = 2] = "dotted";
+    BorderStyle[BorderStyle["squiggly"] = 3] = "squiggly";
+})(BorderStyle || (BorderStyle = {}));
+;
+console.log(" ----- Create & log obj of type Rectangle (as def by interface Rectangle) -----");
+console.log(" ----- Create obj of type Rectangle, then use its props to calculate its area -----");
+let rect = {
+    width: 5,
+    height: 7,
+    borderWidth: 1,
+    borderStyle: BorderStyle.dashed,
+    bgColor: 'blue'
+};
+console.log("area of rect (obj implementing Rectangle: ", rect.width * rect.height); //=> 35
+// TODO Create multiple inheritance example when an interface inherits from both interface & class
+console.log('\n----------------------------------------------------------------------------------');
+//##################################
+//#          HYBRID TYPES          #
+//##################################
+console.log('***************** HYBRID TYPES *****************');
+console.log(" ----- Hybrid types: Objects that work as a combination of types -----");
+console.log(" ----- Create interface that works as both fn & obj, & has additional props -----");
+console.log(" ----- Create a fn that builds & returns a Counter object. -----");
+function getCounter() {
+    let counter = function (start) { };
+    counter.interval = 123;
+    counter.reset = function () { };
+    return counter;
+}
+console.log(" ----- Return a new Counter from the Counter-emitting function & log it -----");
+let counter = getCounter();
+counter(10);
+counter.reset();
+counter.interval = 5.0;
+console.log(counter); //=>{ [Function] interval: 5, reset: [Function] }
+console.log('----------------------------------------------------------------------------------');
+//##################################################
+//#          INTERFACES EXTENDING CLASSES          #
+//##################################################
+console.log('***************** INTERFACES EXTENDING CLASSES *****************');
+console.log(" ----- Interfaces inherit members of the class but not their implementations -----");
+console.log(" ----- i.e. interface declares all props in the class as if they were standalone -----");
+console.log(" ----- Define class to be inherited from (aka used as an interface) -----");
+class Point2D {
+}
+console.log(" ----- Define interface extending a class -----");
+console.log(" ----- Create obj of type defined by class-inheriting interface (Point3D) -----");
+let my3DPoint = {
+    x: 5,
+    y: 8,
+    z: 2
+};
+console.log(my3DPoint);

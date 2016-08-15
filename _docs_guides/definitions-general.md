@@ -1,3 +1,24 @@
+@### 0x-prefixed number e.g. 0x123, 0x1A4, 0xA2F
+*    Hexadecimal numbers. The 0x simply serves as a marker to inform the compiler that it's
+     dealing with a hexadecimal number
+     *   In many cases there's otherwise no way to know which type of number is being used.
+         E.g. 123 is a valid number in both decimal and hexadecimal form, but the number 123 in
+         hexadecimal is equivalent to the number 291 in binary.
+
+@### Array-like objects / Array-Like values (Javascript) ###@
+*   An array-like object / value is a JS object or value that looks like an array, but isn't.
+*   More specifically, this means it has a length property & indexed access, but lacks the
+    standard array methods 
+*   Many examples exist in the core Javascript language and standard APIs e.g. the following are
+    array-like objects or array-like values:
+    *   the special arguments object automatically created in every function's scope
+    *   Browser DOM Node lists (returned by e.g. document.getElementsBy* functions)
+    *   Javascript strings
+*   This is a major source of confusion, and it causes a lot of bugs.
+*   Most common solution: convert it to an actual array. In ES6 this can be done with Array.from().
+
+
+
 @### Associations (Rails) ###@
 *   connection between two Active Record models
 *   Makes common operations faster and easier in code
@@ -85,6 +106,12 @@
 *   A UI concept which merges loading indicators into the action that invoked them.
 *   isight, for example, uses it in via the jQuery.ladda library
 
+@### Lexical Environment ###@
+*   a specification type used to define the association of identifiers to
+    specific vars & fns based on the lexical nesting structure of the code.
+*   consists of an Environment Record and a possibly null reference to an outer Lexical Environment.
+*   sort of like scope, but not precisely the same
+
 @### Mutex ###@
 *	program object that allows multiple program threads to share the same resource, such as file
 	access, but not simultaneously. When a program is started, a mutex is created with a unique name
@@ -102,6 +129,18 @@
 *   key point: a mutually exclusive flag. The flag gets set when the resource gets accessed
 	by a thread, and unset when the thread stops accessing it. It is not possible to access the
 	resource while the flag is set. The mutex is the flag.
+
+@### Nominal typing / Nominal type system###@
+*   type system where compatibility and equivalence of data types is determined by explicit
+    declarations and/or the name of the types
+*   used to determine if types are equivalent, as well as if a type is a subtype of another
+*   in nominal typing, two variables are type-compatible if and only if their declarations name the
+    same type
+*   often a component of a nominal type system: nominal subtyping
+    *   ...meaning that one type is a subtype of another if and only if it's explicitly declared
+        to be so in its definition
+*   Note: Typescript does not introduce this kind of type system.
+
 #######################################################################################
 
 @### Register (CPU) [[noun - as in 'a register' not 'to register']] ##@
@@ -149,6 +188,23 @@
 *   subroutine available to applications that access a relational database management system
 *   stored in the database data dictionary
 *   typical uses: data validation, access control mechanisms
+
+@### Structural typing / Structural type system ###@
+*   in structural type systems, compatibility and equivalence of types is determined by the type's
+    actual structure or definition, rather than explicit type declarations
+*   like most type systems, it's used to determine if types are equivalent and whether a type is
+    a subtype of another.
+*   in structual typing an element is considered to be compatible with another if, for each feature 
+    within 2nd element's type, a corresponding & identical feature exists in 1st element's type.
+    *   It thus has a lot in common with duck typing
+*   permits creation of ad hoc types and protocols
+*   permits creation of a type which is a supertype of an existing type, without modifying the 
+    definition of the latter
+*   used by e.g. Typescript, OCaml, C++ template functions, Haxe, Haskell, and parts of Go
+
+*   contrast with nominal typing, where every type has to be explicity declared. Structural typing
+    is significantly less verbose.
+
 
 ############################ HTTP REQUESTS ################################
 @### PUT requests ###@        AND        @### POST requests ###@
