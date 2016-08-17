@@ -4,7 +4,7 @@
 ## -----------------------------------------------
 ## ${1:Basic Types}
 ## -----------------------------------------------${0}
-]]></content>  
+]]></content>
   <tabTrigger>h1</tabTrigger>
   <scope>source.elixir</scope>
 </snippet>
