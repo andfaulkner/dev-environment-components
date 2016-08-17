@@ -10,7 +10,7 @@ console.log('Terminal size: ' + process.stdout.columns + 'x' + process.stdout.ro
 
 keypress(process.stdin);
 
-var stdin = process.stdin;
+let stdin = process.stdin;
 
 // without this, we would only get streams once enter is pressed
 stdin.setRawMode(true);
@@ -42,7 +42,7 @@ var player = {
   }
 }
 
-var gridTiles = { 
+var gridTiles = {
   numTiles: {
     x: 8,
     y: 8
@@ -69,7 +69,7 @@ var grid = {
       }
       var outString = grid.margins.left + '‖';
       for (var i = 0; i < width - 1; i++) {
-        outString = (posToDrawPlayer === i) ? outString + 'A|' : outString + ' |';  
+        outString = (posToDrawPlayer === i) ? outString + 'A|' : outString + ' |';
       }
       console.log(outString + ((posToDrawPlayer === width - 1) ? 'A‖' : ' ‖'));
     }
@@ -138,5 +138,3 @@ function gameLoop() {
   setTimeout(gameLoop, 5000);
 }
 gameLoop();
-
-

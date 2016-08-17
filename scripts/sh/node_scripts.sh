@@ -365,6 +365,7 @@ function newnode__ultra_basic {
 
 alias typescript='find . -name "*.ts" | xargs tsc -w'
 
+# customized REPL. Provides certain preloadingactions as present in repls like irb
 alias irjs='"$SNIPPETS_DIR/dev-env/nodejs/irjs/irjs"'
 
 

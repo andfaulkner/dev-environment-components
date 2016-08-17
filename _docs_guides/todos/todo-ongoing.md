@@ -39,6 +39,14 @@ August 12th
 *   ! TYPESCRIPT::: modules:: basic in-file module
 *   ! TYPESCRIPT::: interfaces:: extending interfaces
 
+## August 16th
+*   ! BASH::: else snippet
+
+*   ! ELIXIR::: auto-rerun command
+*   ! ELIXIR::: elixir base bash file
+
+*   newnode ultra-basic, typescript
+*   get typescript-react working
 *   create 5 more interface snippets
 
 *   iterators
@@ -46,12 +54,13 @@ August 12th
 *   for-of snippet
 *   Object.keys snippet
 
-*   BASH::: else snippet
 
-*   ELIXIR::: auto-rerun command
-*   ELIXIR::: elixir base bash file
-
-
+#Try Atom
+*   install atom
+*   make atom-based project
+*   atom typescript?
+*   explore atom plugins
+*   port sublime snippets?
 
 *   another 5 more lodash obj snippets
 *   5 more lodash fn snippets
