@@ -46,6 +46,10 @@ August 12th
 *   for-of snippet
 *   Object.keys snippet
 
+*   BASH::: else snippet
+
+*   ELIXIR::: auto-rerun command
+*   ELIXIR::: elixir base bash file
 
 
 

@@ -363,9 +363,9 @@ function newnode__ultra_basic {
     touch app.js
 }
 
-echo "* NodeJS scripts loaded!"
-
 alias typescript='find . -name "*.ts" | xargs tsc -w'
 
 alias irjs='"$SNIPPETS_DIR/dev-env/nodejs/irjs/irjs"'
 
+
+echo "* NodeJS scripts loaded!"
