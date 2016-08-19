@@ -25,7 +25,7 @@ let num_arr = [1, 2, 3, 4];
 console.log('number array: ', num_arr);
 let num_arr_generic = [1, 2, 3, 4, 5];
 console.log('number array from a generic: ', num_arr_generic);
-console.log(" ----- TUPLES -----");
+console.log(' ----- TUPLES ----- ');
 let string_number_tuple = ['Secret to life, the universe, & everything: ', 42];
 console.log('tuple first value: ', string_number_tuple[0]);
 console.log('tuple second value: ', string_number_tuple[1]);

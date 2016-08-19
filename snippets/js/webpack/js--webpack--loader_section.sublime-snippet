@@ -1,0 +1,28 @@
+<snippet>
+  <description>Def jsx loader w babel transpiling and several plugins</description>
+<content><![CDATA[
+module: {
+  preLoaders: [
+    {
+      ${1:test: /\.tsx?\$/,
+      loader: 'tslint'}
+    }
+  ],
+  loaders: [
+    {
+      test: ${2:/*some_test_eg*/ /\.jsx?\$/},
+      ${3:exclude: /node_modules/},
+      loader: ${4:'babel'},
+      ${5:query: \{
+        "presets": ["react", "es2015", "stage-0"]
+      \}}
+    }, {
+      ${6:test: /\.json?\$/,
+      loader: 'json'}
+    }
+  ]
+},${0}
+]]></content>  
+  <tabTrigger>webp_loader_sect</tabTrigger>
+  <scope>source.js, source.ts</scope>
+</snippet>

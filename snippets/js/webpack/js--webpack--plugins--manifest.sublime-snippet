@@ -1,0 +1,10 @@
+<snippet>
+  <description>Create file linking pre- and post-render names of assets</description>
+<content><![CDATA[
+new ManifestPlugin({
+  fileName: ${1:'/*output relative to build output e.g. ./manifest.json'}
+}),${0}
+]]></content>  
+  <tabTrigger>webp_plugin_manifest</tabTrigger>
+  <scope>source.js, source.ts</scope>
+</snippet>

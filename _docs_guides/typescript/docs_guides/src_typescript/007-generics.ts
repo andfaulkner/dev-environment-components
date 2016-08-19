@@ -120,3 +120,119 @@ let identity9: GenericIdentityFn;
 console.log("someRandomFn2 can't be assigned to identity9 because the types don't match");
 // This produces a compile-time error:
 //     identity9 = someRandomFn2;
+
+console.log('----------------------------------------------------------------------------------');
+//#####################################
+//#          GENERIC CLASSES          #
+//#####################################
+console.log('***************** GENERIC CLASSES *****************');
+
+console.log(' ----- Define a generic class, no actual values defined -----');
+class GenericNumber<T> {
+  zeroValue: T;
+  add: (x: T, y: T) => T;
+}
+
+console.log(' ----- Instantiate generic class with a type declared -----');
+let gn = new GenericNumber<number>();
+
+console.log(' ----- Set values for class params that meet the requirements -----');
+// gn.zeroValue = "asdf";  << ERROR - wrong type, it must be a number
+gn.zeroValue = 0;
+
+gn.add = (x: number): number => {
+  console.log('in GenericNumber#add: value x is: ' + x);
+  return x + 3;
+};
+
+// gn.add(4); <<< will error even though the above fn is OK. It still expects it to match the class
+gn.add(4, 4); // <<< ok, even though the 2nd 4 is useless
+//=> 7
+
+gn.add = (x: number, y: number): number => {
+  console.log('gn.add: second pass. Given numbers: ', x, 'and', y, ' -- totaling', x + y);
+  return (x + y);
+};
+gn.add(6, 7);
+//=> 13  
+
+console.log(' ----- Note: static members of a class can\'t use the class\' type params -----');
+
+console.log('----------------------------------------------------------------------------------');
+//###############################################
+//#          EXTENDING GENERIC CLASSES          #
+//###############################################
+console.log('***************** EXTENDING GENERIC CLASSES *****************');
+
+console.log(' ----- Create a generic class ----- ');
+class Component<S, T> {
+  id: S;
+  genFullTitleFromId: (salt: T) => string;
+}
+
+console.log(' ----- Create a class extending generic class ----- ');
+class Password extends Component<string, number> {
+  constructor(id: string) {
+    super();
+    this.id = id;
+  }
+  genFullTitleFromId = (salt: number): string => {
+    let salted = this.id + ((salt ^ 2) - salt) + 'asdf' + this.id;
+    console.log('007-generics-Password#genFillTitleFromId: salted: ', salted);
+    return salted;
+  }
+}
+
+console.log(' ----- Instantiate class that extended generic class ----- ');
+let pwd = new Password('my_password_123');
+
+pwd.genFullTitleFromId(3416);
+
+
+
+console.log('----------------------------------------------------------------------------------');
+//#########################################
+//#          GENERIC CONSTRAINTS          #
+//#########################################
+console.log('***************** GENERIC CONSTRAINTS *****************');
+
+console.log(' ----- Write a fn that works on any type matching the given constraints ----- ');
+console.log(' ----- i.e. any function that meets the given interface, but can have anything else ----- ');
+
+interface LengthMeasurable {
+  length: number;
+}
+
+function loggingIdentity<T extends LengthMeasurable>(arg: T): T {
+  console.log(arg.length);
+  return arg;
+}
+
+function loggingIdentityTwo<T extends LengthMeasurable>(arg: T): T {
+  console.log(arg.length);
+  arg.length = 20;
+  return arg;
+}
+
+function loggingIdentityThree<T extends LengthMeasurable>(arg: T): T {
+  console.log(arg.length);
+  arg.length = 20;
+  let newArg = arg;
+  Object.keys(arg).forEach((key, i, arr) => { newArg[key] = 'yep'; });
+  console.log(newArg);
+  return newArg;
+}
+
+// myType must contain 53 for this to work
+let myType: { length: number, name: string } = {
+  length: 53,
+  name: 'asdf the poo llama'
+};
+
+loggingIdentityThree(myType);
+
+loggingIdentityThree('asdfasdf'); // OK, because strings have a length property
+// loggingIdentityThree(6); // << ERROR, because numbers have no length property
+
+
+console.log(" ----- Gneneric  -----");

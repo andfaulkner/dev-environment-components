@@ -32,6 +32,7 @@ alias npminfo="npm config list"
 
 #list all globally installed node modules [TOADD]
 alias npmglist="npm list -g --depth=0"
+alias npm_modules_g_list="npm list -g --depth=0"
 
 alias npmkeyinfo="npm config ls -l | grep 'userconfig\|loglevel\|init-module\|cache\s\|^prefix\|shell\|node\-version\|globalignorefile\|globalconfig\|editor\|color' | rev | cut -d';' -f1 | rev | trim; npm config list | grep 'HOME\|cwd\|bin' | rev | cut -d';' -f1 | rev | trim"
 
@@ -165,7 +166,7 @@ alias node_version='echo "$(eval node -v)" > .node-version' # set current versio
 [[ -s "$HOME/.avn/bin/avn.sh" ]] && source "$HOME/.avn/bin/avn.sh" # load avn
 
 export NVM_DIR=~/.nvm
-nvm use v6.3.1
+nvm use v6.4.0
 
 alias ember_dep_surge="rm -rf dist; ember build --environment=development; cd dist; cp index.html 200.html; surge" # if site already exists, provide it here 
 

@@ -8,7 +8,8 @@
         "preserveConstEnums": true,
         "sourceMap": true,
         "allowJs": true,
-        "pretty": true
+        "pretty": true,
+        "jsx": "react"
     },
     "exclude": [
         "node_modules",

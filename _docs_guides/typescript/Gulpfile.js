@@ -8,7 +8,7 @@ var ts = require('gulp-typescript');
 var path = require('path');
 
 var PATHS = {
-  typescript: './docs_guides/src_typescript/**/*.ts',
+  typescript: ['./docs_guides/src_typescript/**/*.ts', './docs_guides/src_typescript/**/*.tsx'],
   js_build:   './docs_guides/build_js'
 };
 

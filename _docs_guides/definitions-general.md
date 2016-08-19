@@ -17,8 +17,6 @@
 *   This is a major source of confusion, and it causes a lot of bugs.
 *   Most common solution: convert it to an actual array. In ES6 this can be done with Array.from().
 
-
-
 @### Associations (Rails) ###@
 *   connection between two Active Record models
 *   Makes common operations faster and easier in code

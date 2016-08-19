@@ -62,6 +62,28 @@ August 12th
 
 *   ! TYPESCRIPT::: interfaces:: hybrid types
 *   ! TYPESCRIPT::: interfaces:: interfaces extending classes
+*   ! TYPESCRIPT::: mixins:: basics
+*   ! Object.keys snippet
+
+*   ! TYPESCRIPT::: Triple-Slash Directives: basics
+*   ! newest node version
+*   ! TYPESCRIPT::: generics:: generic classes
+
+
+*   1/2 starter project for node-react-redux-webpack-server-side-rendering-isomorphic-scss-eslint-
+
+*   css 
+
+*   TYPESCRIPT::: JSX: basics
+*   TYPESCRIPT::: JSX: as operator
+*   TYPESCRIPT::: JSX: type checking
+*   TYPESCRIPT::: JSX: value-based elements
+*   TYPESCRIPT::: JSX: attribute type checking
+*   TYPESCRIPT::: JSX: JSX result ype
+*   TYPESCRIPT::: JSX: embedding expressions
+*   TYPESCRIPT::: JSX: React integration
+
+*   TYPESCRIPT::: REACT: starter project
 
 *   another 5 more lodash obj snippets
 *   5 more lodash fn snippets
@@ -73,7 +95,6 @@ August 12th
 
 *   iterators
 *   Iterating with existing variables, object properties and Array elements
-*   Object.keys snippet
 
 *   TYPESCRIPT::: symbols:: basics
 *   TYPESCRIPT::: symbols:: use in computed property declarations
@@ -84,7 +105,6 @@ August 12th
 
 *   definitions needed: Implicit Referencing, ambient modules / declarations?
 
-*   TYPESCRIPT::: generics:: generic classes
 *   TYPESCRIPT::: generics:: generic constraints: basics
 *   TYPESCRIPT::: generics:: generic constraints: using type params in generic constraints
 *   TYPESCRIPT::: generics:: generic constraints: using class types in generics
@@ -107,7 +127,6 @@ August 12th
 *   TYPESCRIPT::: namespaces:: namespace aliases
 *   TYPESCRIPT::: namespaces:: ambient namespaces
 
-*   TYPESCRIPT::: mixins:: basics
 
 *   TYPESCRIPT::: decorators:: basic
 *   TYPESCRIPT::: decorators:: decorator factories
