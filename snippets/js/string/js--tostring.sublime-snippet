@@ -1,0 +1,8 @@
+<snippet>
+  <description>toString() function call</description>
+<content><![CDATA[
+toString()
+]]></content>  
+  <tabTrigger>tos</tabTrigger>
+  <scope>source.js, source.ts</scope>
+</snippet>

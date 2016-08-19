@@ -1,5 +1,7 @@
 #Not really an IDE showdown.
 
+##### TODO COMPLETE THIS
+
 Sublime text
 ------------
 ###Pros
@@ -8,7 +10,7 @@ Sublime text
 *   awesome snippet handling and creation. Has very good regular expression support that makes
     Sublime snippets remarkably flexible and powerful, which saves a lot of time
 *   Great plugin selection
-*   Fantastic, extremely lightweight package manager 
+*   Fantastic, extremely lightweight package manager
 *   Relatively customizable
 
 ###Neutral
@@ -51,7 +53,7 @@ Eclipse
 *   Incredible tools for code navigation
 *   Very good static analysis
 *   Logging directly in the app is very good
-*   Highly flexible layout customization 
+*   Highly flexible layout customization
 
 ###Neutral
 *   Workspaces.

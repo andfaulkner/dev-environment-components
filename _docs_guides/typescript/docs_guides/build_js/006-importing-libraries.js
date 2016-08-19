@@ -1,4 +1,4 @@
-// 
+//
 // Importing is a painful in Typescript
 //
 "use strict";
@@ -18,11 +18,11 @@
 //   A HORRIBLE SOLUTION. DON'T DO THIS.
 //
 /// <reference path="../../typings/lodash/lodash.d.ts" />
-const _ = require("lodash");
+const _ = require('lodash');
 console.log('----------------------------------------------------------------------------------');
 //#####################################################
 //#          IMPORTING THIRD-PARTY LIBRARIES          #
 //#####################################################
 console.log('***************** IMPORTING THIRD-PARTY LIBRARIES *****************');
-console.log(" ----- Lodash successfully imported - note that _.pad is working: -----");
+console.log(' ----- Lodash successfully imported - note that _.pad is working: -----');
 console.log(_.pad('test', 20, '_'));

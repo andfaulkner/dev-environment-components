@@ -1,0 +1,5 @@
+# Generated with Atomizr - https://github.com/idleberg/ruby-atomizr
+'.source.css.scss':
+  'Use a mixin, including passing it vars':
+    'prefix': 'use_mixin'
+    'body': '@include ${1:name-of-mixin}(${2:args-for-mixin--eg--10px});${0}$3'

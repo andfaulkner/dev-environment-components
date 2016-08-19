@@ -1,8 +1,8 @@
 /// <reference path="../../typings/lodash/lodash.d.ts" />
 
-import * as _ from "lodash";
+import * as _ from 'lodash';
 
-var cLog = console.log;
+let cLog = console.log;
 cLog('----------------------------------------------------------------------------------');
 //###################################
 //#          BASIC CLASSES          #
@@ -23,7 +23,7 @@ class Greeter {
   }
 
   // METHODS
-  greet(doUseName : boolean = false) {
+  greet(doUseName: boolean = false) {
     let greeting = `Hello, ${this.greeting}${(doUseName ? (', my name is ' + this.name) : '')}!`;
     cLog(`Greeting returned from greet method on Greeter instance:\n    ${greeting}` );
     return greeting;
@@ -37,14 +37,14 @@ class Greeter {
   }
 }
 
-cLog(" ----- Classes can have constructors w/ typed params. To assign val of an arg -----");
-cLog(" ----- given to constructor->the instance, prop must be defined on the class. -----");
+cLog(' ----- Classes can have constructors w/ typed params. To assign val of an arg -----');
+cLog(' ----- given to constructor->the instance, prop must be defined on the class. -----');
 let BigBubbaBlob = new Greeter('aloha', 'Bubba');
 
-cLog(" ----- Methods can have default param values -----");
+cLog(' ----- Methods can have default param values -----');
 cLog(BigBubbaBlob.greet());
 
-cLog(" ----- Passing a val to a fn param w a default val overrides the default val -----");
+cLog(' ----- Passing a val to a fn param w a default val overrides the default val -----');
 cLog(BigBubbaBlob.greet(true));
 
 
@@ -66,12 +66,12 @@ cLog('--------------------------------------------------------------------------
 //#######################################
 cLog('***************** CLASS INHERITANCE *****************');
 
-cLog(" ----- Create class that inherits from another class -----");
+cLog(' ----- Create class that inherits from another class -----');
 
 class WalmartGreeter extends Greeter {
   product: AmericanProduct;
 
-  constructor(greeting: string, name : string, product: AmericanProduct) {
+  constructor(greeting: string, name: string, product: AmericanProduct) {
     super(greeting, name); // runs parent constructor (in class Greeter)
     this.product = product;
     cLog('Product: ', AmericanProduct[product]);
@@ -88,24 +88,24 @@ class WalmartGreeter extends Greeter {
 
   hello(): string {
     let oldHello = super.hello(false);
-    let newHello = `${oldHello} is what they say in the hoity-toity north. But this is real` + 
+    let newHello = `${oldHello} is what they say in the hoity-toity north. But this is real` +
       '\'Murica! Here we say "Hey Billy-bob, get off ma roof, Imma tryin to roll ma John Deere"';
      cLog(newHello);
      return newHello;
   }
 }
 
-cLog(" ----- Instantiate new child (inheriting) class: -----");
-var jimBob = new WalmartGreeter('yo homie', 'Jim Bob', AmericanProduct.Revolvers);
+cLog(' ----- Instantiate new child (inheriting) class: -----');
+let jimBob = new WalmartGreeter('yo homie', 'Jim Bob', AmericanProduct.Revolvers);
 
-cLog(" ----- Call instance method on child class from new (child) instance -----");
+cLog(' ----- Call instance method on child class from new (child) instance -----');
 jimBob.sell(AmericanProduct.Shotguns);
 
-cLog(" ----- Call instance method on original parent class from new (child) instance -----");
+cLog(' ----- Call instance method on original parent class from new (child) instance -----');
 jimBob.greet();
 
-cLog(" ----- Call parent class-overriding instance method on child class -----");
-cLog(" ----- Note that the overriding method calls the parent method (calls super) -----");
+cLog(' ----- Call parent class-overriding instance method on child class -----');
+cLog(' ----- Note that the overriding method calls the parent method (calls super) -----');
 jimBob.hello();
 
 
@@ -172,31 +172,31 @@ class ChestOfMarbles {
   }
 }
 
-cLog(" ----- Instantiate a (empty to start) chest of marbles, put in var marbleBox -----");
+cLog(' ----- Instantiate a (empty to start) chest of marbles, put in var marbleBox -----');
 let marbleBox = new ChestOfMarbles('Johnny the Marble Box');
 
-cLog(" ----- Get # of marbles inside & the most recent added. Should be 0 & undefined. -----");
+cLog(' ----- Get # of marbles inside & the most recent added. Should be 0 & undefined. -----');
 cLog(marbleBox.marbleQuantity);
 cLog(marbleBox.latestMarble);
 
-cLog(" ----- Add a marble to marbleBox. -----");
+cLog(' ----- Add a marble to marbleBox. -----');
 marbleBox.latestMarble = { color: 'red', age: 10, material: 'glass' };
-cLog(" ----- No log the that marble was added because verbose prop on ChestOfMarbles defaults to false -----");
+cLog(' ----- No log the that marble was added because verbose prop on ChestOfMarbles defaults to false -----');
 
-cLog(" ----- Get # of marbles. We just added 1 & instance was empty before, so it should return 1 -----");
+cLog(' ----- Get # of marbles. We just added 1 & instance was empty before, so it should return 1 -----');
 cLog(marbleBox.marbleQuantity);
 
-cLog(" ----- Get most recently added marble, i.e. the one we just set. -----");
+cLog(' ----- Get most recently added marble, i.e. the one we just set. -----');
 cLog(marbleBox.latestMarble);
 
-cLog(" ----- Set marbleBox.verbose to true -----");
+cLog(' ----- Set marbleBox.verbose to true -----');
 marbleBox.verbose = true;
 
-cLog(" ----- Add marble to marbleBox. Action gets logged since marbleBox.verbose === true now -----");
+cLog(' ----- Add marble to marbleBox. Action gets logged since marbleBox.verbose === true now -----');
 marbleBox.latestMarble = { color: 'green', age: 2, material: 'wood' };
-cLog(" ----- Get # of marbles. Should be 2 this time. Should also log that you requested this. -----");
+cLog(' ----- Get # of marbles. Should be 2 this time. Should also log that you requested this. -----');
 cLog(marbleBox.marbleQuantity);
-cLog(" ----- Get most recently added marble. Should also log that you requested this. -----");
+cLog(' ----- Get most recently added marble. Should also log that you requested this. -----');
 cLog(marbleBox.latestMarble);
 
 
@@ -205,15 +205,15 @@ cLog('--------------------------------------------------------------------------
 //#          ABSTRACT CLASSES          #
 //######################################
 cLog('***************** ABSTRACT CLASSES *****************');
-cLog(" -- Uninstantiable base classes to derive other classes from (Note that a class derived");
-cLog("    from an abstract class is instantiable - only abstract classes themselves are not)");
+cLog(' -- Uninstantiable base classes to derive other classes from (Note that a class derived');
+cLog('    from an abstract class is instantiable - only abstract classes themselves are not)');
 
 cLog('***************** ABSTRACT METHODS *****************');
-cLog(" -- Only available in abstract classes");
-cLog(" -- Methods marked abstract must have no implementation: that is provided by");
+cLog(' -- Only available in abstract classes');
+cLog(' -- Methods marked abstract must have no implementation: that is provided by');
 cLog(" -- subclasses. However, you can declare the yet-unimplemented method's type info.");
 
-cLog(" ----- Create an abstract class with an abstract method & an implmented method -----");
+cLog(' ----- Create an abstract class with an abstract method & an implmented method -----');
 abstract class Animal {
   abstract makeSound(): void
   move(): void {
@@ -221,11 +221,11 @@ abstract class Animal {
   }
 }
 
-cLog(" ----- Examine the var the abstract class object is assigned to: -----");
+cLog(' ----- Examine the var the abstract class object is assigned to: -----');
 cLog('abstract class Animal is a function: ', Animal instanceof Function);
 cLog('Note that abstract class Animal is an empty fn @ runtime: ', Animal);
 
-cLog(" ----- See below (in public, protected, private section) for a larger example -----");
+cLog(' ----- See below (in public, protected, private section) for a larger example -----');
 
 
 cLog('----------------------------------------------------------------------------------');
@@ -233,14 +233,14 @@ cLog('--------------------------------------------------------------------------
 //#          PUBLIC, PROTECTED, PRIVATE          #
 //################################################
 cLog('***************** PUBLIC, PROTECTED, PRIVATE *****************');
-cLog("-- Almost the same as in Java.");
-cLog("-- Note that methods & properties are public by default.");
-cLog("-- Public & protected (but not private) members are accessable in derived classes.");
-cLog("-- Public (but not protected & private) members are accessible outside the class");
+cLog('-- Almost the same as in Java.');
+cLog('-- Note that methods & properties are public by default.');
+cLog('-- Public & protected (but not private) members are accessable in derived classes.');
+cLog('-- Public (but not protected & private) members are accessible outside the class');
 
-cLog(" ----- EXAMPLE USE OF PUBLIC, PROTECTED, PRIVATE MODIFIERS -----");
+cLog(' ----- EXAMPLE USE OF PUBLIC, PROTECTED, PRIVATE MODIFIERS -----');
 
-cLog(" ----- Access modifiers on constructor args auto-assigns them to the instance -----");
+cLog(' ----- Access modifiers on constructor args auto-assigns them to the instance -----');
 
 enum PowerStation {
   Solar = 2,
@@ -304,7 +304,7 @@ class WaterTreatmentPlant extends IndustrialPlant {
   // run treatment until plant runs out of power, return litres of water produced
   private runTreatmentVoltShortage(): number {
     cLog('Not enough power - how sad :(');
-    let daysBeforeNoPower: number = this.storedVolts / this.dailyVoltUse()
+    let daysBeforeNoPower: number = this.storedVolts / this.dailyVoltUse();
     this.storedVolts = 0;
     return daysBeforeNoPower * this.dailyLitres;
   }
@@ -322,22 +322,22 @@ let CobourgPoosucker = new WaterTreatmentPlant(1000, 500, 'Cobourg Poosucker');
 cLog(" ----- Should make no water since we haven't charged the plant yet. -----");
 CobourgPoosucker.processWater(4);
 
-cLog(" ----- Uses public api to charge plant. Gives not quite enough power to do the full order. -----");
+cLog(' ----- Uses public api to charge plant. Gives not quite enough power to do the full order. -----');
 CobourgPoosucker.chargeBatteries(PowerStation.Oil, 1);
 
-cLog(" ----- Now has enough volts to produce some (but not all req) water if order run again -----");
+cLog(' ----- Now has enough volts to produce some (but not all req) water if order run again -----');
 CobourgPoosucker.processWater(4);
 
-cLog(" ----- View leftover voltage stored via public accessor, should be 0 -----");
+cLog(' ----- View leftover voltage stored via public accessor, should be 0 -----');
 cLog(CobourgPoosucker.storedVolts);
 
-cLog(" ----- We use the public api to charge the plant, with enough power this time... -----");
+cLog(' ----- We use the public api to charge the plant, with enough power this time... -----');
 CobourgPoosucker.chargeBatteries(PowerStation.Fusion, 1);
 
 cLog(" ----- Now when we run it again there's enough power to produce the whole order -----");
 CobourgPoosucker.processWater(6);
 
-cLog(" ----- View leftover voltage stored via public accessor again, should be 40 this time: -----");
+cLog(' ----- View leftover voltage stored via public accessor again, should be 40 this time: -----');
 cLog(CobourgPoosucker.storedVolts);
 
 
@@ -347,7 +347,7 @@ console.log('-------------------------------------------------------------------
 //#######################################
 console.log('***************** STATIC PROPERTIES *****************');
 // Static properties are accessible from all instances of a class.
-console.log(" ----- Define a class with static properties -----");
+console.log(' ----- Define a class with static properties -----');
 
 class RadioStation {
   // static (class) properties with default values assigned via property initializers
@@ -359,12 +359,12 @@ class RadioStation {
                                                 .map(num => _.round(num, 1)));
 
   // static (class) getter returning the number of legal frequency bands still available
-  static get numBandsFree() : number {
+  static get numBandsFree(): number {
     return RadioStation.freeBands.length;
   }
 
-  // static (class) getter returning the number of frequency bands so far registered 
-  static get numBandsTaken() : number {
+  // static (class) getter returning the number of frequency bands so far registered
+  static get numBandsTaken(): number {
     return RadioStation.takenBands.length;
   }
 
@@ -382,7 +382,7 @@ class RadioStation {
   }
 
   // private instance method. Registers a frequency band to this station (instance).
-  private registerBand(band : number) {
+  private registerBand(band: number) {
     this.broadcastBand = band;
     RadioStation.takenBands.push(_.pull(RadioStation.freeBands, band)[0]);
   }
@@ -393,7 +393,7 @@ console.log('RadioStation.takenBands:       ', RadioStation.takenBands);
 console.log('RadioStation.freeBands.length: ', RadioStation.freeBands.length);
 console.log('RadioStation.numBandsFree:     ', RadioStation.numBandsFree);
 
-console.log(" ----- RadioStation instantiated, creating station nothinButTheHits -----");
+console.log(' ----- RadioStation instantiated, creating station nothinButTheHits -----');
 let nothinButThaHits = new RadioStation('Nothin\' But Tha Hitz', 91.1);
 
 console.log(" ----- Values of class RadioStation's static props after 1 instantiated -----");
@@ -407,7 +407,7 @@ console.log('-------------------------------------------------------------------
 //#################################################
 console.log('***************** USE A CLASS AS AN INTERFACE *****************');
 
-console.log(" ----- Define class to be used as interface -----");
+console.log(' ----- Define class to be used as interface -----');
 class Point2D {
   x: number;
   y: number;
@@ -418,7 +418,7 @@ interface Point3D extends Point2D {
   z: number;
 }
 
-console.log(" ----- Use the interface extending the class normally (used on class methods) -----");
+console.log(' ----- Use the interface extending the class normally (used on class methods) -----');
 class Vector3D {
   vectLength: number;
 
@@ -427,11 +427,11 @@ class Vector3D {
   }
 
   private calcVectLength = (p1: Point3D, p2: Point3D) => (
-      Math.sqrt(Math.abs(p1.x - p2.x)^2 + Math.abs(p1.y - p2.y)^2 + Math.abs(p1.z - p2.z)^2));
+    Math.sqrt(Math.abs(p1.x - p2.x) ^ 2 + Math.abs(p1.y - p2.y) ^ 2 + Math.abs(p1.z - p2.z) ^ 2));
 }
 
-let vect = new Vector3D({x: 0, y: 0, z: 0}, {x: 1, y: 1, z: 1})
+let vect = new Vector3D({x: 0, y: 0, z: 0}, {x: 1, y: 1, z: 1});
 
 console.log(vect.vectLength);
 
-console.log(" ----- Note: interfaces that extend classes may have questionable utility -----");
+console.log(' ----- Note: interfaces that extend classes may have questionable utility -----');

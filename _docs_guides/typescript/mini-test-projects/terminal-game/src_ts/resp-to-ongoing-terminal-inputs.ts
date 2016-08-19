@@ -4,13 +4,13 @@
 
 import * as _ from 'lodash';
 
-import 'keypress';
+
 
 console.log('Terminal size: ' + process.stdout.columns + 'x' + process.stdout.rows);
 
-keypress(process.stdin);
+Keypress(process.stdin);
 
-let stdin = process.stdin;
+var stdin = process.stdin;
 
 // without this, we would only get streams once enter is pressed
 stdin.setRawMode(true);
@@ -22,7 +22,7 @@ stdin.resume();
 // i don't want binary, do you?
 stdin.setEncoding('utf8');
 
-var position = { x: 2, y: 2 };
+// var position = { x: 2, y: 2 };
 
 var player = {
   position: { x: 2, y: 2 },
@@ -40,7 +40,7 @@ var player = {
         return position;
     }
   }
-}
+};
 
 var gridTiles = {
   numTiles: {
@@ -75,32 +75,32 @@ var grid = {
     }
   },
 
-  draw: (width, height, position) => {
+  draw: (width, height, pos) => {
     grid.drawLine.horizontalEdge(width);
     _.times(height, (index) => {
-      if (index !== 0) grid.drawLine.innerSolid(width);
-      return (index === (position.y))
-          ? grid.drawLine.innerWithGaps(width, position.x)
+      if (index !== 0) { grid.drawLine.innerSolid(width); }
+      return (index === (pos.y))
+          ? grid.drawLine.innerWithGaps(width, pos.x)
           : grid.drawLine.innerWithGaps(width);
     });
     grid.drawLine.horizontalEdge(width);
   }
-}
+};
 
 var screen = {
   clear: () => process.stdout.write('\033c'),
-  redraw: (grid, key, position) => {
+  redraw: (grid, key, pos) => {
     console.log(grid.margins.top);
-    grid.draw(grid.numTiles.x, grid.numTiles.y, position);
+    grid.draw(grid.numTiles.x, grid.numTiles.y, pos);
     console.log('');
   }
-}
+};
 
-var redraw = (key, position) => {
+var redraw = (key, pos) => {
   console.log(grid.margins.top);
-  grid.draw(grid.numTiles.x, grid.numTiles.y, position);
+  grid.draw(grid.numTiles.x, grid.numTiles.y, pos);
   console.log('');
-}
+};
 
 var sharedState = {
   firstDrawn: false,
@@ -120,8 +120,9 @@ stdin.on('data', (key) => {
   screen.clear();
   player.position = player.setNewPosition(key, player.position);
   screen.redraw(grid, key, player.position);
-  firstDrawn = true;
-  sharedState = {grid, key, player};
+  let firstDrawn = true;
+  let time = sharedState.time;
+  sharedState = {grid, key, player, firstDrawn, time};
 
   if (key === '\u0003') {
     console.log('exiting app...');

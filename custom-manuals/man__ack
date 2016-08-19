@@ -15,4 +15,9 @@ echo '                                    ack "rbash" -H **'
 echo '-- show filename                    -H'
 echo ''
 echo 'INVERSE SEARCH (SHOW NON-MATCHES):  ack -v "only-return-things-that-dont-match-me'
+echo ""
+echo "List matching filenames in current and child directories. Alter search-for-this:"
+echo '        tree | ack "search-for-this" | awk "{gsub(/.*── /,\"\",\$0); print \$0}'
+echo ' - same, but with full file path'
+echo '        tree -f | ack "search-for-this" | awk "{gsub(/.*── /,\"\",\$0); print \$0}'
 echo '---------------------------------------------------------------------------------\n'

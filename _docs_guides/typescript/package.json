@@ -16,7 +16,11 @@
     "typescript": "^1.8.10"
   },
   "devDependencies": {
+    "babel-eslint": "^6.1.2",
+    "eslint": "^3.3.1",
+    "eslint-plugin-react": "^6.1.2",
     "nodemon": "^1.10.0",
-    "rootpath": "^0.1.2"
+    "rootpath": "^0.1.2",
+    "tslint-fix": "^0.1.0"
   }
 }

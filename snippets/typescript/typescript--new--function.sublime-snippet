@@ -1,0 +1,10 @@
+<snippet>
+  <description>New typescript fn with type annotations</description>
+<content><![CDATA[
+let ${1:fnName} = (${2:paramName}: ${3:paramType}${4/.+/, /}${4:param2: type2})${5/.+/: /}${5:fnRetType} => {
+  ${0:fnCode};
+};
+]]></content>  
+  <tabTrigger>type_fn</tabTrigger>
+  <scope>source.ts</scope>
+</snippet>

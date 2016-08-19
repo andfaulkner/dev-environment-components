@@ -45,4 +45,7 @@ echo ''
 echo '********** CURL ************'
 echo ' - Save file received via curl by the name it is stored as on the server: example:'
 echo '   curl --remote-name --location http://pilotfiber.dl.sourceforge.net/project/mcrypt/Libmcrypt/2.5.8/libmcrypt-2.5.8.tar.gz'
+echo ''
+echo "********* BATCH RENAME RECURSIVELY **********"
+echo "find . -iname \"*.sublime-snippet\" -exec bash -c 'mv \"\$0\" \"\${0%\.sublime-snippet\}.cson\"' {} \;"
 echo '---------------------------------------------------------------------------------\n'

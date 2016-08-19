@@ -29,7 +29,7 @@ console.log('***************** INLINE INTERFACES *****************');
 console.log(" ----- Fn params basically act as an interface. In such inline interfaces, -----");
 console.log(" ----- required vars must be given, but additional properties are allowed. -----");
 function printMyLabel(labelledObj: { label: string }) {
-  console.log(labelledObj.label);  
+  console.log(labelledObj.label);
 }
 
 printMyLabel({ label: 'hello label!' });
@@ -79,7 +79,7 @@ function printTestInterfaceArgs({ name } : TestInterface) {
   console.log('all the arguments in printTestInterfaceArgs: ', arguments);
 }
 
-// Thingy IS defined here, 
+// Thingy IS defined here,
 function printTestInterfaceArgs2({ name, thingy } : TestInterface) {
   console.log(`${name} is the name property on TestInterface. ${thingy} is the thingy property`);
   if (thingy) {
@@ -331,7 +331,7 @@ console.log(square);
 console.log(" ----- Create interface inheriting from multiple (2) interfaces -----");
 enum BorderStyle { solid, dashed, dotted, squiggly };
 
-interface Border { 
+interface Border {
   borderWidth: number;
   borderStyle: BorderStyle;
 }

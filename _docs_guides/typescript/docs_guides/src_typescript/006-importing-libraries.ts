@@ -1,4 +1,4 @@
-// 
+//
 // Importing is a painful in Typescript
 //
 
@@ -20,7 +20,7 @@
 
 /// <reference path="../../typings/lodash/lodash.d.ts" />
 
-import * as _ from "lodash";
+import * as _ from 'lodash';
 
 console.log('----------------------------------------------------------------------------------');
 //#####################################################
@@ -28,5 +28,5 @@ console.log('-------------------------------------------------------------------
 //#####################################################
 console.log('***************** IMPORTING THIRD-PARTY LIBRARIES *****************');
 
-console.log(" ----- Lodash successfully imported - note that _.pad is working: -----");
+console.log(' ----- Lodash successfully imported - note that _.pad is working: -----');
 console.log(_.pad('test', 20, '_'));

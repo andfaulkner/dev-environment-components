@@ -14,7 +14,7 @@ interface AthleteStats {
 }
 
 function showStats(stats: AthleteStats) {
-  console.log(stats);  
+  console.log(stats);
 }
 
 showStats({ matchesWon: 10, matchesLost: 20, yearsCompeting: 43 });

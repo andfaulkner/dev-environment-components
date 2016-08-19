@@ -74,3 +74,8 @@ alias startpostgres_mac="pg_ctl -D /usr/local/var/postgres -l /usr/local/var/pos
 
 alias curdir='basename "$PWD"'
 
+function atomize {
+    echo "./atom/$1"
+    ~/bin/atomizr/atomizr -i $1 -o "$1"
+}
+

@@ -54,7 +54,7 @@ function printTestInterfaceArgs({ name }) {
     console.log(`${name} is the name property on TestInterface.`);
     console.log('all the arguments in printTestInterfaceArgs: ', arguments);
 }
-// Thingy IS defined here, 
+// Thingy IS defined here,
 function printTestInterfaceArgs2({ name, thingy }) {
     console.log(`${name} is the name property on TestInterface. ${thingy} is the thingy property`);
     if (thingy) {

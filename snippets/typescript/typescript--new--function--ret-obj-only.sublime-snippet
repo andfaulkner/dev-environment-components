@@ -1,0 +1,8 @@
+<snippet>
+  <description>New typescript fn with type annotations</description>
+<content><![CDATA[
+let ${1:nameOfFn} = () => ({${2:return: value}});${0}
+]]></content>  
+  <tabTrigger>type_fn_bsc_retobj</tabTrigger>
+  <scope>source.ts</scope>
+</snippet>

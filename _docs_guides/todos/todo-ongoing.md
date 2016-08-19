@@ -45,26 +45,35 @@ August 12th
 *   ! ELIXIR::: auto-rerun command
 *   ! ELIXIR::: elixir base bash file
 
+#Try Atom
+*   ! install atom
+*   ! make atom-based project
+*   ! atom typescript?
+*   ! explore atom plugins
+
+## AUGUST 18th
+*   ! port sublime snippets? (was a bad idea)
+*   ! complete auto-fix node module form ?
+
+*   ! TYPESCRIPT::: type compatilibity:: basics
+*   ! TYPESCRIPT::: type compatilibity:: generics
+
+*   ! for-of snippet
+
+*   ! TYPESCRIPT::: interfaces:: hybrid types
+*   ! TYPESCRIPT::: interfaces:: interfaces extending classes
+
+*   another 5 more lodash obj snippets
+*   5 more lodash fn snippets
+*   new Error snippet
+
 *   newnode ultra-basic, typescript
 *   get typescript-react working
 *   create 5 more interface snippets
 
 *   iterators
 *   Iterating with existing variables, object properties and Array elements
-*   for-of snippet
 *   Object.keys snippet
-
-
-#Try Atom
-*   install atom
-*   make atom-based project
-*   atom typescript?
-*   explore atom plugins
-*   port sublime snippets?
-
-*   another 5 more lodash obj snippets
-*   5 more lodash fn snippets
-*   new Error snippet
 
 *   TYPESCRIPT::: symbols:: basics
 *   TYPESCRIPT::: symbols:: use in computed property declarations
@@ -74,10 +83,6 @@ August 12th
 *   look into gameQuery for making games with JS ::: http://gamequeryjs.com/documentation/first-tutorial/first-tutorial-step-1/
 
 *   definitions needed: Implicit Referencing, ambient modules / declarations?
-
-*   TYPESCRIPT::: interfaces:: hybrid types
-*   TYPESCRIPT::: interfaces:: interfaces extending classes
-
 
 *   TYPESCRIPT::: generics:: generic classes
 *   TYPESCRIPT::: generics:: generic constraints: basics
@@ -102,17 +107,20 @@ August 12th
 *   TYPESCRIPT::: namespaces:: namespace aliases
 *   TYPESCRIPT::: namespaces:: ambient namespaces
 
+*   TYPESCRIPT::: mixins:: basics
+
 *   TYPESCRIPT::: decorators:: basic
-*   TYPESCRIPT::: decorators:: basic
-*   TYPESCRIPT::: decorators:: basic
+*   TYPESCRIPT::: decorators:: decorator factories
+*   TYPESCRIPT::: decorators:: decorator evaluation
+*   TYPESCRIPT::: decorators:: method decorators
+*   TYPESCRIPT::: decorators:: accessor decorators
+*   TYPESCRIPT::: decorators:: property decorators
+*   TYPESCRIPT::: decorators:: parameter decorators
+*   TYPESCRIPT::: decorators:: metadata
 
 *   typescript-react
 
 *   5 css layout snippets
-
-*   Typescript generic interfaces
-*   Typescript generic classes
-
 
 *   Learn enzyme
 *   Supertest (high-level abstraction for testing http)  ::: https://github.com/visionmedia/supertest

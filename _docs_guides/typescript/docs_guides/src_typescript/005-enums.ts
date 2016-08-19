@@ -4,7 +4,7 @@ console.log('-------------------------------------------------------------------
 //#################################
 console.log('***************** BASIC ENUMS *****************');
 
-console.log(" ----- Provides a specifically restricted set of options for a value -----");
+console.log(' ----- Provides a specifically restricted set of options for a value -----');
 
 enum Suit {
   Hearts,
@@ -13,7 +13,7 @@ enum Suit {
   Diamonds
 }
 
-console.log(" ----- Note that a number cannot be used as the name of a value in an enum -----");
+console.log(' ----- Note that a number cannot be used as the name of a value in an enum -----');
 enum FaceValue {
   Ace,
   Two,
@@ -30,17 +30,17 @@ enum FaceValue {
   King
 }
 
-console.log(" ----- Enums can be inspected (via console.log). E.g.: -----");
+console.log(' ----- Enums can be inspected (via console.log). E.g.: -----');
 console.log(Suit);
 
-console.log(" ----- Enums can be used as a type -----");
-function grabCard(suit : Suit, faceValue: FaceValue): string {
+console.log(' ----- Enums can be used as a type -----');
+function grabCard(suit: Suit, faceValue: FaceValue): string {
   return `You were dealt the ${FaceValue[faceValue]} of ${Suit[suit]}!`;
 }
 
 console.log(grabCard(Suit.Spades, FaceValue.King));
 
-console.log(" ----- Each enum val has an associated #. The # rets the val, & vice versa -----");
+console.log(' ----- Each enum val has an associated #. The # rets the val, & vice versa -----');
 console.log('Suit[\'Hearts\']:            ', Suit['Hearts']);
 console.log('Suit.Hearts:               ',   Suit.Hearts);
 console.log('Suit[Suit.Hearts]:         ',   Suit[Suit.Hearts]);
@@ -59,7 +59,7 @@ console.log('***************** EXPLICITLY DEFINE NUMBERS LINKED TO ENUM VALS ***
 
 console.log(" ----- Can set # tied to val w '=':  e.g. ValName = 5, Val2Name = 7, etc. e.g. -----");
 
-console.log(" ----- Explicitly set #s for enum vals: Example 1: -----");
+console.log(' ----- Explicitly set #s for enum vals: Example 1: -----');
 
 enum CardFaceValue {
   Two = 2,
@@ -79,7 +79,7 @@ enum CardFaceValue {
 
 console.log(CardFaceValue);
 
-console.log(" ----- Explicitly set #s for enum vals: Example 2: -----");
+console.log(' ----- Explicitly set #s for enum vals: Example 2: -----');
 
 enum UnitsOfInfo {
   Byte = 8,
@@ -90,7 +90,7 @@ enum UnitsOfInfo {
   Petabyte = 33554432
 }
 
-console.log(UnitsOfInfo)
+console.log(UnitsOfInfo);
 
 console.log('----------------------------------------------------------------------------------');
 //#####################################################################
@@ -98,7 +98,7 @@ console.log('-------------------------------------------------------------------
 //#####################################################################
 console.log('***************** DYNAMICALLY SETTING NUMBERS TIED TO ENUM VALUES *****************');
 
-console.log(" ----- Numbers tied to enum vals can be computed & set dynamically. e.g. -----");
+console.log(' ----- Numbers tied to enum vals can be computed & set dynamically. e.g. -----');
 
 enum FileAccess {
     // constant members
@@ -107,7 +107,7 @@ enum FileAccess {
     Write   = 1 << 2,
     ReadWrite  = Read | Write,
     // computed member
-    G = "123".length
+    G = '123'.length
 }
 console.log(FileAccess);
 console.log('FileAccess[0]: ', FileAccess[0]);
@@ -122,5 +122,3 @@ console.log('***************** AMBIENT ENUMS *****************');
 // NB diff between ambient & non-ambient enums:
 //   In regular enums:            any member w/ no initializer is considered a 'constant' member
 //   In non-const ambient enums:  any member w/ no initializer is considered a 'computed' member
-
-

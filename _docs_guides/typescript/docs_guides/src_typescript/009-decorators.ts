@@ -13,23 +13,23 @@ console.log('-------------------------------------------------------------------
 //#          DEFINING DECORATORS          #
 //#########################################
 console.log('***************** DEFINING DECORATORS *****************');
-console.log(" ----- Create an example decorator -----");
+console.log(' ----- Create an example decorator -----');
 
 function logTarget(target: any) {
   console.log('The target wrapped by this decorator is: ', target.name);
 
-  var typeOfWrappedComponent = 'function';
-  var startsWithCap = target.name.match(/^\s?[A-Z]/g) !== null;
-  var hasFnSharingTargetName = target.toString().match(`function ${target.name}`);
-  var hasMultipleFns = target.toString().match(/.*function.*function.*/g);
-  var hasEmptyFn = target.toString().match(/function[^\{]+?\{[^a-zA-Z0-9_]+?\}/)
+  let typeOfWrappedComponent = 'function';
+  let startsWithCap = target.name.match(/^\s?[A-Z]/g) !== null;
+  let hasFnSharingTargetName = target.toString().match(`function ${target.name}`);
+  let hasMultipleFns = target.toString().match(/.*function.*function.*/g);
+  let hasEmptyFn = target.toString().match(/function[^\{]+?\{[^a-zA-Z0-9_]+?\}/);
   if (startsWithCap && hasFnSharingTargetName && !hasMultipleFns && hasEmptyFn) {
     typeOfWrappedComponent = 'class';
   }
   console.log('This decorator is wrapping a ' + typeOfWrappedComponent + '.');
 }
 
-console.log(" ----- Use example decorator on a class -----");
+console.log(' ----- Use example decorator on a class -----');
 @logTarget
 class Dog {
   bark() {

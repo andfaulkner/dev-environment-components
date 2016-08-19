@@ -1,0 +1,10 @@
+<snippet>
+  <description>Create a lambda</description>
+<content><![CDATA[
+${1:nameOfMethod} = (${2:params}) => {
+  ${0}
+};
+]]></content>  
+  <tabTrigger>lambmeth</tabTrigger>
+  <scope>source.js, source.ts</scope>
+</snippet>

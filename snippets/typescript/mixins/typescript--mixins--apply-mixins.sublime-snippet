@@ -1,0 +1,14 @@
+<snippet>
+  <description>Function to apply mixins</description>
+<content><![CDATA[
+function applyMixins(derivedCtor: any, baseCtors: any[]) {
+    baseCtors.forEach(baseCtor => {
+        Object.getOwnPropertyNames(baseCtor.prototype).forEach(name => {
+            derivedCtor.prototype[name] = baseCtor.prototype[name];
+        });
+    });
+}${0}
+]]></content>  
+  <tabTrigger>type_mixinapplyfn</tabTrigger>
+  <scope>source.ts</scope>
+</snippet>
