@@ -1,0 +1,15 @@
+<snippet>
+  <description>Create new enum</description>
+<content><![CDATA[
+enum ${1:Color} {
+  ${2:Props,
+  Eg,
+  Red,
+  Blue,
+  Green,
+  White}
+}
+]]></content>  
+  <tabTrigger>enum</tabTrigger>
+  <scope>source.ts</scope>
+</snippet>

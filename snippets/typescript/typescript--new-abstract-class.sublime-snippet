@@ -1,0 +1,13 @@
+<snippet>
+  <description>Create an abstract class</description>
+<content><![CDATA[
+abstract class ${1:NameOfAbstractClass} {
+  abstract ${2:abstractFn}(): ${3:/*abstractFnRetType eg */ void}
+  ${4:nameOfDefinedMethod(): methodRetType {
+    // code here
+  \}}
+}
+]]></content>  
+  <tabTrigger>class_abs</tabTrigger>
+  <scope>source.ts</scope>
+</snippet>

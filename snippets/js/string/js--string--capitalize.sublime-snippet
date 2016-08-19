@@ -1,0 +1,8 @@
+<snippet>
+  <description>Capitalize word i.e. make 1st letter cap and rest lowercase</description>
+<content><![CDATA[
+${1:string}.charAt(0).toUpperCase() + ${1:string}.slice(1).toLowerCase();${9}
+]]></content>  
+  <tabTrigger>str_capitalize</tabTrigger>
+  <scope>source.js, source.ts</scope>
+</snippet>

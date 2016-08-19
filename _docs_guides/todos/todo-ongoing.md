@@ -68,7 +68,10 @@ August 12th
 *   ! TYPESCRIPT::: Triple-Slash Directives: basics
 *   ! newest node version
 *   ! TYPESCRIPT::: generics:: generic classes
+*   ! TYPESCRIPT::: generics:: generic constraints: basics
+*   ! TYPESCRIPT::: generics:: generic constraints: using type params in generic constraints
 
+*   ! TYPESCRIPT::: generics:: generic constraints: using class types in generics
 
 *   1/2 starter project for node-react-redux-webpack-server-side-rendering-isomorphic-scss-eslint-
 
@@ -105,9 +108,6 @@ August 12th
 
 *   definitions needed: Implicit Referencing, ambient modules / declarations?
 
-*   TYPESCRIPT::: generics:: generic constraints: basics
-*   TYPESCRIPT::: generics:: generic constraints: using type params in generic constraints
-*   TYPESCRIPT::: generics:: generic constraints: using class types in generics
 
 *   TYPESCRIPT::: enums:: ambient enums
 

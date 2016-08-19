@@ -229,10 +229,110 @@ let myType: { length: number, name: string } = {
   name: 'asdf the poo llama'
 };
 
-loggingIdentityThree(myType);
+loggingIdentityThree(myType); // hey look, I broke it
 
 loggingIdentityThree('asdfasdf'); // OK, because strings have a length property
 // loggingIdentityThree(6); // << ERROR, because numbers have no length property
 
+console.log('----------------------------------------------------------------------------------');
+//###############################################################################
+//#          TYPE PARAMS CONSTRAINED BY OTHER TYPE PARAMS IN A GENERIC          #
+//###############################################################################
+console.log('***************** TYPE PARAMS CONSTRAINED BY OTHER TYPE PARAMS IN A GENERIC *****************');
 
-console.log(" ----- Gneneric  -----");
+console.log(" ----- Create a class with 2 type params, where 1 constrains the other -----");
+
+console.log(" ----- T must have all the methods of U, but can have more -----");
+interface StringWithId extends String {
+  id: string;
+}
+
+function copyFields<T extends U, U>(target: T, source: U): T {
+    for (let id in source) {
+        target[id] = source[id];
+    }
+    return target;
+}
+
+console.log(" ----- Factory is needed to create function extending String prototype -----");
+let asdf: String = "asdfasdf";
+function stringWithIdFactory(str: string, id: string): StringWithId {
+  let something: any = str;
+  something[id] = "[" + id + "]";
+  return something;
+}
+
+let asdfWId = stringWithIdFactory("hello", "greeting");
+
+console.log(" ----- Pass String and StringWId object to copyFields fn where 1 generic type -----");
+console.log(" ----- constrains the other -----");
+copyFields<StringWithId, String>(asdfWId, asdf); // OK - all type requirements met
+
+console.log(" ----- Pass object literals to copyFields fn; works because 1st item has all -----");
+console.log(" ----- fields 2nd one does, and more -----");
+copyFields<{x: number, y: number}, {x: number}>({x: 1, y: 3}, {x: 5});
+
+console.log(" ----- Pass object literals to copyFields fn without declaring generic types. -----");
+console.log(" ----- They're not needed if passing object literals. -----");
+copyFields({x: 1, y: 3}, {x: 5});
+
+copyFields({x: 1}, {x: 4}); // OK, because a type qualifies as an extension of itself in this case
+
+console.log('----------------------------------------------------------------------------------');
+//#############################################
+//#          CLASS TYPES IN GENERICS          #
+//#############################################
+console.log('***************** CLASS TYPES IN GENERICS *****************');
+
+
+enum Color {
+  Red,
+  Blue,
+  Green,
+  White
+}
+
+///////////
+console.log(" ----- EXAMPLE 1: CLASS TYPES IN GENERICS -----");
+///////////
+
+class Square {
+  constructor(public width: number) { };
+  area = () => (this.width * this.width);
+}
+
+function createShape<T>(constructor: {new(...dimen: number[])}, ...dimen: number[]): T {
+  return new constructor(...dimen);
+}
+
+let newSquare: Square = createShape<Square>(Square, 10);
+console.log('newSquare.area(): ', newSquare.area()); // => 100
+
+
+///////////
+console.log(" ----- EXAMPLE 2: CLASS TYPES IN GENERICS -----");
+///////////
+
+console.log(" ----- Define class to be auto-constructed by a factory later -----");
+class Hydrant {
+  name: string;
+  color: Color;
+  constructor(color: Color, name: string) {
+    this.name = name.charAt(0).toUpperCase() + name.slice(1).toLowerCase();
+    this.color = color;
+  }
+}
+
+console.log(" ----- Create factory in typescript using generics -----");
+// must refer to the constructor function if doing this
+// i.e. the class being passed as a param must have a constructor with a matching param signature
+function createRed<T>(constructor: {new(color: Color, name?: string): T; },
+                      name?: string): T {
+  return (name) ? new constructor(Color.Red, name) : new constructor(Color.Red);
+}
+
+console.log(" ----- Instantiate with in typescript using generics -----");
+let joe = createRed<Hydrant>(Hydrant, "joe");
+
+console.log(joe);
+
