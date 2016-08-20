@@ -5,6 +5,6 @@ declare module "${1:moduleName}" {
   export ${2:var someVar: string;}${3/.+/\n  export /}${3:function someFn(...args: any[]): void;}${4/.+/\n  export /}${4:function fnTwo(someArg: string): void;}${5/.+/\n  export /}${5:var someBool: boolean;}${6/.+/\n  export /}${7/.+/\n  export /}${7:var anotherVar: string | number | boolean;}
 }}${0}
 ]]></content>  
-  <tabTrigger>declare_mod_basic</tabTrigger>
+  <tabTrigger>type_decl_mod_basic</tabTrigger>
   <scope>source.ts</scope>
 </snippet>

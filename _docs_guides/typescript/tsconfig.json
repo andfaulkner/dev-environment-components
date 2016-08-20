@@ -1,14 +1,18 @@
 {
     "compilerOptions": {
-        "module": "commonjs",
-        "target": "ES6",
+        "module": "es6",
+        "target": "es6",
+        "moduleResolution": "node",
+        "allowSyntheticDefaultImports": true,
         "experimentalDecorators": true,
+        "outDir": "build",
         "noImplicitAny": false,
         "removeComments": false,
         "preserveConstEnums": true,
         "sourceMap": true,
         "allowJs": true,
-        "pretty": true
+        "pretty": true,
+        "jsx": "preserve"
     },
     "exclude": [
         "node_modules",
@@ -19,5 +23,8 @@
         ".eslintrc",
         ".babelrc",
         ".node-version"
+    ],
+    "files": [
+        "react/app.tsx"
     ]
 }

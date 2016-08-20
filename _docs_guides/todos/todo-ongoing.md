@@ -94,6 +94,9 @@ AUGUST 19th
 *   ! TYPESCRIPT::: modules:: Structuring modules: No namespaces in modules
 *   ! TYPESCRIPT::: modules:: Structuring modules: possible problems / red flags
 
+*   ! 5 more native string snippets
+*   ! another 5 more native string snippets
+
 ---------------------------------------------------------------------------
 ---------------------------------------------------------------------------
 
@@ -101,7 +104,6 @@ AUGUST 19th
 *   TYPESCRIPT::: module resolution:: Merging Interfaces
 *   TYPESCRIPT::: module resolution:: Merging Namespaces
 *   TYPESCRIPT::: module resolution:: Merging Namespaces w Classes, Functions, Enums
-*   ! 5 more native string snippets
 
 *   TYPESCRIPT::: modules:: Structuring modules: re-export to extend
 
