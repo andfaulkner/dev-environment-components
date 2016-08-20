@@ -7,12 +7,17 @@ import 'babel-polyfill';
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
 
-var CommentBox = React.createClass({
-  render: () => (
-    <div className="commentBox">
-      Hello, world! I am a CommentBox.
-    </div>)
-});
+export interface CommentProps {  }
+
+class CommentBox extends React.Component<CommentProps, {}> {
+  render() {
+    return (
+      <div className="commentBox">
+        Hello, world! I am a CommentBox.
+      </div>)
+  }
+};
+
 ReactDOM.render(
   <CommentBox />,
   document.getElementById('content')

@@ -1,0 +1,12 @@
+<snippet>
+  <description>New basic class</description>
+<content><![CDATA[
+class ${1:NameOfClass} {
+  ${2:constructor(args) \{
+    //do things
+  }}
+}${0}
+]]></content>  
+  <tabTrigger>clas</tabTrigger>
+  <scope>source.js, source.ts</scope>
+</snippet>
