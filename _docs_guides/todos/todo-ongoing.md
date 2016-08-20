@@ -82,10 +82,26 @@ August 12th
 *   ! TYPESCRIPT::: modules:: export = and import = require()
 *   ! TYPESCRIPT::: modules:: code generation for modules
 *   ! TYPESCRIPT::: modules:: Optional Module Loading
+
+---------------------------------------------------------------------------
+---------------------------------------------------------------------------
+
+AUGUST 19th
+===========
+
 *   ! TYPESCRIPT::: modules:: Working w existing JS libraries: ambient modules
 *   ! TYPESCRIPT:: modules: Structuring modules: Export as close to top-lvl as possible
 *   ! TYPESCRIPT::: modules:: Structuring modules: No namespaces in modules
 *   ! TYPESCRIPT::: modules:: Structuring modules: possible problems / red flags
+
+---------------------------------------------------------------------------
+---------------------------------------------------------------------------
+
+*   TYPESCRIPT::: module resolution:: Basics
+*   TYPESCRIPT::: module resolution:: Merging Interfaces
+*   TYPESCRIPT::: module resolution:: Merging Namespaces
+*   TYPESCRIPT::: module resolution:: Merging Namespaces w Classes, Functions, Enums
+* 4 more native string snippets
 
 *   TYPESCRIPT::: modules:: Structuring modules: re-export to extend
 

@@ -1,0 +1,8 @@
+<snippet>
+  <description>Make string uppercase</description>
+<content><![CDATA[
+${1:string}.toUpperCase();${0}
+]]></content>  
+  <tabTrigger>str_uppercase</tabTrigger>
+  <scope>source.js, source.ts</scope>
+</snippet>
