@@ -1,0 +1,8 @@
+<snippet>
+  <description>Test if string ends with given substring</description>
+<content><![CDATA[
+${1:string}.endsWith('${2:check if ${1} ends with this string}');${0}
+]]></content>  
+  <tabTrigger>str_endswith</tabTrigger>
+  <scope>source.js, source.ts</scope>
+</snippet>

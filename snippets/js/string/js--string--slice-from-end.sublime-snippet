@@ -1,0 +1,8 @@
+<snippet>
+  <description>Using negative str pos index, extract part of a str from end</description>
+<content><![CDATA[
+${1:string}.slice(-${2:/*num_chars_to_ret_from_end_of_str*/4});${0}
+]]></content>  
+  <tabTrigger>str_slice_from_end</tabTrigger>
+  <scope>source.js, source.ts</scope>
+</snippet>

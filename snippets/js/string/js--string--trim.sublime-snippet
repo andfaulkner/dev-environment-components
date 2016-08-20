@@ -1,0 +1,8 @@
+<snippet>
+  <description>Rem all whitespace from both ends of string</description>
+<content><![CDATA[
+${1:string}.trim();${0}
+]]></content>  
+  <tabTrigger>str_trim</tabTrigger>
+  <scope>source.js, source.ts</scope>
+</snippet>

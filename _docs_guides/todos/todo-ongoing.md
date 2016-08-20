@@ -101,7 +101,7 @@ AUGUST 19th
 *   TYPESCRIPT::: module resolution:: Merging Interfaces
 *   TYPESCRIPT::: module resolution:: Merging Namespaces
 *   TYPESCRIPT::: module resolution:: Merging Namespaces w Classes, Functions, Enums
-* 4 more native string snippets
+*   ! 5 more native string snippets
 
 *   TYPESCRIPT::: modules:: Structuring modules: re-export to extend
 
