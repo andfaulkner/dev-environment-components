@@ -89,6 +89,8 @@ August 12th
 
 *   TYPESCRIPT::: modules:: Structuring modules: re-export to extend
 
+*   another level of git abstraction
+
 *   1/2 starter project for node-react-redux-webpack-server-side-rendering-isomorphic-scss-eslint-
 
 *   TYPESCRIPT::: JSX: basics
