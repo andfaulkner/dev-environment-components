@@ -6,5 +6,5 @@ interface ${1:NameOfNewType} {
 }
 ]]></content>  
   <tabTrigger>itf</tabTrigger>
-  <scope>source.ts</scope>
+  <scope>source.ts, source.tsx</scope>
 </snippet>

@@ -105,6 +105,11 @@ AUGUST 19th
 *   TYPESCRIPT::: module resolution:: Merging Namespaces
 *   TYPESCRIPT::: module resolution:: Merging Namespaces w Classes, Functions, Enums
 
+*   React import snippets
+*   convery react snippets to work with ts
+*   React-friend new snippet
+
+
 *   TYPESCRIPT::: modules:: Structuring modules: re-export to extend
 
 *   another level of git abstraction
@@ -114,6 +119,7 @@ AUGUST 19th
 *   TYPESCRIPT::: JSX: basics
 *   TYPESCRIPT::: JSX: as operator
 *   TYPESCRIPT::: JSX: type checking
+*   TYPESCRIPT::: JSX: intrinsic elements
 *   TYPESCRIPT::: JSX: value-based elements
 *   TYPESCRIPT::: JSX: attribute type checking
 *   TYPESCRIPT::: JSX: JSX result ype

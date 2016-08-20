@@ -1,9 +1,12 @@
 /// <reference path="../typings/react/react.d.ts" />
 /// <reference path="../typings/react/react-dom.d.ts" />
 /// <reference path="../typings/app.d.ts" />
+/// <reference path="../typings/react-bootstrap/react-bootstrap.d.ts" />
 
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
+
+import { Button } from 'react-bootstrap';
 
 export interface CommentProps {  }
 export interface CommentState {  }
@@ -14,7 +17,10 @@ class CommentBox extends React.Component<CommentProps, CommentState> {
   render() {
     return (
       <div className="commentBox">
-        Hello, world! I am a CommentBox.
+        <Button />
+        <span>
+          Hello, world! I am a CommentBox.
+        </span>
       </div>);
   }
 };

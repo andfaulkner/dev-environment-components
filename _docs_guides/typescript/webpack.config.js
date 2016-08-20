@@ -1,12 +1,12 @@
 let path = require('path');
 let webpack = require('webpack');
-let HtmlWebpackPlugin = require('html-webpack-plugin');
+// let HtmlWebpackPlugin = require('html-webpack-plugin');
 let HandlebarsPlugin = require('handlebars-webpack-plugin');
 
 let srcPath = path.join(__dirname, 'react');
 let buildPath = path.join(__dirname, 'build');
 let libPath = path.join(__dirname, 'node_modules');
-let config = path.join(__dirname, 'build');
+let configFile = "./config/config.json";
 
 function buildFilePath(currentPath) {
   return path.join(buildPath, currentPath);
@@ -76,7 +76,7 @@ module.exports = {
       // filepath to result
       output: buildFilePath("index.html"),
       // data passed to main hbs template: `main-template(data)`
-      data: require("./config/config.json")['index-data']
+      data: require(configFile)['index-data']
     })
   ],
 

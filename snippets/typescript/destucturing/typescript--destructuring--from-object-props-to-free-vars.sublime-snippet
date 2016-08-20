@@ -4,5 +4,5 @@
 TODO: MAKE THIS SNIPPET
 ]]></content>  
   <tabTrigger>destr</tabTrigger>
-  <scope>source.ts</scope>
+  <scope>source.ts, source.tsx</scope>
 </snippet>

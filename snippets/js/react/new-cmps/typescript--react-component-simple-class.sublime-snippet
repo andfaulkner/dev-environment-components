@@ -1,0 +1,14 @@
+<snippet>
+		<description>Simple class-based react component, no export</description>
+    <content><![CDATA[
+class ${1:ClassName} extends React.Component<${2:${1}Props}, ${3:${1}State}> {
+	render() {
+		return (
+			${4:<div>Yo</div>}
+		);
+	}
+};
+]]></content>
+    <tabTrigger>rct_new_class_simple</tabTrigger>
+    <scope>source.ts, source.tsx</scope>
+</snippet>

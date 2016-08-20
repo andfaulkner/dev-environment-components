@@ -11,5 +11,5 @@ if (${4:import_if_this_condition_is_met}) {
 }
 ]]></content>  
   <tabTrigger>impcond</tabTrigger>
-  <scope>source.ts</scope>
+  <scope>source.ts, source.tsx</scope>
 </snippet>

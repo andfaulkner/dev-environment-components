@@ -4,5 +4,5 @@
 ${1:store}.subscribe(${2:fn});
 ]]></content>
 	<tabTrigger>rxsub</tabTrigger>
-	<scope>source.js, source.ts</scope>
+	<scope>source.js, source.ts, source.jsx, source.tsx</scope>
 </snippet>

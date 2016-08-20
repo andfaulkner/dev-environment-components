@@ -6,5 +6,5 @@ constructor(${1:param1}: ${2:param1_type}) {
 }
 ]]></content>  
   <tabTrigger>cns</tabTrigger>
-  <scope>source.ts</scope>
+  <scope>source.ts, source.tsx</scope>
 </snippet>

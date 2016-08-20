@@ -11,5 +11,5 @@ enum ${1:Color} {
 }
 ]]></content>  
   <tabTrigger>enum</tabTrigger>
-  <scope>source.ts</scope>
+  <scope>source.ts, source.tsx</scope>
 </snippet>

@@ -1,5 +1,18 @@
 {
   "index-data": {
-    "title": "My title!"
+    "title": "My title!",
+    "styleLinks": [
+      "https://maxcdn.bootstrapcdn.com/bootstrap/latest/css/bootstrap.min.css",
+      "https://maxcdn.bootstrapcdn.com/bootstrap/latest/css/bootstrap-theme.min.css"
+    ],
+    "globalScripts": [
+      "app.js",
+      "https://npmcdn.com/react@15.3.1/dist/react.js",
+      "https://npmcdn.com/react-dom@15.3.1/dist/react-dom.js",
+      "https://npmcdn.com/babel-core@5.8.38/browser.min.js",
+      "https://npmcdn.com/jquery@3.1.0/dist/jquery.min.js",
+      "https://npmcdn.com/remarkable@1.6.2/dist/remarkable.min.js",
+      "https://cdnjs.cloudflare.com/ajax/libs/react-bootstrap/0.30.2/react-bootstrap.min.js"
+    ]
   }
 }

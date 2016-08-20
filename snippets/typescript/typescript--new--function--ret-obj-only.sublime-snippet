@@ -4,5 +4,5 @@
 let ${1:nameOfFn} = () => ({${2:return: value}});${0}
 ]]></content>  
   <tabTrigger>type_fn_bsc_retobj</tabTrigger>
-  <scope>source.ts</scope>
+  <scope>source.ts, source.tsx</scope>
 </snippet>

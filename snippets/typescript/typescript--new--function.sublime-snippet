@@ -6,5 +6,5 @@ let ${1:fnName} = (${2:paramName}: ${3:paramType}${4/.+/, /}${4:param2: type2})$
 };
 ]]></content>  
   <tabTrigger>type_fn</tabTrigger>
-  <scope>source.ts</scope>
+  <scope>source.ts, source.tsx</scope>
 </snippet>

@@ -24,5 +24,5 @@ var ${1:ComponentThatMountsAnother} = React.createClass({
 });
 ]]></content>
   <tabTrigger>rct_mounter</tabTrigger>
-  <scope>source.js, source.ts</scope>
+  <scope>source.js, source.ts, source.jsx, source.tsx</scope>
 </snippet>
