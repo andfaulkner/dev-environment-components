@@ -72,10 +72,24 @@ August 12th
 *   ! TYPESCRIPT::: generics:: generic constraints: using type params in generic constraints
 
 *   ! TYPESCRIPT::: generics:: generic constraints: using class types in generics
+*   ! TYPESCRIPT::: generics:: generic constraints: using class types in generics w/ prototypes
+
+*   ! TYPESCRIPT::: modules:: exports
+*   ! TYPESCRIPT::: modules:: re-exports
+*   ! TYPESCRIPT::: modules:: imports
+*   ! TYPESCRIPT::: modules:: imports for side effects
+*   ! TYPESCRIPT::: modules:: default exports
+*   ! TYPESCRIPT::: modules:: export = and import = require()
+*   ! TYPESCRIPT::: modules:: code generation for modules
+*   ! TYPESCRIPT::: modules:: Optional Module Loading
+*   ! TYPESCRIPT::: modules:: Working w existing JS libraries: ambient modules
+*   ! TYPESCRIPT:: modules: Structuring modules: Export as close to top-lvl as possible
+*   ! TYPESCRIPT::: modules:: Structuring modules: No namespaces in modules
+*   ! TYPESCRIPT::: modules:: Structuring modules: possible problems / red flags
+
+*   TYPESCRIPT::: modules:: Structuring modules: re-export to extend
 
 *   1/2 starter project for node-react-redux-webpack-server-side-rendering-isomorphic-scss-eslint-
-
-*   css 
 
 *   TYPESCRIPT::: JSX: basics
 *   TYPESCRIPT::: JSX: as operator

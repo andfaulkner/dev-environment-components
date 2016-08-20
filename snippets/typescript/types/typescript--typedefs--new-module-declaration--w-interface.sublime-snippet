@@ -1,0 +1,14 @@
+<snippet>
+  <description>Example type declaration w/ interfaces</description>
+<content><![CDATA[
+declare module "${1:moduleName}" {
+  export ${2:interface SomeInterfaceOne {
+    someVal?: Function;
+  \}}${3/.+/\n  /}${3:interface YetAnotherInterface {
+    fn(fnArg: /*fnArgType*/string): /*fnOutputType*/boolean;
+  \}}
+}${0}
+]]></content>  
+  <tabTrigger>declare_mod_w_interfaces</tabTrigger>
+  <scope>source.ts</scope>
+</snippet>

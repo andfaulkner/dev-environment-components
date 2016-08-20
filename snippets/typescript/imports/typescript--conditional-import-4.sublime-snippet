@@ -1,0 +1,15 @@
+<snippet>
+  <description>Only preform given import if certain conditions are met (NodeJS imports)</description>
+<content><![CDATA[
+declare function require(moduleName: string): any;
+
+import { ${1:ItemToImport} as ${2:nameToGiveImport} } from '${3:./place/to/import/from}';
+
+if (${4:import_if_this_condition_is_met}) {
+  let ${1:ItemToImport}: typeof ${2:nameToGiveImport} = require('${3:./place/to/import/from}');
+  ${5:// do things with the import here}
+}
+]]></content>  
+  <tabTrigger>imp_cond</tabTrigger>
+  <scope>source.ts</scope>
+</snippet>

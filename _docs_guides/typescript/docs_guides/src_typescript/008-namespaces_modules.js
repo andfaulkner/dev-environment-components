@@ -20,52 +20,69 @@ console.log(' ----- Any file containing a top-level import or export is consider
 // modules are executed in their own scope, not the global scope, so anything declared in a module
 // is inaccessible from outside unless explicitly exported.
 // Anything can be exported: vars, functions, classes, type alises, interfaces
-console.log(' ----- Create a module with several exports -----');
-var Geometry;
-(function (Geometry) {
-    function hypotenuse(a, b) {
-        if (typeof a !== typeof b) {
-            return new Error('type a and type b');
-        }
-        console.log('hypotenuse:: type of a: ', typeof a);
-        console.log('hypotenuse:: type of b: ', typeof b);
-        return 3;
-        // return Math.abs(a^2) + Math.abs(b);
-    }
-    Geometry.hypotenuse = hypotenuse;
-    // TODO complete this after doing interfaces, we're missing details
-    // function GetFirstName(name: string): string;
-    // function GetFirstName(id: number): string;
-    // function GetFirstName(stringOrId: string | number): string {
-    //   return 'bleh';
-    // }
-    // function olTest(name: string): string;
-    // function olTest(id: number): boolean;
-    // function olTest
-    // function rTriangleHypotenuseLen(edgePoint1: Point, cornerPoint: Point, edgePoint2: Point): number;
-    // function rTriangleHypotenuseLen(rAngleLine1Len: number, lAngleLine2Len: number): number;
-    // function rTriangleHypotenuseLen(rAngleLine1Len: number, lAngleLine2Len: number): number {
-    //   return Math.sqrt(Math.abs(rAngleLine1Len^2) + Math.abs(lAngleLine2Len));
-    // }
-    // function rTriangleHypotenuseLen(edgePoint1: Point, cornerPoint: Point, edgePoint2: Point): number {
-    //   return Math.sqrt(Math.abs(rAngleLine1Len^2) + Math.abs(lAngleLine2Len));
-    // }
-    // const rightTriangleHypotenuse = (a: number | b: number | Point) =>
-    class Square {
-        constructor(sideLength = 0) {
-            this.sideLength = sideLength;
-            this.area = () => Math.pow(this.sideLength, 2);
-        }
-    }
-    Geometry.Square = Square;
-})(Geometry || (Geometry = {}));
-console.log(Geometry.hypotenuse(3, 4));
-let pt1 = { x: 3, y: 2 };
-console.log(Geometry.hypotenuse(pt1, { x: 6, y: 9 }));
-// console.log(Geometry.hypotenuse({x: 4, y: 2}: Point, {x: 4, y: 2}: Point));
-let mySquare = new Geometry.Square(4);
-console.log(mySquare); // => Square { sideLength: 4, area: [Function] }
-console.log(mySquare.area()); // => 16
+
+console.log('----------------------------------------------------------------------------------');
+//#########################################
+//#          EXPORT DECLARATIONS          #
+//#########################################
+console.log('***************** EXPORT DECLARATIONS *****************');
+console.log(" ----- See ./testmodules/test-module-1.ts -----");
+
+
+console.log('----------------------------------------------------------------------------------');
+//#############################
+//#          IMPORTS          #
+//#############################
+console.log('***************** IMPORTS *****************');
+import {Parcel} from './testmodules/test-module-1.ts';
+
+console.log(Parcel);
+
+// var Geometry;
+// (function (Geometry) {
+//     function hypotenuse(a, b) {
+//         if (typeof a !== typeof b) {
+//             return new Error('type a and type b');
+//         }
+//         console.log('hypotenuse:: type of a: ', typeof a);
+//         console.log('hypotenuse:: type of b: ', typeof b);
+//         return 3;
+//         // return Math.abs(a^2) + Math.abs(b);
+//     }
+//     Geometry.hypotenuse = hypotenuse;
+//     // TODO complete this after doing interfaces, we're missing details
+//     // function GetFirstName(name: string): string;
+//     // function GetFirstName(id: number): string;
+//     // function GetFirstName(stringOrId: string | number): string {
+//     //   return 'bleh';
+//     // }
+//     // function olTest(name: string): string;
+//     // function olTest(id: number): boolean;
+//     // function olTest
+//     // function rTriangleHypotenuseLen(edgePoint1: Point, cornerPoint: Point, edgePoint2: Point): number;
+//     // function rTriangleHypotenuseLen(rAngleLine1Len: number, lAngleLine2Len: number): number;
+//     // function rTriangleHypotenuseLen(rAngleLine1Len: number, lAngleLine2Len: number): number {
+//     //   return Math.sqrt(Math.abs(rAngleLine1Len^2) + Math.abs(lAngleLine2Len));
+//     // }
+//     // function rTriangleHypotenuseLen(edgePoint1: Point, cornerPoint: Point, edgePoint2: Point): number {
+//     //   return Math.sqrt(Math.abs(rAngleLine1Len^2) + Math.abs(lAngleLine2Len));
+//     // }
+//     // const rightTriangleHypotenuse = (a: number | b: number | Point) =>
+//     class Square {
+//         constructor(sideLength = 0) {
+//             this.sideLength = sideLength;
+//             this.area = () => Math.pow(this.sideLength, 2);
+//         }
+//     }
+//     Geometry.Square = Square;
+// })(Geometry || (Geometry = {}));
+// console.log(Geometry.hypotenuse(3, 4));
+// let pt1 = { x: 3, y: 2 };
+// console.log(Geometry.hypotenuse(pt1, { x: 6, y: 9 }));
+// // console.log(Geometry.hypotenuse({x: 4, y: 2}: Point, {x: 4, y: 2}: Point));
+// let mySquare = new Geometry.Square(4);
+// console.log(mySquare); // => Square { sideLength: 4, area: [Function] }
+// // console.log(mySquare.area()); // => 16
 // %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 // %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 // %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%

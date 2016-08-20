@@ -301,8 +301,8 @@ class Square {
   area = () => (this.width * this.width);
 }
 
-function createShape<T>(constructor: {new(...dimen: number[])}, ...dimen: number[]): T {
-  return new constructor(...dimen);
+function createShape<T>(fn: {new(...dimen: number[])}, ...dimen: number[]): T {
+  return new fn(...dimen);
 }
 
 let newSquare: Square = createShape<Square>(Square, 10);
@@ -326,9 +326,9 @@ class Hydrant {
 console.log(" ----- Create factory in typescript using generics -----");
 // must refer to the constructor function if doing this
 // i.e. the class being passed as a param must have a constructor with a matching param signature
-function createRed<T>(constructor: {new(color: Color, name?: string): T; },
+function createRed<T>(fn: {new(color: Color, name?: string): T; },
                       name?: string): T {
-  return (name) ? new constructor(Color.Red, name) : new constructor(Color.Red);
+  return (name) ? new fn(Color.Red, name) : new fn(Color.Red);
 }
 
 console.log(" ----- Instantiate with in typescript using generics -----");
@@ -336,3 +336,54 @@ let joe = createRed<Hydrant>(Hydrant, "joe");
 
 console.log(joe);
 
+console.log('----------------------------------------------------------------------------------');
+//##########################################################################
+//#          USE CLASS TYPES IN GENERICS W ADDED USE OF PROTOTYPE          #
+//##########################################################################
+console.log('***************** USE CLASS TYPES IN GENERICS W ADDED USE OF PROTOTYPE *****************');
+
+class Person {
+  constructor(public name: string) { }
+}
+
+class Adult extends Person {
+  hasDriversLicense: boolean;
+}
+
+class Child extends Person {
+  currentSchool: string;
+}
+
+class Vehicle {
+  numWheels: number;
+  rider: Person;
+}
+
+class Car extends Vehicle {
+  numWheels = 4;
+  horsepower: number;
+}
+
+class Tricycle extends Vehicle {
+  numWheels = 3;
+  hasBasket: boolean;
+  hasLittleTrayAtBottomBack: boolean;
+}
+
+class Bicycle extends Vehicle {
+  hasBasket: boolean;
+  numWheels = 2;
+}
+
+function getRider<V extends Vehicle, P>(v: {new(): V; prototype: {rider: P}}): P {
+  console.log('007-generics#getRider: v: ', v);
+  console.log('007-generics#getRider: v.prototype: ', v.prototype);
+  console.log('007-generics#getRider: v.prototype.rider: ', v.prototype.rider);
+  return v.prototype.rider;
+}
+
+getRider(Tricycle); // => undefined; however, the type checking passes
+// getRider(Tricycle).name; // => typechecks, but it causes a crash if run. Hm fail.
+
+console.log(" ----- NOTE ON class extends: WHEN YOU USE extends, ALL ITEMS ON THE CLASS BEING -----");
+console.log(" ----- EXTENDED ARE ASSIGNED TO THE prototype PROPERTY OF THE class DOING THE EXTENDING -----");

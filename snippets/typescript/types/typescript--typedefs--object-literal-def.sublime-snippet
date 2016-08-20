@@ -1,0 +1,10 @@
+<snippet>
+  <description>Type definition for an object literal</description>
+<content><![CDATA[
+let ${1:nameOfVar}: {
+  ${2:nameOfProp}: ${3:string /*OR string[], number, number[], any, any[], void, AnInterfaceOrClass */};${4/.+/\n  /}${4:anotherProp: /*anotherType e.g.*/string;}
+};${0}
+]]></content>  
+  <tabTrigger>typedef_obj</tabTrigger>
+  <scope>source.ts</scope>
+</snippet>
