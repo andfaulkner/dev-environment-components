@@ -158,6 +158,12 @@ import { myNewFn, ZipCodeValidator } from "./testmodules/test-module-1";
 let zipCodeValidator = new ZipCodeValidator();
 let someFn = myNewFn();
 
+console.log('----------------------------------------------------------------------------------');
+//#########################################
+//#          RE-EXPORT TO EXTEND          #
+//#########################################
+console.log('***************** RE-EXPORT TO EXTEND *****************');
+
 
 
 
@@ -201,65 +207,6 @@ namespace Geometry {
     // return Math.abs(a^2) + Math.abs(b);
   }
 }
-
-// TODO complete this after doing interfaces, we're missing details
-
-// function GetFirstName(name: string): string;
-// function GetFirstName(id: number): string;
-
-// function GetFirstName(stringOrId: string | number): string {
-
-//   return 'bleh';
-// }
-
-  // function olTest(name: string): string;
-  // function olTest(id: number): boolean;
-
-  // function olTest
-
-  // function rTriangleHypotenuseLen(edgePoint1: Point, cornerPoint: Point, edgePoint2: Point): number;
-  // function rTriangleHypotenuseLen(rAngleLine1Len: number, lAngleLine2Len: number): number;
-
-
-
-  // function rTriangleHypotenuseLen(rAngleLine1Len: number, lAngleLine2Len: number): number {
-  //   return Math.sqrt(Math.abs(rAngleLine1Len^2) + Math.abs(lAngleLine2Len));
-  // }
-
-  // function rTriangleHypotenuseLen(edgePoint1: Point, cornerPoint: Point, edgePoint2: Point): number {
-  //   return Math.sqrt(Math.abs(rAngleLine1Len^2) + Math.abs(lAngleLine2Len));
-  // }
-
-
-  // const rightTriangleHypotenuse = (a: number | b: number | Point) =>
-
-//   export class Square {
-//     constructor(public sideLength: number = 0) { }
-//     area = () => Math.pow(this.sideLength, 2);
-//   }
-// }
-
-// console.log(Geometry.hypotenuse(3, 4));
-
-// let pt1: Geometry.Point = {x: 3, y: 2};
-
-// console.log(Geometry.hypotenuse(pt1, {x: 6, y: 9}));
-// // console.log(Geometry.hypotenuse({x: 4, y: 2}: Point, {x: 4, y: 2}: Point));
-
-// let mySquare = new Geometry.Square(4);
-// console.log(mySquare);         // => Square { sideLength: 4, area: [Function] }
-// console.log(mySquare.area());  // => 16
-
-// %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-// %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-// %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-// %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-// TODO MUST MUST MUST FIX MODULES SECTION (after finishing with interfaces)
-// %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-// %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-// %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-// // %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
 
 
 // console.log('----------------------------------------------------------------------------------');
