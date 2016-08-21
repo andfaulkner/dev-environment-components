@@ -1,0 +1,8 @@
+<snippet>
+  <description>Capture fn from module in var (to pass around, etc)</description>
+<content><![CDATA[
+${1:variable_name} = &${2:ModuleName}.${3:name_of_fn}/${4:arity_e.g.: 1}
+]]></content>  
+  <tabTrigger>fn_capture_from_mod</tabTrigger>
+  <scope>source.elixir</scope>
+</snippet>

@@ -221,4 +221,8 @@ endoendo #=> 1
 ## Lists
 ## -----------------------------------------------------
 # Get first item from list
-    hd([3241, 2, 3]) #=> 3241
+    hd([3241, 2, 3331]) #=> 3241
+
+# Get all items from list but the first
+    hd([3241, 2, 3331]) #=> [2, 3331]
+

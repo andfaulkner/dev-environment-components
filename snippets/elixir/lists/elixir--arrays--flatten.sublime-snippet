@@ -1,0 +1,8 @@
+<snippet>
+  <description>Flatten nested arrays into a single array</description>
+<content><![CDATA[
+List.flatten(${1:["nested", "array", "here", [2, 3, 4], 6, 4, [[1, 2], "asdf"], "berb"]})${0}
+]]></content>  
+  <tabTrigger>arr_flatten</tabTrigger>
+  <scope>source.elixir</scope>
+</snippet>

@@ -1,0 +1,8 @@
+<snippet>
+  <description>Flatten nested arrays into a single array</description>
+<content><![CDATA[
+List.foldl(${1:["arr", 2 "reduce"], ${2:"accumulator_startval"}, ${3:reducer_fn_taking_2_arg__accval__curval)
+]]></content>  
+  <tabTrigger>arr_flatten</tabTrigger>
+  <scope>source.elixir</scope>
+</snippet>

@@ -1,0 +1,8 @@
+<snippet>
+  <description>Define a function through function capturing (similar to a lambda)</description>
+<content><![CDATA[
+${1:new_fn_name} = &(${2:fn behaviour. &1, &2, &3, etc. to reference passed args})${0}
+]]></content>  
+  <tabTrigger>fn_def_thru_capture</tabTrigger>
+  <scope>source.elixir</scope>
+</snippet>

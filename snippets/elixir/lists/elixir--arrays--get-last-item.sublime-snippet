@@ -1,0 +1,8 @@
+<snippet>
+  <description>Get last item from array</description>
+<content><![CDATA[
+List.last(${1:["some", "array"]})${0}
+]]></content>  
+  <tabTrigger>arr_last</tabTrigger>
+  <scope>source.elixir</scope>
+</snippet>
