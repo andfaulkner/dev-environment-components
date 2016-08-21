@@ -4,5 +4,5 @@
 document.getElementsByTagName('${1:div|span|p|li|ul|ol|h1|hr|a|img|form|input|option|select|button|textarea|table|tr|td|th|style|link|script|head|body|html}')${2:[0]}${0}
 ]]></content>  
   <tabTrigger>dom_sel_tag</tabTrigger>
-  <scope>source.js, source.ts</scope>
+  <scope>source.js, source.ts, source.jsx, source.tsx</scope>
 </snippet>

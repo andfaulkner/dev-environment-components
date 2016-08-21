@@ -4,5 +4,5 @@
 Ember.get('store', '${1:modelName_ends_with_s__e.g._bears}');${0}
 ]]></content>  
   <tabTrigger>embget</tabTrigger>
-  <scope>source.js, source.ts</scope>
+  <scope>source.js, source.ts, source.jsx, source.tsx</scope>
 </snippet>

@@ -4,5 +4,5 @@
 expect(${1:val1}).to.equal(${2:val2});
 ]]></content>
 	<tabTrigger>eexpect</tabTrigger>
-	<scope>source.js, source.ts</scope>
+	<scope>source.js, source.ts, source.jsx, source.tsx</scope>
 </snippet>

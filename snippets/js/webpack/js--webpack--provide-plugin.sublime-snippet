@@ -6,5 +6,5 @@ new webpack.ProvidePlugin({
 })
 ]]></content>  
   <tabTrigger>webp_plugin_provide</tabTrigger>
-  <scope>source.js, source.ts</scope>
+  <scope>source.js, source.ts, source.jsx, source.tsx</scope>
 </snippet>

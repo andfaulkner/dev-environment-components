@@ -4,5 +4,5 @@
 _.replace(${1:'stringToReplacePartsOf'}, ${2:/regexOrStringPatternToReplace/}, ${3:'replacementText'}');
 ]]></content>
     <tabTrigger>_str_replace</tabTrigger>
-    <scope>source.js, source.ts</scope>
+    <scope>source.js, source.ts, source.jsx, source.tsx</scope>
 </snippet>

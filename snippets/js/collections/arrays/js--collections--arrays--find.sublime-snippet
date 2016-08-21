@@ -6,5 +6,5 @@ ${1/.+/let /}${1:someVar}${1/.+/ = /}${2:someArray}.find((${3:arrItem}) => {
 });
 ]]></content>  
   <tabTrigger>arr_find</tabTrigger>
-  <scope>source.js, source.ts</scope>
+  <scope>source.js, source.ts, source.jsx, source.tsx</scope>
 </snippet>

@@ -7,5 +7,5 @@ app.get('${1:route_eg_/home}', (req, res) => {
 });
 ]]></content>
 	<tabTrigger>expr_route</tabTrigger>
-	<scope>source.js, source.ts</scope>
+	<scope>source.js, source.ts, source.jsx, source.tsx</scope>
 </snippet>

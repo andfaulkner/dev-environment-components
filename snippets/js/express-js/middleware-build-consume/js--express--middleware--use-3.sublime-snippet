@@ -4,5 +4,5 @@
 app.use(${1:'/optional/route/to/apply/middleware/at'}${1/.+/, /}${2:some_middleware_fn_or_lib});${0}
 ]]></content>
   <tabTrigger>use</tabTrigger>
-  <scope>source.js, source.ts</scope>
+  <scope>source.js, source.ts, source.jsx, source.tsx</scope>
 </snippet>

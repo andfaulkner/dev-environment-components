@@ -10,5 +10,5 @@ switch(${1:some_var_oft_a_string}) {
 }
 ]]></content>  
   <tabTrigger>switch</tabTrigger>
-  <scope>source.js, source.ts</scope>
+  <scope>source.js, source.ts, source.jsx, source.tsx</scope>
 </snippet>

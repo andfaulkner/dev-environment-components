@@ -11,5 +11,5 @@ ${2:middlewaresAndRoutesHere}
 app.listen(${1:port});
 ]]></content>
 	<tabTrigger>expr_boiler</tabTrigger>
-	<scope>source.js, source.ts</scope>
+	<scope>source.js, source.ts, source.jsx, source.tsx</scope>
 </snippet>

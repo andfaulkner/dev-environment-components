@@ -4,5 +4,5 @@
 ${1/.+/var /}${1:varStoringFirstArrItem}${1/.+/ = /}_.tail(${2:arrayToGrabFirstValFrom});${0}
 ]]></content>
     <tabTrigger>_arr_first</tabTrigger>
-    <scope>source.js, source.ts</scope>
+    <scope>source.js, source.ts, source.jsx, source.tsx</scope>
 </snippet>

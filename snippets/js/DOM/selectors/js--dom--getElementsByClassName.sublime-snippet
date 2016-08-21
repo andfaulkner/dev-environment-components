@@ -4,5 +4,5 @@
 document.getElementsByClassName(${1:e.g. 'home-button'|e.g. 'home-button round-edge'})${2:[0]}${0}
 ]]></content>  
   <tabTrigger>dom_sel_class</tabTrigger>
-  <scope>source.js, source.ts</scope>
+  <scope>source.js, source.ts, source.jsx, source.tsx</scope>
 </snippet>

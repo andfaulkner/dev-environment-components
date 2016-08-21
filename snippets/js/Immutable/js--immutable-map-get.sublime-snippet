@@ -4,5 +4,5 @@
 var ${1:varName} = ${2:mapToGetFrom}.get(${3:keyToGetFrom});
 ]]></content>
 	<tabTrigger>immg</tabTrigger>
-	<scope>source.js, source.ts</scope>
+	<scope>source.js, source.ts, source.jsx, source.tsx</scope>
 </snippet>

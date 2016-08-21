@@ -4,5 +4,5 @@
 ${1/.+/var /}${1:nameOfOutputArray}${1/.+/ = /}_.reverse(${2:arrayToReverse});${0}
 ]]></content>
     <tabTrigger>_arr_rev</tabTrigger>
-    <scope>source.js, source.ts</scope>
+    <scope>source.js, source.ts, source.jsx, source.tsx</scope>
 </snippet>

@@ -4,5 +4,5 @@
 import {${1:ItemToImport}, ${2:Item2ToImport}} from '${3:nameOfModule}';
 ]]></content>
 	<tabTrigger>impot</tabTrigger>
-	<scope>source.js, source.ts</scope>
+	<scope>source.js, source.ts, source.jsx, source.tsx</scope>
 </snippet>

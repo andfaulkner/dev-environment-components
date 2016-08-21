@@ -6,7 +6,17 @@ echo "* NodeJS scripts loading..."
 
 export NODE_PATH=/usr/lib/nodejs:/usr/lib/node_modules:/usr/share/javascript:/usr/local/lib/node_modules
 
+################################## npm ################################## 
+# GLOBAL INSTALL
+alias nig="npm install -g"
+alias nis="npm install --save"
+alias nisd="npm install --save-dev"
+
+alias nr="npm run" 
 alias nrn="npm run nodemon"
+alias nun="npm uninstall"
+alias nuns="npm uninstall --save"
+alias nunsd="npm uninstall --save-dev"
 
 alias nrnd="export LOG_LEVEL=debug; npm run nodemon"
 alias nrnt="export LOG_LEVEL=trace; npm run nodemon"
@@ -169,12 +179,6 @@ export NVM_DIR=~/.nvm
 nvm use v6.4.0
 
 alias ember_dep_surge="rm -rf dist; ember build --environment=development; cd dist; cp index.html 200.html; surge" # if site already exists, provide it here 
-
-# GLOBAL INSTALL
-alias nig="npm install -g"
-
-alias nis="npm install --save"
-alias nisd="npm install --save-dev"
 
 function react_setup_for_newnode_project {
   npm install react redux react-redux react-dom --save

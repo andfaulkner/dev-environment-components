@@ -6,5 +6,5 @@ ${1/.+/let /}${1:someNewArr}${1/.+/ = /}${2:someArray}.map((${3:item, index, ful
 });
 ]]></content>
   <tabTrigger>arr_map</tabTrigger>
-  <scope>source.js, source.ts</scope>
+  <scope>source.js, source.ts, source.jsx, source.tsx</scope>
 </snippet>

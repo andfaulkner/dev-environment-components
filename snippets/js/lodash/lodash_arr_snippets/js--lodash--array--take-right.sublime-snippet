@@ -4,5 +4,5 @@
 ${1/.+/var /}${1:nameOfOutputArray}${1/.+/ = /}_.takeRight(${2:arrayToGrabFrom}, ${3:numberOfItemsToGrabFromEnd});${0}
 ]]></content>
     <tabTrigger>_arr_takeright</tabTrigger>
-    <scope>source.js, source.ts</scope>
+    <scope>source.js, source.ts, source.jsx, source.tsx</scope>
 </snippet>

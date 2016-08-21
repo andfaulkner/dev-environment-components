@@ -4,5 +4,5 @@
 import ${1:nameOfModule} from '${1:nameOfModule}';${0}
 ]]></content>
 	<tabTrigger>impdef</tabTrigger>
-	<scope>source.js, source.ts</scope>
+	<scope>source.js, source.ts, source.jsx, source.tsx</scope>
 </snippet>

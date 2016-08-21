@@ -4,5 +4,5 @@
 process.execPath${0}
 ]]></content>  
   <tabTrigger>proc_execPath</tabTrigger>
-  <scope>source.js, source.ts</scope>
+  <scope>source.js, source.ts, source.jsx, source.tsx</scope>
 </snippet>

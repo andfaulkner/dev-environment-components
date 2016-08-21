@@ -22,5 +22,5 @@ app.listen(${2:port_server_hosted_on__e.g.__3000}, () => {
 
 ]]></content>  
   <tabTrigger>exp_new</tabTrigger>
-  <scope>source.js, source.ts</scope>
+  <scope>source.js, source.ts, source.jsx, source.tsx</scope>
 </snippet>

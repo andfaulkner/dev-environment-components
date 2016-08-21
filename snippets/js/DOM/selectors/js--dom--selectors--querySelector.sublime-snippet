@@ -4,5 +4,5 @@
 document.querySelector('${1:sometag#some-id.some-class[someprop=someval]}')${0:;}
 ]]></content>  
   <tabTrigger>dom_sel_querySel</tabTrigger>
-  <scope>source.js, source.ts</scope>
+  <scope>source.js, source.ts, source.jsx, source.tsx</scope>
 </snippet>

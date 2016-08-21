@@ -4,5 +4,5 @@
 document.getElementById('${1:id-to-grab-element-with}').value = ${2:'content to fill element with'};${0}
 ]]></content>  
   <tabTrigger>dom_input_set_val</tabTrigger>
-  <scope>source.js, source.ts</scope>
+  <scope>source.js, source.ts, source.jsx, source.tsx</scope>
 </snippet>

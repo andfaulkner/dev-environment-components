@@ -6,5 +6,5 @@ ${1:returnedArray} = _.map(${2:arrayToMap}, function(${3:val}) {
 });
 ]]></content>
     <tabTrigger>_arr_map</tabTrigger>
-    <scope>source.js, source.ts</scope>
+    <scope>source.js, source.ts, source.jsx, source.tsx</scope>
 </snippet>

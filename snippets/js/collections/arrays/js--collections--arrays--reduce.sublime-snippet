@@ -6,5 +6,5 @@ ${1/.+/let /}${1:someNewVal}${1/.+/ = /}${2:someArray}.reduce((${4:total, curren
 }, ${3:initialValue});
 ]]></content>  
   <tabTrigger>arr_reduce</tabTrigger>
-  <scope>source.js, source.ts</scope>
+  <scope>source.js, source.ts, source.jsx, source.tsx</scope>
 </snippet>

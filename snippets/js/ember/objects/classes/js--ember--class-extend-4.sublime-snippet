@@ -6,5 +6,5 @@ let ${1:NameOfObject} = ${2:Ember.Object__or_another_Ember_obj_if_making_subclas
 });
 ]]></content>
   <tabTrigger>emb_extend</tabTrigger>
-  <scope>source.js, source.ts</scope>
+  <scope>source.js, source.ts, source.jsx, source.tsx</scope>
 </snippet>

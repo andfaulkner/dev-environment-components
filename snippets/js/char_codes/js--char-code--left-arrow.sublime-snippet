@@ -4,5 +4,5 @@
 37
 ]]></content>  
   <tabTrigger>char_left_arrow</tabTrigger>
-  <scope>source.js, source.ts</scope>
+  <scope>source.js, source.ts, source.jsx, source.tsx</scope>
 </snippet>

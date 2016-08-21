@@ -4,5 +4,5 @@
 Array.isArray(${1:someArray});${0}
 ]]></content>  
   <tabTrigger>arr_isArray</tabTrigger>
-  <scope>source.js, source.ts</scope>
+  <scope>source.js, source.ts, source.jsx, source.tsx</scope>
 </snippet>

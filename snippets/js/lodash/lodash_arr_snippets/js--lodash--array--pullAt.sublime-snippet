@@ -4,5 +4,5 @@
 ${1/.+/var /}${1:arrOfRmProps}${1/.+/ = /}_.pullAt(${2:arrToRmValsFrom}, ${3:indicesToDropFromRetArr_eg_[1, 2, 6]});${0}
 ]]></content>
     <tabTrigger>_arr_pullat</tabTrigger>
-    <scope>source.js, source.ts</scope>
+    <scope>source.js, source.ts, source.jsx, source.tsx</scope>
 </snippet>

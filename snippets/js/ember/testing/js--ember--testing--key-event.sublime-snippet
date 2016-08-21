@@ -4,5 +4,5 @@
 keyEvent('${1:selector_eg_.list-filter input}', '${2:keyup_keydown_OR_keypress}', ${3:keycode_int_eg_69(e)_13(enter)_9(tab)_53(5)_48(0)});${0}
 ]]></content>  
   <tabTrigger>emb_test_keyevent</tabTrigger>
-  <scope>source.js, source.ts</scope>
+  <scope>source.js, source.ts, source.jsx, source.tsx</scope>
 </snippet>

@@ -8,5 +8,5 @@
   });
 ]]></content>  
   <tabTrigger>emb_mirage_get</tabTrigger>
-  <scope>source.js, source.ts</scope>
+  <scope>source.js, source.ts, source.jsx, source.tsx</scope>
 </snippet>

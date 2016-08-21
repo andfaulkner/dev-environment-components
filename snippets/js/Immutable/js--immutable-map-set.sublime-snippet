@@ -4,5 +4,5 @@
 var ${1:varName} = Map.set(${2:key}, ${3:valToSetForKey});
 ]]></content>
 	<tabTrigger>imms</tabTrigger>
-	<scope>source.js, source.ts</scope>
+	<scope>source.js, source.ts, source.jsx, source.tsx</scope>
 </snippet>

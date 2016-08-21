@@ -4,5 +4,5 @@
 _.padEnd(${1:'stringToPad'}, ${2:lengthToMakeFullStrAfterPad__eg__12}, ${3:'charToPadWith_optional'});
 ]]></content>
     <tabTrigger>_str_padend</tabTrigger>
-    <scope>source.js, source.ts</scope>
+    <scope>source.js, source.ts, source.jsx, source.tsx</scope>
 </snippet>

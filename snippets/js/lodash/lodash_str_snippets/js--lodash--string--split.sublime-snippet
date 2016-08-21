@@ -4,5 +4,5 @@
 ${1/.+/var /}${1/.+/outputArray/}${1/.+/ = /}_.split(${2:'stringToSplit'}, ${3:/regexOrSubstrToSplitStrAtOnMatch/});
 ]]></content>
     <tabTrigger>_str_split</tabTrigger>
-    <scope>source.js, source.ts</scope>
+    <scope>source.js, source.ts, source.jsx, source.tsx</scope>
 </snippet>

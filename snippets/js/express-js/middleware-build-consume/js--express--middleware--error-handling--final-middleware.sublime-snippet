@@ -7,5 +7,5 @@ app.use((err, req, res, next) => {
 });
 ]]></content>  
   <tabTrigger>exp_mid_err_END</tabTrigger>
-  <scope>source.js, source.ts</scope>
+  <scope>source.js, source.ts, source.jsx, source.tsx</scope>
 </snippet>

@@ -8,8 +8,13 @@ import * as ReactDOM from 'react-dom';
 
 import { Button } from 'react-bootstrap';
 
-export interface CommentProps {  }
-export interface CommentState {  }
+import { TestComponent } from './components/TestComponent';
+import { Header } from './components/Header';
+
+// import { Header } from './components/Header';
+
+export interface CommentProps { };
+export interface CommentState { };
 
 console.log('js loaded');
                                            //Props   //     State
@@ -18,6 +23,7 @@ class CommentBox extends React.Component<CommentProps, CommentState> {
     return (
       <div className="commentBox">
         <Button />
+        <TestComponent />
         <span>
           Hello, world! I am a CommentBox.
         </span>
@@ -25,11 +31,20 @@ class CommentBox extends React.Component<CommentProps, CommentState> {
   }
 };
 
-document.addEventListener("DOMContentLoaded", function(event) { 
-  console.log('DOM loaded - mounting React');
+class App extends React.Component<{}, {}> {
+  render() {
+    return (
+      <div>
+        <CommentBox />
+      </div>
+    );
+  }
+};
 
+document.addEventListener("DOMContentLoaded", function(event) {
+  console.log('DOM loaded - mounting React');
   ReactDOM.render(
-    <CommentBox />,
+    <App />,
     document.getElementById('content')
   );
 });

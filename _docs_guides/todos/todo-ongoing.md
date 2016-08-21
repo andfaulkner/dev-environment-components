@@ -93,28 +93,28 @@ AUGUST 19th
 *   ! TYPESCRIPT:: modules: Structuring modules: Export as close to top-lvl as possible
 *   ! TYPESCRIPT::: modules:: Structuring modules: No namespaces in modules
 *   ! TYPESCRIPT::: modules:: Structuring modules: possible problems / red flags
+*   ! TYPESCRIPT::: modules:: Structuring modules: re-export to extend
 
 *   ! 5 more native string snippets
 *   ! another 5 more native string snippets
+*   ! convert react snippets to work with ts
+*   ! React + Typescript example project
+*   ! React import snippets
+*   ! another level of git abstraction
 
 ---------------------------------------------------------------------------
 ---------------------------------------------------------------------------
+AUGUST 20th
+===========
 
 *   TYPESCRIPT::: module resolution:: Basics
 *   TYPESCRIPT::: module resolution:: Merging Interfaces
 *   TYPESCRIPT::: module resolution:: Merging Namespaces
 *   TYPESCRIPT::: module resolution:: Merging Namespaces w Classes, Functions, Enums
 
-*   React import snippets
-*   convery react snippets to work with ts
-*   React-friend new snippet
 
 
-*   TYPESCRIPT::: modules:: Structuring modules: re-export to extend
-
-*   another level of git abstraction
-
-*   1/2 starter project for node-react-redux-webpack-server-side-rendering-isomorphic-scss-eslint-
+*   ?X? 1/2 starter project for node-react-redux-webpack-server-side-rendering-isomorphic-scss-eslint-
 
 *   TYPESCRIPT::: JSX: basics
 *   TYPESCRIPT::: JSX: as operator
@@ -216,6 +216,22 @@ YAGNI (probably) - for TOHRI position
 *   Cucumber.js
 
 *   an hour of C, you need a bit of foundation
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 ====================================================

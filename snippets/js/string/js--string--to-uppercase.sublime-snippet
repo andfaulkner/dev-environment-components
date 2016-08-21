@@ -4,5 +4,5 @@
 ${1:string}.toUpperCase();${0}
 ]]></content>  
   <tabTrigger>str_uppercase</tabTrigger>
-  <scope>source.js, source.ts</scope>
+  <scope>source.js, source.ts, source.jsx, source.tsx</scope>
 </snippet>

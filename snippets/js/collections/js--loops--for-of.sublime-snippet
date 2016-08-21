@@ -6,5 +6,5 @@ for (const ${1:currentVal} of ${2:SomeInterable_e.g._an_array_or_string}) {
 }
 ]]></content>  
   <tabTrigger>forof</tabTrigger>
-  <scope>source.js, source.ts</scope>
+  <scope>source.js, source.ts, source.jsx, source.tsx</scope>
 </snippet>

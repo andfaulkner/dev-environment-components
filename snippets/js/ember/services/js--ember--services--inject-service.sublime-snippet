@@ -4,5 +4,5 @@
 ${1:nameOfService}: Ember.inject.service(),${0}
 ]]></content>  
   <tabTrigger>emb_serv_inj</tabTrigger>
-  <scope>source.js, source.ts</scope>
+  <scope>source.js, source.ts, source.jsx, source.tsx</scope>
 </snippet>

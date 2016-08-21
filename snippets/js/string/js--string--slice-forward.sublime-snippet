@@ -4,5 +4,5 @@
 ${1:string}.slice(${2:*start_index__e.g._is_1st_char*/0}, ${3:*end_index__e.g._is_char_3*/2})});${0}
 ]]></content>  
   <tabTrigger>str_slice_forward</tabTrigger>
-  <scope>source.js, source.ts</scope>
+  <scope>source.js, source.ts, source.jsx, source.tsx</scope>
 </snippet>

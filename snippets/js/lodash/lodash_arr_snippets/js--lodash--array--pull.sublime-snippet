@@ -4,5 +4,5 @@
 ${1/.+/var /}${1:arrOfRmProps}${1/.+/ = /}_.pull(${2:arrToRmValsFrom}, ${3:'values', 'to', 'rm', 'from', 'arr'});${0}
 ]]></content>
     <tabTrigger>_arr_pull</tabTrigger>
-    <scope>source.js, source.ts</scope>
+    <scope>source.js, source.ts, source.jsx, source.tsx</scope>
 </snippet>

@@ -4,5 +4,5 @@
 18
 ]]></content>  
   <tabTrigger>char_alt</tabTrigger>
-  <scope>source.js, source.ts</scope>
+  <scope>source.js, source.ts, source.jsx, source.tsx</scope>
 </snippet>

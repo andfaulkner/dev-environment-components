@@ -5,5 +5,5 @@
 ${1/.+/var /}${1:oldChild}${1/.+/ = /}${2:parentDomNode_eg-document.getElementById('title-area')}.removeChild(${3:some_child_dom_node_eg-document.querySelector('sometag#some-id.some-class[someprop=someval]')});${0}
 ]]></content>  
   <tabTrigger>dom_node_rmchild</tabTrigger>
-  <scope>source.js, source.ts</scope>
+  <scope>source.js, source.ts, source.jsx, source.tsx</scope>
 </snippet>

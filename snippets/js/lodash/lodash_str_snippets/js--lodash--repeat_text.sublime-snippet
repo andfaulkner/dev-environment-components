@@ -4,5 +4,5 @@
 _.repeat('${1:stringToRepeat}', ${2:numberOfRepeats});
 ]]></content>
     <tabTrigger>repeat_text</tabTrigger>
-    <scope>source.js, source.ts</scope>
+    <scope>source.js, source.ts, source.jsx, source.tsx</scope>
 </snippet>

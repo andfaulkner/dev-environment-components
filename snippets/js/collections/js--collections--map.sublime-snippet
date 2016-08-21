@@ -7,5 +7,5 @@ Object.keys(${1:variable_containing_object}).map(function(key, value) {
 });
 ]]></content>  
   <tabTrigger>map</tabTrigger>
-  <scope>source.js, source.ts</scope>
+  <scope>source.js, source.ts, source.jsx, source.tsx</scope>
 </snippet>

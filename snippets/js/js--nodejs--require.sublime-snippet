@@ -4,5 +4,5 @@
 ${2/.+/var /}${2:${1:moduleName}}${2/.+/ = /}require('${1:moduleName}');${0}
 ]]></content>
 	<tabTrigger>req</tabTrigger>
-    <scope>source.js, source.ts</scope>
+    <scope>source.js, source.ts, source.jsx, source.tsx</scope>
 </snippet>

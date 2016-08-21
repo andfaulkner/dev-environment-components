@@ -9,6 +9,6 @@ class ${1:ClassName} extends React.Component<${2:${1}Props}, ${3:${1}State}> {
 	}
 };
 ]]></content>
-    <tabTrigger>rct_new_class_simple</tabTrigger>
+    <tabTrigger>rct_new_class_simplet</tabTrigger>
     <scope>source.ts, source.tsx</scope>
 </snippet>

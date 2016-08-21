@@ -6,5 +6,5 @@ export function ${1:nameOfFn} (${2:params}) {
 }
 ]]></content>
 	<tabTrigger>expfn</tabTrigger>
-	<scope>source.js, source.ts</scope>
+	<scope>source.js, source.ts, source.jsx, source.tsx</scope>
 </snippet>

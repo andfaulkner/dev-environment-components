@@ -4,5 +4,5 @@
 find('${1:some_selector__eg_.listing__or__#id}').length${0}
 ]]></content>  
   <tabTrigger>emb_test_findlen</tabTrigger>
-  <scope>source.js, source.ts</scope>
+  <scope>source.js, source.ts, source.jsx, source.tsx</scope>
 </snippet>

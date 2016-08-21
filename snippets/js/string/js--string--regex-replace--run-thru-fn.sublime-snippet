@@ -7,5 +7,5 @@ ${1:str}.replace(/${2:match regex}/${3:gi}, (match) => {
 });${0}
 ]]></content>  
   <tabTrigger>str_replace_fn_on_matches</tabTrigger>
-  <scope>source.js, source.ts</scope>
+  <scope>source.js, source.ts, source.jsx, source.tsx</scope>
 </snippet>

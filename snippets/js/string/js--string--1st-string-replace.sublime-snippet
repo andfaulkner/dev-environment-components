@@ -4,5 +4,5 @@
 ${1:str}.replace('${2:match string}', "${3:replacement string}");${0}
 ]]></content>  
   <tabTrigger>str_replace_1st_str</tabTrigger>
-  <scope>source.js, source.ts</scope>
+  <scope>source.js, source.ts, source.jsx, source.tsx</scope>
 </snippet>

@@ -4,5 +4,5 @@
 17
 ]]></content>  
   <tabTrigger>char_ctrl</tabTrigger>
-  <scope>source.js, source.ts</scope>
+  <scope>source.js, source.ts, source.jsx, source.tsx</scope>
 </snippet>

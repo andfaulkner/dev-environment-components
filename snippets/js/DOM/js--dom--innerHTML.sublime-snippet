@@ -4,5 +4,5 @@
 document.body.innerHTML${0}
 ]]></content>  
   <tabTrigger>dom_doc_innerhtml</tabTrigger>
-  <scope>source.js, source.ts</scope>
+  <scope>source.js, source.ts, source.jsx, source.tsx</scope>
 </snippet>

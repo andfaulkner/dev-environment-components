@@ -6,5 +6,5 @@ andThen(function() {
 });
 ]]></content>  
   <tabTrigger>emb_test_andThen</tabTrigger>
-  <scope>source.js, source.ts</scope>
+  <scope>source.js, source.ts, source.jsx, source.tsx</scope>
 </snippet>

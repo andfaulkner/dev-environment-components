@@ -10,5 +10,5 @@ gulp.task('${1:name_of_task}', ${2/.+/[/}${2:'dependent', 'tasks', 'to', 'run', 
 });
 ]]></content>  
   <tabTrigger>gulp_new_task</tabTrigger>
-  <scope>source.js, source.ts</scope>
+  <scope>source.js, source.ts, source.jsx, source.tsx</scope>
 </snippet>
