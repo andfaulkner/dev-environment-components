@@ -1,0 +1,8 @@
+<snippet>
+  <description>Concatenate 2 arrays into 1</description>
+<content><![CDATA[
+${1:["array", "one"]} ++ ${2:["array", "two"]}${0}
+]]></content>  
+  <tabTrigger>arr_concat</tabTrigger>
+  <scope>source.elixir</scope>
+</snippet>

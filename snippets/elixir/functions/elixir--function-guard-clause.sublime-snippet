@@ -1,0 +1,10 @@
+<snippet>
+  <description>Create fn that only runs if argument given matches value in parameter</description>
+<content><![CDATA[
+def ${1:name_of_fn}(${2:example: 0, for this to only run if name_of_fn gets passed a 0}) do
+  ${0:# function code; returns output of last line}
+end
+]]></content>  
+  <tabTrigger>fn_guard_onvalmatch</tabTrigger>
+  <scope>source.elixir</scope>
+</snippet>

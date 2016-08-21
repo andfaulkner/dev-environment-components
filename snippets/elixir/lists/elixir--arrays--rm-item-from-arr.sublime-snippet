@@ -1,0 +1,8 @@
+<snippet>
+  <description>Remove matching items from array. Array of items must be rm, not single items</description>
+<content><![CDATA[
+${1:["some", "array", "of", "items", 1, 2]} -- [${2:"items", "to", "remove"}]
+]]></content>  
+  <tabTrigger>arr_rm_items</tabTrigger>
+  <scope>source.elixir</scope>
+</snippet>

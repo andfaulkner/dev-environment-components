@@ -4,6 +4,7 @@
 
 echo "* Elixir scripts loading..."
 
+# reload elixir app on reload
 function relixir {
   if [[ -n "$2" ]]; then
     elixir $2
@@ -19,6 +20,22 @@ function relixir {
   # else; then
     # fswatch -0 $1 | xargs -0 -n 1 -I {} elixir $1
 }  
+
+# Create a new Phoenix app
+function newphoenix {
+    mix phoenix.new "$1"
+    cd "$1"
+    mix deps.get
+    npm install
+    mix ecto.create
+    newnode__sublime_project_base
+    echo "node_modules" > .gitignore
+    touch README.md
+    git init
+    mkdir doc
+    iex -S mix phoenix.server
+}
+
 
 echo "* Elixir scripts loaded!"
 

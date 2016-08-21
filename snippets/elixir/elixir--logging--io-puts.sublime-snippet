@@ -1,7 +1,7 @@
 <snippet>
   <description>Log string to CLI</description>
 <content><![CDATA[
-IO.puts(${1:"string to log"})
+IO.puts ${1:"string to log"}
 ]]></content>  
   <tabTrigger>puts</tabTrigger>
   <scope>source.elixir</scope>

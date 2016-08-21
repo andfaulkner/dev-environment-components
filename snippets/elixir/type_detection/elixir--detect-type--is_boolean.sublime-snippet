@@ -1,0 +1,8 @@
+<snippet>
+  <description>Determine if given variable contains a boolean (true or false)</description>
+<content><![CDATA[
+is_boolean(${1:var_to_check})${0}
+]]></content>  
+  <tabTrigger>is_bool</tabTrigger>
+  <scope>source.elixir</scope>
+</snippet>

@@ -1,0 +1,10 @@
+<snippet>
+  <description>Create a new public function (within a module)</description>
+<content><![CDATA[
+def ${1:name_of_function}(${2:arg1, arg2, etc}) do
+  ${0:# function code; returns output of last line}
+end
+]]></content>  
+  <tabTrigger>def</tabTrigger>
+  <scope>source.elixir</scope>
+</snippet>

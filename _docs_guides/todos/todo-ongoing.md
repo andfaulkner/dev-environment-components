@@ -107,12 +107,17 @@ AUGUST 19th
 AUGUST 20th
 ===========
 
+*   ! ELIXIR::: new Phoenix project
+*   ! ELIXIR::: Phoenix project 'generator' (bash)
+*   ! ELIXIR::: modules
+*   clear console plugin
 *   TYPESCRIPT::: module resolution:: Basics
 *   TYPESCRIPT::: module resolution:: Merging Interfaces
 *   TYPESCRIPT::: module resolution:: Merging Namespaces
 *   TYPESCRIPT::: module resolution:: Merging Namespaces w Classes, Functions, Enums
 
-
+*   Make a small Phoenix app
+    *   another hour with Elixir?
 
 *   ?X? 1/2 starter project for node-react-redux-webpack-server-side-rendering-isomorphic-scss-eslint-
 

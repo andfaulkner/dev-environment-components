@@ -1,0 +1,8 @@
+<snippet>
+  <description>Concatenate 2 strings</description>
+<content><![CDATA[
+${1:"string 1"}  <> ${2:"string 2"}
+]]></content>  
+  <tabTrigger>str_concat</tabTrigger>
+  <scope>source.elixir</scope>
+</snippet>

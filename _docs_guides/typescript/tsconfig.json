@@ -24,6 +24,11 @@
         ".babelrc",
         ".node-version"
     ],
+    "filesGlob": [
+        "./typings/browser.d.ts",
+        "./react/**.tsx",
+        "./react/**.ts"
+    ],
     "files": [
         "react/app.tsx"
     ]

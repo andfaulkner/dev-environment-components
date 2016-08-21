@@ -1,0 +1,10 @@
+<snippet>
+  <description>Create fn that only runs if condition is met</description>
+<content><![CDATA[
+def ${1:name_of_fn}(${2:args}) when ${3:test_condition(${2:args})} do
+  ${0:# function code; returns output of last line}
+end
+]]></content>  
+  <tabTrigger>fn_guard_oncondmet</tabTrigger>
+  <scope>source.elixir</scope>
+</snippet>

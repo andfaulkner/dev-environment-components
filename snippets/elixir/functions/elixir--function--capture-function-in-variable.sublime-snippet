@@ -1,0 +1,8 @@
+<snippet>
+  <description>Capture function in variable (for passing around, etc.)</description>
+<content><![CDATA[
+${1:variable_name} = &${2:name_of_fn}/${3:arity_e.g.: 1}
+]]></content>  
+  <tabTrigger>fn_capture</tabTrigger>
+  <scope>source.elixir</scope>
+</snippet>

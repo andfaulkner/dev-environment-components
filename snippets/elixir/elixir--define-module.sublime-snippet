@@ -1,0 +1,12 @@
+<snippet>
+  <description>Create a new module</description>
+<content><![CDATA[
+defmodule ${1:NameOfModule.OptionalSubmoduleOrSomethign} do
+  ${0:def someFunctionInScopeOfModule(arg, another_arg) do
+    # code the function does
+  end}
+end
+]]></content>  
+  <tabTrigger>defmodule</tabTrigger>
+  <scope>source.elixir</scope>
+</snippet>

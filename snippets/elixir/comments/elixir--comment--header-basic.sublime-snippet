@@ -1,0 +1,10 @@
+<snippet>
+  <description>Create a comment "header"</description>
+<content><![CDATA[
+## -----------------------------------------------------
+## ${1:Basic Types}
+## -----------------------------------------------------${0}
+]]></content>
+  <tabTrigger>h1</tabTrigger>
+  <scope>source.elixir</scope>
+</snippet>

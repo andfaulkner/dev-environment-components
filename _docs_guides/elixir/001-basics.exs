@@ -1,3 +1,6 @@
+## -----------------------------------------------
+## Comments
+## -----------------------------------------------
 # Single-line comments start with a #
 
 # There are no multi-line comments. Good riddance.
@@ -98,3 +101,15 @@ map = %{:key => 0}
 startastart..endoendo = 1..20
 startastart #=> 1
 endoendo #=> 1
+
+## -----------------------------------------------
+## File extensions
+## -----------------------------------------------
+#   .ex:  elixir file extension. Meant for compiling. Writes bytecode to disk in a .beam file
+#         when compiled with elixirc nameoffile.ex
+#   .exs: elixir scripting file extension. Meant to be interpreted rather than scripted. When
+#         run using elixir name_of_file.exs, no bytocode file is created.
+#
+#   Elixir treats both the same way, but the intention is different: exs fiels are meant to
+#   be compiled, while exs files are meant to be interpreted.
+#   

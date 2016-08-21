@@ -1,0 +1,8 @@
+<snippet>
+  <description>Returns true if given variable is a function</description>
+<content><![CDATA[
+is_function(${1:some_variable})${0}
+]]></content>  
+  <tabTrigger>is_function</tabTrigger>
+  <scope>source.elixir</scope>
+</snippet>
