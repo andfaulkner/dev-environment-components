@@ -113,3 +113,112 @@ endoendo #=> 1
 #   Elixir treats both the same way, but the intention is different: exs fiels are meant to
 #   be compiled, while exs files are meant to be interpreted.
 #   
+
+
+## -----------------------------------------------------
+## OR, AND, NOT
+## -----------------------------------------------------
+#------- and -------#
+# ## and: keyword form
+# *   examples:
+        false and false #=> false
+        false and true  #=> false 
+        true and true  #=> true 
+        # 1 and true   #=> [ERROR]
+        false and raise("reached this error") #=> false
+        true and raise("reached this error") #=> ** (RuntimeError) reached this error
+# *   'and' in keyword form can only accept booleans
+
+# ## and: operator form
+# *   in sequence connected by &&, returns first item to return false, or final item
+# *   examples:
+        nil && 13  #=> nil
+        true && 17 #=> 17
+        false && 1 #=> false
+        3 && 5     #=> 5
+        3 && false #=> false
+# *   'and' in operator form can accept any type: in this form it checks truthiness
+
+#------- or -------#
+# ## or: keyword form
+# *   examples:
+        true or true #=> true
+        true or false #=> true
+        false or false #=> false
+        # 4 or false #=> [ERROR]
+        true or raise("reached this error") #=> true
+        false or raise("reached this error") #=> ** (RuntimeError) reached this error
+# *   'or' in keyword form can only accept booleans
+
+# ## or: operator form
+# *   in sequence connected by ||, returns first item to return true, or final item
+# *   examples:
+        0 || 2  #=> 0
+        false || 2  #=> 2
+        "hello" || true  #=> "hello"
+        "yo dogg" || false #=> "yo dogg"
+        false || false #=> false
+        false || nil #=> nil
+        nil || false #=> false 
+# *   'or' in operator form can accept any type: in this form it checks truthiness
+
+
+#------- not -------#
+# ## not: keyword form
+# *   negates a boolean. Can only be run on a boolean.
+# *   examples:
+        not true #=> false
+        not false #=> true
+        not nil #=> [ERROR]
+        not 5 #=> [ERROR]
+
+
+# ## not: operator form
+# *   converts value to boolean based on its falsiness, then negates the value (true
+#     becomes false; and false becomes true)
+# *   examples:
+        !true #=> false
+        !false #=> true
+        !1 #=> false
+        !nil #=> true
+        !0 #=> false
+        !"ok" #=> false
+
+## -----------------------------------------------------
+## Pattern matching
+## -----------------------------------------------------
+#------- Destructuring items out of sequences (tuples, arrays) -------#
+# Example - destructuing out of tuple
+    {a, b, c} = {:hello, "people", 42}
+    a #=> :hello
+    b #=> "people"
+    c #=> 42
+
+# Example - destructuring out of array
+    [a, b, c] = [7, 22, "yep"]
+    a #=> 7
+    b #=> 22
+    c #=> "yep"
+
+# Number of args on left must match # of items in tuple
+    {a, b, c} = {:hello, "people", 42, "wassup"} #=> [ERROR]
+
+# Matching on some values, assigning those yet unassigned:
+    {:ok, response_code} = {:ok, 200}
+    response_code #=> 200
+
+# Cannot compare different types
+    # {a, b} = [3, 6] #=> [ERROR]
+
+# Match head and tail of list
+    [some_val | another_val] = [42, 321, 1493582, 293743, 99999]
+    some_val #=> 0
+    another_val #=> [321, 1493582, 293743, 99999]
+
+
+
+## -----------------------------------------------------
+## Lists
+## -----------------------------------------------------
+# Get first item from list
+    hd([3241, 2, 3]) #=> 3241
