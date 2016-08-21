@@ -1,0 +1,8 @@
+<snippet>
+  <description>Use module in current context i.e. within current module</description>
+<content><![CDATA[
+use ${1:NameOfModule.ToUse}${2/.+/, /}${2:option: value}
+]]></content>  
+  <tabTrigger>mod_use</tabTrigger>
+  <scope>source.elixir</scope>
+</snippet>
