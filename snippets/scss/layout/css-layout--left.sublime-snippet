@@ -1,0 +1,8 @@
+<snippet>
+  <description>Set L margin edge of box if position prop == absolute, relative, or fixed</description>
+<content><![CDATA[
+left: ${1:10px || 5%};${0}
+]]></content>  
+  <tabTrigger>layout_left</tabTrigger>
+  <scope>source.css</scope>
+</snippet>

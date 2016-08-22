@@ -1,0 +1,9 @@
+<snippet>
+  <description>Select child element if it has given element as an immediate parent</description>
+<content><![CDATA[
+${1:parent_element__eg__html} > ${2:child_element__eg__head__sel_if___${1}___is_direct_parent}
+content here
+]]></content>  
+  <tabTrigger>sel_child_of</tabTrigger>
+  <scope>source.css</scope>
+</snippet>

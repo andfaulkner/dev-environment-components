@@ -1,0 +1,12 @@
+<snippet>
+  <description>Vertical + horizontal fixed centre in viewport. Locks item at centre of screen</description>
+<content><![CDATA[
+${1:div.centered} {
+  position: fixed;
+  top: 50%
+  left: 50%;${2/.+/\n  /}${2:/*vertical offset*//* margin-top: -50px; */}${2/.+/;/}${3/.+/\n  /}${3:/*horizontal offset*//* margin-left: -100px; */}${3/.+/;/}${4/.+/\n  /}${4:/*text color*//* color: red */}${4/.+/;/}${5/.+/\n  /}${5:background-color: red}${5/.+/;/}
+}${0}
+]]></content>  
+  <tabTrigger>layout_center_fixed_both</tabTrigger>
+  <scope>source.css</scope>
+</snippet>

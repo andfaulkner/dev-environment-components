@@ -1,0 +1,8 @@
+<snippet>
+  <description>Calculate the absolute value of given number</description>
+<content><![CDATA[
+Math.abs(${1:value_to_get_absolute_value_of});${0}
+]]></content>  
+  <tabTrigger>math_abs</tabTrigger>
+  <scope>source.js, source.ts, source.jsx, source.tsx</scope>
+</snippet>

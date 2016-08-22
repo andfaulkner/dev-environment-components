@@ -1,0 +1,8 @@
+<snippet>
+  <description>Return the number with the lowest value</description>
+<content><![CDATA[
+Math.min(${1:first_num}, ${2:second_num});${0}
+]]></content>  
+  <tabTrigger>math_min</tabTrigger>
+  <scope>source.js, source.ts, source.jsx, source.tsx</scope>
+</snippet>

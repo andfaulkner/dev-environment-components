@@ -9,9 +9,10 @@ import { Button } from 'react-bootstrap';
 
 import { TestComponent } from './components/TestComponent';
 // import { Header } from './components/Header';
-import { ControllablePlayer } from './components/ControllablePlayer/ControllablePlayer';
+import { Protagonist } from './components/Protagonist/Protagonist';
+import { ArenaBorder } from './components/ArenaBorder/ArenaBorder';
 
-import {Color} from './enums/Color';
+import { ProtagonistColors } from './enums/ProtagonistColors';
 
 // import { Header } from './components/Header';
 
@@ -47,7 +48,8 @@ class App extends React.Component<{}, {}> {
     return (
       <div>
         <CommentBox />
-        <ControllablePlayer color={Color.Red} />
+        <Protagonist color={ProtagonistColors.Red} width={20} height={20} />
+        <ArenaBorder />
       </div>
     );
   }

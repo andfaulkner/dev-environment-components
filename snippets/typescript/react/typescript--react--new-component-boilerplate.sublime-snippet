@@ -1,0 +1,47 @@
+<snippet>
+  <description>description here</description>
+<content><![CDATA[
+/// <reference path="../../../typings/globals/jquery/index.d.ts" />
+/// <reference path="../../../typings/globals/react/index.d.ts" />
+/// <reference path="../../../typings/globals/react-dom/index.d.ts" />
+/// <reference path="../../../typings/globals/lodash/index.d.ts" />
+
+declare function require(name: string);
+
+import * as _ from 'lodash';
+import * as React from 'react';
+import * as ReactDOM from 'react-dom';
+import * as \$ from 'jquery';
+
+require('./${1:${TM_FILENAME/(.+)\..+|.*/$1/:name}}.css');
+
+interface ${2:${1}Props} {${4/.+/\n /} ${4:prop1: propType;
+  prop2: string;
+  prop3: number;
+  prop4: boolean;
+  (arg1: Array<T>): T;}${4/.+/\n/}};
+
+interface ${3:${1}State} {${5/.+/\n /} ${5:property1: SomeInterface;
+  property2: string[][];
+  property3: Array<{param1: S, param2: S[]\}>;}${5/.+/\n/}};
+
+export class ${1:${TM_FILENAME/(.+)\..+|.*/$1/:name}} extends React.Component<${2:${1}Props}, ${3:${1}State}> {
+
+  events = {${6/.+/\n   /} ${6:someaction: (e) => {
+      console.log('e:', e);
+      let keyName = _.get(actions, e.key);
+      if (_.isString(keyName)) {
+        this.move(this.state, e.key, keyName);
+      \}
+    \}}${6/.+/\n  /}\};
+
+  render() {
+    return (
+      ${7:<div>Yo</div>}
+    );
+  }
+};
+]]></content>  
+  <tabTrigger>rct_new_component_file_boiler</tabTrigger>
+  <scope>source.tsx</scope>
+</snippet>

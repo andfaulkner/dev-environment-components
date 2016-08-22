@@ -4,10 +4,13 @@
     "react",
     "stage-0"
   ],
+  "plugins": [
+    "transform-es2015-destructuring"
+  ],
   "env": {
     "start": {
       "presets": [
-        "react-hmre"
+        "react-hmre",
       ]
     }
   }

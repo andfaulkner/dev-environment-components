@@ -1,7 +1,7 @@
 <snippet>
   <description>Specify type of positioning used for el: static, abs, rel, fixed</description>
 <content><![CDATA[
-position: ${1:static:  pos according to normal flow of page
+position: ${1:static:  pos according to normal flow of page (top, bottom, left, right don't work)
           relative:  pos relative to normal position (if flow were static)
           fixed:     pos relative to viewport, always locked in place on screen
           absolute:  ps relative to nearest positioned relative; or doc body if none};${0}

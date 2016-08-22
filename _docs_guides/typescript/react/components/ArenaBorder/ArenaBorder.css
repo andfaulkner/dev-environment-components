@@ -1,0 +1,10 @@
+div.arena.centered {
+  position: absolute;
+  top: calc(50% - 300px);
+  left: calc(50% - 300px);
+  width: 600px;
+  height: 600px;
+  border: 2px solid black;
+  background-color: transparent;
+  z-index: 3;
+}

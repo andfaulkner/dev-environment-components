@@ -1,7 +1,7 @@
 <snippet>
 		<description>Insert a div tag - for use in jsx files</description>
     <content><![CDATA[
-<div${1/.+/ classname={/g}${1:namesOf classesHere}${1/.+/}/g}${2/.+/ style={/g}${2:style.MyComponent}${2/.+/}/g}>
+<div${1/.+/ className={/g}${1:names-of classes-here}${1/.+/}/g}${2/.+/ style={/g}${2:style.MyComponent}${2/.+/}/g}>
   ${0}
 </div>
 ]]></content>

@@ -1,0 +1,8 @@
+<snippet>
+  <description>Round a number up to its nearest integer</description>
+<content><![CDATA[
+Math.ceil(${1:value_to_round_up_even_it_its_1.01});${0}
+]]></content>  
+  <tabTrigger>math_ceil</tabTrigger>
+  <scope>source.js, source.ts, source.jsx, source.tsx</scope>
+</snippet>

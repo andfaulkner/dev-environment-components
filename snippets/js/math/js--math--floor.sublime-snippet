@@ -1,0 +1,8 @@
+<snippet>
+  <description>Round a number down to its nearest integer</description>
+<content><![CDATA[
+Math.floor(${1:value_to_round_down_even_it_its_1.95});${0}
+]]></content>  
+  <tabTrigger>math_floor</tabTrigger>
+  <scope>source.js, source.ts, source.jsx, source.tsx</scope>
+</snippet>

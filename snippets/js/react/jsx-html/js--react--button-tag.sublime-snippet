@@ -1,7 +1,7 @@
 <snippet>
 		<description>Insert a button with a click listener - for use in jsx files</description>
     <content><![CDATA[
-<button${1/.+/ classname={/g}${1:namesOf classesHere}${1/.+/}/g}${2/.+/ style={/g}${2:style.MyComponent}${2/.+/}/g}${3/.+/ onClick={/g}${3:clickHandlerFn}${3/.+/}/g}>
+<button${1/.+/ className={/g}${1:namesOf classesHere}${1/.+/}/g}${2/.+/ style={/g}${2:style.MyComponent}${2/.+/}/g}${3/.+/ onClick={/g}${3:clickHandlerFn}${3/.+/}/g}>
   ${0}
 </button>
 ]]></content>

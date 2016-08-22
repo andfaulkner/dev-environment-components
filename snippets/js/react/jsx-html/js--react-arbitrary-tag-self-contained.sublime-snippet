@@ -1,7 +1,7 @@
 <snippet>
 		<description>Insert an arbitrary React component tag with no closing tag</description>
     <content><![CDATA[
-<${1:Component}${2/.+/ classname={/g}${2:namesOf classesHere}${2/.+/}/g}${3/.+/ style={/g}${3:style.MyComponent}${3/.+/}/g} />${0}
+<${1:Component}${2/.+/ className={/g}${2:namesOf classesHere}${2/.+/}/g}${3/.+/ style={/g}${3:style.MyComponent}${3/.+/}/g} />${0}
 ]]></content>
     <tabTrigger><![CDATA[</]]></tabTrigger>
     <scope>source.js.jsx, source.js.tsx, source.tsx</scope>

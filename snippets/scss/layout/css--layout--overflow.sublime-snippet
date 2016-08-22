@@ -1,0 +1,8 @@
+<snippet>
+  <description>Def what to do if content overflows element's content area.</description>
+<content><![CDATA[
+overflow${1:[-x]|[-y]|[]}: ${2:visible | hidden | auto (same as scroll) | scroll }
+]]></content>  
+  <tabTrigger>layout_overflow</tabTrigger>
+  <scope>source.css</scope>
+</snippet>

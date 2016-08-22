@@ -1,0 +1,16 @@
+<snippet>
+  <description>Vertical + horizontal relative centre in parent; w def % in middle where el can sit</description>
+<content><![CDATA[
+${1:div.centered} {
+  position: relative;
+  left: ${2:40}%;
+  right: ${2}%;
+  width: calc(100% - ${2}% - ${2}%);
+  top: ${3:40}%;
+  bottom: ${3}%;
+  height: calc(100% - ${3}% - ${3}%);${4/.+/\n  /}${4:/*vertical offset*//* margin-top: -50px; */}${4/.+/;/}${5/.+/\n  /}${5:/*horizontal offset*//* margin-left: -100px; */}${5/.+/;/}${6/.+/\n  /}${6:/*text color*//* color: red */}${6/.+/;/}${7/.+/\n  /}${7:background-color: red}${7/.+/;/}
+}${0}
+]]></content>  
+  <tabTrigger>layout_center_rel_both</tabTrigger>
+  <scope>source.css</scope>
+</snippet>

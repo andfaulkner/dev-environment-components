@@ -1,0 +1,8 @@
+<snippet>
+  <description>Set top margin edge of box if position prop == absolute, relative, or fixed</description>
+<content><![CDATA[
+top: ${1:10px || 5%};${0}
+]]></content>  
+  <tabTrigger>layout_top</tabTrigger>
+  <scope>source.css</scope>
+</snippet>

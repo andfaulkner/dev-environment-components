@@ -1,0 +1,8 @@
+<snippet>
+  <description>Return the number with the highest value</description>
+<content><![CDATA[
+Math.max(${1:first_num}, ${2:second_num});${0}
+]]></content>  
+  <tabTrigger>math_max</tabTrigger>
+  <scope>source.js, source.ts, source.jsx, source.tsx</scope>
+</snippet>

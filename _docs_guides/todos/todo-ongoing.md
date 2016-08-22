@@ -154,6 +154,7 @@ AUGUST 21st
 *   another 5 more lodash obj snippets
 *   5 more lodash fn snippets
 *   new Error snippet
+*   5 more lodash array snippets
 
 *   newnode ultra-basic, typescript
 *   get typescript-react working
