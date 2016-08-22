@@ -1,0 +1,21 @@
+<snippet>
+  <description>Determine how element shown on page, in context of surrounding el.s</description>
+<content><![CDATA[
+display: ${1:[none:         | hide & rm element's effect on flow
+          -------------------------------------------------------------------------------------
+          hidden:       | invisible, still affect flow
+          -------------------------------------------------------------------------------------
+          inline:       | stay on same line as sibling els.. unaffected by top & bot margins.
+                        |   Can't def height, width.
+          -------------------------------------------------------------------------------------
+          block:        | put on new line
+          -------------------------------------------------------------------------------------
+          inline-block: | el in inline-lvl block container. inside: block-lvl box form; el
+                        |   itself: 1-lvl box form. Inline el.s that can have a width &
+                        |   height, & they let other el.s sit to their L & R
+          -------------------------------------------------------------------------------------
+          list-item:    | el behaves like li, show bullet etc.]};${0}
+]]></content>
+  <tabTrigger>layout_display_basic</tabTrigger>
+  <scope>source.css</scope>
+</snippet>
