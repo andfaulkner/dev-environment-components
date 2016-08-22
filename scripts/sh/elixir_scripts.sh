@@ -4,6 +4,8 @@
 
 echo "* Elixir scripts loading..."
 
+alias nukeelixir="ps aux | ack elixir | awk '{print $2}' | xargs kill -9"
+
 # reload elixir app on reload
 function relixir {
   if [[ -n "$2" ]]; then

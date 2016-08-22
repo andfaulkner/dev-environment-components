@@ -1,0 +1,8 @@
+<snippet>
+  <description>Mk new record: tuple w atom as 1st el. use: store short internal data. req lib 1st</description>
+<content><![CDATA[
+Record.defrecord ${1:NameOfRecord}, ${2:key: "value pair"}${3/.+/, /}${3:any: "number", more: "key-value pairs"}
+]]></content>  
+  <tabTrigger>rec_new</tabTrigger>
+  <scope>source.elixir</scope>
+</snippet>

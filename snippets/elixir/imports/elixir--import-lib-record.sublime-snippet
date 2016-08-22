@@ -1,0 +1,8 @@
+<snippet>
+  <description>Import Record library, for defining records in modules</description>
+<content><![CDATA[
+require Record${0}
+]]></content>  
+  <tabTrigger>imp_record</tabTrigger>
+  <scope>source.elixir</scope>
+</snippet>
