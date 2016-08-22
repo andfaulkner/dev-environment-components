@@ -42,5 +42,8 @@ function newphoenix {
 # launch Phoenix server
 alias mps="mix phoenix.server"
 
+# view all routes in Phoenix project
+alias mproutes="mix phoenix.routes"
+
 echo "* Elixir scripts loaded!"
 

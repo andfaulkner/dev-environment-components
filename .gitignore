@@ -11,3 +11,4 @@ dev-env/.lein/indices/**
 .history/**
 .vscode
 .npm.log*
+.DS_Store
