@@ -110,15 +110,32 @@ AUGUST 20th
 *   ! ELIXIR::: new Phoenix project
 *   ! ELIXIR::: Phoenix project 'generator' (bash)
 *   ! ELIXIR::: modules
-*   clear console plugin
+*   ! clear console plugin
+
+*   ! Make a small Phoenix app
+
+AUGUST 21st
+===========
+*   ! another hour with Elixir
+*   ! 5 Phoenix snippets
+
 *   TYPESCRIPT::: module resolution:: Basics
 *   TYPESCRIPT::: module resolution:: Merging Interfaces
 *   TYPESCRIPT::: module resolution:: Merging Namespaces
 *   TYPESCRIPT::: module resolution:: Merging Namespaces w Classes, Functions, Enums
 
-*   Make a small Phoenix app
-    *   another hour with Elixir?
-*   5 Phoenix snippets
+*   scss into project
+*   select styling method:
+    * cssnext?
+    * scss?
+    * stylus?
+    * CSS modules?
+
+*   make basic header component
+
+*   learn enzyme
+
+*   complete upgrade to typings
 
 *   ?X? 1/2 starter project for node-react-redux-webpack-server-side-rendering-isomorphic-scss-eslint-
 

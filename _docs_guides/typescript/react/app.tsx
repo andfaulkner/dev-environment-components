@@ -1,7 +1,6 @@
-/// <reference path="../typings/react/react.d.ts" />
-/// <reference path="../typings/react/react-dom.d.ts" />
-/// <reference path="../typings/app.d.ts" />
-/// <reference path="../typings/react-bootstrap/react-bootstrap.d.ts" />
+/// <reference path="../typings/globals/react/index.d.ts" />
+/// <reference path="../typings/globals/react-dom/index.d.ts" />
+/// <reference path="../typings/globals/react-bootstrap/index.d.ts" />
 
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
@@ -9,9 +8,21 @@ import * as ReactDOM from 'react-dom';
 import { Button } from 'react-bootstrap';
 
 import { TestComponent } from './components/TestComponent';
-import { Header } from './components/Header';
+// import { Header } from './components/Header';
+import { ControllablePlayer } from './components/ControllablePlayer/ControllablePlayer';
+
+import {Color} from './enums/Color';
 
 // import { Header } from './components/Header';
+
+interface Foo {
+  test: number;
+}
+
+let bar = { test: 4 };
+
+let foo = bar as Foo;
+console.log('foo', foo);
 
 export interface CommentProps { };
 export interface CommentState { };
@@ -36,6 +47,7 @@ class App extends React.Component<{}, {}> {
     return (
       <div>
         <CommentBox />
+        <ControllablePlayer color={Color.Red} />
       </div>
     );
   }

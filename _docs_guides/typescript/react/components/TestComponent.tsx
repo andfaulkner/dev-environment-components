@@ -1,5 +1,3 @@
-/// <reference path="../../typings/react-menu-bar/react-menu-bar.d.ts" />
-/// <reference path="../../typings/react/react.d.ts" />
 
 import * as React from 'react';
 

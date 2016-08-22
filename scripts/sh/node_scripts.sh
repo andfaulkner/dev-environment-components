@@ -180,14 +180,18 @@ nvm use v6.4.0
 
 alias ember_dep_surge="rm -rf dist; ember build --environment=development; cd dist; cp index.html 200.html; surge" # if site already exists, provide it here 
 
-function react_setup_for_newnode_project {
-  npm install react redux react-redux react-dom --save
-  npm install 
+function newnode__babel_base {
   cat > .babelrc <<- BABELCONFIG
 {
     "presets": ["es2015", "react"]
 }
 BABELCONFIG
+}
+
+function react_setup_for_newnode_project {
+  npm install react redux react-redux react-dom --save
+  npm install 
+  newnode__babel_base "$1"
 
   cat > webpack.config.js <<- WEBPACKCONFIG
 var config = {
@@ -373,5 +377,42 @@ alias typescript='find . -name "*.ts" | xargs tsc -w'
 # customized REPL. Provides certain preloadingactions as present in repls like irb
 alias irjs='"$SNIPPETS_DIR/dev-env/nodejs/irjs/irjs"'
 
+function newnode_basic_libs {
+    npm init "$1" -f
+    npm install --save lodash jquery moment
+    npm install --save-dev webpack bower nodemon eslint babel-eslint
+}
+
+########### REACT ###########
+function newnode_react_comprehensive {
+    mkdir "$1"
+    cd "$1"
+    newnode__sublime_project_base "$1"
+    newnode__default_eslint "$1"
+    newnode__postgres_base_install_in_proj "$1"
+    newnode__babel_base "$1"
+    newnode__webpack "$1"
+    newnode_basic_libs "$1"
+
+    npm install --save react react-dom  
+    npm install --save classnames
+    npm install --save-dev typescript typings tslint-fix ts-loader
+    npm install --save-dev handlebars handlebars-webpack-plugin handlebars-loader
+    npm install --save-dev webpack 
+    npm install --save-dev
+    npm install --save-dev json-loader 
+    npm install --save-dev style-loader css-loader scss-loader
+    npm install --save-dev eslint-plugin-react react-hot-loader 
+    npm install --save-dev enzyme react-addons-test-utils
+    mkdir app
+    mkdir doc
+    mkdir scripts
+    mkdir config
+}
+
+########### TYPESCRIPT #############
+function type_install_global {
+    typings install --global --save "dt~$1"
+}
 
 echo "* NodeJS scripts loaded!"

@@ -6,5 +6,5 @@
 </span>
 ]]></content>
     <tabTrigger>span</tabTrigger>
-    <scope>source.js.jsx</scope>
+    <scope>source.js.jsx, source.js.tsx, source.tsx</scope>
 </snippet>

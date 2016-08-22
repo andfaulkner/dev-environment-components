@@ -1,0 +1,8 @@
+<snippet>
+  <description>Specify if list-item markers appear in or out of the content flow</description>
+<content><![CDATA[
+list-style-position: ${1:inside || outside || hanging};${0}
+]]></content>  
+  <tabTrigger>list_stylepos</tabTrigger>
+  <scope>text.css</scope>
+</snippet>

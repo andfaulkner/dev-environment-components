@@ -1,7 +1,7 @@
 <snippet>
   <description>Set up element border: width, style, color.</description>
 <content><![CDATA[
-padding: ${1:10px}, ${2:solid|none|dotted|dashed|inset|outset}, ${3:red|green|blue|#FFF|...etc};${0}
+border: ${1:10px}${2/.+/ /}${2:solid|none|dotted|dashed|inset|outset}${3/.+/ /}${3:red|green|blue|#FFF|...etc};${0}
 ]]></content>
   <tabTrigger>border</tabTrigger>
   <scope>source.css</scope>

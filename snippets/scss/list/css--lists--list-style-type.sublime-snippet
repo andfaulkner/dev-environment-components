@@ -1,0 +1,8 @@
+<snippet>
+  <description>Specify the type of the list item market (dot, square, dash, etc.)</description>
+<content><![CDATA[
+list-style-type: ${2:circle || square || upper-roman || lower-alpha || url('an_img.gif')} ;
+]]></content>  
+  <tabTrigger>list_styletype</tabTrigger>
+  <scope>text.css</scope>
+</snippet>

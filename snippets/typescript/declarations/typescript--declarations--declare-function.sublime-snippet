@@ -1,0 +1,8 @@
+<snippet>
+  <description>Declare fn provided externally, to allow TS to use it by defining its types</description>
+<content><![CDATA[
+declare function ${1:eg_require}(${2:param: string, vals: number, name:string});${0}
+]]></content>  
+  <tabTrigger>type_decl_fn</tabTrigger>
+  <scope>source.tsx</scope>
+</snippet>
