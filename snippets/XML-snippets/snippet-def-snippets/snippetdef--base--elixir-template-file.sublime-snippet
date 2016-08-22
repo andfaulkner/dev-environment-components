@@ -1,5 +1,5 @@
 <snippet>
-  <description>Elixir snippet skeleton</description>
+  <description>Elixir template (Elixir HTML) snippet skeleton</description>
 <content><![CDATA[
 <snippet>
   <description>${2:description here}</description>
@@ -7,9 +7,9 @@
 ${3:content here}
 ]${3/.*//}]></content>  
   <tabTrigger>${1:triggering-text}</tabTrigger>
-  <scope>source.elixir</scope>
+  <scope>text.html.elixir</scope>
 </snippet>
 ]]></content>
-  <tabTrigger>snip_elixir</tabTrigger>
+  <tabTrigger>snip_elixir_html</tabTrigger>
   <scope>text.xml</scope>
 </snippet>

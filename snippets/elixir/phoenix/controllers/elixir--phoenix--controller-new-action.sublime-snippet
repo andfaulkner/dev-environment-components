@@ -1,0 +1,10 @@
+<snippet>
+  <description>Create new action (run by hitting route in browser)</description>
+<content><![CDATA[
+def ${1:name_of_action}(conn, %{${2:"optional_data_to_pass_in_from_colon_val_of_route" => var_name}}) do
+  ${3:render conn, "${4:show.html}"${2/.+/, /}${2/(.+)( => )(.+)/$1(: )$3/}}
+end
+]]></content>  
+  <tabTrigger>ph_con_newaction</tabTrigger>
+  <scope>source.elixir</scope>
+</snippet>

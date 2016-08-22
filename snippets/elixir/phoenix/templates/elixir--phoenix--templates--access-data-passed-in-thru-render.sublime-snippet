@@ -1,0 +1,8 @@
+<snippet>
+  <description>Reference variable passed to template from controller via render fn</description>
+<content><![CDATA[
+<%= @${1:name_of_var_passed_to_template_via_render_fn_in_controller} %>${0}
+]]></content>  
+  <tabTrigger>ph_templ_varfromcon</tabTrigger>
+  <scope>text.html.elixir</scope>
+</snippet>

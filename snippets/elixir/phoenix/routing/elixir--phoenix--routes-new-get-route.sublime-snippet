@@ -1,0 +1,8 @@
+<snippet>
+  <description>New get request in Phoenix router file(s)</description>
+<content><![CDATA[
+get "${1:/route/path/:optionally_end_like_this_to_pass_data_to_this_atom}", ${2:NewControllerEgPageController}, :${3:controllerFnToRun}
+]]></content>  
+  <tabTrigger>ph_rout_get</tabTrigger>
+  <scope>source.elixir</scope>
+</snippet>

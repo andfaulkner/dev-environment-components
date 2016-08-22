@@ -23,6 +23,7 @@ function relixir {
     # fswatch -0 $1 | xargs -0 -n 1 -I {} elixir $1
 }  
 
+########## PHOENIX ##########
 # Create a new Phoenix app
 function newphoenix {
     mix phoenix.new "$1"
@@ -38,6 +39,8 @@ function newphoenix {
     iex -S mix phoenix.server
 }
 
+# launch Phoenix server
+alias mps="mix phoenix.server"
 
 echo "* Elixir scripts loaded!"
 

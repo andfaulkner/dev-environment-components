@@ -1,0 +1,8 @@
+<snippet>
+  <description>Determine if value is a record</description>
+<content><![CDATA[
+Record.is_record ${1:\{EgUser, "meeka", 5\}}
+]]></content>  
+  <tabTrigger>is_rec</tabTrigger>
+  <scope>source.elixir</scope>
+</snippet>

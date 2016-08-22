@@ -118,6 +118,7 @@ AUGUST 20th
 
 *   Make a small Phoenix app
     *   another hour with Elixir?
+*   5 Phoenix snippets
 
 *   ?X? 1/2 starter project for node-react-redux-webpack-server-side-rendering-isomorphic-scss-eslint-
 

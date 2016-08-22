@@ -1,0 +1,8 @@
+<snippet>
+  <description>Run inline and ret result from Elixir code in .html.eex Phoenix template file</description>
+<content><![CDATA[
+<%= ${1} %>${0}
+]]></content>  
+  <tabTrigger>=</tabTrigger>
+  <scope>text.html.elixir</scope>
+</snippet>
