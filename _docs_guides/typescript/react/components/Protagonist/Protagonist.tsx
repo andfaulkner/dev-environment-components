@@ -10,7 +10,7 @@ import * as _ from 'lodash';
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
 import * as $ from 'jquery';
-import {ProtagonistColor, Dimension} from '../../enums/enums';
+import {ProtagonistColor, Dimension, Direction} from '../../enums/enums';
 import {Cannon} from '../Cannon/Cannon';
 import {Input} from '../../app';
 
@@ -21,9 +21,16 @@ interface Coordinates {
   yPos: number;
 }
 
+interface ProtagonistVector {
+  xPos: number;
+  yPos: number;
+  speed: number;
+}
+
 interface ProtagonistState {
   xPos: number;
   yPos: number;
+  angle: number;
   speed: number;
 }
 
@@ -54,6 +61,7 @@ export class Protagonist extends React.Component<ProtagonistProps, ProtagonistSt
   state = {
     xPos: 0,
     yPos: 0,
+    angle: 225,
     speed: 3
   };
 
@@ -64,7 +72,7 @@ export class Protagonist extends React.Component<ProtagonistProps, ProtagonistSt
   /**
    * Ensure protagonist sprite is in bounds on the given dimension
    */
-  checkInBounds_1D = (position: number, dimen: Dimension, state: ProtagonistState): number => {
+  checkInBounds_1D = (position: number, dimen: Dimension, state: ProtagonistVector): number => {
     if (position >= 300) {
       return 300;
     }
@@ -92,7 +100,7 @@ export class Protagonist extends React.Component<ProtagonistProps, ProtagonistSt
   /**
    * Respond to keyboard to change protagonist sprite's position
    */
-  move = ({ xPos, yPos, speed }: ProtagonistState, key: string, action: string = ""): void => {
+  move = ({ xPos, yPos, speed }: ProtagonistVector, key: string, action: string = ""): void => {
     console.log(`${key} pressed`);
     let yPosNew: number = yPos + (action.match(/Up/g) ? speed :
                                  (action.match(/Down/g) ? -1 * speed : 0));
@@ -100,9 +108,19 @@ export class Protagonist extends React.Component<ProtagonistProps, ProtagonistSt
                                  (action.match(/Right/g) ? -1 * speed : 0));
     console.log('Protagonist.tsx:: move: xPosNew: ', xPosNew, '; yPosNew: ', yPosNew);
 
-    this.setState(Object.assign(this.keepInBounds(xPosNew, yPosNew),
-                                { speed: this.adjustSpeed(action, speed) }));
+    this.setState(Object.assign({}, this.state,
+                                this.keepInBounds(xPosNew, yPosNew),
+                                {speed: this.adjustSpeed(action, speed),
+                                 angle: this.rotate(action)}));
   };
+
+  rotate = (keyName: string) => {
+    console.log('Protagonist#rotate: keyName', keyName);
+    let currentDirection: Direction = Direction[keyName];
+    console.log('Protagonist.jsx: rotate: currentDirection', currentDirection);
+    /*downR:0 |down:45 |downL:90 |L:135 |upL:180 |up:225 |upR:270 |R:315*/
+    return currentDirection || this.state.angle;
+  }
 
   events = {
     keypress: (e: KeyboardEvent): void => {
@@ -110,6 +128,7 @@ export class Protagonist extends React.Component<ProtagonistProps, ProtagonistSt
       let keyName = _.get(actions, e.key);
       if (_.isString(keyName)) {
         this.move(this.state, e.key, keyName);
+        this.rotate(keyName);
       }
     }
   };
@@ -124,7 +143,10 @@ export class Protagonist extends React.Component<ProtagonistProps, ProtagonistSt
     console.log('Protagonist.tsx:: RE-RENDERED!');
     return (
       <div>
-        <div className="centered" id="protagonist" style={this.calcOffset()}>
+        <div className="centered" id="protagonist" style={
+          Object.assign({}, this.calcOffset(),
+            {transform: `rotate(${this.state.angle}deg)`})
+        }>
         </div>
       </div>
     );

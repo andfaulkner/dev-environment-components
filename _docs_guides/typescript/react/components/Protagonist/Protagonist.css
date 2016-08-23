@@ -13,10 +13,10 @@ div#protagonist.centered {
   border-left: 24px solid transparent;
   border-right: 24px solid transparent;
   border-bottom: 32px solid red;
-  transform: rotate(225deg);
+  transform: rotate(90deg); /*downR:0 |down:45 |downL:90 |L:135 |upL:180 |up:225 |upR:270 |R:315*/
   border: 14px ridge #FFFFFF;
   box-shadow: #FFFFFF;
   text-shadow: #FFFFFF;
   border-radius: 0.1px; /* weird ridge appears otherwise */
-  z-index: 2;
+  z-index: 1;
 }

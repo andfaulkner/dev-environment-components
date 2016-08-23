@@ -123,7 +123,13 @@ AUGUST 21st
 *   ! confirm working postcss autoprefixer
 *   ! confirm working postcss cssnext
 *   ! confirm working postcss precess
-*   5 css "shape" snippets 
+*   5 css "shape" snippets
+*   linear gradient
+*   box-shadow
+*   Entity-Component-System?
+*   requestAnimationFrame
+*   css navigation bar tutorial 
+*   TYPESCRIPT::: Object.assign
 
 *   TYPESCRIPT::: module resolution:: Basics
 *   TYPESCRIPT::: module resolution:: Merging Interfaces

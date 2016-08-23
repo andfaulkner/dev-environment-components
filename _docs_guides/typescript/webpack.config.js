@@ -104,7 +104,7 @@ module.exports = {
         addDependencyTo: webpack
       }),
       require('postcss-simple-vars'),
-      require('postcss-cssnext'),
+      require('postcss-cssnext')
       // require('postcss-conditionals'),
       // require('postcss-extend'),
       // require('postcss-current-selector'),

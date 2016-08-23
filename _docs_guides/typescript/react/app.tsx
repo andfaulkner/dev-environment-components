@@ -52,7 +52,7 @@ class App extends React.Component<{}, {}> {
   tick = () => {
     console.log('app.tsx:: game loop ticked!');
     let time = Date.now();
-    requestAnimationFrame(this.tick);
+    // requestAnimationFrame(this.tick);
     this.setState({
       input: {
         time
