@@ -1,5 +1,5 @@
-/// <reference path="../../typings/lodash/lodash.d.ts" />
-/// <reference path="../../typings/node/node.d.ts" />
+/// <reference path="../../typings/globals/lodash/index.d.ts" />
+/// <reference path="../../typings/globals/node/index.d.ts" />
 /// <reference path="./testmodules/sideEffectsTestModuleSideEffects.d.ts"/>
 
 import * as _ from 'lodash';

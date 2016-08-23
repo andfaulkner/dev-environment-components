@@ -11,48 +11,54 @@ import { TestComponent } from './components/TestComponent';
 // import { Header } from './components/Header';
 import { Protagonist } from './components/Protagonist/Protagonist';
 import { ArenaBorder } from './components/ArenaBorder/ArenaBorder';
+import { KeyController } from './components/KeyController/KeyController';
 
-import { ProtagonistColors } from './enums/ProtagonistColors';
+import { ProtagonistColor } from './enums/ProtagonistColor';
 
-// import { Header } from './components/Header';
-
-interface Foo {
-  test: number;
-}
-
-let bar = { test: 4 };
-
-let foo = bar as Foo;
-console.log('foo', foo);
 
 export interface CommentProps { };
 export interface CommentState { };
 
+export interface Input {
+  time: number;
+}
+
 console.log('js loaded');
-                                           //Props   //     State
-class CommentBox extends React.Component<CommentProps, CommentState> {
-  render() {
-    return (
-      <div className="commentBox">
-        <Button />
-        <TestComponent />
-        <span>
-          Hello, world! I am a CommentBox.
-        </span>
-      </div>);
-  }
-};
 
 class App extends React.Component<{}, {}> {
+  state = {
+    input: {
+      time: Date.now()
+    }
+  };
+
+  componentWillMount = () => {
+    requestAnimationFrame(this.tick);
+  }
+
   render() {
     return (
       <div>
-        <CommentBox />
-        <Protagonist color={ProtagonistColors.Red} width={20} height={20} />
+        <KeyController input={ this.state.input } />
+        <Protagonist input={this.state.input} color={ProtagonistColor.Red} width={20} height={20} />
         <ArenaBorder />
       </div>
     );
-  }
+  };
+
+  /**
+   * The game loop. Coordinates everything. Changes propagate down the tree every time it ticks
+   */
+  tick = () => {
+    console.log('app.tsx:: game loop ticked!');
+    let time = Date.now();
+    requestAnimationFrame(this.tick);
+    this.setState({
+      input: {
+        time
+      }
+    });
+  };
 };
 
 document.addEventListener("DOMContentLoaded", function(event) {

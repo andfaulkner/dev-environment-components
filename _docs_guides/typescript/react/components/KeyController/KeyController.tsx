@@ -10,32 +10,27 @@ import * as React from 'react';
 import * as ReactDOM from 'react-dom';
 import * as $ from 'jquery';
 
-require('./Cannon.css');
+require('./KeyController.css');
 
-interface CannonProps { };
-
-interface CannonState {
-  ammo: number;
-  level: number;
+interface KeyControllerProps {
+  input: { time: number };
 };
 
-export class Cannon extends React.Component<CannonProps, CannonState> {
+interface KeyControllerState {
+
+};
+
+export class KeyController extends React.Component<KeyControllerProps, KeyControllerState> {
 
   events = {
-    spacePressed: (e) => {
-      console.log('e:', e);
+    keyPressed: (e) => {
+      console.log('KeyController.tsx:: key pressed: e.key: ', e.key);
     }
   };
 
   render() {
     return (
-      <div id={"weapon"}>
-        <div id={"cannon"}>
-          <span>.</span>
-        </div>
-        <div className={"random-tinkering"} />
-        <div className={"triangle"} />
-      </div>
+      <div>Yo</div>
     );
   }
 };

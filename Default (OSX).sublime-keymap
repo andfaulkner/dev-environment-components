@@ -1,0 +1,12 @@
+[
+  { "keys": ["ctrl+alt+k"], "command": "clear_console" },
+  { "keys": ["alt+r"], "command": "side_bar_rename" },
+  { "keys": ["alt+d"], "command": "side_bar_duplicate" },
+  { "keys": ["alt+f"], "command": "side_bar_new_directory" },
+  { "keys": ["alt+n"], "command": "side_bar_new_file" },
+  { "keys": ["ctrl+alt+x"], "command": "side_bar_cut" },
+  { "keys": ["ctrl+alt+v"], "command": "side_bar_paste" },
+  { "keys": ["ctrl+shift+t,ctrl+shift+g"], "command": "typescript_go_to_definition" },
+  { "keys": ["ctrl+shift+t,ctrl+shift+r"], "command": "typescript_rename" },
+  { "keys": ["ctrl+shift+t,ctrl+shift+f"], "command": "typescript_find_references" }
+]

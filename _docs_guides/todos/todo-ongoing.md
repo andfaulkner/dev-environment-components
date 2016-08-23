@@ -118,6 +118,11 @@ AUGUST 21st
 ===========
 *   ! another hour with Elixir
 *   ! 5 Phoenix snippets
+*   ! confirm working postcss
+*   ! confirm working postcss simple-vars
+*   ! confirm working postcss autoprefixer
+*   ! confirm working postcss cssnext
+*   ! confirm working postcss precess
 
 *   TYPESCRIPT::: module resolution:: Basics
 *   TYPESCRIPT::: module resolution:: Merging Interfaces

@@ -1,0 +1,11 @@
+<snippet>
+  <description>Create a circle</description>
+<content><![CDATA[
+${1:div.selector}${1/.+/ {\n  /}background-color: ${2:black};
+${1/.+/  /}height: ${3:30px};
+${1/.+/  /}width: ${3:30px};
+${1/.+/  /}border-radius: 100%;${1/.+/\n\}/}${0}
+]]></content>  
+  <tabTrigger>draw_circle</tabTrigger>
+  <scope>source.css</scope>
+</snippet>

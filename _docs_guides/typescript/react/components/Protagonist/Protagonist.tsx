@@ -10,8 +10,9 @@ import * as _ from 'lodash';
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
 import * as $ from 'jquery';
-import {ProtagonistColors, Dimension} from '../../enums/enums';
+import {ProtagonistColor, Dimension} from '../../enums/enums';
 import {Cannon} from '../Cannon/Cannon';
+import {Input} from '../../app';
 
 require('./Protagonist.css');
 
@@ -29,7 +30,8 @@ interface ProtagonistState {
 interface ProtagonistProps {
   width: number;
   height: number;
-  color: ProtagonistColors;
+  color: ProtagonistColor;
+  input: Input;
 }
 
 // enum Action { Up, UpRight, Right, DownRight, Down, DownLeft, Left, UpLeft, RaiseSpeed, LowerSpeed }
@@ -119,6 +121,7 @@ export class Protagonist extends React.Component<ProtagonistProps, ProtagonistSt
     });
 
   render() {
+    console.log('Protagonist.tsx:: RE-RENDERED!');
     return (
       <div>
         <div className="centered" id="protagonist" style={this.calcOffset()}>

@@ -88,24 +88,28 @@ module.exports = {
     ]
   },
 
-  postcss: function() {
+  postcss: function(webpack) {
     return [
-      require('precss'),
-      require('autoprefixer'),
-      require('postcss-import')({
+      // !------ ALREADY INCLUDED BY cssnext: require('autoprefixer'),
+      // require('precss'),
+      // require('postcss-import')({
+      //   addDependencyTo: webpack
+      // }),
+      // require('lost'),
+      // require('postcss-for'),
+      // require('postcss-mixins'),
+      // require('postcss-nested'),
+      // require('postcss-current-selector'),
+      require('postcss-partial-import')({
         addDependencyTo: webpack
       }),
-      require('lost'),
-      require('postcss-for'),
-      require('postcss-mixins'),
-      require('postcss-nested'),
-      require('postcss-current-selector'),
       require('postcss-simple-vars'),
-      require('postcss-conditionals'),
-      require('postcss-extend'),
-      require('postcss-current-selector'),
-      require('postcss-math'),
-      require('postcss-property-lookup')
+      require('postcss-cssnext'),
+      // require('postcss-conditionals'),
+      // require('postcss-extend'),
+      // require('postcss-current-selector'),
+      // require('postcss-math'),
+      // require('postcss-property-lookup')
     ];
   },
 
