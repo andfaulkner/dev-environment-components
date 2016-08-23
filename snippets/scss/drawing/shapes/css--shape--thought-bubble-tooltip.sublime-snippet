@@ -1,0 +1,39 @@
+<snippet>
+  <description>Create square w triangle sticking out as a "tooltip" / thought bubble </description>
+<content><![CDATA[
+${1:div.selector} {
+  position: relative;
+  width: ${2:/*width of square*/140}px;
+  height: ${3:/*height of square*/140}px;
+  background: ${4:/*fill colour*/#f1f1f1/* | black | white | green | red | blue | yellow | orange};
+  border: 5px solid ${5:/*border colour*/ #DDDDDD};
+}
+
+${1:div.selector}:after, ${1:div.selector}:before {
+  bottom: 100%;
+  left: 50%;
+  border: solid transparent;
+  content: " ";
+  height: 0;
+  width: 0;
+  position: absolute;
+  pointer-events: none;
+}
+
+${1:div.selector}:after {
+  border-color: rgba(241, 241, 241, 0);
+  background: ${4:/*fill colour*/#f1f1f1/* | black | white | green | red | blue | yellow | orange};
+  border-width: ${7:/*arrow_border_width*/30}px;
+  margin-left: -${7:/*arrow_border_width*/30}px;
+}
+
+${1:div.selector}:before {
+  border-color: rgba(221, 221, 221, 0);
+  border-bottom-color: 5px solid ${5:/*border colour*/ #DDDDDD};
+  border-width: calc(${7:/*arrow_border_width*/30}px + 7px);
+  margin-left:  calc(-${7:/*arrow_border_width*/30}px - 7px);
+}
+]]></content>  
+  <tabTrigger>shape_tooltip</tabTrigger>
+  <scope>source.css</scope>
+</snippet>

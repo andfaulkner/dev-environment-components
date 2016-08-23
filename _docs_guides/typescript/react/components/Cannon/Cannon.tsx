@@ -33,9 +33,12 @@ export class Cannon extends React.Component<CannonProps, CannonState> {
         <div id={"cannon"}>
           <span>.</span>
         </div>
-        <div className={"random-tinkering"} />
-        <div className={"triangle"} />
+        <div className={"arrow-div"} />
       </div>
     );
   }
 };
+
+//         <div className={"random-tinkering"} />
+        // <div className={"random-tinkering-triangle"} />
+        // <div className={"hollow-triangle"} />

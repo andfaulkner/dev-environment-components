@@ -20,9 +20,58 @@ $barrel_height: 15px;
 
 /* crazy flowchart */
 
+/************** TOOLTIP (thought-bubble-ish square with triangle sticking out) ************
+    |--|         ________          |--|         __/\__
+    |   \  OR   |        |   OR   /   |    OR  |      |
+    |   /       |___  ___|        \   |        |______|
+    |--|            \/             |--|                     */
+/******************************************************************************************/
+div#protagonist > div#weapon > div.arrow-div {
+  @apply --centered-gun
+  margin-right: -200px;
+  margin-top: -170px;
+  position: relative;
+  width: 105px;
+  height: 105px;
+  background: #f1f1f1;
+  border: 5px solid #DDDDDD;
+}
 
+div#protagonist > div#weapon > div.arrow-div:after,
+div#protagonist > div#weapon > div.arrow-div:before {
+  bottom: 100%;
+  left: 50%;
+  border: solid transparent;
+  content: " ";
+  height: 0;
+  width: 0;
+  position: absolute;
+  pointer-events: none;
+}
 
-box-shadow
+div#protagonist > div#weapon > div.arrow-div:after {
+  border-color: rgba(241, 241, 241, 0);
+  border-bottom-color: #f1f1f1;
+  border-width: 20px;
+  margin-left: -20px;
+}
+
+div#protagonist > div#weapon > div.arrow-div:before {
+  border-color: rgba(221, 221, 221, 0);
+  border-bottom-color: #DDDDDD;
+  border-width: calc(20px + 7px);
+  margin-left:  calc(-20px - 7px);
+}
+/***** END TOOLTIP ************************************************************************/
+
+div#protagonist > div#weapon > div.hollow-triangle {
+    /*@apply --centered-gun;*/
+    border-right: 8px solid; 
+    border-bottom: 8px solid;
+    width: 30px; height: 30px;
+    transform: rotate(-135deg);
+    color: blue;
+}
 
 /* triangle */
 div#protagonist > div#weapon > div.triangle {

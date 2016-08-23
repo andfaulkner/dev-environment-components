@@ -123,6 +123,7 @@ AUGUST 21st
 *   ! confirm working postcss autoprefixer
 *   ! confirm working postcss cssnext
 *   ! confirm working postcss precess
+*   5 css "shape" snippets 
 
 *   TYPESCRIPT::: module resolution:: Basics
 *   TYPESCRIPT::: module resolution:: Merging Interfaces

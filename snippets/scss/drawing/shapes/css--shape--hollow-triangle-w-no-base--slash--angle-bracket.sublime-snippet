@@ -1,0 +1,13 @@
+<snippet>
+  <description>Create a hollow triangle with no bottom, shaped like: \/ OR > OR/\</description>
+<content><![CDATA[
+${1:div.selector}${1/.+/ {\n  /}border-right: ${2:/*thickness_of_filled_in_segment*/ 8px} solid;
+${1/.+/  /}border-bottom: ${2:/*thickness_of_filled_in_segment*/ 8px} solid;
+${1/.+/  /}width: ${3:/*overall arrow size*/30px};
+${1/.+/  /}height: ${3:/*overall arrow size*/30px};
+${1/.+/  /}transform: rotate(${4:/*arrow direction: -45: right; 45: down; left: 135; up: -135*/ -45deg});
+${1/.+/  /}color: ${5:/*fill color*/ blue};${1/.+/\n\}/}${0}
+]]></content>  
+  <tabTrigger>shape_hollow_no_bottom_arrow</tabTrigger>
+  <scope>source.css</scope>
+</snippet>

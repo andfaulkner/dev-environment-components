@@ -8,5 +8,6 @@
   { "keys": ["ctrl+alt+v"], "command": "side_bar_paste" },
   { "keys": ["ctrl+shift+t,ctrl+shift+g"], "command": "typescript_go_to_definition" },
   { "keys": ["ctrl+shift+t,ctrl+shift+r"], "command": "typescript_rename" },
-  { "keys": ["ctrl+shift+t,ctrl+shift+f"], "command": "typescript_find_references" }
+  { "keys": ["ctrl+shift+t,ctrl+shift+f"], "command": "typescript_find_references" },
+  { "keys": ["ctrl+command+enter"], "command": "toggle_overwrite" }
 ]
