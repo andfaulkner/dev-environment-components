@@ -12,112 +12,29 @@ $barrel_height: 15px;
     left: calc($half - $protagonist_radius);
     width: $protagonist_radius;
     height: $barrel_height;
-    margin-top: -$barrel_height;
-    margin-left: 4px;
+    margin-top: -$barrel_height - 10;
+    margin-left: 20px;
   };
 }
-/*border-radius: 100%;*/
-
-/* crazy flowchart */
-
-/************** TOOLTIP (thought-bubble-ish square with triangle sticking out) ************
-    |--|         ________          |--|         __/\__
-    |   \  OR   |        |   OR   /   |    OR  |      |
-    |   /       |___  ___|        \   |        |______|
-    |--|            \/             |--|                     */
-/******************************************************************************************/
-div#protagonist > div#weapon > div.arrow-div {
-  @apply --centered-gun
-  margin-right: -200px;
-  margin-top: -170px;
-  position: relative;
-  width: 105px;
-  height: 105px;
-  background: #f1f1f1;
-  border: 5px solid #DDDDDD;
-}
-
-div#protagonist > div#weapon > div.arrow-div:after,
-div#protagonist > div#weapon > div.arrow-div:before {
-  bottom: 100%;
-  left: 50%;
-  border: solid transparent;
-  content: " ";
-  height: 0;
-  width: 0;
-  position: absolute;
-  pointer-events: none;
-}
-
-div#protagonist > div#weapon > div.arrow-div:after {
-  border-color: rgba(241, 241, 241, 0);
-  border-bottom-color: #f1f1f1;
-  border-width: 20px;
-  margin-left: -20px;
-}
-
-div#protagonist > div#weapon > div.arrow-div:before {
-  border-color: rgba(221, 221, 221, 0);
-  border-bottom-color: #DDDDDD;
-  border-width: calc(20px + 7px);
-  margin-left:  calc(-20px - 7px);
-}
-/***** END TOOLTIP ************************************************************************/
-
-div#protagonist > div#weapon > div.hollow-triangle {
-    /*@apply --centered-gun;*/
-    border-right: 8px solid; 
-    border-bottom: 8px solid;
-    width: 30px; height: 30px;
-    transform: rotate(-135deg);
-    color: blue;
-}
-
-/* triangle */
-div#protagonist > div#weapon > div.triangle {
-  @apply --centered-gun;
-  margin-top: 50px;
-  margin-left: 50px;
-  width: 0;
-  height: 0;
-  border-left: 20px solid transparent;
-  border-right: 20px solid transparent;
-  border-bottom: 20px solid yellow;
-}
-
-/* circle */
-div#protagonist > div#weapon > div.random-tinkering {
-  @apply --centered-gun;
-  margin-top:50px;
-  background-color: black;
-  height: 30px;
-  width: 30px;
-  border-radius: 100%;
-}
-
-#test_id_here {
-  border: 2px solid red;
-  padding: 10px;
-  font-size: 20px;
-}
-
 
 div#protagonist > div#weapon > div#cannon-tip {
   @apply --centered-gun;
 }
 
 div#protagonist > div#weapon > div#cannon {
-  transition: height 2s, margin-top 2s;
+  transition: height 2s, margin-left 2s, margin-top 2s;
   @apply --centered-gun;
    /*margin-top: -50px;    << To position from center */
   /* margin-left: -100px;  << To position from center */
   color: black;
   background-color: black;
-  z-index: 1;
+  transform: rotate(315deg);
+  margin-top: calc($barrel_height * 2 - 11); /* ensure the gun looks embedded in the "rocket" */
+  z-index: 2;
   background-image: 
     linear-gradient(
       to right, rgba(0,0,0,0.2) 0,
-                transparent     30%,
+                transparent     30%, 
                 transparent     70%,
                 rgba(0,0,0,0.2) 100%),
     radial-gradient(
@@ -181,7 +98,8 @@ div#protagonist > div#weapon > div#cannon {
 
 div#protagonist > div#weapon > div#cannon:hover {
   height: calc($barrel_height + 25px);
-  margin-top: calc(-$barrel_height - 25px);
+  margin-left: 27px;
+  margin-top: 12px;
 }
 
 

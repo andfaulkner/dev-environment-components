@@ -8,9 +8,15 @@ div#protagonist.centered {
   position: absolute;
   top: 50%;
   left: 50%;
-  /* margin-top: -50px;    << To position from center */
-  /* margin-left: -100px;  << To position from center */
-  color: red;
-  background-color: red;
-  z-index: 1;
+  width: 0;
+  height: 0;
+  border-left: 24px solid transparent;
+  border-right: 24px solid transparent;
+  border-bottom: 32px solid red;
+  transform: rotate(225deg);
+  border: 14px ridge #FFFFFF;
+  box-shadow: #FFFFFF;
+  text-shadow: #FFFFFF;
+  border-radius: 0.1px; /* weird ridge appears otherwise */
+  z-index: 2;
 }

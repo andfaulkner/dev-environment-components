@@ -1,0 +1,13 @@
+<snippet>
+  <description>Create an ellipse / oval</description>
+<content><![CDATA[
+${1:div.selector}${1/.+/ {\n  /}position: relative;
+${1/.+/  /}width: ${2:/*untransformed width*/100}px;
+${1/.+/  /}height: ${3:/*untransformed height*/140}px;
+${1/.+/  /}margin: ${4:/*having a bit of margin prevents ugly flattening illusionwhen ellipse touches edge*/ 10}px;
+${1/.+/  /}background-color: ${5:/*ellipse fill colour*/ black};
+${1/.+/  /}clip-path: ellipse(closest-side at ${6:/*width of left relative to width of right - produces stretch*/40% 50%});${1/.+/\n\}/}${0}
+]]></content>  
+  <tabTrigger>draw_ellipse</tabTrigger>
+  <scope>source.css</scope>
+</snippet>

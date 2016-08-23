@@ -125,10 +125,10 @@ export class Protagonist extends React.Component<ProtagonistProps, ProtagonistSt
     return (
       <div>
         <div className="centered" id="protagonist" style={this.calcOffset()}>
-          OK
-          <Cannon />
         </div>
       </div>
     );
   }
 };
+
+// Perhaps add against later, inside div.centered#protagonist: <Cannon />
