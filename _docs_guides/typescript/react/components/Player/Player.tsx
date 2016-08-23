@@ -10,34 +10,34 @@ import * as _ from 'lodash';
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
 import * as $ from 'jquery';
-import {ProtagonistColor, Dimension, Direction} from '../../enums/enums';
+import {PlayerColor, Dimension, Direction} from '../../enums/enums';
 import {Cannon} from '../Cannon/Cannon';
 import {Input} from '../../app';
 
-require('./Protagonist.css');
+require('./Player.css');
 
 interface Coordinates {
   xPos: number;
   yPos: number;
 }
 
-interface ProtagonistVector {
+interface PlayerVector {
   xPos: number;
   yPos: number;
   speed: number;
 }
 
-interface ProtagonistState {
+interface PlayerState {
   xPos: number;
   yPos: number;
   angle: number;
   speed: number;
 }
 
-interface ProtagonistProps {
+interface PlayerProps {
   width: number;
   height: number;
-  color: ProtagonistColor;
+  color: PlayerColor;
   input: Input;
 }
 
@@ -50,13 +50,14 @@ let actions = {
   d: "Right",
   c: "DownRight",
   s: "Down",
+  x: "Down",
   z: "DownLeft",
   a: "Left",
   q: "UpLeft"
 };
 
 
-export class Protagonist extends React.Component<ProtagonistProps, ProtagonistState> {
+export class Player extends React.Component<PlayerProps, PlayerState> {
 
   state = {
     xPos: 0,
@@ -70,9 +71,9 @@ export class Protagonist extends React.Component<ProtagonistProps, ProtagonistSt
   }
 
   /**
-   * Ensure protagonist sprite is in bounds on the given dimension
+   * Ensure player sprite is in bounds on the given dimension
    */
-  checkInBounds_1D = (position: number, dimen: Dimension, state: ProtagonistVector): number => {
+  checkInBounds_1D = (position: number, dimen: Dimension, state: PlayerVector): number => {
     if (position >= 300) {
       return 300;
     }
@@ -83,7 +84,7 @@ export class Protagonist extends React.Component<ProtagonistProps, ProtagonistSt
   }
 
   /**
-   * Ensure protagonist sprite remains in bounds on all dimensions
+   * Ensure player sprite remains in bounds on all dimensions
    */
   keepInBounds = (xPos: number, yPos: number) : Coordinates => (
     {
@@ -92,21 +93,21 @@ export class Protagonist extends React.Component<ProtagonistProps, ProtagonistSt
     });
 
   /**
-   * Reduce or increase protagonist sprite speed (i.e. in response to keypresses)
+   * Reduce or increase player sprite speed (i.e. in response to keypresses)
    */
   adjustSpeed = (action, speed): number => speed + (action === "RaiseSpeed" ? 1 :
                                                     (action === "LowerSpeed" ? -1 : 0));
 
   /**
-   * Respond to keyboard to change protagonist sprite's position
+   * Respond to keyboard to change player sprite's position
    */
-  move = ({ xPos, yPos, speed }: ProtagonistVector, key: string, action: string = ""): void => {
+  move = ({ xPos, yPos, speed }: PlayerVector, key: string, action: string = ""): void => {
     console.log(`${key} pressed`);
     let yPosNew: number = yPos + (action.match(/Up/g) ? speed :
                                  (action.match(/Down/g) ? -1 * speed : 0));
     let xPosNew: number = xPos + (action.match(/Left/g) ? speed :
                                  (action.match(/Right/g) ? -1 * speed : 0));
-    console.log('Protagonist.tsx:: move: xPosNew: ', xPosNew, '; yPosNew: ', yPosNew);
+    console.log('Player.tsx:: move: xPosNew: ', xPosNew, '; yPosNew: ', yPosNew);
 
     this.setState(Object.assign({}, this.state,
                                 this.keepInBounds(xPosNew, yPosNew),
@@ -115,9 +116,9 @@ export class Protagonist extends React.Component<ProtagonistProps, ProtagonistSt
   };
 
   rotate = (keyName: string) => {
-    console.log('Protagonist#rotate: keyName', keyName);
+    console.log('Player#rotate: keyName', keyName);
     let currentDirection: Direction = Direction[keyName];
-    console.log('Protagonist.jsx: rotate: currentDirection', currentDirection);
+    console.log('Player.jsx: rotate: currentDirection', currentDirection);
     /*downR:0 |down:45 |downL:90 |L:135 |upL:180 |up:225 |upR:270 |R:315*/
     return currentDirection || this.state.angle;
   }
@@ -140,10 +141,10 @@ export class Protagonist extends React.Component<ProtagonistProps, ProtagonistSt
     });
 
   render() {
-    console.log('Protagonist.tsx:: RE-RENDERED!');
+    console.log('Player.tsx:: RE-RENDERED!');
     return (
       <div>
-        <div className="centered" id="protagonist" style={
+        <div className="centered" id="player" style={
           Object.assign({}, this.calcOffset(),
             {transform: `rotate(${this.state.angle}deg)`})
         }>
@@ -153,4 +154,4 @@ export class Protagonist extends React.Component<ProtagonistProps, ProtagonistSt
   }
 };
 
-// Perhaps add against later, inside div.centered#protagonist: <Cannon />
+// Perhaps add against later, inside div.centered#player: <Cannon />

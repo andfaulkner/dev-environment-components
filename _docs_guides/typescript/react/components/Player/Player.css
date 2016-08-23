@@ -4,7 +4,7 @@
   font-size: 20px;
 }
 
-div#protagonist.centered {
+div#player.centered {
   position: absolute;
   top: 50%;
   left: 50%;

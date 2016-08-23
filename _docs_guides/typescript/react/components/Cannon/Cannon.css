@@ -1,27 +1,27 @@
 @import './_TestImport';
 
 $half:    50%;
-$protagonist_radius: 10px;
-$protagonist_height: $protagonist_radius * 2;
+$player_radius: 10px;
+$player_height: $player_radius * 2;
 $barrel_height: 15px;
 
 :root {
   --centered-gun: {
     position: absolute;
-    top: calc($half - $protagonist_radius);
-    left: calc($half - $protagonist_radius);
-    width: $protagonist_radius;
+    top: calc($half - $player_radius);
+    left: calc($half - $player_radius);
+    width: $player_radius;
     height: $barrel_height;
     margin-top: -$barrel_height - 10;
     margin-left: 20px;
   };
 }
 
-div#protagonist > div#weapon > div#cannon-tip {
+div#player > div#weapon > div#cannon-tip {
   @apply --centered-gun;
 }
 
-div#protagonist > div#weapon > div#cannon {
+div#player > div#weapon > div#cannon {
   transition: height 2s, margin-left 2s, margin-top 2s;
   @apply --centered-gun;
    /*margin-top: -50px;    << To position from center */
@@ -96,7 +96,7 @@ div#protagonist > div#weapon > div#cannon {
               transparent 24px);
 }
 
-div#protagonist > div#weapon > div#cannon:hover {
+div#player > div#weapon > div#cannon:hover {
   height: calc($barrel_height + 25px);
   margin-left: 27px;
   margin-top: 12px;
@@ -110,7 +110,7 @@ div#protagonist > div#weapon > div#cannon:hover {
   font-size: 20px;
 }
 
-div#protagonist.centered {
+div#player.centered {
   position: absolute;
   top: 50%;
   left: 50%;

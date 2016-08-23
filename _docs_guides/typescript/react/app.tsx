@@ -9,11 +9,11 @@ import { Button } from 'react-bootstrap';
 
 import { TestComponent } from './components/TestComponent';
 // import { Header } from './components/Header';
-import { Protagonist } from './components/Protagonist/Protagonist';
+import { Player } from './components/Player/Player';
 import { ArenaBorder } from './components/ArenaBorder/ArenaBorder';
 import { KeyController } from './components/KeyController/KeyController';
 
-import { ProtagonistColor } from './enums/ProtagonistColor';
+import { PlayerColor } from './enums/enums';
 
 
 export interface CommentProps { };
@@ -40,7 +40,7 @@ class App extends React.Component<{}, {}> {
     return (
       <div>
         <KeyController input={ this.state.input } />
-        <Protagonist input={this.state.input} color={ProtagonistColor.Red} width={20} height={20} />
+        <Player input={this.state.input} color={PlayerColor.Red} width={20} height={20} />
         <ArenaBorder />
       </div>
     );
