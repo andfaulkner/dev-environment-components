@@ -1,0 +1,8 @@
+<snippet>
+  <description>Create variable with given name, unless snippet arg is blank</description>
+<content><![CDATA[
+\$\{1/.+/let /\}\$\{1:${1:outVar}\}\$\{1/.+/ = /\}${0}
+]]></content>
+  <tabTrigger>let</tabTrigger>
+  <scope>text.xml</scope>
+</snippet>

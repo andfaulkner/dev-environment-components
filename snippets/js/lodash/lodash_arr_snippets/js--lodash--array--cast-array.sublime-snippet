@@ -1,0 +1,8 @@
+<snippet>
+  <description>Cast val as arr if it's not an arr already. 1 => [1]; [1, 2] => [1, 2]; null => [null]</description>
+<content><![CDATA[
+${1/.+/let /}${1:outputArray}${1/.+/ = /}_.castArray(${2:'value to cast to array'});${0}
+]]></content>
+  <tabTrigger>_arr_cast</tabTrigger>
+  <scope>source.js, source.ts, source.jsx, source.tsx</scope>
+</snippet>

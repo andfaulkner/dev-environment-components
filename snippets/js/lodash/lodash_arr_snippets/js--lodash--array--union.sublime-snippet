@@ -1,0 +1,8 @@
+<snippet>
+  <description>Ret arr of uniq vals from all given arrs. e.g. [a, b] + [b, c] => [a, b, c]</description>
+<content><![CDATA[
+${1/.+/let /}${1:outputArray}${1/.+/ = /}_.union(${2:['array', 1]}, ${3:['array', 'two']});${0}
+]]></content>  
+  <tabTrigger>_arr_union</tabTrigger>
+  <scope>source.js, source.ts, source.jsx, source.tsx</scope>
+</snippet>
