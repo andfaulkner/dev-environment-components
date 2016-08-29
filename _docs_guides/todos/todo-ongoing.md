@@ -154,13 +154,17 @@ tsc --jsx react --allowJs --pretty --moduleResolution node --target es6 --module
 *   TYPESCRIPT::: module resolution:: Merging Namespaces w Classes, Functions, Enums
 
 
-
+*   function bind syntax?
+*   speed property
+*   async/await?
+*   wrap in a higher order component
 *   event queue
 *   define event types
 *   define key presses
 *   get key presses to push events onto queue
 *   key resolver: playermove
 *   key resolver: playerspeedchange
+*   state object
 
 
 *   scss into project
