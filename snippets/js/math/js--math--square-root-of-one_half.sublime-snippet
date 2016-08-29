@@ -1,0 +1,8 @@
+<snippet>
+  <description>Returns the square root of 1/2 (one half) (~0.707107)</description>
+<content><![CDATA[
+Math.SQRT1_2
+]]></content>  
+  <tabTrigger>math_sqrt1/2</tabTrigger>
+  <scope>source.js, source.ts, source.jsx, source.tsx</scope>
+</snippet>

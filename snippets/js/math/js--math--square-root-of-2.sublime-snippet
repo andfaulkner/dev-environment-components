@@ -1,0 +1,8 @@
+<snippet>
+  <description>Returns the square root of 2 (~1.414)</description>
+<content><![CDATA[
+Math.SQRT2
+]]></content>  
+  <tabTrigger>math_sqrt2</tabTrigger>
+  <scope>source.js, source.ts, source.jsx, source.tsx</scope>
+</snippet>
