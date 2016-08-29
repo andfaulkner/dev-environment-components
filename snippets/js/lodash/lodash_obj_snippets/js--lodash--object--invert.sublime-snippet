@@ -1,7 +1,7 @@
 <snippet>
     <description>Returns copy of object w/ keys and values inverted</description>
     <content><![CDATA[
-${1/.+/var /}${1:invertedObj}${1/.+/ = /}_.invert(${2:objToInvert});${0}
+${1/.+/let /}${1:invertedObj}${1/.+/ = /}_.invert(${2:objToInvert});${0}
 ]]></content>
     <tabTrigger>_obj_invert</tabTrigger>
     <scope>source.js, source.ts, source.jsx, source.tsx</scope>

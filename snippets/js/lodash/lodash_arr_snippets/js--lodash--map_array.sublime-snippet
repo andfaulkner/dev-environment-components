@@ -1,8 +1,8 @@
 <snippet>
     <description>Run fn on all vals of array. Ret new val for each item; Ret new array w/ vals changed.</description>
     <content><![CDATA[
-${1:returnedArray} = _.map(${2:arrayToMap}, function(${3:val}) {
-	${4:return val};
+${1/.+/let /}${1:returnedArray}${1/.+/ = /}_.map(${2:arrayToMap}, (${3:item, index, origArr}) => {
+  ${4:return item};
 });
 ]]></content>
     <tabTrigger>_mapArray</tabTrigger>

@@ -1,7 +1,7 @@
 <snippet>
 		<description>Split string into arr, where given separator defines where each item starts, ends</description>
     <content><![CDATA[
-${1/.+/var /}${1/.+/outputArray/}${1/.+/ = /}_.split(${2:'stringToSplit'}, ${3:/regexOrSubstrToSplitStrAtOnMatch/});
+${1/.+/let /}${1/.+/outputArray/}${1/.+/ = /}_.split(${2:'stringToSplit'}, ${3:/regexOrSubstrToSplitStrAtOnMatch/});
 ]]></content>
     <tabTrigger>_str_split</tabTrigger>
     <scope>source.js, source.ts, source.jsx, source.tsx</scope>

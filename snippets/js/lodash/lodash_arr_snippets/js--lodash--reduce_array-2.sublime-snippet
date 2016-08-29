@@ -1,10 +1,10 @@
 <snippet>
-    <description>Iterate thru an arr, & 1 item @ a time collapse it to a single val & return it</description>
+    <description>Iterate thru arr, & 1 item @ a time collapse it to a single val & ret it</description>
     <content><![CDATA[
-${1/.+/var /}${1:varToStoreResultIn}${1/.+/ = /}_.reduce(${2:arrayToReduce}, function(${4:accumulator}, ${5:item}) {
-	${0://code
-	return accumulator_transformed__usually_with_vals_added_to_it_if_its_an_obj; }
-}, ${3:accumulator_start_value__eg__[]});
+${1/.+/let /}${1:outVar}${1/.+/ = /}_.reduce(${2:['arrToReduce']}, (${4:total}, ${5:item}) => {
+  ${0://code to perform the reduce
+  return ${4}; /* ...with value transformed, usually by adding values to it (if its an object) */}
+}, ${3:[] /*accumulator (aka total) start value*/});
 ]]></content>
     <tabTrigger>_arr_reduce</tabTrigger>
     <scope>source.js, source.ts, source.jsx, source.tsx</scope>

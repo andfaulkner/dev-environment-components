@@ -1,7 +1,7 @@
 <snippet>
   <description>Remove item from end of array</description>
 <content><![CDATA[
-${1/.+/var /}${1:removedValue}${1/.+/ = /}${2:someArray}.pop();${0}
+${1/.+/let /}${1:removedValue}${1/.+/ = /}${2:someArray}.pop();${0}
 ]]></content>  
   <tabTrigger>arr_pop</tabTrigger>
   <scope>source.js, source.ts, source.jsx, source.tsx</scope>

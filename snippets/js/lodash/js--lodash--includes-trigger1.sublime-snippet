@@ -1,6 +1,7 @@
 <snippet>
+    <description>Check if value is in given arr, obj, or str</description>
     <content><![CDATA[
-${1:boolRetVal} = _.includes(${2:arrObjOrStr}, ${3:valToFind}, ${4:optionanlIndex2Strt_0AndUp});
+${1/.+/let /}${1:boolRetVal}${1/.+/ = /}_.includes(${2:arrObjOrStr}, ${3:valToFind}, ${4:optionalIndex2StrtAt_0AndUp});
 ]]></content>
     <tabTrigger>_contains</tabTrigger>
     <scope>source.js, source.ts, source.jsx, source.tsx</scope>

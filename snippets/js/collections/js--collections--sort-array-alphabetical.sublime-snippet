@@ -1,7 +1,7 @@
 <snippet>
   <description>Sort array alphabetically. Note: sorts #s incorrectly, e.g.: 1, 11, 2</description>
 <content><![CDATA[
-${1/.+/var /}${1:someArray}${1/.+/ = /}${2:someOtherArray}.sort();
+${1/.+/let /}${1:someArray}${1/.+/ = /}${2:someOtherArray}.sort();
 ]]></content>  
   <tabTrigger>arr_sort_alpha</tabTrigger>
   <scope>source.js, source.ts, source.jsx, source.tsx</scope>
