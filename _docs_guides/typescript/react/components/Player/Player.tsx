@@ -21,7 +21,7 @@ interface Coordinates {
   yPos: number;
 }
 
-interface PlayerVector {
+interface UIEntityVector {
   xPos: number;
   yPos: number;
   speed: number;
@@ -73,7 +73,7 @@ export class Player extends React.Component<PlayerProps, PlayerState> {
   /**
    * Ensure player sprite is in bounds on the given dimension
    */
-  checkInBounds_1D = (position: number, dimen: Dimension, state: PlayerVector): number => {
+  checkInBounds_1D = (position: number, dimen: Dimension, state: UIEntityVector): number => {
     if (position >= 300) {
       return 300;
     }
@@ -101,7 +101,7 @@ export class Player extends React.Component<PlayerProps, PlayerState> {
   /**
    * Respond to keyboard to change player sprite's position
    */
-  move = ({ xPos, yPos, speed }: PlayerVector, key: string, action: string = ""): void => {
+  move = ({ xPos, yPos, speed }: UIEntityVector, key: string, action: string = ""): void => {
     console.log(`${key} pressed`);
     let yPosNew: number = yPos + (action.match(/Up/g) ? speed :
                                  (action.match(/Down/g) ? -1 * speed : 0));

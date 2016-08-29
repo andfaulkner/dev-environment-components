@@ -139,6 +139,12 @@ AUGUST 29th
 *   ! auto-'let' snippet snippet - sublime
 *   ! 2 more lodash fn snippets
 *   enemies
+*   cooldown period (no 2-in-a-row)
+*   enemies: prevent stacking
+*   turn units into boxes rather than dots.
+*   power meter
+*   score
+*   level
 *   smooth animations
 *   current level?
 

@@ -1,11 +1,11 @@
 <snippet>
     <description>Iterate thru an obj, & 1 key-val pair @ a time collapse it to a single val & return it</description>
     <content><![CDATA[
-_.reduce(${1:objToReduce}, function(${2:accumulator}, ${3:val}, ${4:key}) {
-	${5://code
-	//e.g. ${2:accumulator}[${4:key}] = ${3:val};
+${1/.+/let /}${1:outVar}${1/.+/ = /}_.reduce(${2:objToReduce}, function(${3:accumulator}, ${4:val}, ${5:key}) {
+  ${6://code
+  //e.g. ${3:accumulator}[${5:key}] = ${4:val};
   return accumulator_transformed__usually_with_vals_added_to_it_if_its_an_obj; }
-}, ${2:accumulator_start_value__eg__[]});
+}, ${3:accumulator_start_value__eg__[]});
 ]]></content>
     <tabTrigger>_reduceObject</tabTrigger>
     <scope>source.js, source.ts, source.jsx, source.tsx</scope>
