@@ -134,6 +134,10 @@ AUGUST 29th
 *   ! ship rendering
 *   ! bullets stop at wall
 *   ! game loop
+*   ! 5 more lodash array snippets
+*   ! 5 more lodash snippets (5)
+*   ! auto-'let' snippet snippet - sublime
+*   ! 2 more lodash fn snippets
 *   enemies
 *   smooth animations
 *   current level?
