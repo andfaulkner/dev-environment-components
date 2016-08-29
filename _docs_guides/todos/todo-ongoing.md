@@ -127,6 +127,16 @@ AUGUST 21st
 *   ! pull in Enzyme & mocha & chai
 *   ! turn template project into a real project
 
+AUGUST 29th
+===========
+*   ! bullets firing
+*   ! bullets fly on timer, disappear eventually
+*   ! ship rendering
+*   ! bullets stop at wall
+*   ! game loop
+*   enemies
+*   smooth animations
+*   current level?
 
 *   set up compile step for testing?
 

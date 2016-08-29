@@ -415,4 +415,38 @@ function type_install_global {
     typings install --global --save "dt~$1"
 }
 
+function type_react_new_component {
+    mkdir app/components/$1
+    touch app/components/$1/$1.css
+cat > app/components/$1/$1.tsx <<- TYPESCRIPT 
+/// <reference path="../../../typings/index.d.ts" />
+
+declare function require(name: string);
+
+import * as _ from 'lodash';
+import * as React from 'react';
+import * as ReactDOM from 'react-dom';
+
+require('./$1.css');
+
+interface $1Props { };
+interface $1State { };
+
+export class $1 extends React.Component<$1Props, $1State> {
+  render() {
+    return (
+      <div>$1</div>
+    );
+  }
+};
+TYPESCRIPT
+}
+
+function type_react_destroy_component {
+    mkdir .bk 2>/dev/null
+    mkdir .bk/components 2>/dev/null
+    cp -rf app/components/$1 .bk/components/
+    rm -rf app/components/$1
+}
+
 echo "* NodeJS scripts loaded!"
