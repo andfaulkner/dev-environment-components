@@ -20,4 +20,10 @@ echo '   -- remove substring from a string:      awk "{gsub(/text-to-replace/,\"
 echo ''
 echo "## get number of chars in each line piped in:  awk '{print length($0)}'"
 echo ""
+echo "## bash multiline string: example:"
+echo "cat << EndOfMessage"
+echo "    This is line 1."
+echo "    This is line 2."
+echo "EndOfMessage"
+echo ""
 echo '---------------------------------------------------------------------------------\n'

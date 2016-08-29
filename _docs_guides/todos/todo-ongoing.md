@@ -131,7 +131,7 @@ AUGUST 21st
 *   set up compile step for testing?
 
 tsc --jsx react --allowJs --pretty --moduleResolution node --target es6 --module es6 test/player.spec.tsx --outdir test/testbuild/
-
+*   speed up & down functions
 *   sinon?
 *   write some basic Enzyme unit tests
 *   React pass state to children?
@@ -157,6 +157,8 @@ tsc --jsx react --allowJs --pretty --moduleResolution node --target es6 --module
 *   function bind syntax?
 *   speed property
 *   async/await?
+*   'racetam'
+*   acct
 *   wrap in a higher order component
 *   event queue
 *   define event types
