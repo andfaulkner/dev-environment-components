@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "mocha --colors --es_staging --no-deprecation --recursive",
     "dev": "webpack-dev-server --inline --progress --hot --colors --port 8080"
   },
   "author": "",

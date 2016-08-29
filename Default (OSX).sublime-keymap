@@ -9,5 +9,7 @@
   { "keys": ["ctrl+shift+t,ctrl+shift+g"], "command": "typescript_go_to_definition" },
   { "keys": ["ctrl+shift+t,ctrl+shift+r"], "command": "typescript_rename" },
   { "keys": ["ctrl+shift+t,ctrl+shift+f"], "command": "typescript_find_references" },
-  { "keys": ["ctrl+command+enter"], "command": "toggle_overwrite" }
+  { "keys": ["ctrl+command+enter"], "command": "toggle_overwrite" },
+  { "keys": ["command+shift+t"], "command": "open_recent_file", "args": {"index" : 0} },
+  { "keys": ["ctrl+command+b"], "command": "open_file", "args": {"file": "/Users/andrew/Library/Application Support/Sublime Text 3/Packages/User/Default (OSX).sublime-keymap" }}
 ]

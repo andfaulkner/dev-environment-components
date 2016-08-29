@@ -26,10 +26,10 @@
     ],
     "filesGlob": [
         "./typings/browser.d.ts",
-        "./react/**.tsx",
-        "./react/**.ts"
+        "./app/**.tsx",
+        "./app/**.ts"
     ],
     "files": [
-        "react/app.tsx"
+        "app/app.tsx"
     ]
 }

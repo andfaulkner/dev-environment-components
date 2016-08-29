@@ -123,18 +123,45 @@ AUGUST 21st
 *   ! confirm working postcss autoprefixer
 *   ! confirm working postcss cssnext
 *   ! confirm working postcss precess
-*   5 css "shape" snippets
+*   ! 5 css "shape" snippets
+*   ! pull in Enzyme & mocha & chai
+*   ! turn template project into a real project
+
+
+*   set up compile step for testing?
+
+tsc --jsx react --allowJs --pretty --moduleResolution node --target es6 --module es6 test/player.spec.tsx --outdir test/testbuild/
+
+*   sinon?
+*   write some basic Enzyme unit tests
+*   React pass state to children?
+
 *   linear gradient
 *   box-shadow
 *   Entity-Component-System?
 *   requestAnimationFrame
-*   css navigation bar tutorial 
+*   css navigation bar tutorial
+*   get es6 into project
+*   redux
+    *   wire it in!
+    *   factory for new action
+*   sublime closed tab
 *   TYPESCRIPT::: Object.assign
 
 *   TYPESCRIPT::: module resolution:: Basics
 *   TYPESCRIPT::: module resolution:: Merging Interfaces
 *   TYPESCRIPT::: module resolution:: Merging Namespaces
 *   TYPESCRIPT::: module resolution:: Merging Namespaces w Classes, Functions, Enums
+
+
+
+*   event queue
+*   define event types
+*   define key presses
+*   get key presses to push events onto queue
+*   key resolver: playermove
+*   key resolver: playerspeedchange
+
 
 *   scss into project
 *   select styling method:
