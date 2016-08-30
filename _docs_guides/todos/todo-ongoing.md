@@ -142,17 +142,30 @@ AUGUST 29th
 *   ! hone collision detection
 *   ! turn units into boxes rather than dots.
 
-*   proper JS generator for components
-*   5 more lodash snippets
-*   learn Commander
+*   XXX learn commander [[NO. NodeJS sucks for cli tools]]
+*   XX proper JS generator for components (no.)
+*   proper generator for components (Python? Just Bash?)
+
+*   ! 5 more lodash snippets - again
+
+*   ! DETOUR: GOLANG: install go    << yawn
+*   ! DETOUR: GOLANG: hello world   << yawn
+
+*   ! make it harder to quit sublime (because it's annoyingly easy to do accidentally)
+
+*   REACT:: Animations
+*   FlowType?
+*   No 2 enemies within 1 second of each other
+*   Add creation time to UIEntity?
 *   header: login, play, about items
 *   login
 *   database storage of high scores tied to username
 *   leaderboard
 *   generic collision detection
-*   gain points on killing enemy
-*   multiple enemy types
+*   gain points on killing uiBox
+*   multiple uiBox types
 *   "levels"
+*   portals
 *   user dies on collision
 *   explosion animation
 *   cooldown period (no 2-in-a-row)

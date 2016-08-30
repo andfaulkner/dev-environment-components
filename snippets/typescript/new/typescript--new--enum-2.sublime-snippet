@@ -1,0 +1,15 @@
+<snippet>
+  <description>Create new Typescript enum</description>
+<content><![CDATA[
+enum ${1:Color} {
+  ${2:Props,
+  Eg,
+  Red,
+  Blue,
+  Green,
+  White}
+}
+]]></content>  
+  <tabTrigger>ts_enum</tabTrigger>
+  <scope>source.ts, source.tsx</scope>
+</snippet>

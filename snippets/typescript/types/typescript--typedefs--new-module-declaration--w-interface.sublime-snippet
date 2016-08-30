@@ -9,6 +9,6 @@ declare module "${1:moduleName}" {
   \}}
 }${0}
 ]]></content>  
-  <tabTrigger>type_decl_mod_w_interfaces</tabTrigger>
+  <tabTrigger>ts_decl_mod_w_interfaces</tabTrigger>
   <scope>source.ts, source.tsx</scope>
 </snippet>

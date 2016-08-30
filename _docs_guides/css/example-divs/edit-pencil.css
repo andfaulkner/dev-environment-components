@@ -1,0 +1,33 @@
+.pencil {
+    position: relative;
+    width: 0.35em;
+    height: 0.8em;
+    background: #2C2C2C;
+    transform: rotate(45deg);
+    font-size: 1.4em;
+}
+
+.pencil:before {
+    content: "";
+    position: absolute;
+    top: -0.35em;
+    left: 0;
+    width: 0.35em;
+    height: 0.3em;
+    background: #2C2C2C;
+    border-radius: 0.1em;
+}
+
+.pencil:after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 0;
+    top: 0.85em;
+    left: 0;
+    border: solid 0.2em #2C2C2C;
+    border-bottom-color: transparent;
+    border-left-color: transparent;
+    border-right-color: transparent;
+    border-top: solid 0.45em #2C2C2C;
+}

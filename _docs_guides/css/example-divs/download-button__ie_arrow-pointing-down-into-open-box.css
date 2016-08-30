@@ -1,0 +1,32 @@
+.download {
+  width: 1.500em;
+  height: 0.500em;
+  border: 0.250em solid #2c2c2c;
+  border-top: none;
+  position: absolute;
+  bottom: 0.188em;
+  position: relative;
+  margin-top:1em;
+}
+
+.download:before {
+  content: '';
+  position: absolute;
+  width: 0.438em;
+  height: 0.625em;
+  background: #2c2c2c;
+  top: -0.875em;
+  left: 0.563em;
+}
+
+.download:after {
+  width: 0em;
+  height: 0em;
+  content: '';
+  position: absolute;
+  border-style: solid;
+  border-color: #2c2c2c transparent transparent transparent;
+  border-width: 0.500em;
+  left: 0.250em;
+  top: -0.250em;
+}

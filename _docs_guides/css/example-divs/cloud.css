@@ -1,0 +1,32 @@
+.cloud {
+  background-color: #2C2C2C;
+  background-image: linear-gradient(hsla(0,0%,0%,0), hsla(0,0%,0%,.1));
+  border-radius: 1em;
+  height: 1em;
+  margin-top: 0.5em;
+  position: relative;
+  width: 3em;
+}
+
+.cloud:after,.cloud:before {
+  background-color: #2C2C2C;
+  content: '';
+  border-radius: 100%;
+  position: absolute;
+}
+
+.cloud:after {
+  background-image: linear-gradient(hsla(0,0%,0%,0) 50%, hsla(0,0%,0%,.025));
+  height: 1em;
+  right: .4em;
+  top: -.5em;
+  width: 1em;
+}
+
+.cloud:before {
+  background-image: linear-gradient(hsla(0,0%,0%,0) 50%, hsla(0,0%,0%,.075));
+  height: 1.6em;
+  left: .4em;
+  top: -.75em;
+  width: 1.6em;
+}

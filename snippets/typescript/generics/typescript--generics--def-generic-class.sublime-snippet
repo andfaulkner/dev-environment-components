@@ -6,6 +6,6 @@ class ${1:NameOfClass}<${2:placeholders_for_type_eg T}${3/.+/, /}${3:R}> {
   ${5:someFnKey}: (${6:someParam}: ${3}) => ${2};
 }
 ]]></content>  
-  <tabTrigger>type_gen_class</tabTrigger>
+  <tabTrigger>ts_gen_class</tabTrigger>
   <scope>source.js, source.ts</scope>
 </snippet>

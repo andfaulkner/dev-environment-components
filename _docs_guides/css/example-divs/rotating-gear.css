@@ -1,0 +1,35 @@
+@keyframes gear-rotate {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(180deg); }
+}
+
+.gear-rotate {
+  width: 2em;
+  height: 2em;
+  background: #2C2C2C;
+  position: relative;rotatin
+  border-radius: 1em;
+  animation: 1s gear-rotate steps(10) infinite;
+}
+.gear-rotate::before {
+  width: 2.8em;
+  height: 2.8em;
+  background: linear-gradient(0deg,transparent 39%,#2C2C2C 39%,#2C2C2C 61%, transparent 61%),
+              linear-gradient(60deg,transparent 42%,#2C2C2C 42%,#2C2C2C 58%, transparent 58%),
+              linear-gradient(120deg,transparent 42%,#2C2C2C 42%,#2C2C2C 58%, transparent 58%);
+  position: absolute;
+  content:"";
+  top: -.4em;
+  left: -.4em;
+  border-radius:1.4em;
+}
+.gear-rotate::after {
+  width: 1em;
+  height: 1em;
+  background: #EEEEEE;
+  position: absolute;
+  content:"";
+  top: .5em;
+  left: .5em;
+  border-radius: .5em;
+}

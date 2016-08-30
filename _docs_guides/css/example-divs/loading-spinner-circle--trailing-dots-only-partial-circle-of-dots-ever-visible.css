@@ -1,0 +1,23 @@
+@keyframes ajax-loader-rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.ajax-loader {
+  opacity: .8;
+  display: block;
+  border-radius: 50%;
+  font-size: 29px;
+  width: .25em;
+  height: .25em;
+  box-shadow:
+    0 -.4em       0 0 rgba(0,0,0,1),
+    -.28em -.28em 0 0 rgba(0,0,0,.75),
+    -.4em 0       0 0 rgba(0,0,0,.50),
+    -.28em .28em  0 0 rgba(0,0,0,.25);
+  animation: .85s ajax-loader-rotate steps(8) infinite;
+}

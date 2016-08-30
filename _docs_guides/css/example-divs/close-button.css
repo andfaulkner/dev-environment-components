@@ -1,0 +1,19 @@
+.close {
+  position:relative;
+  width:0.3em;
+  height:1.5em;
+  background: #2C2C2C;
+  transform: rotate(45deg);
+  font-size: 22px;
+}
+
+.close:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width:0.3em;
+  height:1.5em;
+  background: #2C2C2C;
+  transform: rotate(-90deg);
+}

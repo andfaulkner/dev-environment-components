@@ -1,5 +1,5 @@
 <snippet>
-  <description>Only preform given import if certain conditions are met (NodeJS imports)</description>
+  <description>Only perform given import if certain conditions are met (NodeJS imports)</description>
 <content><![CDATA[
 declare function require(moduleName: string): any;
 

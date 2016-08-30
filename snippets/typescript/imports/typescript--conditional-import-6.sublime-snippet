@@ -10,6 +10,6 @@ if (${4:import_if_this_condition_is_met}) {
   ${5:// do things with the import here}
 }
 ]]></content>  
-  <tabTrigger>imp_cond</tabTrigger>
+  <tabTrigger>ts_import_conditional</tabTrigger>
   <scope>source.ts, source.tsx</scope>
 </snippet>

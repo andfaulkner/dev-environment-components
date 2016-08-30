@@ -3,6 +3,6 @@
 <content><![CDATA[
 /// <reference path="${1:../typings/index.d.ts}" />${0}
 ]]></content>  
-  <tabTrigger>ref_path</tabTrigger>
+  <tabTrigger>ts_ref_path</tabTrigger>
   <scope>source.ts, source.tsx</scope>
 </snippet>

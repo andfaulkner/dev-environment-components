@@ -1,10 +1,7 @@
 <snippet>
   <description>description here</description>
 <content><![CDATA[
-/// <reference path="../../../typings/globals/jquery/index.d.ts" />
-/// <reference path="../../../typings/globals/react/index.d.ts" />
-/// <reference path="../../../typings/globals/react-dom/index.d.ts" />
-/// <reference path="../../../typings/globals/lodash/index.d.ts" />
+/// <reference path="../../../typings/index.d.ts" />
 
 declare function require(name: string);
 

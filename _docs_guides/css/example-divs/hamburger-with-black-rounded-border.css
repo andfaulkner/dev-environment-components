@@ -1,0 +1,33 @@
+.hamburger { 
+  position: relative; 
+  font-size: 10px;
+  width: 3.3em; 
+  height: 3.3em; 
+  background: #383b3e; 
+  border-radius: 0.3em;
+}
+
+.hamburger:before { 
+  border-top: 0.3em solid #efefef;
+  content: ""; 
+  position: absolute; 
+  width: 1.9em; 
+  height: 1em; 
+  margin: auto; 
+  border-bottom: 0.3em solid #efefef; 
+  top: 1em; 
+  left: 0.7em;
+  border-radius:0.1em
+}
+
+.hamburger:after { 
+  display: block; 
+  content: ""; 
+  position: absolute; 
+  top: 1.6em; 
+  width: 1.9em; 
+  height: 0.3em; 
+  background: #efefef; 
+  left: 0.7em; 
+  border-radius:0.1em
+}

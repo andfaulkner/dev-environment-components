@@ -1,0 +1,27 @@
+.share {
+  position: relative;
+  width: 1.5em;
+  height: 1.5em;
+  margin: 30% auto;
+  background: transparent;
+  border:solid .5em #2c2c2c;
+  border-right:solid .2em transparent;
+  border-top:solid .2em transparent;
+  transform:rotate(45deg);
+  font-size: 9px;
+}
+
+.share:before {
+  position: absolute;
+  content:"";
+  top:.9em;
+  left:-.9em;
+  width: 1em;
+  height: 1em;
+  margin: 30% auto;
+  background: #2c2c2c;
+  border-radius: 50%;
+  box-shadow:2em -.15em 0 #2c2c2c,.15em -2em 0 #2c2c2c;
+}
+
+

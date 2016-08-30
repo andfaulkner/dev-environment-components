@@ -3,6 +3,6 @@
 <content><![CDATA[
 let ${1:newVar} = ${2:varBeingAssignedTo_newVar} as ${3:ExpectedType};${0}
 ]]></content>  
-  <tabTrigger>type_assert</tabTrigger>
+  <tabTrigger>ts_assert</tabTrigger>
   <scope>source.tsx</scope>
 </snippet>

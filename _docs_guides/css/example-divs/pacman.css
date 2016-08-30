@@ -1,0 +1,21 @@
+.pacman {
+  background-image: radial-gradient(1.75em .75em, circle, transparent 10%, #2C2C2C 10%);
+  border-radius: 3em 3em 0 0;
+  height: 1.5em;
+  margin-top: -1.5em;
+  position: relative;
+  transform: rotate(-45deg);
+  width: 3em;
+}
+
+.pacman:after {
+  background-color: #2C2C2C;
+  border-radius: 0 0 3em 0;
+  content: '';
+  height: 1.5em;
+  left: 0em;
+  position: absolute;
+  top: 1.45em;
+  transform: rotate(90deg);
+  width: 1.5em;
+}

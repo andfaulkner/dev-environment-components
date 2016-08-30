@@ -1,0 +1,68 @@
+http://one-div.com/
+https://webdesignerhut.com/30-css-drawings-made-with-a-single-div/
+http://a.singlediv.com/
+http://projects.lukehaas.me/css-loaders/
+
+Cool examples:
+https://codepen.io/fbrz/pen/iqtlk
+
+Also explains CSS 'triangles' nicely:
+https://www.h3xed.com/web-development/how-to-make-css-play-pause-icons-with-a-single-div
+
+...as does this: https://jsfiddle.net/josedvq/3HG6d/
+
+CSS Generators
+==============
+A must for building your own CSS:
+http://in-web.pl/cssdivbuilder
+
+CSS gradient editor:
+http://www.colorzilla.com/gradient-editor/
+
+Sor tof nifty CSS3 generator:
+http://css3generator.com/
+
+Generate CSS-styled text:
+http://csstxt.com/
+
+CSS path generator:
+http://cssplant.com/clip-path-generator
+
+Animation:
+  http://cssanimate.com/
+
+CSS Menu maker:
+http://cssmenumaker.com/
+
+Triangle generator:
+http://apps.eky.hk/css-triangle-generator/
+
+Sprite generator:
+http://css.spritegen.com/
+
+Div table generator:
+http://divtable.com/generator/
+
+Button generator:
+http://button.csscook.com/
+
+Hexagon generator:
+http://csshexagon.com/
+
+Page layout generator:
+http://csslayoutgenerator.com/
+
+CSS pattern generator (basically draw with CSS):
+http://www.patternify.com/
+
+CSS text -> path generator
+http://csswarp.eleqtriq.com/
+
+CSS filters:
+http://www.cssreflex.com/css-generators/filter/
+
+CSS shapes (clip path gen):
+http://bennettfeely.com/clippy/
+
+Flexbox setup generator:
+http://the-echoplex.net/flexyboxes/ 

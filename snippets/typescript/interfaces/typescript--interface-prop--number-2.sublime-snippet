@@ -1,0 +1,8 @@
+<snippet>
+  <description>Define property of type number inside interface definition.</description>
+<content><![CDATA[
+${1:nameOfProp}: number;${0}
+]]></content>  
+  <tabTrigger>ts_itf_num</tabTrigger>
+  <scope>source.js, source.ts</scope>
+</snippet>
