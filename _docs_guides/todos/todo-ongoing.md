@@ -138,11 +138,29 @@ AUGUST 29th
 *   ! 5 more lodash snippets (5)
 *   ! auto-'let' snippet snippet - sublime
 *   ! 2 more lodash fn snippets
-*   enemies
+*   ! enemies
+*   ! hone collision detection
+*   ! turn units into boxes rather than dots.
+
+*   proper JS generator for components
+*   5 more lodash snippets
+*   learn Commander
+*   header: login, play, about items
+*   login
+*   database storage of high scores tied to username
+*   leaderboard
+*   generic collision detection
+*   gain points on killing enemy
+*   multiple enemy types
+*   "levels"
+*   user dies on collision
+*   explosion animation
 *   cooldown period (no 2-in-a-row)
 *   enemies: prevent stacking
-*   turn units into boxes rather than dots.
+*   enemies: prevent spawing on top of user
+*   top level config function / class / object / something
 *   power meter
+*   boss component
 *   score
 *   level
 *   smooth animations
