@@ -1,0 +1,11 @@
+<snippet>
+  <description>Write to a file replacing it if it exists. Do it asynchronously.</description>
+<content><![CDATA[
+fs.writeFile(${1:'output.ext', ${2:'text to write'}, 'utf8', (err) => {
+  if (err) throw err;
+  ${0:console.log('do things after writeFile has succeeded here');}
+});
+]]></content>  
+  <tabTrigger>fs_write</tabTrigger>
+  <scope>source.js, source.ts, source.jsx, source.tsx</scope>
+</snippet>

@@ -107,6 +107,11 @@ _.mixin({
 	*		High-speed function to return only the unique items from an array.
 	*		For use with extremely large arrays (e.g. translations).
 	*		Ugly but highly optimized.
+
+677 matches across 255 files
+
+
+Searching 32122 files for "speed.*1"
 	*/
 	uniqueFast: function uniqueFast(arr) {
     var o = {}, i, l = arr.length, r = [];

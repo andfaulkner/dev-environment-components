@@ -19,7 +19,7 @@ function showStats(stats: AthleteStats) {
 
 showStats({ matchesWon: 10, matchesLost: 20, yearsCompeting: 43 });
 
-// class BullFighter {
+// class BullCrawler {
 //   public fightsWon: number = 0;
 //   public fightsLost: number = 0;
 //   public yearsFighting: number = 0;
@@ -29,7 +29,7 @@ showStats({ matchesWon: 10, matchesLost: 20, yearsCompeting: 43 });
 //   }
 // }
 
-// let bullFighter = {
+// let bullCrawler = {
 //   name: buildName('Rodruigo', 'Alejandro', 'Gonzales', 'Garcia', 'Iglacias', 'De la Vega', 'Marquez'),
 //   yearsFighting: 10,
 //   fightsWon: 342,

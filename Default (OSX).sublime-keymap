@@ -14,5 +14,14 @@
   { "keys": ["ctrl+command+b"], "command": "open_file", "args": {"file": "/Users/andrew/Library/Application Support/Sublime Text 3/Packages/User/Default (OSX).sublime-keymap" }},
   { "keys": ["super+alt+i"], "command": "import_js", "args": { "command": "fix" } },
   { "keys": ["super+alt+j"], "command": "import_js", "args": { "command": "word" } },
-  { "keys": ["super+alt+n"], "command": "import_js", "args": { "command": "goto" } }
+  { "keys": ["super+alt+n"], "command": "import_js", "args": { "command": "goto" } },
+  {
+    "keys": ["ctrl+command+r"],
+    "command": "run_macro_file",
+    "args": {
+      "file": "res://Packages/LocalVariable/macro/rename_variable.sublime-macro"
+    }
+  },
+  { "keys": ["command+shift+z"], "command": "redo" },
+  { "keys": ["command+k,command+b"], "command": "toggle_side_bar"},
 ]

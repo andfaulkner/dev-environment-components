@@ -1,0 +1,12 @@
+<snippet>
+  <description>Read a file in, asynchronously</description>
+<content><![CDATA[
+fs.readFile(path.join(__dirname, ${1:'file_to_read_in_relative_to_cur_path'}), (err, data) => {
+  if (err) throw err;
+  let dataString = data.toString();
+  ${0:console.log(dataString);}
+});
+]]></content>  
+  <tabTrigger>fs_read</tabTrigger>
+  <scope>source.js, source.ts, source.jsx, source.tsx</scope>
+</snippet>

@@ -6,6 +6,6 @@ app.get('${1:route_eg_/home}', (req, res) => {
 	res.send('response here');
 });
 ]]></content>
-	<tabTrigger>expr_route</tabTrigger>
+	<tabTrigger>exp_route</tabTrigger>
 	<scope>source.js, source.ts, source.jsx, source.tsx</scope>
 </snippet>

@@ -1,0 +1,8 @@
+<snippet>
+  <description>Read a file in, synchronously</description>
+<content><![CDATA[
+fs.readFileSync(path.join(__dirname, ${1:'file_to_read_in_relative_to_current_path'})).toString());${0}
+]]></content>  
+  <tabTrigger>fs_readsync</tabTrigger>
+  <scope>source.js, source.ts, source.jsx, source.tsx</scope>
+</snippet>

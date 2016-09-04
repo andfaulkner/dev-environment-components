@@ -6,6 +6,6 @@
 		next();
 	});
 ]]></content>
-	<tabTrigger>expr_mid</tabTrigger>
+	<tabTrigger>exp_mid</tabTrigger>
 	<scope>source.js, source.ts, source.jsx, source.tsx</scope>
 </snippet>

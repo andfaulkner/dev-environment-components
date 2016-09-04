@@ -50,6 +50,12 @@ cat << 'EOF' >> app/assets/stylesheets/home.scss
 EOF
 
 
+4901 matches across 1459 files
+
+
+
+Searching 32189 files for "import.*\.tsx" (regex)
+
 ######## application.html.erb groundwork - give it new content ########
 rm app/views/layouts/application.html.erb
 cat << 'EOF' >> app/views/layouts/application.html.erb

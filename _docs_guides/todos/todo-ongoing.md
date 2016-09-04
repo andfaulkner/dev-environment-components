@@ -144,26 +144,167 @@ AUGUST 29th
 
 *   XXX learn commander [[NO. NodeJS sucks for cli tools]]
 *   XX proper JS generator for components (no.)
-*   proper generator for components (Python? Just Bash?)
+*   X proper generator for components (Python? Just Bash?)
 
 *   ! 5 more lodash snippets - again
 
 *   ! DETOUR: GOLANG: install go    << yawn
 *   ! DETOUR: GOLANG: hello world   << yawn
 
+*   ! score
+*   ! basic background (sky?)
+*   ! basic header
 *   ! make it harder to quit sublime (because it's annoyingly easy to do accidentally)
+*   !X FlowType? (checked, I see no benefit over Typescript)
+*   ! move score to decent location
+*   ! generic collision detection
+*   ! gain points on killing crawler enemy
+*   ! have two entity types
+*   ! actual enemy
+
+*   ! test animations: score
+*   ! take phantomJS out of Karma...YAGNI.
+*   ! get Mocha running standalone without Karma.
+
+*   2 more node snippets
+*   Enzyme-mocha
+*   get tsc to recursively render the test directory
+*   'find' manual addition (after that fucking nightmare) 
+
+*   
+
+
+
+
+
+
+
+
+
+*   add React-Router
+*   add React-Router-Redux
+
+*   k-nearest neighbour
+
+*   reselect: https://github.com/reactjs/reselect
+*   prioritize your insane to-do list
+*   when would I need redux?
+
+*   more immutableJS: https://facebook.github.io/immutable-js/
+
+*   React shallow rendering: https://facebook.github.io/react/docs/test-utils.html#shallow-rendering
+
+*   build special webpack file for test running
+
+
+
+
+
+
+
+
+
+*   Do this tutorial to ensure you missed no core React 
+    concepts: http://reactfordesigners.com/labs/reactjs-introduction-for-people-who-know-just-enough-jquery-to-get-by/
+    *   then this if you have time (ha!): https://btholt.github.io/complete-intro-to-react/
+    *   ...but learn React-Router from that, it's good.
+*   auto-rerun tests?
+
+*   get enemy to move (just have it 'fidget')
+
+*   total experience? (after login)
+*   fix height responsiveness issue: make it create a scrollbar
+    if screen too small for the arena + header, rather than
+    hiding part of the arena under the header & top of screen.
+
+*   smooth animations
+*   make enemies move
+*   add empty header
+*   header: login, play, about items
+
+*   eliminate duplication in collision handling
+*   boxes block movement
+*   get width into children
+*   entity location-based collision detection (vs just bullets)
+*   
 
 *   REACT:: Animations
-*   FlowType?
+*   Overlay giving instructions
+*   REACT:: React-Motion
 *   No 2 enemies within 1 second of each other
 *   Add creation time to UIEntity?
-*   header: login, play, about items
 *   login
+*   powerups
+*   enemies come from 'portals'?
+*   rename fighters to crawlers?
+*   slowly moving clouds in background?
+*   sounds?
+        (Web Audio API?)
+*   highest score show on everyone's header including name?
+
+*   allow anonymous play AND regular login?
+*   consequences for having crawlers against the wall?
+*   multidirecitonal crawlers?
+*   fidgety boxes???
+*   enemy that shoots?
+*   enemy that creates other enemies?
+*   something you can 'bounce' off of?
+
+*   limited ammo?
+
+*   powerups?
+    *   such as...
+        *   speed boost?
+        *   better gun?
+        *   more ammo? (if I bring in limited ammo)
+    *   acquired by...?
+        *   destroying certain enemies?
+        *   defeating bosses?
+        *   grabbing 'chests'?
+        *   having them appear at random onscreen?
+        *   as rewards for passing certain scores?
+        *   
+
+*   exploration?
+    *   going to edge of screen loads up another screen?
+    *   blacked out blocks you can't pass through?
+    *   items you have to collect in different areas?
+    *   unlocking areas based on score?
+    *   more points for enemies in different areas?
+    *   save points?!?
+        *   ...or autosaving on changing screen?
+    *   permadeath?
+        *   permadeath optional?
+            *   worth more points if mode is on?
+        *   required, but with 'bonuses' that carry over
+            between deaths (i.e. available when you restart?)
+            *   ...but without
+        *
+    *   level editor?!?!?!?!!?
+
+*   achievements?
+    *   basic 'yay for showing up!' achievements?
+    *   score milestones?
+    *   number of kills of various types of enemy?
+    *   number of matches?
+    *   amount of time played?
+    *   various random easter egg-ish things?
+
+*   token economy shop?
+    *   tokens (aka "money" in the game world) acquireable in 
+        game arena. provided by...?
+        *   getting achievements?
+        *   killing certain enemies?
+        *   directly acquireable (i.e. literal 'tokens' - i.e. 
+            gold coins - scattered about?)
+        *   tied directly to points?
+            *   1 coin given immediately for every X number of 
+                points collected?
+            *   ...or given all at once on death???
+
 *   database storage of high scores tied to username
 *   leaderboard
-*   generic collision detection
-*   gain points on killing uiBox
-*   multiple uiBox types
+
 *   "levels"
 *   portals
 *   user dies on collision
@@ -174,7 +315,6 @@ AUGUST 29th
 *   top level config function / class / object / something
 *   power meter
 *   boss component
-*   score
 *   level
 *   smooth animations
 *   current level?
