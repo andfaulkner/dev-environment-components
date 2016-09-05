@@ -1,0 +1,8 @@
+<snippet>
+  <description>Create a string that only appears if another snippet variable isn't blank</description>
+<content><![CDATA[
+\$\{${1:snippet_var_number_eg__1}/.+/${2:content_to_show_here_if_other_var_isnt_blank}/\}
+]]></content>
+  <tabTrigger>ue</tabTrigger>
+  <scope>text.xml</scope>
+</snippet>

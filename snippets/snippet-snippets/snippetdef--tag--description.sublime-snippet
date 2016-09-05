@@ -1,0 +1,8 @@
+<snippet>
+  <description>Description tag for a snippet</description>
+<content><![CDATA[
+<description>${1:description of snippet}</description>${0}
+]]></content>
+  <tabTrigger>desc</tabTrigger>
+  <scope>text.xml</scope>
+</snippet>

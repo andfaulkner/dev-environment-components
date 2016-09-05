@@ -1,31 +1,37 @@
 [
   { "keys": ["ctrl+alt+k"], "command": "clear_console" },
+
   { "keys": ["alt+r"], "command": "side_bar_rename" },
   { "keys": ["alt+d"], "command": "side_bar_duplicate" },
   { "keys": ["alt+f"], "command": "side_bar_new_directory" },
   { "keys": ["alt+n"], "command": "side_bar_new_file" },
+  { "keys": ["alt+shift+d"], "command": "side_bar_delete" },
   { "keys": ["ctrl+alt+x"], "command": "side_bar_cut" },
   { "keys": ["ctrl+alt+v"], "command": "side_bar_paste" },
-  { "keys": ["ctrl+shift+t,ctrl+shift+g"], "command": "typescript_go_to_definition" },
-  { "keys": ["ctrl+shift+t,ctrl+shift+r"], "command": "typescript_rename" },
-  { "keys": ["ctrl+shift+t,ctrl+shift+f"], "command": "typescript_find_references" },
-  { "keys": ["ctrl+command+enter"], "command": "toggle_overwrite" },
   { "keys": ["command+shift+t"], "command": "open_recent_file", "args": {"index" : 0} },
-  { "keys": ["ctrl+command+shift+b"],
+
+  { "DESCRIPTION": "CREATE NEW SNIPPET", "keys": ["ctrl+shift+alt+s"],
+    "command": "side_bar_new_file", 
+    "args": {"paths": ["/Users/andrew/Library/Application Support/Sublime Text 3/Packages/User/snippets/snippets"]}
+  },
+  { "DESCRIPTION": "CREATE NEW JS SNIPPET", "keys": ["ctrl+shift+alt+j"],
+    "command": "side_bar_new_file",
+    "args": {"paths": ["/Users/andrew/Library/Application Support/Sublime Text 3/Packages/User/snippets/snippets/__lang/js"]}
+  },
+
+  { "DESCRIPTION": "OPEN SUBLIME HOTKEYS FILE", "keys": ["ctrl+command+shift+b"],
     "command": "open_file",
     "args": {
       "file": "/Users/andrew/Library/Application Support/Sublime Text 3/Packages/User/Default (OSX).sublime-keymap"
     }
   },
-  { "keys": ["ctrl+command+shift+m"],
+  { "DESCRIPTION": "OPEN SUBLME CUSTOM MANUAL / CHEAT NOTES", "keys": ["ctrl+command+shift+m"],
     "command": "open_file",
     "args": {
       "file": "/Users/andrew/Library/Application Support/Sublime Text 3/Packages/User/snippets/custom-manuals/man__sublime"
     }
   },
-  { "keys": ["super+alt+i"], "command": "import_js", "args": { "command": "fix" } },
-  { "keys": ["super+alt+j"], "command": "import_js", "args": { "command": "word" } },
-  { "keys": ["super+alt+n"], "command": "import_js", "args": { "command": "goto" } },
+
   {
     "keys": ["ctrl+command+r"],
     "command": "run_macro_file",
@@ -33,11 +39,15 @@
       "file": "res://Packages/LocalVariable/macro/rename_variable.sublime-macro"
     }
   },
+
+  { "keys": ["ctrl+shift+t,ctrl+shift+g"], "command": "typescript_go_to_definition" },
+  { "keys": ["ctrl+shift+t,ctrl+shift+r"], "command": "typescript_rename" },
+  { "keys": ["ctrl+shift+t,ctrl+shift+f"], "command": "typescript_find_references" },
+
   { "keys": ["command+shift+z"], "command": "redo" },
-  { "keys": ["command+k,command+b"], "command": "toggle_side_bar" },
   { "keys": ["shift+ctrl+alt+p"], "command": "copy_path" },
-  { "keys": ["alt+shift+d"], "command": "side_bar_delete" },
+  { "keys": ["ctrl+command+enter"], "command": "toggle_overwrite" },
   { "keys": ["ctrl+shift+alt+a"], "command": "toggle_setting", "args": {"setting": "word_wrap"} },
-  { "keys": ["ctrl+shift+alt+s"], "command": "side_bar_new_file", "args": {"paths": ["/Users/andrew/Library/Application Support/Sublime Text 3/Packages/User/snippets/snippets"]} },
-  { "keys": ["ctrl+shift+alt+j"], "command": "side_bar_new_file", "args": {"paths": ["/Users/andrew/Library/Application Support/Sublime Text 3/Packages/User/snippets/snippets/js"]} },
+
+  { "keys": ["command+k,command+b"], "command": "toggle_side_bar" },
 ]

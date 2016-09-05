@@ -1,0 +1,8 @@
+<snippet>
+    <description>Common var self = this binding pattern</description>
+    <content><![CDATA[
+var self = this;${0}
+]]></content>
+    <tabTrigger>vst</tabTrigger>
+    <scope>source.js, source.ts, source.jsx, source.tsx</scope>
+</snippet>

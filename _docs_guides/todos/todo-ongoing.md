@@ -171,7 +171,10 @@ AUGUST 29th
 *   get tsc to recursively render the test directory
 *   ! 'find' manual addition (after that fucking nightmare) 
 *   ! redux business logic working
-
+*   normalizr???  WHY!?!?!??
+    *   associated 'types' file next to component
+    *   suppress warning snippet
+*   remove unwanted types
 
 *   react-router-redux
 *   redux selector (reselect?)
