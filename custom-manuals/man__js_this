@@ -1,0 +1,21 @@
+#!/usr/bin/env sh
+
+echo ''
+echo '---------------------------------------------------------------------------------'
+echo '** THAT FUCKING JAVASCRIPT "this" KEYWORD (ThisK) **'
+echo '---------------------------------------------------------------------------------'
+echo '- "this" (ThisK) in the global scope'
+echo '  -   "this" (ThisK) is window or undefined'
+echo ''
+echo "## Standalone function: this is same as global value e.g."
+echo '      function ok() { console.log(this); };'
+echo '      ok(); // => undefined'
+echo ''
+echo '## Function on an object, called with the name of the object explicitly:'
+echo "      var myFunc = {"
+echo "          boo: 'boogaboo',"
+echo "          ok: function() { console.log(this.boo); }"
+echo "      };"
+echo "      myFunc.ok(); // => boogaboo"
+echo ""
+echo '---------------------------------------------------------------------------------\n'

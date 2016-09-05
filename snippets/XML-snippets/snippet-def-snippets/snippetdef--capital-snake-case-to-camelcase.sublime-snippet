@@ -1,0 +1,8 @@
+<snippet>
+  <description>Convert variable value in CAPITAL_SNAKE_CASE to camelCase.</description>
+<content><![CDATA[
+\${${1:1}/([A-Z]*)(_)([A-Z])([A-Z]*)/\L\1\u\3\L\4/ig}
+]]></content>
+  <tabTrigger>snip_repl_capsnake_to_camelcase</tabTrigger>
+  <scope>text.xml</scope>
+</snippet>

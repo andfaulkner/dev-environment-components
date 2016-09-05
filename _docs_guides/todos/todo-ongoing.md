@@ -166,16 +166,39 @@ AUGUST 29th
 *   ! take phantomJS out of Karma...YAGNI.
 *   ! get Mocha running standalone without Karma.
 
-*   2 more node snippets
-*   Enzyme-mocha
+*   ! 2 more node snippets
+*   ! Enzyme-mocha
 *   get tsc to recursively render the test directory
-*   'find' manual addition (after that fucking nightmare) 
+*   ! 'find' manual addition (after that fucking nightmare) 
+*   ! redux business logic working
 
+
+*   react-router-redux
+*   redux selector (reselect?)
+*   pull business logic out of  AppGUI
+*   look into this: https://github.com/acdlite/redux-actions
+*   logging
+
+
+
+*   matchDispatchToProps snippet
+*   matchStateToProps snippet
+
+*   make actions object
+*   make actionCreators object
 *   
 
+* ! action:             TEST_SWITCH_STATE
+* ! actionCreator:      testSwitchState_AC
+* ! reducer:            gameApp --> case TEST_SWITCH_STATE
+*  ! 1X store (only needs doing once)
+* connect
+* dispatch
+* test
 
-
-
+#new part of state
+*   action
+*   actionCreator
 
 
 

@@ -1,0 +1,11 @@
+<snippet>
+  <description>Define a new mixin intended for inclusion within a style</description>
+<content><![CDATA[
+@define-mixin ${1:name_of_mixin} ${2:\$vars: default, \$in, \$mixin: default_two} {
+    ${0:width: $vars;
+    height: $in;}
+}
+]]></content>  
+  <tabTrigger>post_mixin</tabTrigger>
+  <scope>source.css</scope>
+</snippet>

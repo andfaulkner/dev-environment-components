@@ -1,0 +1,11 @@
+<snippet>
+  <description>Include new path in project (in projname.sublime-project)</description>
+<content><![CDATA[
+{
+  "path": "${1:/Users/andrew/Library/Application Support/Sublime Text 3/Packages/User/snippets OR . OR etc}.",
+  "folder_exclude_patterns": [${2:"node_modules", "temp"}]
+},${0}
+]]></content>  
+  <tabTrigger>subl_new_path</tabTrigger>
+  <scope>source.json</scope>
+</snippet>

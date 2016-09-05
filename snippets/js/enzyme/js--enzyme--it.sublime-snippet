@@ -1,0 +1,10 @@
+<snippet>
+  <description>Describe a new React tag</description>
+<content><![CDATA[
+it('${1:should be an assertion}', () => {
+  ${4:const wrapper = shallow(<${2:ReactTag}${3/.+/ /}${3:style={"some-style"\} score={2\}}/>);}${4/.+/\n/}${0}
+});
+]]></content>  
+  <tabTrigger>enz_it</tabTrigger>
+  <scope>source.js, source.ts, source.jsx, source.tsx</scope>
+</snippet>

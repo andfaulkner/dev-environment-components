@@ -1,0 +1,8 @@
+<snippet>
+  <description>New sublime hotkey</description>
+<content><![CDATA[
+{ "keys": ["${1:ctrl+shift+alt+a}"], "command": "${2:toggle_setting}${3/.+/",/} ${3/.+/"args": {/}${3:"setting": "word_wrap"}} },${0}
+]]></content>  
+  <tabTrigger>subl_new_hotkey</tabTrigger>
+  <scope>source.json</scope>
+</snippet>

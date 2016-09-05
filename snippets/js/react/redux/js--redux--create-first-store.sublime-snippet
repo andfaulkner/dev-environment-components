@@ -4,6 +4,6 @@
 import { createStore } from 'redux';
 const ${1:store} = createStore(${2:reducers});
 ]]></content>
-	<tabTrigger>rxnewstore</tabTrigger>
+	<tabTrigger>rdx_newstore</tabTrigger>
 	<scope>source.js, source.ts, source.jsx, source.tsx</scope>
 </snippet>

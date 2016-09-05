@@ -1,0 +1,8 @@
+<snippet>
+  <description>Use a mixin intended for inclusion within a style</description>
+<content><![CDATA[
+@mixin ${1:name_of_mixin} ${2:value-of-parameter};${0}
+]]></content>  
+  <tabTrigger>post_usemixin</tabTrigger>
+  <scope>source.css</scope>
+</snippet>

@@ -1,0 +1,8 @@
+<snippet>
+  <description>Current file, minus the path and extension</description>
+<content><![CDATA[
+\${${1:1}:\${TM_FILENAME/(.+)\..+|.*/\$1/:name}}
+]]></content>
+  <tabTrigger>snip_filename_noextpath</tabTrigger>
+  <scope>text.xml</scope>
+</snippet>

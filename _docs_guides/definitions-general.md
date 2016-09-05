@@ -42,6 +42,13 @@
                       CREATE TABLE STUDENT (STUDENT_ID NUMBER (10) NOT NULL, 
                                             ..., 
                                             CREATED_DATE DATE DEFAULT SYSDATE)
+
+@### Container Component (React + Redux) ###@
+*   a container component is just a React component that uses store.subscribe() to read a part of
+    the redux state tree, and supply props to the presentational component it renders.
+*   can be generated with Redux's connect() function, which also benefits performance
+*   see http://redux.js.org/docs/basics/UsageWithReact.html
+
 #######################################################################################
 
 @### Database key ###@
