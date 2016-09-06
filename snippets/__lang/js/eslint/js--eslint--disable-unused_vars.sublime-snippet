@@ -1,0 +1,8 @@
+<snippet>
+  <description>Disable no-unused vars rule.</description>
+<content><![CDATA[
+ /* eslint-enable no-unused-vars */${0}
+]]></content>  
+  <tabTrigger>eslint_unused_vars</tabTrigger>
+  <scope>source.js, source.ts, source.jsx, source.tsx</scope>
+</snippet>

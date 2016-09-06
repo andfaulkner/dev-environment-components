@@ -1,12 +1,23 @@
 DEFINITIONS
 ===========
-##Container Component (React + Redux)
-*   a container component is just a React component that uses store.subscribe() to read a part of
-    the redux state tree, and supply props to the presentational component it renders.
-*   can be generated with Redux's connect() function, which also benefits performance
-*   see http://redux.js.org/docs/basics/UsageWithReact.html
-*   Create using a special mapStateToProps function.
+##Container Component aka "Smart Component" (React + Redux)
+*   In the context of Redux, container components:
+    *   a container component is just a React component that uses store.subscribe() to read a part of
+        the redux state tree, and supply props to the presentational component it renders.
+    *   can be generated with Redux's connect() function, which also benefits performance
+    *   see http://redux.js.org/docs/basics/UsageWithReact.html
+    *   Create special mapStateToProps and mapDispatchToProps functions, pass them into connect, then
+        run the resultant function on your presentational component (class) to generate it.
+*   In general, container components:
+    *   describe how things work
+    *   Provide no DOM markup or styles
+    *   provide app data & fetch data
+    *   call Flux, redux, etc. actions
+*   Name them all *Container (a common convention, but a useful one)
 
+
+##Presentational Component (React + Redux)
+*   
 
 ##Store enhancer
 *   higher-order function that composes a store creator to return a new, enhanced store creator

@@ -22,3 +22,61 @@
       [keyToTheCity('enabled')]: true // will produce a 'key named enabled' property on the object 
     };
 
+// 5.  Prefer classes over manipulating prototypes directly. They are easier to reason about
+
+    class Queue {
+      addToFront() {
+        // do things
+      }
+    }
+
+// 6.  Use extends for inheritance:
+
+    class PeekableQueue extends Queue {
+      peek() {
+        return this._queue[0];
+      }
+    }
+
+// 7.  Have methods return 'this' to help with chaining
+
+    class Jedi {
+      jump() {
+        this.jumping = true;
+        return this;
+      }
+
+      setHeight(height) {
+        this.height = height;
+        return this;
+      }
+    }
+
+// 8. Chain methods like this:
+
+    const luke = new Jedi();
+
+    luke.jump()
+      .setHeight(20);   // notice the 2 spaces at the beginning
+
+// 9. Custom toString() methods are OK - just be careful as fuck.
+
+    class SelfDescribingJedi extends Jedi {
+      toString() {
+        return `Jedi - ${this.getName()}`;
+      }
+    }
+
+// 10. No empty constructors
+
+    // None of this:   constructor() {}
+
+// 11. Avoid wildcard imports
+
+    // bad
+    // import * as OmNomNomBear from './OmNomNomBear';
+
+    // good
+    // import OmNomNomBear from './OmNomNomBear';
+
+// 12. Do not use mutable exports! No exporting var or let. It's super dangerous.

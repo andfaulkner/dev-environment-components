@@ -9,6 +9,7 @@
   { "keys": ["ctrl+alt+x"], "command": "side_bar_cut" },
   { "keys": ["ctrl+alt+v"], "command": "side_bar_paste" },
   { "keys": ["command+shift+t"], "command": "open_recent_file", "args": {"index" : 0} },
+  { "keys": ["command+s"], "command": "save" },
 
   { "DESCRIPTION": "CREATE NEW SNIPPET", "keys": ["ctrl+shift+alt+s"],
     "command": "side_bar_new_file", 
@@ -16,7 +17,7 @@
   },
   { "DESCRIPTION": "CREATE NEW JS SNIPPET", "keys": ["ctrl+shift+alt+j"],
     "command": "side_bar_new_file",
-    "args": {"paths": ["/Users/andrew/Library/Application Support/Sublime Text 3/Packages/User/snippets/snippets/__lang/js"]}
+    "args": {"paths": ["/Users/andrew/Library/Application Support/Sublime Text 3/Packages/User/snippets/snippets/__langs/js"]}
   },
 
   { "DESCRIPTION": "OPEN SUBLIME HOTKEYS FILE", "keys": ["ctrl+command+shift+b"],
@@ -49,5 +50,5 @@
   { "keys": ["ctrl+command+enter"], "command": "toggle_overwrite" },
   { "keys": ["ctrl+shift+alt+a"], "command": "toggle_setting", "args": {"setting": "word_wrap"} },
 
-  { "keys": ["command+k,command+b"], "command": "toggle_side_bar" },
+  { "keys": ["command+k,command+b"], "command": "toggle_side_bar" }
 ]

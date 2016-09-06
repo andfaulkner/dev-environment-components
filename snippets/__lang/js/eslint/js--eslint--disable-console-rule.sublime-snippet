@@ -1,0 +1,8 @@
+<snippet>
+  <description>Disable ESLint console rule until /* eslint-enable no-console */</description>
+<content><![CDATA[
+/* eslint-disable no-console */${0}
+]]></content>  
+  <tabTrigger>eslint_console</tabTrigger>
+  <scope>source.js, source.ts, source.jsx, source.tsx</scope>
+</snippet>

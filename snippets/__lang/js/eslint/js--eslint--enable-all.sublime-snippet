@@ -1,0 +1,8 @@
+<snippet>
+  <description>Enable all ESLint rules after all disabled by /* eslint-disabled */</description>
+<content><![CDATA[
+/* eslint-enable */${0}
+]]></content>  
+  <tabTrigger>eslint_enable_all</tabTrigger>
+  <scope>source.js, source.ts, source.jsx, source.tsx</scope>
+</snippet>

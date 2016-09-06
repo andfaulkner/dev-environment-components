@@ -168,19 +168,30 @@ AUGUST 29th
 
 *   ! 2 more node snippets
 *   ! Enzyme-mocha
-*   get tsc to recursively render the test directory
+*   ! get tsc to recursively render the test directory
 *   ! 'find' manual addition (after that fucking nightmare) 
 *   ! redux business logic working
+
+*   smart (container) vs dumb (presentational) components
+    *   understand the concepts
+    *   write definitions
+    *   make a snippet?
+    *   make one of each
+*   react-router-redux
+*   2nd reducer
+
 *   normalizr???  WHY!?!?!??
     *   associated 'types' file next to component
     *   suppress warning snippet
 *   remove unwanted types
 
-*   react-router-redux
 *   redux selector (reselect?)
 *   pull business logic out of  AppGUI
 *   look into this: https://github.com/acdlite/redux-actions
 *   logging
+
+*  reconsider interface prefixing (with I) when you have a chance
+
 
 
 
