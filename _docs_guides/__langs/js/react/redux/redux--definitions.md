@@ -15,9 +15,12 @@ DEFINITIONS
     *   call Flux, redux, etc. actions
 *   Name them all *Container (a common convention, but a useful one)
 
-
-##Presentational Component (React + Redux)
-*   
+##Presentational Component aka "Dumb Component" (React + Redux)
+*   describe how things look
+*   NO APP DEPENDENCIES <<<<< ESSENTIAL
+*   receive only props, providing data and callbacks
+*   almost never have state...and when they do, it's only UI state
+*   name: anything that's a UI noun.
 
 ##Store enhancer
 *   higher-order function that composes a store creator to return a new, enhanced store creator

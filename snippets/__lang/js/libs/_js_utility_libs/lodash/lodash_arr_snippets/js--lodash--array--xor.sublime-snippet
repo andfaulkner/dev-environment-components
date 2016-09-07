@@ -1,8 +1,0 @@
-<snippet>
-  <description>Ret arr of vals listed in ONLY 1 of the given arrs. eg [2, 1] + [2, 3] => [1, 3]</description>
-<content><![CDATA[
-${1/.+/let /}${1:outputArray}${1/.+/ = /}_.xor(${2:['array', 1]}, ${3:['array', 'two']});${0}
-]]></content>  
-  <tabTrigger>_arr_xor</tabTrigger>
-  <scope>source.js, source.ts, source.jsx, source.tsx</scope>
-</snippet>

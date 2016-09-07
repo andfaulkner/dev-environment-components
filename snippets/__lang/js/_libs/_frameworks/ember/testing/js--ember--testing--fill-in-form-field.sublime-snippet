@@ -1,0 +1,8 @@
+<snippet>
+  <description>Simulate putting specific val in form matching selector. Changes there after</description>
+<content><![CDATA[
+fillIn('${1:selector_for_input__eg__.list-filter input}', '${2:text to fill in}');${0}
+]]></content>  
+  <tabTrigger>emb_test_fillfield</tabTrigger>
+  <scope>source.js, source.ts, source.jsx, source.tsx</scope>
+</snippet>

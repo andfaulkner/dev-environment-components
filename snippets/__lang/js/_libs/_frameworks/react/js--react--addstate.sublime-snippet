@@ -1,0 +1,17 @@
+<snippet>
+    <content><![CDATA[
+getInitialState: function(){
+	return {
+		${1:stateType}: ${2:currentStateVal}
+	};
+},
+// runs when element with onClick={this.${3:eventEg_handleClick}} prop is clicked
+${3:eventEg_handleClick}: function(event) {
+	this.setState({${1:stateType}: this.state.${1:stateType}});
+},
+]]></content>
+    <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+    <tabTrigger>rct_gis_wupdate</tabTrigger>
+    <!-- Optional: Set a scope to limit where the snippet will trigger -->
+    <scope>source.js, source.ts, source.jsx, source.tsx</scope>
+</snippet>

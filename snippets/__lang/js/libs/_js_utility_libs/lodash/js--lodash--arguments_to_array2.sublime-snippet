@@ -1,7 +1,0 @@
-<snippet>
-    <content><![CDATA[
-var ${1:nameOfVarWithArgumentsAsRealArray} = _.toArray(arguments);
-]]></content>
-    <tabTrigger>arguments_to_array</tabTrigger>
-    <scope>source.js, source.ts, source.jsx, source.tsx</scope>
-</snippet>

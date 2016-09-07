@@ -1,8 +1,0 @@
-<snippet>
-  <description>Host items (recursive) in dir @ given fs path. Host on given route.</description>
-<content><![CDATA[
-app.use('${1:/uri_path_contents_of_hosted_dir_available_at}', express.static(path.join(__dirname, ${2:'/hosted/dir/path'})));${0}
-]]></content>  
-  <tabTrigger>exp_host_dir__path</tabTrigger>
-  <scope>source.js, source.ts, source.jsx, source.tsx</scope>
-</snippet>

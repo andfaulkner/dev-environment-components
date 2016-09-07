@@ -1,0 +1,12 @@
+<snippet>
+  <description>Make actions prop on controller or component. Binds hbs actions to code.</description>
+<content><![CDATA[
+actions: {
+  ${1:nameOfAction}(${2:param}) {
+    ${0}
+  }
+},
+]]></content>  
+  <tabTrigger>emb_co_actions</tabTrigger>
+  <scope>source.js, source.ts, source.jsx, source.tsx</scope>
+</snippet>

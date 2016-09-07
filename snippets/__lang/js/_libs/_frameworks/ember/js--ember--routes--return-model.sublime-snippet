@@ -1,0 +1,10 @@
+<snippet>
+  <description>Pass data from current Route to linked view, in Ember.Route obj</description>
+<content><![CDATA[
+  model() {
+    ${1:return ${0:data}};
+  }
+]]></content>  
+  <tabTrigger>emb_route_retmodel</tabTrigger>
+  <scope>source.js, source.ts, source.jsx, source.tsx</scope>
+</snippet>

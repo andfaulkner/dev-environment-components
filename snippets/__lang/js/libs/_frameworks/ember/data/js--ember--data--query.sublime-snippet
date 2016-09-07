@@ -1,8 +1,0 @@
-<snippet>
-  <description>Return data from a model where given col matches given val</description>
-<content><![CDATA[
-this.get('store').query('${1:name_of_model__eg__person}', { ${2:column}: ${3:value} });${0}
-]]></content>  
-  <tabTrigger>emb_data_ret_model_filtered</tabTrigger>
-  <scope>source.js, source.ts, source.jsx, source.tsx</scope>
-</snippet>

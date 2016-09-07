@@ -1,8 +1,0 @@
-<snippet>
-    <description>Get random item from array.</description>
-    <content><![CDATA[
-${1/.+/let /}${1:randomValFromArr}${1/.+/ = /}_.sample(${2:arrayToGetRandomValFrom});${0}
-]]></content>
-    <tabTrigger>_arr_randomitem</tabTrigger>
-    <scope>source.js, source.ts, source.jsx, source.tsx</scope>
-</snippet>

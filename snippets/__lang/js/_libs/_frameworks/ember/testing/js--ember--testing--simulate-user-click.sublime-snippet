@@ -1,0 +1,8 @@
+<snippet>
+  <description>Simulate click of selector-matching DOM el. Changes accessible after</description>
+<content><![CDATA[
+click('${1:selector_eg_a:contains("Contact")}');
+]]></content>  
+  <tabTrigger>emb_test_click</tabTrigger>
+  <scope>source.js, source.ts, source.jsx, source.tsx</scope>
+</snippet>

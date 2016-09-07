@@ -1,0 +1,8 @@
+<snippet>
+  <description>Import React-DOM library</description>
+<content><![CDATA[
+import * as ReactDOM from 'react-dom';${0}
+]]></content>  
+  <tabTrigger>rct_imp_reactdom</tabTrigger>
+  <scope>source.js, source.jsx, source.ts, source.tsx</scope>
+</snippet>

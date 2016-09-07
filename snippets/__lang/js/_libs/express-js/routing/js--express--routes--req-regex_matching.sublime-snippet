@@ -1,0 +1,11 @@
+<snippet>
+  <description>Route that gets triggered if given regex matches the URI</description>
+<content><![CDATA[
+app.${1:get||post||put||delete}(/${2:regex}/, (req, res) => {
+  ${0://code to run on request arrival.
+  // Has access to val of ${3:param} via req.params.${3:param}}
+});
+]]></content>  
+  <tabTrigger>exp_route_regex</tabTrigger>
+  <scope>source.js, source.ts, source.jsx, source.tsx</scope>
+</snippet>

@@ -1,0 +1,45 @@
+<snippet>
+    <content><![CDATA[
+/**
+ * ${3:route_module_description}
+ * Linked to /routes/${1:routename}_view.dust
+ * @return {Router}
+ */
+(function ${1:routename}_route_module(){
+
+    //GET EXPRESS SERVER & ROUTER
+    var express = require('express');
+    var router  = express.Router();
+
+    //GET LIBRARIES & NODE NATIVE MODULES
+    var fs      = require('fs'),
+        path    = require('path');
+    var _       = require('lodash');
+
+    //TEMPLATE DATA
+    var context = {
+        route_name: "${1:routename}",
+        title: "${4:title}"
+        ${5:more_template_data}
+    };
+
+
+/********************************** ROUTES **********************************/
+    /*
+     * GET ${1:routename} ROOT PAGE.
+     */
+    router.get('/', function(req, resp, next) {
+      resp.render('${2:viewnameNoExt___dustfile}', context);
+    });
+/****************************************************************************/
+
+    //@EXPORT
+    module.exports = router;
+
+}());
+]]></content>
+    <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+    <tabTrigger>exp_new_route_module</tabTrigger>
+    <!-- Optional: Set a scope to limit where the snippet will trigger -->
+    <scope>source.js, source.ts, source.jsx, source.tsx</scope>
+</snippet>

@@ -1,8 +1,0 @@
-<snippet>
-  <description>Get a property from an Ember object, including self.</description>
-<content><![CDATA[
-${1:this}.get('${2:property_to_try_to_grab_from_obj}')
-]]></content>  
-  <tabTrigger>embget</tabTrigger>
-  <scope>source.js, source.ts, source.jsx, source.tsx</scope>
-</snippet>

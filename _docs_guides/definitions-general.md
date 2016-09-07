@@ -22,15 +22,13 @@
 *   Makes common operations faster and easier in code
 *   example: has_many :books, dependent: :destroy
 
-
 @### Clock (CPU) ###@
 *   Essentially a pulser that "beats" at a fixed frequency (measured in Hz)
     *   This fixed frequency is known as the clock speed
 *   Used to synchronize execution of instructions
     *   The CPU performs one operation (i.e. follows one instruction) per pulse
 
-
-#######################################################################################
+# C ###################################################################################
 @### Constraints (database) ###@
 *   conditions forced on the columns of the (db) table to meet the data integrity
 *   types of constraints:
@@ -49,8 +47,7 @@
 *   can be generated with Redux's connect() function, which also benefits performance
 *   see http://redux.js.org/docs/basics/UsageWithReact.html
 
-#######################################################################################
-
+# D ###################################################################################
 @### Database key ###@
 *   column name
 
@@ -66,7 +63,7 @@
     of the interpreter, compiler, or assembler in some way
 *   Example: Javascript's 'use strict'; directive restricts what features are allowed in the code.
 
-
+#######################################################################################
 @### Etag ###@
 *   opaque identifier assigned by a web server to a specific version of a resource found at
 		a URL. If the resource representation at that URL ever changes, a new and different ETag
@@ -80,6 +77,7 @@
 *   graphical representation of entities and their relationships to each other
 *   http://www.webopedia.com/TERM/E/entity_relationship_diagram.html
 
+#######################################################################################
 @### Foreign key ###@
 *   a type of database constraint
 *   helps to map two or more tables in the database
@@ -92,8 +90,8 @@
                    EMPLOYEE table has column DEPARTMENT_ID. Here it is the Foreign key.
         *   Parent table: DEPARTMENT
         *   Child table:  EMPLOYEE
-#######################################################################################
 
+#######################################################################################
 @### Hertz ###@
 *    1Hz is one cycle per second
 *    Often used to measure CPU 'clock rate' - i.e. operations per second
@@ -103,6 +101,7 @@
 *    1MHz is ~1,000,000 cycles per second
 *    1GHz is ~1,000,000,000 cycles per second
 
+# I ###################################################################################
 @### Idempotence ###@
 *    an action that is idempotent should deliver identical results if the action is repeated.
 *    GET, PUT, and DELETE requests should be idempotent. POST requests, however, needn't be
@@ -117,6 +116,7 @@
 *   consists of an Environment Record and a possibly null reference to an outer Lexical Environment.
 *   sort of like scope, but not precisely the same
 
+# M ####################################################################################
 @### Mutex ###@
 *	program object that allows multiple program threads to share the same resource, such as file
 	access, but not simultaneously. When a program is started, a mutex is created with a unique name
@@ -147,7 +147,6 @@
 *   Note: Typescript does not introduce this kind of type system.
 
 #######################################################################################
-
 @### Register (CPU) [[noun - as in 'a register' not 'to register']] ##@
 *   Special storage locations in the CPU for holding small amounts of data
 *   Data in registers can be acted on ultra-rapidly, but CPUs have a very limited # of registers
@@ -156,6 +155,33 @@
 @### Resource (Rails) ###@
 *   see Scaffold (Rails)
 
+@### Resource (REST) ###@
+*   main building blocks of REST architecture
+*   anything that can be named. Examples:
+    *   web page
+    *   image
+    *   person
+    *   weather service report
+    *   immunization record
+*   defines:
+    *   what the services are going to be about
+    *   the type of information that is going to be transferred; and
+    *   their related actions
+*   Structure:
+    *   Representations: any way of representing data (binary, JSON, XML, etc.). A single
+                         resource can have multiple representations
+    *   Identifier: URL that retrieves only 1 specific resource at any given time
+        *   WARNING: something like /books/series/harry-potter/most-recent is not a valid
+            identifier, because the most recent book will change if a new one is released.
+            Thus, this path won't consistently return the same resource. Instead, we'd want
+            something like this:
+                /books/series/harry-potter/harry-potter-and-the-deathly-hollows
+            Instead use query param for retrieving special values like "most recent". e.g.
+                /books/series/harry-potter?limit=1&sort=created_at 
+    *   Metadata: Content-type, last-modified time, etc.
+    *   Control data: Is-modifiable-since, cache-control
+
+# S ###################################################################################
 @### Scaffold (Rails) ###@
 *   Model:     rails g scaffold Test name:text
     -   model file test.rb in models dir
@@ -178,7 +204,6 @@
     -   resources :tests in routes.rb file
     -   controller test in spec folder (potentially)
     -   resources :tests in routes.rb file
-#######################################################################################
 
 @### Secret (auth) ###@
 *   connect auth in particular, but also encryption in general 
@@ -206,9 +231,9 @@
 *   permits creation of a type which is a supertype of an existing type, without modifying the 
     definition of the latter
 *   used by e.g. Typescript, OCaml, C++ template functions, Haxe, Haskell, and parts of Go
-
 *   contrast with nominal typing, where every type has to be explicity declared. Structural typing
     is significantly less verbose.
+#######################################################################################
 
 
 ############################ HTTP REQUESTS ################################

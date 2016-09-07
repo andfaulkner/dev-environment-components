@@ -1,0 +1,13 @@
+<snippet>
+  <description>Def tsx (typescript) preloader in loaders arr b4 loader sect, w linting</description>
+<content><![CDATA[
+preLoaders: [
+  {
+    test: /\.tsx?\$/,
+    loader: 'tslint'
+  }
+],${0}
+]]></content>  
+  <tabTrigger>webp_loader_lint_tsx</tabTrigger>
+  <scope>source.js, source.ts, source.jsx, source.tsx</scope>
+</snippet>

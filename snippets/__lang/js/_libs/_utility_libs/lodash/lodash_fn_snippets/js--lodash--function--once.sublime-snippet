@@ -1,0 +1,8 @@
+<snippet>
+  <description>Wrap fn to make new version that can run only 1X. Eg var nFn = _.once(fn); nFn();</description>
+<content><![CDATA[
+${1/.+/let /}${1:runOnceVersionOfFunctionName}${1/.+/ = /}_.once(${2:someFunction});${0}
+]]></content>  
+  <tabTrigger>_fn_once</tabTrigger>
+  <scope>source.js, source.ts, source.jsx, source.tsx</scope>
+</snippet>

@@ -1,8 +1,0 @@
-<snippet>
-  <description>Check if 2 objects have equal property keys and values.</description>
-<content><![CDATA[
-_.isEqual(${1:obj1}, ${2:obj2});${0}
-]]></content>  
-  <tabTrigger>_obj_chk_both_eql</tabTrigger>
-  <scope>source.js, source.ts, source.jsx, source.tsx</scope>
-</snippet>

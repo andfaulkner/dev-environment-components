@@ -1,8 +1,0 @@
-<snippet>
-  <description>Create fn that invokes another fn w/ args reversed. fn(a, b, c) -> fn(c, b, a)</description>
-<content><![CDATA[
-${1/.+/let /}${1:flippedArgsVersionOf_${2}}${1/.+/ = /}_.flip(${2:someFn});${0}
-]]></content>  
-  <tabTrigger>_fn_flip</tabTrigger>
-  <scope>source.js, source.ts, source.jsx, source.tsx</scope>
-</snippet>

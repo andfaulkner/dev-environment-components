@@ -1,8 +1,0 @@
-<snippet>
-	<description>Redux: Get the current state tree from store</description>
-	<content><![CDATA[
-${1:store}.getState();
-]]></content>
-	<tabTrigger>rxgs</tabTrigger>
-	<scope>source.js, source.ts, source.jsx, source.tsx</scope>
-</snippet>

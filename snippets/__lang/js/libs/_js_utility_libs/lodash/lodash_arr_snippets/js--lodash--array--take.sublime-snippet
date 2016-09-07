@@ -1,8 +1,0 @@
-<snippet>
-    <description>Create array from first N items of another array</description>
-    <content><![CDATA[
-${1/.+/let /}${1:nameOfOutputArray}${1/.+/ = /}_.take(${2:arrayToGrabFrom}, ${3:numberOfItemsToGrabFromStart});${0}
-]]></content>
-    <tabTrigger>_arr_take</tabTrigger>
-    <scope>source.js, source.ts, source.jsx, source.tsx</scope>
-</snippet>

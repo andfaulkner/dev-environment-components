@@ -1,0 +1,19 @@
+<snippet>
+  <description>Boilerplate for a new Express route file in Typescript</description>
+<content><![CDATA[
+/// <reference path="${2:../../typings/index.d.ts}" />
+
+import * as express from 'express';
+
+let app: express.Application = express();
+
+app.get('/${3:api_route}', (req: express.Request, res: express.Response): void => {
+  ${0:res.send('response here');}
+});
+
+export { app as ${1:${TM_FILENAME/(.+)\..+|.*/$1/:name}} }
+
+]]></content>  
+  <tabTrigger>exp_new_routefile</tabTrigger>
+  <scope>source.ts, source.tsx</scope>
+</snippet>

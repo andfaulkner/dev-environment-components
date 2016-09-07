@@ -1,0 +1,16 @@
+<snippet>
+		<description>Simple class-based react component, no export</description>
+    <content><![CDATA[
+class ${1:ClassName} extends React.Component {
+	render() {
+		return (
+			${2:<div>Yo</div>}
+		);
+	}
+};
+]]></content>
+    <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+    <tabTrigger>rct_new_class_simple</tabTrigger>
+    <!-- Optional: Set a scope to limit where the snippet will trigger -->
+    <scope>source.js, source.ts, source.jsx, source.tsx</scope>
+</snippet>

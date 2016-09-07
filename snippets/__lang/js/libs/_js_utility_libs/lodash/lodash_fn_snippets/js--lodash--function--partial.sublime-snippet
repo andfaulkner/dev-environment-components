@@ -1,8 +1,0 @@
-<snippet>
-  <description>Create fn that === another fn w/ 1 or more args already filled in.</description>
-<content><![CDATA[
-${1/.+/let /}${1:partialFnName}${1/.+/ = /}_.partial(${2:someFn}, ${3:valOfLeftMostArg, optional2ndVal, etc});${0}
-]]></content>  
-  <tabTrigger>_fn_partial</tabTrigger>
-  <scope>source.js, source.ts, source.jsx, source.tsx</scope>
-</snippet>

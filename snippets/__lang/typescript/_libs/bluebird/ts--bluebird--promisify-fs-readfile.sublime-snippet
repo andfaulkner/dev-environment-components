@@ -1,0 +1,8 @@
+<snippet>
+  <description>Create a thennable function from fs module</description>
+<content><![CDATA[
+const readFileAsync = Promise.promisify(fs.readFile);${0}
+]]></content>  
+  <tabTrigger>blu_fn_readfile</tabTrigger>
+  <scope>source.js, source.ts, source.jsx, source.tsx</scope>
+</snippet>

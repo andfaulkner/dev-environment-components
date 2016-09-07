@@ -1,0 +1,8 @@
+<snippet>
+		<description>Rm leading & trailing whitespace (or a given char) from str.</description> 
+    <content><![CDATA[
+${1/.+/let /}${1:strResult}${1/.+/ = /}_.trim(${2:strToTrim}${3/.+/, /}${3:chars_to_rm_instead_of_spaces_from_start_&_end_of_str});${0}
+]]></content>
+    <tabTrigger>_str_trim</tabTrigger>
+    <scope>source.js, source.ts, source.jsx, source.tsx</scope>
+</snippet>

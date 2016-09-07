@@ -1,0 +1,8 @@
+<snippet>
+  <description>Get store from any Ember object, including self.</description>
+<content><![CDATA[
+${1:this}.get('store')${0}
+]]></content>  
+  <tabTrigger>emb_getstore</tabTrigger>
+  <scope>source.js, source.ts, source.jsx, source.tsx</scope>
+</snippet>

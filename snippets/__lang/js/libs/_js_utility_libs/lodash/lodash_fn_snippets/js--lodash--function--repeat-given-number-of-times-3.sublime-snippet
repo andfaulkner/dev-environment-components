@@ -1,8 +1,0 @@
-<snippet>
-  <description>Run a function the given number of times</description>
-<content><![CDATA[
-_.times(${1:number_of_times_to_run_fn}, ${2:fn_to_repeatedly_run__gets_arg_index});${0}
-]]></content>  
-  <tabTrigger>_times_run_fn</tabTrigger>
-  <scope>source.js, source.ts, source.jsx, source.tsx</scope>
-</snippet>

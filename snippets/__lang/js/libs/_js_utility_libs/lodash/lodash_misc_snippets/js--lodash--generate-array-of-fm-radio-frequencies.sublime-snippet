@@ -1,8 +1,0 @@
-<snippet>
-  <description>Create an array of all registerable FM radio station frequencies.</description>
-<content><![CDATA[
-_.range(87.5, 108.0, 0.2).map(num => _.round(num, 1));${0}
-]]></content>  
-  <tabTrigger>_fm_frequencies</tabTrigger>
-  <scope>source.js, source.ts, source.jsx, source.tsx</scope>
-</snippet>

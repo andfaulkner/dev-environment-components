@@ -1,0 +1,8 @@
+<snippet>
+		<description>Replace matches of a pattern in a given string with another string</description>
+    <content><![CDATA[
+_.replace(${1:'stringToReplacePartsOf'}, ${2:/regexOrStringPatternToReplace/}, ${3:'replacementText'}');
+]]></content>
+    <tabTrigger>_str_replace</tabTrigger>
+    <scope>source.js, source.ts, source.jsx, source.tsx</scope>
+</snippet>

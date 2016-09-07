@@ -1,0 +1,18 @@
+<snippet>
+  <description>Create a new function that creates and returns a promise (new thennable)</description>
+<content><![CDATA[
+const ${1:adder} = (${2:var1: string, etc: number /* args accepted by created fn; any #, any type */}): Promise<{}> =>
+  new Promise((resolve, reject) => {
+    ${5: // misc logic here}
+    // if no error...
+    if (${4:!_.isNaN(parsedNum1) && !_.isNaN(parsedNum2) /* test condition for successful promise return */}) {
+      resolve(${3:/* return values on promise success */});
+    // if error...
+    } else {
+      reject(new Error('${6:reason why promise was rejected}'));
+    }
+  });${0}
+]]></content>  
+  <tabTrigger>blu_new_promfn</tabTrigger>
+  <scope>source.js, source.ts, source.jsx, source.tsx</scope>
+</snippet>

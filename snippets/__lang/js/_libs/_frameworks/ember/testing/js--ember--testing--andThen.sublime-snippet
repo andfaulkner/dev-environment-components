@@ -1,0 +1,10 @@
+<snippet>
+  <description>Run something after something else in an ember test (call within test)</description>
+<content><![CDATA[
+andThen(function() {
+	${0}
+});
+]]></content>  
+  <tabTrigger>emb_test_andThen</tabTrigger>
+  <scope>source.js, source.ts, source.jsx, source.tsx</scope>
+</snippet>

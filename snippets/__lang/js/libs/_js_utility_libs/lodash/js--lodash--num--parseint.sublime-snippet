@@ -1,8 +1,0 @@
-<snippet>
-		<description>Convert str to integer. Rms preceding 0s.</description>
-    <content><![CDATA[
-_.parseInt(${1:'stringToConvertToInteger'});
-]]></content>
-    <tabTrigger>_str_parseint</tabTrigger>
-    <scope>source.js, source.ts, source.jsx, source.tsx</scope>
-</snippet>

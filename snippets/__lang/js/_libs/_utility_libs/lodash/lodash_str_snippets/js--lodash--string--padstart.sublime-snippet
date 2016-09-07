@@ -1,0 +1,8 @@
+<snippet>
+		<description>Add char to L side of str until it's a given length; return the altered str. </description>
+    <content><![CDATA[
+_.padStart(${1:'stringToPad'}, ${2:lengthToMakeFullStrAfterPad__eg__12}, ${3:'charToPadWith_optional'});
+]]></content>
+    <tabTrigger>_str_padstart</tabTrigger>
+    <scope>source.js, source.ts, source.jsx, source.tsx</scope>
+</snippet>

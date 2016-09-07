@@ -1,8 +1,0 @@
-<snippet>
-		<description>Create obj by pulling out given property (str) or properties (arr) from another obj</description>
-    <content><![CDATA[
-${1/.+/let /}${1:newObject}${1/.+/ = /}_.pick(${2:object}, ${3:propertyString__OR__arrayOfPropertyStrings_toPullFromObj});
-]]></content>
-    <tabTrigger>_obj_pick</tabTrigger>
-    <scope>source.js, source.ts, source.jsx, source.tsx</scope>
-</snippet>

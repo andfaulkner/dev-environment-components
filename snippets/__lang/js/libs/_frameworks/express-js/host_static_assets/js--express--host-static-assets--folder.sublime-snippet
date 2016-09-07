@@ -1,8 +1,0 @@
-<snippet>
-  <description>Host all items at given fs path relative to app launch file (recursive)</description>
-<content><![CDATA[
-app.use(express.static(path.join(__dirname, ${2:'/hosted/dir/path'})));${0}
-]]></content>  
-  <tabTrigger>exp_host_dir</tabTrigger>
-  <scope>source.js, source.ts, source.jsx, source.tsx</scope>
-</snippet>

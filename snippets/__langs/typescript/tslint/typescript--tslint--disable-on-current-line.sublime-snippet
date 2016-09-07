@@ -1,8 +1,0 @@
-<snippet>
-  <description>Disable tsline on current line</description>
-<content><![CDATA[
-// tslint:disable-line${0}
-]]></content>  
-  <tabTrigger>tslint_disableline</tabTrigger>
-  <scope>source.tsx</scope>
-</snippet>

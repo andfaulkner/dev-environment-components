@@ -1,8 +1,0 @@
-<snippet>
-    <description>Rm vals at given indices from arr, & ret rm vals. Indices given in arr of #s. Starts @ 0</description>
-    <content><![CDATA[
-${1/.+/let /}${1:arrOfRmProps}${1/.+/ = /}_.pullAt(${2:arrToRmValsFrom}, ${3:indicesToDropFromRetArr_eg_[1, 2, 6]});${0}
-]]></content>
-    <tabTrigger>_arr_pullat</tabTrigger>
-    <scope>source.js, source.ts, source.jsx, source.tsx</scope>
-</snippet>

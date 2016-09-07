@@ -1,0 +1,15 @@
+<snippet>
+  <description>Create a new function that creates and returns a promise (new thennable)</description>
+<content><![CDATA[
+${1:readFileAsync/*promise_ret_fn*/}(${2:path_to_file1/*args_for_promise_ret_fn*/})
+    .then((${3:data: Buffer/*vals_ret_by_promise_ret_fn}) => {
+      ${4:console.log(data.toString());/*do_things_w_promise_ret_fn_ret_vals*/;
+      return ${5:readFileAsync(path_to_file2/*next_fn_+_args*/);}
+
+    }).then((${6:data: Buffer/*next_fn_output*/}) => {
+      ${0:console.log(data.toString());}
+    });
+]]></content>  
+  <tabTrigger>blu_chain</tabTrigger>
+  <scope>source.js, source.ts, source.jsx, source.tsx</scope>
+</snippet>

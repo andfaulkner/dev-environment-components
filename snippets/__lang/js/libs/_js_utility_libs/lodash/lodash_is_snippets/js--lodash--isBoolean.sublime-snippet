@@ -1,8 +1,0 @@
-<snippet>
-  <description>Determine if value is a boolean (true or false) - excludes null</description>
-<content><![CDATA[
-_.isBoolean(${1:valueToCheck});${0}
-]]></content>  
-  <tabTrigger>_isBoolean</tabTrigger>
-  <scope>source.js, source.ts, source.jsx, source.tsx</scope>
-</snippet>

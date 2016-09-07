@@ -1,0 +1,10 @@
+<snippet>
+  <description>Lorem ipsum classic sample text, pt 4, w position-IDing title</description>
+<content><![CDATA[
+---------
+PART FOUR
+---------
+Donec at nibh tempor, luctus leo nec, euismod dui. Vivamus scelerisque ante at est tincidunt, ac convallis purus congue. Etiam tempor ultricies eros, sed dignissim mauris ullamcorper in. Cras risus ante, lacinia et ipsum a, consectetur venenatis nulla. Pellentesque velit purus, lobortis aliquam libero vitae, facilisis feugiat quam. Ut felis ante, tincidunt sed mauris non, venenatis fermentum erat. Nulla at tincidunt sapien. Morbi et lacus eget neque iaculis cursus. Fusce commodo elementum est nec hendrerit. Integer lobortis, felis ut molestie tristique, tortor ante feugiat sapien, ut sagittis enim nisl non arcu.
+]]></content>  
+  <tabTrigger>lorem4n</tabTrigger>
+</snippet>

@@ -1,0 +1,11 @@
+<snippet>
+	<description>create an express route</description>
+	<content><![CDATA[
+app.get('${1:route_eg_/home}', (req, res) => {
+	${2}
+	res.send('response here');
+});
+]]></content>
+	<tabTrigger>exp_route</tabTrigger>
+	<scope>source.js, source.ts, source.jsx, source.tsx</scope>
+</snippet>

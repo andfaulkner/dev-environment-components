@@ -1,0 +1,10 @@
+<snippet>
+  <description>Make new instance of an Ember class. Calls init method if present.</description>
+<content><![CDATA[
+let ${1:NameOfObject} = ${2:Ember.Object}.create({
+  ${0://empty, or vals to instantiate object with e.g. name: 'meeka'}
+});
+]]></content>
+  <tabTrigger>emb_newobj_create</tabTrigger>
+  <scope>source.js, source.ts, source.jsx, source.tsx</scope>
+</snippet>

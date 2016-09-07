@@ -1,8 +1,0 @@
-<snippet>
-  <description>Import Redux provider library</description>
-<content><![CDATA[
-import { Provider } from 'react-redux';${0}
-]]></content>  
-  <tabTrigger>rct_imp_rdx_provider</tabTrigger>
-  <scope>source.js, source.ts, source.jsx, source.tsx</scope>
-</snippet>

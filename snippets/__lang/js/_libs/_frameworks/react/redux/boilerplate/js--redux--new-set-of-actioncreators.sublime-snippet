@@ -1,0 +1,22 @@
+<snippet>
+  <description>w redux-actions lib, def large # actionCreators in hash structure</description>
+<content><![CDATA[
+import createActions from ${1:'../../node_modules/redux-actions/lib/createActions'}; // ERR CAUSES NEED FOR ODD IMPORT
+
+const actionData = {
+  ${2:ACTION_ONE: i => i, //use for empty, no data action. If no arg given on call: { type: ACTION_ONE \}
+  ACTION_TWO: (input: string) => input, // if arg given on call: { type: ACTION_TWO, payload: input \}
+  ACTION_THREE: (time: number, uiState: any) => ({ time, uiState \}), // slight transform before ret}
+});
+
+// List of all actions: object where both key & value are the action's SNAKE_CASE_NAME
+export const actions: any = _.reduce(Object.keys(actionData),
+  (total, action) => _.merge(total, {[action]: action}),
+{});
+
+// Hash of action creators. Names --> camelCase. Each fn ret obj: { type: str, payload: obj, error?, meta?} 
+export const actionCreators = createActions(actionData);
+]]></content>  
+  <tabTrigger>rdx_new_actions+creators</tabTrigger>
+  <scope>source.js, source.ts, source.jsx, source.tsx</scope>
+</snippet>

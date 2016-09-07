@@ -1,0 +1,25 @@
+<snippet>
+  <description>Wrap a component with a 'connect' function to allow communication w/ store</description>
+<content><![CDATA[
+const mapStateToProps = (state) => ({
+  ${2:propertyOnComponent: state.propertyInStore}
+});
+
+const mapDispatchToProps = (dispatch) => ({
+  ${3:cmpProp2HoldDispatchFn: (val) => { /*val from calling this.prop.cmpProp2HoldDispatchFn(val) from cmp*/
+    dispatch(someActionCreator(val));
+  \}}
+});
+
+export const ${1:${TM_FILENAME/(.+)\..+|.*/$1/:name}}: any = connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(${1}Unwrapped as any);${0:
+
+// in the component: this.prop.cmpProp2HoldDispatchFn('value') will let you dispatch to the store
+// in the component: this.prop.propertyOnComponent will let you access a value from the store
+}
+]]></content>
+  <tabTrigger>rdx_connect</tabTrigger>
+  <scope>source.js, source.ts, source.jsx, source.tsx</scope>
+</snippet>

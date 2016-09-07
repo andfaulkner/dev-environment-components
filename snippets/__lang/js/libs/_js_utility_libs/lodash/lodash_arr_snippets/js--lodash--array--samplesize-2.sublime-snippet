@@ -1,8 +1,0 @@
-<snippet>
-    <description>Get given number of random items from array.</description>
-    <content><![CDATA[
-${1/.+/let /}${1:arrOfRandomValsFromOtherArr}${1/.+/ = /}_.sampleSize(${2:['arrToSample']}, ${3:2 /* # of vals to pick */)};${0}
-]]></content>
-    <tabTrigger>_arr_samplemultiple</tabTrigger>
-    <scope>source.js, source.ts, source.jsx, source.tsx</scope>
-</snippet>

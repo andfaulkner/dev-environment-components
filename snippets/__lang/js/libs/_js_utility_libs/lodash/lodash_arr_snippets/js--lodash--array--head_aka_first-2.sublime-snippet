@@ -1,8 +1,0 @@
-<snippet>
-    <description>Return first item from an array</description>
-    <content><![CDATA[
-${1/.+/let /}${1:varStoringFirstArrItem}${1/.+/ = /}_.tail(${2:arrayToGrabFirstValFrom});${0}
-]]></content>
-    <tabTrigger>_arr_first</tabTrigger>
-    <scope>source.js, source.ts, source.jsx, source.tsx</scope>
-</snippet>

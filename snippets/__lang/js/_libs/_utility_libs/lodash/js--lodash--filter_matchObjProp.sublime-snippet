@@ -1,0 +1,12 @@
+<snippet>
+		<description>Keep objs in arr of objs if they match props of arg obj</description>
+    <content><![CDATA[
+var ${1:arrRetVal} = _(${2:arrOfObjs}})
+	.filter(${3:{objPropToCheck: val_keepItemIfObjPropHasThisVal})
+  .value();
+]]></content>
+    <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+    <tabTrigger>_filter_keep_if_matches</tabTrigger>
+    <!-- Optional: Set a scope to limit where the snippet will trigger -->
+    <scope>source.js, source.ts, source.jsx, source.tsx</scope>
+</snippet>

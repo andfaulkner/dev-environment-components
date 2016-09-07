@@ -1,8 +1,0 @@
-<snippet>
-  <description>Check current url in ember test.</description>
-<content><![CDATA[
-currentURL();${0}
-]]></content>  
-  <tabTrigger>emb_test_current_url</tabTrigger>
-  <scope>source.js, source.ts, source.jsx, source.tsx</scope>
-</snippet>

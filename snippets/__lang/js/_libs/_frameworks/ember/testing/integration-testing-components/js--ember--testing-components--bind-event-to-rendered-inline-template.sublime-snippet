@@ -1,0 +1,10 @@
+<snippet>
+  <description>Set event to trigger when an in-template action occurs</description>
+<content><![CDATA[
+this.on('${1:action-occurring-in-template}', (val) => {
+  ${0}
+});
+]]></content>  
+  <tabTrigger>emb_test_rend_listener</tabTrigger>
+  <scope>source.js, source.ts, source.jsx, source.tsx</scope>
+</snippet>

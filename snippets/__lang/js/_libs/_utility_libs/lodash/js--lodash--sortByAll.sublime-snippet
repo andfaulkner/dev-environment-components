@@ -1,0 +1,13 @@
+<snippet>
+		<description>Sort arr or obj via any # of sorters (both sort vals & fns)</description>
+    <content><![CDATA[
+${1:sortedArr} = _.sortByAll(${2:arrObjOrStr}, ${3:keyOrSortFn1}, function ${4:optionalSort2}(val){
+	${6://code here - note that any # of sorter args could have been given to _.sortByAll}
+	return ${5:valToTreatCurValAsForSort_thoOrigValStillOutputted};
+});
+]]></content>
+    <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+    <tabTrigger>_sortByAll</tabTrigger>
+    <!-- Optional: Set a scope to limit where the snippet will trigger -->
+    <scope>source.js, source.ts, source.jsx, source.tsx</scope>
+</snippet>

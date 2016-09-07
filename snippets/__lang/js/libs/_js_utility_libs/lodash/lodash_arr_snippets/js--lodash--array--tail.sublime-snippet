@@ -1,8 +1,0 @@
-<snippet>
-    <description>Return all items from an array besides the 1st</description>
-    <content><![CDATA[
-${1/.+/let /}${1:nameOfOutputArray}${1/.+/ = /}_.tail(${2:arrayToGrabAllButFirstValueFrom});${0}
-]]></content>
-    <tabTrigger>_arr_tail</tabTrigger>
-    <scope>source.js, source.ts, source.jsx, source.tsx</scope>
-</snippet>

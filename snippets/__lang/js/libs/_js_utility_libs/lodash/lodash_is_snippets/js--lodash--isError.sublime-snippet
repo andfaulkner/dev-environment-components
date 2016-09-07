@@ -1,8 +1,0 @@
-<snippet>
-  <description>Determine if value is: Error, EvalE., RangeE., ReferenceE., TypeE., SyntaxE., URIE.</description>
-<content><![CDATA[
-_.isError(${1:valueToCheck});${0}
-]]></content>  
-  <tabTrigger>_isError</tabTrigger>
-  <scope>source.js, source.ts, source.jsx, source.tsx</scope>
-</snippet>

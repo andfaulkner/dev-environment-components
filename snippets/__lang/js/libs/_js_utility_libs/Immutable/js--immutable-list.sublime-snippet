@@ -1,8 +1,0 @@
-<snippet>
-	<description>Create new immutable list, from an array</description>
-	<content><![CDATA[
-List(['${1}', '${2}']);
-]]></content>
-	<tabTrigger>iml</tabTrigger>
-	<scope>source.js, source.ts, source.jsx, source.tsx</scope>
-</snippet>

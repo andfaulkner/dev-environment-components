@@ -1,0 +1,8 @@
+<snippet>
+  <description>Get cookies from the request - if cookie-parse is installed and in use</description>
+<content><![CDATA[
+req.cookies
+]]></content>
+  <tabTrigger>exp_req_cookies</tabTrigger>
+  <scope>source.js, source.ts, source.jsx, source.tsx</scope>
+</snippet>

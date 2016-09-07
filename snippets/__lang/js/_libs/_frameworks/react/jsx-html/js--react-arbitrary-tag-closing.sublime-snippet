@@ -1,0 +1,10 @@
+<snippet>
+		<description>Insert an arbitrary React component tag that closes.</description>
+    <content><![CDATA[
+<${1:Component}${2/.+/ className={/g}${2:namesOf classesHere}${2/.+/}/g}${3/.+/ style={/g}${3:style.MyComponent}${3/.+/}/g}>
+  ${0}
+</${1}>
+]]></content>
+    <tabTrigger><![CDATA[<]]></tabTrigger>
+    <scope>source.js.jsx, source.js.tsx, source.tsx</scope>
+</snippet>

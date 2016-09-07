@@ -1,0 +1,8 @@
+<snippet>
+    <description>Ret new obj identical to another but w/ certain props omitted.</description>
+    <content><![CDATA[
+${1/.+/let /}${1:newObj}${1/.+/ = /}_.omit(${2:objToOmitFrom}, ${3:vals_to_omit_eg: ['a', 'b'] | 'a'});${0}
+]]></content>
+    <tabTrigger>_obj_omit</tabTrigger>
+    <scope>source.js, source.ts, source.jsx, source.tsx</scope>
+</snippet>

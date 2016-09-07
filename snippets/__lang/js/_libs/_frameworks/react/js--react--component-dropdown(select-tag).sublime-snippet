@@ -1,0 +1,15 @@
+<snippet>
+    <content><![CDATA[
+<select ref="${1:refToThisEl}" name="{this.props.${2:localPropName}}"
+        defaultValue="${3:option_tag_val_sel_by_default}"
+        id="{this.props.${2:localPropName}+'Dropdown'}" onChange={this.props.update}>
+    <option value="${3:option_tag_val_sel_by_default}">${3:option_tag_val_sel_by_default}</option>
+    <option value="${4:dropdownOpt2}">${4:dropdownOpt2}</option>
+    <option value="${5:dropdownOpt3}">${5:dropdownOpt3}</option>
+</select>
+]]></content>
+    <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+    <tabTrigger>rct_select</tabTrigger>
+    <!-- Optional: Set a scope to limit where the snippet will trigger -->
+    <scope>source.js, source.ts, source.jsx, source.tsx</scope>
+</snippet>

@@ -1,0 +1,63 @@
+<snippet>
+  <description>New class-based React component w all lifecycle methods</description>
+<content><![CDATA[
+class ${1:${TM_FILENAME/(.+)\..+|.*/$1/:name}} extends React.Component {
+
+  static defaultProps = {
+    // color: 'red',
+    // cellWidth: 90
+  }
+
+  static propTypes = {
+    // e.g.:
+    // color: React.PropTypes.string.isRequired,
+    // cellWidth: React.PropTypes.oneOfType([
+    //  React.PropTypes.string,
+    //  React.PropTypes.number
+    // ])
+  }
+
+  state = {
+    // define: 'initial "state" values here',
+    // qty: this.props.initialQty,
+    // total: 0
+  }
+
+  constructor(props) {
+    super(props);
+    // bind new functions to 'this' here e.g.
+    //    this.tick.bind(this);
+  }
+
+  shouldComponentUpdate(nextProps, nextState) {
+    // new props or state received, not yet rendered. If it returns false, no rerender occurs.
+  }
+
+  componentWillReceiveProps(nextProps) {
+    // props received, but not yet rendered in. DOES NOT OCCUR ON MOUNT, ONLY ON UPDATE.
+  }
+
+  componentWillUpdate(nextProps, nextState) {
+    // actions to do right before the component updates
+  }
+
+  componentWillMount() {
+    // actions to do right before the component initially mounts (but not on updates)
+  }
+
+  update() {
+    // actual update action occurs here
+  }
+
+  render() {
+    return (
+      <div>
+        ${0}
+      </div>
+    )
+  }
+}
+]]></content>  
+  <tabTrigger>rct_new_clfull</tabTrigger>
+  <scope>source.js, source.ts, source.jsx, source.tsx</scope>
+</snippet>

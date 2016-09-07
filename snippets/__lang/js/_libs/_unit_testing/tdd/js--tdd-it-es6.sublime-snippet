@@ -1,0 +1,10 @@
+<snippet>
+	<description>it setup (for tdd)</description>
+	<content><![CDATA[
+it('${1:message}', () => {
+	${2:code}
+});
+]]></content>
+	<tabTrigger>eit</tabTrigger>
+	<scope>source.js, source.ts, source.jsx, source.tsx</scope>
+</snippet>

@@ -1,8 +1,0 @@
-<snippet>
-	<description>Create new immutable hashmap, from a js obj</description>
-	<content><![CDATA[
-Map({${1:key}: ${2:val}});
-]]></content>
-	<tabTrigger>imm</tabTrigger>
-	<scope>source.js, source.ts, source.jsx, source.tsx</scope>
-</snippet>

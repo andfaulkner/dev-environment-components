@@ -1,0 +1,12 @@
+<snippet>
+  <description>Create a mocked response to a get request in mirage</description>
+<content><![CDATA[
+  this.get('/${1:path-to-return-data-on-request}', function() {
+    return {
+      ${0}
+    };
+  });
+]]></content>  
+  <tabTrigger>emb_mirage_get</tabTrigger>
+  <scope>source.js, source.ts, source.jsx, source.tsx</scope>
+</snippet>

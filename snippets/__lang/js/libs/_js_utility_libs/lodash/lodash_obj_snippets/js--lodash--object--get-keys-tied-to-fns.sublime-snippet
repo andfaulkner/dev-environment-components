@@ -1,8 +1,0 @@
-<snippet>
-    <description>Ret arr of given obj's keys that are linked to a fn (incl inherited props)</description>
-    <content><![CDATA[
-${1/.+/let /}${1:arrOfKeysTiedToFnsOnGivenObj}${1/.+/ = /}_.functionsIn(${2:objToGrabKeysTiedToFnsFrom});${0}
-]]></content>
-    <tabTrigger>_obj_fns_in</tabTrigger>
-    <scope>source.js, source.ts, source.jsx, source.tsx</scope>
-</snippet>

@@ -1,8 +1,0 @@
-<snippet>
-  <description>Determine if value is a String primitive or object (including "")</description>
-<content><![CDATA[
-_.isString(${1:valueToCheck});${0}
-]]></content>  
-  <tabTrigger>_isString</tabTrigger>
-  <scope>source.js, source.ts, source.jsx, source.tsx</scope>
-</snippet>

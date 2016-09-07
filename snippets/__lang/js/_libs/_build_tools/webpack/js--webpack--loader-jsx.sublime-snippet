@@ -1,0 +1,15 @@
+<snippet>
+  <description>Def jsx loader w babel transpiling and several plugins</description>
+<content><![CDATA[
+{
+  test: /\.jsx?$/,
+  exclude: /node_modules/,
+  loader: 'babel',
+  query: {
+    "presets": [${1:"react", "es2015", "stage-0", "react-hmre"}]
+  }
+},${0}
+]]></content>  
+  <tabTrigger>webp_loader_jsx</tabTrigger>
+  <scope>source.js, source.ts, source.jsx, source.tsx</scope>
+</snippet>

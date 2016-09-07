@@ -1,0 +1,8 @@
+<snippet>
+  <description>Determine if value is a Symbol</description>
+<content><![CDATA[
+_.isSymbol(${1:valueToCheck});${0}
+]]></content>  
+  <tabTrigger>_isSymbol</tabTrigger>
+  <scope>source.js, source.ts, source.jsx, source.tsx</scope>
+</snippet>

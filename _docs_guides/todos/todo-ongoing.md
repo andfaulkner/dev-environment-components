@@ -1,3 +1,19 @@
+September
+=========
+
+Sept 6
+------
+*   ! smart (container) vs dumb (presentational) components
+    *   ! understand the concepts
+    *   ! write definitions
+    *   ! make a snippet?
+    *   ! make one of each
+*   Mobx basic toy app
+*   Evaluate Mobx
+*   Folder-structure-based REST API paths
+
+*   seamless-immutable!
+
 August
 ======
 
@@ -172,11 +188,6 @@ AUGUST 29th
 *   ! 'find' manual addition (after that fucking nightmare) 
 *   ! redux business logic working
 
-*   smart (container) vs dumb (presentational) components
-    *   understand the concepts
-    *   write definitions
-    *   make a snippet?
-    *   make one of each
 *   react-router-redux
 *   2nd reducer
 

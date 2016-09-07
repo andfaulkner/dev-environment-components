@@ -1,8 +1,0 @@
-<snippet>
-  <description>Search for DOM elements via a selector in an Ember test</description>
-<content><![CDATA[
-find('${1:some_selector__eg_.listing__or__#id}')${0}
-]]></content>  
-  <tabTrigger>emb_test_find</tabTrigger>
-  <scope>source.js, source.ts, source.jsx, source.tsx</scope>
-</snippet>
