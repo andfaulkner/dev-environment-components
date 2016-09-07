@@ -20,4 +20,7 @@ echo "List matching filenames in current and child directories. Alter search-for
 echo '        tree | ack "search-for-this" | awk "{gsub(/.*── /,\"\",\$0); print \$0}'
 echo ' - same, but with full file path'
 echo '        tree -f | ack "search-for-this" | awk "{gsub(/.*── /,\"\",\$0); print \$0}'
+echo ''
+echo 'multiline search in grep!!!:    grep -Pzo "(?s)^(\s*)\N*main.*?{.*?^\1}" *.c'
+echo "   -  see http://stackoverflow.com/questions/3717772/regex-grep-for-multi-line-search-needed#answer-7167115"
 echo '---------------------------------------------------------------------------------\n'

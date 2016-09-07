@@ -449,4 +449,5 @@ function type_react_destroy_component {
     rm -rf app/components/$1
 }
 
+alias npmscripts='awk "/scripts/,/}/" package.json | ack -v "\s\s}" | ack -v "\s\s\"scripts\":"'
 echo "* NodeJS scripts loaded!"
