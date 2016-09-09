@@ -21,6 +21,7 @@ Sept 9th
 *   immutable structures
 *   model connections
 *   config folder
+*   JSDoc?
 
 Sept 6
 ------
