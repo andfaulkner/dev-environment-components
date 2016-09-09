@@ -57,3 +57,18 @@ printDelayed(["first", "2", "3", "4", "final"]).then(() => {
 //-----------------------------------------------------------------------------------------------//
 
 
+
+//-----------------------------------------------------------------------------------------------//
+
+// EXAMPLE: CONVERT CALLBACKS TO PROMISES
+
+import fs = require('fs');
+const readFileAsync = (filename: string): Promise<any> =>
+  new Promise((resolve, reject) =>
+    fs.readFile(filename, (err, result) => {
+      if (err) {
+        reject(err);
+      } else {
+        resolve(result);
+      }
+}));

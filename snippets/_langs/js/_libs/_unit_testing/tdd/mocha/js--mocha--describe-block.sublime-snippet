@@ -1,0 +1,12 @@
+<snippet>
+  <description>Create Mocha describe block (container for multiple related tests)</description>
+<content><![CDATA[
+describe('${1:Thing that you're going to describe, often a class}', function() {
+  it('${2:can do something you claim here it can do}', function() {
+    ${3:expect(true).to.equal(true);}
+  });${0}
+});
+]]></content>  
+  <tabTrigger>mocha_describe</tabTrigger>
+  <scope>source.js, source.ts, source.jsx, source.tsx</scope>
+</snippet>

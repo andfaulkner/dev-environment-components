@@ -1,0 +1,11 @@
+<snippet>
+  <description>Create new string-based enum</description>
+<content><![CDATA[
+enum ${1:Language} {
+  ${2:English} = <any>"${2:English}",
+  ${3:German} = <any>"${3:German}"${4/.+/,\n  /}${4:French}${4/.+/ = <any>"/}${4:French}${4/.+/"/}${5/.+/,\n  /}${5:Italian}${5/.+/ = <any>"/}${5:Italian}${5/.+/"/},
+}
+]]></content>
+  <tabTrigger>enum_str</tabTrigger>
+  <scope>source.ts, source.tsx</scope>
+</snippet>

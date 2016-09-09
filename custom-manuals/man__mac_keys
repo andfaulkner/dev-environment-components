@@ -17,5 +17,5 @@ echo "    OPTION-CMD-ESCAPE     Open force quit app selector"
 echo "    SHIFT--CMD-3          Take screenshot"
 echo ""
 echo "- BROWSER (Chrome)"
-echo "    CMD-ALT-I             Open or close Chrome dev tools""
+echo "    CMD-ALT-I             Open or close Chrome dev tools"
 echo '---------------------------------------------------------------------------------\n'

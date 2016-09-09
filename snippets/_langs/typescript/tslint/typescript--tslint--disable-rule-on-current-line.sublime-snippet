@@ -1,0 +1,8 @@
+<snippet>
+  <description>Disable any # of specific listed tslint rules on current line</description>
+<content><![CDATA[
+// tslint:disable-line:${0:no-namespace max-line-length no-string-literal no-empty no-var-requires no-var-keyword}
+]]></content>  
+  <tabTrigger>tslint_disableruleline</tabTrigger>
+  <scope>source.ts, source.tsx</scope>
+</snippet>

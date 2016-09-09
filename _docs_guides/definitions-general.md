@@ -214,6 +214,34 @@
     it to memory, a database, or a file. Its main purpose is to save the state of an object
     in order to be able to recreate it when needed. The reverse process is called deserialization.
 
+@### Services (aka Service Objects) [Server-side. Rails, NodeJS] ###@
+*   services describe system interactions.
+    *   especially those involving more than one model
+*   example: "Forgot password" functionality. Involves a User model encapsulating a password, which
+    sends an email to reset it.
+    *   In this scenario, the service is responsible for locating the user, sending the reset
+        password email, and reporting back to the controller from which the request originated
+*   Service objects implement individual services. e.g. in the example, there might be a service
+    object called ForgottenPassword. This object is instantiated and called on by a controller
+*   Most important: Service objects do one thing, and one thing only
+*   Benefits:
+    1)  Service objects show what an application actually does
+    2)  Controllers and models shrink, and also become much cleaner. This is important, because
+        these tend to get very bloated and messy as an application grows
+    3)  They are easy to test
+    4)  They are extremely reusable: callable from anywhere, and almost completely uncoupled
+        from models, controllers, routes, etc..  
+
+@### SOLID (aka SOLID principles) [object-oriented design] ###@
+*   Single responsibility principle: a class should have only a single responsibility
+*   Open/Closed principle: entities should be open for extension, but closed for modification
+*   Liskov substitution principle: objects in a program should be replaceable with instances of
+    their subtypes without altering the correctness of that program
+*   Interface segregation principle: many client-specific interfaces are better than one
+    general-purpose interface
+*   Dependency inversion principle: One should depend upon Abstractions, not 'concretions'
+
+
 @### Stored procedure ###@
 *   subroutine available to applications that access a relational database management system
 *   stored in the database data dictionary

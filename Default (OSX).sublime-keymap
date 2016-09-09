@@ -1,5 +1,5 @@
 [
-  { "keys": ["ctrl+alt+k"], "command": "clear_console" },
+  { "keys": ["ctrl+alt+k"], "`": "clear_console" },
 
   { "keys": ["alt+r"], "command": "side_bar_rename" },
   { "keys": ["alt+d"], "command": "side_bar_duplicate" },
@@ -10,6 +10,9 @@
   { "keys": ["ctrl+alt+v"], "command": "side_bar_paste" },
   { "keys": ["command+shift+t"], "command": "open_recent_file", "args": {"index" : 0} },
   { "keys": ["command+s"], "command": "save" },
+
+  { "keys": ["command+ctrl+shift+a"], "command": "alignment" },
+  { "keys": ["ctrl+shift+alt+l"], "command": "remove_trailing_whitespace" },
 
   { "DESCRIPTION": "CREATE NEW SNIPPET", "keys": ["ctrl+shift+alt+s"],
     "command": "side_bar_new_file", 
@@ -41,9 +44,17 @@
     }
   },
 
-  { "keys": ["ctrl+shift+t,ctrl+shift+g"], "command": "typescript_go_to_definition" },
+  { "DESCRIPTION": "SHOW JSON TREE - ESSENTIAL JSON COMMAND",
+    "keys": ["command+ctrl+alt+j"], "command": "json_tree" },
+
+  { "DESCRIPTION": "TYPESCRIPT CODE NAVIGATION, ESSENTIAL COMMAND",
+    "keys": ["command+ctrl+alt+g"], "command": "typescript_go_to_definition" },
   { "keys": ["ctrl+shift+t,ctrl+shift+r"], "command": "typescript_rename" },
   { "keys": ["ctrl+shift+t,ctrl+shift+f"], "command": "typescript_find_references" },
+
+
+  { "DESCRIPTION": "SELECT ALL MATCHES OF CURRENT SELECTION", "keys": ["command+ctrl+g"],
+    "command": "find_all_under" },
 
   { "keys": ["command+shift+z"], "command": "redo" },
   { "keys": ["shift+ctrl+alt+p"], "command": "copy_path" },

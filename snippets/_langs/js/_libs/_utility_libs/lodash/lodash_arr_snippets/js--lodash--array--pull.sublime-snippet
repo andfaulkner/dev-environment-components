@@ -1,5 +1,5 @@
 <snippet>
-    <description>Rm matching items from arr, & ret removed items</description>
+    <description>Rm matching items from arr, then ret orig array. MUTATOR.</description>
     <content><![CDATA[
 ${1/.+/let /}${1:arrOfRmProps}${1/.+/ = /}_.pull(${2:arrToRmValsFrom}, ${3:'values', 'to', 'rm', 'from', 'arr'});${0}
 ]]></content>
