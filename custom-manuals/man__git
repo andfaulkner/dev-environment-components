@@ -12,4 +12,12 @@ echo "        echo \$(echo !\$ | awk -F'.' '{print \$(NF-1)}' | awk -F'/' '{prin
 echo ''
 echo 'Comparing state of a file in a past commit with current state (example):'
 echo '        git diff e51a122d44aacab0745230076202ae037b17414f..HEAD -- spec/services/report_service_spec.rb'
+echo ''
+echo 'Modify timestamp of most recent commit'
+echo '        git commit --amend --date="Mon Sep 12 09:13:45 2016 -0400'
+echo ' -- modify an earlier commit timestamp'
+echo '        1)  pull out the commit via hash:    git rebase -i 6e2079a8183b9a0a293398edf0f15f3243b403a6~1'
+echo '        2)  modify the date:                 git commit --amend --date="Mon Sep 12 09:13:45 2016 -0400'
+echo '        3)  carry on:                        git rebase --continue'
 echo '--------------------------------------------------------------------------------------------------------\n'
+

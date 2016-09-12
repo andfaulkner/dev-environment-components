@@ -1,0 +1,647 @@
+%YAML 1.2
+---
+# http://www.sublimetext.com/docs/3/syntax.html
+name: TypeScript
+file_extensions:
+  - ts
+scope: source.ts
+contexts:
+  main:
+    - include: expression
+  comment:
+    - include: comment-block-doc
+    - include: comment-block
+    - include: comment-line
+  access-modifier:
+    - match: \b(public|protected|private)\b
+      scope: storage.modifier.ts
+  arithmetic-operator:
+    - match: \*|/|\-\-|\-|\+\+|\+|%
+      scope: keyword.operator.arithmetic.ts
+  array-literal:
+    - match: '\['
+      captures:
+        0: meta.brace.square.ts
+      push:
+        - meta_scope: meta.array.literal.ts
+        - match: '\]'
+          captures:
+            0: meta.brace.square.ts
+          pop: true
+        - include: expression
+  assignment-operator:
+    - match: '<<=|>>>=|>>=|\*=|(?<!\()/=|%=|\+=|\-=|&=|\^='
+      scope: keyword.operator.assignment.ts
+  await-modifier:
+    - match: \bawait\b
+      scope: storage.modifier.ts
+  block:
+    - match: '\{'
+      captures:
+        0: meta.brace.curly.ts
+      push:
+        - meta_scope: meta.block.ts
+        - match: '\}'
+          captures:
+            0: meta.brace.curly.ts
+          pop: true
+        - include: object-member
+        - include: expression
+  boolean-literal:
+    - match: \b(false|true)\b
+      scope: constant.language.boolean.ts
+  case-clause:
+    - match: (?<!\.)\b(case|default)\b
+      captures:
+        1: keyword.control.ts
+      push:
+        - meta_scope: case-clause.expr.ts
+        - match: ":"
+          pop: true
+        - include: expression
+  cast:
+    - match: '(?:(?<=return|throw|yield|await|[=(,:>]))\s*(<)(?!<?\=)'
+      captures:
+        1: meta.brace.angle.ts
+      push:
+        - meta_scope: cast.expr.ts
+        - match: ">"
+          captures:
+            0: meta.brace.angle.ts
+          pop: true
+        - include: type
+  comment-block:
+    - match: /\*
+      push:
+        - meta_scope: comment.block.ts
+        - match: \*/
+          pop: true
+  comment-block-doc:
+    - match: /\*\*(?!/)
+      push:
+        - meta_scope: comment.block.documentation.ts
+        - match: \*/
+          pop: true
+  comment-line:
+    - match: (//).*$\n?
+      scope: comment.line.ts
+  control-statement:
+    - match: (?<!\.)\b(break|catch|continue|debugger|declare|do|else|finally|for|if|return|switch|throw|try|while|with|super|case|default|yield)\b
+      scope: keyword.control.ts
+  decl-block:
+    - match: '\{'
+      captures:
+        0: meta.brace.curly.ts
+      push:
+        - meta_scope: meta.decl.block.ts
+        - match: '\}'
+          captures:
+            0: meta.brace.curly.ts
+          pop: true
+        - include: expression
+  declaration:
+    - include: function-declaration
+    - include: object-declaration
+    - include: type-declaration
+    - include: enum-declaration
+  enum-declaration:
+    - match: '(?:\b(const)\s+)?\b(enum)\s+([a-zA-Z_$][\w$]*)'
+      scope: meta.enum.declaration.ts
+      captures:
+        1: storage.modifier.ts
+        2: storage.type.ts
+        3: entity.name.class.ts
+  expression:
+    - include: for-in-simple
+    - include: string
+    - include: regex
+    - include: template
+    - include: comment
+    - include: literal
+    - include: paren-expression
+    - include: var-expr
+    - include: declaration
+    - include: cast
+    - include: new-expr
+    - include: switch-statement
+    - include: block
+    - include: import-operator
+    - include: expression-operator
+    - include: imply-operator
+    - include: relational-operator
+    - include: arithmetic-operator
+    - include: logic-operator
+    - include: assignment-operator
+    - include: storage-keyword
+    - include: type-primitive
+    - include: function-call
+    - include: case-clause
+    - include: control-statement
+  expression-operator:
+    - match: \b(delete|in|instanceof|new|typeof|as|is|of)\b
+      scope: keyword.others.ts
+  field-declaration:
+    - match: '(?<!\()\s*((?:\b[a-zA-Z_$][\w$]*)|(?:\''[^'']*\'')|(?:\"[^"]*\"))\s*(\?\s*)?(?=(=|:))'
+      captures:
+        1: variable.ts
+        2: keyword.others.ts
+      push:
+        - meta_scope: meta.field.declaration.ts
+        - match: '(?=\}|;|,|$)|(?<=\})'
+          pop: true
+        - include: expression
+  for-in-simple:
+    - match: '(?<=\()\s*\b(var|let|const)\s+([a-zA-Z_$][\w$]*)\s+(in|of)\b'
+      scope: forin.expr.ts
+      captures:
+        1: storage.type.ts
+        3: keyword.others.ts
+  function-call:
+    - include: await-modifier
+    - include: type-parameters
+    - include: paren-expression
+  function-declaration:
+    - match: '\b(?:(export)\s+)?(?:(async)\s+)?(function\b)(?:\s+([a-zA-Z_$][\w$]*))?\s*'
+      captures:
+        1: storage.type.ts
+        2: storage.modifier.ts
+        3: storage.type.function.ts
+        4: entity.name.function.ts
+      push:
+        - meta_scope: meta.function.ts
+        - match: '(?=;|\})|(?<=\})'
+          pop: true
+        - include: comment
+        - include: type-parameters
+        - include: function-type-parameters
+        - include: return-type
+        - include: function-overload-declaration
+        - include: decl-block
+  function-overload-declaration:
+    - match: '\b(?:(export)\s+)?(function\b)(?:\s+([a-zA-Z_$][\w$]*))?\s*'
+      scope: meta.function.overload.ts
+      captures:
+        1: storage.type.ts
+        2: storage.type.function.ts
+        3: entity.name.function.ts
+  function-type-parameters:
+    - match: \(
+      captures:
+        0: meta.brace.round.ts
+      push:
+        - meta_scope: meta.function.type.parameter.ts
+        - match: \)
+          captures:
+            0: meta.brace.round.ts
+          pop: true
+        - include: comment
+        - include: parameter-name
+        - include: type-annotation
+        - include: variable-initializer
+  imply-operator:
+    - match: "=>"
+      scope: keyword.operator.ts
+  import-operator:
+    - match: \b(import|from)\b
+      scope: keyword.control.import.include.ts
+  indexer-declaration:
+    - match: '\['
+      captures:
+        0: meta.brace.square.ts
+      push:
+        - meta_scope: meta.indexer.declaration.ts
+        - match: '(\])\s*(\?\s*)?|$'
+          captures:
+            1: meta.brace.square.ts
+            2: keyword.others.ts
+          pop: true
+        - include: type-annotation
+        - include: indexer-parameter
+        - include: expression
+  indexer-parameter:
+    - match: '([a-zA-Z_$][\w$]*)(?=\:)'
+      scope: meta.indexer.parameter.ts
+      captures:
+        1: variable.parameter.ts
+  literal:
+    - include: numeric-literal
+    - include: boolean-literal
+    - include: null-literal
+    - include: undefined-literal
+    - include: array-literal
+    - include: this-literal
+  logic-operator:
+    - match: \!|&&|&|~|\^|\|\||\|
+      scope: keyword.operator.arithmetic.ts
+  method-declaration:
+    - match: '\b(?:(abstract)\s+)?\b(?:(public|private|protected)\s+)?\b(?:(async)\s+)?(?:(get|set)\s+)?(?:(new)|(?:\b(constructor)\b)|(?:([a-zA-Z_$][\.\w$]*)\s*(\??)))?\s*(?=\(|\<)'
+      captures:
+        1: storage.modifier.ts
+        2: storage.modifier.ts
+        3: storage.modifier.ts
+        4: storage.type.property.ts
+        5: keyword.operator.ts
+        6: storage.type.ts
+        7: entity.name.function.ts
+        8: keyword.operator.ts
+      push:
+        - meta_scope: meta.method.declaration.ts
+        - match: '(?=\}|;|,)|(?<=\})'
+          pop: true
+        - include: comment
+        - include: type-parameters
+        - include: function-type-parameters
+        - include: type-annotation
+        - include: method-overload-declaration
+        - include: decl-block
+  method-overload-declaration:
+    - match: '\b(?:(abstract)\s+)?\b(?:(public|private|protected)\s+)?\b(?:(async)\s+)?(?:(get|set)\s+)?(?:(new)|(?:\b(constructor)\b)|(?:([a-zA-Z_$][\.\w$]*)\s*(\??)))?\s*(?=\(|\<)'
+      scope: meta.method.overload.declaration.ts
+      captures:
+        1: storage.modifier.ts
+        2: storage.modifier.ts
+        3: storage.modifier.ts
+        4: storage.type.property.ts
+        5: keyword.operator.ts
+        6: storage.type.ts
+        7: entity.name.function.ts
+        8: keyword.operator.ts
+  new-expr:
+    - match: \b(new)\b
+      captures:
+        1: keyword.others.ts
+      push:
+        - meta_scope: new.expr.ts
+        - match: "(?=[(;]|$)"
+          pop: true
+        - include: type
+        - include: comment
+  null-literal:
+    - match: \b(null)\b
+      scope: constant.language.null.ts
+  numeric-literal:
+    - match: '\b(?<=[^$])((0(x|X)[0-9a-fA-F]+)|(0(o|O)[0-7]+)|(0(b|B)(0|1)+)|(([0-9]+(\.[0-9]+)?))([eE]([+-]?)[0-9]+(\.[0-9]+)?)?)\b'
+      scope: constant.numeric.ts
+  object-body:
+    - match: '\{'
+      captures:
+        0: meta.brace.curly.ts
+      push:
+        - meta_scope: meta.object.body.ts
+        - match: '\}'
+          captures:
+            0: meta.brace.curly.ts
+          pop: true
+        - include: string
+        - include: comment
+        - include: field-declaration
+        - include: method-declaration
+        - include: indexer-declaration
+        - include: type-annotation
+        - include: variable-initializer
+        - include: access-modifier
+        - include: static-modifier
+        - include: property-accessor
+  object-declaration:
+    - match: \b(?:(export)\s+)?\b(?:(abstract)\s+)?\b(?<!\.)(class|interface)\b
+      captures:
+        1: storage.type.ts
+        2: storage.modifier.ts
+        3: storage.type.ts
+      push:
+        - meta_scope: meta.declaration.object.ts
+        - match: '(?<=\})'
+          captures:
+            1: brace.curly.ts
+          pop: true
+        - include: comment
+        - include: object-heritage
+        - include: object-name
+        - include: type-parameters
+        - include: object-body
+  object-heritage:
+    - match: (?:\b(extends|implements)\b)
+      captures:
+        1: keyword.other.ts
+      push:
+        - meta_scope: meta.object.heritage.ts
+        - match: '(?=\{)'
+          captures:
+            1: brace.curly.ts
+          pop: true
+        - include: comment
+        - include: object-heritage
+        - include: type-parameters
+        - include: object-heritage-type
+  object-heritage-type:
+    - match: '(?:\b([a-zA-Z_$][\w$]*)\b)'
+      scope: meta.object.heritage.parent.ts
+      captures:
+        1: support.type.ts
+  object-member:
+    - match: '[a-zA-Z_$][\w$]*\s*:'
+      push:
+        - meta_scope: meta.object.member.ts
+        - match: '(?=,|\})'
+          pop: true
+        - include: expression
+  object-name:
+    - match: '[a-zA-Z_$][\w$]*'
+      scope: meta.object.name.ts
+      captures:
+        0: entity.name.class.ts
+  parameter-name:
+    - match: '(?:\s*\b(public|private|protected)\b\s+)?(\.\.\.)?\s*([a-zA-Z_$][\w$]*)\s*(\??)'
+      scope: parameter.name.ts
+      captures:
+        1: storage.modifier.ts
+        2: keyword.others.ts
+        3: variable.parameter.ts
+        4: keyword.others.ts
+  paren-expression:
+    - match: \(
+      captures:
+        0: meta.brace.paren.ts
+      push:
+        - match: \)
+          captures:
+            0: meta.brace.paren.ts
+          pop: true
+        - include: expression
+  property-accessor:
+    - match: \b(get|set)\b
+      scope: storage.type.property.ts
+  qstring-double:
+    - match: '"'
+      push:
+        - meta_scope: string.double.ts
+        - match: '"|(?:[^\\\n]$)'
+          pop: true
+        - include: string-character-escape
+  qstring-single:
+    - match: "'"
+      push:
+        - meta_scope: string.single.ts
+        - match: '\''|(?:[^\\\n]$)'
+          pop: true
+        - include: string-character-escape
+  regex:
+    - match: '(?<=[=(:,\[]|^|return|&&|\|\||!)\s*(/)(?![/*+{}?])'
+      push:
+        - meta_scope: string.regex.ts
+        - match: "$|(/)[igm]*"
+          pop: true
+        - match: \\.
+          scope: constant.character.escape.ts
+        - match: '\[(\\\]|[^\]])*\]'
+          scope: constant.character.class.ts
+  relational-operator:
+    - match: "===|!==|==|!=|<=|>=|<>|=|<|>"
+      scope: keyword.operator.comparison.ts
+  return-type:
+    - match: '(?<=\))\s*:'
+      push:
+        - meta_scope: meta.return.type.ts
+        - match: '(?=$)|(?=\{|;|//)'
+          pop: true
+        - include: type
+  static-modifier:
+    - match: \b(static)\b
+      scope: keyword.other.ts
+  storage-keyword:
+    - match: \b(var|let|function|const|module|namespace|void|export)\b
+      scope: storage.type.ts
+  string:
+    - include: qstring-single
+    - include: qstring-double
+  string-character-escape:
+    - match: '\\(x\h{2}|[0-2][0-7]{,2}|3[0-6][0-7]?|37[0-7]?|[4-7][0-7]?|.|$)'
+      scope: constant.character.escape
+  switch-block:
+    - match: "{"
+      push:
+        - meta_scope: switch-block.expr.ts
+        - match: '(?=\})'
+          pop: true
+        - include: expression
+  switch-expression:
+    - match: \b(switch)\b\s*\(
+      captures:
+        1: keyword.control.ts
+      push:
+        - meta_scope: switch-expression.expr.ts
+        - match: \)
+          pop: true
+        - include: expression
+  switch-statement:
+    - match: (?=\bswitch\b\s*\()
+      push:
+        - meta_scope: switch-statement.expr.ts
+        - match: "}"
+          pop: true
+        - include: switch-expression
+        - include: switch-block
+  template:
+    - match: "`"
+      captures:
+        0: string.template.ts
+      push:
+        - meta_scope: meta.template.ts
+        - match: "`"
+          captures:
+            0: string.template.ts
+          pop: true
+        - include: template-substitution-element
+        - include: template-string-contents
+  template-string-contents:
+    - match: .*?
+      push:
+        - meta_scope: string.template.ts
+        - match: '(?=(\$\{|`))'
+          pop: true
+        - include: string-character-escape
+  template-substitution-element:
+    - match: '\$\{'
+      captures:
+        0: keyword.others.ts
+      push:
+        - meta_scope: template.element.ts
+        - match: '\}'
+          captures:
+            0: keyword.others.ts
+          pop: true
+        - include: expression
+  ternary-expression:
+    - match: (?=\?)
+      push:
+        - match: "(?=$|[;,])"
+          pop: true
+        - include: ternary-operator
+        - include: ternary-expression-type
+  ternary-expression-type:
+    - include: string
+    - include: regex
+    - include: template
+    - include: comment
+    - include: literal
+    - include: paren-expression
+    - include: ternary-expression
+    - include: import-operator
+    - include: expression-operator
+    - include: imply-operator
+    - include: relational-operator
+    - include: arithmetic-operator
+    - include: logic-operator
+    - include: assignment-operator
+    - include: type-primitive
+    - include: function-call
+  ternary-operator:
+    - match: (\?)
+      push:
+        - match: (:)
+          pop: true
+        - include: ternary-expression-type
+  this-literal:
+    - match: \b(this)\b
+      scope: constant.language.this.ts
+  type:
+    - include: type-primitive
+    - include: type-parameters
+    - include: type-tuple
+    - include: type-object
+    - include: type-operator
+    - include: type-paren-or-function-type-parameters
+    - include: type-function-return-type
+    - include: type-name
+  type-annotation:
+    - match: ":"
+      push:
+        - meta_scope: meta.type.annotation.ts
+        - match: '(?=$|[,);\}\]]|//)|(?==[^>])|(?<=[\}>\]\)]|[a-zA-Z_$])\s*(?=\{)'
+          pop: true
+        - include: expression-operator
+        - include: type
+        - include: string
+        - include: comment
+  type-declaration:
+    - match: '\b(type)\b\s+([a-zA-Z_$][\w$]*)\s*'
+      captures:
+        1: keyword.other.ts
+        2: entity.name.class.ts
+      push:
+        - meta_scope: meta.type.declaration.ts
+        - match: "(?=$|[,);>]|var|type|function|class|interface)"
+          pop: true
+        - include: type-parameters
+        - include: type
+        - match: '=\s*'
+          scope: keyword.operator.comparison.ts
+  type-function-return-type:
+    - match: "=>"
+      captures:
+        0: keyword.operator.ts
+      push:
+        - meta_scope: meta.type.function.return.ts
+        - match: '(?=\s*[,\)\{=;>]|//|$)'
+          pop: true
+        - include: type
+  type-name:
+    - match: '[a-zA-Z_$][.\w$]*'
+      scope: meta.type.name.ts
+      captures:
+        1: entity.name.type.ts
+  type-object:
+    - match: '\{'
+      captures:
+        0: meta.brace.curly.ts
+      push:
+        - meta_scope: meta.object.type.ts
+        - match: '\}'
+          captures:
+            0: meta.brace.curly.ts
+          pop: true
+        - include: comment
+        - include: field-declaration
+        - include: method-declaration
+        - include: indexer-declaration
+        - include: type-annotation
+  type-operator:
+    - match: "[.|]"
+      scope: keyword.operator.type.ts
+  type-parameters:
+    - match: '([a-zA-Z_$][\w$]*)?(<)'
+      captures:
+        1: entity.name.type.ts
+        2: meta.brace.angle.ts
+      push:
+        - meta_scope: meta.type.parameters.ts
+        - match: (?=$)|(>)
+          captures:
+            2: meta.brace.angle.ts
+          pop: true
+        - match: \b(extends)\b
+          scope: keyword.other.ts
+        - include: comment
+        - include: type
+  type-paren-or-function-type-parameters:
+    - match: (?:\b(new)\b)?\s*\(
+      captures:
+        1: keyword.control.ts
+      push:
+        - meta_scope: meta.type.paren.cover.ts
+        - match: \)
+          pop: true
+        - include: comment
+        - include: type
+        - include: function-type-parameters
+  type-primitive:
+    - match: \b(string|number|boolean|symbol|any|void)\b
+      scope: meta.type.primitive.ts
+      captures:
+        1: support.type.ts
+  type-tuple:
+    - match: '\['
+      captures:
+        0: meta.brace.square.ts
+      push:
+        - meta_scope: meta.type.tuple.ts
+        - match: '\]'
+          captures:
+            0: meta.brace.square.ts
+          pop: true
+        - include: type
+        - include: comment
+  undefined-literal:
+    - match: \b(undefined)\b
+      scope: constant.language.ts
+  var-expr:
+    - match: (?<!\()\s*\b(var|let|const(?!\s+enum))\b
+      captures:
+        1: storage.type.ts
+      push:
+        - meta_scope: meta.var.expr.ts
+        - match: (?=$|;)
+          pop: true
+        - include: var-single-variable
+        - include: comment
+  var-single-variable:
+    - match: '\b([a-zA-Z_$][\w$]*)\s*(=?)'
+      captures:
+        1: variable.ts
+      push:
+        - meta_scope: meta.var-single-variable.expr.ts
+        - match: "(?=$|[;,])"
+          pop: true
+        - include: ternary-expression
+        - include: type-annotation
+        - include: string
+        - include: comment
+        - include: expression
+  variable-initializer:
+    - match: (=)
+      captures:
+        1: keyword.operator.comparison.ts
+      push:
+        - match: "(?=$|[,);=])"
+          pop: true
+        - include: expression
