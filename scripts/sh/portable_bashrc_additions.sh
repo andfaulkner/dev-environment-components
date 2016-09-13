@@ -47,8 +47,6 @@ alias bashrc_elixir='vim "$SNIPPETS_DIR/scripts/sh/elixir_scripts.sh"'
 # LOAD 'MODULES'
 source "$SNIPPETS_DIR/scripts/sh/bash_modules/module_File.sh"
 
-alias ='vim "$SNIPPETS_DIR/scripts/sh/android_scripts.sh"'
-
 
 ################################################################################
 
@@ -211,3 +209,5 @@ fi
 case $- in
    *i*) source ~/.bashrc
 esac
+
+alias vimrc="vim ~/.config/nvim/init.vim"
