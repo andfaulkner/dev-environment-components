@@ -39,8 +39,8 @@ echo "                                                               type alias"
 echo "     * can return function, alias, application location,  "
 echo " - Output the actual code of a function or alias:              type function_name_here"
 echo ''
-echo ''# RENAME FILES
-echo '' -  recursively change extension of all matching files:       rename -S .js .jsx --glob **/*.js
+echo '# RENAME FILES'
+echo ' -  recursively change extension of all matching files:       rename -S .js .jsx --glob **/*.js'
 echo ''
 echo '********** CURL ************'
 echo ' - Save file received via curl by the name it is stored as on the server: example:'

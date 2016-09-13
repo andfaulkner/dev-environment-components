@@ -1,0 +1,10 @@
+<snippet>
+  <description>New function</description>
+<content><![CDATA[
+function ${1:name_of_function} {
+  ${0}
+}
+]]></content>  
+  <tabTrigger>fn</tabTrigger>
+  <scope>source.shell</scope>
+</snippet>

@@ -1,6 +1,7 @@
 [
-  { "keys": ["ctrl+alt+k"], "`": "clear_console" },
+  { "keys": ["ctrl+alt+k"], "command": "clear_console" },
 
+// "################################## SIDEBAR HANDLING ##################################",
   { "keys": ["alt+r"], "command": "side_bar_rename" },
   { "keys": ["alt+d"], "command": "side_bar_duplicate" },
   { "keys": ["alt+f"], "command": "side_bar_new_directory" },
@@ -14,10 +15,30 @@
   { "keys": ["command+ctrl+shift+a"], "command": "alignment" },
   { "keys": ["ctrl+shift+alt+l"], "command": "remove_trailing_whitespace" },
 
+//################################## SWITCH SYNTAX OF CURRENT FILE ##################################
+  { "keys": [  "command+ctrl+shift+alt+a"  ], "command": "set_file_type",
+        "args": { "syntax": "Packages/Text/Plain text.tmLanguage"                                   }},
+  {"keys": [  "command+ctrl+shift+alt+b"  ], "command": "set_file_type",
+        "args": { "syntax": "Packages/ShellScript/Shell-Unix-Generic.sublime-syntax"                }},
+  {"keys": [  "command+ctrl+shift+alt+c"  ], "command": "set_file_type",
+        "args": { "syntax": "Packages/CSS/CSS.sublime-syntax"                                       }},
+  {"keys": [  "command+ctrl+shift+alt+d"  ], "command": "set_file_type",
+        "args": { "syntax": "Packages/JavaScriptNext - ES6 Syntax/JSON (JavaScriptNext).tmLanguage" }},
+  {"keys": [  "command+ctrl+shift+alt+h"  ], "command": "set_file_type",
+        "args": { "syntax": "Packages/HTML/HTML.sublime-syntax"                                     }},
+  {"keys": [  "command+ctrl+shift+alt+j"  ], "command": "set_file_type",
+        "args": { "syntax": "Packages/JavaScriptNext - ES6 Syntax/JavaScriptNext.tmLanguage"        }},
+  {"keys": [  "command+ctrl+shift+alt+m"  ], "command": "set_file_type",
+        "args": { "syntax": "Packages/Markdown/Markdown.sublime-syntax"                             }},
+  {"keys": [  "command+ctrl+shift+alt+r"  ], "command": "set_file_type",
+        "args": { "syntax": "Packages/Ruby/Ruby.sublime-syntax"                                     }},
+  {"keys": [  "command+ctrl+shift+alt+t"  ], "command": "set_file_type", 
+        "args": { "syntax": "Packages/User/snippets/ts_extracts/lang/TypeScript.tmLanguage"         }},
+
+// ####################################### CREATE NEW SNIPPETS #######################################
   { "DESCRIPTION": "CREATE NEW SNIPPET", "keys": ["ctrl+shift+alt+s"],
     "command": "side_bar_new_file", 
-    "args": {"paths": ["/Users/andrew/Library/Application Support/Sublime Text 3/Packages/User/snippets/snippets"]}
-  },
+    "args": {"paths": ["/Users/andrew/Library/Application Support/Sublime Text 3/Packages/User/snippets/snippets"]}},
   { "DESCRIPTION": "CREATE NEW JS SNIPPET", "keys": ["ctrl+shift+alt+j"],
     "command": "side_bar_new_file",
     "args": {"paths": ["/Users/andrew/Library/Application Support/Sublime Text 3/Packages/User/snippets/snippets/_langs/js"]}
@@ -27,28 +48,24 @@
     "command": "open_file",
     "args": {
       "file": "/Users/andrew/Library/Application Support/Sublime Text 3/Packages/User/Default (OSX).sublime-keymap"
-    }
-  },
+    }},
   { "DESCRIPTION": "OPEN SUBLME CUSTOM MANUAL / CHEAT NOTES", "keys": ["ctrl+command+shift+m"],
     "command": "open_file",
     "args": {
       "file": "/Users/andrew/Library/Application Support/Sublime Text 3/Packages/User/snippets/custom-manuals/man__sublime"
-    }
-  },
+    }},
 
-  {
+  { "DESCRIPTION": "RUN MACRO",
     "keys": ["ctrl+command+r"],
     "command": "run_macro_file",
-    "args": {
-      "file": "res://Packages/LocalVariable/macro/rename_variable.sublime-macro"
-    }
+    "args": { "file": "res://Packages/LocalVariable/macro/rename_variable.sublime-macro" }
   },
 
   { "DESCRIPTION": "SHOW JSON TREE - ESSENTIAL JSON COMMAND",
     "keys": ["command+ctrl+alt+j"], "command": "json_tree" },
 
-  { "DESCRIPTION": "TYPESCRIPT CODE NAVIGATION, ESSENTIAL COMMAND",
-    "keys": ["command+ctrl+alt+g"], "command": "typescript_go_to_definition" },
+// ##### TYPESCRIPT CODE NAVIGATION #####################################################################
+  { "keys": ["command+ctrl+alt+g"], "command": "typescript_go_to_definition" },
   { "keys": ["ctrl+shift+t,ctrl+shift+r"], "command": "typescript_rename" },
   { "keys": ["ctrl+shift+t,ctrl+shift+f"], "command": "typescript_find_references" },
 

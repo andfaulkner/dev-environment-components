@@ -44,6 +44,14 @@ alias bashrc='vim "$SNIPPETS_DIR/scripts/sh/portable_bashrc_additions.sh"'
 alias bashrc_clojure='vim "$SNIPPETS_DIR/scripts/sh/clojure_scripts.sh"'
 alias bashrc_elixir='vim "$SNIPPETS_DIR/scripts/sh/elixir_scripts.sh"'
 
+# LOAD 'MODULES'
+source "$SNIPPETS_DIR/scripts/sh/bash_modules/module_File.sh"
+
+alias ='vim "$SNIPPETS_DIR/scripts/sh/android_scripts.sh"'
+
+
+################################################################################
+
 
 ################################################################################
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ QUICKNAV ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -132,7 +140,6 @@ function rol_expand_shdir_vars {
   eval echo $(ruby -pe '$_ = "$" + $_')
 }
 
-
 # get all paths to source $SOME_SOURCE - referenced scripts in a shell file
 function rol_get_bash_sources_from_vars {
   cat $1 | ack 'source \$' | eval echo $(ruby -pe '$_ = "$" + $_')
@@ -162,7 +169,6 @@ function show_aliases_mac {
   cat ~/.
 }
 
-
 # store all scripts in a single temporary file
 function list_dir_files {
   #grab all "path to bash source script" containing vars from .bashrc, cat all files within
@@ -176,6 +182,21 @@ function list_dir_files {
 #    insertfirstline path/to/file.ext "text to insert before 1st line of file"
 function insertfirstline {
     echo $2 | cat - $1 > temp && mv temp $1
+}
+
+# get the file extension
+# @param $1 - path/to/file.ext
+# @returns file extension, excluding the dot. E.g. js
+function file.gettext {
+    echo "${1##*/}" | awk -F. '{print $NF}'
+}
+
+function file.get_first_line {
+  cat $1 | awk 'NR==1'
+}
+
+function file.get_line { #arg1: filename; arg2: line
+  cat $1 | awk "NR==$2"
 }
 
 # bash completion

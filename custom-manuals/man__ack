@@ -1,26 +1,29 @@
 #!/usr/bin/env sh
 
-echo ''
-echo '---------------------------------------------------------------------------------'
-echo '** ACK **'
-echo '---------------------------------------------------------------------------------'
-echo 'SHOW CONTEXT OF FIND'
-echo '-- show a lines before match        ack --before-context=NUM "search_for_something'
-echo '-- show a lines after match         ack --after-context=NUM "search_for_something'
-echo '-- show lines around match          ack --context=NUM "search_for_something'
-echo ''
-echo 'SEARCH FILES, SHOW MATCHING FILE'
-echo '-- search all cur dir files, show filename above all matches'
-echo '                                    ack "rbash" -H **'
-echo '-- show filename                    -H'
-echo ''
-echo 'INVERSE SEARCH (SHOW NON-MATCHES):  ack -v "only-return-things-that-dont-match-me'
-echo ""
-echo "List matching filenames in current and child directories. Alter search-for-this:"
-echo '        tree | ack "search-for-this" | awk "{gsub(/.*── /,\"\",\$0); print \$0}'
-echo ' - same, but with full file path'
-echo '        tree -f | ack "search-for-this" | awk "{gsub(/.*── /,\"\",\$0); print \$0}'
-echo ''
-echo 'multiline search in grep!!!:    grep -Pzo "(?s)^(\s*)\N*main.*?{.*?^\1}" *.c'
-echo "   -  see http://stackoverflow.com/questions/3717772/regex-grep-for-multi-line-search-needed#answer-7167115"
-echo '---------------------------------------------------------------------------------\n'
+cat << END_OF_TERMINAL_MANUAL_FOR_BASIC_REFERENCE
+
+---------------------------------------------------------------------------------
+** ACK and GREP **
+---------------------------------------------------------------------------------
+SHOW CONTEXT OF FIND
+-- show a lines before match        ack --before-context=NUM "search_for_something"
+-- show a lines after match         ack --after-context=NUM "search_for_something"
+-- show lines around match          ack --context=NUM "search_for_something"
+
+SEARCH FILES, SHOW MATCHING FILE
+-- search all cur dir files, show filename above all matches
+                                    ack "rbash" -H **
+-- show filename                    -H
+
+INVERSE SEARCH (SHOW NON-MATCHES):  ack -v "only-return-things-that-dont-match-me"
+
+List matching filenames in current and child directories. Alter search-for-this:
+        tree | ack "search-for-this" | awk "{gsub(/.*── /,\"\",\$0); print \$0}"
+ - same, but with full file path
+        tree -f | ack "search-for-this" | awk "{gsub(/.*── /,\"\",\$0); print \$0}"
+
+multiline search in grep!:    grep -Pzo "(?s)^(\s*)\N*main.*?{.*?^\1}" *.c
+   -  see http://stackoverflow.com/questions/3717772/regex-grep-for-multi-line-search-needed#answer-7167115
+
+---------------------------------------------------------------------------------\n
+END_OF_TERMINAL_MANUAL_FOR_BASIC_REFERENCE

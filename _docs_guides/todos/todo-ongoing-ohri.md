@@ -1,7 +1,14 @@
 September
 =========
 
-*  3 chai snippets
+*  ! 5 chai snippets
+*  2 bash snippets
+*  2 lodash snippets
+*  zip drawing
+
+function getfileext {
+    echo "${1##*/}" | awk -F. '{print $NF}'
+}
 
 Sept 9th
 ========

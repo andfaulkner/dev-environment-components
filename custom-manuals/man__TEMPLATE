@@ -1,18 +1,20 @@
 #!/usr/bin/env sh
 
-echo ''
-echo '---------------------------------------------------------------------------------'
-echo '** NEW_TYPE **'
-echo '---------------------------------------------------------------------------------'
-echo '- subtitle'
-echo ''
-echo "## First item (title here):   general syntax of 'item'"
-echo "   -- (definition of first item goes here)"
-echo "   -- example:                example goes here"
-echo ""
-echo "## List item title:"
-echo "   -- subitem here:           syntax here"
-echo "   -- subitem here:           syntax here"
-echo "   -- subitem here:           syntax here"
-echo ""
-echo '---------------------------------------------------------------------------------\n'
+cat << END_OF_TERMINAL_MANUAL_FOR_BASIC_REFERENCE
+
+---------------------------------------------------------------------------------
+** NEW_TYPE **
+---------------------------------------------------------------------------------
+- subtitle
+
+## First item (title here):   general syntax of 'item'
+   -- (definition of first item goes here)
+   -- example:                example goes here
+
+## List item title:
+   -- subitem here:           syntax here
+   -- subitem here:           syntax here
+   -- subitem here:           syntax here
+
+---------------------------------------------------------------------------------\n
+END_OF_TERMINAL_MANUAL_FOR_BASIC_REFERENCE
