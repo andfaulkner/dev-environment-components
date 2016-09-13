@@ -1,0 +1,10 @@
+<snippet>
+  <description>Return index of last item in array to match a given predicate</description>
+<content><![CDATA[
+${1/.+/const /}${1:lastIndex}${1/.+/ = /}_.findLastIndex(${2:arrToSearch}, (${3:arrItem, optionalIndex}) => {
+  ${0:return (/*test condition, return index of last time this returns true*/);}
+};
+]]></content>  
+  <tabTrigger>_arr_findlastindex</tabTrigger>
+  <scope>source.js, source.ts, source.jsx, source.tsx</scope>
+</snippet>

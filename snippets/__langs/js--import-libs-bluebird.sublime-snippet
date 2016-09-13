@@ -1,0 +1,8 @@
+<snippet>
+  <description>Import Bluebird module</description>
+<content><![CDATA[
+import * as Bluebird from "bluebird";
+]]></content>
+  <tabTrigger>impblu</tabTrigger>
+  <scope>source.js, source.ts, source.jsx, source.tsx</scope>
+</snippet>

@@ -20,7 +20,7 @@
   },
   { "DESCRIPTION": "CREATE NEW JS SNIPPET", "keys": ["ctrl+shift+alt+j"],
     "command": "side_bar_new_file",
-    "args": {"paths": ["/Users/andrew/Library/Application Support/Sublime Text 3/Packages/User/snippets/snippets/__langs/js"]}
+    "args": {"paths": ["/Users/andrew/Library/Application Support/Sublime Text 3/Packages/User/snippets/snippets/_langs/js"]}
   },
 
   { "DESCRIPTION": "OPEN SUBLIME HOTKEYS FILE", "keys": ["ctrl+command+shift+b"],

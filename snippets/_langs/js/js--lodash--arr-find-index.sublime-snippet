@@ -1,0 +1,10 @@
+<snippet>
+  <description>Return index of 1st item in array to match a given predicate</description>
+<content><![CDATA[
+${1/.+/const /}${1:firstIndex}${1/.+/ = /}_.findIndex(${2:arrToSearch}, (${3:arrItem, optionalIndex}) => {
+  ${0:return (/*test condition, return index of 1st time this returns true*/);}
+};
+]]></content>  
+  <tabTrigger>_arr_findindex</tabTrigger>
+  <scope>source.js, source.ts, source.jsx, source.tsx</scope>
+</snippet>

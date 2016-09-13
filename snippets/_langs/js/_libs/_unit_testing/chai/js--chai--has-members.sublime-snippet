@@ -1,0 +1,8 @@
+<snippet>
+  <description>Determine if array contains all values in another given array</description>
+<content><![CDATA[
+expect(${1:[2, 3, 4, 5, 6]}).to.have.members(${2:[2, 5, 6]});${0}
+]]></content>  
+  <tabTrigger>chai_array_has_members</tabTrigger>
+  <scope>source.js, source.ts, source.jsx, source.tsx</scope>
+</snippet>

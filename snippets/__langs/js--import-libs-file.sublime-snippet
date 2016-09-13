@@ -1,0 +1,8 @@
+<snippet>
+  <description>Import Node file module</description>
+<content><![CDATA[
+import * as file from 'file';${0}
+]]></content>  
+  <tabTrigger>impfile</tabTrigger>
+  <scope>source.js, source.ts, source.jsx, source.tsx</scope>
+</snippet>

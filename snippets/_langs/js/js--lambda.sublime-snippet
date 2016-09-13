@@ -1,0 +1,10 @@
+<snippet>
+  <description>Create an immutable lambda expression assigned to a variable</description>
+<content><![CDATA[
+const ${1:name} = (${2:/*args, go, here*/}) => {
+  ${0}
+};
+]]></content>  
+  <tabTrigger>lambda</tabTrigger>
+  <scope>source.js, source.ts, source.jsx, source.tsx</scope>
+</snippet>

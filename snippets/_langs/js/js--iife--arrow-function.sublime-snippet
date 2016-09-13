@@ -1,0 +1,10 @@
+<snippet>
+  <description>iife defined with an arrow function</description>
+<content><![CDATA[
+${1/.+/const /}${1:NameOfRevealingModule}${1/.+/ = /}((${2:params, go, here}${2/.+/, /}undefined) => {
+  ${0}
+})(${2});
+]]></content>  
+  <tabTrigger>iife_arr</tabTrigger>
+  <scope>source.js, source.ts, source.jsx, source.tsx</scope>
+</snippet>

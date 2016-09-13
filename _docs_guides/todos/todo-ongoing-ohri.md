@@ -1,6 +1,8 @@
 September
 =========
 
+*  3 chai snippets
+
 Sept 9th
 ========
 *   !slack for mac
