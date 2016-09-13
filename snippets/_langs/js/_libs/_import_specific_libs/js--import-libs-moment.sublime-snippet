@@ -3,6 +3,6 @@
 <content><![CDATA[
 import moment from 'moment';
 ]]></content>
-  <tabTrigger>impblu</tabTrigger>
+  <tabTrigger>impmo</tabTrigger>
   <scope>source.js, source.ts, source.jsx, source.tsx</scope>
 </snippet>

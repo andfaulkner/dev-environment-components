@@ -1,0 +1,8 @@
+<snippet>
+  <description>Create a thennable version of fs.unlink (aka delete)</description>
+<content><![CDATA[
+const unlinkAsync = Bluebird.promisify(fs.unlink);${0}
+]]></content>  
+  <tabTrigger>blu_fn_unlink</tabTrigger>
+  <scope>source.js, source.ts, source.jsx, source.tsx</scope>
+</snippet>

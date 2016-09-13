@@ -35,13 +35,21 @@
   {"keys": [  "command+ctrl+shift+alt+t"  ], "command": "set_file_type", 
         "args": { "syntax": "Packages/User/snippets/ts_extracts/lang/TypeScript.tmLanguage"         }},
 
-// ####################################### CREATE NEW SNIPPETS #######################################
+// ####################################### CREATE NEW FILES, MAINLY SNIPPETS #######################################
   { "DESCRIPTION": "CREATE NEW SNIPPET", "keys": ["ctrl+shift+alt+s"],
     "command": "side_bar_new_file", 
     "args": {"paths": ["/Users/andrew/Library/Application Support/Sublime Text 3/Packages/User/snippets/snippets"]}},
   { "DESCRIPTION": "CREATE NEW JS SNIPPET", "keys": ["ctrl+shift+alt+j"],
     "command": "side_bar_new_file",
     "args": {"paths": ["/Users/andrew/Library/Application Support/Sublime Text 3/Packages/User/snippets/snippets/_langs/js"]}
+  },
+  { "DESCRIPTION": "CREATE NEW CSS SNIPPET", "keys": ["ctrl+shift+alt+c"],
+    "command": "side_bar_new_file",
+    "args": {"paths": ["/Users/andrew/Library/Application Support/Sublime Text 3/Packages/User/snippets/snippets/_langs/css_scss"]}
+  },
+  { "DESCRIPTION": "CREATE NEW GUIDE FILE", "keys": ["ctrl+shift+alt+g"],
+    "command": "side_bar_new_file",
+    "args": {"paths": ["/Users/andrew/Library/Application Support/Sublime Text 3/Packages/User/snippets/_docs_guides/unsorted"]}
   },
 
   { "DESCRIPTION": "OPEN SUBLIME HOTKEYS FILE", "keys": ["ctrl+command+shift+b"],

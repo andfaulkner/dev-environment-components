@@ -1,0 +1,8 @@
+<snippet>
+  <description>Create a thennable version of fs.writeFile</description>
+<content><![CDATA[
+const writeFileAsync = Bluebird.promisify(fs.writeFile);${0}
+]]></content>  
+  <tabTrigger>blu_fn_writefile</tabTrigger>
+  <scope>source.js, source.ts, source.jsx, source.tsx</scope>
+</snippet>

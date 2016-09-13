@@ -1,0 +1,11 @@
+<snippet>
+  <description>Style a colour (import * as colors from 'colors';)</description>
+<content><![CDATA[
+${1:import * as colors from 'colors';}${1/.+/\n\n/}colors.${2:black/*|red|yellow|green|blue|magenta|gray|cyan|gray|white : fg*/}
+      ${3/.+/./}${3:bgBlack/*|bgRed|bgYellow|bgGreen|bgBlue|bgMagenta|bgGray|bgCyan|bgGray|bgWhite*/}
+      ${4/.+/./}${4:bold/*|italic|underline|inverse|strikethrough|hidden*/}
+      ${5/.+/./}${5:zebra|rainbow|trap|america}(${0});
+]]></content>  
+  <tabTrigger>colors_str</tabTrigger>
+  <scope>source.js, source.ts, source.jsx, source.tsx</scope>
+</snippet>

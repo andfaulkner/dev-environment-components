@@ -1,0 +1,14 @@
+<snippet>
+  <description>Delete a file</description>
+<content><![CDATA[
+fs.unlink(path.join(__dirname, ${1:'file_to_delete_relative_to_cur_path'}), (err) => {
+  if (err) {
+    console.error('file delete error: ', err);
+    throw err;
+  }
+  ${0:console.log('successfully erased file');}
+});
+]]></content>  
+  <tabTrigger>fs_unlink</tabTrigger>
+  <scope>source.js, source.ts, source.jsx, source.tsx</scope>
+</snippet>
