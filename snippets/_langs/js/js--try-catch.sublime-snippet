@@ -1,0 +1,13 @@
+<snippet>
+  <description>Create a try-catch statement</description>
+<content><![CDATA[
+try {
+  ${0}
+} catch (err) {
+  console.error('${1:error}', err);
+  throw err;
+}
+]]></content>  
+  <tabTrigger>trycatch</tabTrigger>
+  <scope>source.js, source.ts, source.jsx, source.tsx</scope>
+</snippet>

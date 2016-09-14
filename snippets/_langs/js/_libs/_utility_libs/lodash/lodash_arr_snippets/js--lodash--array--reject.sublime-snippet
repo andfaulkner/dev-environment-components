@@ -1,5 +1,5 @@
 <snippet>
-  <description>Reject items in arr that fn doesnt ret truthy for; ret filtered arr. NON-DEST</description>
+  <description>Reject items in arr that fn ret truthy for; ret filtered arr. NON-DEST</description>
 <content><![CDATA[
 ${1/.+/let /}${1:varToStoreFilteredArr}${1/.+/ = /}_.reject(${2:arr_to_reject}, (${3:item, index, origArr}) => {
   ${0:return item;}
