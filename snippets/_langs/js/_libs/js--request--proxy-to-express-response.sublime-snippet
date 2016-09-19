@@ -1,0 +1,15 @@
+<snippet>
+  <description>Proxy API call to current route to another dest (req is express req)</description>
+<content><![CDATA[
+req.pipe(
+  request('${1:http://example.com/location}')
+)
+.on('error', (error) => {
+  console.error(`error on \${req.method} request to \${req.originalUrl}: `, error);
+  throw error;
+})
+.pipe(res);${0}
+]]></content>  
+  <tabTrigger>request_proxy_to_express</tabTrigger>
+  <scope>source.js, source.ts, source.jsx, source.tsx</scope>
+</snippet>

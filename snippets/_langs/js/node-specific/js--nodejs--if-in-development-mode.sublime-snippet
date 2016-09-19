@@ -1,0 +1,10 @@
+<snippet>
+  <description>If in development mode, do the following</description>
+<content><![CDATA[
+if (process.env.NODE_ENV === 'development') {
+  ${1://do this}
+}${0}
+]]></content>  
+  <tabTrigger>ifdev</tabTrigger>
+  <scope>source.js, source.ts, source.jsx, source.tsx</scope>
+</snippet>

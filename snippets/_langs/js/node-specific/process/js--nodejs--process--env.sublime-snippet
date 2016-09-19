@@ -1,0 +1,8 @@
+<snippet>
+  <description>See environment variables defined with eg. NODE_ENV=test on CLI</description>
+<content><![CDATA[
+process.env${0}
+]]></content>  
+  <tabTrigger>proc_env</tabTrigger>
+  <scope>source.js, source.ts, source.jsx, source.tsx</scope>
+</snippet>
