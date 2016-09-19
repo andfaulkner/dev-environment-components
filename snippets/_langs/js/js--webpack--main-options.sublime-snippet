@@ -1,0 +1,123 @@
+<snippet>
+  <description>Webpack boilerplate with basic options and explanations. Acts as API def</description>
+<content><![CDATA[
+// often needed
+let path = require('path');
+
+module.exports = {
+  // directory to consider the "base" - all other URLs are relative to it. This one assumes the
+  // webpack file is inside a config folder, and that web assets are in [root]/client
+  context: path.join(__dirname, '..', "/client"),
+
+  // file to load initially - all 'require' and 'import' calls cause other files to be loaded,
+  // then bundled together into a single output (excepting css calls, etc.)
+  entry: path.join(__dirname, '..', 'root.tsx'),
+
+  // output file. Assumes we're outputting a file named 'app.js' into a [root]/build folder
+  output: {
+    path: path.join(__dirname, '..', 'build'),
+    filename: 'app.js'
+  },
+
+  // Options affecting the resolving of modules
+  resolve: {
+    // directories containing your modules
+    root: [ path.join(__dirname, '..', 'node_modules') ]
+  },
+
+  // Options affecting the resolving of modules - for loaders
+  resolveLoader: {
+    // directories containing modules for loaders to use
+    root: [ path.join(__dirname, '..', 'node_modules') ]
+  },
+
+  // watch files for changes and rebuild when changes found
+  watch: true,
+
+  // show current progress in CLI
+  progress: true,
+
+  // display colours in CLI showing webpack info
+  colors: true,
+
+  // report first error as 'hard' error and crash, instead of tolerating it
+  bail: false,
+
+  // put loaders into debug mode (whatever that means)
+  debug: false
+
+  module: {
+    // build files of different types - i.e. run them through (pre-)processors.
+    loaders: [
+      {
+        test: /\.tsx?$/,
+        exclude: ['node_modules', '../node_modules'],
+        loaders: ['babel?presets[]=react&presets[]=es2015&presets[]=es2015', 'ts-loader']
+      },
+      { test: /\.((hbs)|(handlebars))$/, loader: "handlebars-loader" },
+      // load json files without having to parse, pull them in, etc.
+      { test: /\.json/, loader: "json-loader" },
+      {
+        test: /\.(jpg|png)$/,
+        loader: 'url?limit=25000',
+        include: path.join(srcPath, 'components')
+      },
+      // build jsx files with babel (i.e. using es6)
+      {
+        test: /\.jsx?$/,
+        loader: 'babel?presets[]=react&presets[]=es2015&presets[]=es2015',
+        exclude: /node_modules/
+      }
+    ]
+  },
+
+  // if you're using postcss, defines which postcss plugins are available, and loads them
+  postcss: function(webpack) {
+    return [
+      // !------ ALREADY INCLUDED BY cssnext: require('autoprefixer'),
+      require('postcss-mixins')({
+        mixinsFiles: path.join(__dirname, '..', 'client/assets/mixins.css')
+      }),
+      require('postcss-partial-import')({
+        addDependencyTo: webpack
+      }),
+      require('postcss-simple-vars'),
+      require('postcss-cssnext')
+    ];
+  },
+
+  // specify dependencies for your library that are not resolved by webpack, but become
+  // dependencies of the output. I.E. they are imported from the environment in runtime.
+  // Note that this works poorly when using tslint
+  externals: {
+    // webpack simply exports the global objects already present.
+    'react/lib/ExecutionEnvironment': true,
+    'react/lib/ReactContext': true,
+    'jquery': 'jQuery',
+  },
+
+  plugins: [
+    new ExtractTextPlugin("[name].css"),
+    // insert data into root handlebars file, output result
+    new HandlebarsPlugin({
+      entry: srcFilePath("index.hbs"),     // path to main hbs template 
+      output: buildFilePath("index.html"), // filepath to result
+      data: config.appConfig['index-data'] // data passed to main hbs template
+    }),
+    // define a global variable in the output build. This is then reference-able within the file.
+    new webpack.DefinePlugin({
+      'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV || 'development'),
+    }),
+  ],
+
+  // for use with webpack-dev-server
+  devServer: {
+    contentBase: buildPath,
+    progress: true,
+    colors: true
+  },
+};
+]]></content>  
+  <tabTrigger>webpack_api</tabTrigger>
+  <scope>source.js, source.ts, source.jsx, source.tsx</scope>
+</snippet>
