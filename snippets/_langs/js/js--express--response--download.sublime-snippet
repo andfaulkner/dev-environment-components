@@ -1,0 +1,14 @@
+<snippet>
+  <description>Send file at given path to user as a 'download'</description>
+<content><![CDATA[
+res.download(${1:'/path/of/file.pdf'}${2/.+/, /}${2:'send_to_user_w_this_name.pdf'}, (err) => {
+  if (err) {
+    console.error(err);
+    throw err;
+  }
+  ${0:// actions run if successfully sent file to user as dwl. E.g. decrement a dwl counter}
+});
+]]></content>  
+  <tabTrigger>exp_res_download</tabTrigger>
+  <scope>source.js, source.ts, source.jsx, source.tsx</scope>
+</snippet>

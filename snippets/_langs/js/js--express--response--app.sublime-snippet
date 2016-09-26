@@ -1,0 +1,8 @@
+<snippet>
+  <description>Holds ref to the Express app instance using the current middleware</description>
+<content><![CDATA[
+res.app${0}
+]]></content>  
+  <tabTrigger>exp_res_app</tabTrigger>
+  <scope>source.js, source.ts, source.jsx, source.tsx</scope>
+</snippet>

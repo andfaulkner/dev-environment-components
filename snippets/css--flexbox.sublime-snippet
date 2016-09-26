@@ -1,0 +1,14 @@
+<snippet>
+  <description>Example flexbox-using style</description>
+<content><![CDATA[
+${1:.dose-box-wrapper} {
+  display: flex;
+  flex-direction: ${2:column; /* top->bottom; row : L->R; row-reverse: R->L; column-reverse: B->T */}
+  justify-content: ${3:flex-start; /*align L. flex-end: R; center; space-between: fill w/ adjust sizes betw els; space-around: eql space around all els, incl edges*/}
+  flex-wrap: ${4:nowrap; /* don't wrap to another line. wrap: wrap->next line. wrap-reverse: R->L wrap */}
+  align-items: ${5:center; /* align in center of axis of cur line. flex-start: align top. flex-end: align bottom; baseline: align so baselines are aligned*/}${0}
+}
+]]></content>  
+  <tabTrigger>flex_ex</tabTrigger>
+  <scope>source.css</scope>
+</snippet>

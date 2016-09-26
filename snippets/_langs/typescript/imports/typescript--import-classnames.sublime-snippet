@@ -1,0 +1,8 @@
+<snippet>
+  <description>Import classnames lib (for use with react)</description>
+<content><![CDATA[
+import classNames from "classnames";
+]]></content>  
+  <tabTrigger>imp_classnames</tabTrigger>
+  <scope>source.ts, source.tsx, source.js, source.jsx</scope>
+</snippet>

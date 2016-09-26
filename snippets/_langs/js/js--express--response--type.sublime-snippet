@@ -1,0 +1,8 @@
+<snippet>
+  <description>Set response type: html, json, png, application/json, etc.</description>
+<content><![CDATA[
+res.type('${1:html|.html|json|png|application/pdf|text/plain|application/javascript|text/css|etc.}');${0}
+]]></content>  
+  <tabTrigger>exp_res_type</tabTrigger>
+  <scope>source.js, source.ts, source.jsx, source.tsx</scope>
+</snippet>

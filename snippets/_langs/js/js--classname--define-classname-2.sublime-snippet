@@ -1,0 +1,8 @@
+<snippet>
+  <description>Define React component classes via classname module. Use inside React tag.</description>
+<content><![CDATA[
+className={classNames(${1:'classes', 'go', 'here'})}${0}
+]]></content>  
+  <tabTrigger>classname_rct</tabTrigger>
+  <scope>source.js, source.ts, source.jsx, source.tsx</scope>
+</snippet>

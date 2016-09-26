@@ -1,0 +1,20 @@
+<snippet>
+  <description>Create group of reducers</description>
+<content><![CDATA[
+import { _ } from "${1:../.}./assets/lib/lodashMixins";
+import { defaultAction } from "${2:.}./actions";
+import { defaultState } from "${3:.}./defaultState";
+
+export const reducers = (state = defaultState, action = defaultAction) => {
+  switch (action.type) {
+    case '${4:MY_ACTION}':
+      return _.assignClone(state, ${5:{ pages: action.payload \}});
+    default:
+      return state;
+  }
+};
+
+]]></content>
+  <tabTrigger>rdx_reducer</tabTrigger>
+  <scope>source.js, source.ts, source.jsx, source.tsx</scope>
+</snippet>

@@ -1,0 +1,12 @@
+<snippet>
+  <description>Run the </description>
+<content><![CDATA[
+@each \$${1:valone}, \$${2:valtwo} in (${3:vals, to, subfor val1}), (${4:subfor, val2}) {
+  ${0:.example-style li.example-\$(${1}) {
+    background-color: \$${2};
+  \}}
+}
+]]></content>  
+  <tabTrigger>pcss_each_alt</tabTrigger>
+  <scope>source.css</scope>
+</snippet>

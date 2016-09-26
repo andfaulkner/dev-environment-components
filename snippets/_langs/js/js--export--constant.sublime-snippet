@@ -1,0 +1,8 @@
+<snippet>
+  <description>export constant</description>
+<content><![CDATA[
+export const ${1:$TM_FILENAME} = ${2:value};
+]]></content>  
+  <tabTrigger>ec</tabTrigger>
+  <scope>source.js, source.ts, source.jsx, source.tsx</scope>
+</snippet>

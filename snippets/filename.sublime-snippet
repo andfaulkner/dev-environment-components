@@ -1,0 +1,7 @@
+<snippet>
+  <description>Name of current file</description>
+<content><![CDATA[
+$TM_FILENAME
+]]></content>  
+  <tabTrigger>fin</tabTrigger>
+</snippet>

@@ -1,0 +1,8 @@
+<snippet>
+  <description>Holds local res vars scoped to the req. For exposign req-level info e.g. username</description>
+<content><![CDATA[
+res.locals${0}
+]]></content>  
+  <tabTrigger>exp_res_locals</tabTrigger>
+  <scope>source.js, source.ts, source.jsx, source.tsx</scope>
+</snippet>

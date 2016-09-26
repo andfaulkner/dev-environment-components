@@ -1,0 +1,8 @@
+<snippet>
+  <description>Import deep freeze library</description>
+<content><![CDATA[
+import deepFreeze from 'deep-freeze';
+]]></content>  
+  <tabTrigger>imp_deepfreeze</tabTrigger>
+  <scope>source.js, source.ts, source.jsx, source.tsx</scope>
+</snippet>

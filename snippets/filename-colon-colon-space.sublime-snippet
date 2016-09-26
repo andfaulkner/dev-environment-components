@@ -1,0 +1,7 @@
+<snippet>
+  <description>Name of current file colon colon space</description>
+<content><![CDATA[
+$TM_FILENAME:: 
+]]></content>
+  <tabTrigger>finc</tabTrigger>
+</snippet>

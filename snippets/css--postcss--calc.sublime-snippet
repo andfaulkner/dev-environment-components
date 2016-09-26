@@ -1,0 +1,8 @@
+<snippet>
+  <description>Perform calculation: +, -, /, *. Works on disparate units and w --var custom props</description>
+<content><![CDATA[
+calc(${1:(100px - 2em + var(--main-font-size)) * 2})${0}
+]]></content>
+  <tabTrigger>pcss_calc</tabTrigger>
+  <scope>source.css</scope>
+</snippet>

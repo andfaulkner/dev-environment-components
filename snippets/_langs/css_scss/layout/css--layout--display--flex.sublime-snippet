@@ -1,7 +1,6 @@
 <snippet>
   <description>Layout el.s in relation to one another & the page w flexboxes</description>
 <content><![CDATA[
-<content><![CDATA[
 display: ${1:[none:         | hide & rm element's effect on flow
           -------------------------------------------------------------------------------------
           flex:         | def el as flex container & children as flex items. Block-lvl el. If

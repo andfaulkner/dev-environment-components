@@ -1,0 +1,12 @@
+<snippet>
+  <description>Create events section on a Component class</description>
+<content><![CDATA[
+events = {
+  ${1:someaction}: (e) => {
+    ${0:console.log('e:', e);}
+  }
+};
+]]></content>  
+  <tabTrigger>rct_events_sect</tabTrigger>
+  <scope>source.js, source.ts, source.jsx, source.tsx</scope>
+</snippet>
