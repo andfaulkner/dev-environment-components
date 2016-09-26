@@ -4,5 +4,5 @@
 font-weight: bold;${0}
 ]]></content>  
   <tabTrigger>font_bold</tabTrigger>
-  <scope>source.css</scope>
+  <scope>source.scss, source.postcss, source.css</scope>
 </snippet>

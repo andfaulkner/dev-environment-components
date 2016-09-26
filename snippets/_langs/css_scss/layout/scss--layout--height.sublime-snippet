@@ -4,5 +4,5 @@
 height: ${1:200px | 10px ||| 100% [% of containing block] | 10% ||| auto [browser calcs height] ||| 3cm};${0}
 ]]></content>
   <tabTrigger>layout_height</tabTrigger>
-  <scope>source.css</scope>
+  <scope>source.scss, source.postcss, source.css</scope>
 </snippet>

@@ -4,5 +4,5 @@
 color: ${1:black|red|green|blue|#FFF(black)|#333(dark-gray)|#000(white)|#FF00FF(magenta)|orange|#800000(maroon)|etc.};${0}
 ]]></content>  
   <tabTrigger>font_color</tabTrigger>
-  <scope>source.css</scope>
+  <scope>source.scss, source.postcss, source.css</scope>
 </snippet>

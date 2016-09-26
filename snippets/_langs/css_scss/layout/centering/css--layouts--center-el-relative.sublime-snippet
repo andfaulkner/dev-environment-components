@@ -12,5 +12,5 @@ ${1:div.centered} {
 }${0}
 ]]></content>  
   <tabTrigger>layout_center_rel_both</tabTrigger>
-  <scope>source.css</scope>
+  <scope>source.scss, source.postcss, source.css</scope>
 </snippet>

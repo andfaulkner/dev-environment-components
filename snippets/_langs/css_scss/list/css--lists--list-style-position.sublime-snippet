@@ -4,5 +4,5 @@
 list-style-position: ${1:inside || outside || hanging};${0}
 ]]></content>  
   <tabTrigger>list_stylepos</tabTrigger>
-  <scope>source.css</scope>
+  <scope>source.scss, source.postcss, source.css</scope>
 </snippet>

@@ -6,5 +6,5 @@
 }
 ]]></content>  
   <tabTrigger>.</tabTrigger>
-  <scope>source.css</scope>
+  <scope>source.css, source.postcss</scope>
 </snippet>

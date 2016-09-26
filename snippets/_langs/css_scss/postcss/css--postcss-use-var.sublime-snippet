@@ -1,0 +1,8 @@
+<snippet>
+  <description>Use a variable. This goes where a val would normally go.</description>
+<content><![CDATA[
+var(--${1:topBarHeight});${0}
+]]></content>  
+  <tabTrigger>var</tabTrigger>
+  <scope>source.css, source.postcss, source.scss</scope>
+</snippet>

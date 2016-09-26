@@ -7,5 +7,5 @@ ${1/.+/  /}width: ${3:30px};
 ${1/.+/  /}border-radius: 100%;${1/.+/\n\}/}${0}
 ]]></content>  
   <tabTrigger>draw_circle</tabTrigger>
-  <scope>source.css</scope>
+  <scope>source.scss, source.postcss, source.css</scope>
 </snippet>

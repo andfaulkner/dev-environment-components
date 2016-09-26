@@ -1,0 +1,8 @@
+<snippet>
+  <description>'Repeat' behaviour of a background image</description>
+<content><![CDATA[
+background-repeat: ${1:no-repeat; /* OR repeat-x | repeat-y | repeat | round | space */};${0}
+]]></content>  
+  <tabTrigger>bg_repeat</tabTrigger>
+  <scope>source.css, source.postcss, source.scss</scope>
+</snippet>

@@ -17,5 +17,5 @@ display: ${1:[none:         | hide & rm element's effect on flow
           list-item:    | el behaves like li, show bullet etc.]};${0}
 ]]></content>
   <tabTrigger>layout_display_basic</tabTrigger>
-  <scope>source.css</scope>
+  <scope>source.scss, source.postcss, source.css</scope>
 </snippet>

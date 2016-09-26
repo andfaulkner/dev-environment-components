@@ -4,5 +4,5 @@
 left: ${1:10px || 5%};${0}
 ]]></content>  
   <tabTrigger>layout_left</tabTrigger>
-  <scope>source.css</scope>
+  <scope>source.scss, source.postcss, source.css</scope>
 </snippet>

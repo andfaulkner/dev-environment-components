@@ -4,5 +4,5 @@
 margin: ${1:1val_allsides_eg_10px  }${2:${3:top_0px} ${4:right_0px} ${5:bottom_0px} ${6:left_0px}};${0}
 ]]></content>
   <tabTrigger>box_margin</tabTrigger>
-  <scope>source.css</scope>
+  <scope>source.scss, source.postcss, source.css</scope>
 </snippet>

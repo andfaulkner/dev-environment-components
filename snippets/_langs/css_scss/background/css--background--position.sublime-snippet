@@ -1,0 +1,8 @@
+<snippet>
+  <description>Position the background image of a section</description>
+<content><![CDATA[
+background-postion: ${1:center top; /* OR center | left center | 20% 50% | etc. */};${0}
+]]></content>  
+  <tabTrigger>bg_position</tabTrigger>
+  <scope>source.css, source.postcss, source.scss</scope>
+</snippet>

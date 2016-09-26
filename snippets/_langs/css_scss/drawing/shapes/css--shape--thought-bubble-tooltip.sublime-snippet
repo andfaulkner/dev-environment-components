@@ -35,5 +35,5 @@ ${1:div.selector}:before {
 }
 ]]></content>  
   <tabTrigger>shape_tooltip</tabTrigger>
-  <scope>source.css</scope>
+  <scope>source.scss, source.postcss, source.css</scope>
 </snippet>

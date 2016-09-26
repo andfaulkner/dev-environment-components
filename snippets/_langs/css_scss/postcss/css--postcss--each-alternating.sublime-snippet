@@ -8,5 +8,5 @@
 }
 ]]></content>  
   <tabTrigger>pcss_each_alt</tabTrigger>
-  <scope>source.css</scope>
+  <scope>source.css, source.postcss</scope>
 </snippet>

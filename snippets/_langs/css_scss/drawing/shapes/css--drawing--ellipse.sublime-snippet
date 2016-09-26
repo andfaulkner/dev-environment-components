@@ -9,5 +9,5 @@ ${1/.+/  /}background-color: ${5:/*ellipse fill colour*/ black};
 ${1/.+/  /}clip-path: ellipse(closest-side at ${6:/*width of left relative to width of right - produces stretch*/40% 50%});${1/.+/\n\}/}${0}
 ]]></content>  
   <tabTrigger>draw_ellipse</tabTrigger>
-  <scope>source.css</scope>
+  <scope>source.scss, source.postcss, source.css</scope>
 </snippet>

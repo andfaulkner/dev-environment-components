@@ -1,0 +1,8 @@
+<snippet>
+  <description>Round or un-round the corners of a box</description>
+<content><![CDATA[
+border-radius: ${1:0px};${0}
+]]></content>  
+  <tabTrigger>border_radius</tabTrigger>
+  <scope>source.css, source.postcss, source.scss</scope>
+</snippet>

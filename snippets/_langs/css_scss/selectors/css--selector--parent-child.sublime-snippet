@@ -5,5 +5,5 @@ ${1:parent_element__eg__html} > ${2:child_element__eg__head__sel_if___${1}___is_
 content here
 ]]></content>  
   <tabTrigger>sel_child_of</tabTrigger>
-  <scope>source.css</scope>
+  <scope>source.scss, source.postcss, source.css</scope>
 </snippet>

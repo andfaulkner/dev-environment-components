@@ -4,5 +4,5 @@
 border: ${1:10px}${2/.+/ /}${2:solid|none|dotted|dashed|inset|outset}${3/.+/ /}${3:red|green|blue|#FFF|...etc};${0}
 ]]></content>
   <tabTrigger>border</tabTrigger>
-  <scope>source.css</scope>
+  <scope>source.scss, source.postcss, source.css</scope>
 </snippet>

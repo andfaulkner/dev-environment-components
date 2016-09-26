@@ -7,5 +7,5 @@
 }
 ]]></content>  
   <tabTrigger>post_mixin</tabTrigger>
-  <scope>source.css</scope>
+  <scope>source.postcss</scope>
 </snippet>

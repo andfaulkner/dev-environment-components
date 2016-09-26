@@ -4,5 +4,5 @@
 margin-top: ${1:10px};${0}
 ]]></content>
   <tabTrigger>margin_top</tabTrigger>
-  <scope>source.css</scope>
+  <scope>source.scss, source.postcss, source.css</scope>
 </snippet>

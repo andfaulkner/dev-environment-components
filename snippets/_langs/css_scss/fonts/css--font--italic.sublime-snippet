@@ -4,5 +4,5 @@
 font-style: italic;${0}
 ]]></content>  
   <tabTrigger>font_italic</tabTrigger>
-  <scope>source.css</scope>
+  <scope>source.scss, source.postcss, source.css</scope>
 </snippet>

@@ -4,5 +4,5 @@
 font-family: "${1:Times New Roman|Book Antiqua|Helvetica|Arial|Lucida Sans Unicode|Courier New}"
 ]]></content>  
   <tabTrigger>font_family</tabTrigger>
-  <scope>source.css</scope>
+  <scope>source.scss, source.postcss, source.css</scope>
 </snippet>

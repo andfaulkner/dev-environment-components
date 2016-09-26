@@ -4,5 +4,5 @@
 overflow${1:[-x]|[-y]|[]}: ${2:visible | hidden | auto (same as scroll) | scroll }
 ]]></content>  
   <tabTrigger>layout_overflow</tabTrigger>
-  <scope>source.css</scope>
+  <scope>source.scss, source.postcss, source.css</scope>
 </snippet>

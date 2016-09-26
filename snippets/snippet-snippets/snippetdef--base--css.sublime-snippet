@@ -7,7 +7,7 @@
 ${3:content here}
 ]${3/.*//}]></content>  
   <tabTrigger>${1:triggering-text}</tabTrigger>
-  <scope>source.css</scope>
+  <scope>source.css, source.postcss, source.scss</scope>
 </snippet>
 ]]></content>
   <tabTrigger>snip_css</tabTrigger>

@@ -6,5 +6,5 @@ ${1:parent_element__eg_div} > ${2:child_element__eg_ul} {
 }
 ]]></content>  
   <tabTrigger>sel_w_parent</tabTrigger>
-  <scope>source.scss</scope>
+  <scope>source.scss, source.postcss, source.css</scope>
 </snippet>

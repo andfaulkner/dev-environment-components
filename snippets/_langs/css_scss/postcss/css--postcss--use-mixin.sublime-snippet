@@ -4,5 +4,5 @@
 @mixin ${1:name_of_mixin} ${2:value-of-parameter};${0}
 ]]></content>  
   <tabTrigger>post_usemixin</tabTrigger>
-  <scope>source.css</scope>
+  <scope>source.postcss</scope>
 </snippet>

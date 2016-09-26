@@ -1,0 +1,8 @@
+<snippet>
+  <description>Set an area to have a background image</description>
+<content><![CDATA[
+background-image: url("${1:url/of/image.png}");${0}
+]]></content>  
+  <tabTrigger>bg_img</tabTrigger>
+  <scope>source.css, source.postcss, source.scss</scope>
+</snippet>

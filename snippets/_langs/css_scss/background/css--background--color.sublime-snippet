@@ -1,0 +1,8 @@
+<snippet>
+  <description>Set the background colour of an element</description>
+<content><![CDATA[
+background-color: ${1:#cccccc};${0}
+]]></content>  
+  <tabTrigger>bg_colour</tabTrigger>
+  <scope>source.css, source.postcss, source.scss</scope>
+</snippet>

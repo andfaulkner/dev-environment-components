@@ -6,5 +6,5 @@
 }
 ]]></content>  
   <tabTrigger>cl</tabTrigger>
-  <scope>source.scss</scope>
+  <scope>source.scss, source.postcss, source.css</scope>
 </snippet>

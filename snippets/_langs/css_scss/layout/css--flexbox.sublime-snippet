@@ -10,5 +10,5 @@ ${1:.dose-box-wrapper} {
 }
 ]]></content>  
   <tabTrigger>flex_ex</tabTrigger>
-  <scope>source.css</scope>
+  <scope>source.css, source.postcss</scope>
 </snippet>

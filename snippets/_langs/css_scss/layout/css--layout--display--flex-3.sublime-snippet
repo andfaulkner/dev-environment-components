@@ -7,5 +7,5 @@ display: ${1:none:     hide, rm effect on flow
                          of parent flexbox. Centers children if their margin-left set to auto.
 ]]></content>  
   <tabTrigger>layout_flex</tabTrigger>
-  <scope>source.css</scope>
+  <scope>source.scss, source.postcss, source.css</scope>
 </snippet>

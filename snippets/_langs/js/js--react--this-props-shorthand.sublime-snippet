@@ -1,0 +1,8 @@
+<snippet>
+  <description>this.props - shorthard</description>
+<content><![CDATA[
+this.props${0:.}
+]]></content>  
+  <tabTrigger>tp</tabTrigger>
+  <scope>source.js, source.ts, source.jsx, source.tsx</scope>
+</snippet>

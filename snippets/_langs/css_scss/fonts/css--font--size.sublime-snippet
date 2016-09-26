@@ -4,5 +4,5 @@
 font-size: ${1:1.25em|12px|small|medium|large|larger|smaller|x-large|x-small|xx-large|xx-small};${0}
 ]]></content>  
   <tabTrigger>font_size</tabTrigger>
-  <scope>source.css</scope>
+  <scope>source.scss, source.postcss, source.css</scope>
 </snippet>

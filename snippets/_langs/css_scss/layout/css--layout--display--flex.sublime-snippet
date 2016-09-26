@@ -8,5 +8,5 @@ display: ${1:[none:         | hide & rm element's effect on flow
                         | corner. of parent flexbox. Centers kids if their margin-left set to auto]};${0}
 ]]></content>  
   <tabTrigger>layout_display_flex</tabTrigger>
-  <scope>source.css</scope>
+  <scope>source.scss, source.postcss, source.css</scope>
 </snippet>

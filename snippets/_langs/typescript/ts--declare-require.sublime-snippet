@@ -1,0 +1,8 @@
+<snippet>
+  <description>Declare a require statement (sometimes required to make compiler happy)</description>
+<content><![CDATA[
+declare const require;${0}
+]]></content>  
+  <tabTrigger>de_require</tabTrigger>
+  <scope>source.tsx, source.ts</scope>
+</snippet>

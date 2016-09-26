@@ -9,5 +9,5 @@ ${1/.+/  /}transform: rotate(${4:/*arrow direction: -45: right; 45: down; left: 
 ${1/.+/  /}color: ${5:/*fill color*/ blue};${1/.+/\n\}/}${0}
 ]]></content>  
   <tabTrigger>shape_hollow_no_bottom_arrow</tabTrigger>
-  <scope>source.css</scope>
+  <scope>source.scss, source.postcss, source.css</scope>
 </snippet>
