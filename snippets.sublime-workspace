@@ -4,516 +4,516 @@
 		"selected_items":
 		[
 			[
-				"load",
-				"load	Run code in given file. Each time load calls a file it is rerun (unlike require)"
+				"sh",
+				"shebang_bash	Bash shebang"
 			],
 			[
-				"req",
-				"req	Import a ruby file, library, or gem"
+				"Re",
+				"RequiredFieldLabel"
 			],
 			[
-				"def",
-				"def	def … end"
+				"Pick",
+				"Picker.tsx"
 			],
 			[
-				"class",
-				"class	Basic new class"
+				"Pi",
+				"Picker.tsx"
 			],
 			[
-				"rake_callt",
-				"rake_calltask_reenable	Reset Rake task called in-code to allow calling it again"
+				"Bir",
+				"BirthdatePickerProps"
 			],
 			[
-				"rake_cal",
-				"rake_call_reenable	Reset Rake task called in-code to allow calling it again"
-			],
-			[
-				"rake_tas",
-				"rake_task_w_args	Create rake task that takes cli params"
-			],
-			[
-				"rubo",
-				"rubocop_disable_hashsyntax	Disable HashSyntax rule (useful in Rake files) "
-			],
-			[
-				"rake_",
-				"rake_task_w_deps	Create rake task with multiple dependencies on other tasks"
-			],
-			[
-				"SOUR",
-				"SOURCE_FILES"
-			],
-			[
-				"file_dir_",
-				"file_del_dir_recursive	Remove directory and its contents, recursively"
-			],
-			[
-				"file_",
-				"file_dir_mkdir	Make a directory"
-			],
-			[
-				"rake",
-				"rake_filelist_exclude_block	Exclude items from a file list via a boolean-ret block"
-			],
-			[
-				"markd",
-				"markdown_files"
-			],
-			[
-				"rake_f",
-				"rake_filelist_deep	Get all files of a given type in current dir or deeper"
-			],
-			[
-				"snip_",
-				"snip_base	Snippet skeleton"
-			],
-			[
-				"sn",
-				"snip_fn_alphanum_only_asvar	Name of file currently being edited, w non-alphanum chars rm. Filename is a var."
-			],
-			[
-				"fiel_cd",
-				"file_dir_cd	Change directory like cd does in the terminal"
-			],
-			[
-				"file_cd",
-				"file_dir_cd	Change directory like cd does in the terminal"
-			],
-			[
-				"cla",
-				"cla	class << self .. end"
-			],
-			[
-				"cla_",
-				"cla_rich	Class lifecycle method that runs when method added to class"
-			],
-			[
-				"cd",
-				"cd	Change directory like cd does in the terminal"
-			],
-			[
-				"file_del_di",
-				"file_del_dir_cont_1lvl	Remove directory contents non-recursively: leave subdirs intact"
-			],
-			[
-				"file_rm",
-				"file_dir_rm_cont	Remove directory contents but not the directory itself"
-			],
-			[
-				"file_dir",
-				"file_dirname	Get path of directory containing file"
-			],
-			[
-				"snip",
-				"snip_base	Snippet skeleton"
-			],
-			[
-				"hash_d",
-				"hash_default	Set default val for hash, ret if key lookup done on nonexistent key"
-			],
-			[
-				"Rege",
-				"require_regex"
-			],
-			[
-				"meta",
-				"metap_method_missing_w_super	Create method_missing method for a class. Call overridden method_missing."
-			],
-			[
-				"metao",
-				"metap_method_missing_w_super	Create method_missing method for a class. Call overridden method_missing."
-			],
-			[
-				"metap_m",
-				"metap_method_missing_w_super	Create method_missing method for a class"
-			],
-			[
-				"cl_m",
-				"class-create_method	Create method to define new methods"
-			],
-			[
-				"mtd",
-				"method_missing"
-			],
-			[
-				"Badas",
-				"BadassTwo"
-			],
-			[
-				"square",
-				"orig_squarebrackets"
-			],
-			[
-				"sub",
-				"subapp"
-			],
-			[
-				"alias_",
-				"alias_method_orig"
-			],
-			[
-				"is_",
-				"set_is_verbose"
-			],
-			[
-				"added",
-				"added_methods"
-			],
-			[
-				"arr_find",
-				"arr_find_index_string	Return index of 1st matching item"
-			],
-			[
-				"metap",
-				"metap_method_maker	Create method to define new methods"
-			],
-			[
-				"attr",
-				"attra	Create accessor for a class in Ruby"
-			],
-			[
-				"orig_",
-				"orig_squares"
-			],
-			[
-				"Ke",
-				"KernelExtensions"
-			],
-			[
-				"mod",
-				"mod	module .. module_function .. end"
-			],
-			[
-				"__",
-				"__file__	Name of current file. Includes extension, excludes path. E.g. asdf.rb"
-			],
-			[
-				"fname",
-				"file_dirname	Get path of directory containing file"
-			],
-			[
-				"F",
-				"FILE	Name of current file. Includes extension, excludes path. E.g. asdf.rb"
-			],
-			[
-				"_",
-				"__file__	Name of current file. Includes extension, excludes path. E.g. asdf.rb"
-			],
-			[
-				"log_l",
-				"log_level_opt"
-			],
-			[
-				"app",
-				"app_launching_script	Output name of file used to start program"
-			],
-			[
-				"str_",
-				"str_squeeze	Remove all duplicates of given char from string"
-			],
-			[
-				"inject",
-				"inject_at_match_path"
-			],
-			[
-				"single",
-				"singleton_experiment"
-			],
-			[
-				"cl_",
-				"cl_lc_ma	Class lifecycle method that runs when method added to class"
-			],
-			[
-				"cl_lc",
-				"cla_lc_ma	Class lifecycle method that runs when method added to class"
-			],
-			[
-				"mo",
-				"mod	module .. ClassMethods .. end"
-			],
-			[
-				"defn",
-				"defn	ruby--def_base"
-			],
-			[
-				"red",
-				"reduce	func"
-			],
-			[
-				"module",
-				"def_module	func"
-			],
-			[
-				"each",
-				"each2	func"
-			],
-			[
-				"rktsk",
-				"rktsk	Create new basic rake task"
-			],
-			[
-				"before",
-				"before_filter"
-			],
-			[
-				"h1",
-				"h1	Markdown top-level header (level 1 header)"
-			],
-			[
-				"h2",
-				"h2	Markdown subheader (level 2 header)"
-			],
-			[
-				"instan",
-				"instance_methods	func"
-			],
-			[
-				"cl",
-				"cl	classify { |e| .. }"
-			],
-			[
-				"down",
-				"downto	func"
-			],
-			[
-				"logme",
-				"logmethinst	Display methods of an object MINUS methods of parent objects / classes"
-			],
-			[
-				"comm",
-				"comment_moduleheading	Main module heading - explain what module does etc."
-			],
-			[
-				"readFileS",
-				"fs.readFileSync(path, options);"
-			],
-			[
-				"readFile",
-				"fs.readFileSync(path, options);"
-			],
-			[
-				"comment",
-				"comment_notebig	Moderate-size comment (3 line +)"
-			],
-			[
-				"log",
-				"log__var_val_in_block	Output var to CLI in big, conspicuous block"
-			],
-			[
-				"inspect",
-				"util.inspect(obj, opts);"
-			],
-			[
-				"_sort",
-				"_sortByAll	Sort arr or obj via any # of sorters (both sort vals & fns)"
-			],
-			[
-				"seneca_",
-				"seneca_restapi_plugin	seneca--add-restapi-action-call"
-			],
-			[
-				"test_entity",
-				"test_entity_1"
-			],
-			[
-				"seneca",
-				"seneca_add_action	seneca--add-action"
-			],
-			[
-				"comment_",
-				"comment_notegigantic	Large comment not directly defining a module, class, fn, or method"
-			],
-			[
-				"er",
-				"error	Event"
-			],
-			[
-				"con",
-				"console.dir"
-			],
-			[
-				"random",
-				"Math.random()	Math"
-			],
-			[
-				"comment_m",
-				"comment_block_monster	Monster-size comment block - to divide file into sections"
-			],
-			[
-				"Error",
-				"new Error(${0:message})	Error"
-			],
-			[
-				"seneca_new_ms",
-				"seneca_new_ms	seneca--basic-microservice"
-			],
-			[
-				"cons",
-				"console.error"
-			],
-			[
-				"inner",
-				"innerHTML	Element"
-			],
-			[
-				"onc",
-				"onclick	Attr"
-			],
-			[
-				"g",
-				"get	$.get()"
-			],
-			[
-				"rren",
-				"react_ren	react--React-render--renders_element"
-			],
-			[
-				"cdm",
-				"cdm	React: componentDidMount: fn() { ... }"
-			],
-			[
-				"err",
-				"error	Event"
-			],
-			[
-				"loc_",
-				"loc_href	e.g. \"http://localhost:3002/components/react-1/index.html\". Full URL of current page."
-			],
-			[
-				"react_t",
-				"react_tss	react--this.setState"
-			],
-			[
-				"rc_",
-				"rc_fullupdatelifecycle	react--component--full-update-lifecycle"
-			],
-			[
-				"react_",
-				"react_tsp	react--this.setProps"
-			],
-			[
-				"rc",
-				"rcwm	react--component-lifecycle--mounting--componentWillMount"
-			],
-			[
-				"r",
-				"rcwm	react--component-lifecycle--mounting--componentWillMount"
-			],
-			[
-				"pro",
-				"props	React: this.props"
-			],
-			[
-				"rc_mou",
-				"rc_mounter	react--component-mounter--(mounts_another_component)"
-			],
-			[
-				"rc_mount",
-				"rc_mountable	react--component-mountable"
-			],
-			[
-				"rc_m",
-				"rc_mounter	react--component-mounter--(mounts_another_component)"
-			],
-			[
-				"rc_moun",
-				"rc_mountable	react--component-mountable"
-			],
-			[
-				"ts",
-				"toString()	String"
-			],
-			[
-				"ren",
-				"ren	React: render() {…}"
-			],
-			[
-				"prop",
-				"props	React: this.props."
-			],
-			[
-				"props",
-				"props	React: this.props."
-			],
-			[
-				"gis",
-				"gis	React: getInitialState: fn() { return {...} } "
-			],
-			[
-				"rcc",
-				"rcc	React: class component"
-			],
-			[
-				"livereload",
-				"livereloadSetup"
-			],
-			[
-				"exec",
-				"child_process.exec"
-			],
-			[
-				"re",
-				"req	nodejs--require"
-			],
-			[
-				"c",
-				"cl	console.log"
-			],
-			[
-				"bv",
-				"bv	Backbone View"
-			],
-			[
-				"b",
-				"bd	Backbone requirejs Module definition"
+				"react",
+				"react-datepicker/"
 			],
 			[
 				"node",
-				"nodeType	Node"
+				"node_modules/"
 			],
 			[
-				"console",
-				"console.log"
+				"req",
+				"req	Require a NodeJS (or Webpack) module"
 			],
 			[
-				"be",
-				"betrigger	Backbone.js events trigger"
+				"Momen",
+				"MomentComparable	type"
 			],
 			[
-				"bu",
-				"buBackbone.$	Backbone.js utility Backbone.$"
+				"DoseBox",
+				"DoseBoxProps	interface"
 			],
 			[
-				"create",
-				"crypto.createVerify"
+				"Dose",
+				"DoseModalElements.tsx"
 			],
 			[
-				"getElement",
-				"document.getElementById(${0:id})	Document"
+				"on",
+				"onDoseBoxMouseDown	property"
 			],
 			[
-				"exit",
-				"process.exit"
+				"normal",
+				"normalizedVaccineCard	const"
 			],
 			[
-				"first",
-				"_.first"
+				"imprd",
+				"imp_rct_rdx	Import primary react-redux methods"
 			],
 			[
-				"nextTi",
-				"process.nextTick"
+				"bg",
+				"bg_colour	Set the background colour of an element"
 			],
 			[
-				"new_",
-				"new_route_module	nodejs--new_route"
+				"imp_rc",
+				"imp_rct	Import React library"
 			],
 			[
-				"getM",
-				"getMonth()	Date"
+				"U",
+				"Utility/"
 			],
 			[
-				"sene",
-				"seneca_new_ms	seneca--basic-microservice"
+				"rct_boi",
+				"rct_new_component_file_boiler	Boilerplate for React component file"
+			],
+			[
+				"rct_new",
+				"rct_new_class_simplet	Simple class-based react component, no export"
+			],
+			[
+				"impr",
+				"imp_rdx	Import primary redux methods"
+			],
+			[
+				"rdx_",
+				"rdx_connect	Wrap a component with a 'connect' function to allow communication w/ store"
+			],
+			[
+				"snip_",
+				"snip_tsx	Snippet skeleton - tsx snippet"
+			],
+			[
+				"imp",
+				"imp_classnames	Import classnames lib (for use with react)"
+			],
+			[
+				"className",
+				"classname_rct	Define React component classes via classname module. Use inside React tag."
+			],
+			[
+				"classN",
+				"classname_rct	Define React component classes via classname module. Use inside React tag."
+			],
+			[
+				"pcss",
+				"pcss_calc	Perform calculation: +, -, /, *. Works on disparate units and w --var custom props"
+			],
+			[
+				"React",
+				"ReactBootstrap"
+			],
+			[
+				"imp_c",
+				"imp_classnames	Import classnames lib (for use with react)"
+			],
+			[
+				"classNam",
+				"classname_rct	Define React component classes via classname module. Use inside React tag."
+			],
+			[
+				"bg_",
+				"bg_img	Set an area to have a background image"
+			],
+			[
+				"bor",
+				"border	Set up element border: width, style, color."
+			],
+			[
+				"border",
+				"box_border	Set up element border: width, style, color."
+			],
+			[
+				"Record",
+				"RecordTabProps	interface"
+			],
+			[
+				"itf",
+				"itf	Create new interface (essentially a new 'type')"
+			],
+			[
+				"S",
+				"SidebarPanel.tsx"
+			],
+			[
+				"comment",
+				"comment_moduleheading	Main module heading - explain what module does etc."
+			],
+			[
+				"reduc",
+				"reduceReducers	property"
+			],
+			[
+				"enum",
+				"enum	keyword"
+			],
+			[
+				"fn",
+				"finc	Name of current file colon colon space"
+			],
+			[
+				"assign",
+				"assignClone	property"
+			],
+			[
+				"rdx_re",
+				"rdx_reducer	Create group of reducers"
+			],
+			[
+				"ass",
+				"assets/"
+			],
+			[
+				"impd",
+				"imp_deepfreeze	Import deep freeze library"
+			],
+			[
+				"tradeNae",
+				"VaccineTradeNameConcepts"
+			],
+			[
+				"con",
+				"config/"
+			],
+			[
+				"impre",
+				"imp_request	Import request (for es6, typescript)"
+			],
+			[
+				"is",
+				"isomorphic-fetch/"
+			],
+			[
+				"typ",
+				"typings/"
+			],
+			[
+				"impl",
+				"imp_lodash	Import lodash ref path for js lib import. Remember tsd install _lib_ --save"
+			],
+			[
+				"cl",
+				"clo	Log object & name of object"
+			],
+			[
+				"par",
+				"parseInt	method"
+			],
+			[
+				"defaulst",
+				"defaultsDeep	method"
+			],
+			[
+				"vacc",
+				"vaccineByDoseSelector	const"
+			],
+			[
+				"vaccines",
+				"vaccinesData	parameter"
+			],
+			[
+				"Vaccine",
+				"VaccineData	interface"
+			],
+			[
+				"Vacc",
+				"VaccineData	interface"
+			],
+			[
+				"Vac",
+				"VaccineData	interface"
+			],
+			[
+				"partia",
+				"partialRight	property"
+			],
+			[
+				"DoseModa",
+				"DoseModalProps	interface"
+			],
+			[
+				"Mom",
+				"MomentComparable	type"
+			],
+			[
+				"lo",
+				"lodash.min.js"
+			],
+			[
+				"lodash",
+				"lodash.js"
+			],
+			[
+				"_str_re",
+				"_str_repeat_text	Repeat the given string N number of times."
+			],
+			[
+				"name",
+				"namespace	keyword"
+			],
+			[
+				"mo",
+				"models.ts"
+			],
+			[
+				"exp_req",
+				"exp_req_params	Get params sent w request (i.e. if rt def path == /user/:id, arg id exists)"
+			],
+			[
+				"expro",
+				"export_from_file	Export all exports from another file (i.e. in F1, export all from F2)"
+			],
+			[
+				"expo",
+				"export_from_file	Export all exports from another file (i.e. in F1, export all from F2)"
+			],
+			[
+				"setterRe",
+				"setterReducers	const"
+			],
+			[
+				"imprct_",
+				"imp_rct_rdx	Import primary react-redux methods"
+			],
+			[
+				"imp_",
+				"imp_rct_dom	Import react-dom"
+			],
+			[
+				"Modal",
+				"ModalDialogCommentBox	const"
+			],
+			[
+				"rct_slc",
+				"rct_new_slc	Create a React stateless functional component"
+			],
+			[
+				"javel",
+				"javelinContent"
+			],
+			[
+				"me",
+				"module	QUnit module"
+			],
+			[
+				"config",
+				"tsconfig.json"
+			],
+			[
+				"font_",
+				"font_italic	Make text italic"
+			],
+			[
+				"Schedule",
+				"ScheduledVisitDose	interface"
+			],
+			[
+				"classnam",
+				"classname_rct	Define React component classes via classname module. Use inside React tag."
+			],
+			[
+				"classna",
+				"classname_rct	Define React component classes via classname module. Use inside React tag."
+			],
+			[
+				"classn",
+				"classname_rct	Define React component classes via classname module. Use inside React tag."
+			],
+			[
+				"rct_all",
+				"rct_fullupdatelifecycle	React component with a full update lifecycle"
+			],
+			[
+				"get",
+				"getElementById	method"
+			],
+			[
+				"dom_sel",
+				"dom_sel_querySelAll	Grab all elements matching given jQuery-esque selector"
+			],
+			[
+				"flex",
+				"flex_ex	Example flexbox-using style"
+			],
+			[
+				"imp_rct",
+				"imp_rct_bootstrap	Import ReactBootstrap ref path for js lib import"
+			],
+			[
+				"impR",
+				"imp_react	Import React library"
+			],
+			[
+				"Do",
+				"DoseModal.tsx"
+			],
+			[
+				"import",
+				"import	keyword"
+			],
+			[
+				"rct_file",
+				"rct_new_lifecycle_summary	React component with all standard lifecycle stages, no export"
+			],
+			[
+				"rct_new_",
+				"rct_new_clfull	New class-based React component w all lifecycle methods"
+			],
+			[
+				"birthdate",
+				"birthdateFormat	const"
+			],
+			[
+				"mod",
+				"modules/"
+			],
+			[
+				"im",
+				"imp_rct	Import React-DOM library"
+			],
+			[
+				"impor",
+				"import	keyword"
+			],
+			[
+				"VaccineCa",
+				"VaccineCardProps"
+			],
+			[
+				"media",
+				"media query desktop/laptop	desktop & laptop"
+			],
+			[
+				"class",
+				"classname_rct	Define React component classes via classname module. Use inside React tag."
+			],
+			[
+				"font-s",
+				"font-size"
+			],
+			[
+				"ts_de",
+				"ts_decl_mod_w_interfaces	Example type declaration w/ interfaces"
+			],
+			[
+				"action",
+				"actionCreators	const"
+			],
+			[
+				"provinc",
+				"provinceModel.tsx"
+			],
+			[
+				"super",
+				"supertest	alias"
+			],
+			[
+				"rejected",
+				"rejectedWith	method"
+			],
+			[
+				"_arr",
+				"_arr_rev	Return given array in reverse"
+			],
+			[
+				"imp_re",
+				"imp_request	Import request (for es6, typescript)"
+			],
+			[
+				"base",
+				"baseRequest"
+			],
+			[
+				"exp_r",
+				"exp_route_all	Handler for all requests (of all types) sent to a given path"
+			],
+			[
+				"env",
+				"NODE_ENV"
+			],
+			[
+				"exp_route",
+				"exp_new_routefile	Boilerplate for a new Express route file in Typescript"
+			],
+			[
+				"close",
+				"fs.close(fd, callback);"
+			],
+			[
+				"redu",
+				"redux/"
+			],
+			[
+				"fsopen",
+				"fs.openSync(path, flags, mode);"
+			],
+			[
+				"exec",
+				"util.exec();"
+			],
+			[
+				"str_",
+				"str_uppercase	Make string uppercase"
+			],
+			[
+				"fs_wri",
+				"fs_write	Write to a file replacing it if it exists. Do it asynchronously."
+			],
+			[
+				"gen",
+				"genderAction.tsx"
+			],
+			[
+				"default",
+				"defaultAction"
+			],
+			[
+				"apply",
+				"applyMiddleware"
+			],
+			[
+				"red",
+				"redux/"
+			],
+			[
+				"_",
+				"_build:copy-dirs"
+			],
+			[
+				"exp_new",
+				"exp_new_routefile	Boilerplate for a new Express route file in Typescript"
+			],
+			[
+				"exp_",
+				"exp_route_get	Handler for GET request to a given path"
+			],
+			[
+				"proc_",
+				"proc_argv	Ret arr w CLI args passed to this process. arg 1: execPath. arg 2: file running. Rest are CLI args"
+			],
+			[
+				"tsli",
+				"tslint_disableruleline	Disable any # of specific listed tslint rules on current line"
+			],
+			[
+				"tslint",
+				"tslint_disableruleline	Disable any # of specific listed tslint rules on current line"
+			],
+			[
+				"blu_",
+				"blu_fn_readfile	Create a thennable version of fs.readFile"
+			],
+			[
+				"fs_wr",
+				"fs_write	Write to a file replacing it if it exists. Do it asynchronously."
 			]
 		]
 	},
@@ -527,257 +527,351 @@
 	"build_varint": "",
 	"command_palette":
 	{
-		"height": 227.0,
-		"last_filter": "install",
+		"height": 47.0,
+		"last_filter": "",
 		"selected_items":
 		[
+			[
+				"syntax doc",
+				"Set Syntax: Dockerfile"
+			],
 			[
 				"install",
 				"Package Control: Install Package"
 			],
 			[
-				"insta",
-				"Package Control: Install Package"
+				"prett",
+				"Pretty JSON: Format (Pretty Print) JSON"
 			],
 			[
-				"ins",
-				"Package Control: Install Package"
+				"fold",
+				"BracketHighlighter: Fold Bracket Content"
 			],
 			[
-				"remove",
-				"Package Control: Remove Package"
+				"prettif",
+				"Pretty JSON: Format (Pretty Print) JSON"
 			],
 			[
-				"error",
-				"SublimeLinter: Next Error"
+				"json t",
+				"Pretty JSON: Format (Pretty Print) JSON"
 			],
 			[
-				"file new",
-				"File: New File Relative to Current View"
+				"pretti",
+				"Pretty JSON: Format (Pretty Print) JSON"
 			],
 			[
-				"file dele",
-				"File: Delete"
-			],
-			[
-				"file renam",
-				"File: Rename"
-			],
-			[
-				"file",
-				"File: New File Relative to Project Root"
-			],
-			[
-				"next",
-				"SublimeLinter: Next Error"
-			],
-			[
-				"markdownExte",
-				"MarkdownEditing: Fix Underlined Headers"
-			],
-			[
-				"set syntax: mark",
-				"Set Syntax: Markdown Extended"
-			],
-			[
-				"markdownEx",
-				"Set Syntax: Markdown Extended"
-			],
-			[
-				"list",
-				"Package Control: List Packages"
-			],
-			[
-				"inst",
-				"Package Control: Install Package"
-			],
-			[
-				"bookmar",
+				"BOokmar",
 				"Bookmarks: Toggle"
 			],
 			[
-				"package",
-				"Package Control: Remove Package"
+				"tree",
+				"JsonTree: Show Tree"
+			],
+			[
+				"pret",
+				"Pretty JSON: Format (Pretty Print) JSON"
+			],
+			[
+				"split",
+				"Layout: Split Current Pane Vertical"
+			],
+			[
+				"syntax: pos",
+				"Set Syntax: PostCSS"
+			],
+			[
+				"json pr",
+				"Pretty JSON: Format (Pretty Print) JSON"
 			],
 			[
 				"instal",
 				"Package Control: Install Package"
 			],
 			[
-				"JSON",
-				"JSON Reindent: reindent file or selection"
+				"lint this",
+				"SublimeLinter: Lint This View"
 			],
 			[
-				"json",
-				"JSON Reindent: reindent file or selection"
-			],
-			[
-				"html",
-				"HTMLPrettify"
-			],
-			[
-				"snippet form",
-				"Snippet: html--textFormSubmit"
-			],
-			[
-				"snippet",
-				"Snippet: HTML - Navigation object (inline-block)"
-			],
-			[
-				"disable",
-				"Package Control: Disable Package"
-			],
-			[
-				"packa",
-				"Package Control: Install Package"
-			],
-			[
-				"add",
-				"Favorite Files: Add File(s)"
-			],
-			[
-				"favor",
-				"Favorite Files: Add File(s)"
-			],
-			[
-				"jshint",
-				"JSHint: Set Plugin Options"
-			],
-			[
-				"sublime",
-				"SublimeLinter: Next Error"
-			],
-			[
-				"remove pack",
-				"Package Control: Remove Package"
-			],
-			[
-				"Package",
-				"Preferences: Package Control Settings – User"
-			],
-			[
-				"packages",
-				"Preferences: Browse Packages"
-			],
-			[
-				"remov",
-				"Package Control: Remove Package"
-			],
-			[
-				"",
-				"Babel Transform"
-			],
-			[
-				"syntax: JSX",
-				"Set Syntax: JSX"
-			],
-			[
-				"disa",
-				"Package Control: Disable Package"
+				"list a",
+				"Package Control: List Packages"
 			],
 			[
 				"enable",
 				"Package Control: Enable Package"
 			],
 			[
-				"pack",
-				"Package Control: Disable Package"
+				"show erro",
+				"SublimeLinter: Show All Errors"
 			],
 			[
-				"remove p",
+				"set typescript",
+				"Set Syntax: TypeScript"
+			],
+			[
+				"sublimelinter",
+				"Preferences: SublimeLinter Settings – Default"
+			],
+			[
+				"show error",
+				"SublimeLinter: Show All Errors"
+			],
+			[
+				"lint",
+				"SublimeLinter: Toggle Linter"
+			],
+			[
+				"typess",
+				"TypeScript: Show Error List"
+			],
+			[
+				"next",
+				"SublimeLinter: Next Error"
+			],
+			[
+				"enable ",
+				"SublimeLinter: Enable Linter"
+			],
+			[
+				"pretty",
+				"Pretty JSON: Format and Sort JSON"
+			],
+			[
+				"import blue",
+				"Snippet: Import Bluebird module"
+			],
+			[
+				"linter",
+				"SublimeLinter: Toggle Linter"
+			],
+			[
+				"remove pack",
 				"Package Control: Remove Package"
 			],
 			[
-				"favori",
-				"Favorite Files: Open File(s)"
+				"disable",
+				"Package Control: Disable Package"
 			],
 			[
-				"fav",
-				"Favorite Files: Open File(s)"
+				"apply",
+				"Find Results: Apply Changes"
 			],
 			[
-				"jscs",
-				"JSHint: Set Linting Preferences"
+				"find",
+				"Find Results: Apply Changes"
 			],
 			[
-				"Favorite",
-				"Favorite Files: Add File(s)"
+				"settings user",
+				"Preferences: Settings - User"
 			],
 			[
-				"TodoR",
-				"TodoReview: Project Files"
+				"resource",
+				"PackageResourceViewer: Open Resource"
 			],
 			[
-				"Snippet: re",
-				"Snippet: REGEX--line-containing-item1-not-followed-by-item-2"
+				"disa",
+				"Package Control: Disable Package"
 			],
 			[
-				"Snippet: ",
-				"Snippet: REGEX--line-containing-item1-not-followed-by-item-2"
+				"add package",
+				"Package Control: Advanced Install Package"
 			],
 			[
-				"Install",
-				"Package Control: Install Package"
+				"preferences",
+				"Preferences: Key Bindings - User"
 			],
 			[
-				"bookmark",
-				"SublimeBookmarks: Add Bookmark"
+				"Find",
+				"Find Results: Apply Changes"
 			],
 			[
-				"syntax: d",
-				"Set Syntax: Dust"
+				"save",
+				"File: Save All"
 			],
 			[
-				"in",
-				"Package Control: Install Package"
+				"REMOVE TRAI",
+				"Whitespace: Remove Trailing Whitespace"
 			],
 			[
-				"Package Control: ",
-				"Package Control: Upgrade/Overwrite All Packages"
+				"alignment",
+				"Preferences: Alignment Key Bindings – Default"
 			],
 			[
-				"set syntax: sass",
-				"Set Syntax: Sass"
+				"go to d",
+				"TypeScript: GoTo Definition"
 			],
 			[
-				"set syntax: Java",
-				"Set Syntax: JavaScript"
+				"JSON",
+				"Set Syntax: JSON (Javascript Next)"
 			],
 			[
-				"handle",
-				"Set Syntax: Handlebars"
+				"JSONTr",
+				"JsonTree: Show Tree"
 			],
 			[
-				"terminal",
-				"Preferences: Terminal Key Bindings – Default"
+				"json",
+				"Set Syntax: JSON (Javascript Next)"
 			],
 			[
-				"Snippet",
-				"Snippet: #!/usr/bin/env"
+				"Pretty JSON",
+				"Pretty JSON: Format and Sort JSON"
 			],
 			[
-				"Ja",
-				"Set Syntax: JavaScript"
+				"clean xlsx",
+				"Reg Replace: Clean xlsx JSON"
 			],
 			[
-				"Package Control",
-				"Package Control: Install Package"
+				"Reg Replace: xl",
+				"Reg Replace: Clean xlsx JSON"
 			],
 			[
-				"Package Control: In",
-				"Package Control: Install Package"
+				"Reg Replace: Clean xl",
+				"Reg Replace: Clean xlsx JSON"
+			],
+			[
+				"Reg Replace:",
+				"Reg Replace: Clean xlsx JSON"
+			],
+			[
+				"remove dep",
+				"Reg Replace: Remove Deprecated Type Attributes"
+			],
+			[
+				"Reg Replace",
+				"Snippet: Replace 1st match in string with replacement text"
+			],
+			[
+				"Remove All",
+				"Reg Replace: Remove All P's"
+			],
+			[
+				"Clean x",
+				"Reg Replace: Clean xlsx JSON"
+			],
+			[
+				"clean x",
+				"Reg Replace: Clean xlsx JSON"
+			],
+			[
+				"Reg Replace: Cl",
+				"Reg Replace: Clean xlsx JSON"
+			],
+			[
+				"Reg Replace Rem",
+				"Reg Replace: Remove All P's"
+			],
+			[
+				"RegeReplace",
+				"Preferences: Reg Replace Commands – User"
+			],
+			[
+				"regReplace",
+				"RegReplace: Clear Highlights"
+			],
+			[
+				"regreplace",
+				"Preferences: Reg Replace Settings – Default"
+			],
+			[
+				"disab",
+				"Package Control: Disable Package"
+			],
+			[
+				"arctic",
+				"ArcticTypescript: Go to definition"
+			],
+			[
+				"artic",
+				"ArcticTypescript: Go to definition"
+			],
+			[
+				"arcticType",
+				"ArcticTypescript: Reopen Project (after config changes)"
+			],
+			[
+				"go to",
+				"TypeScript: GoTo Definition"
+			],
+			[
+				"enabl",
+				"Package Control: Enable Package"
+			],
+			[
+				"lint ",
+				"SublimeLinter: Lint This View"
+			],
+			[
+				"sublimeLinter de",
+				"SublimeLinter: Enable Debug Mode"
+			],
+			[
+				"toggle lint",
+				"SublimeLinter: Toggle Linter"
+			],
+			[
+				"toggle lin",
+				"SublimeLinter: Toggle Linter"
+			],
+			[
+				"go",
+				"Text Refactor: Goto definition"
+			],
+			[
+				"goto",
+				"Go To Definition"
+			],
+			[
+				"reference",
+				"TypeScript: Find References"
+			],
+			[
+				"go to ",
+				"TypeScript: GoTo Definition"
+			],
+			[
+				"color",
+				"Color Picker: Insert Color"
+			],
+			[
+				"disapb",
+				"Package Control: Disable Package"
 			]
 		],
-		"width": 596.0
+		"width": 592.0
 	},
 	"console":
 	{
-		"height": 226.0,
+		"height": 281.0,
 		"history":
 		[
-			"import urllib.request,os,hashlib; h = '7183a2d3e96f11eeadd761d777e62404' + 'e330c659d4bb41d3bdf022e94cab3cd0'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)",
-			"import urllib.request,os,hashlib; h = '7183a2d3e96f11eeadd761d777e62404' + 'e330c659d4bb41d3bdf022e94cab3cd0'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by) ",
-			"import urllib.request,os,hashlib; h = 'eb2297e1a458f27d836c04bb0cbaf282' + 'd0e7a3098092775ccb37ca9d6b2e4b7d'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)"
+			"sublime.log_commands(True)",
+			"sublime.log_commands(False)",
+			"sublime.log_commands(True)",
+			"sublime.log_commands(False)",
+			"sublime.log_commands(True)",
+			"remove_trailing_whitespace()",
+			"remove_trailing_whitespace",
+			"sublime.log_commands(True)",
+			"replacements",
+			"move_json_array_nulls_to_same_line()",
+			"move_json_array_nulls_to_same_line",
+			"open('/Users/andrew/projects/ohri/immunizeca-testing-tool/typings/globals/prettyjson/index.d.ts')",
+			"path",
+			"get_path",
+			"open('./index.d.ts')",
+			"open('index.d.ts')",
+			"open('package.json')",
+			"open('./package.json')",
+			"open('<project>/')",
+			"open('<project>')",
+			"open('./package.json')",
+			"open('package.json')",
+			"open(package.json)",
+			"open_file",
+			"open",
+			"sublime.log_commands(False)",
+			"sublime.log_commands(True)",
+			"project_file_name()",
+			"sublime.log_commands(True)"
 		]
 	},
 	"distraction_free":
@@ -789,314 +883,412 @@
 		"side_bar_visible": false,
 		"status_bar_visible": false
 	},
+	"expanded_folders":
+	[
+	],
 	"file_history":
 	[
-		"/Users/andrew/Library/Application Support/Sublime Text 3/Packages/User/snippets/test.js",
-		"/Users/andrew/Library/Application Support/Sublime Text 3/Packages/User/snippets/snippets.sublime-project",
-		"/Users/andrew/Library/Application Support/Sublime Text 3/Packages/Terminal/Default (OSX).sublime-keymap",
-		"/Users/andrew/Library/Application Support/Sublime Text 3/Packages/Default/Preferences.sublime-settings",
-		"/Users/andrew/Library/Application Support/Sublime Text 3/Packages/User/Preferences.sublime-settings",
-		"/Users/andrew/Library/Application Support/Sublime Text 3/Packages/Terminal/Terminal.sublime-settings",
-		"/Users/andrew/Library/Application Support/Sublime Text 3/Packages/User/snippets/example_test_projects/ruby_demoing_proj/Rakefile",
-		"/Users/andrew/Library/Application Support/Sublime Text 3/Packages/User/snippets/snippets/ruby-snippets/classes/ruby--classes--new-class-basic.sublime-snippet",
-		"/Users/andrew/Library/Application Support/Sublime Text 3/Packages/User/snippets/snippets/ruby-snippets/importing/ruby--LOAD_PATH.sublime-snippet",
-		"/Users/andrew/Library/Application Support/Sublime Text 3/Packages/User/snippets/snippets/ruby-snippets/importing/ruby--load.sublime-snippet",
-		"/Users/andrew/Library/Application Support/Sublime Text 3/Packages/User/snippets/snippets/ruby-snippets/importing/ruby--require_relative.sublime-snippet",
-		"/Users/andrew/Library/Application Support/Sublime Text 3/Packages/User/snippets/snippets/ruby-snippets/importing/ruby--require.sublime-snippet",
-		"/Users/andrew/Library/Application Support/Sublime Text 3/Packages/User/snippets/example_test_projects/ruby-drb-proj/example-1/drb-client.rb",
-		"/Users/andrew/Library/Application Support/Sublime Text 3/Packages/User/snippets/example_test_projects/ruby-drb-proj/example-2/drb-queue-producer.rb",
-		"/Users/andrew/Library/Application Support/Sublime Text 3/Packages/User/snippets/example_test_projects/ruby-drb-proj/example-2/drb-queue-consumer.rb",
-		"/Users/andrew/Library/Application Support/Sublime Text 3/Packages/User/snippets/example_test_projects/ruby-drb-proj/example-2/drb-queue-server.rb",
-		"/Users/andrew/Library/Application Support/Sublime Text 3/Packages/User/snippets/example_test_projects/ruby-drb-proj/example-1/drb-server.rb",
-		"/Users/andrewfaulkner/Library/Application Support/Sublime Text 3/Packages/User/sublime-dev-environment-snippet/_docs_guides/todos/todo-ongoing.md",
-		"/Users/andrewfaulkner/Library/Application Support/Sublime Text 3/Packages/User/sublime-dev-environment-snippet/snippets/ruby-snippets/importing/ruby--add-to-LOAD_PATH.sublime-snippet",
-		"/Users/andrewfaulkner/Library/Application Support/Sublime Text 3/Packages/User/sublime-dev-environment-snippet/snippets/regular-expressions/regex--match-legal-ruby-versions.sublime-snippet",
-		"/Users/andrewfaulkner/Library/Application Support/Sublime Text 3/Packages/User/sublime-dev-environment-snippet/snippets/ruby-snippets/methods/ruby--methods--partial_method.sublime-snippet",
-		"/Users/andrewfaulkner/Library/Application Support/Sublime Text 3/Packages/User/sublime-dev-environment-snippet/example_test_projects/test-methadone-cli-app-one/lib/test/methadone/cli/app/one.rb",
-		"/Users/andrewfaulkner/Library/Application Support/Sublime Text 3/Packages/User/sublime-dev-environment-snippet/example_test_projects/test-methadone-cli-app-one/bin/test-methadone-cli-app-one",
-		"/Users/andrewfaulkner/Library/Application Support/Sublime Text 3/Packages/User/sublime-dev-environment-snippet/example_test_projects/test-methadone-cli-app-one/test-methadone-cli-app-one.gemspec",
-		"/Users/andrewfaulkner/Library/Application Support/Sublime Text 3/Packages/User/SideBarEnhancements/Open With/Side Bar.sublime-menu",
-		"/Users/andrewfaulkner/Library/Application Support/Sublime Text 3/Packages/User/sublime-dev-environment-snippet/_docs_guides/books_articles/ruby_books/Build Awesome Command-Line Applications in Ruby 2.pdf",
-		"/Users/andrewfaulkner/Library/Application Support/Sublime Text 3/Packages/User/sublime-dev-environment-snippet/.gitignore",
-		"/Users/andrewfaulkner/Library/Application Support/Sublime Text 3/Packages/User/RuboCop.sublime-settings",
-		"/Users/andrewfaulkner/Library/Application Support/Sublime Text 3/Packages/RuboCop/RuboCop.sublime-settings",
-		"/Users/andrewfaulkner/Library/Application Support/Sublime Text 3/Packages/User/sublime-dev-environment-snippet/_docs_guides/todos/projects/todo-microprojects--idle-game.md",
-		"/Users/andrewfaulkner/Library/Application Support/Sublime Text 3/Packages/User/sublime-dev-environment-snippet/_docs_guides/todos/projects/todo-microprojects--text-adventure.md",
-		"/Users/andrewfaulkner/Library/Application Support/Sublime Text 3/Packages/User/sublime-dev-environment-snippet/_docs_guides/todos/projects/todo-microprojects--movie-predictor.md",
-		"/Users/andrewfaulkner/Library/Application Support/Sublime Text 3/Packages/User/sublime-dev-environment-snippet/_docs_guides/todos/todo-microprojects--wiki-soundmachine.md",
-		"/Users/andrewfaulkner/Library/Application Support/Sublime Text 3/Packages/User/sublime-dev-environment-snippet/_docs_guides/todos/todo-microprojects--text-adventure.md",
-		"/Users/andrewfaulkner/Library/Application Support/Sublime Text 3/Packages/User/sublime-dev-environment-snippet/_docs_guides/todos/todo-microprojects--wiki-imagemachine.md",
-		"/Users/andrewfaulkner/Library/Application Support/Sublime Text 3/Packages/User/sublime-dev-environment-snippet/_docs_guides/todos/todo-microprojects--personal-blog.md",
-		"/Users/andrewfaulkner/Library/Application Support/Sublime Text 3/Packages/User/sublime-dev-environment-snippet/_docs_guides/todos/todo-microprojects--dog-site.md",
-		"/Users/andrewfaulkner/Library/Application Support/Sublime Text 3/Packages/User/sublime-dev-environment-snippet/_docs_guides/todos/todo-microprojects--movie-predictor\n.md",
-		"/Users/andrewfaulkner/Library/Application Support/Sublime Text 3/Packages/User/sublime-dev-environment-snippet/_docs_guides/todos/todo-microprojects--idle-game.md",
-		"/Users/andrewfaulkner/Library/Application Support/Sublime Text 3/Packages/User/sublime-dev-environment-snippet/_docs_guides/todos/todo-microprojects--free-for-all-forum.md",
-		"/Users/andrewfaulkner/Library/Application Support/Sublime Text 3/Packages/User/sublime-dev-environment-snippet/example_test_projects/ruby_demoing_proj/docs/arbre.md",
-		"/Users/andrewfaulkner/Library/Application Support/Sublime Text 3/Packages/User/sublime-dev-environment-snippet/example_test_projects/ruby_demoing_proj/tasks/installer.rake_OLD",
-		"/Users/andrewfaulkner/Library/Application Support/Sublime Text 3/Packages/User/sublime-dev-environment-snippet/example_test_projects/ruby_demoing_proj/tasks/file_handling.rake_OLD",
-		"/Users/andrewfaulkner/Library/Application Support/Sublime Text 3/Packages/User/sublime-dev-environment-snippet/example_test_projects/ruby_demoing_proj/tasks/avdi_tutorial/avdi_tutorial_pt_4_pathmap.rake",
-		"/Users/andrewfaulkner/Library/Application Support/Sublime Text 3/Packages/User/sublime-dev-environment-snippet/example_test_projects/ruby_demoing_proj/tasks/avdi_tutorial/source_files.rb",
-		"/Users/andrewfaulkner/Library/Application Support/Sublime Text 3/Packages/User/sublime-dev-environment-snippet/example_test_projects/ruby_demoing_proj/tasks/avdi_tutorial/avdi_tutorial_pt_1_rules_and_tasks.rake",
-		"/Users/andrewfaulkner/Library/Application Support/Sublime Text 3/Packages/User/sublime-dev-environment-snippet/snippets/ruby-snippets/string/ruby--string--to_integer-2.sublime-snippet",
-		"/Users/andrewfaulkner/Library/Application Support/Sublime Text 3/Packages/User/sublime-dev-environment-snippet/snippets/ruby-snippets/string/ruby--string--to_float-2.sublime-snippet",
-		"/Users/andrewfaulkner/Library/Application Support/Sublime Text 3/Packages/User/sublime-dev-environment-snippet/snippets/ruby-snippets/ruby--at_exit.sublime-snippet",
-		"/Users/andrewfaulkner/Library/Application Support/Sublime Text 3/Packages/User/sublime-dev-environment-snippet/snippets/ruby-snippets/string/ruby--string--tr.sublime-snippet",
-		"/Users/andrewfaulkner/Library/Application Support/Sublime Text 3/Packages/User/sublime-dev-environment-snippet/snippets/ruby-snippets/string/ruby--string--sub.sublime-snippet",
-		"/Users/andrewfaulkner/Library/Application Support/Sublime Text 3/Packages/User/sublime-dev-environment-snippet/snippets/ruby-snippets/string/ruby--string--to_integer.sublime-snippet",
-		"/Users/andrewfaulkner/Library/Application Support/Sublime Text 3/Packages/User/sublime-dev-environment-snippet/snippets/ruby-snippets/string/ruby--string--to_float.sublime-snippet",
-		"/Users/andrewfaulkner/Library/Application Support/Sublime Text 3/Packages/User/sublime-dev-environment-snippet/snippets/ruby-snippets/string/ruby--string--reverse.sublime-snippet",
-		"/Users/andrewfaulkner/Library/Application Support/Sublime Text 3/Packages/User/sublime-dev-environment-snippet/snippets/ruby-snippets/string/ruby--string--capitalize.sublime-snippet",
-		"/Users/andrewfaulkner/Library/Application Support/Sublime Text 3/Packages/User/sublime-dev-environment-snippet/snippets/ruby-snippets/rake/ruby--rake--task-that-takes-cli-args.sublime-snippet",
-		"/Users/andrewfaulkner/Library/Application Support/Sublime Text 3/Packages/User/sublime-dev-environment-snippet/snippets/ruby-snippets/rake/ruby--rake-filelist.sublime-snippet",
-		"/Users/andrewfaulkner/Library/Application Support/Sublime Text 3/Packages/User/sublime-dev-environment-snippet/snippets/ruby-snippets/rake/ruby--rake--call-task-from-task.sublime-snippet",
-		"/Users/andrewfaulkner/Library/Application Support/Sublime Text 3/Packages/User/sublime-dev-environment-snippet/snippets/ruby-snippets/rake/ruby--rake--call-task-from-task--multiple-times.sublime-snippet",
-		"/Users/andrewfaulkner/Library/Application Support/Sublime Text 3/Packages/User/sublime-dev-environment-snippet/snippets/ruby-snippets/string/ruby--string--prepend.sublime-snippet",
-		"/Users/andrewfaulkner/Library/Application Support/Sublime Text 3/Packages/User/sublime-dev-environment-snippet/snippets/ruby-snippets/variables/ruby--global-variables.sublime-snippet",
-		"/Users/andrewfaulkner/Library/Application Support/Sublime Text 3/Packages/User/sublime-dev-environment-snippet/snippets/ruby-snippets/variables/ruby--global-variables-2.sublime-snippet",
-		"/Users/andrewfaulkner/Library/Application Support/Sublime Text 3/Packages/User/sublime-dev-environment-snippet/snippets/ruby-snippets/variables/ruby--global-variables-4.sublime-snippet",
-		"/Users/andrewfaulkner/Library/Application Support/Sublime Text 3/Packages/User/sublime-dev-environment-snippet/snippets/ruby-snippets/variables/ruby--local-variables.sublime-snippet",
-		"/Users/andrewfaulkner/Library/Application Support/Sublime Text 3/Packages/User/sublime-dev-environment-snippet/snippets/ruby-snippets/variables/ruby--local-variables-2.sublime-snippet",
-		"/Users/andrewfaulkner/Library/Application Support/Sublime Text 3/Packages/User/sublime-dev-environment-snippet/snippets/ruby-snippets/variables/ruby--local-variables-3.sublime-snippet",
-		"/Users/andrewfaulkner/Library/Application Support/Sublime Text 3/Packages/User/sublime-dev-environment-snippet/snippets/ruby-snippets/variables/ruby--local-variables-4.sublime-snippet",
-		"/Users/andrewfaulkner/Library/Application Support/Sublime Text 3/Packages/User/sublime-dev-environment-snippet/snippets/ruby-snippets/variables/ruby--global-variables-3.sublime-snippet",
-		"/Users/andrewfaulkner/Library/Application Support/Sublime Text 3/Packages/User/sublime-dev-environment-snippet/snippets/ruby-snippets/rake/ruby--rake--new-task-with-dependency.sublime-snippet",
-		"/Users/andrewfaulkner/Library/Application Support/Sublime Text 3/Packages/User/sublime-dev-environment-snippet/snippets/ruby-snippets/rake/ruby--rake--new-namespace.sublime-snippet",
-		"/Users/andrewfaulkner/Library/Application Support/Sublime Text 3/Packages/User/sublime-dev-environment-snippet/snippets/ruby-snippets/rake/ruby--rake--new-task-with-dependencies.sublime-snippet",
-		"/Users/andrewfaulkner/Library/Application Support/Sublime Text 3/Packages/User/sublime-dev-environment-snippet/snippets/ruby-snippets/directives/ruby-rubocop-disable-HashSyntax.sublime-snippet",
-		"/Users/andrewfaulkner/Library/Application Support/Sublime Text 3/Packages/User/sublime-dev-environment-snippet/snippets/ruby-snippets/directives/ruby-rubocop-disable-rule.sublime-snippet",
-		"/Users/andrewfaulkner/Library/Application Support/Sublime Text 3/Packages/User/sublime-dev-environment-snippet/snippets/ruby-snippets/rake/ruby--rake--new-task.sublime-snippet",
-		"/Users/andrewfaulkner/Library/Application Support/Sublime Text 3/Packages/User/sublime-dev-environment-snippet/example_test_projects/ruby_demoing_proj/tasks/helpers/rake_helpers.rb",
-		"/Users/andrewfaulkner/Library/Application Support/Sublime Text 3/Packages/User/sublime-dev-environment-snippet/snippets/ruby-snippets/rake/ruby-rails--rake--call-task-from-task.sublime-snippet",
-		"/Users/andrewfaulkner/Library/Application Support/Sublime Text 3/Packages/User/sublime-dev-environment-snippet/snippets/ruby-snippets/ruby--global-variables-2.sublime-snippet",
-		"/Users/andrewfaulkner/Library/Application Support/Sublime Text 3/Packages/User/sublime-dev-environment-snippet/snippets/ruby-snippets/ruby--at_exit-2.sublime-snippet",
-		"/Users/andrewfaulkner/Library/Application Support/Sublime Text 3/Packages/User/sublime-dev-environment-snippet/snippets/ruby-snippets/methods/ruby--methods--partial_method-2.sublime-snippet",
-		"/Users/andrewfaulkner/Library/Application Support/Sublime Text 3/Packages/User/sublime-dev-environment-snippet/snippets/ruby-snippets/types/ruby--types--is_a_string.sublime-snippet",
-		"/Users/andrewfaulkner/Library/Application Support/Sublime Text 3/Packages/User/sublime-dev-environment-snippet/snippets/ruby-snippets/types/ruby--types--is_a_symbol-2.sublime-snippet",
-		"/Users/andrewfaulkner/Library/Application Support/Sublime Text 3/Packages/User/sublime-dev-environment-snippet/snippets/ruby-snippets/types/ruby--types--is_a_range-2.sublime-snippet",
-		"/Users/andrewfaulkner/Library/Application Support/Sublime Text 3/Packages/User/sublime-dev-environment-snippet/snippets/ruby-snippets/types/ruby--types--is_a_regexp-2.sublime-snippet",
-		"/Users/andrewfaulkner/Library/Application Support/Sublime Text 3/Packages/User/sublime-dev-environment-snippet/snippets/ruby-snippets/types/ruby--types--is_a_proc-2.sublime-snippet",
-		"/Users/andrewfaulkner/Library/Application Support/Sublime Text 3/Packages/User/sublime-dev-environment-snippet/snippets/ruby-snippets/types/ruby--types--is_a_symbol.sublime-snippet",
-		"/Users/andrewfaulkner/Library/Application Support/Sublime Text 3/Packages/User/sublime-dev-environment-snippet/snippets/ruby-snippets/types/ruby--types--is_a_symbol-3.sublime-snippet",
-		"/Users/andrewfaulkner/Library/Application Support/Sublime Text 3/Packages/User/sublime-dev-environment-snippet/snippets/ruby-snippets/types/ruby--types--is_a_proc-3.sublime-snippet",
-		"/Users/andrewfaulkner/Library/Application Support/Sublime Text 3/Packages/User/sublime-dev-environment-snippet/snippets/ruby-snippets/types/ruby--types--is_a_module-2.sublime-snippet",
-		"/Users/andrewfaulkner/Library/Application Support/Sublime Text 3/Packages/User/sublime-dev-environment-snippet/snippets/ruby-snippets/types/ruby--types--is_a_class.sublime-snippet",
-		"/Users/andrewfaulkner/Library/Application Support/Sublime Text 3/Packages/User/sublime-dev-environment-snippet/snippets/ruby-snippets/types/ruby--types--is_a_method.sublime-snippet",
-		"/Users/andrewfaulkner/Library/Application Support/Sublime Text 3/Packages/User/sublime-dev-environment-snippet/snippets/ruby-snippets/types/ruby--types--is_a_trueclass-2.sublime-snippet",
-		"/Users/andrewfaulkner/Library/Application Support/Sublime Text 3/Packages/User/sublime-dev-environment-snippet/snippets/ruby-snippets/types/ruby--types--is_a_falseclass-2.sublime-snippet",
-		"/Users/andrewfaulkner/Library/Application Support/Sublime Text 3/Packages/User/sublime-dev-environment-snippet/snippets/ruby-snippets/types/ruby--types--is_a_nilclass-2.sublime-snippet",
-		"/Users/andrewfaulkner/Library/Application Support/Sublime Text 3/Packages/User/sublime-dev-environment-snippet/snippets/ruby-snippets/types/ruby--types--is_a_class-2.sublime-snippet",
-		"/Users/andrewfaulkner/Library/Application Support/Sublime Text 3/Packages/User/sublime-dev-environment-snippet/snippets/ruby-snippets/types/ruby--types--is_a_method-2.sublime-snippet",
-		"/Users/andrewfaulkner/Library/Application Support/Sublime Text 3/Packages/User/sublime-dev-environment-snippet/snippets/ruby-snippets/types/ruby--types--is_a_hash.sublime-snippet",
-		"/Users/andrewfaulkner/Library/Application Support/Sublime Text 3/Packages/User/sublime-dev-environment-snippet/snippets/ruby-snippets/types/ruby--types--is_a_array.sublime-snippet",
-		"/Users/andrewfaulkner/Library/Application Support/Sublime Text 3/Packages/User/sublime-dev-environment-snippet/snippets/ruby-snippets/types/ruby--types--is_a_string-2.sublime-snippet",
-		"/Users/andrewfaulkner/Library/Application Support/Sublime Text 3/Packages/User/sublime-dev-environment-snippet/snippets/ruby-snippets/types/ruby--types--is_a_number.sublime-snippet",
-		"/Users/andrewfaulkner/Library/Application Support/Sublime Text 3/Packages/User/sublime-dev-environment-snippet/snippets/ruby-snippets/types/ruby--types--is_a_hash-2.sublime-snippet",
-		"/Users/andrewfaulkner/Library/Application Support/Sublime Text 3/Packages/User/sublime-dev-environment-snippet/snippets/ruby-snippets/types/ruby--types--is_a_array-2.sublime-snippet",
-		"/Users/andrewfaulkner/Library/Application Support/Sublime Text 3/Packages/User/sublime-dev-environment-snippet/snippets/ruby-snippets/types/ruby--types--is_a_number-2.sublime-snippet",
-		"/Users/andrewfaulkner/Library/Application Support/Sublime Text 3/Packages/User/sublime-dev-environment-snippet/snippets/ruby-snippets/types/ruby--types--is_a_integer.sublime-snippet",
-		"/Users/andrewfaulkner/Library/Application Support/Sublime Text 3/Packages/User/sublime-dev-environment-snippet/snippets/ruby-snippets/types/ruby--types--is_a_integer-2.sublime-snippet",
-		"/Users/andrewfaulkner/Library/Application Support/Sublime Text 3/Packages/User/sublime-dev-environment-snippet/snippets/ruby-snippets/rake/ruby--rake-filelist--exclude-from-list--via-block.sublime-snippet",
-		"/Users/andrewfaulkner/Library/Application Support/Sublime Text 3/Packages/User/sublime-dev-environment-snippet/snippets/ruby-snippets/rake/ruby--rake-filelist--create_using_block.sublime-snippet",
-		"/Users/andrewfaulkner/Library/Application Support/Sublime Text 3/Packages/User/sublime-dev-environment-snippet/example_test_projects/ruby_demoing_proj/tasks/avdi_tutorial/avdi_tutorial_pt_2_filelists.rake",
-		"/Users/andrewfaulkner/Library/Application Support/Sublime Text 3/Packages/User/sublime-dev-environment-snippet/example_test_projects/ruby_demoing_proj/tasks/avdi_tutorial/avdi_tutorial_pt_0_default_tasks.rake",
-		"/Users/andrewfaulkner/Library/Application Support/Sublime Text 3/Packages/User/sublime-dev-environment-snippet/example_test_projects/ruby_demoing_proj/tasks/avdi_tutorial/avdi_tutorial_pt_3_pass_lambdas_to_rules.rake",
-		"/Users/andrewfaulkner/Library/Application Support/Sublime Text 3/Packages/User/sublime-dev-environment-snippet/example_test_projects/ruby_demoing_proj/rake_test_files/markdowns/doc_2.md",
-		"/Users/andrewfaulkner/Library/Application Support/Sublime Text 3/Packages/User/sublime-dev-environment-snippet/example_test_projects/ruby_demoing_proj/rake_test_files/markdowns/doc_1.markdown",
-		"/Users/andrewfaulkner/Library/Application Support/Sublime Text 3/Packages/User/sublime-dev-environment-snippet/example_test_projects/ruby_demoing_proj/rake_test_files/scratch/test5.erko",
-		"/Users/andrewfaulkner/Library/Application Support/Sublime Text 3/Packages/User/sublime-dev-environment-snippet/snippets/ruby-snippets/rake/ruby--rake-filelist--exclude-from-list.sublime-snippet",
-		"/Users/andrewfaulkner/Library/Application Support/Sublime Text 3/Packages/User/sublime-dev-environment-snippet/example_test_projects/ruby_demoing_proj/rake_test_files/level_2_test/~test4.erko",
-		"/Users/andrewfaulkner/Library/Application Support/Sublime Text 3/Packages/User/sublime-dev-environment-snippet/snippets/ruby-snippets/rake/ruby--rake-filelist--all-files-of-type.sublime-snippet",
-		"/Users/andrewfaulkner/Library/Application Support/Sublime Text 3/Packages/User/sublime-dev-environment-snippet/example_test_projects/ruby_demoing_proj/tasks/experiments.rake_OLD",
-		"/Users/andrewfaulkner/Library/Application Support/Sublime Text 3/Packages/User/sublime-dev-environment-snippet/example_test_projects/ruby_demoing_proj/tasks/cane.rake_OLD",
-		"/Users/andrewfaulkner/Library/Application Support/Sublime Text 3/Packages/User/sublime-dev-environment-snippet/example_test_projects/ruby_demoing_proj/rake_test_files/level_2_test/test3.erko",
-		"/Users/andrewfaulkner/Library/Application Support/Sublime Text 3/Packages/User/sublime-dev-environment-snippet/snippets/ruby-snippets/classes/ruby--class--singleton.sublime-snippet",
-		"/Users/andrewfaulkner/Library/Application Support/Sublime Text 3/Packages/User/sublime-dev-environment-snippet/snippets/ruby-snippets/classes/ruby--class_sectioned.sublime-snippet",
-		"/Users/andrewfaulkner/Library/Application Support/Sublime Text 3/Packages/User/sublime-dev-environment-snippet/snippets/XML-snippets/snippet-def-snippets/snippetdef--filename_letters_only.sublime-snippet",
-		"/Users/andrewfaulkner/Library/Application Support/Sublime Text 3/Packages/User/sublime-dev-environment-snippet/.rubocop.yml",
-		"/Users/andrewfaulkner/Library/Application Support/Sublime Text 3/Packages/User/sublime-dev-environment-snippet/snippets/ruby-snippets/file_ops/dir/ruby--file--dir--questionmark.sublime-snippet",
-		"/Users/andrewfaulkner/Library/Application Support/Sublime Text 3/Packages/User/sublime-dev-environment-snippet/snippets/ruby-snippets/file_ops/dir/ruby--file--dir--cd--change-directory.sublime-snippet",
-		"/Users/andrewfaulkner/Library/Application Support/Sublime Text 3/Packages/User/sublime-dev-environment-snippet/snippets/ruby-snippets/file_ops/dir/ruby--file--dir--cd--change-directory-2.sublime-snippet",
-		"/Users/andrewfaulkner/Library/Application Support/Sublime Text 3/Packages/User/sublime-dev-environment-snippet/example_test_projects/ruby_demoing_proj/docs/todo.md",
-		"/Users/andrewfaulkner/Library/Application Support/Sublime Text 3/Packages/User/sublime-dev-environment-snippet/snippets/ruby-snippets/array/ruby--array--length.sublime-snippet",
-		"/Users/andrewfaulkner/Library/Application Support/Sublime Text 3/Packages/User/sublime-dev-environment-snippet/example_test_projects/ruby_demoing_proj/tasks/helpers"
+		"/Users/andrew/projects/ohri/immunizeca-testing-tool/Gulpfile",
+		"/Users/andrew/Library/Application Support/Sublime Text 3/Packages/User/snippets/scripts/setup/essential-npm-modules-and-node-related-installs.sh",
+		"/Users/andrew/projects/ohri/immunizeca-testing-tool/client/components/DoseBox/DoseBox.tsx",
+		"/Users/andrew/projects/ohri/immunizeca-testing-tool/server/models/DoseRecord/DoseRecord.ts",
+		"/Users/andrew/projects/ohri/immunizeca-testing-tool/client/components/SidebarPanel/SidebarPanel.css",
+		"/Users/andrew/projects/ohri/immunizeca-testing-tool/client/redux/modules/dose.tsx",
+		"/Users/andrew/projects/ohri/immunizeca-testing-tool/client/redux/modules/status.tsx",
+		"/Users/andrew/projects/ohri/immunizeca-testing-tool/client/components/DoseBox/DoseBox.css",
+		"/Users/andrew/projects/ohri/immunizeca-testing-tool/Dockerfile",
+		"/Users/andrew/projects/ohri/immunizeca-testing-tool/doc/notes/colours_for_dose_status.md",
+		"/Users/andrew/projects/ohri/immunizeca-testing-tool/client/assets/styles/variables_mixins.css",
+		"/Users/andrew/projects/ohri/immunizeca-testing-tool/client/redux/modules/gender.tsx",
+		"/Users/andrew/projects/ohri/immunizeca-testing-tool/client/components/SidebarPanel/RecordTab/Picker.tsx",
+		"/Users/andrew/projects/ohri/immunizeca-testing-tool/client/components/VaccineCard/VaccineCard.tsx",
+		"/Users/andrew/projects/ohri/immunizeca-testing-tool/client/redux/models.ts",
+		"/Users/andrew/projects/ohri/immunizeca-testing-tool/client/redux/factories.ts",
+		"/Users/andrew/Library/Application Support/Sublime Text 3/Packages/User/snippets/snippets/css--border--color.sublime-snippet",
+		"/Users/andrew/projects/ohri/immunizeca-testing-tool/script/imgen/lib/uninstallTypings.js",
+		"/Users/andrew/projects/ohri/immunizeca-testing-tool/client/typings/react-datepicker.d.ts",
+		"/Users/andrew/projects/ohri/immunizeca-testing-tool/client/components/SidebarPanel/RecordTab/Picker.css",
+		"/Users/andrew/projects/ohri/immunizeca-testing-tool/package.json",
+		"/Users/andrew/projects/ohri/immunizeca-testing-tool/script/imgen/imgen",
+		"/Users/andrew/Library/Application Support/Sublime Text 3/Packages/User/snippets/snippets/moment--output-to-formatted-string.sublime-snippet",
+		"/Users/andrew/projects/ohri/immunizeca-testing-tool/client/components/DoseBox/DoseBoxContainer.tsx",
+		"/Users/andrew/projects/ohri/immunizeca-testing-tool/client/components/SidebarPanel/RecordTab/RecordTab.tsx",
+		"/Users/andrew/projects/ohri/immunizeca-testing-tool/client/components/SidebarPanel/SidebarPanel.tsx",
+		"/Users/andrew/projects/ohri/immunizeca-testing-tool/doc/notes/examples/content_data_returned_from_javelin.json",
+		"/Users/andrew/projects/ohri/immunizeca-testing-tool/client/redux/reducers.tsx",
+		"/Users/andrew/projects/ohri/immunizeca-testing-tool/client/redux/actions.ts",
+		"/Users/andrew/projects/ohri/immunizeca-testing-tool/client/components/DoseModal/DoseModalContainer.tsx",
+		"/Users/andrew/projects/ohri/immunizeca-testing-tool/client/typings/isomorphic-fetch.d.ts",
+		"/Users/andrew/projects/ohri/immunizeca-testing-tool/client/redux/defaultState.tsx",
+		"/Users/andrew/projects/ohri/immunizeca-testing-tool/client/components/SidebarPanel/RecordTab/BirthdatePicker.tsx",
+		"/Users/andrew/projects/ohri/immunizeca-testing-tool/doc/hacks_gotchas_oddities.md",
+		"/Users/andrew/projects/ohri/immunizeca-testing-tool/doc/notes/examples/normalized_schedules___example.json",
+		"/Users/andrew/projects/ohri/immunizeca-testing-tool/client/components/DoseModal/DoseModalElements.tsx",
+		"/Users/andrew/projects/ohri/immunizeca-testing-tool/client/components/DoseModal/DoseModal.tsx",
+		"/Users/andrew/projects/ohri/immunizeca-testing-tool/client/root.tsx",
+		"/Users/andrew/projects/ohri/immunizeca-testing-tool/client/redux/modules/content.tsx",
+		"/Users/andrew/projects/ohri/immunizeca-testing-tool/doc/old_code/fetchData--pretty-formatting--mimic-this-perhaps.ts",
+		"/Users/andrew/projects/ohri/immunizeca-testing-tool/client/redux/middlewares/fetchData.ts",
+		"/Users/andrew/projects/ohri/immunizeca-testing-tool/client/components/DoseBox/dose_box.css",
+		"/Users/andrew/projects/ohri/immunizeca-testing-tool/client/redux/modules/page.tsx",
+		"/Users/andrew/projects/ohri/immunizeca-testing-tool/client/components/App/App.tsx",
+		"/Users/andrew/projects/ohri/immunizeca-testing-tool/config/webpack.dev.config.js",
+		"/Users/andrew/projects/ohri/immunizeca-testing-tool/client/redux/modules/vaccine.tsx",
+		"/Users/andrew/projects/ohri/immunizeca-testing-tool/client/assets/lib/lodashMixins.tsx",
+		"/Users/andrew/projects/ohri/immunizeca-testing-tool/client/build/client/components/App/App.jsx",
+		"/Users/andrew/projects/ohri/immunizeca-testing-tool/client/build/client/components/SidebarPanel/RecordTab/RecordTab.jsx",
+		"/Users/andrew/projects/ohri/immunizeca-testing-tool/client/build/client/redux/modules/page.jsx",
+		"/Users/andrew/projects/ohri/immunizeca-testing-tool/client/components/SidebarPanel/RecordTab/ProvincePicker.tsx",
+		"/Users/andrew/projects/ohri/immunizeca-testing-tool/client/components/SidebarPanel/RecordTab/separator.tsx",
+		"/Users/andrew/projects/ohri/immunizeca-testing-tool/client/components/App/App.css",
+		"/Users/andrew/projects/ohri/immunizeca-testing-tool/client/components/SidebarPanel/RecordTab/separator.css",
+		"/Users/andrew/projects/ohri/immunizeca-testing-tool/client/components/SidebarPanel/Picker.css",
+		"/Users/andrew/projects/ohri/immunizeca-testing-tool/client/components/Utility/separator.css",
+		"/Users/andrew/projects/ohri/immunizeca-testing-tool/client/components/utility/separator.tsx",
+		"/Users/andrew/projects/ohri/immunizeca-testing-tool/client/components/DoseModal/DoseModal.css",
+		"/Users/andrew/projects/ohri/immunizeca-testing-tool/client/components/ImmCAHeader/immca_header.css",
+		"/Users/andrew/projects/ohri/immunizeca-testing-tool/client/components/Utility/separator.tsx",
+		"/Users/andrew/projects/ohri/immunizeca-testing-tool/client/components/separator.tsx",
+		"/Users/andrew/projects/ohri/immunizeca-testing-tool/client/components/SidebarPanel/RecordTab/GenderPicker.tsx",
+		"/Users/andrew/Library/Application Support/Sublime Text 3/Packages/User/Default (OSX).sublime-keymap",
+		"/Users/andrew/projects/ohri/immunizeca-testing-tool/client/redux/utils.tsx",
+		"/Users/andrew/projects/ohri/immunizeca-testing-tool/client/components/ImmCAHeader/ImmCAHeader.tsx",
+		"/Users/andrew/projects/ohri/immunizeca-testing-tool/doc/old_code/components_OLD/App.tsx",
+		"/Users/andrew/projects/ohri/immunizeca-testing-tool/client/typings/react-bootstrap.d.ts",
+		"/Users/andrew/projects/ohri/immunizeca-testing-tool/typings/globals/react-bootstrap/index.d.ts",
+		"/Users/andrew/Library/Application Support/Sublime Text 3/Packages/User/snippets/snippets/_langs/js/js--react--react-bootstrap-col.sublime-snippet",
+		"/Users/andrew/Library/Application Support/Sublime Text 3/Packages/User/snippets/snippets/_langs/js/js--react--react-bootstrap-grid.sublime-snippet",
+		"/Users/andrew/Library/Application Support/Sublime Text 3/Packages/User/snippets/snippets/_langs/js/js--react--react-bootstrap-row.sublime-snippet",
+		"/Users/andrew/Library/Application Support/Sublime Text 3/Packages/User/snippets/snippets/_langs/typescript/react/typescript--react--new-component-boilerplate.sublime-snippet",
+		"/Users/andrew/Library/Application Support/Sublime Text 3/Packages/User/snippets/snippets/_langs/typescript/react/typescript--react--new-component-boilerplate__OLD.sublime-snippet",
+		"/Users/andrew/Library/Application Support/Sublime Text 3/Packages/User/snippets/snippets/_langs/typescript/ts--declare-require.sublime-snippet",
+		"/Users/andrew/Library/Application Support/Sublime Text 3/Packages/User/snippets/_docs_guides/_langs/typescript/react/components/Cannon/Cannon.css",
+		"/Users/andrew/Library/Application Support/Sublime Text 3/Packages/User/snippets/snippets/css--postcss-use-var.sublime-snippet",
+		"/Users/andrew/projects/ohri/immunizeca-testing-tool/client/typings/classnames.d.ts",
+		"/Users/andrew/projects/ohri/immunizeca-testing-tool/build/config/config.js",
+		"/Users/andrew/Library/Application Support/Sublime Text 3/Packages/User/snippets/snippets/css--border--border-radius.sublime-snippet",
+		"/Users/andrew/Library/Application Support/Sublime Text 3/Packages/User/snippets/snippets/css--background--repeat.sublime-snippet",
+		"/Users/andrew/Library/Application Support/Sublime Text 3/Packages/User/snippets/snippets/css--background--position.sublime-snippet",
+		"/Users/andrew/Library/Application Support/Sublime Text 3/Packages/User/snippets/snippets/css--background--image.sublime-snippet",
+		"/Users/andrew/projects/ohri/immunizeca-testing-tool/config/config.js",
+		"/Users/andrew/Library/Application Support/Sublime Text 3/Packages/User/snippets/snippets/css--background--color.sublime-snippet",
+		"/Users/andrew/Library/Application Support/Sublime Text 3/Packages/User/snippets/snippets/snippet-snippets/snippetdef--base--css.sublime-snippet",
+		"/Users/andrew/projects/ohri/immunizeca-testing-tool/client/redux/middlewares/multiDispatch.ts",
+		"/Users/andrew/Library/Application Support/Sublime Text 3/Packages/User/snippets/snippets/_langs/js/js--react--this-props-shorthand.sublime-snippet",
+		"/Users/andrew/projects/ohri/immunizeca-testing-tool/client/redux/store.ts",
+		"/Users/andrew/projects/ohri/immunizeca-testing-tool/client/components/ProvincePicker/ProvincePicker.tsx",
+		"/Users/andrew/projects/ohri/immunizeca-testing-tool/client/redux/modules/province.tsx",
+		"/Users/andrew/projects/ohri/immunizeca-testing-tool/server/routes/api/1.0/api_1.ts",
+		"/Users/andrew/projects/ohri/immunizeca-testing-tool/server/routes/api/1.0/schedules/schedules.ts",
+		"/Users/andrew/projects/ohri/immunizeca-testing-tool/server/routes/api/1.0/config/config.ts",
+		"/Users/andrew/projects/ohri/immunizeca-testing-tool/client/redux/modules/config.tsx",
+		"/Users/andrew/Desktop/record_icon.png",
+		"/Users/andrew/projects/ohri/immunizeca-testing-tool/server/routes/api/1.0/vaccines/vaccines.ts",
+		"/Users/andrew/Library/Application Support/Sublime Text 3/Packages/User/snippets/snippets/_langs/css_scss/drawing/shapes/css--drawing--half-circle.sublime-snippet",
+		"/Users/andrew/Library/Application Support/Sublime Text 3/Packages/User/snippets/snippets/_langs/css_scss/drawing/shapes/css--drawing--triangle.sublime-snippet",
+		"/Users/andrew/Library/Application Support/Sublime Text 3/Packages/User/snippets/snippets/_langs/css_scss/drawing/shapes/css--shape--hollow-triangle-w-no-base--slash--angle-bracket.sublime-snippet",
+		"/Users/andrew/Library/Application Support/Sublime Text 3/Packages/User/snippets/snippets/_langs/css_scss/drawing/shapes/css--shape--thought-bubble-tooltip.sublime-snippet",
+		"/Users/andrew/Library/Application Support/Sublime Text 3/Packages/User/snippets/snippets/_langs/css_scss/drawing/css--drawing--transform-rotate.sublime-snippet",
+		"/Users/andrew/Library/Application Support/Sublime Text 3/Packages/User/snippets/snippets/_langs/css_scss/fonts/css--font--bold-2.sublime-snippet",
+		"/Users/andrew/Library/Application Support/Sublime Text 3/Packages/User/snippets/snippets/_langs/css_scss/fonts/css--font--bold.sublime-snippet",
+		"/Users/andrew/Library/Application Support/Sublime Text 3/Packages/User/snippets/snippets/_langs/css_scss/fonts/css--font--color.sublime-snippet",
+		"/Users/andrew/Library/Application Support/Sublime Text 3/Packages/User/snippets/snippets/_langs/css_scss/fonts/css--font--family-2.sublime-snippet",
+		"/Users/andrew/Library/Application Support/Sublime Text 3/Packages/User/snippets/snippets/_langs/css_scss/fonts/css--font--family.sublime-snippet",
+		"/Users/andrew/Library/Application Support/Sublime Text 3/Packages/User/snippets/snippets/_langs/css_scss/fonts/css--font--italic-2.sublime-snippet",
+		"/Users/andrew/Library/Application Support/Sublime Text 3/Packages/User/snippets/snippets/_langs/css_scss/fonts/css--font--italic.sublime-snippet",
+		"/Users/andrew/Library/Application Support/Sublime Text 3/Packages/User/snippets/snippets/_langs/css_scss/fonts/css--font--size.sublime-snippet",
+		"/Users/andrew/Library/Application Support/Sublime Text 3/Packages/User/snippets/snippets/_langs/css_scss/fonts/css--font--underline-2.sublime-snippet",
+		"/Users/andrew/Library/Application Support/Sublime Text 3/Packages/User/snippets/snippets/_langs/css_scss/fonts/css--font--underline.sublime-snippet",
+		"/Users/andrew/Library/Application Support/Sublime Text 3/Packages/User/snippets/snippets/_langs/css_scss/box-model/css--boxmodel--border-2.sublime-snippet",
+		"/Users/andrew/Library/Application Support/Sublime Text 3/Packages/User/snippets/snippets/_langs/css_scss/box-model/css--boxmodel--border.sublime-snippet",
+		"/Users/andrew/Library/Application Support/Sublime Text 3/Packages/User/snippets/snippets/_langs/css_scss/box-model/css--boxmodel--margin-2.sublime-snippet",
+		"/Users/andrew/Library/Application Support/Sublime Text 3/Packages/User/snippets/snippets/_langs/css_scss/box-model/css--boxmodel--margin-bottom.sublime-snippet",
+		"/Users/andrew/Library/Application Support/Sublime Text 3/Packages/User/snippets/snippets/_langs/css_scss/box-model/css--boxmodel--margin-left.sublime-snippet",
+		"/Users/andrew/Library/Application Support/Sublime Text 3/Packages/User/snippets/snippets/_langs/css_scss/box-model/css--boxmodel--margin-right.sublime-snippet",
+		"/Users/andrew/Library/Application Support/Sublime Text 3/Packages/User/snippets/snippets/_langs/css_scss/box-model/css--boxmodel--margin-top.sublime-snippet",
+		"/Users/andrew/Library/Application Support/Sublime Text 3/Packages/User/snippets/snippets/_langs/css_scss/box-model/css--boxmodel--margin.sublime-snippet",
+		"/Users/andrew/Library/Application Support/Sublime Text 3/Packages/User/snippets/snippets/_langs/css_scss/box-model/css--boxmodel--padding-bottom.sublime-snippet",
+		"/Users/andrew/Library/Application Support/Sublime Text 3/Packages/User/snippets/snippets/_langs/css_scss/box-model/css--boxmodel--padding-2.sublime-snippet",
+		"/Users/andrew/Library/Application Support/Sublime Text 3/Packages/User/snippets/snippets/_langs/css_scss/box-model/css--boxmodel--padding-left.sublime-snippet",
+		"/Users/andrew/Library/Application Support/Sublime Text 3/Packages/User/snippets/snippets/_langs/css_scss/box-model/css--boxmodel--padding-right.sublime-snippet",
+		"/Users/andrew/Library/Application Support/Sublime Text 3/Packages/User/snippets/snippets/_langs/css_scss/box-model/css--boxmodel--padding-top.sublime-snippet",
+		"/Users/andrew/Library/Application Support/Sublime Text 3/Packages/User/snippets/snippets/_langs/css_scss/drawing/shapes/css--drawing--ellipse.sublime-snippet",
+		"/Users/andrew/Library/Application Support/Sublime Text 3/Packages/User/snippets/snippets/_langs/css_scss/box-model/css--boxmodel--padding.sublime-snippet",
+		"/Users/andrew/Library/Application Support/Sublime Text 3/Packages/User/snippets/snippets/_langs/css_scss/list/css--lists--list-style-type.sublime-snippet",
+		"/Users/andrew/Library/Application Support/Sublime Text 3/Packages/User/snippets/snippets/_langs/css_scss/drawing/shapes/css--drawing--circle.sublime-snippet"
 	],
 	"find":
 	{
-		"height": 35.0
+		"height": 22.0
 	},
 	"find_in_files":
 	{
 		"height": 93.0,
 		"where_history":
 		[
-			"<project>,-node_modules/**,-.build/**,*.rb,-gulpfile.js",
-			"<project>,-node_modules/**,-.build/**,*.js,-gulpfile.js",
-			"<project>",
-			"<project>,-node_modules/**,-.build/**,*.js,-gulpfile.js",
-			"<project>,-node_modules/**,-.build/**,*.js",
-			"<project>,-node_modules/**,-.build/**",
-			"<project>,-node_modules/**",
-			"<project>",
-			"/home/andfaulkner/Projects/testbed/testbed-seneca--4/",
-			"/home/andfaulkner/Projects/testbed/express-backbone-testbed-3/node_modules/seneca",
-			"<project>",
-			"<project>, ,-node_modules",
-			"/home/andfaulkner/Projects/testbed/express-backbone-testbed-3",
-			"/home/andfaulkner/Projects/testbed/express-backbone-testbed-3/node_modules/material-ui",
-			"<project>,-node_modules/**/*.*",
-			"<project>,-node_modules**",
-			"<project>,-node_modules",
-			"<project>/app",
-			"<project>",
-			"/home/andfaulkner/Projects/testbed/express-testbed-2/app",
-			"<project>",
-			"/home/andfaulkner/Projects/testbed/express-testbed/src",
-			"<project>",
-			"/home/andfaulkner/Projects/express/express-test-3,-/home/andfaulkner/Projects/express/express-test-3",
-			"/home/andfaulkner/Projects/express/express-test-3,-/home/andfaulkner/Projects/express/express-test-3/node_modules/**",
-			"/home/andfaulkner/Projects/express/express-test-3,-/home/andfaulkner/Projects/express/express-test-3/node_modules",
-			"/home/andfaulkner/Projects/express/express-test-3",
-			"/home/andfaulkner/Projects/express/express-test-3/app.js,/home/andfaulkner/Projects/express/express-test-3/package.json,/home/andfaulkner/Projects/express/express-test-3/bin,/home/andfaulkner/Projects/express/express-test-3/public,/home/andfaulkner/Projects/express/express-test-3/routes,/home/andfaulkner/Projects/express/express-test-3/views",
-			"/home/andfaulkner/Projects/express/express-test-3/bin,/home/andfaulkner/Projects/express/express-test-3/public,/home/andfaulkner/Projects/express/express-test-3/routes,/home/andfaulkner/Projects/express/express-test-3/views",
-			"<project>",
-			"web_modules/js/**",
-			"web_modules/**",
-			"web_modules"
+			"-*.dds,-*.eot,-*.gif,-*.ico,-*.jar,-*.jpeg,-*.jpg,-*.log,-*.pdf,-*.png,-*.swf,-*.tga,-*.ttf,-*.zip",
+			"<Project>,-**/node_modules/excel-builder/**,-*.sublime-snippet,-*.min.js,-**/lodash/**,-**/doc/**,**/client/**",
+			"-*.dds,-*.eot,-*.gif,-*.ico,-*.jar,-*.jpeg,-*.jpg,-*.log,-*.pdf,-*.png,-*.swf,-*.tga,-*.ttf,-*.zip",
+			"<Project>,-**/node_modules/excel-builder/**,-*.sublime-snippet,-*.min.js,-**/lodash/**,-**/doc/**,**/client/**",
+			"-*.dds,-*.eot,-*.gif,-*.ico,-*.jar,-*.jpeg,-*.jpg,-*.log,-*.pdf,-*.png,-*.swf,-*.tga,-*.ttf,-*.zip",
+			"-*.dds,-*.eot,-*.gif,-*.ico,-*.jar,-*.jpeg,-*.jpg,-*.log,-*.pdf,-*.png,-*.swf,-*.tga,-*.ttf,-*.zip,*.tsx,*.ts",
+			"-*.dds,-*.eot,-*.gif,-*.ico,-*.jar,-*.jpeg,-*.jpg,-*.log,-*.pdf,-*.png,-*.swf,-*.tga,-*.ttf,-*.zip",
+			"-*.dds,-*.eot,-*.gif,-*.ico,-*.jar,-*.jpeg,-*.jpg,-*.log,-*.pdf,-*.png,-*.swf,-*.tga,-*.ttf,-*.zip,*.tsx,*.ts",
+			"-*.dds,-*.eot,-*.gif,-*.ico,-*.jar,-*.jpeg,-*.jpg,-*.log,-*.pdf,-*.png,-*.swf,-*.tga,-*.ttf,-*.zip",
+			"-*.dds,-*.eot,-*.gif,-*.ico,-*.jar,-*.jpeg,-*.jpg,-*.log,-*.pdf,-*.png,-*.swf,-*.tga,-*.ttf,-*.zip,*.tsx,*.ts",
+			"-*.dds,-*.eot,-*.gif,-*.ico,-*.jar,-*.jpeg,-*.jpg,-*.log,-*.pdf,-*.png,-*.swf,-*.tga,-*.ttf,-*.zip,*.ts",
+			"-*.dds,-*.eot,-*.gif,-*.ico,-*.jar,-*.jpeg,-*.jpg,-*.log,-*.pdf,-*.png,-*.swf,-*.tga,-*.ttf,-*.zip,*.tsx",
+			"-*.dds,-*.eot,-*.gif,-*.ico,-*.jar,-*.jpeg,-*.jpg,-*.log,-*.pdf,-*.png,-*.swf,-*.tga,-*.ttf,-*.zip",
+			"<Project>,-**/node_modules/excel-builder/**,-*.sublime-snippet,-*.min.js,-**/lodash/**,-**/doc/**,**/client/**",
+			"-*.dds,-*.eot,-*.gif,-*.ico,-*.jar,-*.jpeg,-*.jpg,-*.log,-*.pdf,-*.png,-*.swf,-*.tga,-*.ttf,-*.zip",
+			"-*.dds,-*.eot,-*.gif,-*.ico,-*.jar,-*.jpeg,-*.jpg,-*.log,-*.pdf,-*.png,-*.swf,-*.tga,-*.ttf,-*.zip,*.tsx",
+			"-*.dds,-*.eot,-*.gif,-*.ico,-*.jar,-*.jpeg,-*.jpg,-*.log,-*.pdf,-*.png,-*.swf,-*.tga,-*.ttf,-*.zip",
+			"-*.dds,-*.eot,-*.gif,-*.ico,-*.jar,-*.jpeg,-*.jpg,-*.log,-*.pdf,-*.png,-*.swf,-*.tga,-*.ttf,-*.zip,*.tsx",
+			"-*.dds,-*.eot,-*.gif,-*.ico,-*.jar,-*.jpeg,-*.jpg,-*.log,-*.pdf,-*.png,-*.swf,-*.tga,-*.ttf,-*.zip",
+			"-*.dds,-*.eot,-*.gif,-*.ico,-*.jar,-*.jpeg,-*.jpg,-*.log,-*.pdf,-*.png,-*.swf,-*.tga,-*.ttf,-*.zip,*.tsx",
+			"-*.dds,-*.eot,-*.gif,-*.ico,-*.jar,-*.jpeg,-*.jpg,-*.log,-*.pdf,-*.png,-*.swf,-*.tga,-*.ttf,-*.zip",
+			"-*.dds,-*.eot,-*.gif,-*.ico,-*.jar,-*.jpeg,-*.jpg,-*.log,-*.pdf,-*.png,-*.swf,-*.tga,-*.ttf,-*.zip,*.css",
+			"-*.dds,-*.eot,-*.gif,-*.ico,-*.jar,-*.jpeg,-*.jpg,-*.log,-*.pdf,-*.png,-*.swf,-*.tga,-*.ttf,-*.zip",
+			"**/client/**,*.css",
+			"-*.dds,-*.eot,-*.gif,-*.ico,-*.jar,-*.jpeg,-*.jpg,-*.log,-*.pdf,-*.png,-*.swf,-*.tga,-*.ttf,-*.zip",
+			"**/client/**,*.css",
+			"-*.dds,-*.eot,-*.gif,-*.ico,-*.jar,-*.jpeg,-*.jpg,-*.log,-*.pdf,-*.png,-*.swf,-*.tga,-*.ttf,-*.zip",
+			"-**/node_modules/excel-builder/**,-*.sublime-snippet,-*.min.js,-**/lodash/**,-**/doc/**,**/client/**,*.css",
+			"<Project>,-**/node_modules/excel-builder/**,-*.sublime-snippet,-*.min.js,-**/lodash/**,-**/doc/**,**/client/**,*.css",
+			"-*.dds,-*.eot,-*.gif,-*.ico,-*.jar,-*.jpeg,-*.jpg,-*.log,-*.pdf,-*.png,-*.swf,-*.tga,-*.ttf,-*.zip",
+			"-*.dds,-*.eot,-*.gif,-*.ico,-*.jar,-*.jpeg,-*.jpg,-*.log,-*.pdf,-*.png,-*.swf,-*.tga,-*.ttf,-*.zip,*.css",
+			"-*.dds,-*.eot,-*.gif,-*.ico,-*.jar,-*.jpeg,-*.jpg,-*.log,-*.pdf,-*.png,-*.swf,-*.tga,-*.ttf,-*.zip",
+			"-*.dds,-*.eot,-*.gif,-*.ico,-*.jar,-*.jpeg,-*.jpg,-*.log,-*.pdf,-*.png,-*.swf,-*.tga,-*.ttf,-*.zip,*.css",
+			"-*.dds,-*.eot,-*.gif,-*.ico,-*.jar,-*.jpeg,-*.jpg,-*.log,-*.pdf,-*.png,-*.swf,-*.tga,-*.ttf,-*.zip",
+			"-*.dds,-*.eot,-*.gif,-*.ico,-*.jar,-*.jpeg,-*.jpg,-*.log,-*.pdf,-*.png,-*.swf,-*.tga,-*.ttf,-*.zip,*.d.ts",
+			"-*.dds,-*.eot,-*.gif,-*.ico,-*.jar,-*.jpeg,-*.jpg,-*.log,-*.pdf,-*.png,-*.swf,-*.tga,-*.ttf,-*.zip",
+			"<Project>,-**/node_modules/excel-builder/**,-*.sublime-snippet,-*.min.js,-**/lodash/**,-**/doc/**,**/server/**,*.css,*.tsx,*.ts,-*.js",
+			"-*.dds,-*.eot,-*.gif,-*.ico,-*.jar,-*.jpeg,-*.jpg,-*.log,-*.pdf,-*.png,-*.swf,-*.tga,-*.ttf,-*.zip",
+			"<Project>,-**/node_modules/excel-builder/**,-*.sublime-snippet,-*.min.js,-**/lodash/**,-**/doc/**,**/server/**,*.css,*.tsx,*.ts,-*.js",
+			"-*.dds,-*.eot,-*.gif,-*.ico,-*.jar,-*.jpeg,-*.jpg,-*.log,-*.pdf,-*.png,-*.swf,-*.tga,-*.ttf,-*.zip",
+			"<Project>,-**/node_modules/excel-builder/**,-*.sublime-snippet,-*.min.js,-**/lodash/**,-**/doc/**,**/server/**,*.css,*.tsx,*.ts,-*.js",
+			"-*.dds,-*.eot,-*.gif,-*.ico,-*.jar,-*.jpeg,-*.jpg,-*.log,-*.pdf,-*.png,-*.swf,-*.tga,-*.ttf,-*.zip",
+			"<Project>,-**/node_modules/excel-builder/**,-*.sublime-snippet,-*.min.js,-**/lodash/**,-**/doc/**,**/server/**,*.css,*.tsx,*.ts,-*.js",
+			"-*.dds,-*.eot,-*.gif,-*.ico,-*.jar,-*.jpeg,-*.jpg,-*.log,-*.pdf,-*.png,-*.swf,-*.tga,-*.ttf,-*.zip",
+			"<Project>,-**/node_modules/excel-builder/**,-*.sublime-snippet,-*.min.js,-**/lodash/**,-**/doc/**,**/server/**,*.css,*.tsx,*.ts,-*.js",
+			"-*.dds,-*.eot,-*.gif,-*.ico,-*.jar,-*.jpeg,-*.jpg,-*.log,-*.pdf,-*.png,-*.swf,-*.tga,-*.ttf,-*.zip",
+			"<Project>,-**/node_modules/excel-builder/**,-*.sublime-snippet,-*.min.js,-**/lodash/**,-**/doc/**,**/server/**,*.css,*.tsx,*.ts,-*.js",
+			"-*.dds,-*.eot,-*.gif,-*.ico,-*.jar,-*.jpeg,-*.jpg,-*.log,-*.pdf,-*.png,-*.swf,-*.tga,-*.ttf,-*.zip",
+			"<Project>,-**/node_modules/excel-builder/**,-*.sublime-snippet,-*.min.js,-**/lodash/**,-**/doc/**,**/server/**,*.css,*.tsx,*.ts,-*.js",
+			"<Project>,-**/node_modules/excel-builder/**,-*.sublime-snippet,-*.min.js,-**/lodash/**,-**/doc/**,**/server/**,*.css,*.tsx,*.ts",
+			"-*.dds,-*.eot,-*.gif,-*.ico,-*.jar,-*.jpeg,-*.jpg,-*.log,-*.pdf,-*.png,-*.swf,-*.tga,-*.ttf,-*.zip",
+			"<Project>,-**/node_modules/excel-builder/**,-*.sublime-snippet,-*.min.js,-**/lodash/**,-**/doc/**,*.css,*.tsx,*.ts",
+			"-*.dds,-*.eot,-*.gif,-*.ico,-*.jar,-*.jpeg,-*.jpg,-*.log,-*.pdf,-*.png,-*.swf,-*.tga,-*.ttf,-*.zip",
+			"<Project>,-**/node_modules/excel-builder/**,-*.sublime-snippet,-*.min.js,-**/lodash/**,-**/doc/**,*.css,*.tsx,*.ts",
+			"-*.dds,-*.eot,-*.gif,-*.ico,-*.jar,-*.jpeg,-*.jpg,-*.log,-*.pdf,-*.png,-*.swf,-*.tga,-*.ttf,-*.zip",
+			"<Project>,-**/node_modules/excel-builder/**,-*.sublime-snippet,-*.min.js,-**/lodash/**,-**/doc/**,*.css,*.d.ts",
+			"<Project>,-**/node_modules/excel-builder/**,-*.sublime-snippet,-*.min.js,-**/lodash/**,-**/doc/**,*.css,*.ts,*.tsx",
+			"-*.dds,-*.eot,-*.gif,-*.ico,-*.jar,-*.jpeg,-*.jpg,-*.log,-*.pdf,-*.png,-*.swf,-*.tga,-*.ttf,-*.zip",
+			"<Project>,-**/node_modules/excel-builder/**,-*.sublime-snippet,-*.min.js,-**/lodash/**,-**/doc/**,*.css,*.ts,*.tsx,-*.d.ts",
+			"-*.dds,-*.eot,-*.gif,-*.ico,-*.jar,-*.jpeg,-*.jpg,-*.log,-*.pdf,-*.png,-*.swf,-*.tga,-*.ttf,-*.zip",
+			"<Project>,-**/node_modules/excel-builder/**,-*.sublime-snippet,-*.min.js,-**/lodash/**,-**/doc/**,*.css,*.ts,*.tsx,-*.d.ts",
+			"<Project>,-**/node_modules/excel-builder/**,-*.sublime-snippet,-*.min.js,-**/lodash/**,-**/doc/**,*.css,*.ts,*.tsx,*.d.ts",
+			"-*.dds,-*.eot,-*.gif,-*.ico,-*.jar,-*.jpeg,-*.jpg,-*.log,-*.pdf,-*.png,-*.swf,-*.tga,-*.ttf,-*.zip",
+			"<Project>,-**/node_modules/excel-builder/**,-*.sublime-snippet,-*.min.js,-**/lodash/**,-**/doc/**,*.css,*.ts,*.tsx",
+			"<Project>,-**/node_modules/excel-builder/**,-*.sublime-snippet,-*.min.js,-**/lodash/**,-**/doc/**,*.ts,*.tsx",
+			"<Project>,-**/node_modules/excel-builder/**,-*.sublime-snippet,-*.min.js,-**/lodash/**,-**/doc/**,*.css,*.ts,*.tsx",
+			"-*.dds,-*.eot,-*.gif,-*.ico,-*.jar,-*.jpeg,-*.jpg,-*.log,-*.pdf,-*.png,-*.swf,-*.tga,-*.ttf,-*.zip",
+			"<Project>,-**/node_modules/excel-builder/**,-*.sublime-snippet,-*.min.js,-**/lodash/**,-**/doc/**,*.css,*.ts,*.tsx",
+			"-*.dds,-*.eot,-*.gif,-*.ico,-*.jar,-*.jpeg,-*.jpg,-*.log,-*.pdf,-*.png,-*.swf,-*.tga,-*.ttf,-*.zip",
+			"<Project>,-**/node_modules/excel-builder/**,-*.sublime-snippet,-*.min.js,-**/lodash/**,-**/doc/**,*.css,*.ts,*.tsx",
+			"-*.dds,-*.eot,-*.gif,-*.ico,-*.jar,-*.jpeg,-*.jpg,-*.log,-*.pdf,-*.png,-*.swf,-*.tga,-*.ttf,-*.zip",
+			"<Project>,-**/node_modules/excel-builder/**,-*.sublime-snippet,-*.min.js,-**/lodash/**,-**/doc/**,*.css",
+			"*.css,*.ts,*.tsx",
+			"-*.dds,-*.eot,-*.gif,-*.ico,-*.jar,-*.jpeg,-*.jpg,-*.log,-*.pdf,-*.png,-*.swf,-*.tga,-*.ttf,-*.zip",
+			"*.css,*.ts,*.tsx",
+			"*.css",
+			"-*.dds,-*.eot,-*.gif,-*.ico,-*.jar,-*.jpeg,-*.jpg,-*.log,-*.pdf,-*.png,-*.swf,-*.tga,-*.ttf,-*.zip",
+			"*.css",
+			"-*.dds,-*.eot,-*.gif,-*.ico,-*.jar,-*.jpeg,-*.jpg,-*.log,-*.pdf,-*.png,-*.swf,-*.tga,-*.ttf,-*.zip",
+			"<Project>,-**/node_modules/excel-builder/**,-*.sublime-snippet,-*.min.js,-**/lodash/**,-**/doc/**,*.css",
+			"-*.dds,-*.eot,-*.gif,-*.ico,-*.jar,-*.jpeg,-*.jpg,-*.log,-*.pdf,-*.png,-*.swf,-*.tga,-*.ttf,-*.zip",
+			"<Project>,-**/node_modules/excel-builder/**,-*.sublime-snippet,-*.min.js,-**/lodash/**,-**/doc/**,*.css",
+			"-*.dds,-*.eot,-*.gif,-*.ico,-*.jar,-*.jpeg,-*.jpg,-*.log,-*.pdf,-*.png,-*.swf,-*.tga,-*.ttf,-*.zip",
+			"<Project>,-**/node_modules/excel-builder/**,-*.sublime-snippet,-*.min.js,-**/lodash/**,-**/doc/**,*.ts,*.tsx",
+			"<Project>,-**/node_modules/excel-builder/**,-*.sublime-snippet,-*.min.js,-**/lodash/**,-**/doc/**,*.css",
+			"<Project>,immunizeca-testing-tool/client/**,-**/node_modules/excel-builder/**,-*.sublime-snippet,-*.min.js,-**/lodash/**,-**/doc/**,*.css",
+			"<Project>,-**/node_modules/excel-builder/**,-*.sublime-snippet,-*.min.js,-**/lodash/**,-**/doc/**,*.css",
+			"-*.dds,-*.eot,-*.gif,-*.ico,-*.jar,-*.jpeg,-*.jpg,-*.log,-*.pdf,-*.png,-*.swf,-*.tga,-*.ttf,-*.zip",
+			"<Project>,-**/node_modules/excel-builder/**,-*.sublime-snippet,-*.min.js,-**/lodash/**,-**/doc/**,*.ts,*.tsx",
+			"-*.dds,-*.eot,-*.gif,-*.ico,-*.jar,-*.jpeg,-*.jpg,-*.log,-*.pdf,-*.png,-*.swf,-*.tga,-*.ttf,-*.zip",
+			"<Project>,-**/node_modules/excel-builder/**,-*.sublime-snippet,-*.min.js,-**/lodash/**,-**/doc/**,**/client/**,*.ts,*.tsx",
+			"-*.dds,-*.eot,-*.gif,-*.ico,-*.jar,-*.jpeg,-*.jpg,-*.log,-*.pdf,-*.png,-*.swf,-*.tga,-*.ttf,-*.zip",
+			"<Project>,-**/node_modules/excel-builder/**,-*.sublime-snippet,-*.min.js,-**/lodash/**,-**/doc/**,**/client/**",
+			"-*.dds,-*.eot,-*.gif,-*.ico,-*.jar,-*.jpeg,-*.jpg,-*.log,-*.pdf,-*.png,-*.swf,-*.tga,-*.ttf,-*.zip",
+			"<Project>,-**/node_modules/excel-builder/**,-*.sublime-snippet,-*.min.js,-**/lodash/**,-**/doc/**,**/client/**",
+			"-*.dds,-*.eot,-*.gif,-*.ico,-*.jar,-*.jpeg,-*.jpg,-*.log,-*.pdf,-*.png,-*.swf,-*.tga,-*.ttf,-*.zip",
+			"<Project>,-**/node_modules/excel-builder/**,-*.sublime-snippet,-*.min.js,-**/lodash/**,-**/doc/**,*.d.ts",
+			"<Project>,-**/node_modules/excel-builder/**,-*.sublime-snippet,-*.min.js,-**/lodash/**,-**/doc/**,*.tsx,*.ts,*.d.ts",
+			"<Project>,-**/node_modules/excel-builder/**,-*.sublime-snippet,-*.min.js,-**/lodash/**,-**/doc/**,*.tsx,*.ts",
+			"-*.dds,-*.eot,-*.gif,-*.ico,-*.jar,-*.jpeg,-*.jpg,-*.log,-*.pdf,-*.png,-*.swf,-*.tga,-*.ttf,-*.zip",
+			"<Project>,-**/node_modules/excel-builder/**,-*.sublime-snippet,-*.min.js,-**/lodash/**,-**/doc/**,*.tsx,*.ts",
+			"-*.dds,-*.eot,-*.gif,-*.ico,-*.jar,-*.jpeg,-*.jpg,-*.log,-*.pdf,-*.png,-*.swf,-*.tga,-*.ttf,-*.zip",
+			"<Project>,-**/node_modules/excel-builder/**,-*.sublime-snippet,-*.min.js,-**/lodash/**,-**/doc/**,*.tsx,*.ts",
+			"-*.dds,-*.eot,-*.gif,-*.ico,-*.jar,-*.jpeg,-*.jpg,-*.log,-*.pdf,-*.png,-*.swf,-*.tga,-*.ttf,-*.zip",
+			"<Project>,**/client/**,-**/node_modules/excel-builder/**,-*.sublime-snippet,-*.min.js,-**/lodash/**,-**/doc/**,*.tsx,*.ts",
+			"-*.dds,-*.eot,-*.gif,-*.ico,-*.jar,-*.jpeg,-*.jpg,-*.log,-*.pdf,-*.png,-*.swf,-*.tga,-*.ttf,-*.zip",
+			"<Project>,**/client/**,-**/node_modules/excel-builder/**,-*.sublime-snippet,-*.min.js,-**/lodash/**,-**/doc/**,*.tsx,*.ts",
+			"-*.dds,-*.eot,-*.gif,-*.ico,-*.jar,-*.jpeg,-*.jpg,-*.log,-*.pdf,-*.png,-*.swf,-*.tga,-*.ttf,-*.zip",
+			"<Project>,-**/node_modules/excel-builder/**,-*.sublime-snippet,-*.min.js,-**/lodash/**,-**/doc/**,*.tsx,*.ts",
+			"<Project>,-**/node_modules/excel-builder/**,-*.sublime-snippet,-*.min.js,-**/lodash/**,-**/doc/**,*.tsx",
+			"<Project>",
+			"<Project>,-**/node_modules/excel-builder/**,-*.sublime-snippet,-*.min.js,-**/lodash/**,-**/doc/**,*.tsx",
+			"<Project>,-**/node_modules/excel-builder/**,-*.sublime-snippet,-*.min.js,-**/lodash/**,-**/doc/**,*.ts",
+			"-*.dds,-*.eot,-*.gif,-*.ico,-*.jar,-*.jpeg,-*.jpg,-*.log,-*.pdf,-*.png,-*.swf,-*.tga,-*.ttf,-*.zip",
+			"<Project>,-**/node_modules/excel-builder/**,-*.sublime-snippet,-*.min.js,-**/lodash/**,-**/doc/**,*.ts",
+			"-*.dds,-*.eot,-*.gif,-*.ico,-*.jar,-*.jpeg,-*.jpg,-*.log,-*.pdf,-*.png,-*.swf,-*.tga,-*.ttf,-*.zip",
+			"<Project>,-**/node_modules/excel-builder/**,-*.sublime-snippet,-*.min.js,-**/lodash/**,-**/doc/**,*.ts",
+			"<Project>,-**/node_modules/**,-**/snippets/**,*.ts",
+			"<Project>,-**/node_modules/excel-builder/**,-*.sublime-snippet,-*.min.js,-**/lodash/**,-**/doc/**,*.ts",
+			"-*.dds,-*.eot,-*.gif,-*.ico,-*.jar,-*.jpeg,-*.jpg,-*.log,-*.pdf,-*.png,-*.swf,-*.tga,-*.ttf,-*.zip",
+			"<Project>,-**/node_modules/excel-builder/**,-*.sublime-snippet,-*.min.js,-**/lodash/**,-**/doc/**,*.ts",
+			"-*.dds,-*.eot,-*.gif,-*.ico,-*.jar,-*.jpeg,-*.jpg,-*.log,-*.pdf,-*.png,-*.swf,-*.tga,-*.ttf,-*.zip",
+			"<Project>,-**/node_modules/excel-builder/**,-*.sublime-snippet,-*.min.js,-**/lodash/**,-**/doc/**,*.ts",
+			"<Project>,-**/node_modules/excel-builder/**,-*.sublime-snippet,-*.min.js,-**/lodash/**",
+			"-*.dds,-*.eot,-*.gif,-*.ico,-*.jar,-*.jpeg,-*.jpg,-*.log,-*.pdf,-*.png,-*.swf,-*.tga,-*.ttf,-*.zip",
+			"<Project>,typings/globals/**,*.d.ts",
+			"<Project>,**/ts_extracts/**",
+			"-*.dds,-*.eot,-*.gif,-*.ico,-*.jar,-*.jpeg,-*.jpg,-*.log,-*.pdf,-*.png,-*.swf,-*.tga,-*.ttf,-*.zip"
 		]
 	},
 	"find_state":
 	{
-		"case_sensitive": false,
+		"case_sensitive": true,
 		"find_history":
 		[
-			"ruler",
-			"../",
-			"opts",
-			"ruby",
+			".nav-pills>li.sidebar-panel--tab--batch>a",
+			"doseDetailView",
+			"test",
+			"shared",
+			"public",
+			"client",
+			".dose-box.overdue",
+			"received\n",
+			"future\n",
+			" .",
+			"RECEIVED",
+			"received",
+			"approaching",
+			"overdue",
+			"future",
+			"dose-box",
+			" = ",
+			"status",
+			"overdue.*approaching.*received",
+			"'overdue' | 'approaching' | 'received'",
+			"' | '",
+			"status",
+			"config",
+			"lightgreen",
+			"ignore",
 			"\"",
+			" (Optional)",
+			"RequiredFieldLabel",
+			"Birthdate",
+			"RequiredFieldStar",
+			"picker--input-data",
+			"\\(\\)",
+			"(): any",
+			"openToDate",
+			" ",
+			"28",
+			"birthdate",
+			"mockScheduleAPI",
+			"RequestData",
+			"dummyReqData",
+			"dummyReq",
+			"baseRequest",
+			": \"",
+			"\"",
+			"t",
+			"\"",
+			"fetchPages",
+			"baseRequest",
+			"1992-04-20",
+			"REQUEST_PAGES",
+			"requestPages",
+			"fetchPages",
+			"getRegionNumberFromId",
+			"province",
+			"getNumberFromName",
+			"name",
+			"birthdate",
+			"gender",
+			"OTHER",
+			"Gender.",
+			"\"",
+			"baseRequest",
+			"fetchPages",
+			"baseRequest",
+			"request",
+			"dummy",
+			"Id",
+			"(testRecordDesc",
+			"testRecordDesc",
+			"testRecordDescription",
+			"Id",
+			"isLarge",
+			"large",
+			"Test Record ID",
+			"setTestRecordId",
+			"handle",
+			"state",
+			"sidebar-panel",
 			"second",
-			"\"",
-			"{ |f",
-			"\"",
-			"DrbTestApp",
-			"rake ",
-			"%p",
-			"MARKDOWN_FILES",
-			"markdown_files",
-			"MARKDOWN_FILES",
-			"markdown_files",
-			"\\.md",
-			".md",
-			"erk_files",
-			"files",
-			"\"",
-			"fl",
-			"(?<!\\\\)\\$",
-			"(?<=\\\\)\\$",
-			"\\$",
-			"2",
-			"${2: OptionalClassToExtendFrom}",
-			"called",
-			"pushd",
-			"dir_stack",
-			"$di",
-			"\"",
-			"html",
-			"'",
-			"\"",
-			"html",
-			".html",
-			"#",
-			"\"",
-			"file",
-			"\"",
-			"rake",
-			"\"#{",
-			"HashSyn",
-			"rake",
-			"sublime",
-			",",
-			"key",
-			"each_pair",
-			"key-value pair",
-			"any",
-			"keys",
-			"key",
-			"\"",
-			"''",
-			"\"",
-			"	",
-			"\"",
-			"FrozenStringLiteralComment",
-			"mongo:\\/\\/",
-			"MethodDef",
-			"IndentationWidth",
-			"IndentationConsistency",
-			"Style/IndentationConsistency",
-			"BracesAroundHashParameters",
-			"AlignParameters",
-			"proj",
-			"AlignHash",
-			"\"",
-			"ls",
-			"lsa",
-			"enabler",
-			"; Dir.pwd",
-			"Dir.new(Dir.pwd)",
-			"class",
-			"arena_width",
-			"10",
-			"  \n",
-			"@btn.replace",
-			"keys ",
-			".replace",
-			"  ",
-			",",
-			"concurrent-ruby",
-			"require",
-			"<<",
-			"@added_methods",
-			"concurrent",
-			"better_errors",
-			"gem ['\"]pry",
-			"gem ['\"]rails['\"]",
-			"\"",
-			"group.*development",
-			"begin(.|[\\n])*until",
-			"begin[^~]*until",
-			"begin",
-			"hello",
-			"\"",
-			"orig_method_missing",
-			"orig_squarebackets_equals",
-			"orig_[]",
-			"orig_[]=",
-			"method\\(",
-			"orig_method_missing",
-			"orig_square_assign",
-			":orig_squares",
-			"\"",
-			"@@added_methods",
-			"self.class.added_methods",
-			"added_methods",
-			"@@added_methods",
-			"added_methods",
-			"@@added_methods",
-			"@added_methods",
-			"_method",
-			".to_s",
-			"set_is_verbose",
-			"self.",
-			"alias_orig",
-			"alias",
-			",",
-			"alias_method",
-			"@verbose",
-			"foo",
-			"ind",
-			"method_missing",
-			"APP_OPTIONS",
-			"split_fname"
+			"first",
+			"this.props.",
+			"prepDoseDate",
+			"buildDoseBox",
+			"          .",
+			"buildDoseBox",
+			"\"...\"",
+			" \"",
+			"         ",
+			"        ",
+			"         ",
+			"\n        \"en\"",
+			"{\n            \"en\": -1,\n            \"fr\": -1\n          }",
+			"{\n        \"en\": \"\",\n        \"fr\": \"\"\n      }",
+			"closeDoseModal",
+			"saveDoseEdit",
+			"DoseModal",
+			"DoseModal\n",
+			"Page",
+			"Dose",
+			"_",
+			"moment",
+			"classNames",
+			"loadDoseModal",
+			"updatePage",
+			"updatePage\n",
+			"loadDoseModal",
+			"onCheckboxClick",
+			"page",
+			"dose",
+			"dose\n",
+			"date",
+			"title",
+			"received",
+			"closeDoseModal\n",
+			"updatePage",
+			"DoseBoxReduxActions",
+			"this.props",
+			"_",
+			"ReactDOM",
+			"log",
+			"closeDoseModal",
+			"closeDoseModal\n",
+			"saveDoseEdit",
+			"ReactDOM\n",
+			"_",
+			"moment",
+			"ReactDOM",
+			"ReactDOM\n"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -1104,76 +1296,47 @@
 		"regex": true,
 		"replace_history":
 		[
-			": ",
-			"alias_method",
-			"Class",
-			"{\n",
-			"has_ext",
-			"[",
-			"config",
-			"	",
-			"return ",
 			"",
-			",\\n            at ",
-			",\\n            ",
-			",\\n",
-			"\\nat",
-			"-",
-			"/",
-			"=",
-			"=    ",
-			"    ",
-			"Content1",
-			"ContentExample1",
-			"'",
-			"client",
-			"/ul",
-			"<ul>",
-			"TodoView",
-			"appView",
-			"todoView",
-			"todoListColl",
-			"todoModel",
+			"  ",
+			"import { \\1 }",
+			"  ",
 			"",
-			"app.coll.todoList",
-			"app.model.todo",
-			"app.",
-			"AppClass",
-			"appClass.",
-			"console.log",
-			"'",
-			"log.info",
-			"console.log",
-			"'",
-			"base_name",
-			"proto-route",
-			"fPath",
-			"DEST",
-			"SRC",
-			"rObj",
+			"\\2",
+			"\\1",
+			"[\\1",
+			"[\\1]",
+			"\\\"",
 			"\"",
-			"\"imgURL\"",
-			"\"imgURLs\"",
-			"defPluginRegisterCb",
-			"handleRegisterError",
-			"testArr",
-			"",
-			"\\t\\/\\*DEBUG\\}\\}>\\*\\/",
-			"\\t/*<{{DEBUG*/",
-			"",
-			"function navdrawer_",
-			"p.size ))",
-			"args.casper",
-			"args.runOnce",
-			"args.stats",
-			"args.production",
-			"_copy-static",
-			"__compiler",
-			"compiler"
+			", '",
+			"', '",
+			"\\1\\2",
+			"\\1",
+			"[\\1]",
+			"  ",
+			"new Subsheet",
+			"TBMetadata",
+			"BinderMetadata",
+			"/// <reference path=\"",
+			"/// <reference path'",
+			"typings/index.d.ts\" />\n  ",
+			"  ",
+			"_",
+			"[null]",
+			"null, null,",
+			"null, null, ",
+			"null, null",
+			"[null]",
+			"inputQueuePush",
+			"pushInputQueue",
+			"testSwitchState",
+			"uiState",
+			"UIState",
+			"Crawler",
+			"crawler"
 		],
 		"reverse": false,
-		"show_context": true,
-		"use_buffer2": true,
+		"show_context": false,
+		"use_buffer2": false,
 		"whole_word": false,
 		"wrap": true
 	},
@@ -1183,30 +1346,15 @@
 			"sheets":
 			[
 			]
-		},
-		{
-			"sheets":
-			[
-			]
-		},
-		{
-			"sheets":
-			[
-			]
-		},
-		{
-			"sheets":
-			[
-			]
 		}
 	],
 	"incremental_find":
 	{
-		"height": 34.0
+		"height": 22.0
 	},
 	"input":
 	{
-		"height": 34.0
+		"height": 29.0
 	},
 	"layout":
 	{
@@ -1217,63 +1365,51 @@
 				0,
 				1,
 				1
-			],
-			[
-				1,
-				0,
-				2,
-				1
-			],
-			[
-				0,
-				1,
-				1,
-				2
-			],
-			[
-				1,
-				1,
-				2,
-				2
 			]
 		],
 		"cols":
 		[
 			0.0,
-			0.473379807692,
 			1.0
 		],
 		"rows":
 		[
 			0.0,
-			0.5,
 			1.0
 		]
 	},
 	"menu_visible": true,
-	"output.exec":
-	{
-		"height": 68.0
-	},
-	"output.find_results":
+	"output.doc":
 	{
 		"height": 0.0
 	},
-	"output.markdown":
+	"output.errorlist":
 	{
-		"height": 23.0
+		"height": 94.0
+	},
+	"output.exec":
+	{
+		"height": 94.0
+	},
+	"output.find_results":
+	{
+		"height": 490.0
 	},
 	"output.nodejs":
 	{
-		"height": 88.0
+		"height": 94.0
 	},
-	"pinned_build_system": "Packages/User/Scheme.sublime-build",
-	"project": "",
+	"output.reg_replace":
+	{
+		"height": 462.0
+	},
+	"pinned_build_system": "",
+	"project": "snippets.sublime-project",
 	"replace":
 	{
-		"height": 42.0
+		"height": 40.0
 	},
-	"save_all_on_build": false,
+	"save_all_on_build": true,
 	"select_file":
 	{
 		"height": 0.0,
@@ -1281,180 +1417,516 @@
 		"selected_items":
 		[
 			[
+				"gulpfile",
+				"immunizeca-testing-tool/Gulpfile"
+			],
+			[
+				"modules",
+				"snippets/scripts/setup/essential-npm-modules-and-node-related-installs.sh"
+			],
+			[
+				"config",
+				"immunizeca-testing-tool/config/config.js"
+			],
+			[
+				"hbs",
+				"immunizeca-testing-tool/client/index.hbs"
+			],
+			[
+				"mixins",
+				"immunizeca-testing-tool/client/assets/styles/variables_mixins.css"
+			],
+			[
+				"dose",
+				"immunizeca-testing-tool/server/models/DoseRecord/DoseRecord.ts"
+			],
+			[
+				"root",
+				"immunizeca-testing-tool/client/root.tsx"
+			],
+			[
+				"app",
+				"immunizeca-testing-tool/client/components/App/App.tsx"
+			],
+			[
+				"models",
+				"immunizeca-testing-tool/client/redux/models.ts"
+			],
+			[
+				"variabl",
+				"immunizeca-testing-tool/client/assets/styles/variables_mixins.css"
+			],
+			[
+				"gender",
+				"immunizeca-testing-tool/client/redux/modules/gender.tsx"
+			],
+			[
+				"picker.",
+				"immunizeca-testing-tool/client/components/SidebarPanel/RecordTab/Picker.tsx"
+			],
+			[
+				"picker",
+				"immunizeca-testing-tool/client/components/SidebarPanel/RecordTab/Picker.tsx"
+			],
+			[
+				"datepicker",
+				"immunizeca-testing-tool/client/typings/react-datepicker.d.ts"
+			],
+			[
+				"defaultstate",
+				"immunizeca-testing-tool/client/redux/defaultState.tsx"
+			],
+			[
+				"imgen",
+				"immunizeca-testing-tool/script/imgen/imgen"
+			],
+			[
+				"package",
+				"immunizeca-testing-tool/package.json"
+			],
+			[
+				"birthdate",
+				"immunizeca-testing-tool/client/components/SidebarPanel/RecordTab/BirthdatePicker.tsx"
+			],
+			[
+				"webpack",
+				"immunizeca-testing-tool/config/webpack.dev.config.js"
+			],
+			[
+				"pages",
+				"immunizeca-testing-tool/client/redux/modules/page.tsx"
+			],
+			[
+				"province",
+				"immunizeca-testing-tool/client/components/SidebarPanel/RecordTab/ProvincePicker.tsx"
+			],
+			[
+				"record",
+				"immunizeca-testing-tool/client/components/SidebarPanel/RecordTab/RecordTab.tsx"
+			],
+			[
+				"reducers",
+				"immunizeca-testing-tool/client/redux/reducers.tsx"
+			],
+			[
+				"actions",
+				"immunizeca-testing-tool/client/redux/actions.ts"
+			],
+			[
+				"defaults",
+				"immunizeca-testing-tool/client/redux/defaultState.tsx"
+			],
+			[
+				"fetch",
+				"immunizeca-testing-tool/client/redux/middlewares/fetchData.ts"
+			],
+			[
+				"vaccine",
+				"immunizeca-testing-tool/client/components/VaccineCard/VaccineCard.tsx"
+			],
+			[
+				"dev.",
+				"immunizeca-testing-tool/config/webpack.dev.config.js"
+			],
+			[
+				"page",
+				"immunizeca-testing-tool/client/redux/modules/page.tsx"
+			],
+			[
+				"lodashmi",
+				"immunizeca-testing-tool/client/assets/lib/lodashMixins.tsx"
+			],
+			[
+				"dosebox",
+				"immunizeca-testing-tool/client/components/DoseBox/DoseBox.tsx"
+			],
+			[
+				"page.tsx",
+				"immunizeca-testing-tool/client/redux/modules/page.tsx"
+			],
+			[
+				"reducer",
+				"immunizeca-testing-tool/client/redux/reducers.tsx"
+			],
+			[
+				"separator.css",
+				"immunizeca-testing-tool/client/components/utility/separator.css"
+			],
+			[
+				"separator",
+				"immunizeca-testing-tool/client/components/utility/separator.tsx"
+			],
+			[
+				"lodashix",
+				"immunizeca-testing-tool/client/assets/lib/lodashMixins.tsx"
+			],
+			[
+				"sidebarp",
+				"immunizeca-testing-tool/client/components/SidebarPanel/SidebarPanel.tsx"
+			],
+			[
+				"reactbootstra",
+				"immunizeca-testing-tool/client/typings/react-bootstrap.d.ts"
+			],
+			[
+				"reactboilersnippet",
+				"snippets/snippets/_langs/typescript/react/typescript--react--new-component-boilerplate.sublime-snippet"
+			],
+			[
+				"variables",
+				"immunizeca-testing-tool/client/assets/styles/variables_mixins.css"
+			],
+			[
+				"sideba",
+				"immunizeca-testing-tool/client/components/SidebarPanel/SidebarPanel.tsx"
+			],
+			[
+				"csssnippet",
+				"snippets/snippets/css--flexbox.sublime-snippet"
+			],
+			[
+				"dose.",
+				"immunizeca-testing-tool/client/redux/modules/dose.tsx"
+			],
+			[
+				"vaccinecard",
+				"immunizeca-testing-tool/client/components/VaccineCard/VaccineCard.tsx"
+			],
+			[
+				"config.js",
+				"immunizeca-testing-tool/config/config.js"
+			],
+			[
+				"provincese",
+				"immunizeca-testing-tool/client/components/ProvincePicker/ProvincePicker.tsx"
+			],
+			[
+				"config.tsx",
+				"immunizeca-testing-tool/client/redux/modules/config.tsx"
+			],
+			[
+				"roots",
+				"immunizeca-testing-tool/client/root.tsx"
+			],
+			[
+				"store",
+				"immunizeca-testing-tool/client/redux/store.ts"
+			],
+			[
+				"provicepi",
+				"immunizeca-testing-tool/client/components/ProvincePicker/ProvincePicker.tsx"
+			],
+			[
+				"actions.t",
+				"immunizeca-testing-tool/client/redux/actions.ts"
+			],
+			[
+				"lodashmixins",
+				"immunizeca-testing-tool/client/assets/lib/lodashMixins.tsx"
+			],
+			[
+				"reduxsnippet",
+				"snippets/snippets/_langs/js/js--redux--reducer-group.sublime-snippet"
+			],
+			[
+				"reducer.subl",
+				"snippets/snippets/_langs/js/_libs/_frameworks/react/redux/js--redux--new-reducer.sublime-snippet"
+			],
+			[
+				"lodash",
+				"immunizeca-testing-tool/client/typings/lodash.d.ts"
+			],
+			[
+				"gotchas",
+				"immunizeca-testing-tool/doc/hacks_gotchas_oddities.md"
+			],
+			[
+				"root.tsx",
+				"immunizeca-testing-tool/client/root.tsx"
+			],
+			[
+				"api_1",
+				"immunizeca-testing-tool/server/routes/api/1.0/api_1.ts"
+			],
+			[
+				"configtsx",
+				"immunizeca-testing-tool/client/redux/modules/config.tsx"
+			],
+			[
 				"todo",
-				"sublime-dev-environment-snippet/_docs_guides/todos/todo-ongoing.md"
+				"immunizeca-testing-tool/doc/notes/project_todo.md"
 			],
 			[
-				"todoon",
-				"sublime-dev-environment-snippet/_docs_guides/todos/todo-ongoing.md"
+				"ongoing",
+				"snippets/_docs_guides/todos/todo-ongoing.md"
 			],
 			[
-				"rakesnippet",
-				"sublime-dev-environment-snippet/snippets/ruby-snippets/rake/ruby--rake-filelist.sublime-snippet"
+				"configjs",
+				"immunizeca-testing-tool/config/config.js"
 			],
 			[
-				"chdirsnippet",
-				"sublime-dev-environment-snippet/snippets/ruby-snippets/file_ops/dir/ruby--file--dir--cd--change-directory-2.sublime-snippet"
+				"logger",
+				"immunizeca-testing-tool/shared/Logger.ts"
 			],
 			[
-				"-dir-",
-				"sublime-dev-environment-snippet/snippets/ruby-snippets/file_ops/dir/ruby--file--dir--questionmark.sublime-snippet"
+				"logger.tsx",
+				"immunizeca-testing-tool/client/redux/middlewares/logger.tsx"
 			],
 			[
-				"filedele",
-				"sublime-dev-environment-snippet/snippets/ruby-snippets/file_ops/ruby--file--delete.sublime-snippet"
+				"log",
+				"immunizeca-testing-tool/shared/Logger.ts"
 			],
 			[
-				"directivessnipp",
-				"sublime-dev-environment-snippet/snippets/ruby-snippets/directives/ruby-encoding-comment-intro.sublime-snippet"
+				"typings/reselect",
+				"immunizeca-testing-tool/typings/globals/reselect/index.d.ts"
 			],
 			[
-				"filecopy",
-				"sublime-dev-environment-snippet/snippets/ruby-snippets/file_ops/ruby--file--copy-file.sublime-snippet"
+				"typingsreselect",
+				"immunizeca-testing-tool/typings/globals/reselect/typings.json"
 			],
 			[
-				"rubocop.yml",
-				"sublime-dev-environment-snippet/.rubocop.yml"
+				"vaccines",
+				"immunizeca-testing-tool/client/redux/modules/vaccine.tsx"
 			],
 			[
-				"rubocop",
-				"sublime-dev-environment-snippet/_docs_guides/ruby_demoing_proj/.rubocop.yml"
+				"archit",
+				"immunizeca-testing-tool/doc/tools_architecture.md"
 			],
 			[
-				".irbrc",
-				"sublime-dev-environment-snippet/dev-env/.irbrc"
+				"selectors",
+				"immunizeca-testing-tool/client/redux/selectors.ts"
 			],
 			[
-				"pry",
-				"sublime-dev-environment-snippet/_docs_guides/ruby_docs/debugging_testing/pry--guide.md"
+				"logd",
+				"immunizeca-testing-tool/shared/logDecorator.tsx"
 			],
 			[
-				"gem",
-				"sublime-dev-environment-snippet/_docs_guides/ruby_demoing_proj/Gemfile"
+				"decorato",
+				"snippets/_docs_guides/_langs/typescript/docs_guides/src_typescript/009-decorators.ts"
 			],
 			[
-				"man__at",
-				"sublime-dev-environment-snippet/custom-manuals/man__at"
+				"status",
+				"immunizeca-testing-tool/client/redux/modules/status.tsx"
 			],
 			[
-				"gemfil",
-				"sublime-dev-environment-snippet/_docs_guides/ruby_demoing_proj/Gemfile"
+				"dosemodal",
+				"immunizeca-testing-tool/client/components/DoseModal/DoseModal.tsx"
 			],
 			[
-				"-snippet",
-				"sublime-dev-environment-snippet/base-snippet-template.sublime-snippet"
+				"modal",
+				"immunizeca-testing-tool/client/components/DoseModal/DoseModal.tsx"
 			],
 			[
-				"injectatmat",
-				"sublime-dev-environment-snippet/scripts/ruby/inject_at_match.rb"
+				"redux.d.t",
+				"immunizeca-testing-tool/client/typings/redux.d.ts"
 			],
 			[
-				"ruby-meta",
-				"sublime-dev-environment-snippet/snippets/ruby-snippets/metaprogramming/ruby-metaprogramming-public_send.sublime-snippet"
+				"app.tsx",
+				"immunizeca-testing-tool/client/components/App/App.tsx"
 			],
 			[
-				"injectlocal",
-				"sublime-dev-environment-snippet/scripts/ruby/inject_local_dev_env"
+				"modulesconfig",
+				"immunizeca-testing-tool/client/redux/modules/config.tsx"
 			],
 			[
-				"injectatma",
-				"sublime-dev-environment-snippet/_docs_guides/ruby_demoing_proj/spec/rspec_inject_at_match.rb"
+				"pronselector",
+				"immunizeca-testing-tool/client/components/GenderSelector/GenderSelector.tsx"
 			],
 			[
-				"metaprogramm",
-				"sublime-dev-environment-snippet/snippets/ruby-snippets/classes/ruby-metaprogramming-public_send.sublime-snippet"
+				"provicneselector",
+				"immunizeca-testing-tool/client/components/ProvinceSelector/ProvinceSelector.tsx"
 			],
 			[
-				"classsnippet",
-				"sublime-dev-environment-snippet/snippets/ruby-snippets/classes/ruby--class_sectioned.sublime-snippet"
+				"app.css",
+				"immunizeca-testing-tool/client/components/App/App.css"
 			],
 			[
-				"shcheatsheet",
-				"snippets/snippets/sh/sh--cheatsheet-template.sublime-snippet"
+				"appp.tsx",
+				"immunizeca-testing-tool/doc/old_code/components_OLD/App.tsx"
 			],
 			[
-				"rake",
-				"snippets/snippets/ruby/rails/ruby-rails--rake--new-task.sublime-snippet"
+				"dose.tsx",
+				"immunizeca-testing-tool/client/redux/modules/dose.tsx"
 			],
 			[
-				"lambda",
-				"snippets/_docs_guides/ruby/f001-blocks_procs_lambdas.rb"
+				"postcssm",
+				"snippets/_docs_guides/_langs/css/postcss--rucksack.md"
 			],
 			[
-				"snippets.",
-				"sublime-dev-environment-snippet/snippets.sublime-project"
+				"dose.ts",
+				"immunizeca-testing-tool/client/redux/modules/dose.tsx"
 			],
 			[
-				"controller",
-				"sublime-dev-environment-snippet/_docs_guides/ruby/rails/controllers.md"
+				"importsnippet",
+				"snippets/snippets/_langs/typescript/imports/typescript--import-lodash.sublime-snippet"
 			],
 			[
-				"rubygem",
-				"snippets/_docs_guides/ruby/rails/z001-gems.sh"
+				".hbs",
+				"immunizeca-testing-tool/client/index.hbs"
 			],
 			[
-				"populate-triggers",
-				"script/populate-triggers.js"
+				"selec",
+				"immunizeca-testing-tool/client/components/GenderSelector/GenderSelector.tsx"
 			],
 			[
-				"eshel",
-				"public/js/lib/es-helpers.js"
+				"componenttsx",
+				"immunizeca-testing-tool/client/components/GenderSelector/GenderSelector.tsx"
 			],
 			[
-				"gridfilterstmpl",
-				"public/templates/common/grid-filters-tmpl.dust"
+				"birthdat",
+				"immunizeca-testing-tool/client/components/BirthdateSelector/BirthdateSelector.tsx"
 			],
 			[
-				"gridfiltersview",
-				"public/js/views/common/grid-filters-view.js"
+				"csslayoutflex",
+				"snippets/snippets/_langs/css_scss/layout/css--layout--display--flex-3.sublime-snippet"
 			],
 			[
-				"elasticsearchcoll",
-				"public/js/lib/elasticsearch-collection.js"
+				"cssflexsnippet",
+				"snippets/snippets/_langs/css_scss/layout/css--layout--display--flex.sublime-snippet"
 			],
 			[
-				"backbonegrid",
-				"public/js/lib/backbone-grid.js"
+				"persona",
+				"immunizeca-testing-tool/client/redux/modules/person/personActions.tsx"
 			],
 			[
-				"settingsview",
-				"public/js/views/settings/picklist-settings-view.js"
+				"actions.",
+				"immunizeca-testing-tool/client/actions.tsx"
 			],
 			[
-				"casemodel",
-				"public/js/models/case-model.js"
+				"imgen/",
+				"immunizeca-testing-tool/script/imgen/lib/createReduxModule.js"
 			],
 			[
-				"case-model",
-				"public/js/models/case-model.js"
+				"cellselectors",
+				"immunizeca-testing-tool/server/Services/CellSelectors.ts"
 			],
 			[
-				"advancedsearch",
-				"public/js/views/search/advanced-search-view.js"
+				"csv",
+				"immunizeca-testing-tool/server/routes/api/1.0/schedules/csv.ts"
 			],
 			[
-				"backbonemodel",
-				"public/js/lib/backbone-model.js"
+				"hydrate",
+				"immunizeca-testing-tool/server/Services/HydrateModels.spec.ts"
 			],
 			[
-				"filemodel",
-				"public/js/models/file-model.js"
+				"package.json",
+				"immunizeca-testing-tool/package.json"
 			],
 			[
-				"filedetails",
-				"public/js/views/file/file-details-view.js"
+				"gothas",
+				"immunizeca-testing-tool/doc/hacks_gotchas_oddities.md"
 			],
 			[
-				"web.js",
-				"lib/api/web.js"
+				"requestsnippet",
+				"snippets/snippets/_langs/js/js--request--proxy-to-express-response.sublime-snippet"
 			],
 			[
-				"generica",
-				"lib/api/GenericApi.js"
+				"importlodash",
+				"snippets/snippets/_langs/typescript/imports/typescript--import-lodash.sublime-snippet"
 			],
 			[
-				"apicase",
-				"lib/api/api-case.js"
+				"tsexpress",
+				"snippets/snippets/_langs/typescript/_libs/express/ts--express--new-file-route_mountable.sublime-snippet"
+			],
+			[
+				"expressbasic",
+				"snippets/snippets/_langs/js/_libs/express-js/middleware-build-consume/js--express--middleware--basic.sublime-snippet"
+			],
+			[
+				"snippetexpressboilerbasic",
+				"snippets/snippets/_langs/js/_libs/express-js/middleware-build-consume/js--express--middleware--basic.sublime-snippet"
+			],
+			[
+				"reduxstore",
+				"immunizeca-testing-tool/client/redux/store.ts"
+			],
+			[
+				"schedulets",
+				"immunizeca-testing-tool/server/routes/api/1.0/schedules/index.ts"
+			],
+			[
+				"schedules",
+				"immunizeca-testing-tool/build/server/routes/api/1.0/schedule/schedule.js"
+			],
+			[
+				"schedule",
+				"immunizeca-testing-tool/server/routes/api/1.0/schedule/schedule.ts"
+			],
+			[
+				"index.tsx",
+				"immunizeca-testing-tool/client/index.tsx"
+			],
+			[
+				"client",
+				"immunizeca-testing-tool/typings/index-client.d.ts"
+			],
+			[
+				"index.d",
+				"immunizeca-testing-tool/typings/index.d.ts"
+			],
+			[
+				"config.",
+				"immunizeca-testing-tool/config/config.js"
+			],
+			[
+				"schedule.ts",
+				"immunizeca-testing-tool/client/models/schedule.ts"
+			],
+			[
+				"createcompon",
+				"immunizeca-testing-tool/script/imgen/lib/createComponent.sh"
+			],
+			[
+				"immh",
+				"js/components/ImmCAHeader.tsx"
+			],
+			[
+				"script/.sh",
+				"immunizeca-testing-tool/script/imgen/lib/createComponent.sh"
+			],
+			[
+				"tslint",
+				"immunizeca-testing-tool/tslint.json"
+			],
+			[
+				"packag",
+				"immunizeca-testing-tool/package.json"
+			],
+			[
+				"lodashindex.d",
+				"immunizeca-testing-tool/typings/globals/lodash/index.d.ts"
+			],
+			[
+				"createxlsx",
+				"immunizeca-testing-tool/build/server/services/CreateXLSX.js"
+			],
+			[
+				"createxl",
+				"immunizeca-testing-tool/server/Services/createXLSX.ts"
+			],
+			[
+				"msexcelbuilder",
+				"immunizeca-testing-tool/typings/globals/msexcel-builder/msexcel-builder.d.ts"
+			],
+			[
+				"inputr",
+				"immunizeca-testing-tool/server/models/InputRecord/InputRecord.ts"
+			],
+			[
+				"dosereco",
+				"immunizeca-testing-tool/server/models/DoseRecord/DoseRecord.ts"
+			],
+			[
+				"hydratemo",
+				"immunizeca-testing-tool/server/Services/HydrateModels.ts"
+			],
+			[
+				"input",
+				"immunizeca-testing-tool/server/models/InputRecord/InputRecord.ts"
+			],
+			[
+				"msexcel",
+				"immunizeca-testing-tool/node_modules/msexcel-builder/lib/msexcel-builder.js"
 			]
 		],
 		"width": 0.0
@@ -1470,14 +1942,14 @@
 	},
 	"select_symbol":
 	{
-		"height": 392.0,
+		"height": 387.0,
 		"last_filter": "",
 		"selected_items":
 		[
 		],
-		"width": 1304.0
+		"width": 602.0
 	},
-	"selected_group": 3,
+	"selected_group": 0,
 	"settings":
 	{
 	},
@@ -1485,10 +1957,9 @@
 	"show_open_files": true,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 295.0,
+	"side_bar_width": 213.0,
 	"status_bar_visible": true,
 	"template_settings":
 	{
-		"max_columns": 1
 	}
 }

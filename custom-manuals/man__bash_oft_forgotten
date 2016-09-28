@@ -48,4 +48,11 @@ echo '   curl --remote-name --location http://pilotfiber.dl.sourceforge.net/proj
 echo ''
 echo "********* BATCH RENAME RECURSIVELY **********"
 echo "find . -iname \"*.sublime-snippet\" -exec bash -c 'mv \"\$0\" \"\${0%\.sublime-snippet\}.cson\"' {} \;"
+echo ""
+echo "********* CONTROL FLOW **********"
+echo "A; B    Run A and then B, regardless of success of A"
+echo "A && B  Run B if A succeeded"
+echo "A || B  Run B if A failed"
+echo "A &     Run A in background."
+echo ""
 echo '---------------------------------------------------------------------------------\n'

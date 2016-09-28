@@ -415,6 +415,20 @@ function type_install_global {
     typings install --global --save "dt~$1"
 }
 
+alias tig="type_install_global"
+
+function tnisd {
+    set -o nounset
+    (npm install $1 --save-dev) && (npm install --save @types/$1 || typings install --global dt~$1 || typings install --global npm~$1 || typings install npm~$1 || typings install dt~$1 || (echo "WARNING: NO TYPE DEFINITION FOUND FOR $1."))
+    set +o nounset
+}
+
+function tnis {
+    set -o nounset
+    (npm install $1 --save) && (npm install --save @types/$1 || typings install --global dt~$1 || typings install --global npm~$1 || typings install npm~$1 || typings install dt~$1 || (echo "WARNING: NO TYPE DEFINITION FOUND FOR $1. Uninstalling $1." && npm uninstall --save $1))
+    set +o nounset
+}
+
 function type_react_new_component {
     mkdir app/components/$1
     touch app/components/$1/$1.css
