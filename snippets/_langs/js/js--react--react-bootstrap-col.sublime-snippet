@@ -1,0 +1,10 @@
+<snippet>
+  <description>Create a col. Must already be between Grid tags.</description>
+<content><![CDATA[
+<Col>
+  ${0}
+</Col>
+]]></content>
+  <tabTrigger>col</tabTrigger>
+  <scope>source.tsx, source.jsx</scope>
+</snippet>

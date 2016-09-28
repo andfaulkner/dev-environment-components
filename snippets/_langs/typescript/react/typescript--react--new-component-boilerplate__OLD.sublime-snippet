@@ -1,16 +1,15 @@
 <snippet>
-  <description>Boilerplate for React component file</description>
+  <description>OLD - Boilerplate react component file</description>
 <content><![CDATA[
+/// <reference path="../../../typings/index.d.ts" />
+
+declare function require(name: string);
+
 import * as _ from 'lodash';
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
+import * as \$ from 'jquery';
 
-import moment from 'moment';
-import * as ReactBootstrap from 'react-bootstrap';
-import classNames from "classnames";
-import fetch from 'isomorphic-fetch';
-
-declare function require(name: string);
 require('./${1:${TM_FILENAME/(.+)\..+|.*/$1/:name}}.css');
 
 interface ${2:${1}Props} {${4/.+/\n /} ${4:prop1: propType;
@@ -25,14 +24,21 @@ interface ${3:${1}State} {${5/.+/\n /} ${5:property1: SomeInterface;
 
 export class ${1:${TM_FILENAME/(.+)\..+|.*/$1/:name}} extends React.Component<${2:${1}Props}, ${3:${1}State}> {
 
+  events = {${6/.+/\n   /} ${6:someaction: (e) => {
+      console.log('e:', e);
+      let keyName = _.get(actions, e.key);
+      if (_.isString(keyName)) {
+        this.move(this.state, e.key, keyName);
+      \}
+    \}}${6/.+/\n  /}\};
+
   render() {
     return (
-      ${0:<div>Yo</div>}
+      ${7:<div>Yo</div>}
     );
   }
 };
-
 ]]></content>  
-  <tabTrigger>rct_new_component_file_boiler</tabTrigger>
+  <tabTrigger>rct_OLD_new_component_file_boiler</tabTrigger>
   <scope>source.tsx</scope>
 </snippet>

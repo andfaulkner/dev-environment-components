@@ -1,0 +1,8 @@
+<snippet>
+  <description>Change the border color</description>
+<content><![CDATA[
+border-color: ${1:#cccccc};${0}
+]]></content>  
+  <tabTrigger>border_color</tabTrigger>
+  <scope>source.css, source.postcss, source.scss</scope>
+</snippet>

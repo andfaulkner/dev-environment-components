@@ -1,0 +1,10 @@
+<snippet>
+  <description>Create a grid</description>
+<content><![CDATA[
+<Grid>
+  ${0}
+</Grid>
+]]></content>
+  <tabTrigger>grid</tabTrigger>
+  <scope>source.tsx, source.jsx</scope>
+</snippet>
