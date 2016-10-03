@@ -1,0 +1,8 @@
+<snippet>
+  <description>Create a variable that is only available within the current function</description>
+<content><![CDATA[
+local ${1:var_name}=${2:value_of_function}${0}
+]]></content>  
+  <tabTrigger>var_local</tabTrigger>
+  <scope>source.shell</scope>
+</snippet>

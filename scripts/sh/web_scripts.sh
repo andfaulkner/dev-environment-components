@@ -36,4 +36,19 @@ function put {
     fi
 }
 
+alias ip="ifconfig | grep -i "inet.*broadcast" | awk '{print \$2}'"
+
+### DOCKER ###
+alias dock_i="docker images"
+alias dock_pa="docker ps -a"
+function dock_run_local_cam {
+    docker build . -t cameronbell/$1:latest
+    docker push cameronbell/$1
+    docker ps -a
+    docker ps | ack -v "CONTAINER ID" | awk '{print $1}' | xargs docker logs
+}
+alias dock_log_running_cont="docker ps -a | ack -v 'CONTAINER ID' | awk '{print \$1}' | head -1 | xargs docker logs"
+
+alias dock_taillog='docker ps | grep -v "CONTAINER" | awk "{print \$1}" | xargs docker logs -f'
+
 echo "* web request scripts loaded!"

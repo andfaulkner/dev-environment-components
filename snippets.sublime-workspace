@@ -519,6 +519,22 @@
 	},
 	"buffers":
 	[
+		{
+			"file": "_docs_guides/_langs/js/tape/01-tape-basic-example.js",
+			"settings":
+			{
+				"buffer_size": 1685,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "_docs_guides/_langs/js/tape/01-tape-basic-example--ts.ts",
+			"settings":
+			{
+				"buffer_size": 1684,
+				"line_ending": "Unix"
+			}
+		}
 	],
 	"build_system": "",
 	"build_system_choices":
@@ -527,7 +543,7 @@
 	"build_varint": "",
 	"command_palette":
 	{
-		"height": 47.0,
+		"height": 392.0,
 		"last_filter": "",
 		"selected_items":
 		[
@@ -836,7 +852,7 @@
 				"Package Control: Disable Package"
 			]
 		],
-		"width": 592.0
+		"width": 577.0
 	},
 	"console":
 	{
@@ -885,9 +901,18 @@
 	},
 	"expanded_folders":
 	[
+		"/Users/andrew/Library/Application Support/Sublime Text 3/Packages/User/snippets",
+		"/Users/andrew/Library/Application Support/Sublime Text 3/Packages/User/snippets/_docs_guides",
+		"/Users/andrew/Library/Application Support/Sublime Text 3/Packages/User/snippets/_docs_guides/_langs",
+		"/Users/andrew/Library/Application Support/Sublime Text 3/Packages/User/snippets/_docs_guides/_langs/js",
+		"/Users/andrew/Library/Application Support/Sublime Text 3/Packages/User/snippets/_docs_guides/_langs/js/tape",
+		"/Users/andrew/Library/Application Support/Sublime Text 3/Packages/User/snippets/snippets",
+		"/Users/andrew/Library/Application Support/Sublime Text 3/Packages/User/snippets/snippets/_langs",
+		"/Users/andrew/Library/Application Support/Sublime Text 3/Packages/User/snippets/snippets/_langs/js"
 	],
 	"file_history":
 	[
+		"/Users/andrew/Library/Application Support/Sublime Text 3/Packages/User/snippets/snippets/_langs/js/js--logging--console-log-basic.sublime-snippet",
 		"/Users/andrew/projects/ohri/immunizeca-testing-tool/Gulpfile",
 		"/Users/andrew/Library/Application Support/Sublime Text 3/Packages/User/snippets/scripts/setup/essential-npm-modules-and-node-related-installs.sh",
 		"/Users/andrew/projects/ohri/immunizeca-testing-tool/client/components/DoseBox/DoseBox.tsx",
@@ -1014,8 +1039,7 @@
 		"/Users/andrew/Library/Application Support/Sublime Text 3/Packages/User/snippets/snippets/_langs/css_scss/box-model/css--boxmodel--padding-top.sublime-snippet",
 		"/Users/andrew/Library/Application Support/Sublime Text 3/Packages/User/snippets/snippets/_langs/css_scss/drawing/shapes/css--drawing--ellipse.sublime-snippet",
 		"/Users/andrew/Library/Application Support/Sublime Text 3/Packages/User/snippets/snippets/_langs/css_scss/box-model/css--boxmodel--padding.sublime-snippet",
-		"/Users/andrew/Library/Application Support/Sublime Text 3/Packages/User/snippets/snippets/_langs/css_scss/list/css--lists--list-style-type.sublime-snippet",
-		"/Users/andrew/Library/Application Support/Sublime Text 3/Packages/User/snippets/snippets/_langs/css_scss/drawing/shapes/css--drawing--circle.sublime-snippet"
+		"/Users/andrew/Library/Application Support/Sublime Text 3/Packages/User/snippets/snippets/_langs/css_scss/list/css--lists--list-style-type.sublime-snippet"
 	],
 	"find":
 	{
@@ -1026,6 +1050,7 @@
 		"height": 93.0,
 		"where_history":
 		[
+			"-*.dds,-*.eot,-*.gif,-*.ico,-*.jar,-*.jpeg,-*.jpg,-*.log,-*.pdf,-*.png,-*.swf,-*.tga,-*.ttf,-*.zip,*.sublime-snippet",
 			"-*.dds,-*.eot,-*.gif,-*.ico,-*.jar,-*.jpeg,-*.jpg,-*.log,-*.pdf,-*.png,-*.swf,-*.tga,-*.ttf,-*.zip",
 			"<Project>,-**/node_modules/excel-builder/**,-*.sublime-snippet,-*.min.js,-**/lodash/**,-**/doc/**,**/client/**",
 			"-*.dds,-*.eot,-*.gif,-*.ico,-*.jar,-*.jpeg,-*.jpg,-*.log,-*.pdf,-*.png,-*.swf,-*.tga,-*.ttf,-*.zip",
@@ -1152,8 +1177,7 @@
 			"<Project>,-**/node_modules/excel-builder/**,-*.sublime-snippet,-*.min.js,-**/lodash/**",
 			"-*.dds,-*.eot,-*.gif,-*.ico,-*.jar,-*.jpeg,-*.jpg,-*.log,-*.pdf,-*.png,-*.swf,-*.tga,-*.ttf,-*.zip",
 			"<Project>,typings/globals/**,*.d.ts",
-			"<Project>,**/ts_extracts/**",
-			"-*.dds,-*.eot,-*.gif,-*.ico,-*.jar,-*.jpeg,-*.jpg,-*.log,-*.pdf,-*.png,-*.swf,-*.tga,-*.ttf,-*.zip"
+			"<Project>,**/ts_extracts/**"
 		]
 	},
 	"find_state":
@@ -1161,6 +1185,8 @@
 		"case_sensitive": true,
 		"find_history":
 		[
+			"test",
+			"clog",
 			".nav-pills>li.sidebar-panel--tab--batch>a",
 			"doseDetailView",
 			"test",
@@ -1286,9 +1312,7 @@
 			"saveDoseEdit",
 			"ReactDOM\n",
 			"_",
-			"moment",
-			"ReactDOM",
-			"ReactDOM\n"
+			"moment"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -1343,6 +1367,253 @@
 	"groups":
 	[
 		{
+			"selected": 0,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "_docs_guides/_langs/js/tape/01-tape-basic-example.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1685,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								11,
+								11
+							]
+						],
+						"settings":
+						{
+							"bracket_highlighter.busy": false,
+							"bracket_highlighter.locations":
+							{
+								"close":
+								{
+								},
+								"icon":
+								{
+								},
+								"open":
+								{
+								},
+								"unmatched":
+								{
+								}
+							},
+							"bracket_highlighter.regions":
+							[
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content"
+							],
+							"open_with_edit": true,
+							"side_bar_folders_auto_load_folder": 1,
+							"syntax": "Packages/JavaScriptNext - ES6 Syntax/JavaScriptNext.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "_docs_guides/_langs/js/tape/01-tape-basic-example--ts.ts",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1684,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1348,
+								1348
+							]
+						],
+						"settings":
+						{
+							"bracket_highlighter.busy": false,
+							"bracket_highlighter.locations":
+							{
+								"close":
+								{
+									"1":
+									[
+										1368,
+										1369
+									]
+								},
+								"icon":
+								{
+									"1":
+									[
+										"Packages/BracketHighlighter/icons/curly_bracket.png",
+										"brackethighlighter.default"
+									]
+								},
+								"open":
+								{
+									"1":
+									[
+										1347,
+										1348
+									]
+								},
+								"unmatched":
+								{
+								}
+							},
+							"bracket_highlighter.regions":
+							[
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content"
+							],
+							"side_bar_folders_auto_load_folder": 1,
+							"syntax": "Packages/TypeScript/TypeScript.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true,
+							"typescript_plugin_format_options":
+							{
+								"convertTabsToSpaces": true,
+								"indentSize": 2,
+								"tabSize": 2
+							},
+							"use_tab_stops": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 586.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				}
+			]
+		},
+		{
+			"sheets":
+			[
+			]
+		},
+		{
+			"sheets":
+			[
+			]
+		},
+		{
 			"sheets":
 			[
 			]
@@ -1365,16 +1636,36 @@
 				0,
 				1,
 				1
+			],
+			[
+				1,
+				0,
+				2,
+				1
+			],
+			[
+				0,
+				1,
+				1,
+				2
+			],
+			[
+				1,
+				1,
+				2,
+				2
 			]
 		],
 		"cols":
 		[
 			0.0,
+			0.5,
 			1.0
 		],
 		"rows":
 		[
 			0.0,
+			0.5,
 			1.0
 		]
 	},

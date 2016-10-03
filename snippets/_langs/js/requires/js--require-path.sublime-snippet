@@ -1,8 +1,8 @@
 <snippet>
-	<description>require nodejs path module</description>
+	<description>require the NodeJS path module</description>
 	<content><![CDATA[
-var path = require('path');
+const path = require('path');
 ]]></content>
-	<tabTrigger>rqp</tabTrigger>
+	<tabTrigger>req_path</tabTrigger>
 	<scope>source.js, source.ts, source.jsx, source.tsx</scope>
 </snippet>

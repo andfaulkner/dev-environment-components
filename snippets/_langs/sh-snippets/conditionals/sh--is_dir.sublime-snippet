@@ -1,0 +1,12 @@
+<snippet>
+	<description>boilerplate fn to test if given dir exists. E.g. if is_dir $var then; ...</description>
+	<content><![CDATA[
+is_dir() {
+    local dir=\$1
+    [[ -d $dir ]]
+}
+${0}
+]]></content>
+	<tabTrigger>is_dir</tabTrigger>
+	<scope>source.shell</scope>
+</snippet>

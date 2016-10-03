@@ -1,0 +1,8 @@
+<snippet>
+	<description>Replace all matching substrings with another string</description>
+	<content><![CDATA[
+\${${1:STRING_VAR}//${2:'stringtofind'}/${3:'string_to_replace_with'}}${0}
+]]></content>
+	<tabTrigger>replace</tabTrigger>
+	<scope>source.shell</scope>
+</snippet>

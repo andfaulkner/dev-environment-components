@@ -1,0 +1,12 @@
+<snippet>
+	<description>boilerplate fn to test if given var is empty. E.g. if is_empty $var then; ...</description>
+	<content><![CDATA[
+is_empty() {
+    local var=\$1
+    [[ -z $var ]]
+}
+${0}
+]]></content>
+	<tabTrigger>is_empty</tabTrigger>
+	<scope>source.shell</scope>
+</snippet>

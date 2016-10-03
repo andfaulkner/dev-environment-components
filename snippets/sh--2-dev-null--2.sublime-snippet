@@ -1,0 +1,8 @@
+<snippet>
+  <description>Pipe errors into the void, so a failing command doesn't return an error</description>
+<content><![CDATA[
+${1:my_command} 2>/dev/null${0}
+]]></content>  
+  <tabTrigger>suppress_error</tabTrigger>
+  <scope>source.shell</scope>
+</snippet>

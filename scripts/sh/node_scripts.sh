@@ -10,13 +10,12 @@ export NODE_PATH=/usr/lib/nodejs:/usr/lib/node_modules:/usr/share/javascript:/us
 # GLOBAL INSTALL
 alias nig="npm install -g"
 alias nis="npm install --save"
+alias nus="npm uninstall --save"
 alias nisd="npm install --save-dev"
+alias nusd="npm uninstall --save-dev"
 
 alias nr="npm run" 
 alias nrn="npm run nodemon"
-alias nun="npm uninstall"
-alias nuns="npm uninstall --save"
-alias nunsd="npm uninstall --save-dev"
 
 alias nrnd="export LOG_LEVEL=debug; npm run nodemon"
 alias nrnt="export LOG_LEVEL=trace; npm run nodemon"
@@ -176,7 +175,7 @@ alias node_version='echo "$(eval node -v)" > .node-version' # set current versio
 [[ -s "$HOME/.avn/bin/avn.sh" ]] && source "$HOME/.avn/bin/avn.sh" # load avn
 
 export NVM_DIR=~/.nvm
-nvm use v6.4.0
+nvm use v6.7.0
 
 alias ember_dep_surge="rm -rf dist; ember build --environment=development; cd dist; cp index.html 200.html; surge" # if site already exists, provide it here 
 
@@ -419,13 +418,13 @@ alias tig="type_install_global"
 
 function tnisd {
     set -o nounset
-    (npm install $1 --save-dev) && (npm install --save @types/$1 || typings install --global dt~$1 || typings install --global npm~$1 || typings install npm~$1 || typings install dt~$1 || (echo "WARNING: NO TYPE DEFINITION FOUND FOR $1."))
+    (npm install $1 --save-dev) && (typings install --global dt~$1 || typings install --global npm~$1 || typings install npm~$1 || typings install dt~$1 || npm install --save @types/$1 || (echo "WARNING: NO TYPE DEFINITION FOUND FOR $1."))
     set +o nounset
 }
 
 function tnis {
     set -o nounset
-    (npm install $1 --save) && (npm install --save @types/$1 || typings install --global dt~$1 || typings install --global npm~$1 || typings install npm~$1 || typings install dt~$1 || (echo "WARNING: NO TYPE DEFINITION FOUND FOR $1. Uninstalling $1." && npm uninstall --save $1))
+    (npm install $1 --save) && (typings install --global dt~$1 || typings install --global npm~$1 || typings install npm~$1 || typings install dt~$1 || npm install --save @types/$1 || (echo "WARNING: NO TYPE DEFINITION FOUND FOR $1. Uninstalling $1." && npm uninstall --save $1))
     set +o nounset
 }
 

@@ -1,0 +1,15 @@
+<snippet>
+  <description>Shell snippet skeleton</description>
+<content><![CDATA[
+<snippet>
+  <description>${2:description here}</description>
+<content><![CDATA[
+${3:content here}
+]${3/.*//}]></content>  
+  <tabTrigger>${1:triggering-text}</tabTrigger>
+  <scope>source.shell</scope>
+</snippet>
+]]></content>
+  <tabTrigger>snip_bash</tabTrigger>
+  <scope>text.xml</scope>
+</snippet>

@@ -1,0 +1,10 @@
+<snippet>
+  <description>Define the current file's main export (NodeJS)</description>
+<content><![CDATA[
+module.exports = {
+  ${0}
+};
+]]></content>  
+  <tabTrigger>mod_ex</tabTrigger>
+  <scope>source.js, source.ts, source.jsx, source.tsx</scope>
+</snippet>

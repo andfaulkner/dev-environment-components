@@ -1,8 +1,8 @@
 <snippet>
 	<description>require lodash</description>
 	<content><![CDATA[
-const _ = require('lodash');
+const _ = require('lodash');${0}
 ]]></content>
-	<tabTrigger>rqld</tabTrigger>
+	<tabTrigger>req_lodash</tabTrigger>
 	<scope>source.js, source.ts, source.jsx, source.tsx</scope>
 </snippet>

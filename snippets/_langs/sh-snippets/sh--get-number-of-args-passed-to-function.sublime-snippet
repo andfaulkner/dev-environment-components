@@ -1,0 +1,8 @@
+<snippet>
+  <description>Get the number of args passed to the current function</description>
+<content><![CDATA[
+\$#
+]]></content>  
+  <tabTrigger>args_number</tabTrigger>
+  <scope>source.shell</scope>
+</snippet>

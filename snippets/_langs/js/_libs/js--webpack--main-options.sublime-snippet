@@ -102,7 +102,7 @@ module.exports = {
     new HandlebarsPlugin({
       entry: srcFilePath("index.hbs"),     // path to main hbs template 
       output: buildFilePath("index.html"), // filepath to result
-      data: config.appConfig['index-data'] // data passed to main hbs template
+      data: config['index-data'] // data passed to main hbs template
     }),
     // define a global variable in the output build. This is then reference-able within the file.
     new webpack.DefinePlugin({

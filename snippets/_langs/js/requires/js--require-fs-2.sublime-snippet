@@ -3,6 +3,6 @@
 	<content><![CDATA[
 const fs = require('fs');
 ]]></content>
-	<tabTrigger>rqf</tabTrigger>
+	<tabTrigger>req_fs</tabTrigger>
 	<scope>source.js, source.ts, source.jsx, source.tsx</scope>
 </snippet>

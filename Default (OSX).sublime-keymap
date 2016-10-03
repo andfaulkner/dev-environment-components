@@ -12,7 +12,7 @@
   { "keys": ["command+shift+t"], "command": "open_recent_file", "args": {"index" : 0} },
   { "keys": ["command+s"], "command": "save" },
 
-  { "keys": ["command+ctrl+shift+a"], "command": "alignment" },
+  { "keys": ["command+ctrl+shift+a"], "command": "gment" },
   { "keys": ["ctrl+shift+alt+l"], "command": "remove_trailing_whitespace" },
 
 //################################## SWITCH SYNTAX OF CURRENT FILE ##################################

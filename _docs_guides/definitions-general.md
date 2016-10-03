@@ -274,4 +274,3 @@
     *   A PUT request, by contrast, should refer to one (and only one) resource in particular.
 *  PUT requests are Idempotent, while POST requests are not
 #######################################################################################
-
