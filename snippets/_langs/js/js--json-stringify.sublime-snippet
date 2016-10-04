@@ -1,0 +1,8 @@
+<snippet>
+  <description>JSON.stringify - convert JS object into string for sending via REST API.</description>
+<content><![CDATA[
+JSON.stringify(${1});${0}
+]]></content>  
+  <tabTrigger>jstr</tabTrigger>
+  <scope>source.js, source.ts, source.jsx, source.tsx</scope>
+</snippet>

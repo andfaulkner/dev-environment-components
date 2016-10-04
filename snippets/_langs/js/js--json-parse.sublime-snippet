@@ -1,0 +1,8 @@
+<snippet>
+  <description>JSON.parse - convert JSON string into JS object.</description>
+<content><![CDATA[
+JSON.parse(${1});${0}
+]]></content>  
+  <tabTrigger>jpar</tabTrigger>
+  <scope>source.js, source.ts, source.jsx, source.tsx</scope>
+</snippet>
