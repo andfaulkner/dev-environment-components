@@ -1,0 +1,8 @@
+<snippet>
+  <description>Create that a value is truthy</description>
+<content><![CDATA[
+t.truthy(${1:'value to check for truthiness of'});${0}
+]]></content>  
+  <tabTrigger>ava_truthy</tabTrigger>
+  <scope>source.js, source.ts, source.jsx, source.tsx</scope>
+</snippet>

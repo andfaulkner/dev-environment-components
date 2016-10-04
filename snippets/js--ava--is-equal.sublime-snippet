@@ -1,0 +1,8 @@
+<snippet>
+  <description>Create that a value is equal to another (shallow)</description>
+<content><![CDATA[
+t.is(${1:'value 1'}, ${2:'value 2'});${0}
+]]></content>  
+  <tabTrigger>ava_equal</tabTrigger>
+  <scope>source.js, source.ts, source.jsx, source.tsx</scope>
+</snippet>

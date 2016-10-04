@@ -1,0 +1,8 @@
+<snippet>
+  <description>Check that 2 objects are equal</description>
+<content><![CDATA[
+t.deepEqual(${1:[1, 2]}, ${2:[1, 2]});${0}
+]]></content>  
+  <tabTrigger>ava_deepequal</tabTrigger>
+  <scope>source.js, source.ts, source.jsx, source.tsx</scope>
+</snippet>

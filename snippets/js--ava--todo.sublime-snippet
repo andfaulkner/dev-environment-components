@@ -1,0 +1,8 @@
+<snippet>
+  <description>Placeholder to remind yourself to write a test</description>
+<content><![CDATA[
+t.todo(${1:TODO: Write this test later});${0}
+]]></content>  
+  <tabTrigger>ava_todo</tabTrigger>
+  <scope>source.js, source.ts, source.jsx, source.tsx</scope>
+</snippet>

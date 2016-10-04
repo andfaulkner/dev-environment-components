@@ -1,0 +1,11 @@
+<snippet>
+  <description>NodeJS callback error handler</description>
+<content><![CDATA[
+if (err) {
+  console.error(${1:`Error occurred: \${err\}`});
+  throw err;
+}${0}
+]]></content>  
+  <tabTrigger>node_err_cb</tabTrigger>
+  <scope>source.js, source.ts, source.jsx, source.tsx</scope>
+</snippet>

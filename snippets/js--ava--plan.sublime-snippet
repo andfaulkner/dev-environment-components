@@ -1,0 +1,8 @@
+<snippet>
+  <description>Check that a certain number of assertions ran within a test</description>
+<content><![CDATA[
+t.plan(${1:numberOfAssertions});${0}
+]]></content>  
+  <tabTrigger>ava_plan</tabTrigger>
+  <scope>source.js, source.ts, source.jsx, source.tsx</scope>
+</snippet>

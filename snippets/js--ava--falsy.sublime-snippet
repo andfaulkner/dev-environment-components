@@ -1,0 +1,8 @@
+<snippet>
+  <description>Create that a value is falsy</description>
+<content><![CDATA[
+t.falsy(${1:'value to check for falsiness of'});${0}
+]]></content>  
+  <tabTrigger>ava_falsy</tabTrigger>
+  <scope>source.js, source.ts, source.jsx, source.tsx</scope>
+</snippet>
