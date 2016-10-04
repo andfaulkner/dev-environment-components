@@ -1,0 +1,10 @@
+<snippet>
+  <description>this.props.?.map(function). Iterate thru array prop in component</description>
+<content><![CDATA[
+this.props${1/.+/./g}${1:record}${1/.+/s/g}.map((${1:record}, index: number) => {
+  ${0}
+})
+]]></content>  
+  <tabTrigger>rct_map_t</tabTrigger>
+  <scope>source.tsx</scope>
+</snippet>
