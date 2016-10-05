@@ -1,6 +1,11 @@
 [
   { "keys": ["ctrl+alt+k"], "command": "clear_console" },
 
+  { "keys": ["command+ctrl+alt+f"], "command": "run_macro_file",
+    "context": [{"key": "selector", "operator": "equal", "operand": "source.js,source.ts,source.tsx,source.jsx"}],
+    "args": {"file": "Packages/User/macros/js--replace-function-with-const-and-arrow.sublime-macro"}
+  },
+
 // "################################## SIDEBAR HANDLING ##################################",
   { "keys": ["alt+r"], "command": "side_bar_rename" },
   { "keys": ["alt+d"], "command": "side_bar_duplicate" },

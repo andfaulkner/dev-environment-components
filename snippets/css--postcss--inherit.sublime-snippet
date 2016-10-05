@@ -1,0 +1,8 @@
+<snippet>
+  <description>Inherit properties from another style. Place inside a block to make the block inherit</description>
+<content><![CDATA[
+@inherit: ${1:.directive .to.inherit.from .eg .dose-box .text-container .text-wrapper .title};
+]]></content>  
+  <tabTrigger>pcss_inherit</tabTrigger>
+  <scope>source.css, source.postcss, source.scss</scope>
+</snippet>

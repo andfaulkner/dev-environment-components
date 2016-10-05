@@ -1,0 +1,8 @@
+<snippet>
+  <description>Import css from another file</description>
+<content><![CDATA[
+@import "${1:../../file/to/import}";${0}
+]]></content>  
+  <tabTrigger>import</tabTrigger>
+  <scope>source.css, source.postcss, source.scss</scope>
+</snippet>

@@ -1,0 +1,17 @@
+<snippet>
+  <description>description here</description>
+<content><![CDATA[
+program
+  .command(
+    '${1:name-of-command}${2/.+/ </}${2:mandatoryarg}${2/.+/>/}${3/.+/ [/}${3:optionalarg}${3/.+/]/}'
+  )
+  .description(
+    ${4:'what the command does'}
+  )
+  .action(function(${2}${2/.+/, /}${3}${3/.+/, /}options) {
+    ${0:// things to do here}
+  });
+]]></content>  
+  <tabTrigger>cmdr_command</tabTrigger>
+  <scope>source.js, source.ts, source.jsx, source.tsx</scope>
+</snippet>
