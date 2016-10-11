@@ -1,0 +1,9 @@
+<snippet>
+  <description>Require child_process library</description>
+<content><![CDATA[
+const { spawn, exec, execFile, execFileSync, execSync, spawnSync, fork } = require('child_process');${0}
+
+]]></content>  
+  <tabTrigger>req_child_process</tabTrigger>
+  <scope>source.js, source.ts, source.jsx, source.tsx</scope>
+</snippet>

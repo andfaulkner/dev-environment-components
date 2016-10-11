@@ -22,6 +22,11 @@
 *   Makes common operations faster and easier in code
 *   example: has_many :books, dependent: :destroy
 
+@### Autoredeploy (Docker/Dockerhub/Docker-cloud) ###@
+*   If a service that uses an image stored in Docker Hub is set to "autoredeploy", it will
+    automatically deploy again whenever a new image is pushed or built to Docker Hub
+*   The concept is the same everywhere: automatically deploy again whenever the code changes
+
 @### Clock (CPU) ###@
 *   Essentially a pulser that "beats" at a fixed frequency (measured in Hz)
     *   This fixed frequency is known as the clock speed
@@ -117,6 +122,14 @@
 *   sort of like scope, but not precisely the same
 
 # M ####################################################################################
+@### Memoization ###@
+*   technique to increase a function's performance by caching its previously computed results
+*   Each time a memoized function is called, its parameters are used to index the cache. If the
+    data is present, then it can be returned, without executing the entire function.
+    *   However, if the data is not cached, then the function is executed, and the result is added
+        to the cache.
+*   Basically exists to prevent re-computation
+
 @### Mutex ###@
 *	program object that allows multiple program threads to share the same resource, such as file
 	access, but not simultaneously. When a program is started, a mutex is created with a unique name
@@ -225,7 +238,7 @@
     object called ForgottenPassword. This object is instantiated and called on by a controller
 *   Most important: Service objects do one thing, and one thing only
 *   Benefits:
-    1)  Service objects show what an application actually does
+    1)  Service objects show what an application actually does;
     2)  Controllers and models shrink, and also become much cleaner. This is important, because
         these tend to get very bloated and messy as an application grows
     3)  They are easy to test
@@ -241,6 +254,8 @@
     general-purpose interface
 *   Dependency inversion principle: One should depend upon Abstractions, not 'concretions'
 
+@### stdio (aka STDIO, aka std/IO, aka stdIO, aka std/io) ###@
+*   "stdio" stands for "standard input output".
 
 @### Stored procedure ###@
 *   subroutine available to applications that access a relational database management system
@@ -274,3 +289,10 @@
     *   A PUT request, by contrast, should refer to one (and only one) resource in particular.
 *  PUT requests are Idempotent, while POST requests are not
 #######################################################################################
+@### Volume (Docker) ###@
+*   something that gets mounted into a container
+*   e.g. if using Mongo, you define a volume called "Mongo data", whioh persists between launches
+    of the container.
+    *   you could also mount a directory from your host into a container - this is also a volume
+*   something mountable is a volume
+

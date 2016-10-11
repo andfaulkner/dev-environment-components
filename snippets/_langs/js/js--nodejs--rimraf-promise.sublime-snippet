@@ -1,0 +1,14 @@
+<snippet>
+  <description>Remove a whole folder, return a promise</description>
+<content><![CDATA[
+return rimrafPromise('${1:./build}')
+  .catch((err) => {
+    console.error(`ERROR: ${2:$TM_FILENAME:: currentMethod: rimrafPromise:}: ${err}`);
+    throw(err);
+  }).then(() => {
+    ${0://do on success}
+  });
+]]></content>  
+  <tabTrigger>rmrf_promise</tabTrigger>
+  <scope>source.js, source.ts, source.jsx, source.tsx</scope>
+</snippet>

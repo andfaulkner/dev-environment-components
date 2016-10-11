@@ -51,6 +51,8 @@ function trim {
 }
 alias txt_trim="trim"
 
+alias col1="awk '{print \$1}'"
+
 #=== FUNCTION ==========================================================
 #        NAME:  tp_transpose
 # DESCRIPTION:  turn table outputted to cli 90 degrees 

@@ -1,0 +1,8 @@
+<snippet>
+  <description>inspect object - nodejs</description>
+<content><![CDATA[
+console.log('${1:$TM_FILENAME#methodName}${1/.+/: /}${2:nameOfObject}: ' + util.inspect(${2}, { depth: 5, color: true }));${0}
+]]></content>  
+  <tabTrigger>insp</tabTrigger>
+  <scope>source.js, source.ts, source.jsx, source.tsx</scope>
+</snippet>

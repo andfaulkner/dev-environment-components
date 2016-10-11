@@ -51,4 +51,6 @@ alias dock_log_running_cont="docker ps -a | ack -v 'CONTAINER ID' | awk '{print 
 
 alias dock_taillog='docker ps | grep -v "CONTAINER" | awk "{print \$1}" | xargs docker logs -f'
 
+alias dock_wipecontainers="docker ps -a | awk '{print $1}' | xargs docker rm"
+
 echo "* web request scripts loaded!"
