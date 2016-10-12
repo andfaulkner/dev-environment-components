@@ -79,3 +79,7 @@ function atomize {
     ~/bin/atomizr/atomizr -i $1 -o "$1"
 }
 
+function todo_add_random {
+  cat '- '"$1"'' > "$SNIPPETS_DIR/dev-env/too_random_ideas.txt"
+  echo "Added\n- $1 to random ideas todo list"
+}

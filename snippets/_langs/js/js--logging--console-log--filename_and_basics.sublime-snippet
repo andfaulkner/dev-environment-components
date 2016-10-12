@@ -1,0 +1,8 @@
+<snippet>
+  <description>basic console.log message</description>
+<content><![CDATA[
+console.log(`${0:$TM_FILENAME: }`);
+]]></content>  
+  <tabTrigger>conlog</tabTrigger>
+  <scope>source.js, source.ts, source.jsx, source.tsx</scope>
+</snippet>

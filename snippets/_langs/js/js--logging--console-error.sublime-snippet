@@ -1,0 +1,8 @@
+<snippet>
+  <description>console.error message</description>
+<content><![CDATA[
+console.error(`${0:$TM_FILENAME: ERROR: }`);
+]]></content>  
+  <tabTrigger>conerr</tabTrigger>
+  <scope>source.js, source.ts, source.jsx, source.tsx</scope>
+</snippet>

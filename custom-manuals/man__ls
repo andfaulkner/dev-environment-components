@@ -1,0 +1,35 @@
+#!/usr/bin/env sh
+
+cat << END_OF_TERMINAL_MANUAL_FOR_BASIC_REFERENCE
+
+---------------------------------------------------------------------------------
+** ls **
+---------------------------------------------------------------------------------
+# RECURSIVE
+## ls -R   :: recursively list all subdirectories & contents. e.g.
+            => ./projects/elixir/phoenix/hello_phoenix/node_modules/normalize-path:
+            => LICENSE		README.md      	index.js       	package.json
+            => 
+            => ./projects/elixir/phoenix/hello_phoenix/node_modules/os-tmpdir:
+            => index.js       	license		package.json   	readme.md       
+
+## tree    :: recursively list all subdirs & contents, w/ nice, readable formatting
+
+# OUTPUT FORMATTING
+## ls -p   :: Put a / slash after all items that are directories e.g.
+            => Applications/      Movies/      app.rb      Desktop/     ...
+## ls -m   :: show compact, comma-separated list of all items in current dir e.g.
+            =>   Applications, Desktop, Documents, Downloads ...
+
+# LONG FORMAT - show all data
+## ls -l   :: show ALL available data. Output contents (in order, left-to-right):
+
+  file mode, # of links, owner name, group name, # bytes, last mod (day,mo,hr,min), pathname
+
+      -rwxr-xr-x      7  andrew  staff      1266   29 Jul 02:29   install_gems_modules.sh
+      \__mode__/      |  \____/  \___/      \__/   \__________/   \_____________________/
+                      |    |       |          |      date/time          pathname
+   num links->file --/    owner   group     bytes
+
+---------------------------------------------------------------------------------\n
+END_OF_TERMINAL_MANUAL_FOR_BASIC_REFERENCE
