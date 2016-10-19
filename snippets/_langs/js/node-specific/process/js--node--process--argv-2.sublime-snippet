@@ -1,5 +1,5 @@
 <snippet>
-  <description>Ret arr w CLI args passed to this process. arg 1: execPath. arg 2: file running. Rest are CLI args</description>
+  <description>Ret launch cmd as arr. arg1: execPath. arg2: script file run. rest: CLI args e.g. '-a'</description>
 <content><![CDATA[
 process.argv${0}
 ]]></content>  

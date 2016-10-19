@@ -26,4 +26,13 @@ echo "    This is line 1."
 echo "    This is line 2."
 echo "EndOfMessage"
 echo ""
+echo "##COLOURS"
+echo "   -- Reset colors:"
+echo "        tput sgr0"
+echo '        echo -e "\033[0mNC (No color)"'
+echo " -- Set color examples:"
+echo '        echo -e "\033[0;35m[@@@ typings-install.sh @@@]\t"'
+echo '        echo -e "\033[1;30mSUCCESS\t\033[0;37mLIGHT_GRAY"'
+echo '        echo -e "\033[0;36mCYAN\t\033[1;36mLIGHT_CYAN"'
+echo ""
 echo '---------------------------------------------------------------------------------\n'

@@ -1,0 +1,8 @@
+<snippet>
+  <description>Select elements that are disabled (e.g. tags with disabled="disabled")</description>
+<content><![CDATA[
+:disabled
+]]></content>  
+  <tabTrigger>sel_pc_disabled</tabTrigger>
+  <scope>source.css, source.postcss, source.scss</scope>
+</snippet>

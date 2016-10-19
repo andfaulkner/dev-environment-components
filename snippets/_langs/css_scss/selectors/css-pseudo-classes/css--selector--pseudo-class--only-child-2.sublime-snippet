@@ -1,0 +1,8 @@
+<snippet>
+  <description>Selects any matching element that is the only child of its parent. Use: li:only-child { ..styles.. }</description>
+<content><![CDATA[
+:only-child
+]]></content>  
+  <tabTrigger>sel_pc_onlychild</tabTrigger>
+  <scope>source.css, source.postcss, source.scss</scope>
+</snippet>

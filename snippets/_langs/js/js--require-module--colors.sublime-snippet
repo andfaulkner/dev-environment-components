@@ -1,0 +1,8 @@
+<snippet>
+  <description>Pull in the colors module. Works by side effects.</description>
+<content><![CDATA[
+require('colors');
+]]></content>  
+  <tabTrigger>req_colors</tabTrigger>
+  <scope>source.js, source.ts, source.jsx, source.tsx</scope>
+</snippet>

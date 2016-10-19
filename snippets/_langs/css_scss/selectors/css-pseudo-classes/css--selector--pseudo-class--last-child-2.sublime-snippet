@@ -1,0 +1,8 @@
+<snippet>
+  <description>Selects last child element of an element's parent. Use: li:last-child { ..styles.. }</description>
+<content><![CDATA[
+:last-child
+]]></content>  
+  <tabTrigger>sel_pc_lastchild</tabTrigger>
+  <scope>source.css, source.postcss, source.scss</scope>
+</snippet>

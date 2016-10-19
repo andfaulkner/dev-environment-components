@@ -1,0 +1,8 @@
+<snippet>
+  <description>Run second given command alongside first command.</description>
+<content><![CDATA[
+${1:cmd_1} & ${0:run_simultaneously_with_cmd_1}
+]]></content>  
+  <tabTrigger>conflow_run_concurrently</tabTrigger>
+  <scope>source.shell</scope>
+</snippet>

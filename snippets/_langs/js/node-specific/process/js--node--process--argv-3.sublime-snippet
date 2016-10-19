@@ -1,0 +1,8 @@
+<snippet>
+  <description>Ret launch cmd as arr. arg1: execPath. arg2: script file run. rest: CLI args e.g. '-a'</description>
+<content><![CDATA[
+process.argv${0}
+]]></content>  
+  <tabTrigger>args_from_cli</tabTrigger>
+  <scope>source.js, source.ts, source.jsx, source.tsx</scope>
+</snippet>

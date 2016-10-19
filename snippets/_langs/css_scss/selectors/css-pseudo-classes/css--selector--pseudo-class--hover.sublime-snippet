@@ -1,0 +1,8 @@
+<snippet>
+  <description>Select element on mouse-over</description>
+<content><![CDATA[
+:hover
+]]></content>  
+  <tabTrigger>sel_pc_hover</tabTrigger>
+  <scope>source.css, source.postcss, source.scss</scope>
+</snippet>

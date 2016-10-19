@@ -1,0 +1,10 @@
+<snippet>
+  <description>Arrow function</description>
+<content><![CDATA[
+(${1:arguments_here}) => {
+  ${0}
+};
+]]></content>  
+  <tabTrigger>arf</tabTrigger>
+  <scope>source.js, source.ts, source.jsx, source.tsx</scope>
+</snippet>

@@ -16,7 +16,7 @@ Common mistakes
 5.  Don't store application state in a React object. React is for VIEWS, not for state. If it's
     not view state, it doesn't belong in React at all.
 
-6.  Don't forget about React and Redux's amazing dev tools. They're seriously half of the 
+6.  Don't forget about React and Redux's amazing dev tools. They're seriously half of the
     advantage of using this framework. The React Developer Tools and Redux DevTools Chrome
     plugins should be your goto for bug handling, they are insanely powerful.
 

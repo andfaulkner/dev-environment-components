@@ -1,0 +1,8 @@
+<snippet>
+  <description>Get entire external environment - all system-declared variables.</description>
+<content><![CDATA[
+process.env
+]]></content>  
+  <tabTrigger>proc_env</tabTrigger>
+  <scope>source.js, source.ts, source.jsx, source.tsx</scope>
+</snippet>

@@ -26,6 +26,9 @@ alias ni="npm install"
 
 ############################### PROJECT CONVENIENCE FUNCTIONS ############################## 
 alias mds="script/devops build development --clean"
+alias sd="script/devops"
+alias sdb="script/devops build"
+alias sdbdev="script/devops build development --clean"
 alias nkn_PARTIAL='ps aux | grep "tsc\|node\|webpack\|nvm\|npm\|gulp\|grunt\|cordova\|express\|commander" | grep -v "grep.*\(\(tsc.*node.*\)\|\(node.*tsc\)\)*" | xargs kill -9; pm2 stop all'
 alias nkn='nkn_PARTIAL 2>/dev/null | grep -v "\(\(\Use \`pm2 show <id|name>\`.*details.*app\)\|\(┬─────┬\)\|\(┴─────┴\)\|\(App name.*mode.*cpu.*mem.*watching\)\)" | awk "{print $0}"'
 #alias mds="make dev-setup"

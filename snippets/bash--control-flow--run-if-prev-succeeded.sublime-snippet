@@ -1,0 +1,8 @@
+<snippet>
+  <description>Run second given command if first given command succeeds.</description>
+<content><![CDATA[
+${1:cmd_1} && ${0:run_if_cmd_1_succeeded}
+]]></content>  
+  <tabTrigger>conflow_run_if_success</tabTrigger>
+  <scope>source.shell</scope>
+</snippet>

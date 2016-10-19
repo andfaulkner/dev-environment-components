@@ -7,11 +7,11 @@ import * as ReactDOM from 'react-dom';
 
 import { Button } from 'react-bootstrap';
 
-import { TestComponent } from './components/TestComponent';
-// import { Header } from './components/Header';
-import { Player } from './components/Player/Player';
-import { ArenaBorder } from './components/ArenaBorder/ArenaBorder';
-import { KeyController } from './components/KeyController/KeyController';
+import { TestComponent } from './modules/TestComponent';
+// import { Header } from './modules/Header';
+import { Player } from './modules/Player/Player';
+import { ArenaBorder } from './modules/ArenaBorder/ArenaBorder';
+import { KeyController } from './modules/KeyController/KeyController';
 
 import { PlayerColor } from './enums/enums';
 

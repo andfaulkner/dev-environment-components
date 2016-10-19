@@ -1,7 +1,7 @@
 <snippet>
   <description>Create group of reducers</description>
 <content><![CDATA[
-import { _ } from "${1:../.}./assets/lib/lodashMixins";
+import { _ } from "${1:../.}./helpers/lodashMixins";
 import { defaultAction } from "${2:.}./actions";
 import { defaultState } from "${3:.}./defaultState";
 

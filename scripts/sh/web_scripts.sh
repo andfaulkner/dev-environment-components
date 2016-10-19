@@ -53,4 +53,16 @@ alias dock_taillog='docker ps | grep -v "CONTAINER" | awk "{print \$1}" | xargs 
 
 alias dock_wipecontainers="docker ps -a | awk '{print $1}' | xargs docker rm"
 
+###################################### NETWORK SETUP AND INFO UTILITIES ######################################  
+
+# VIEW ALL PACKETS FLOWING THROUGH YOUR NETWORK CARD
+alias net_show_packet_flow="sudo tcpdump -v"
+
+# LIST ALL PROTOCOLS
+alias net_protocol_list="cat /etc/protocols"
+
+# get
+alias net_speed="speedtest-cli"
+
+
 echo "* web request scripts loaded!"

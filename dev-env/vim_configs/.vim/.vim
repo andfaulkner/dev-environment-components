@@ -1,1 +1,0 @@
-/Users/andrewfaulkner/dev-env/vim_configs/.vim

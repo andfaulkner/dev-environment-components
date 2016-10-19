@@ -1,0 +1,10 @@
+<snippet>
+  <description>Return 1st matching element</description>
+<content><![CDATA[
+_.find(${1:collection}, (${2:keyIfObj_valIfArr, valIfObj, index}) => {
+  ${0://return match condition}
+});
+]]></content>  
+  <tabTrigger>_arr_find</tabTrigger>
+  <scope>source.js, source.ts, source.jsx, source.tsx</scope>
+</snippet>

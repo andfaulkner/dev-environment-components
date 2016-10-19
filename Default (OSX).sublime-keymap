@@ -88,7 +88,9 @@
 
   { "keys": ["command+shift+z"], "command": "redo" },
   { "keys": ["shift+ctrl+alt+p"], "command": "copy_path" },
-  { "keys": ["ctrl+command+enter"], "command": "toggle_overwrite" },
+
+  { "DESCRIPTION": "OVERWRITE TEXT - I.E. 'UNINSERT'",
+    "keys": ["ctrl+command+enter"], "command": "toggle_overwrite" },
   { "keys": ["command+ctrl+up"], "command": "swap_line_up" },
   { "keys": ["command+ctrl+down"], "command": "swap_line_down" },
 

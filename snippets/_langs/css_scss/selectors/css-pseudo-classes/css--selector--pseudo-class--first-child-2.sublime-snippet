@@ -1,0 +1,8 @@
+<snippet>
+  <description>Selects first child element of an element's parent. Use: li:first-child { ..styles.. }</description>
+<content><![CDATA[
+:first-child
+]]></content>  
+  <tabTrigger>sel_pc_firstchild</tabTrigger>
+  <scope>source.css, source.postcss, source.scss</scope>
+</snippet>

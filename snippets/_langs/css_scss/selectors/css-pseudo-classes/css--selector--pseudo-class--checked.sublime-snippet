@@ -1,0 +1,8 @@
+<snippet>
+  <description>Selects all 'checked' (as in checkbox) elements</description>
+<content><![CDATA[
+:checked
+]]></content>  
+  <tabTrigger>sel_pc_checked</tabTrigger>
+  <scope>source.css, source.postcss, source.scss</scope>
+</snippet>
