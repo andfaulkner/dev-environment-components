@@ -1,0 +1,9 @@
+<snippet>
+  <description>REFERENCE: list of available fonts - place in user preferences</description>
+<content><![CDATA[
+"font_face": "${1:Inconsolata | CONSOLAS | Monaco | Source Code Pro}",${0}
+]]></content>
+  <tabTrigger>pref_font</tabTrigger>
+  <scope>source.json</scope>
+</snippet>
+

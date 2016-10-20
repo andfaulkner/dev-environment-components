@@ -1,0 +1,13 @@
+<snippet>
+  <description>Set ruler - place in user preferences</description>
+<content><![CDATA[
+  "rulers":
+  [
+    80,
+    100
+  ],
+]]></content>
+  <tabTrigger>pref_ruler</tabTrigger>
+  <scope>source.json</scope>
+</snippet>
+

@@ -270,6 +270,25 @@ function unix_setup {
 
 
 
+install_mac_fonts() {
+    brew tap caskroom/fonts
+    brew cask install font-inconsolata
+    brew cask install font-source-code-pro
+    brew cask install font-source-sans-pro
+
+    pushd ./
+	brew install cabextract
+    cd ~/Downloads
+    mkdir consolas
+    cd consolas
+    curl -O http://download.microsoft.com/download/f/5/a/f5a3df76-d856-4a61-a6bd-722f52a5be26/PowerPointViewer.exe
+    cabextract PowerPointViewer.exe
+    cabextract ppviewer.cab
+    open CONSOLA*.TTF
+    mv *.ttf /Library/Fonts/
+    mv *.ttf /Library/Fonts/
+    popd
+}
 
 #-----------------------------------------------------------------------------------------------------------------------------------------#
 ################################################################ MAC SETUP ################################################################
@@ -283,6 +302,8 @@ function mac_setup {
     brew cask install caskroom/versions/java7
     brew install gradle
     brew install ant
+
+	install_mac_fonts
 
     # SHELL COMPLETIONS
     brew install bash-completion
