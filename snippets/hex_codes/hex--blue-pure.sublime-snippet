@@ -1,0 +1,7 @@
+<snippet>
+  <description>Hex code for pure blue (no green or red mixed in)</description>
+<content><![CDATA[
+#0000FF
+]]></content>  
+  <tabTrigger>hex_color_blue_pure</tabTrigger>
+</snippet>

@@ -1,0 +1,7 @@
+<snippet>
+  <description>Official purple hex code (Surprisingly dark and deep)</description>
+<content><![CDATA[
+#800080
+]]></content>  
+  <tabTrigger>hex_color_purple_pure_deep</tabTrigger>
+</snippet>

@@ -1,0 +1,7 @@
+<snippet>
+  <description>Hex code for silver (like a lighter gray with a 'matte' feel)</description>
+<content><![CDATA[
+#C0C0C0
+]]></content>  
+  <tabTrigger>hex_color_silver</tabTrigger>
+</snippet>

@@ -1,0 +1,7 @@
+<snippet>
+  <description>Hex code for pure orange (official 'orange' hex)</description>
+<content><![CDATA[
+#FFA500
+]]></content>  
+  <tabTrigger>hex_color_orange</tabTrigger>
+</snippet>

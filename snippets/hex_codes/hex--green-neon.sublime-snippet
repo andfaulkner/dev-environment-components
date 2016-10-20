@@ -1,0 +1,7 @@
+<snippet>
+  <description>Hex code for a blindingly neon green</description>
+<content><![CDATA[
+#00FF00
+]]></content>  
+  <tabTrigger>hex_color_green_neon</tabTrigger>
+</snippet>
