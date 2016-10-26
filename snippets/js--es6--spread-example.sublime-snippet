@@ -1,0 +1,9 @@
+<snippet>
+  <description>Arr spread example: var a = [1, 2]; var nA = [...a]; //nA is [1, 2]</description>
+<content><![CDATA[
+const arr = [ 1, 2, 3 ];
+const newArr = [ ...arr ];  // newArr: [ 1, 2, 3 ]
+]]></content>  
+  <tabTrigger>spread_arr_example</tabTrigger>
+  <scope>source.js, source.ts, source.jsx, source.tsx</scope>
+</snippet>

@@ -62,6 +62,22 @@
     *   Referential Integrity:   requires every value of 1 column of a table to exist as a value of
     *                            another column in a different (or the same) table   
 
+@### Data Structures ###@
+*   way of organizing data in a computer so that it can be used efficiently
+*   scaffolding for data to be stored in ways that allow searches, inserts, removals,
+    and updates to take place quickly and dynamically
+*   common data structures:
+        Stacks
+        Queues
+        Linked Lists
+        Sets
+        Trees
+        Graphs
+        Hash Tables // think JS objects
+        Doubly-linked lists
+        b-trees
+        priority queues
+
 @### Directives ###@
 *   An instruction solely for an interpreter, compiler, or assembler
 *   i.e. it doesn't eventually translate to machine code, it instead modifies the behaviour
