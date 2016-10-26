@@ -470,4 +470,7 @@ function type_react_destroy_component {
 }
 
 alias npmscripts='awk "/scripts/,/}/" package.json | ack -v "\s\s}" | ack -v "\s\s\"scripts\":"'
+
+alias twitter="echo 'logging into twitter via birdknife...'; birdknife"
+
 echo "* NodeJS scripts loaded!"
