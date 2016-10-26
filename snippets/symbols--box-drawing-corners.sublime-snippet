@@ -1,0 +1,7 @@
+<snippet>
+  <description>Box corners: ┏ ┓┗ ┛</description>
+<content><![CDATA[
+┏ ┓┗ ┛
+]]></content>  
+  <tabTrigger>sym_box_corners</tabTrigger>
+</snippet>

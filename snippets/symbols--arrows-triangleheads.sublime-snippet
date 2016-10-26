@@ -1,0 +1,7 @@
+<snippet>
+  <description>Triangle heads: ► ▼ ◀ ▲ △ ▽ ▷ ◁</description>
+<content><![CDATA[
+► ▼ ◀ ▲ △ ▽ ▷ ◁
+]]></content>  
+  <tabTrigger>sym_arrows_triangleheads</tabTrigger>
+</snippet>

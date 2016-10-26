@@ -1,0 +1,14 @@
+<snippet>
+  <description>Make a directory</description>
+<content><![CDATA[
+fs.mkdir(path.join(__dirname, ${1:'path_to_dir_to_make_rel_to_cur_path'}), (err) => {
+  if (err) {
+    console.error('create directory error: ', err);
+    throw (err);
+  }
+  ${0:console.log('successfully created directory');}
+});
+]]></content>  
+  <tabTrigger>fs_mkdir</tabTrigger>
+  <scope>source.js, source.ts, source.jsx, source.tsx</scope>
+</snippet>

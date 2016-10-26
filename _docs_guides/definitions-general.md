@@ -278,6 +278,17 @@
     is significantly less verbose.
 #######################################################################################
 
+@### Testing: black-box testing ###@
+*   one of 3 main testing "methods" (black-box testing, white-box testing, grey-box testing)
+*   testing without having any knowledge of the interior workings of the application
+*   tester is oblivious to the system architecture and does not have access to the source code
+*   while performing a black-box test, a tester interacts with the system's UI by providing inputs
+    and examining outputs without knowing how and where the inputs are worked on
+*   Contrast:
+    *   white-box testing: a detailed investigation of internal logic & structure of an app's code
+    *   grey-box testing: test an app with limited knowledge (but not none) of its internal workings
+
+
 
 ############################ HTTP REQUESTS ################################
 @### PUT requests ###@        AND        @### POST requests ###@
