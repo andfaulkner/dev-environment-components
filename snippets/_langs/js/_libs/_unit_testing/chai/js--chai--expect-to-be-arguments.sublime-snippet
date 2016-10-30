@@ -1,0 +1,8 @@
+<snippet>
+  <description>Expect that value/result is an arguments object</description>
+<content><![CDATA[
+expect(${1:'test'}).to.be.arguments;${0}
+]]></content>  
+  <tabTrigger>chaie_is_arguments</tabTrigger>
+  <scope>source.js, source.ts, source.jsx, source.tsx</scope>
+</snippet>

@@ -1,0 +1,8 @@
+<snippet>
+  <description>Expect that value/result is not null</description>
+<content><![CDATA[
+expect(${1:undefined}).to.not.be.null;${0}
+]]></content>  
+  <tabTrigger>chaie_is_not_null</tabTrigger>
+  <scope>source.js, source.ts, source.jsx, source.tsx</scope>
+</snippet>

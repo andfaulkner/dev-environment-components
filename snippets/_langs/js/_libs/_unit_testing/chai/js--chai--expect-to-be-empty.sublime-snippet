@@ -1,0 +1,8 @@
+<snippet>
+  <description>Expect that target's length is 0. E.g. '', [], {}</description>
+<content><![CDATA[
+expect(${1:{\}}).to.be.empty;${0}
+]]></content>  
+  <tabTrigger>chaie_is_empty</tabTrigger>
+  <scope>source.js, source.ts, source.jsx, source.tsx</scope>
+</snippet>

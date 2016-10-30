@@ -1,0 +1,7 @@
+<snippet>
+  <description>A darker shade of orange, but not quite dark orange</description>
+<content><![CDATA[
+#e67e00
+]]></content>  
+  <tabTrigger>hex_color_orange_darker</tabTrigger>
+</snippet>

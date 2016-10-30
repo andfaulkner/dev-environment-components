@@ -1,0 +1,8 @@
+<snippet>
+  <description>Expect that value/result is frozen</description>
+<content><![CDATA[
+expect(${1:'test'}).to.be.frozen;${0}
+]]></content>  
+  <tabTrigger>chaie_is_frozen</tabTrigger>
+  <scope>source.js, source.ts, source.jsx, source.tsx</scope>
+</snippet>

@@ -1,0 +1,8 @@
+<snippet>
+  <description>Expect that value/result is ok (i.e. that it's truthy)</description>
+<content><![CDATA[
+expect(${1:'this is truthy'}).to.be.ok;${0}
+]]></content>  
+  <tabTrigger>chaie_is_ok</tabTrigger>
+  <scope>source.js, source.ts, source.jsx, source.tsx</scope>
+</snippet>

@@ -1,0 +1,8 @@
+<snippet>
+  <description>Determine if object has all given vals as keys</description>
+<content><![CDATA[
+expect(${1:{type: 'grizzly', age: 4\}}).to.have.keys(${2:['type', 'age']});${0}
+]]></content>  
+  <tabTrigger>chaie_obj_has_keys</tabTrigger>
+  <scope>source.js, source.ts, source.jsx, source.tsx</scope>
+</snippet>

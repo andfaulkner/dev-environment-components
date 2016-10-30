@@ -1,0 +1,8 @@
+<snippet>
+  <description>Detect if given shallow rendered component has given css class name</description>
+<content><![CDATA[
+${1:wrapper}.hasClass('${2:name--of--class}');
+]]></content>  
+  <tabTrigger>enz_sha_hasclass</tabTrigger>
+  <scope>source.js, source.ts, source.jsx, source.tsx</scope>
+</snippet>

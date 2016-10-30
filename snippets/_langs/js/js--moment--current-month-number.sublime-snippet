@@ -1,0 +1,8 @@
+<snippet>
+  <description>Get the current month as a number - e.g. 9</description>
+<content><![CDATA[
+moment().month();
+]]></content>  
+  <tabTrigger>moment_cur_month</tabTrigger>
+  <scope>source.js, source.ts, source.jsx, source.tsx</scope>
+</snippet>

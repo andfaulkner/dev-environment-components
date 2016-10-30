@@ -1,0 +1,8 @@
+<snippet>
+  <description>Create moment object from data string + format (format used to interpret #s in the data)</description>
+<content><![CDATA[
+${1/.+/const /}${1:newMomentObject}${1/.+/ = /}moment(${2:"1980-10-02"}, ${3:"YYYY-MM-DD"});${0}
+]]></content>  
+  <tabTrigger>moment_new_from_format</tabTrigger>
+  <scope>source.js, source.ts, source.jsx, source.tsx</scope>
+</snippet>

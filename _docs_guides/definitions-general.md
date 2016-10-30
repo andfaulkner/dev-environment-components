@@ -270,6 +270,11 @@
     general-purpose interface
 *   Dependency inversion principle: One should depend upon Abstractions, not 'concretions'
 
+@### Stack (Docker) ###@
+*   set of services that make up an application
+*   in a stackfile (equivalent to a docker compose file) you can define a bunch of diff services 
+    to all boot and deploy at once it is 
+
 @### stdio (aka STDIO, aka std/IO, aka stdIO, aka std/io) ###@
 *   "stdio" stands for "standard input output".
 
@@ -303,8 +308,6 @@
 *   Contrast:
     *   white-box testing: a detailed investigation of internal logic & structure of an app's code
     *   grey-box testing: test an app with limited knowledge (but not none) of its internal workings
-
-
 
 ############################ HTTP REQUESTS ################################
 @### PUT requests ###@        AND        @### POST requests ###@

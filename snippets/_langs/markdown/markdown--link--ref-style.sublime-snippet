@@ -1,0 +1,10 @@
+<snippet>
+  <description>Markdown link - reference style, with urls in a list at the bottom</description>
+<content><![CDATA[
+[${1:description goes here, with number to the right providing the anchor to the reference}][${2:1}]
+
+[${2}]: ${3:http://example.com/url/of/link/goes/here}
+]]></content>
+  <tabTrigger>link_ref</tabTrigger>
+  <scope>text.html.markdown</scope>
+</snippet>

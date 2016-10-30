@@ -22,6 +22,8 @@ alias nrnt="export LOG_LEVEL=trace; npm run nodemon"
 alias nrns="export LOG_LEVEL=silly; npm run nodemon"
 alias nrne="export LOG_LEVEL=error; npm run nodemon"
 
+alias nrd="npm run devops --"
+
 alias ni="npm install"
 
 ############################### PROJECT CONVENIENCE FUNCTIONS ############################## 
@@ -470,6 +472,7 @@ function type_react_destroy_component {
 }
 
 alias npmscripts='awk "/scripts/,/}/" package.json | ack -v "\s\s}" | ack -v "\s\s\"scripts\":"'
+alias npmreact_deps='cat package.json | ack "react|redux|recompose|jsdom|reselect|normalizr|enzyme|jest|updeep|reduce-reducers|mobx" | trim'
 
 alias twitter="echo 'logging into twitter via birdknife...'; birdknife"
 

@@ -1,0 +1,8 @@
+<snippet>
+  <description>Markdown link - location defined inline</description>
+<content><![CDATA[
+[${1:title}](${2:http://example.com/link/path})${0}
+]]></content>
+  <tabTrigger>link</tabTrigger>
+  <scope>text.html.markdown</scope>
+</snippet>

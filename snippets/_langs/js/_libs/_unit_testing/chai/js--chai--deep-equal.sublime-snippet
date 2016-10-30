@@ -3,6 +3,6 @@
 <content><![CDATA[
 expect(${1:someValue}).to.eql(${2:anotherValue});${0}
 ]]></content>  
-  <tabTrigger>chai_equal_deep</tabTrigger>
+  <tabTrigger>chaie_equal_deep</tabTrigger>
   <scope>source.js, source.ts, source.jsx, source.tsx</scope>
 </snippet>

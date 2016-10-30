@@ -1,0 +1,10 @@
+<snippet>
+  <description>Run fn before 1st test to run in the current context/describe block</description>
+<content><![CDATA[
+before(() => {
+  ${0:// do before each "it" in the current content block/describe block runs. E.g. separatorWrap = shallow(<Separator />);}
+});
+]]></content>  
+  <tabTrigger>mocha_before</tabTrigger>
+  <scope>source.js, source.ts, source.jsx, source.tsx</scope>
+</snippet>

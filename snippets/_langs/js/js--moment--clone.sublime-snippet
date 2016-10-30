@@ -1,0 +1,8 @@
+<snippet>
+  <description>Clone an existing moment object</description>
+<content><![CDATA[
+${1/.+/const /}${1:newMomentObject}${1/.+/ = /}moment(${2:existing_moment_object});${0}
+]]></content>  
+  <tabTrigger>moment_clone</tabTrigger>
+  <scope>source.js, source.ts, source.jsx, source.tsx</scope>
+</snippet>

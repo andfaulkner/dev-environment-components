@@ -1,0 +1,8 @@
+<snippet>
+  <description>Determine if a given variable is a moment object</description>
+<content><![CDATA[
+moment.isMoment(${1:someValue});${0}
+]]></content>  
+  <tabTrigger>is_moment</tabTrigger>
+  <scope>source.js, source.ts, source.jsx, source.tsx</scope>
+</snippet>

@@ -1,0 +1,19 @@
+<snippet>
+  <description>Import a collection of utils to make async fs operations easier.</description>
+<content><![CDATA[
+import * as util from 'util';
+import * as _ from 'lodash';
+import * as fs from 'fs';
+import * as path from 'path';
+
+import * as Bluebird from 'bluebird';
+
+const readFileAsync = Bluebird.promisify(fs.readFile);
+const writeFileAsync = Bluebird.promisify(fs.writeFile);
+const mkdirAsync = Bluebird.promisify(fs.mkdir);
+const openAsync = Bluebird.promisify(fs.open);
+const closeAsync = Bluebird.promisify(fs.close);
+]]></content>  
+  <tabTrigger>blu_fs_coll_promisified</tabTrigger>
+  <scope>source.js, source.ts, source.jsx, source.tsx</scope>
+</snippet>

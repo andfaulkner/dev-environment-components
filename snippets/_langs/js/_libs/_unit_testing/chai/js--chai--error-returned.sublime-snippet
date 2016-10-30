@@ -3,6 +3,6 @@
 <content><![CDATA[
 expect(${1:someValue}).to.be.an.instanceof(${2:TypeError/*Error|ReferenceError|SyntaxError|RangeError|URIError*/});${0}
 ]]></content>  
-  <tabTrigger>chai_is_error</tabTrigger>
+  <tabTrigger>chaie_is_error</tabTrigger>
   <scope>source.js, source.ts, source.jsx, source.tsx</scope>
 </snippet>

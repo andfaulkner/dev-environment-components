@@ -1,0 +1,8 @@
+<snippet>
+  <description>Get the current date as a number - e.g. 28</description>
+<content><![CDATA[
+moment().date();
+]]></content>  
+  <tabTrigger>moment_cur_date</tabTrigger>
+  <scope>source.js, source.ts, source.jsx, source.tsx</scope>
+</snippet>

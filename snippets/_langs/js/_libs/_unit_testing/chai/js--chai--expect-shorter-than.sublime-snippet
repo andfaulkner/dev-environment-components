@@ -1,0 +1,8 @@
+<snippet>
+  <description>Expect that value/result has a length less than a given val</description>
+<content><![CDATA[
+expect(${1:['some', 'array', 'of', 'vals']}).to.have.length.below(${2:8});${0}
+]]></content>  
+  <tabTrigger>chaie_is_shorter_than</tabTrigger>
+  <scope>source.js, source.ts, source.jsx, source.tsx</scope>
+</snippet>
