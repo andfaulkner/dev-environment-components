@@ -46,11 +46,22 @@
                                             ..., 
                                             CREATED_DATE DATE DEFAULT SYSDATE)
 
-@### Container Component (React + Redux) ###@
+@### Container Component and Presentational Component (React + Redux) ###@
+*   aka smart and dumb components
 *   a container component is just a React component that uses store.subscribe() to read a part of
     the redux state tree, and supply props to the presentational component it renders.
 *   can be generated with Redux's connect() function, which also benefits performance
 *   see http://redux.js.org/docs/basics/UsageWithReact.html
+*   presentational component: purely presentational. They accept props and return a React component.
+    *   often stateless functional components
+    *   example presentational component:
+
+        const Post = ({ title, content }) => (
+            <div>
+                <h1>{title}</h1>
+                <div>{content}</div>
+            </div>
+        );
 
 # D ###################################################################################
 @### Database key ###@
@@ -121,6 +132,13 @@
 *    1kHz is ~1000 cycles per second
 *    1MHz is ~1,000,000 cycles per second
 *    1GHz is ~1,000,000,000 cycles per second
+
+@### Higher-order component ###@
+*   Function that takes a component and returns a component
+    *   Can take arguments as well
+*   How they work: "secretly" wrapping the input component inside a container component
+
+
 
 # I ###################################################################################
 @### Idempotence ###@

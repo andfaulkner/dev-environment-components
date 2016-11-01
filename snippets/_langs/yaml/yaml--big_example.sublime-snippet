@@ -1,0 +1,45 @@
+<snippet>
+  <description>base yaml file</description>
+<content><![CDATA[
+---
+# ${1:Info on file}
+${0:example:
+  - listItem1
+  - listItem2
+  - listItem3HasHash:
+        hashKey1: hashVal1
+        hashKey2: hashVal2
+        hashKey3:
+          - nestedList1
+          - nestedList2
+multiline_string_with_newlines: |
+    This text is WYSIWYG,
+    including the line breaks
+multiline_string_with_no_newlines: >
+    This text all appears on a single
+    line. The angle brace helps you
+    divide long text up.
+--- # Inline Block
+inline_hash_in_the_value:
+    {inline_hash_key_one: inline_hash_val_one, inline_hash_key_two: inline_hash_val_two\}
+
+--- # Type Values
+some_number: 5
+some_string: "This is all together"
+some_float: 5.0
+another_float: !!float 5
+another_string: !!str 5
+some_boolean: Yes
+boolean_two: No
+some_null: !!null ''
+boolean_three: !!bool 'yes'
+some_regexp: !!js/regexp /pattern/gim 
+undefined_val: !!js/undefined ''
+some_js_function: !!js/function 'function () {...}'
+
+# END OF FILE}
+...
+]]></content>  
+  <tabTrigger>yml_example</tabTrigger>
+  <scope>source.yaml</scope>
+</snippet>

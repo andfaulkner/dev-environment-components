@@ -317,6 +317,9 @@ function mac_setup {
     # taps
     brew tap homebrew/completions
 
+    # get XQuartz window systen - X11
+    brew install Caskroom/cask/xquartz
+
     unix_setup
 }
 

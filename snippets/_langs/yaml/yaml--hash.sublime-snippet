@@ -1,0 +1,10 @@
+<snippet>
+  <description>hash in yaml</description>
+<content><![CDATA[
+${1:item1: val1}
+${2:item2: val2}
+${0:itemEtc: valEtc}
+]]></content>  
+  <tabTrigger>yml_hash</tabTrigger>
+  <scope>source.yaml</scope>
+</snippet>

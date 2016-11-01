@@ -1,0 +1,8 @@
+<snippet>
+  <description>Create a thennable version of fs.mkdir (makes a directory)</description>
+<content><![CDATA[
+const mkdirAsync = Bluebird.promisify(fs.mkdir);${0}
+]]></content>  
+  <tabTrigger>blu_fn_mkdir</tabTrigger>
+  <scope>source.js, source.ts, source.jsx, source.tsx</scope>
+</snippet>

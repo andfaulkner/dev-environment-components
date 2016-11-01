@@ -1,0 +1,11 @@
+<snippet>
+  <description>blockquote in yaml - no linebreaks</description>
+<content><![CDATA[
+${1:some_key_tho_it_can_also_eg_be_in_a_list_item}: >
+    ${0:All of this example text appears
+    on the same line even though it's broken
+    into multiple lines}
+]]></content>  
+  <tabTrigger>yml_blockquote_oneline</tabTrigger>
+  <scope>source.yaml</scope>
+</snippet>

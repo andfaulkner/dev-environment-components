@@ -1,0 +1,10 @@
+<snippet>
+  <description>array (same as list) in yaml</description>
+<content><![CDATA[
+- ${1:item 1}
+- ${2:item 2}
+- ${0: etc}
+]]></content>  
+  <tabTrigger>yml_array</tabTrigger>
+  <scope>source.yaml</scope>
+</snippet>

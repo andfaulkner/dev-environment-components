@@ -14,3 +14,4 @@ dev-env/.lein/indices/**
 npm-debug.log
 .DS_Store
 *.sublime-workspace
+elm-stuff

@@ -1,0 +1,10 @@
+<snippet>
+  <description>base yaml file</description>
+<content><![CDATA[
+---
+${0:example_some_key: example_some_val}
+...
+]]></content>  
+  <tabTrigger>yml_basefile</tabTrigger>
+  <scope>source.yaml</scope>
+</snippet>

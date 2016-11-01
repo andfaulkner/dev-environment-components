@@ -23,6 +23,10 @@ alias nrns="export LOG_LEVEL=silly; npm run nodemon"
 alias nrne="export LOG_LEVEL=error; npm run nodemon"
 
 alias nrd="npm run devops --"
+alias nrdbd="npm run devops -- build development"
+alias nrdbp="npm run devops -- build production"
+alias nrddep="npm run devops -- docker dockerhub"
+alias nrdti="npm run devops -- typings install"
 
 alias ni="npm install"
 

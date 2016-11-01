@@ -1,7 +1,7 @@
 <snippet>
-  <description>Hex code for lightblue</description>
+  <description>Hex code for light blue</description>
 <content><![CDATA[
-#7575FF
+#CDE7F0
 ]]></content>  
   <tabTrigger>hex_color_blue_light</tabTrigger>
 </snippet>
