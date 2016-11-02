@@ -38,6 +38,7 @@ alias nukemisc_utils='ps aux | ack "[^a-zA-Z0-9_](cat|less)$" | awk "{print \$2}
 alias nukechrome='ps aux | ack chrome | awk "{print \$2}" | xargs kill -9'
 alias nukefirefox='ps aux | ack firefox | awk "{print \$2}" | xargs kill -9'
 alias nukesublime='ps aux | ack "[Ss]ublime" | awk "{print \$2}" | xargs kill -9'
+alias nukevscode='ps aux | ack "Visual Studio Code\.app" | awk "{print \$2}" | xargs kill -9'
 
 # will kill all scripting languages & minor utils
 alias clean_mega_level1='nukeruby; nukenode; nukelisp; nukepython; nukemisc_utils'

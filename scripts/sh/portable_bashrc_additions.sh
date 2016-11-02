@@ -111,6 +111,27 @@ function whichdir {
     which $1 | ruby -pe '$_ = $_.split(/[^\/]*$/).first.chop + "\n"'
 }
 
+function whichdir_parent {
+    which $1 | ruby -pe '$_ = $_.split(/[^\/]*$/).first.chop.split(/[^\/]*$/).first.chop + "\n"'
+}
+
+function whichdir_grandparent {
+    which $1 | ruby -pe '$_ = $_.split(/[^\/]*$/).first.chop.split(/[^\/]*$/).first.chop.split(/[^\/]*$/).first.chop + "\n"'
+}
+
+function whichdir_greatgrandparent {
+    which $1 | ruby -pe '$_ = $_.split(/[^\/]*$/).first.chop.split(/[^\/]*$/).first.chop.split(/[^\/]*$/).first.chop.split(/[^\/]*$/).first.chop + "\n"'
+}
+
+function whichdir_greatgreatgrandparent {
+    which $1 | ruby -pe '$_ = $_.split(/[^\/]*$/).first.chop.split(/[^\/]*$/).first.chop.split(/[^\/]*$/).first.chop.plit(/[^\/]*$/).first.chop.split(/[^\/]*$/).first.chop + "\n"'
+}
+
+alias whichdir_parent_up1="whichdir_parent"
+alias whichdir_parent_up2="whichdir_grandparent"
+alias whichdir_parent_up3="whichdir_greatgrandparent"
+alias whichdir_parent_up4="whichdir_greatgreatgrandparent"
+
 function newmanual {
     cp "`which man__TEMPLATE`" "`whichdir man__TEMPLATE`/man__$1"
     vim "`whichdir man__TEMPLATE`/man__$1"

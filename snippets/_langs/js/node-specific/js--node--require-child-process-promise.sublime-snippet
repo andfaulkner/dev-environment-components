@@ -1,0 +1,8 @@
+<snippet>
+  <description>Require child-process-promise library</description>
+<content><![CDATA[
+const { spawn, exec } = require('child-process-promise');${0}
+]]></content>  
+  <tabTrigger>req_child_process_promise</tabTrigger>
+  <scope>source.js, source.ts, source.jsx, source.tsx</scope>
+</snippet>

@@ -1,0 +1,11 @@
+<snippet>
+  <description>Ensure dir exists, create if it's not there. Req fs-extra-promise</description>
+<content><![CDATA[
+fs.ensureDirAsync(${1:'path/to/dir'})
+  .then(${0:() => {
+    // action to perform when ensureDir complete
+  \}})
+]]></content>  
+  <tabTrigger>fs_prom_mkdir</tabTrigger>
+  <scope>source.js, source.ts, source.jsx, source.tsx</scope>
+</snippet>

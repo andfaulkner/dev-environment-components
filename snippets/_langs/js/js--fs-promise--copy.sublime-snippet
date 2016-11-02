@@ -1,0 +1,11 @@
+<snippet>
+  <description>Copy file or folder from src/path to dest/path. Req fs-extra-promise</description>
+<content><![CDATA[
+fs.copyAsync(${1:path.join(__dirname, 'src/path')}, ${2:path.join(__dirname, 'dest/path')})
+  .then(${0:() => {
+    // action to perform when ensureDir complete
+  \}})
+]]></content>  
+  <tabTrigger>fs_prom_copy</tabTrigger>
+  <scope>source.js, source.ts, source.jsx, source.tsx</scope>
+</snippet>

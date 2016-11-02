@@ -1,0 +1,13 @@
+<snippet>
+  <description>Promise-ret spawn. stdio=color. child-process-promise req</description>
+<content><![CDATA[
+spawn(${1:'npm'}, [${2:'run', 'test'}], {stdio: 'inherit'})
+  .then(${3:(output) => console.log('output: ', output)})
+  .catch(${4:(err) => {
+    console.error(`${1} ${2} failed to run:`, err);
+    throw (err);
+  \}});
+]]></content>  
+  <tabTrigger>childproc_promise_spawn</tabTrigger>
+  <scope>source.js, source.ts, source.jsx, source.tsx</scope>
+</snippet>
