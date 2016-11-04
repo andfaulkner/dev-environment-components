@@ -1,0 +1,8 @@
+<snippet>
+  <description>True if val is plain obj: obj literal, or obj w null or Object proto</description>
+<content><![CDATA[
+_.isPlainObject(${1:valueToCheck});${0}
+]]></content>  
+  <tabTrigger>_isPlainObj</tabTrigger>
+  <scope>source.js, source.ts, source.jsx, source.tsx</scope>
+</snippet>

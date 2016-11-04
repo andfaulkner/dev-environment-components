@@ -1,0 +1,13 @@
+<snippet>
+  <description>Create full new arrow function with supporting comment block</description>
+<content><![CDATA[
+/**
+ * ${3:TODO: explain function a bit here}
+ */
+const ${1:TODO_newFunctionName} = (${2:TODO_args}) => {
+  ${0://TODO actual logic}
+}
+]]></content>  
+  <tabTrigger>fn_big_arrow</tabTrigger>
+  <scope>source.js, source.ts, source.jsx, source.tsx</scope>
+</snippet>

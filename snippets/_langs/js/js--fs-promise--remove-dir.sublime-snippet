@@ -1,0 +1,11 @@
+<snippet>
+  <description>Remove directory or file. Req fs-extra-promise.</description>
+<content><![CDATA[
+fs.removeAsync(${1:'path/to/dir'})
+  .then(${0:() => {
+    // action to perform when removeAsync complete
+  \}})
+]]></content>  
+  <tabTrigger>fs_prom_rm</tabTrigger>
+  <scope>source.js, source.ts, source.jsx, source.tsx</scope>
+</snippet>
