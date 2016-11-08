@@ -2,6 +2,11 @@
   <description>Import primary redux methods</description>
 <content><![CDATA[
 import { combineReducers, createStore, applyMiddleware } from 'redux';${0}
+
+19 matches across 9 files
+
+
+Searching 34167 files for "applyLogMiddleware" (regex, case sensitive)
 ]]></content>  
   <tabTrigger>imp_rdx</tabTrigger>
   <scope>source.ts, source.tsx, source.js, source.jsx</scope>
