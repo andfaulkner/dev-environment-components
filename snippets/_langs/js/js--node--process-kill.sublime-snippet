@@ -1,0 +1,8 @@
+<snippet>
+  <description>Kill process with the given id and signal</description>
+<content><![CDATA[
+process.kill(${1:'process_id_e.g.1234'}, ${2:'signal_eg_SIGKILL'})
+]]></content>  
+  <tabTrigger>proc_kill</tabTrigger>
+  <scope>source.js, source.ts, source.jsx, source.tsx</scope>
+</snippet>

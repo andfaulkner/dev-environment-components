@@ -1,0 +1,8 @@
+<snippet>
+  <description>Make text lowercase</description>
+<content><![CDATA[
+text-transform: lowercase;
+]]></content>  
+  <tabTrigger>font_lowercase</tabTrigger>
+  <scope>source.css, source.postcss, source.scss</scope>
+</snippet>

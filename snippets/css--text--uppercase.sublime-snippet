@@ -1,0 +1,8 @@
+<snippet>
+  <description>Make text uppercase</description>
+<content><![CDATA[
+text-transform: uppercase;
+]]></content>  
+  <tabTrigger>font_uppercase</tabTrigger>
+  <scope>source.css, source.postcss, source.scss</scope>
+</snippet>

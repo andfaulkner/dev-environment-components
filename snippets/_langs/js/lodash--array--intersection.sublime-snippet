@@ -1,0 +1,8 @@
+<snippet>
+  <description>Create arr of uniq vals incl in all given arrs</description>
+<content><![CDATA[
+_.intersection(${1:arr1, arr2, arr3, etc})${0}
+]]></content>  
+  <tabTrigger>_arr_intersection</tabTrigger>
+  <scope>source.js, source.ts, source.jsx, source.tsx</scope>
+</snippet>

@@ -1,7 +1,7 @@
 <snippet>
   <description>it block - i.e. a single test</description>
 <content><![CDATA[
-it("${1:should be able to do the thing here}", () => {
+it("${1:should be able to do the thing here}", function() => {
   ${0://assertion statements here e.g. chai.expect('A STRING!').to.exist;}
 });
 ]]></content>  

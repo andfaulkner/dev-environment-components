@@ -1,0 +1,8 @@
+<snippet>
+  <description>Find a component by the component's class or fn name</description>
+<content><![CDATA[
+${1/.+/const /}${1:componentName}${1/.+/ = /}${2:renderedContainingComponent}.find('${3:ComponentNameMustStartWithCap}');${0}
+]]></content>  
+  <tabTrigger>enz_find_by_rct_el</tabTrigger>
+  <scope>source.js, source.ts, source.jsx, source.tsx</scope>
+</snippet>

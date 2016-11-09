@@ -1,0 +1,8 @@
+<snippet>
+  <description>import mobx - all main functions </description>
+<content><![CDATA[
+import { observable, computed, autorun, action } from 'mobx';${0}
+]]></content>  
+  <tabTrigger>imp_mobx</tabTrigger>
+  <scope>source.js, source.ts, source.jsx, source.tsx</scope>
+</snippet>

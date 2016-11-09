@@ -1,0 +1,8 @@
+<snippet>
+  <description>Capitalize text</description>
+<content><![CDATA[
+text-transform: capitalize;
+]]></content>  
+  <tabTrigger>font_capitalize</tabTrigger>
+  <scope>source.css, source.postcss, source.scss</scope>
+</snippet>

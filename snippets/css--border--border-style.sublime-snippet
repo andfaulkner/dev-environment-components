@@ -1,0 +1,8 @@
+<snippet>
+  <description>Set el's border style. E.g. solid, dotted, dashed, double.</description>
+<content><![CDATA[
+border-style: ${0:solid; /**| dotted | double | dashed | hidden | groove | inset | outset | ridge | none */}
+]]></content>  
+  <tabTrigger>css_border_style</tabTrigger>
+  <scope>source.css, source.postcss, source.scss</scope>
+</snippet>
