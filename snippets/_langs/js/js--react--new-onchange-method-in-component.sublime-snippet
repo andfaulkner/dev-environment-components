@@ -1,0 +1,11 @@
+<snippet>
+  <description>onChange fn in React component. Called by eg FormControl, DatePicker</description>
+<content><![CDATA[
+onChange${1:MenuItem} = (event: React.FormEvent): void => {
+    const ${2:receivedValue} = event.target['value'];
+    ${0}
+}
+]]></content>  
+  <tabTrigger>rct_onchange</tabTrigger>
+  <scope>source.js, source.ts, source.jsx, source.tsx</scope>
+</snippet>

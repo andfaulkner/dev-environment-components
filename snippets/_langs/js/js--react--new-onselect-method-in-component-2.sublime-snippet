@@ -1,0 +1,10 @@
+<snippet>
+  <description>Example onSelect method in React container component</description>
+<content><![CDATA[
+onSelect${1:MenuItem} = (selIdx: number, event): void => {
+    ${0}
+}
+]]></content>  
+  <tabTrigger>rct_method_onselect</tabTrigger>
+  <scope>source.js, source.ts, source.jsx, source.tsx</scope>
+</snippet>

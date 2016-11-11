@@ -1,0 +1,8 @@
+<snippet>
+  <description>Round a number to the nearest integer</description>
+<content><![CDATA[
+Math.round(${1:1.532})${0:;}
+]]></content>  
+  <tabTrigger>math_round</tabTrigger>
+  <scope>source.js, source.ts, source.jsx, source.tsx</scope>
+</snippet>

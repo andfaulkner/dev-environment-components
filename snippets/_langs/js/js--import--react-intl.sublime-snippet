@@ -1,0 +1,8 @@
+<snippet>
+  <description>Import react-intl module</description>
+<content><![CDATA[
+import { FormattedMessage, defineMessages } from 'react-intl';
+]]></content>  
+  <tabTrigger>imp_rct_intl</tabTrigger>
+  <scope>source.js, source.ts, source.jsx, source.tsx</scope>
+</snippet>

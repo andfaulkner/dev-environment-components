@@ -1,0 +1,8 @@
+<snippet>
+  <description>Log header comment w/ 'COMPONENTS' centered + emphasized</description>
+<content><![CDATA[
+//****************************************** COMPONENTS *******************************************/
+]]></content>  
+  <tabTrigger>hdc</tabTrigger>
+  <scope>source.js, source.ts, source.jsx, source.tsx</scope>
+</snippet>

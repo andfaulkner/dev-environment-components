@@ -1,0 +1,12 @@
+<snippet>
+  <description>Create a list of React elements from a list of data</description>
+<content><![CDATA[
+{
+    ${1:["first", "second"]}.map((${2:item}) => (
+        ${0:<li>{${2}\}</li>}
+    ))
+}
+]]></content>  
+  <tabTrigger>rct_arr_of_elems</tabTrigger>
+  <scope>source.js, source.ts, source.jsx, source.tsx</scope>
+</snippet>

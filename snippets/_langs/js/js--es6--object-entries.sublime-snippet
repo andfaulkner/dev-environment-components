@@ -1,0 +1,8 @@
+<snippet>
+  <description>Ret arr of obj prop key-val arrs [['k', 'v'], ['k2', 'v2']]</description>
+<content><![CDATA[
+Object.entries(${1:someObject});${0}
+]]></content>  
+  <tabTrigger>obj_entries</tabTrigger>
+  <scope>source.js, source.ts, source.jsx, source.tsx</scope>
+</snippet>

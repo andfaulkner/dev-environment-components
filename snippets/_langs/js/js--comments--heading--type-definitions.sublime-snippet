@@ -1,0 +1,8 @@
+<snippet>
+  <description>Log header comment w/ 'TYPE DEFINITIONS' centered + emphasized</description>
+<content><![CDATA[
+//*************************************** TYPE DEFINITIONS ****************************************/
+]]></content>  
+  <tabTrigger>hdtype</tabTrigger>
+  <scope>source.js, source.ts, source.jsx, source.tsx</scope>
+</snippet>

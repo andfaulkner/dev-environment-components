@@ -28,6 +28,9 @@ alias nrdbp="npm run devops -- build production"
 alias nrddep="npm run devops -- docker dockerhub"
 alias nrdti="npm run devops -- typings install"
 
+alias imgen="script/imgen/imgen"
+alias imgenmod="script/imgen/imgen create-module"
+
 alias ni="npm install"
 
 ############################### PROJECT CONVENIENCE FUNCTIONS ############################## 
