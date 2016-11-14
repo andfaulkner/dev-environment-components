@@ -20,6 +20,8 @@ alias gl=" git log"
 alias g_geturl_origin="echo '======'; echo 'origin'; echo '======'; git remote get-url origin"
 alias g_seturl_origin="git remote set-url origin" #url of repo here
 
+alias g_master="git checkout master"
+
 #alias g_curbr="git rev-parse --abbrev-ref HEAD"
 alias g_curbr="git status | head -1 | awk '{print \$3}'"
 #alias g_curbr="git status | head -1 | awk '{print \$3}'"
