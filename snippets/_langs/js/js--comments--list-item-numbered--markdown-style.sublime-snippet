@@ -1,0 +1,10 @@
+<snippet>
+  <description>Create a numbered list item</description>
+<content><![CDATA[
+// ${1:1}.   ${2:Text of the list item here}
+//
+${0}
+]]></content>  
+  <tabTrigger>list_item_numbered</tabTrigger>
+  <scope>source.js, source.ts, source.jsx, source.tsx</scope>
+</snippet>

@@ -1,0 +1,8 @@
+<snippet>
+  <description>import mobx-react library</description>
+<content><![CDATA[
+import { observer, inject } from 'mobx-react';
+]]></content>  
+  <tabTrigger>imp_mobx_react</tabTrigger>
+  <scope>source.js, source.ts, source.jsx, source.tsx</scope>
+</snippet>
