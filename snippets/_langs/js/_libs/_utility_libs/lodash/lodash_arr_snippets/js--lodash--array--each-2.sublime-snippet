@@ -1,10 +1,10 @@
 <snippet>
-  <description>Run fn on each item in arr, starting at leftmost (1st) val. Ret orig arr.</description>
+  <description>Run fn on each item in arr. Starts @ leftmost (1st) val. Ret orig arr</description>
 <content><![CDATA[
 _.forEach(${1:['some', 'arr']}, (${2:item, index, origArr}) => {
   ${3://do things with item here}
 });${0}
 ]]></content>  
-  <tabTrigger>_arr_each</tabTrigger>
+  <tabTrigger>_arr_foreach</tabTrigger>
   <scope>source.js, source.ts, source.jsx, source.tsx</scope>
 </snippet>

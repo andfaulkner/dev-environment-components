@@ -86,6 +86,7 @@ alias murdernode='ps aux | grep "gulp\|node\|npm" | grep -v "atom" | awk "{print
 
 alias ns="nukenodesrv; npm start"
 alias nun="nukenode"
+alias nu="nukenode"
 alias anynode='ps aux | ack node'
 
 alias __slicesenerr_slicer="sed 's/     at/\n          at/g' | \
