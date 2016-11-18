@@ -1,0 +1,9 @@
+<snippet>
+  <description>list item containing a link</description>
+<content><![CDATA[
+*   [${2:title}](${1:url})
+    *   ${0:Description}
+]]></content>  
+  <tabTrigger>listlink</tabTrigger>
+  <scope>text.html.markdown</scope>
+</snippet>

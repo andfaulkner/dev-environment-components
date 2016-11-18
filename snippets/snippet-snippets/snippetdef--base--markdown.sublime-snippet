@@ -1,0 +1,15 @@
+<snippet>
+  <description>Skeleton for a markdown snippet</description>
+<content><![CDATA[
+<snippet>
+  <description>${2:description here}</description>
+<content><![CDATA[
+${3:content here}
+]${3/.*//}]></content>  
+  <tabTrigger>${1:triggering-text}</tabTrigger>
+  <scope>text.html.markdown, text.md, text.markdown</scope>
+</snippet>
+]]></content>
+  <tabTrigger>snip_markdown</tabTrigger>
+  <scope>text.xml</scope>
+</snippet>
