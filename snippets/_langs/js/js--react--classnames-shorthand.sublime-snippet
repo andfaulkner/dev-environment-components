@@ -1,0 +1,8 @@
+<snippet>
+  <description>classNames shorthand</description>
+<content><![CDATA[
+{classNames(${0})}
+]]></content>  
+  <tabTrigger>cln</tabTrigger>
+  <scope>source.js, source.ts, source.jsx, source.tsx</scope>
+</snippet>

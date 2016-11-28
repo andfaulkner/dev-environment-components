@@ -1,7 +1,8 @@
 <snippet>
   <description>Arrows: misc</description>
 <content><![CDATA[
-Δ∀⋖⋗⋘⋙➪➭➮➯➱←↑→↓↔↕↖↗↘↙⇰⇱⇲↑↓←↘↙
+Δ∀⋖⋗⋘⋙➪➭➮➯➱←↑→↓↔↕↖↗↘↙⇰⇱⇲↑↓←↘↙⇆⇄⇅⇵⥂⥃⥄⤱⤲⤼⤽⇞⇟⤒⤓⤊⤋⭅⭆⟰⟱↱↴↲↰⤶⤷⤴⤵⥹⥻⇈⇊⬆⬇◀▶▲▼⇱⇲⇠⇡⇢⇣⥙⥘
 ]]></content>  
   <tabTrigger>sym_arrows_misc</tabTrigger>
 </snippet>
+

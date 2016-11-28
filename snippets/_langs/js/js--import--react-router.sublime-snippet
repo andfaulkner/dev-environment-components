@@ -1,0 +1,8 @@
+<snippet>
+  <description>Import react-router</description>
+<content><![CDATA[
+import { Router, Route, hashHistory, browserHistory, Link, IndexRoute, IndexLink } from 'react-router';
+]]></content>  
+  <tabTrigger>imp_react_router</tabTrigger>
+  <scope>source.js, source.ts, source.jsx, source.tsx</scope>
+</snippet>

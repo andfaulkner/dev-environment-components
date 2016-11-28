@@ -1,0 +1,10 @@
+<snippet>
+  <description>Nav tag</description>
+<content><![CDATA[
+<Nav>
+    ${0}
+</Nav>
+]]></content>  
+  <tabTrigger>nav</tabTrigger>
+  <scope>source.js, source.ts, source.jsx, source.tsx</scope>
+</snippet>

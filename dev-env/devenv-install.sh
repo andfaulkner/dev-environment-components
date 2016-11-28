@@ -320,6 +320,9 @@ function mac_setup {
     # get XQuartz window systen - X11
     brew install Caskroom/cask/xquartz
 
+    # install facebook's watchman
+    brew install watchman
+
     unix_setup
 }
 

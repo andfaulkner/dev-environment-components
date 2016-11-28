@@ -1,5 +1,10 @@
 <snippet>
   <description>onClick event</description>
+
+829 matches across 197 files
+
+
+Searching 34452 files for "width-100p" (regex)
 <content><![CDATA[
 \$("${1:selectorForElementThatClickEventIsBoundTo").click((event) => {
   ${0://action that occurs on click}

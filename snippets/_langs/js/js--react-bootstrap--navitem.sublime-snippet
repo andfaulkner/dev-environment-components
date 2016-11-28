@@ -1,0 +1,10 @@
+<snippet>
+  <description>NavItem tag</description>
+<content><![CDATA[
+<NavItem eventKey=${1:"first"}>
+    ${0}
+</NavItem>
+]]></content>  
+  <tabTrigger>navitem</tabTrigger>
+  <scope>source.js, source.ts, source.jsx, source.tsx</scope>
+</snippet>

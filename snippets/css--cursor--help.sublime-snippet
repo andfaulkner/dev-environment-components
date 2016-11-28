@@ -1,0 +1,8 @@
+<snippet>
+  <description>Help cursor (little question mark)</description>
+<content><![CDATA[
+cursor: help${0:;}
+]]></content>  
+  <tabTrigger>cur_help</tabTrigger>
+  <scope>source.css, source.postcss, source.scss</scope>
+</snippet>

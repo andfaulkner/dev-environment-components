@@ -30,6 +30,7 @@ alias nrdti="npm run devops -- typings install"
 
 alias imgen="script/imgen/imgen"
 alias imgenmod="script/imgen/imgen create-module"
+alias imgencanim="script/imgen/imgen create-can-immunize-component"
 
 alias ni="npm install"
 
