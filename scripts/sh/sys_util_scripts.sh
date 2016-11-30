@@ -56,7 +56,7 @@ alias startmysql="sudo service mysql start"
 alias startmysql_mac="mysql.server start"
 alias startmongo="sudo service mongodb start"
 
-VIMPLUGINS=$HOME/.config/sublime-text-3/Packages/User/snippets/dev-env/vim_configs/.vim/bundle
+VIMPLUGINS="$HOME/.config/nvim/bundle/"
 
 #alias list_vimplugins="ls -ao $VIMPLUGINS | sed s/^[^:]*:[^a-zA-Z]*//g"
 alias list_vimplugins="ls $VIMPLUGINS"

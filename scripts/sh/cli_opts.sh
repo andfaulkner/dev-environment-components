@@ -6,6 +6,9 @@ export HISTFILESIZE=100000
 shopt -s histappend
 export PROMPT_COMMAND='history -a; history -c; history -r'
 
+### GROOVY ###
+export GROOVY_HOME=/usr/local/opt/groovy/libexec
+
 ################################################################################
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ JAVA SETTINGS ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 ################################################################################
