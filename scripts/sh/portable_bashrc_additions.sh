@@ -67,7 +67,15 @@ alias go_android_tools="pushd ./; cd $HOME/Library/Android/sdk; ls -ao; echo '';
 alias downloads="pushd ./; cd $HOME/Downloads"
 alias documents="pushd ./; cd $HOME/Documents"
 alias proj="pushd ./; cd $HOME/projects"
+alias goproj="pushd ./; cd $HOME/projects"
+alias goprojects="pushd ./; cd $HOME/projects"
 alias anproj="pushd ./; cd $HOME/projects/android"
+
+alias godocs='pushd ./; cd "$HOME/Documents"'
+alias godownloads='pushd ./; cd "$HOME/Downloads"'
+alias gobinhome='pushd ./; cd "$HOME/bin"'
+
+alias govimsetup='pushd ./; cd "$HOME.config/nvim/"'
 
 ## super-ls
 alias lsa="ls -ao"
