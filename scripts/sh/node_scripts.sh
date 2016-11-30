@@ -8,7 +8,8 @@ export NODE_PATH=/usr/lib/nodejs:/usr/lib/node_modules:/usr/share/javascript:/us
 
 ################################## npm ################################## 
 # GLOBAL INSTALL
-alias nig="npm install -g"
+# alias nig="npm install -g"
+alias nig="yarn global add"
 alias nis="npm install --save"
 alias nus="npm uninstall --save"
 alias nisd="npm install --save-dev"
@@ -194,8 +195,9 @@ alias node_version='echo "$(eval node -v)" > .node-version' # set current versio
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
 [[ -s "$HOME/.avn/bin/avn.sh" ]] && source "$HOME/.avn/bin/avn.sh" # load avn
 
-export NVM_DIR=~/.nvm
-nvm use v6.7.0
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh" # This loads nvm
+#nvm use v6.7.0
 
 alias ember_dep_surge="rm -rf dist; ember build --environment=development; cd dist; cp index.html 200.html; surge" # if site already exists, provide it here 
 
