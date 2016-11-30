@@ -75,6 +75,8 @@ alias godocs='pushd ./; cd "$HOME/Documents"'
 alias godownloads='pushd ./; cd "$HOME/Downloads"'
 alias gobinhome='pushd ./; cd "$HOME/bin"'
 
+alias govimsetup='pushd ./; cd "$HOME.config/nvim/"'
+
 ## super-ls
 alias lsa="ls -ao"
 
