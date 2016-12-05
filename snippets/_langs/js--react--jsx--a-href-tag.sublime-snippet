@@ -1,0 +1,8 @@
+<snippet>
+  <description>ok</description>
+<content><![CDATA[
+<a href=${1:"#"}>${2:Link text or img etc.}</a>
+]]></content>  
+  <tabTrigger><![CDATA[<a]]></tabTrigger>
+  <scope>source.jsx, source.tsx</scope>
+</snippet>

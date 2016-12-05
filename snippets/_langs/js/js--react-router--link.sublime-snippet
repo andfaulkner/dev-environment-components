@@ -2,7 +2,7 @@
   <description>React Router link</description>
 <content><![CDATA[
 <Link className={classNames(
-        ${1:'dark-gray', 'ff-roboto-ss', 'fs-16', 'no-underline', 'no-hover-underline'}
+        ${1:'dark-gray', 'ff-better-helvetica', 'fs-16', 'no-underline', 'no-hover-underline'}
     )}
     to={`${2:/\${linkPath\}}`}
 >${0:Link Text}

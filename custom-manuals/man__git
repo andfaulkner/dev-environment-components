@@ -26,5 +26,8 @@ echo ''
 echo 'TAGS'
 echo ' -- create tag:     git tag new-tag-name'
 echo ' -- remove tag:     git tag -d name-of-tag-to-remove'
+echo ''
+echo 'RENAMING BRANCHES'
+echo ' -- rename a local branch: git branch -m <oldname> <newname>'
 echo '--------------------------------------------------------------------------------------------------------\n'
 

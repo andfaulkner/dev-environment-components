@@ -1,7 +1,7 @@
 <snippet>
   <description>Oft used CSS font style</description>
 <content><![CDATA[
-ff-roboto-ss
+ff-better-helvetica
 ]]></content>  
   <tabTrigger>projcanimmwc_font_roboto</tabTrigger>
 </snippet>
