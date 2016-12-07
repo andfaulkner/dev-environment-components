@@ -70,6 +70,7 @@ alias proj="pushd ./; cd $HOME/projects"
 alias goproj="pushd ./; cd $HOME/projects"
 alias goprojects="pushd ./; cd $HOME/projects"
 alias anproj="pushd ./; cd $HOME/projects/android"
+alias goelectron="pushd ./; cd $HOME/projects/electron"
 
 alias godocs='pushd ./; cd "$HOME/Documents"'
 alias godownloads='pushd ./; cd "$HOME/Downloads"'

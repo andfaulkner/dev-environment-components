@@ -1,0 +1,15 @@
+<snippet>
+  <description>Python snippet skeleton</description>
+<content><![CDATA[
+<snippet>
+  <description>${2:description here}</description>
+<content><![CDATA[
+${3:content here}
+]${3/.*//}]></content>  
+  <tabTrigger>${1:triggering-text}</tabTrigger>
+  <scope>source.python</scope>
+</snippet>
+]]></content>
+  <tabTrigger>snip_py</tabTrigger>
+  <scope>text.xml</scope>
+</snippet>

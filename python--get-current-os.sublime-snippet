@@ -1,0 +1,8 @@
+<snippet>
+  <description>Get name of current OS ('Darwin' or 'Windows'). req: import platform</description>
+<content><![CDATA[
+platform.system()
+]]></content>  
+  <tabTrigger>get_os</tabTrigger>
+  <scope>source.python</scope>
+</snippet>

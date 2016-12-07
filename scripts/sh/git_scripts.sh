@@ -15,7 +15,9 @@ alias g_br="git branch"
 alias gbr="git branch"
 alias gcob="git checkout -b"
 alias gs="git status"
-alias gl=" git log"
+alias gl="git log"
+
+alias gpocur='echo "$(g_curbr)" | xargs git push origin'
 
 alias g_geturl_origin="echo '======'; echo 'origin'; echo '======'; git remote get-url origin"
 alias g_seturl_origin="git remote set-url origin" #url of repo here
@@ -29,6 +31,10 @@ alias g_curbr="git status | head -1 | awk '{print \$3}'"
 #alias g_curbr="git branch | ack '\*' | awk '{print \$2}'"
 alias g_mybranches="git branch | ack 'ITPL.*[a-zA-Z]' --no-color"
 alias g_branchhistory="git for-each-ref --sort=committerdate refs/heads/ --format='%(refname) %(committerdate) %(authorname)' | sed 's/refs\/heads\///g' | awk '{print \$1}' | tail"
+
+alias g_co_lastedited='echo "$(g_branchhistory | tail -n 1)" | xargs git checkout'
+alias g_co_2ndlastedited='echo "$(g_branchhistory | tail -n 2 | rev | tail -n 1 | rev)" | xargs git checkout'
+
 
 alias g_tag_rm="git tag -d"
 alias g_tag_new="git tag"

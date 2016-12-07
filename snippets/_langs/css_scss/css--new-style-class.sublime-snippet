@@ -2,7 +2,7 @@
   <description>Create new style</description>
 <content><![CDATA[
 .${1:style-name} {
-  ${0:style-declaration: style-value;}
+    ${0:style-declaration: style-value;}
 }
 ]]></content>  
   <tabTrigger>.</tabTrigger>

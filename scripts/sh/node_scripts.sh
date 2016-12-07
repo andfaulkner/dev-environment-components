@@ -490,3 +490,5 @@ alias npmreact_deps='cat package.json | ack "react|redux|recompose|jsdom|reselec
 alias twitter="echo 'logging into twitter via birdknife...'; birdknife"
 
 echo "* NodeJS scripts loaded!"
+
+alias electronrun="~/.yarn-cache/.global/node_modules/electron/dist/Electron.app/Contents/MacOS/Electron"

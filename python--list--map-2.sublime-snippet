@@ -1,0 +1,8 @@
+<snippet>
+  <description>Do a 'map': transform each item in the list/array with given fn</description>
+<content><![CDATA[
+${1:new_list} = [${4:${3:list_item} + 'alter item in list/arr here'} for ${3:list_item} in ${2:list_being_iterated}]${0}
+]]></content>  
+  <tabTrigger>list_map</tabTrigger>
+  <scope>source.python</scope>
+</snippet>

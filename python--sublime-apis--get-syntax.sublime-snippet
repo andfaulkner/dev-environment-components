@@ -1,0 +1,8 @@
+<snippet>
+  <description>Get cur file's syntax file eg Packages/Python/Python.sublime-syntax</description>
+<content><![CDATA[
+self.view.settings().get('syntax')
+]]></content>  
+  <tabTrigger>subl_get_current_syntax</tabTrigger>
+  <scope>source.python</scope>
+</snippet>

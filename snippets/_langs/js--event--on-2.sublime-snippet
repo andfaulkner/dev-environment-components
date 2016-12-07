@@ -1,0 +1,8 @@
+<snippet>
+  <description>Create new 'on' event</description>
+<content><![CDATA[
+${1:someEventEmitter}.on('${2:someEvent}', ${3:fnToRunOnEvent});${0}
+]]></content>  
+  <tabTrigger>event_on</tabTrigger>
+  <scope>source.js, source.ts, source.jsx, source.tsx</scope>
+</snippet>

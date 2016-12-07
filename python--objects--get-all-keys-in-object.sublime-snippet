@@ -1,0 +1,8 @@
+<snippet>
+  <description>Get all keys in object. can be "print"ed e.g. print(dir(obj))</description>
+<content><![CDATA[
+dir(${1:some_object})${0}
+]]></content>  
+  <tabTrigger>obj_keys</tabTrigger>
+  <scope>source.python</scope>
+</snippet>
