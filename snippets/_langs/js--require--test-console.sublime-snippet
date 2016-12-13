@@ -1,0 +1,8 @@
+<snippet>
+  <description>require test-console module, for testing terminal output</description>
+<content><![CDATA[
+const { stderr, stdout } = require('test-console');
+]]></content>  
+  <tabTrigger>req_test_console</tabTrigger>
+  <scope>source.js, source.ts, source.jsx, source.tsx</scope>
+</snippet>

@@ -1,6 +1,6 @@
 {
   "rules": {
-    "indent": [1, 2, { "SwitchCase": 1}],
+    "indent": [1, 4, { "SwitchCase": 1}],
     "quotes": [0, "single"],
     "linebreak-style": [2, "unix"],
     "semi": [2, "always"],
@@ -80,7 +80,7 @@
     "no-nested-ternary": 1,
     "no-restricted-syntax": [2, "WithStatement"],
     "no-alert": 1,
-    "comma-dangle": 1
+    "comma-dangle": [0, "always-multiline"]
   },
   "parser": "babel-eslint",
   "env": {

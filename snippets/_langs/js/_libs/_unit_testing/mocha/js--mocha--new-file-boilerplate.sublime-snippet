@@ -1,15 +1,35 @@
 <snippet>
   <description>Skeleton of a new Mocha test file</description>
 <content><![CDATA[
-import { expect } from 'chai';
-import * as sinon from 'sinon';
-import * as mocha from 'mocha';
+// ensure environment knows testing is occurring
+process.env.mocha = true;
 
-describe('${1:Thing that you're going to describe, often a class}', function() {
-  it('${2:can do something you claim here it can do}', function() {
-    ${3:expect(true).to.equal(true);}
+// Store original process.argv
+const oldProcArgs = Object.assign({}, process.argv);
+
+/************************************** THIRD-PARTY IMPORTS ***************************************/
+const { expect } = require('chai');
+const sinon = require('sinon');
+const mocha = require('mocha');
+
+const _ = require('lodash');
+
+const fs = require('fs');
+const path = require('path');
+
+/************************************ IMPORT FILE TO BE TESTED ************************************/
+const ${1:exportFromTestedFile} = require('${2:../../path/to/tested/file}');
+
+/********************************************* TESTS **********************************************/
+describe('${3:Thing that you are testing (often a class, object, or function)}', function() {
+  it('${4:exists}', function() {
+    ${5:expect(true).to.equal(true);}
   });${0}
 });
+
+// Restore original process.argv
+process.argv = Object.assign({}, oldProcArgs);
+
 ]]></content>  
   <tabTrigger>mocha_new_file_boiler</tabTrigger>
   <scope>source.js, source.ts, source.jsx, source.tsx</scope>

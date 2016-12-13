@@ -1,0 +1,8 @@
+<snippet>
+  <description>Require mocha</description>
+<content><![CDATA[
+const mocha = require('mocha');
+]]></content>  
+  <tabTrigger>req_mocha</tabTrigger>
+  <scope>source.js, source.ts, source.jsx, source.tsx</scope>
+</snippet>

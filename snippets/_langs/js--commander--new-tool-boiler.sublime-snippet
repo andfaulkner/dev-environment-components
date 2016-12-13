@@ -1,0 +1,31 @@
+<snippet>
+  <description>Create new commander script</description>
+<content><![CDATA[
+#!/usr/bin/env node
+
+/******************************************** IMPORTS *********************************************/
+const program = require('commander');
+const path = require('path');
+const fs = require('fs');
+const { execFileSync, execSync, spawnSync } = require('child_process');
+
+/******************************************** MAIN APP ********************************************/
+try {
+    program
+        .version('0.0.1')
+        .option('-v, --verbose', 'verbose mode')
+        .option('--silly', 'ultra-verbose mode')
+        .command(${1:'action [mandatoryArg], <optionalArg>', 'action description'}).alias('${2:a}')
+        .parse(process.argv);
+
+/***************************************** ERROR HANDLING *****************************************/
+// output help on error or invalid input
+} catch(err) {
+    console.error(err);
+    program.outputHelp()
+}
+
+]]></content>  
+  <tabTrigger>commander_newfile</tabTrigger>
+  <scope>source.js, source.ts, source.jsx, source.tsx</scope>
+</snippet>

@@ -1,0 +1,8 @@
+<snippet>
+  <description>ELM - import html events - most commonly imported items</description>
+<content><![CDATA[
+import Html.Events exposing (onClick, onInput, onSubmit, onFocus, onKeyUp, onKeyDown, onKeyPress, onClick, onDoubleClick)
+]]></content>  
+  <tabTrigger>imp_htmlevents</tabTrigger>
+  <scope>source.elm</scope>
+</snippet>

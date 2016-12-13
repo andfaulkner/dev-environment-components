@@ -1,0 +1,13 @@
+<snippet>
+  <description>require detect-node, for detecting current environment</description>
+<content><![CDATA[
+const isNode = require('detect-node');
+if (isNode) {
+    // do things
+} else {
+    // do other things, such as alert or console log 
+}
+]]></content>  
+  <tabTrigger>req_detect_node</tabTrigger>
+  <scope>source.js, source.ts, source.jsx, source.tsx</scope>
+</snippet>

@@ -1,0 +1,8 @@
+<snippet>
+  <description>handlebars capitalize helper. Requires handlebars-helpers 2b imported</description>
+<content><![CDATA[
+{{capitalize ${1:thingToCapitalize}}}
+]]></content>  
+  <tabTrigger>capitalize</tabTrigger>
+  <scope>text.html.handlebars</scope>
+</snippet>

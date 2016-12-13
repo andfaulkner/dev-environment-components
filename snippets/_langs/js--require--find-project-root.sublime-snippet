@@ -1,0 +1,10 @@
+<snippet>
+  <description>Require & use module to grab root dir of current project</description>
+<content><![CDATA[
+/************************************* PROJECT ROOT DIR PATH **************************************/
+const findProjectRoot = require('find-project-root');
+const projectRootDir = findProjectRoot(process.cwd(), { maxDepth: 12 });
+]]></content>  
+  <tabTrigger>req_find_project_root</tabTrigger>
+  <scope>source.js, source.ts, source.jsx, source.tsx</scope>
+</snippet>

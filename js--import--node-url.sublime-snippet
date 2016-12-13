@@ -1,0 +1,8 @@
+<snippet>
+  <description>require url module</description>
+<content><![CDATA[
+const url = require('url');
+]]></content>  
+  <tabTrigger>req_url</tabTrigger>
+  <scope>source.js, source.ts, source.jsx, source.tsx</scope>
+</snippet>

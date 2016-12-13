@@ -1,0 +1,8 @@
+<snippet>
+  <description>get name of current platform. Mac is 'darwin'.</description>
+<content><![CDATA[
+process.platform
+]]></content>  
+  <tabTrigger>proc_platform</tabTrigger>
+  <scope>source.js, source.ts, source.jsx, source.tsx</scope>
+</snippet>

@@ -1,0 +1,8 @@
+<snippet>
+  <description>Require chai.expect</description>
+<content><![CDATA[
+const { expect } = require('chai');
+]]></content>  
+  <tabTrigger>req_chaiexpect</tabTrigger>
+  <scope>source.js, source.ts, source.jsx, source.tsx</scope>
+</snippet>

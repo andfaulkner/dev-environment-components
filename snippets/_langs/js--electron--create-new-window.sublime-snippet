@@ -1,0 +1,8 @@
+<snippet>
+  <description>Create new window. req import from electron + earlier def of window</description>
+<content><![CDATA[
+window = new BrowserWindow({ width: ${1:800}, height: ${2:600} });${0}
+]]></content>  
+  <tabTrigger>electron_new_window</tabTrigger>
+  <scope>source.js, source.ts, source.jsx, source.tsx</scope>
+</snippet>

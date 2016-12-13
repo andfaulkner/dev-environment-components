@@ -1,0 +1,8 @@
+<snippet>
+  <description>Import all from Html module</description>
+<content><![CDATA[
+import Html exposing (..)
+]]></content>  
+  <tabTrigger>imp_html</tabTrigger>
+  <scope>source.elm</scope>
+</snippet>

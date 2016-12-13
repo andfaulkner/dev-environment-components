@@ -1,0 +1,8 @@
+<snippet>
+  <description>ELM - import html attributes -- all</description>
+<content><![CDATA[
+import Html.Attributes exposing (..)
+]]></content>  
+  <tabTrigger>imp_htmlattributes</tabTrigger>
+  <scope>source.elm</scope>
+</snippet>

@@ -1,10 +1,10 @@
 <snippet>
   <description>Run fn before 1st test to run in the current context/describe block</description>
 <content><![CDATA[
-before(() => {
-  ${0:// run once before the entire set of tests in the current block run.
+beforeEach(() => {
+  ${0:// run before each test in this block.
 });
 ]]></content>  
-  <tabTrigger>mocha_before</tabTrigger>
+  <tabTrigger>mocha_beforeeach</tabTrigger>
   <scope>source.js, source.ts, source.jsx, source.tsx</scope>
 </snippet>

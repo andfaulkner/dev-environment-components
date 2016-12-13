@@ -1,0 +1,8 @@
+<snippet>
+  <description>create a type definition</description>
+<content><![CDATA[
+${1:nameOfFunction} : ${2:Arg1Type -> Arg2Type -> EtcType} -> ${3:OutputType}
+]]></content>  
+  <tabTrigger>td</tabTrigger>
+  <scope>source.elm</scope>
+</snippet>

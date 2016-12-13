@@ -35,6 +35,10 @@ alias imgencanim="script/imgen/imgen create-can-immunize-component"
 
 alias ni="npm install"
 
+########## YARN ##########
+alias yad="yarn add --dev"
+alias yas="yarn add"
+
 ############################### PROJECT CONVENIENCE FUNCTIONS ############################## 
 alias mds="script/devops build development --clean"
 alias sd="script/devops"
@@ -129,6 +133,10 @@ function slicesenerr {
 #       see     http://www.grymoire.com/unix/sed.html
 #####################################
 
+alias goohritemplate="pushd ./; cd $PROJECTS_DIR/ohri/mhealth-template-webapp"
+alias go_ohritemplate="pushd ./; cd $PROJECTS_DIR/ohri/mhealth-template-webapp"
+alias go_mhealthtemplate="pushd ./; cd $PROJECTS_DIR/ohri/mhealth-template-webapp"
+alias go_templatemhealth="pushd ./; cd $PROJECTS_DIR/ohri/mhealth-template-webapp"
 
 ################################################################################
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ EMBER ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -201,235 +209,16 @@ export NVM_DIR="$HOME/.nvm"
 
 alias ember_dep_surge="rm -rf dist; ember build --environment=development; cd dist; cp index.html 200.html; surge" # if site already exists, provide it here 
 
-function newnode__babel_base {
-  cat > .babelrc <<- BABELCONFIG
-{
-    "presets": ["es2015", "react"]
-}
-BABELCONFIG
-}
 
-function react_setup_for_newnode_project {
-  npm install react redux react-redux react-dom --save
-  npm install 
-  newnode__babel_base "$1"
-
-  cat > webpack.config.js <<- WEBPACKCONFIG
-var config = {
-  context: __dirname + "/BASE_DIRECTORY_FOR_RESOLVING_ENTRY",
-  entry: "ENTRY_POINT_FOR_BUNDLE.js -- OR ['entry1.js', 'entry2.js']",
-  output: {
-    path: __dirname + "",
-    filename: "INSERT_OUTPUT_FILE_NAME.js"
-  },
-  module : {
-    loaders : [
-      {
-        test : /\.jsx?/,
-        include : __dirname,
-        loader : "babel"
-      }
-    ]
-  }
-}
-module.exports = config;
-WEBPACKCONFIG
-
-    mkdir client
-    mkdir server
-}
-
-function newnode_project {
-    echo "Building new NodeJS project with name $1"
-    mkdir $1
-    cd $1
-    npm init $1 -f
-    git init
-    npm install --save lodash jquery
-    npm install --save fs-extra
-    npm install --save moment
-    npm install --save-dev gulp webpack gulp-webpack
-    npm install --save-dev nodemon
-    npm install --save-dev mocha
-    npm install --save-dev gulp-mocha
-    npm install --save-dev chai
-    npm install --save-dev bower
-    npm install --save-dev eslint babel-eslint
-    npm install --save-dev eslint-plugin-react
-
-    newnode__babel_config_base
-
-    touch Gulpfile
-
-    newnode__webpack "$1"
-
-    touch app.js
-    echo "var _ = require('lodash');" > app.js
-
-    echo `node -v` > .node-version
-
-    if [[ -n $2 ]]; then
-        if [[ $2 -eq "react" ]]; then
-            react_setup_for_newnode_project
-        fi
-        if [[ $2 -eq "express" ]]; then
-            npm install --save express
-        fi
-    fi
-    if [[ -n $3 ]]; then
-        if [[ $3 -eq "react" ]]; then
-            react_setup_for_newnode_project
-        fi
-        if [[ $3 -eq "express" ]]; then
-            npm install --save express
-        fi
-    fi
-
-    echo "**/node_modules/**" > .gitignore
-
-    mkdir config
-    mkdir scripts
-    mkdir bin
-    mkdir data
-    mkdir data/migrations
-    mkdir doc
-    
-    newnode__mocha_base_install_in_proj 
-    newnode__postgres_base_install_in_proj "$1"
-
-    if [[ `redis-cli ping` == "PONG" ]]; then echo "Redis running, ready for use in project"; fi
-
-    newnode_default_eslint
-
-    newnode_sublime_project_base
-    open_in_sublime "$1.sublime-project"
-
-    echo "** New NodeJS project created!"
-}
-
-function newnode__postgres_base_install_in_proj {
-    createdb --user postgres $1
-    echo "new database named $1 created"
-}
-
-function newnode__webpack {
-      cat > webpack.config.js <<- WEBPACKCONFIG
-module.exports = {
-  context: __dirname + "/BASE_DIRECTORY_FOR_RESOLVING_ENTRY",
-  entry: "ENTRY_POINT_FOR_BUNDLE.js -- OR ['entry1.js', 'entry2.js']",
-  output: {
-    path: __dirname + "",
-    filename: "INSERT_OUTPUT_FILE_NAME.js"
-  }
-}
-WEBPACKCONFIG
-}
-
-function newnode__mocha_base_install_in_proj {
-    npm install --save-dev mocha chai
-    mocha init test
-    mkdir test
-    mv test/tests.js test/test.js
-    cp "$TEMPLATES_DIR/mochatestbase.js" "$PWD/test/test.js"
-    echo "Mocha test run - ensuring install succeeded:"
-    mocha
-}
-
-function newnode__sublime_project_base {
-    if [[ -n $1 ]]; then
-        cp "$TEMPLATES_DIR/project_name.sublime-project" "$PWD/$1.sublime-project"
-    else
-        cp "$TEMPLATES_DIR/project_name.sublime-project" "$PWD/$(curdir).sublime-project"
-    fi
-}
-
-function open_in_sublime {
-    echo "** opening $1 in sublime text 3"
-    sublime --project "$1"
-}
-
-function newnode__default_eslint {
-    cp "$TEMPLATES_DIR/.eslintrc" "$PWD/.eslintrc"
-    echo "default .eslintrc created!"
-}
-
-function newnode__babel_config_base {
-    cat > .babelrc <<- BABELCONFIG
-{
-	"presets": ["es2015"]
-}
-BABELCONFIG
-}
-
-# CREATE BASIC NODE PROJECT
-function newnode__ultra_basic {
-    mkdir "$1"
-    cd "$1"
-
-    # BASIC FILES
-    newnode__default_eslint "$1"
-    newnode__sublime_project_base "$1"
-    newnode__postgres_base_install_in_proj "$1"
-    newnode__babel_config_base "$1"
-
-    # INITIALIZE PROJECT
-    git init
-    npm init "$1" -f
-
-    # NPM SETUP
-    npm install --save lodash jquery
-    npm install --save fs-extra
-    npm install --save moment
-    npm install --save-dev gulp webpack gulp-webpack
-    npm install --save-dev bower
-    npm install --save-dev nodemon
-    npm install --save-dev eslint babel-eslint
-    npm install --save-dev eslint-plugin-react
-
-    # CREATE DIRECTORY STRUCTURE
-    mkdir app
-    mkdir "test"
-    mkdir scripts
-    touch app.js
-}
+####################################################################################################
+################################### NEW NODE PROJECT GENERATORS ####################################
+####################################################################################################
+source "$SNIPPETS_DIR/scripts/sh/project-generators/node_project_generation_scripts.sh"
 
 alias typescript='find . -name "*.ts" | xargs tsc -w'
 
 # customized REPL. Provides certain preloadingactions as present in repls like irb
 alias irjs='"$SNIPPETS_DIR/dev-env/nodejs/irjs/irjs"'
-
-function newnode_basic_libs {
-    npm init "$1" -f
-    npm install --save lodash jquery moment
-    npm install --save-dev webpack bower nodemon eslint babel-eslint
-}
-
-########### REACT ###########
-function newnode_react_comprehensive {
-    mkdir "$1"
-    cd "$1"
-    newnode__sublime_project_base "$1"
-    newnode__default_eslint "$1"
-    newnode__postgres_base_install_in_proj "$1"
-    newnode__babel_base "$1"
-    newnode__webpack "$1"
-    newnode_basic_libs "$1"
-
-    npm install --save react react-dom  
-    npm install --save classnames
-    npm install --save-dev typescript typings tslint-fix ts-loader
-    npm install --save-dev handlebars handlebars-webpack-plugin handlebars-loader
-    npm install --save-dev webpack 
-    npm install --save-dev
-    npm install --save-dev json-loader 
-    npm install --save-dev style-loader css-loader scss-loader
-    npm install --save-dev eslint-plugin-react react-hot-loader 
-    npm install --save-dev enzyme react-addons-test-utils
-    mkdir app
-    mkdir doc
-    mkdir scripts
-    mkdir config
-}
 
 ########### TYPESCRIPT #############
 function type_install_global {
@@ -450,39 +239,6 @@ function tnis {
     set +o nounset
 }
 
-function type_react_new_component {
-    mkdir app/components/$1
-    touch app/components/$1/$1.css
-cat > app/components/$1/$1.tsx <<- TYPESCRIPT 
-/// <reference path="../../../typings/index.d.ts" />
-
-declare function require(name: string);
-
-import * as _ from 'lodash';
-import * as React from 'react';
-import * as ReactDOM from 'react-dom';
-
-require('./$1.css');
-
-interface $1Props { };
-interface $1State { };
-
-export class $1 extends React.Component<$1Props, $1State> {
-  render() {
-    return (
-      <div>$1</div>
-    );
-  }
-};
-TYPESCRIPT
-}
-
-function type_react_destroy_component {
-    mkdir .bk 2>/dev/null
-    mkdir .bk/components 2>/dev/null
-    cp -rf app/components/$1 .bk/components/
-    rm -rf app/components/$1
-}
 
 alias npmscripts='awk "/scripts/,/}/" package.json | ack -v "\s\s}" | ack -v "\s\s\"scripts\":"'
 alias npmreact_deps='cat package.json | ack "react|redux|recompose|jsdom|reselect|normalizr|enzyme|jest|updeep|reduce-reducers|mobx" | trim'

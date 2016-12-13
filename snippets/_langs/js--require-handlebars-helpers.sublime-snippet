@@ -1,0 +1,10 @@
+<snippet>
+  <description>require handlebars-helpers. Must already have handlebars import.</description>
+<content><![CDATA[
+const handlebarsHelpers = require('handlebars-helpers')({
+    handlebars: Handlebars
+});
+]]></content>  
+  <tabTrigger>req_handlebars_helpers</tabTrigger>
+  <scope>source.js, source.ts, source.jsx, source.tsx</scope>
+</snippet>

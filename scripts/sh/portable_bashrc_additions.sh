@@ -241,3 +241,9 @@ case $- in
 esac
 
 alias vimrc="vim ~/.config/nvim/init.vim"
+
+## open file in sublime text
+function open_in_sublime {
+    echo "** opening $1 in sublime text 3"
+    sublime --project "$1"
+}
