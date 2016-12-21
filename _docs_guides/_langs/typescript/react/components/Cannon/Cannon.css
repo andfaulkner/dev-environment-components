@@ -8,8 +8,8 @@ $barrel_height: 15px;
 :root {
   --centered-gun: {
     position: absolute;
-    top: calc($half - $player_radius);
-    left: calc($half - $player_radius);
+    top: $half - $player_radius;
+    left: $half - $player_radius;
     width: $player_radius;
     height: $barrel_height;
     margin-top: -$barrel_height - 10;
@@ -29,7 +29,7 @@ div#player > div#weapon > div#cannon {
   color: black;
   background-color: black;
   transform: rotate(315deg);
-  margin-top: calc($barrel_height * 2 - 11); /* ensure the gun looks embedded in the "rocket" */
+  margin-top: $barrel_height * 2 - 11); /* ensure the gun looks embedded in the "rocket" */
   z-index: 2;
   background-image: 
     linear-gradient(
@@ -97,7 +97,7 @@ div#player > div#weapon > div#cannon {
 }
 
 div#player > div#weapon > div#cannon:hover {
-  height: calc($barrel_height + 25px);
+  height: $barrel_height + 25px;
   margin-left: 27px;
   margin-top: 12px;
 }

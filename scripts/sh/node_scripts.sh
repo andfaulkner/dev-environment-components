@@ -23,11 +23,11 @@ alias nrnt="export LOG_LEVEL=trace; npm run nodemon"
 alias nrns="export LOG_LEVEL=silly; npm run nodemon"
 alias nrne="export LOG_LEVEL=error; npm run nodemon"
 
-alias nrd="npm run devops --"
-alias nrdbd="npm run devops -- build development"
-alias nrdbp="npm run devops -- build production"
-alias nrddep="npm run devops -- docker dockerhub"
-alias nrdti="npm run devops -- typings install"
+alias nrd="yarn run devops --"
+alias nrdbd="yarn run devops -- build development"
+alias nrdbp="yarn run devops -- build production"
+alias nrddep="yarn run devops -- docker dockerhub"
+alias nrdti="yarn run devops -- typings install"
 
 alias imgen="script/imgen/imgen"
 alias imgenmod="script/imgen/imgen create-module"
@@ -37,6 +37,7 @@ alias ni="npm install"
 
 ########## YARN ##########
 alias yad="yarn add --dev"
+alias yap="yarn add --peer"
 alias yas="yarn add"
 
 ############################### PROJECT CONVENIENCE FUNCTIONS ############################## 
@@ -137,6 +138,7 @@ alias goohritemplate="pushd ./; cd $PROJECTS_DIR/ohri/mhealth-template-webapp"
 alias go_ohritemplate="pushd ./; cd $PROJECTS_DIR/ohri/mhealth-template-webapp"
 alias go_mhealthtemplate="pushd ./; cd $PROJECTS_DIR/ohri/mhealth-template-webapp"
 alias go_templatemhealth="pushd ./; cd $PROJECTS_DIR/ohri/mhealth-template-webapp"
+alias gomhealthtemplate="go_templatemhealth"
 
 ################################################################################
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ EMBER ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

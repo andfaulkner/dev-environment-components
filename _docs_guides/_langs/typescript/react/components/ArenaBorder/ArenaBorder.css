@@ -1,7 +1,7 @@
 div.arena.centered {
   position: absolute;
-  top: calc(50% - 300px);
-  left: calc(50% - 300px);
+  top: 50% - 300px;
+  left: 50% - 300px;
   width: 600px;
   height: 600px;
   border: 2px solid black;

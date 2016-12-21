@@ -1,7 +1,7 @@
 <snippet>
   <description>Import moment module</description>
 <content><![CDATA[
-import moment from 'moment';
+import * as moment from 'moment';
 ]]></content>
   <tabTrigger>impmo</tabTrigger>
   <scope>source.js, source.ts, source.jsx, source.tsx</scope>
