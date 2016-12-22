@@ -1,7 +1,7 @@
 <snippet>
   <description>Basic console.log()</description>
 <content><![CDATA[
-console.log('${1:}');${0}
+console.log(`${1:}`);${0}
 ]]></content>  
   <tabTrigger>clog</tabTrigger>
   <scope>source.js, source.ts, source.jsx, source.tsx</scope>

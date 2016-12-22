@@ -30,3 +30,11 @@ Options available on this inside exported loader module
             return source;
         }
 
+Main webpack config options
+===========================
+output config
+-------------
+### publicPath (output.publicPath)
+*   tells webpack at what URL route the package will be accessible at via the browser
+*   used by file-loader and url-loader. Important for code splitting - look into it again if your 
+    build size gets too large
