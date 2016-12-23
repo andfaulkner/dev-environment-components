@@ -1,0 +1,8 @@
+<snippet>
+  <description>Expect that value/result has a length property above a given val</description>
+<content><![CDATA[
+expect(${1:['some', 'array', 'of', 'vals']}).to.have.length.above(${2:2});${0}
+]]></content>  
+  <tabTrigger>cx_is_longer_than</tabTrigger>
+  <scope>source.js, source.ts, source.jsx, source.tsx</scope>
+</snippet>

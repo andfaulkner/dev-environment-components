@@ -1,0 +1,8 @@
+<snippet>
+  <description>Expect that value/result is null</description>
+<content><![CDATA[
+expect(${1:null}).to.be.null;${0}
+]]></content>  
+  <tabTrigger>cx_is_null</tabTrigger>
+  <scope>source.js, source.ts, source.jsx, source.tsx</scope>
+</snippet>

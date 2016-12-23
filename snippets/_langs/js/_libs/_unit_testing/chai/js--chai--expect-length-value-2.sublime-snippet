@@ -1,0 +1,8 @@
+<snippet>
+  <description>Expect that value/result has a given length</description>
+<content><![CDATA[
+expect(${1:['some', 'array', 'of', 'vals']}).to.have.lengthOf(${2:4});${0}
+]]></content>  
+  <tabTrigger>cx_length_of</tabTrigger>
+  <scope>source.js, source.ts, source.jsx, source.tsx</scope>
+</snippet>

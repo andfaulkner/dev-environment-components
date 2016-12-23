@@ -1,0 +1,8 @@
+<snippet>
+  <description>Expect that target matches a given regex</description>
+<content><![CDATA[
+expect(${1:meeka the fur machine}).to.match(/machine\$/);${0}
+]]></content>  
+  <tabTrigger>cx_match_regex</tabTrigger>
+  <scope>source.js, source.ts, source.jsx, source.tsx</scope>
+</snippet>

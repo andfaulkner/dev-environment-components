@@ -3,6 +3,6 @@
 <content><![CDATA[
 expect(${1:'this is truthy'}).to.be.ok;${0}
 ]]></content>  
-  <tabTrigger>chaie_is_truthy</tabTrigger>
+  <tabTrigger>cx_is_truthy</tabTrigger>
   <scope>source.js, source.ts, source.jsx, source.tsx</scope>
 </snippet>

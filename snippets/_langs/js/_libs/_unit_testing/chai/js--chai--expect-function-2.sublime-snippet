@@ -1,0 +1,8 @@
+<snippet>
+  <description>Expect the variable to be a function</description>
+<content><![CDATA[
+expect(${1:some_variable}).to.be.a('function');${0}
+]]></content>  
+  <tabTrigger>cx_isfunc</tabTrigger>
+  <scope>source.js, source.ts, source.jsx, source.tsx</scope>
+</snippet>

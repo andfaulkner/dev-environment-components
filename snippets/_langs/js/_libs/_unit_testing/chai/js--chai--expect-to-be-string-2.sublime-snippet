@@ -1,0 +1,8 @@
+<snippet>
+  <description>Expect that value/result is a string</description>
+<content><![CDATA[
+expect(${1:'test'}).to.be.a('string');${0}
+]]></content>  
+  <tabTrigger>cx_is_string</tabTrigger>
+  <scope>source.js, source.ts, source.jsx, source.tsx</scope>
+</snippet>

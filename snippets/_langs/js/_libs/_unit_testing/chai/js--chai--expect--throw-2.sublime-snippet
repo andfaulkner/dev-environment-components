@@ -1,0 +1,8 @@
+<snippet>
+  <description>Expect function to throw an Error</description>
+<content><![CDATA[
+expect(${1:_.partial(logFactory, {\})}).to.throw(${2:ErrorTypeEg_TypeError});${0}
+]]></content>  
+  <tabTrigger>cx_throw</tabTrigger>
+  <scope>source.js, source.ts, source.jsx, source.tsx</scope>
+</snippet>
