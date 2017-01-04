@@ -1,7 +1,7 @@
 <snippet>
     <!-- Regex to find all instances of "p." not preceded by a character -->
     <content><![CDATA[
-//************************ GLOBAL NODE MODULES ***********************//
+//************************************* GLOBAL NODE MODULES ***************************************/
 //Fix root path referenced by require
 require('rootpath')();
 
@@ -12,12 +12,12 @@ global.__projrootdir = path.join(process.mainModule.filename, '..');
 //Ensure infinite number of concurrent sockets can be open
 var http = require('http');
 http.globalAgent.maxSockets = Infinity;
-//********************************************************************//
 
+//******************************************** CONFIG *********************************************/
 // get app settings
 var config = require('config/default');
 
-//**************************** ECMA6 SETUP ****************************//
+//***************************************** ECMA6 SETUP *******************************************/
 //ECMA 6 polyfill modules
 require('harmonize')(); // ensure es6 works
 require('babel/register');
@@ -27,9 +27,8 @@ require('babel/polyfill');
 Object.getPrototypeOf.toString = function objToStringPolyfill() {
     return Object.toString();
 };
-//********************************************************************//
 
-//**************************** ERROR HANDLING ****************************//
+//**************************************** ERROR HANDLING *****************************************/
 if (process.env.NODE_ENV !== 'production') {
     Error.stackTraceLimit = Infinity;
     require('trace'); // active long stack trace
@@ -37,14 +36,11 @@ if (process.env.NODE_ENV !== 'production') {
 }
 
 //** Error handling module(s) here **/
-${1}
 //var log = require('server/debug/winston-logger');
 //require('server/debug/uncaught-error-handler');
-//********************************************************************//
 
-//******************************* SERVER *******************************//
+//******************************************** SERVER *********************************************/
 var express = require('express');
-
 
 var app = express()
 
@@ -53,14 +49,13 @@ var app = express()
     ${1:.use('/api', restAPIRouter)}
 
     //Build Express app itself (loads & runs a constructor module), serve over web
-    .listen(config.server.port, function startServer() {
-        log.info('Server running: http://127.0.0.1:' + config.server.port + '/');
+    .listen(config.port.server, function startServer() {
+        log.info('Server running: http://127.0.0.1:' + config.port.server + '/');
         log.info('Server process id (pid): ' + process.pid); //emit process ID
         return log.info('Wow. So server. Very running. Much bootup success. Such win.');
     });
-//**********************************************************************//
 
-${2}
+${0}
 //Remaining requirements for this to work:
 // -- npm install rootpath babel harmonize trace clarify express --save
 // -- config/default.js file that emits an object literal with props:
@@ -72,9 +67,6 @@ ${2}
 //      -- probably Gulp and/or Webpack
 // -- add a logging module - tie it to variable 'log'.
 ]]></content>
-    <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
     <tabTrigger>express_server_base_ecma6</tabTrigger>
-    <!-- Optional: Set a scope to limit where the snippet will trigger -->
-    <!-- <scope>source.python</scope> -->
+    <scope>source.js, source.ts, source.jsx, source.tsx</scope>
 </snippet>
-

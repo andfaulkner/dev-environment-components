@@ -10,6 +10,6 @@ ${2:middlewaresAndRoutesHere}
 
 app.listen(${1:port});
 ]]></content>
-	<tabTrigger>exp_mid_boiler</tabTrigger>
+	<tabTrigger>expr_mid_boiler</tabTrigger>
 	<scope>source.js, source.ts, source.jsx, source.tsx</scope>
 </snippet>

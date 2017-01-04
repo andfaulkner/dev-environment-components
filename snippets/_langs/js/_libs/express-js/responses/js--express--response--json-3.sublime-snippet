@@ -1,0 +1,8 @@
+<snippet>
+  <description>Response: pass a json back to the client</description>
+<content><![CDATA[
+res.json(${1:{ key1: 'value1', key2: 'val2', etc: 'etcetc' \}});${0}
+]]></content>  
+  <tabTrigger>expr_resjson</tabTrigger>
+  <scope>source.js, source.ts, source.jsx, source.tsx</scope>
+</snippet>

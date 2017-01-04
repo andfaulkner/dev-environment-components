@@ -1,0 +1,13 @@
+<snippet>
+  <description>Create new platform-specific code block</description>
+<content><![CDATA[
+{
+    Platform.select({
+        ios: ${1:'ios code here, even JSX tags'},
+        android: ${2:'android code here, even JSX tags'},
+    })
+}
+]]></content>  
+  <tabTrigger>rena_platform_select</tabTrigger>
+  <scope>source.js, source.ts, source.jsx, source.tsx</scope>
+</snippet>

@@ -1,0 +1,8 @@
+<snippet>
+  <description>Import crypto library</description>
+<content><![CDATA[
+import * as crypto from 'crypto';
+]]></content>  
+  <tabTrigger>imp_crypto</tabTrigger>
+  <scope>source.js, source.ts, source.jsx, source.tsx</scope>
+</snippet>

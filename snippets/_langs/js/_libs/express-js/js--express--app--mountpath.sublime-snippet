@@ -1,0 +1,8 @@
+<snippet>
+	<description>Show path pattern the current subapp (Router object) is mounted on</description>
+	<content><![CDATA[
+app.mountpath
+]]></content>
+	<tabTrigger>expr_app_mountpath</tabTrigger>
+	<scope>source.js, source.ts, source.jsx, source.tsx</scope>
+</snippet>

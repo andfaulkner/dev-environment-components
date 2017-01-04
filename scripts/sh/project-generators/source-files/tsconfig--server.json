@@ -1,0 +1,42 @@
+{
+    "compilerOptions": {
+        "module": "es6",
+        "target": "es5",
+        "moduleResolution": "node",
+        "allowSyntheticDefaultImports": true,
+        "experimentalDecorators": true,
+        "outDir": "../../build",
+        "noImplicitAny": false,
+        "emitDecoratorMetadata": true,
+        "removeComments": false,
+        "preserveConstEnums": true,
+        "sourceMap": true,
+        "allowJs": true,
+        "jsx": "react",
+        "strictNullChecks": false,
+        "pretty": true,
+        "lib": ["es2015", "dom"],
+        "typeRoots": ["../typings"],
+        "types": []
+    },
+    "exclude": [
+        "*.js",
+        "*.json",
+        ".git",
+        ".eslintrc",
+        ".babelrc",
+        ".node-version",
+        "../../typings/globals/colors/**",
+        "./node_modules/@types/node/index.d.ts",
+        "./node_modules/@types/react/index.d.ts",
+        "./node_modules/@types/chai/index.d.ts",
+        "./node_modules/@types/**"
+    ],
+    "include": [
+        "./**/*.ts",
+        "./**/*.tsx",
+        "../../typings/index.d.ts",
+        "../../typings/custom/client-main.d.ts",
+        "../../node_modules/mobx/lib/mobx.d.ts"
+    ]
+}

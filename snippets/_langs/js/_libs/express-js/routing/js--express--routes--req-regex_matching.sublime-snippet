@@ -6,6 +6,6 @@ app.${1:get||post||put||delete}(/${2:regex}/, (req, res) => {
   // Has access to val of ${3:param} via req.params.${3:param}}
 });
 ]]></content>  
-  <tabTrigger>exp_route_regex</tabTrigger>
+  <tabTrigger>expr_route_regex</tabTrigger>
   <scope>source.js, source.ts, source.jsx, source.tsx</scope>
 </snippet>

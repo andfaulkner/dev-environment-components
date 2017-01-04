@@ -1,5 +1,5 @@
 <snippet>
-  <description>Skeleton of a new Mocha test file</description>
+  <description>Skeleton of a new Mocha test file - old version</description>
 <content><![CDATA[
 // ensure environment knows testing is occurring
 process.env.mocha = true;
@@ -31,6 +31,6 @@ describe('${3:Thing that you are testing (often a class, object, or function)}',
 process.argv = Object.assign({}, oldProcArgs);
 
 ]]></content>  
-  <tabTrigger>mocha_new_file_boiler</tabTrigger>
+  <tabTrigger>mocha_zOLD_new_file_boiler</tabTrigger>
   <scope>source.js, source.ts, source.jsx, source.tsx</scope>
 </snippet>

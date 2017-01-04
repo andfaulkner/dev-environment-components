@@ -1,8 +1,8 @@
 <snippet>
   <description>Get the type of request that activated the route: 'GET', 'POST', etc.</description>
 <content><![CDATA[
-${1:req}.method${0:;}
+req.method
 ]]></content>  
-  <tabTrigger>exp_req_method</tabTrigger>
+  <tabTrigger>expr_req_method</tabTrigger>
   <scope>source.js, source.ts, source.jsx, source.tsx</scope>
 </snippet>

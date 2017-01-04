@@ -3,7 +3,7 @@
 <content><![CDATA[
 if (err) {
   console.error(${1:`Error occurred: \${err\}`});
-  throw err;
+  ${2:next(err); // throwing is really bad in a callback, it just gets swallowed};
 }${0}
 ]]></content>  
   <tabTrigger>node_err_cb</tabTrigger>

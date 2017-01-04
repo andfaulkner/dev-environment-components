@@ -5,6 +5,6 @@ app.set('views', path.join(__dirname, ${1:'dir/to/get/view/files/from__eg__clien
 app.set('view engine', 'jsx');
 app.engine('jsx', require('express-react-views').createEngine());${0}
 ]]></content>  
-  <tabTrigger>exp_view_eng_react</tabTrigger>
+  <tabTrigger>expr_view_eng_react</tabTrigger>
   <scope>source.js, source.ts, source.jsx, source.tsx</scope>
 </snippet>

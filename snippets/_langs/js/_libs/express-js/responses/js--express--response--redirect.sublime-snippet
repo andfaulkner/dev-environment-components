@@ -1,0 +1,8 @@
+<snippet>
+  <description>Response: redirect user to another route</description>
+<content><![CDATA[
+res.redirect(${1:'/'});${0}
+]]></content>  
+  <tabTrigger>expr_res_redirect</tabTrigger>
+  <scope>source.js, source.ts, source.jsx, source.tsx</scope>
+</snippet>

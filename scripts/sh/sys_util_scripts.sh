@@ -51,10 +51,24 @@ alias clean_mega_level5='nukeruby; nukenode; nukelisp; nukepython; nukemisc_util
 # will kill all scripting languages & minor utils; nginx; postgres, mongodb, and mysql; and docker; chrome and firefox; and sublime
 alias clean_mega_level6='nukeruby; nukenode; nukelisp; nukepython; nukemisc_utils; nukedocker; nukepostgres; nukemysql; nukechrome; nukefirefox; nukesublime; nukenginx; nukemongo'
 
+# database launchers
 alias startpostgres="sudo service postgresql-9.4 start"
 alias startmysql="sudo service mysql start"
 alias startmysql_mac="mysql.server start"
 alias startmongo="sudo service mongodb start"
+
+__CUR_FILE_NAME__=' sys_util_scripts.sh '
+
+# list global aliases defined in scripts automatically loaded on terminal launch (as well as on opening of new terminal windows and tabs)
+alias aliases_node="echo ''; echo '*************************'; echo $__CUR_FILE_NAME__; echo '*************************'; cat \"$SNIPPETS_DIR/scripts/sh/node_scripts.sh\" | ack \"(?<=alias\s)[^=]*=(?=[\\\"\'].*[\\\"\'].*\$)\""
+alias aliases_sysutil="echo ''; echo '*************************'; echo $__CUR_FILE_NAME__; echo '*************************'; cat \"$SNIPPETS_DIR/scripts/sh/sys_util_scripts.sh\" | ack \"(?<=alias\s)[^=]*=(?=[\\\"\'].*[\\\"\'].*\$)\""
+alias aliases_search="echo ''; echo '*************************'; echo $__CUR_FILE_NAME__; echo '*************************'; cat \"$SNIPPETS_DIR/scripts/sh/search_scripts.sh\" | ack \"(?<=alias\s)[^=]*=(?=[\\\"\'].*[\\\"\'].*\$)\""
+alias aliases_web="echo ''; echo '*************************'; echo $__CUR_FILE_NAME__; echo '*************************'; cat \"$SNIPPETS_DIR/scripts/sh/web_scripts.sh\" | ack \"(?<=alias\s)[^=]*=(?=[\\\"\'].*[\\\"\'].*\$)\""
+alias aliases_portable_bashrc_additions="echo ''; echo '*************************'; echo $__CUR_FILE_NAME__; echo '*************************'; echo $__CUR_FILE_NAME__; cat \"$SNIPPETS_DIR/scripts/sh/portable_bashrc_additions.sh\" | ack \"(?<=alias\s)[^=]*=(?=[\\\"\'].*[\\\"\'].*\$)\""
+alias aliases_ruby="echo ''; echo '*************************'; echo $__CUR_FILE_NAME__; echo '*************************'; cat \"$SNIPPETS_DIR/scripts/sh/ruby_scripts.sh\" | ack \"(?<=alias\s)[^=]*=(?=[\\\"\'].*[\\\"\'].*\$)\""
+alias aliases_python="echo ''; echo '*************************'; echo $__CUR_FILE_NAME__; echo '*************************'; cat \"$SNIPPETS_DIR/scripts/sh/python_scripts.sh\" | ack \"(?<=alias\s)[^=]*=(?=[\\\"\'].*[\\\"\'].*\$)\""
+alias aliases_elixir="echo ''; echo '*************************'; echo $__CUR_FILE_NAME__; echo '*************************'; cat \"$SNIPPETS_DIR/scripts/sh/elixir_scripts.sh\" | ack \"(?<=alias\s)[^=]*=(?=[\\\"\'].*[\\\"\'].*\$)\""
+
 
 VIMPLUGINS="$HOME/.config/nvim/bundle/"
 

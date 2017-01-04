@@ -1,0 +1,8 @@
+<snippet>
+  <description>Set up app root component</description>
+<content><![CDATA[
+AppRegistry.registerComponent('${1:Bananas}', () => ${1:Bananas});
+]]></content>  
+  <tabTrigger>rena_set_app_registry</tabTrigger>
+  <scope>source.js, source.ts, source.jsx, source.tsx</scope>
+</snippet>

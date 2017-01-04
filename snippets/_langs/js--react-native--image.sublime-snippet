@@ -1,0 +1,8 @@
+<snippet>
+  <description>Create new React Native image</description>
+<content><![CDATA[
+<Image source={${1:'http://example.com/src/image.jpg'}} style={{width: ${2:93}, height: ${3:90}}}/>
+]]></content>
+  <tabTrigger>rena_image</tabTrigger>
+  <scope>source.js, source.ts, source.jsx, source.tsx</scope>
+</snippet>

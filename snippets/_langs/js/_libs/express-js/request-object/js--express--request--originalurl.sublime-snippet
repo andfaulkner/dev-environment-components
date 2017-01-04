@@ -1,8 +1,8 @@
 <snippet>
   <description>Get the original URL the request was sent to (relative: excludes host)</description>
 <content><![CDATA[
-${1:req}.originalUrl${0:;}
+req.originalUrl
 ]]></content>  
-  <tabTrigger>exp_req_origurl</tabTrigger>
+  <tabTrigger>expr_req_origurl</tabTrigger>
   <scope>source.js, source.ts, source.jsx, source.tsx</scope>
 </snippet>

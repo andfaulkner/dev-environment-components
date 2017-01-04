@@ -1,0 +1,26 @@
+<snippet>
+  <description>New React Native component boilerplate</description>
+<content><![CDATA[
+//************************************ THIRD-PARTY COMPONENTS *************************************/
+import * as React from 'react';
+import { AppRegistry, Image, View, Text, Platform, StyleSheet, Button  } from 'react-native';
+import { ActivityIndicator, Switch, ListView, MapView, Picker, Modal   } from 'react-native';
+import { Slider, StatusBar, TextInput, ScrollView, Alert, AsyncStorage } from 'react-native';
+
+//*************************************** PROJECT IMPORTS *****************************************/
+
+//****************************************** COMPONENT ********************************************/
+export class ${TM_FILENAME/([a-zA-Z])?([a-zA-Z0-9]+)?[-_]?[-_]?([a-zA-Z])?([a-zA-Z0-9]+)?[-_]?[-_]?([a-zA-Z])?([a-zA-Z0-9]+)?[-_]?[-_]?([a-zA-Z])?([a-zA-Z0-9]+)?[-_]?[-_]?([a-zA-Z])?([a-zA-Z0-9]+)?[-_]?[-_]?([a-zA-Z])?([a-zA-Z0-9]+)?\..*/\U$1\L$2\U$3\L$4\U$5\L$6\U$7\L$8\U$9\L$10\U$11\L$12/g} extends React.Component {
+    render() {
+        return (
+            <View style={{position: ${1:'relative'|'absolute'}, flex: ${2:10}${3/.+/, /}${3:flexDirection: 'column'|'row'}}}>
+                ${0}
+            </View>
+        );
+    }
+}
+
+]]></content>  
+  <tabTrigger>rena_new_file_boiler</tabTrigger>
+  <scope>source.js, source.ts, source.jsx, source.tsx</scope>
+</snippet>

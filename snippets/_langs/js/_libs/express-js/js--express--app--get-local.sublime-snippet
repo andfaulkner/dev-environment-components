@@ -1,0 +1,8 @@
+<snippet>
+	<description>Access 'local' value made accessible to view templates (app.locals)</description>
+	<content><![CDATA[
+app.locals.${0:clientAccessibleProp}
+]]></content>
+	<tabTrigger>expr_app_getlocal</tabTrigger>
+	<scope>source.js, source.ts, source.jsx, source.tsx</scope>
+</snippet>

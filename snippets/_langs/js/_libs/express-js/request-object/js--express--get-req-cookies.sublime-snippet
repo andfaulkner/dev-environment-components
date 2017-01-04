@@ -3,6 +3,6 @@
 <content><![CDATA[
 req.cookies
 ]]></content>
-  <tabTrigger>exp_req_cookies</tabTrigger>
+  <tabTrigger>expr_req_cookies</tabTrigger>
   <scope>source.js, source.ts, source.jsx, source.tsx</scope>
 </snippet>

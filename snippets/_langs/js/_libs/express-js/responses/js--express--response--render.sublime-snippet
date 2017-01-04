@@ -5,6 +5,6 @@ res.render(${1:'file_to_render_in_view_dir_no_ext'}${2/.+/, /}${2:locals__opt_va
   ${0://do something with the 'rendered' data, such as res.send(html);}
 });
 ]]></content>
-  <tabTrigger>exp_render</tabTrigger>
+  <tabTrigger>expr_render</tabTrigger>
   <scope>source.js, source.ts, source.jsx, source.tsx</scope>
 </snippet>

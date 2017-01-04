@@ -1,0 +1,8 @@
+<snippet>
+  <description>Get hash of request query params (vals after the URI's "?" e.g. ?key1=val1&k2=v2)</description>
+<content><![CDATA[
+req.query
+]]></content>  
+  <tabTrigger>expr_req_query</tabTrigger>
+  <scope>source.js, source.ts, source.jsx, source.tsx</scope>
+</snippet>

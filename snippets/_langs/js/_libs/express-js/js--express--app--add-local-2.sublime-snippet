@@ -1,0 +1,8 @@
+<snippet>
+	<description>Make value accessible to view templates by adding it to app.locals</description>
+	<content><![CDATA[
+app.locals.${1:myNewClientAccessibleProperty} = ${2:'value of client-accessible property'};
+]]></content>
+	<tabTrigger>expr_app_passvartoview</tabTrigger>
+	<scope>source.js, source.ts, source.jsx, source.tsx</scope>
+</snippet>

@@ -1,0 +1,8 @@
+<snippet>
+  <description>Require app-root-path</description>
+<content><![CDATA[
+const rootPath = require('app-root-path');
+]]></content>  
+  <tabTrigger>req_app_root_path</tabTrigger>
+  <scope>source.js, source.ts, source.jsx, source.tsx</scope>
+</snippet>

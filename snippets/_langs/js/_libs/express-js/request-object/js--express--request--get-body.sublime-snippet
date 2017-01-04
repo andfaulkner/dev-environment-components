@@ -1,0 +1,8 @@
+<snippet>
+  <description>Holds POSTed form data. From bodyParser.urlencoded({extended: false}) midware</description>
+<content><![CDATA[
+req.body
+]]></content>  
+  <tabTrigger>expr_req_form_body</tabTrigger>
+  <scope>source.js, source.ts, source.jsx, source.tsx</scope>
+</snippet>

@@ -1,0 +1,8 @@
+<snippet>
+  <description>Import passport module</description>
+<content><![CDATA[
+import * as passport from 'passport';
+]]></content>  
+  <tabTrigger>imp_passport</tabTrigger>
+  <scope>source.js, source.ts, source.jsx, source.tsx</scope>
+</snippet>

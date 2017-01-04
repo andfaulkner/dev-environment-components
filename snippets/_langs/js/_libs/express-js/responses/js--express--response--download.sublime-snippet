@@ -9,6 +9,6 @@ res.download(${1:'/path/of/file.pdf'}${2/.+/, /}${2:'send_to_user_w_this_name.pd
   ${0:// actions run if successfully sent file to user as dwl. E.g. decrement a dwl counter}
 });
 ]]></content>  
-  <tabTrigger>exp_res_download</tabTrigger>
+  <tabTrigger>expr_res_download</tabTrigger>
   <scope>source.js, source.ts, source.jsx, source.tsx</scope>
 </snippet>

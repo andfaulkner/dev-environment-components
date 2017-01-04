@@ -1,0 +1,8 @@
+<snippet>
+  <description>Create new React Native text</description>
+<content><![CDATA[
+<Text>${1:Text goes here}</Text>${0}
+]]></content>
+  <tabTrigger>rena_text</tabTrigger>
+  <scope>source.js, source.ts, source.jsx, source.tsx</scope>
+</snippet>

@@ -12,7 +12,7 @@
         "sourceMap": true,
         "allowJs": true,
         "pretty": true,
-        "jsx": "preserve"
+        "jsx": "react"
     },
     "exclude": [
         "node_modules",

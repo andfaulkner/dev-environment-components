@@ -84,6 +84,8 @@ alias killnpm="ps axu | grep npm | cut -d' ' -f3 | grep '$' | sudo xargs kill -9
 #kill all node-related processes
 alias bombnode="killnode; killgulp; killnodemon; killnpm"
 
+#overrides the one defined in bashrc_sys_util (snippets/scripts/sh/sys_util_scripts.sh)
+alias nukenode='echo "from node_scripts.sh"; ps aux | ack "node|gulp|npm|nvm|grunt|cordova|mocha|webpack|babel|livereload|pm2" | ack -v "((tsserver)|(typingsInstaller\.js)|([0-9][0-9]\.[0-9][0-9]\sn?vim\s.*))" | awk "{print \$2}" | xargs kill -9; pm2 delete all; pm2 kill'
 alias nukenodesrv="ps aux | grep node | grep -v 'gulp' | awk '{print \$2}' | xargs kill -9"
 alias nukeember="ps aux | grep ember | awk '{print \$2}' | xargs kill -9"
 
@@ -91,11 +93,16 @@ alias murdernode='ps aux | grep "gulp\|node\|npm" | grep -v "atom" | awk "{print
 #alias murdernode='ps aux | grep "gulp\|node\|npm" | grep -v "atom" | cut -d" " -f2 | sudo xargs kill -9'
 #alias murdernode="ps aux | grep '\(gulp\|node\|npm\)' | grep -v 'atom' | awk '{print $2}' | cut -d' ' -f2 | sudo xargs kill -9"
 
-alias ns="nukenodesrv; npm start"
 alias nun="nukenode"
 alias nu="nukenode"
-alias anynode='ps aux | ack node'
+alias ns="nu; npm start"
 
+# view running NodeJS processes
+alias anynode='ps aux | ack node'
+alias pan='anynode'
+
+# TODO Remove iSight-specific elements
+# Clean error output from NodeJS process to be considerably more readable, and to emphasize most essential aspects
 alias __slicesenerr_slicer="sed 's/     at/\n          at/g' | \
                     sed 's/trace=/\n\ntrace=/g'| \
                     sed 's/~\/Projects\/testbed\/testbed-seneca--4//g' | \

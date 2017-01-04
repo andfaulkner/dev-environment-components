@@ -3,6 +3,6 @@
 <content><![CDATA[
 req.${1:nameOfPropToAdd} = ${2:'value to assign to property'};${0}
 ]]></content>  
-  <tabTrigger>exp_mid_add_reqp_rop</tabTrigger>
+  <tabTrigger>expr_mid_add_reqp_rop</tabTrigger>
   <scope>source.js, source.ts, source.jsx, source.tsx</scope>
 </snippet>

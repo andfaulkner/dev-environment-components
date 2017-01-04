@@ -3,6 +3,6 @@
 <content><![CDATA[
 res.locals${0}
 ]]></content>  
-  <tabTrigger>exp_res_locals</tabTrigger>
+  <tabTrigger>expr_res_locals</tabTrigger>
   <scope>source.js, source.ts, source.jsx, source.tsx</scope>
 </snippet>

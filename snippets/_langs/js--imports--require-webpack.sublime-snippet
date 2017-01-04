@@ -1,0 +1,8 @@
+<snippet>
+  <description>Require webpack</description>
+<content><![CDATA[
+const webpack = require('webpack');
+]]></content>  
+  <tabTrigger>req_webpack</tabTrigger>
+  <scope>source.js, source.ts, source.jsx, source.tsx</scope>
+</snippet>

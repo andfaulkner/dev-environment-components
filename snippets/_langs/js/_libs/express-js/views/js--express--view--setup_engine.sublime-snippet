@@ -5,6 +5,6 @@ app.set('views', path.join(__dirname, ${1:'path/to/view/folder'}));
 app.set('view engine', '${2:view_engine_type__eg__jade__handlebars__dust__jsx__mustache__ejs}');
 app.engine('${3:engineType_eg__jsx_dust_html}', ${4:engine_obj_eg__require('express-react-views').createEngine()});${0}
 ]]></content>  
-  <tabTrigger>exp_view_eng_conf</tabTrigger>
+  <tabTrigger>expr_view_eng_conf</tabTrigger>
   <scope>source.js, source.ts, source.jsx, source.tsx</scope>
 </snippet>

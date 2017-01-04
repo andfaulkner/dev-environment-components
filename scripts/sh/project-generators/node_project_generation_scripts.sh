@@ -1,3 +1,5 @@
+echo "Project generation scripts loading..."
+
 ####################################################################################################
 #                                   NODE PROJECT GENERATION SCRIPTS                                #
 ####################################################################################################
@@ -368,69 +370,6 @@ export class $1 extends React.Component<$1Props, $1State> {
 TYPESCRIPT
 }
 
+source "$SNIPPETS_DIR/scripts/sh/project-generators/starterpack_node_webpack_babel_ts.sh"
 
-function starterpack_node_webpack_babel_ts_electron {
-    git init
-    npm init -f
-    ############################### INSTALLATIONS ###############################
-    #### frameworks & essential utils ####
-    yarn add lodash moment bluebird                    # essential libraries
-    yarn add class-transformer                         # OOP tools
-    yarn add electron                                  # electron itself
-    yarn add detect-node isomorphic-fetch              # isomorphic utilties
-    yarn add mad-logs winston                          # logging
-    yarn add deep-freeze-strict seamless-immutable     # immutability
-    
-    #### react ####
-    yarn add react mobx react-mobx                     # react + state store
-    yarn add react-intl react-toastr                   # react components
-
-    #### env config ####
-    yarn add --dev dotenv
-    yarn add --dev pm2
-
-    #### build ####
-    yarn add --dev webpack babel-core sass             # essential build tools
-    yarn add --dev css-loader style-loader sass-loader # webpack style plugins
-    yarn add --dev babel-loader                        # webpack js plugins
-    yarn add --dev awesome-typescript-loader           # webpack ts plugins
-    yarn add --dev raw-loader json-loader              # webpack misc plugins
-    yarn add --dev typescript typings                  # typescript
-    yarn add --dev source-map-support                  # source maps for ts
-    yarn add --dev chokidar commander colors           # cli tool creation
-    yarn add --dev handlebars handlebars-helpers       # templating
-
-    ### TDD ###
-    yarn add --dev mocha chai sinon test-console       # testing - core
-    yarn add --dev enzyme chai-enzyme                  # testing: react/frontend
-    yarn add --dev istanbul                            # code coverage
-    yarn add --dev tslint eslint                       # linting
-
-    ### filesystem ###
-    yarn add --dev find-project-root filter-argv       # filesystem navigation
-    yarn add --dev node-mkdirp fs-extra                # filesystem editing
-
-    ### babel plugins / addons / tools ###
-    yarn add babel-polyfill                            # babel frontend
-    yarn add --dev babel-preset-stage-0
-    yarn add --dev babel-preset-react
-    yarn add --dev babel-preset-es2015
-    yarn add --dev babel-plugin-transform-object-rest-spread
-    yarn add --dev babel-plugin-react-intl
-    yarn add --dev babel-plugin-lodash
-    yarn add --dev babel-cli
-    ############################ /END INSTALLATIONS #############################
-
-    mkdir test
-    mkdir script
-    mkdir doc
-    mkdir app
-    mkdir build
-    newnode__babel_base
-    newnode__babel_config_base_react
-    newnode__default_eslint
-    newnode__webpack
-    newnode__sublime_project_base
-    newnode_create_empty_config
-    newnode__gitignore_base
-}
+echo "Project generation scripts loaded!"

@@ -3,6 +3,6 @@
 <content><![CDATA[
 res.json(${0:{ key: 'value', etc: 'etc' \}});
 ]]></content>  
-  <tabTrigger>exp_res_json</tabTrigger>
+  <tabTrigger>expr_res_json</tabTrigger>
   <scope>source.js, source.ts, source.jsx, source.tsx</scope>
 </snippet>

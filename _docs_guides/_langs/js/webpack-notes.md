@@ -38,3 +38,10 @@ output config
 *   tells webpack at what URL route the package will be accessible at via the browser
 *   used by file-loader and url-loader. Important for code splitting - look into it again if your 
     build size gets too large
+
+CommonsChunkPlugin Notes
+========================
+*   The magic order for including outputted scripts in the index.html page:
+    *   manifest (.js)
+    *   app (.js)
+    *   vendor (.js)

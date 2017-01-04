@@ -7,6 +7,6 @@ app.delete(${1:'/path/to/handle'}, (req, res) => {
   // res.send('Hello World!');}
 });${0}
 ]]></content>  
-  <tabTrigger>exp_route_delete</tabTrigger>
+  <tabTrigger>expr_route_delete</tabTrigger>
   <scope>source.js, source.ts, source.jsx, source.tsx</scope>
 </snippet>

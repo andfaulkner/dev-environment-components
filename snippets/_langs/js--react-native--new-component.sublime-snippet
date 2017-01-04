@@ -1,0 +1,16 @@
+<snippet>
+  <description>Create new React Native component</description>
+<content><![CDATA[
+export class ${1:${TM_FILENAME/([a-zA-Z])?([a-zA-Z0-9]+)?[-_]?[-_]?([a-zA-Z])?([a-zA-Z0-9]+)?[-_]?[-_]?([a-zA-Z])?([a-zA-Z0-9]+)?[-_]?[-_]?([a-zA-Z])?([a-zA-Z0-9]+)?[-_]?[-_]?([a-zA-Z])?([a-zA-Z0-9]+)?[-_]?[-_]?([a-zA-Z])?([a-zA-Z0-9]+)?\..*/\U$1\L$2\U$3\L$4\U$5\L$6\U$7\L$8\U$9\L$10\U$11\L$12/g}} extends React.Component {
+    render() {
+        return (
+            <View style={{position: ${2:'relative'|'absolute'}, flex: ${3:10}${4/.+/, /}${4:flexDirection: 'column'|'row'}}}>
+                ${0}
+            </View>
+        );
+    }
+}
+]]></content>  
+  <tabTrigger>rena_new_component</tabTrigger>
+  <scope>source.js, source.ts, source.jsx, source.tsx</scope>
+</snippet>

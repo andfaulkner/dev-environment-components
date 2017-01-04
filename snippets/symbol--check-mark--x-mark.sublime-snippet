@@ -1,0 +1,7 @@
+<snippet>
+  <description>✘ or ✓</description>
+<content><![CDATA[
+✘✓
+]]></content>  
+  <tabTrigger>sym_checkmark_xmark</tabTrigger>
+</snippet>
