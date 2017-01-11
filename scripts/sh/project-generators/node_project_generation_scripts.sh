@@ -22,7 +22,7 @@ function newnode__postgres_base_install_in_proj {
 }
 
 function newnode__webpack {
-      cat > webpack.config.js <<- WEBPACKCONFIG
+      cat > ./config/webpack/webpack.config.js <<- WEBPACKCONFIG
 module.exports = {
   context: __dirname + "/BASE_DIRECTORY_FOR_RESOLVING_ENTRY",
   entry: "ENTRY_POINT_FOR_BUNDLE.js -- OR ['entry1.js', 'entry2.js']",
@@ -166,7 +166,7 @@ function react_setup_for_newnode_project {
   npm install 
   newnode__babel_base "$1"
 
-  cat > webpack.config.js <<- WEBPACKCONFIG
+  cat > ./config/webpack/webpack.config.js <<- WEBPACKCONFIG
 var config = {
   context: __dirname + "/BASE_DIRECTORY_FOR_RESOLVING_ENTRY",
   entry: "ENTRY_POINT_FOR_BUNDLE.js -- OR ['entry1.js', 'entry2.js']",

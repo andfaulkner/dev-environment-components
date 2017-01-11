@@ -1,12 +1,15 @@
 console.log('----------------------------------------------------------------------------------');
+
 //################################
 //#          DECORATORS          #
 //################################
 console.log('***************** DECORATORS *****************');
+
 // Special declaration that can be attached to a class declaration, method, accessor, property,
 // or parameter to modify its behaviour. They have the form:
 //     @expression
 // ...where expression evaluates to a fn called at runtime w info abt the decorated declaration.
+
 
 console.log('----------------------------------------------------------------------------------');
 //#########################################
@@ -51,7 +54,11 @@ function logTargetWOpts(value: string) { // this is the decorator factory
 }
 
 @logTargetWOpts('yep')
-class Cat { }
+class Cata {
+  constructor(gr: string) {
+    console.log(gr);
+  }
+}
 
 /**
  * NewClass
@@ -59,4 +66,50 @@ class Cat { }
 class NewClass {
   constructor(parameters) {
   }
+}
+
+
+/********************************** PROPERTY DECORATORS EXAMPLE ***********************************/
+import "reflect-metadata";
+
+const formatMetadataKey = Symbol("format");
+
+function format(formatString: string) {
+    return Reflect.metadata(formatMetadataKey, formatString);
+};
+
+function getFormat(target: any, propertyKey: string) {
+    return Reflect.getMetadata(formatMetadataKey, target, propertyKey);
+};
+// usage:  @format("Hello, %s") greeting: string;     // << in a class property
+
+class MyClass {
+    @format("Hello, %s")
+    greeting: string;
+
+    constructor(msg: string) {
+      this.greeting = msg;
+    }
+
+    greet() {
+        let formatString = getFormat(this, "greeting");
+        return formatString.replace("%s", this.greeting);
+    }
+}
+
+
+/*************************************** METHOD DECORATORS ****************************************/
+// Example
+function enumerable(value: boolean) {
+    return function (target: any, propertyKey: string, descriptor: PropertyDescriptor) {
+        descriptor.enumerable = value;
+    };
+}
+
+// Usage
+class SomeDumbClass {
+    @enumerable(false)
+    ok() {
+        console.log('okok');
+    }
 }

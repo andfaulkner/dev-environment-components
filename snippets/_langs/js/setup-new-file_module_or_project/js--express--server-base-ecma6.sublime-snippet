@@ -52,7 +52,7 @@ var app = express()
     .listen(config.port.server, function startServer() {
         log.info('Server running: http://127.0.0.1:' + config.port.server + '/');
         log.info('Server process id (pid): ' + process.pid); //emit process ID
-        return log.info('Wow. So server. Very running. Much bootup success. Such win.');
+        return log.info('Wow. So server. Very running. Much bootup success. Such win.\n');
     });
 
 ${0}

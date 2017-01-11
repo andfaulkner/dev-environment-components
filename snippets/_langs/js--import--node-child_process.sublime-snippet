@@ -1,0 +1,8 @@
+<snippet>
+  <description>Import child_process</description>
+<content><![CDATA[
+import { ${1:spawn, spawnSync, exec, execSync, execFile, execFileSync, fork} } from 'child_process';
+]]></content>  
+  <tabTrigger>imp_childproc</tabTrigger>
+  <scope>source.js, source.ts, source.jsx, source.tsx</scope>
+</snippet>

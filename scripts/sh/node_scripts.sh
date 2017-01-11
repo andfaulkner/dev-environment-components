@@ -146,6 +146,7 @@ alias go_ohritemplate="pushd ./; cd $PROJECTS_DIR/ohri/mhealth-template-webapp"
 alias go_mhealthtemplate="pushd ./; cd $PROJECTS_DIR/ohri/mhealth-template-webapp"
 alias go_templatemhealth="pushd ./; cd $PROJECTS_DIR/ohri/mhealth-template-webapp"
 alias gomhealthtemplate="go_templatemhealth"
+alias go_v2mhealthtemplate="pushd ./; cd $PROJECTS_DIR/ohri/v2-mhealth-template-webapp"
 
 ################################################################################
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ EMBER ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

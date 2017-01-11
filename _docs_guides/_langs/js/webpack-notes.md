@@ -1,4 +1,5 @@
-consuming loaders
+----------------------------------------------------------------------------------------------------
+Consuming loaders
 =================
 sass-loader
 -----------
@@ -11,7 +12,7 @@ sass-imports
 ### Options
 *   context: absolute path to foldre
 
-
+----------------------------------------------------------------------------------------------------
 Writing loaders
 ===============
 base loader
@@ -30,6 +31,7 @@ Options available on this inside exported loader module
             return source;
         }
 
+----------------------------------------------------------------------------------------------------
 Main webpack config options
 ===========================
 output config
@@ -39,9 +41,33 @@ output config
 *   used by file-loader and url-loader. Important for code splitting - look into it again if your 
     build size gets too large
 
-CommonsChunkPlugin Notes
-========================
+----------------------------------------------------------------------------------------------------
+CommonsChunkPlugin notes
+------------------------
 *   The magic order for including outputted scripts in the index.html page:
     *   manifest (.js)
     *   app (.js)
     *   vendor (.js)
+
+DllPlugin
+---------
+*   inside new webpack.DllPlugin({ path, manifest, context }):
+    *   manifest: Gives other Webpack configs a map to your already built modules. Very important.
+    *   context: root path of client source code
+    *   name: name of the entry file containing all the modules
+
+----------------------------------------------------------------------------------------------------
+Performance
+===========
+*   cache: true
+*   cacheDirectory:true in query
+*   use includes in all loaders
+*   Set devtool to eval
+
+Starting point:
+initial build: ~9-10s
+incrementals: ~1-2s
+
+
+initial build: ~9-10s
+incrementals: ~0.5s
