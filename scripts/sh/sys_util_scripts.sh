@@ -100,5 +100,7 @@ function todo_add_random {
   echo "Added\n- $1 to random ideas todo list"
 }
 
+alias read_pdf="open -a Preview.app" #path-to-pdf-here
+
 # eval $(thefuck --alias)
 
