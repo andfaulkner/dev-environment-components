@@ -1,7 +1,8 @@
 <snippet>
   <description>Spawn a child process synchronously. View output as it occurs.</description>
 <content><![CDATA[
-spawnSync('${1:cmd}', [${2:'arg1', 'arg2', 'etc'}], { detached: true, env: process.env });${0}
+${1:const spawnSyncOpts = { detached: true, env: process.env, stdio: 'inherit' \};}
+spawnSync('${2:cmd}', [${3:'arg1', 'arg2', 'etc'}], ${4:spawnSyncOpts});${0}
 ]]></content>  
   <tabTrigger>childproc_spawnsync</tabTrigger>
   <scope>source.js, source.ts, source.jsx, source.tsx</scope>

@@ -12,7 +12,7 @@
 // 
 // Get commander module to make the actual tool, and require it:
 var program = require('commander');
-var colors = require('colors');
+var colors = require('colour');
 var _ = require('lodash');
 
 // Example use:

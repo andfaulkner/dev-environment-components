@@ -1,0 +1,13 @@
+<snippet>
+  <description>Most minimal runnable test. Use to ensure test file can run.</description>
+<content><![CDATA[
+describe('can run tests', function() {
+    it('ran', function () {
+        expect(true).to.be.true;
+    });
+});
+
+]]></content>  
+  <tabTrigger>mocha_new_minimal_runnable</tabTrigger>
+  <scope>source.js, source.ts, source.jsx, source.tsx</scope>
+</snippet>

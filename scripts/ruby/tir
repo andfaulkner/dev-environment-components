@@ -113,7 +113,7 @@ module InjectAtMatch
         newfile << "#{new_text}\n" if matcher
         newfile << line
       elsif options[:replace]
-        newfile << (matcher ? "#{ new_text }#{ matcher.post_match }" : line)
+        newfile << (matcher ? "#{ matcher.pre_match }#{ new_text }#{ matcher.post_match }" : line)
       else
         newfile << line
         newfile << "#{new_text}\n" if matcher

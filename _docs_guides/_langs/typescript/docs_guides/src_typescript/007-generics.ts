@@ -387,3 +387,31 @@ getRider(Tricycle); // => undefined; however, the type checking passes
 
 console.log(" ----- NOTE ON class extends: WHEN YOU USE extends, ALL ITEMS ON THE CLASS BEING -----");
 console.log(" ----- EXTENDED ARE ASSIGNED TO THE prototype PROPERTY OF THE class DOING THE EXTENDING -----");
+
+
+/******************************** OVERLOADING METHODS / FUNCTIONS *********************************/
+// Can specify multiple type signatures for a single function, and accept any call to the function
+// that matches at least one of them.
+//
+// Very powerful for creating combination objects, when combined with intersection types such as:
+//      A & B & C
+// 
+// Example:
+/**
+ * Quick and dirty shallow extend
+ */
+export function extend<A>(a: A): A;
+export function extend<A, B>(a: A, b: B): A & B;
+export function extend<A, B, C>(a: A, b: B, c: C): A & B & C;
+export function extend<A, B, C, D>(a: A, b: B, c: C, d: D): A & B & C & D;
+export function extend(...args: any[]): any {
+    const newObj = {};
+    for (const obj of args) {
+        for (const key in obj) {
+            //copy all the fields
+            newObj[key] = obj[key];
+        }
+    }
+    return newObj;
+};
+//From:  http://stackoverflow.com/questions/37042602/how-to-combine-object-properties-in-typescript

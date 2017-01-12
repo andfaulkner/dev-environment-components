@@ -9,7 +9,7 @@ export NODE_PATH=/usr/lib/nodejs:/usr/lib/node_modules:/usr/share/javascript:/us
 ################################## npm ################################## 
 # GLOBAL INSTALL
 # alias nig="npm install -g"
-alias nig="yarn global add"
+alias nig="npm install --global"
 alias nis="npm install --save"
 alias nus="npm uninstall --save"
 alias nisd="npm install --save-dev"
@@ -255,6 +255,14 @@ alias npmreact_deps='cat package.json | ack "react|redux|recompose|jsdom|reselec
 
 alias twitter="echo 'logging into twitter via birdknife...'; birdknife"
 
-echo "* NodeJS scripts loaded!"
 
 alias electronrun="~/.yarn-cache/.global/node_modules/electron/dist/Electron.app/Contents/MacOS/Electron"
+
+# increase the current node version
+function bump_node {
+    tir "/Users/andrew/Library/Application Support/Sublime Text 3/Packages/User/SublimeLinter.sublime-settings" --replace "\.nvm\/versions\/node\/v[0-9]\.[0-9]\.[0-9]\/" ".nvm/versions/node/v$1/"
+    tir "/Users/andrew/Library/Application Support/Sublime Text 3/Packages/User/Preferences.sublime-settings" --replace "\.nvm\/versions\/node\/v[0-9]\.[0-9]\.[0-9]\/" ".nvm/versions/node/v$1/"
+}
+
+echo "* NodeJS scripts loaded!"
+

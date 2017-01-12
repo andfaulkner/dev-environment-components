@@ -1,9 +1,36 @@
+Definitions - general
+=====================
+
+####################################################################################################
+# 0 ###################################################################################
 @### 0x-prefixed number e.g. 0x123, 0x1A4, 0xA2F
 *    Hexadecimal numbers. The 0x simply serves as a marker to inform the compiler that it's
      dealing with a hexadecimal number
      *   In many cases there's otherwise no way to know which type of number is being used.
          E.g. 123 is a valid number in both decimal and hexadecimal form, but the number 123 in
          hexadecimal is equivalent to the number 291 in binary.
+
+# A ###################################################################################
+@### Active record pattern (ActiveRecord) ###@
+*   An ORM-related architectural pattern for storing relational db in objects
+*   each class in ActiveRecord is a table schema, and each instance is a row in that table. When
+*   the interface of an object conforming to this pattern would include functions such as Insert,
+    Update, and Delete (or Insert and Update could be merged into a single Save function), plus
+    properties that correspond directly to the column in the underlying database table.
+*   Variant form: when data is changed in one of the object instances, it immediately triggers a
+    save in the db. Often a bad idea since this can result in piles of tiny expensive updates.
+*   Side note: when data has been changed on the object but not saved in the db, the object is
+    said to be 'dirty'
+
+*   Example (in Rubyish pseudocode), where User is an ActiveRecord object:
+        user = User.new
+        user.username = 'meeka'
+        user.save
+
+*   JS-ish Example:
+        const user = new User();
+        user.username = 'meeka';
+        user.save();
 
 @### Array-like objects / Array-Like values (Javascript) ###@
 *   An array-like object / value is a JS object or value that looks like an array, but isn't.
@@ -64,6 +91,26 @@
         );
 
 # D ###################################################################################
+@### Data access object (DAO) ###@
+*   object in your data layer responsible for persisting a separate entity in your domain
+*   provides an abstract interface to some type of database or other persistence mechanism. By
+    mapping application calls to the persistence layer, the DAO provides some specific data
+    operations without exposing details of the database.
+    *   similar to ActiveRecord, but not identical
+        *   although this is debatable, because ActiveRecord objects arguably expose details of the
+            database (i.e. each class in ActiveRecord is a table schema, and each instance is a row
+            in that table, which one could argue === database detail exposure)
+
+@### Data mapper (DataMapper) pattern ###@
+*   ORM pattern (contrast with Active record pattern)
+*   Data Mapper objects are plain objects with no knowledge of the database or how
+    they're stored - i.e. they're just data
+*   Data is persisted to the database using an entity manager
+*   Example:
+        const user = new User();
+        user.username = 'meeka';
+        EntityManager.persist(user);
+
 @### Database key ###@
 *   column name
 
@@ -95,12 +142,12 @@
     of the interpreter, compiler, or assembler in some way
 *   Example: Javascript's 'use strict'; directive restricts what features are allowed in the code.
 
-#######################################################################################
+# E ###################################################################################
 @### Etag ###@
 *   opaque identifier assigned by a web server to a specific version of a resource found at
-		a URL. If the resource representation at that URL ever changes, a new and different ETag
-		is assigned. Used in this manner ETags are similar to fingerprints, and they can be
-		quickly compared to determine whether two representations of a resource are the same.
+	a URL. If the resource representation at that URL ever changes, a new and different ETag
+	is assigned. Used in this manner ETags are similar to fingerprints, and they can be
+	quickly compared to determine whether two representations of a resource are the same.
 
 @### ER-model ###@
 *   entity–relationship model
@@ -109,7 +156,7 @@
 *   graphical representation of entities and their relationships to each other
 *   http://www.webopedia.com/TERM/E/entity_relationship_diagram.html
 
-#######################################################################################
+# F ###################################################################################
 @### Foreign key ###@
 *   a type of database constraint
 *   helps to map two or more tables in the database
@@ -123,7 +170,19 @@
         *   Parent table: DEPARTMENT
         *   Child table:  EMPLOYEE
 
-#######################################################################################
+# H ###################################################################################
+@### Helper (class) [OOP] [FP] ###@
+*   a helper class is used internally to perform low-level "boilerplate" work with no specific
+    business domain meaning
+    *   they tend to be hidden from the client
+    *   Example: 
+*   a helper function performs part of the computation of another function
+    *   used to make your programs easier to read and maintain by:
+        1)  giving descriptive names to computations; and
+        2)  letting you reuse computations, thus reducing repeated code
+    *   nice example here:
+        *   https://web.cs.wpi.edu/~cs1101/a05/Docs/creating-helpers.html
+
 @### Hertz ###@
 *    1Hz is one cycle per second
 *    Often used to measure CPU 'clock rate' - i.e. operations per second
@@ -138,13 +197,12 @@
     *   Can take arguments as well
 *   How they work: "secretly" wrapping the input component inside a container component
 
-
-
 # I ###################################################################################
 @### Idempotence ###@
 *    an action that is idempotent should deliver identical results if the action is repeated.
 *    GET, PUT, and DELETE requests should be idempotent. POST requests, however, needn't be
 
+# L ###################################################################################
 @### Ladda ###@
 *   A UI concept which merges loading indicators into the action that invoked them.
 *   isight, for example, uses it in via the jQuery.ladda library
@@ -182,7 +240,8 @@
 	by a thread, and unset when the thread stops accessing it. It is not possible to access the
 	resource while the flag is set. The mutex is the flag.
 
-@### Nominal typing / Nominal type system###@
+# N ####################################################################################
+@### Nominal typing / Nominal type system ###@
 *   type system where compatibility and equivalence of data types is determined by explicit
     declarations and/or the name of the types
 *   used to determine if types are equivalent, as well as if a type is a subtype of another
@@ -193,7 +252,33 @@
         to be so in its definition
 *   Note: Typescript does not introduce this kind of type system.
 
-#######################################################################################
+# O ###################################################################################
+@### Operand ###@
+*   the quantity on which an operation is to be done
+*   Expressions (comprised of operators and operands) can themselves be operands
+*   Example:
+       4 + 8
+       *   + is the operation
+       *   4 and 8 are the operands
+*   Nested example:
+       (9 + 4) ** 6
+       ||== operands:
+       ||     |-- (9 - 4)
+       ||     |   ||== operands:
+       ||     |   ||    |-- 9
+       ||     |   ||    \-- 4
+       ||     |   ||
+       ||     |   ||== operation:
+       ||     |         \-- +
+       ||     \-- 6
+       ||
+       ||== operation:
+             \-- **
+
+# P ###################################################################################
+# Q ###################################################################################
+
+# R ###################################################################################
 @### Register (CPU) [[noun - as in 'a register' not 'to register']] ##@
 *   Special storage locations in the CPU for holding small amounts of data
 *   Data in registers can be acted on ultra-rapidly, but CPUs have a very limited # of registers
@@ -262,9 +347,12 @@
     in order to be able to recreate it when needed. The reverse process is called deserialization.
 
 @### Services (aka Service Objects) [Server-side. Rails, NodeJS] ###@
-*   services describe system interactions.
-    *   especially those involving more than one model
-*   example: "Forgot password" functionality. Involves a User model encapsulating a password, which
+*   A service class/interface provides a way for a client to interact with some functionality in an
+    app. This is typically public, with some business meaning. E.g. a TicketingService interface
+    might allow you to buyTicket, sellTicket, etc.
+*   Services describe system interactions.
+    *   ...especially those involving more than one model
+*   Example: "Forgot password" functionality. Involves a User model encapsulating a password, which
     sends an email to reset it.
     *   In this scenario, the service is responsible for locating the user, sending the reset
         password email, and reporting back to the controller from which the request originated
@@ -279,7 +367,7 @@
     4)  They are extremely reusable: callable from anywhere, and almost completely uncoupled
         from models, controllers, routes, etc..  
 
-@### SOLID (aka SOLID principles) [object-oriented design] ###@
+@### SOLID (aka SOLID principles) [OOP] ###@
 *   Single responsibility principle: a class should have only a single responsibility
 *   Open/Closed principle: entities should be open for extension, but closed for modification
 *   Liskov substitution principle: objects in a program should be replaceable with instances of
@@ -287,6 +375,32 @@
 *   Interface segregation principle: many client-specific interfaces are better than one
     general-purpose interface
 *   Dependency inversion principle: One should depend upon Abstractions, not 'concretions'
+
+@### Single responsibility principle (SRP) [OOP] ###@
+*   states that every module or class should have responsibility over a single part of the 
+    functionality provided by a piece of software, and that responsibility should be entirely
+    encapsulated by the class.
+*   Put another way: "A class should have only one reason to change".
+    *   A responsiblity is a "reason to change"
+*   This reduces "brittleness" and minimizes the amount of an application that is exposed to
+    potentially "breaking" when a code change is made.
+Example
+*   consider a module that compiles and prints a report, and imagine that there are only 2 reasons why it might need to change:
+    1)  the formatting of the report changes; or
+    2)  the content of the report changes
+*   The reasons for each chagne are different: the first is substantive, the second is cosmetic.
+    *   The SRP states that they are thus 2 different responsibilities, and should be in separate classes or modules.
+        *   E.g. the first in a Formatter module, the second in a ContentProvider module
+            *   (Note that in practice you would probably split it up even further, with different
+                parts of the content handled by different modules, and the ContentProvider composed
+                of smaller modules implementing sub-components of the content generation &
+                acquisition)
+    *   The reasons why each would change are distinct. E.g. if the marketing department puts out
+        a new set of standard company colours, you would have to change the Formatter, but not the
+        ContentProvider. On the flipside, if the business development department requested that a
+        new set of analytics not previously being displayed should be included on the report, you
+        would have to change the ContentProvider, but not the Formatter.
+
 
 @### Stack (Docker) ###@
 *   set of services that make up an application
@@ -301,7 +415,7 @@
 *   stored in the database data dictionary
 *   typical uses: data validation, access control mechanisms
 
-@### Structural typing / Structural type system ###@
+@### Structural typing / Structural type system [OOP] [TYPE_SYS] ###@
 *   in structural type systems, compatibility and equivalence of types is determined by the type's
     actual structure or definition, rather than explicit type declarations
 *   like most type systems, it's used to determine if types are equivalent and whether a type is
@@ -315,8 +429,8 @@
 *   used by e.g. Typescript, OCaml, C++ template functions, Haxe, Haskell, and parts of Go
 *   contrast with nominal typing, where every type has to be explicity declared. Structural typing
     is significantly less verbose.
-#######################################################################################
 
+# T ###################################################################################
 @### Testing: black-box testing ###@
 *   one of 3 main testing "methods" (black-box testing, white-box testing, grey-box testing)
 *   testing without having any knowledge of the interior workings of the application
@@ -327,6 +441,23 @@
     *   white-box testing: a detailed investigation of internal logic & structure of an app's code
     *   grey-box testing: test an app with limited knowledge (but not none) of its internal workings
 
+# U ###################################################################################
+
+# V ###################################################################################
+@### Volume (Docker) ###@
+*   something that gets mounted into a container
+*   e.g. if using Mongo, you define a volume called "Mongo data", whioh persists between launches
+    of the container.
+    *   you could also mount a directory from your host into a container - this is also a volume
+*   something mountable is a volume
+
+# W ###################################################################################
+# X ###################################################################################
+# Y ###################################################################################
+# Z ###################################################################################
+####################################################################################################
+
+
 ############################ HTTP REQUESTS ################################
 @### PUT requests ###@        AND        @### POST requests ###@
 *   ...vs. POST requests: A POST indicates what location on the server will handle the process, but
@@ -336,11 +467,3 @@
     necessarily map to any one particular resource.
     *   A PUT request, by contrast, should refer to one (and only one) resource in particular.
 *  PUT requests are Idempotent, while POST requests are not
-#######################################################################################
-@### Volume (Docker) ###@
-*   something that gets mounted into a container
-*   e.g. if using Mongo, you define a volume called "Mongo data", whioh persists between launches
-    of the container.
-    *   you could also mount a directory from your host into a container - this is also a volume
-*   something mountable is a volume
-

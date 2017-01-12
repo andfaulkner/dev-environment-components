@@ -27,6 +27,11 @@
         ".babelrc",
         ".node-version",
         "../../typings/globals/colors/**",
+
+569 matches across 116 files
+
+
+Searching 6980 files for "((import)|(require)).*\n?.*colors" (regex)
         "./node_modules/@types/node/index.d.ts",
         "./node_modules/@types/react/index.d.ts",
         "./node_modules/@types/chai/index.d.ts",
