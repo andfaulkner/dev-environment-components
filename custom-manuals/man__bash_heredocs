@@ -1,0 +1,16 @@
+#!/usr/bin/env sh
+
+cat << END_OF_TERMINAL_MANUAL_FOR_BASIC_REFERENCE
+
+---------------------------------------------------------------------------------
+** Bash HEREDOCS **
+---------------------------------------------------------------------------------
+Display a HEREDOC to the terminal:
+
+cat << MY_HEREDOC_NAME_HERE
+Display this text!
+Also display this!
+MY_HEREDOC_NAME_HERE
+---------------------------------------------------------------------------------
+
+END_OF_TERMINAL_MANUAL_FOR_BASIC_REFERENCE

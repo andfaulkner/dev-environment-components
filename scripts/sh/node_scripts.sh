@@ -95,7 +95,9 @@ alias murdernode='ps aux | grep "gulp\|node\|npm" | grep -v "atom" | awk "{print
 
 alias nun="nukenode"
 alias nu="nukenode"
-alias ns="nu; npm start"
+alias ns="npm start"
+alias nns="nu; npm start"
+alias nrt="npm run test"
 
 # view running NodeJS processes
 alias anynode='ps aux | ack node'
@@ -264,5 +266,12 @@ function bump_node {
     tir "/Users/andrew/Library/Application Support/Sublime Text 3/Packages/User/Preferences.sublime-settings" --replace "\.nvm\/versions\/node\/v[0-9]\.[0-9]\.[0-9]\/" ".nvm/versions/node/v$1/"
 }
 
+alias weather="node /Users/andrew/projects/new_node_modules/weather/weather.js"
+
+########## CouchDB ###########
+alias nukecouchdb="ps aux | ack couchdb | awk '{print \$2}' | sudo xargs kill -9"
+
+
 echo "* NodeJS scripts loaded!"
 
+alias yard="yarn"

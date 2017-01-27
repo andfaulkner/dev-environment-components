@@ -1,0 +1,8 @@
+<snippet>
+  <description>Import express-session module</description>
+<content><![CDATA[
+import * as session from 'express-session';
+]]></content>  
+  <tabTrigger>imp_expr_session</tabTrigger>
+  <scope>source.js, source.ts, source.jsx, source.tsx</scope>
+</snippet>

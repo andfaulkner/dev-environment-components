@@ -246,8 +246,9 @@ Data types
 6.  `BOOLEAN` - true or false value.
         *   These evaluate to true: TRUE, 't', 'true', 'y', 'yes' 'on', '1'
         *   These evaluate to false: FALSE, 'f', 'false', 'n', 'no' 'off', '0'
-5.  Date - usually in YYYY-MM-DD format
-6.  Real - a numeric value allowing decimals
+7.  Date - usually in YYYY-MM-DD format
+8.  Real - a numeric value allowing decimals
+9.  
 
 
 MAKE A SCHEMA

@@ -17,6 +17,8 @@ alias gcob="git checkout -b"
 alias gs="git status"
 alias gl="git log"
 
+alias g_c="git commit"
+
 alias gpocur='echo "$(g_curbr)" | xargs git push origin'
 
 alias g_geturl_origin="echo '======'; echo 'origin'; echo '======'; git remote get-url origin"

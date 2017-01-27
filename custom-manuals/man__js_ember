@@ -2,9 +2,8 @@
 
 echo ''
 echo '---------------------------------------------------------------------------------'
-echo '** CURL **'
+echo '** EMBER CLI **'
 echo '---------------------------------------------------------------------------------'
-echo '- subtitle'
-echo 'curl to an output file - example:'
-echo '    curl -o ./rake https://raw.githubusercontent.com/ai/rake-completion/master/rake'
+echo "## generate a route:       ember g route route_name"
+echo "   -   create route handler, template route renders, and test file for route"
 echo '---------------------------------------------------------------------------------\n'

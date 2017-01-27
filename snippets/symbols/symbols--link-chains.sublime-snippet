@@ -1,0 +1,7 @@
+<snippet>
+  <description>Symbol: link - chain</description>
+<content><![CDATA[
+🔗
+]]></content>  
+  <tabTrigger>sym_link_chain</tabTrigger>
+</snippet>

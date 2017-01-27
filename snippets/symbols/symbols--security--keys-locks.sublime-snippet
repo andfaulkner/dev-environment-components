@@ -1,0 +1,7 @@
+<snippet>
+  <description>Symbols: security - keys, locks, vaults, weapons, break-in-tools</description>
+<content><![CDATA[
+🔐 🔑 🔒 🔓 🗝 🏦 💣 💳 📦 💼 🔦 🔧 🔨 🔩 🔪 🔫
+]]></content>
+  <tabTrigger>sym_keys_locks_security</tabTrigger>
+</snippet>

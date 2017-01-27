@@ -1,0 +1,17 @@
+<snippet>
+  <description>Align something to the right. Requires a wrapper component</description>
+<content><![CDATA[
+.${1:component-to-align-right}-wrapper {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+}
+
+.${1:component-to-align-right} {
+    position: relative;
+    width: 100%;
+}${0}
+]]></content>  
+  <tabTrigger>align-right</tabTrigger>
+  <scope>source.css, source.postcss, source.scss</scope>
+</snippet>

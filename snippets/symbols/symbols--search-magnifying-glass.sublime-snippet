@@ -1,0 +1,7 @@
+<snippet>
+  <description>Symbol: search - magnifying glass</description>
+<content><![CDATA[
+🔍
+]]></content>  
+  <tabTrigger>sym_search</tabTrigger>
+</snippet>

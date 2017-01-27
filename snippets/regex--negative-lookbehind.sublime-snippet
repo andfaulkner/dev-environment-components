@@ -1,0 +1,7 @@
+<snippet>
+  <description>Negative lookbehind</description>
+<content><![CDATA[
+(?<!${1:ensure_this_not_behind})${0:actual_matcher}
+]]></content>  
+  <tabTrigger>regex_neg_lookbehind</tabTrigger>
+</snippet>

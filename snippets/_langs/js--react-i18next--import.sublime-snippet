@@ -1,0 +1,9 @@
+<snippet>
+  <description>Import react-i18n - all</description>
+<content><![CDATA[
+import { translate, Interpolate } from 'react-i18next';
+import { I18n, TranslationFunction } from 'i18next';
+]]></content>  
+  <tabTrigger>imp_rct_it18n</tabTrigger>
+  <scope>source.js, source.ts, source.jsx, source.tsx</scope>
+</snippet>

@@ -31,6 +31,33 @@ Azure ActiveDirectory (AD)
 
 *   houses the users in a company and the information about them
 
+AD B2C
+------
+*   secure a web API by using OAuth 2.0 access tokens
+*   To set it up:
+    1)  Register an application with Azure AD.
+    2)  Set up app to use Passport's azure-ad-passport plug-in
+    3) 
+
+Creating an ActiveDirectory B2C app
+*   
+
+
+Resource groups
+===============
+Resources
+    *   ActiveDirectory is a resource
+    *   A web app is a resource
+    *   Apps are deployed into app service plans    
+        *   App service plans define the amount of infrastructure to the apps deployed into that service plan
+    *   b2c tenant is the ActiveDirectory that we're going to try to use as our identity provider
+    *   one can register a web service app on a b2c tenant
+
+*   Side note: a web service is a type of app service
+
+### Policies
+*   In Azure AD B2C, every user experience is defined by a policy
+
 
 Links
 -----

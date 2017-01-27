@@ -169,6 +169,21 @@ Definitions - general
                    EMPLOYEE table has column DEPARTMENT_ID. Here it is the Foreign key.
         *   Parent table: DEPARTMENT
         *   Child table:  EMPLOYEE
+# G ###################################################################################
+@### gcc [COMPILER] ###@
+*   GNU Compiler Collection
+    *    integrated distribution of compilers for several major programming languages
+*   allows you to compile:
+    *   C
+    *   C++
+    *   Objective-C
+    *   Fortran
+    *   Ada
+    *   Go
+*   also provides front ends and libraries for each aforementioned language
+*   originally the compiler for the GNU operating system
+*   gcc front ends: the part of a compiler that is specific to a particular language
+*   gcc back ends: the part that generates machine code for various processors
 
 # H ###################################################################################
 @### Helper (class) [OOP] [FP] ###@
@@ -401,7 +416,6 @@ Example
         new set of analytics not previously being displayed should be included on the report, you
         would have to change the ContentProvider, but not the Formatter.
 
-
 @### Stack (Docker) ###@
 *   set of services that make up an application
 *   in a stackfile (equivalent to a docker compose file) you can define a bunch of diff services 
@@ -429,6 +443,14 @@ Example
 *   used by e.g. Typescript, OCaml, C++ template functions, Haxe, Haskell, and parts of Go
 *   contrast with nominal typing, where every type has to be explicity declared. Structural typing
     is significantly less verbose.
+
+@### Subnet ###@
+*   short for 'subnetwork'
+*   logical subdivision of an IP network
+    *   identifiably separate part of the network
+    *   may represent all the machines at 1 geographic location, in 1 building, or on the same LAN
+    *   lets a whole organization be connected to the internet w/ a single shared network address
+*   dividing a network into 2 or more networks is called subnetting
 
 # T ###################################################################################
 @### Testing: black-box testing ###@

@@ -1,0 +1,8 @@
+<snippet>
+  <description>Create a fourth-level title</description>
+<content><![CDATA[
+#### ${0}
+]]></content>  
+  <tabTrigger>h4</tabTrigger>
+  <scope>text.html.markdown, text.md, text.markdown</scope>
+</snippet>

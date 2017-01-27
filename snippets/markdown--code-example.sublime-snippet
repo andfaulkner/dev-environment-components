@@ -1,0 +1,10 @@
+<snippet>
+  <description>Create code example block</description>
+<content><![CDATA[
+
+    ${0:code goes here}
+
+]]></content>  
+  <tabTrigger>ce</tabTrigger>
+  <scope>text.html.markdown, text.md, text.markdown</scope>
+</snippet>

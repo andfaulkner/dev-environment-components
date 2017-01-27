@@ -1,0 +1,11 @@
+<snippet>
+  <description>iife using lambda arrow functions</description>
+<content><![CDATA[
+${1/.+/const /}${1:returnValue}${1/.+/ = /}(() => {
+    ${0}
+    return { };
+})();
+]]></content>  
+  <tabTrigger>iifelambda</tabTrigger>
+  <scope>source.js, source.ts, source.jsx, source.tsx</scope>
+</snippet>

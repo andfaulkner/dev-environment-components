@@ -1,3 +1,4 @@
+/******************************************** IMPORTS *********************************************/
 var path = require('path');
 var fs = require('fs');
 var util = require('util');
@@ -8,7 +9,6 @@ var _ = require('lodash');
 var async = require('async');
 
 // var logger = require('lib/core/log.js').file('sql_to_knex/utils/lodash-with-mixins.js');
-
 
 /***
 *			Lodash mixins
@@ -103,21 +103,17 @@ _.mixin({
 	//Alias because I always forget which they call it
 	titleCase: _.startCase,
 
-	/***
-	*		High-speed function to return only the unique items from an array.
-	*		For use with extremely large arrays (e.g. translations).
-	*		Ugly but highly optimized.
-
-677 matches across 255 files
-
-
-Searching 32122 files for "speed.*1"
-	*/
+	/**
+	 *   High-speed function to return only the unique items from an array.
+	 *   For use with extremely large arrays (e.g. translations).
+	 *
+	 *   Ugly but highly optimized.
+	 */
 	uniqueFast: function uniqueFast(arr) {
-    var o = {}, i, l = arr.length, r = [];
-    for(i=0; i<l;i+=1) o[arr[i]] = arr[i];
-    for(i in o) r.push(o[i]);
-    return r;
+	    var o = {}, i, l = arr.length, r = [];
+	    for(i=0; i<l;i+=1) o[arr[i]] = arr[i];
+	    for(i in o) r.push(o[i]);
+	    return r;
 	},
 
 	cleanAllStringsInArray: function cleanAllArrayStrings(arr){

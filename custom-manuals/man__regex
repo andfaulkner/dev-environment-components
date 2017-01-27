@@ -1,41 +1,43 @@
 #!/usr/bin/env sh
+cat <<HEREDOC
 
-echo '----------------------------------------------------------------------------------------------'
-echo 'COLLECTION OF HANDY REGEXES'
-echo '----------------------------------------------------------------------------------------------'
-echo 'Select all lines containing a puts statement added for debugging (for replacement)'
-echo '        \n^[^a-zA-Z0-9_]*puts\s['"].*$"']'
-echo 'Sublime snippets: only create a comma if there is anything inputted for $2'
-echo '        ${2/(.+)/, /g}'
-echo ''
-echo 'LOOKBEHIND & LOOKAHEAD'
-echo '    Positive Lookbehind:     (?<=foo)'	
-echo '    Negative Lookbehind:     (?<!foo)'	
-echo '    Positive Lookahead:      (?=foo)'	
-echo '    Negative Lookahead:      (?!foo)'	
-echo ''
-echo ' Examples: '
-echo '    * Positive Lookahead '
-echo '        v^(?=\w{6,10}$)                validate that str solely made of 6-10 word char'
-echo ''
-echo '        (?=[^a-z]*[a-z](\!|"))         match 0+ non-lowercase chars, then 1 lowercase char'
-echo '                                       then at some point in the rest of the line, either a '
-echo '                                       ! or a "'
-echo '    * Negative Lookbehind '
-echo '        (?<!USD)10212                  will match JPX10212 & USDA10212, but not USD10212.' 
-echo '                                       Matches 10212 as long as USD is not DIRECTLY before it'
-echo ''
-echo 'NOTES: Order of Lookaheads barely Matters. See http://www.rexegg.com/regex-lookarounds.html'
-echo ''
-echo 'ANDROID STUDIO FIND & REPLACES'
-echo '    * Replace verbose empty contents of auto-generated methods with a concise { }: '
-echo '        \{\n.*?\/\/[\s\t]{0,2}((TODO Auto-generated method stub)|(\/\/.?do nothing))*?$\n((.*?\})|.*?\n.*?\}) '
-echo '    * Replace multiline split-up else statements (   } \n  else  \n  { ) with single line:'
-echo '         \}\n[^a-zA-Z0-9_\n]*else\n[^a-zA-Z0-9\n_]*\{ '
-echo '    * Replace if(  with if (  << add a space '
-echo '         FIND:     if\(      REPLACE:     if ( '
-echo ''
-echo '## Android app log filtering'
-echo '    * exclude all lines containing pointless OS-level getSlotFromBufferLocked C++ error:'
-echo '        ^(?:(?! E/Surface: getSlotFromBufferLocked: unknown buffer: ).)*$\r?\n? '
-echo '----------------------------------------------------------------------------------------------'
+----------------------------------------------------------------------------------------------
+COLLECTION OF HANDY REGEXES
+----------------------------------------------------------------------------------------------
+Select all lines containing a puts statement added for debugging (for replacement)
+        \n^[^a-zA-Z0-9_]*puts\s['"].*$"']
+Sublime snippets: only create a comma if there is anything inputted for $2
+        ${2/(.+)/, /g}
+
+LOOKBEHIND & LOOKAHEAD
+    Positive Lookbehind:     (?<=foo)'	
+    Negative Lookbehind:     (?<!foo)'	
+    Positive Lookahead:      (?=foo)'	
+    Negative Lookahead:      (?!foo)'	
+
+ Examples: 
+    * Positive Lookahead 
+        v^(?=\w{6,10}$)                validate that str solely made of 6-10 word char
+
+        (?=[^a-z]*[a-z](\!|"))         match 0+ non-lowercase chars, then 1 lowercase char
+                                       then at some point in the rest of the line, either a 
+                                       ! or a "
+    * Negative Lookbehind 
+        (?<!USD)10212                  will match JPX10212 & USDA10212, but not USD10212.' 
+                                       Matches 10212 as long as USD is not DIRECTLY before it
+
+NOTES: Order of Lookaheads barely Matters. See http://www.rexegg.com/regex-lookarounds.html
+
+ANDROID STUDIO FIND & REPLACES
+    * Replace verbose empty contents of auto-generated methods with a concise { }: 
+        \{\n.*?\/\/[\s\t]{0,2}((TODO Auto-generated method stub)|(\/\/.?do nothing))*?$\n((.*?\})|.*?\n.*?\}) 
+    * Replace multiline split-up else statements (   } \n  else  \n  { ) with single line:
+         \}\n[^a-zA-Z0-9_\n]*else\n[^a-zA-Z0-9\n_]*\{ 
+    * Replace if(  with if (  << add a space 
+         FIND:     if\(      REPLACE:     if ( 
+
+## Android app log filtering
+    * exclude all lines containing pointless OS-level getSlotFromBufferLocked C++ error:
+        ^(?:(?! E/Surface: getSlotFromBufferLocked: unknown buffer: ).)*$\r?\n? 
+----------------------------------------------------------------------------------------------
+HEREDOC

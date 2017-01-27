@@ -1,9 +1,26 @@
 #!/usr/bin/env ruby
 # encoding: utf-8
-require 'fileutils'
-require 'pry'
 
-# HANDLE CLI ARGUMENTS
+#**************************************************************************************************#
+# 
+#    Small utility to replace and/or insert text into files.
+#    Should run with Ruby 2.0.0+.
+#
+#    For more information, run the script with no arguments, or with --help.
+#
+#**************************************************************************************************#
+
+require 'fileutils'
+
+#**************************************************************************************************#
+# 
+# Handle CLI arguments
+#   --before
+#   --after
+#   --replace
+#   --wildside (no backup)
+#   --help
+# 
 class Arguments
   attr_reader :args
 
@@ -142,10 +159,13 @@ if __FILE__ == $PROGRAM_NAME
   end
 
   arguments = Arguments.new ARGV
+
+  # Show help text
   if arguments.valid_input
-    UsageInfo.usage # SHOW HELP
+    UsageInfo.usage
   else
-    __inject__ arguments # EXTRACT ARGUMENTS
+    # Extract individual arguments from raw command line params (ARGUMENTS.new ARGV)
+    __inject__ arguments
   end
 ##################################################################################################
 

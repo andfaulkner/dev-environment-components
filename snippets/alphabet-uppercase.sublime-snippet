@@ -1,0 +1,7 @@
+<snippet>
+  <description>The full alphabet, in lowercase</description>
+<content><![CDATA[
+ABCDEFGHIJKLMNOPQRSTUVWXYZ
+]]></content>  
+  <tabTrigger>alphabet_lowercase</tabTrigger>
+</snippet>
