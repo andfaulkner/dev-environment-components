@@ -1,9 +1,0 @@
-<snippet>
-  <description>Disadvantages bullet</description>
-<content><![CDATA[
-*   Disadvantages:
-    *   ${0}
-]]></content>  
-  <tabTrigger>dadv*</tabTrigger>
-  <scope>text.html.markdown, text.md, text.markdown</scope>
-</snippet>

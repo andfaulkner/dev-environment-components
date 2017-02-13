@@ -1,0 +1,8 @@
+<snippet>
+  <description>Get an Object's prototype: i.e. what's assigned to [[prototype]]</description>
+<content><![CDATA[
+Object.getPrototypeOf(${1:SomeObject});${0}
+]]></content>  
+  <tabTrigger>obj_get_prototype</tabTrigger>
+  <scope>source.js, source.ts, source.jsx, source.tsx</scope>
+</snippet>

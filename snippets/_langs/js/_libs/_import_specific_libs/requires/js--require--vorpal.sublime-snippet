@@ -1,0 +1,8 @@
+<snippet>
+	<description>require vorpal</description>
+	<content><![CDATA[
+const vorpal = require('vorpal')().show();
+]]></content>
+	<tabTrigger>req_vorpal</tabTrigger>
+	<scope>source.js, source.ts, source.jsx, source.tsx</scope>
+</snippet>

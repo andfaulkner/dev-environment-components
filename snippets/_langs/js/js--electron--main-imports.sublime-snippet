@@ -1,8 +1,0 @@
-<snippet>
-  <description>require main electron modules</description>
-<content><![CDATA[
-const { app, BrowserWindow } = require('electron');
-]]></content>  
-  <tabTrigger>req_electron</tabTrigger>
-  <scope>source.js, source.ts, source.jsx, source.tsx</scope>
-</snippet>

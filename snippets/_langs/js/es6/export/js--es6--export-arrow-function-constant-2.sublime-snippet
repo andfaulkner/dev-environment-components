@@ -1,0 +1,11 @@
+<snippet>
+	<description>es6: export arrow function (lambda) as constant</description>
+	<content><![CDATA[
+export const ${1:nameOfFn} = (${2:params}) => {
+    ${0}
+};
+
+]]></content>
+	<tabTrigger>explambda</tabTrigger>
+	<scope>source.js, source.ts, source.jsx, source.tsx</scope>
+</snippet>

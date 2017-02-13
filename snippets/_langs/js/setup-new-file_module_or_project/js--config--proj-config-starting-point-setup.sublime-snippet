@@ -3,7 +3,7 @@
     <content><![CDATA[
 var path = require('path');
 
-// @EXPORT
+// @export
 module.exports = {
     appName: '${1:testbed-seneca-4'},
     '__projrootdir': path.join(__dirname, '..'),

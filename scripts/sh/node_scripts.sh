@@ -98,6 +98,7 @@ alias nu="nukenode"
 alias ns="npm start"
 alias nns="nu; npm start"
 alias nrt="npm run test"
+alias nrc="npm run clean"
 
 # view running NodeJS processes
 alias anynode='ps aux | ack node'
@@ -271,7 +272,13 @@ alias weather="node /Users/andrew/projects/new_node_modules/weather/weather.js"
 ########## CouchDB ###########
 alias nukecouchdb="ps aux | ack couchdb | awk '{print \$2}' | sudo xargs kill -9"
 
+alias npm_ver_inc="jq .version package.json | ruby -e 'puts STDIN.first.split(/[.\"]/).join.to_i+1'"
+# alias npm_git_tag_w_ver='git tag v"$(jq .version package.json | sed -e \'s/^"//\' -e \'s/"$//\')"'
+alias npm_git_tag_w_ver="git tag v\"\$(jq .version package.json | sed -e 's/^\"//' -e 's/\"$//')\""
+alias npm_bumptag="versiony patch; npm_git_tag_w_ver; git tag;"
+alias npm_bumptagpush="versiony patch; npm_git_tag_w_ver; git tag; git push origin \"v\$(jq -r .version package.json)\""
 
 echo "* NodeJS scripts loaded!"
 
-alias yard="yarn"
+# yard is also a type of ruby gem
+# alias yard="yarn"

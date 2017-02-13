@@ -1,18 +1,54 @@
 #!/usr/bin/env sh
 
-echo ''
-echo '---------------------------------------------------------------------------------'
-echo '** postgres cli cheatsheet **'
-echo '---------------------------------------------------------------------------------'
-echo '- default pg port: 5432'
-echo ''
-echo '- open from shell:                psql postgres               <<< where postgres is the db'
-echo '- open from shell with username:  psql postgres -U postgres   <<< 2nd postgres is the user'
-echo '- create a db:                    createdb name-of-db__here'
-echo ""
-echo "- once in the cli..."
-echo "- quit:              \q"
-echo "- see all db:        \l"
-echo "- change db:         \\\c db_to_change_to"
-echo "- create new db:     CREATE DATABASE name_of_database"
-echo '---------------------------------------------------------------------------------\n'
+cat << POSTGRES_CLI_CHEATSHEET 
+
+---------------------------------------------------------------------------------
+** postgres cli cheatsheet **
+---------------------------------------------------------------------------------
+- default pg port: 5432
+
+- open from shell:                psql postgres               <<< where postgres is the db
+- open from shell with username:  psql postgres -U postgres   <<< 2nd postgres is the user
+- create a db:                    createdb name-of-db__here
+
+- once in the cli...
+- quit:              \q
+- see all db:        \l
+- change db:         \\\c db_to_change_to
+- create new db:     CREATE DATABASE name_of_database
+
+# PG_CTL
+ stop a local db:          pg_ctl stop -D path/to/postgres/db
+ start a local db:         pg_ctl start -D path/to/postgres/db
+ stop global db:           pg_ctl -D /Library/PostgreSQL/9.5/data stop -s -m fast
+    - note that you need to use your actual postgres folder above, where PostgreSQL 9.5 is placed
+    - you may need to log in as the appropriate user
+      sudo su postgres      < where postgres is the username
+
+# User management: (example user below is 'postgres')
+ create a user:                            createuser postgres
+ create a user that can assign roles:      createuser postgres --createrole
+ create an encrypted user:                 createuser postgres --encrypted
+ create a superuser:                       createuser postgres --superuser --encrypted --createrole
+ drop a user:                              dropuser postgres
+ list all users:                           psql postgres -c "SELECT rolname FROM pg_roles;"
+  - assumes user postgres already exists
+  another 'list all users' example:        psql -U username -d mydatabase -c 'SELECT * FROM mytable' 
+
+# dbs
+ list all dbs                              psql --username=postgres --list
+
+# psql
+ psql -U user_name -d db_name -h 127.0.0.1 -W
+     - -W means user will be inputting a password
+ psql postgres -U andrew
+     - log in to database 'postgres' as user 'andrew'
+
+# Inside psql
+ \conninfo    - tells you about current connection - username, db, port
+
+Completely remove postgres: https://gist.github.com/Atlas7/b1a40a2ffd85728b33e7
+---------------------------------------------------------------------------------\n
+
+POSTGRES_CLI_CHEATSHEET
+

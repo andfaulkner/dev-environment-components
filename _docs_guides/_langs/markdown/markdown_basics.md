@@ -125,13 +125,52 @@ This is another normal paragraph:
 
     This is another code block.
 
-
 Inline code
 -----------
+*   Put backticks around the in-sentence code e.g. Use the `printf()` function.
 
-Put backticks around the in-sentence code e.g. Use the `printf()` function.
+*   Use double backticks if the code has backticks e.g. ``A literal backtick(`) here``
 
-Use double backticks if the code has backticks e.g. ``A literal backtick(`) here``
+Code blocks with syntax highlighting
+------------------------------------
+Inline syntax highlighting for commonly used languages:
+
+```css
+#button { border: none }
+```
+
+```tsx
+<input value={password} type="password" name="password" onChange={changePassword}/>
+```
+
+```js
+const hello = (name) => `Hello ${name}!`;
+```
+
+```html
+<div class="my-text-block-holder">A bunch of text here</div>
+```
+
+```ruby
+def hello(name)
+    puts "hello #{name}!"
+end
+```
+
+```sh
+hello() {
+    name="$1"
+    echo "hello $name!"
+}
+```
+
+```sql
+CREATE TABLE table_name (
+    column_1 data_type,
+    column_2 data_type,
+    column_3 data_type
+);
+```
 
 
 -------------------------------------------------------------------------------

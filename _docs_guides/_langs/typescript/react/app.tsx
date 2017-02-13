@@ -15,7 +15,7 @@ import { KeyController } from './modules/KeyController/KeyController';
 
 import { PlayerColor } from './enums/enums';
 
-
+/**************************************** TYPE DEFINITIONS ****************************************/
 export interface CommentProps { };
 export interface CommentState { };
 
@@ -23,8 +23,7 @@ export interface Input {
   time: number;
 }
 
-console.log('js loaded');
-
+/******************************************* COMPONENTS *******************************************/
 class App extends React.Component<{}, {}> {
   state = {
     input: {

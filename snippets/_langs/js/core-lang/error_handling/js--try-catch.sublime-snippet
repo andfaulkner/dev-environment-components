@@ -2,10 +2,10 @@
   <description>Create a try-catch statement</description>
 <content><![CDATA[
 try {
-  ${0}
+    ${0}
 } catch (err) {
-  console.error('${1:error}', err);
-  throw err;
+    console.error(`${1:\${TAG\} error}:`, err);
+    throw err;
 }
 ]]></content>  
   <tabTrigger>trycatch</tabTrigger>

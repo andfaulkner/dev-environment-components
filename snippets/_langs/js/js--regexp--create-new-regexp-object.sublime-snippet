@@ -1,8 +1,0 @@
-<snippet>
-  <description>Create new RegExp object, (not using a RegExp literal e.g. /asdf/)</description>
-<content><![CDATA[
-${1/.+/const /}${1:nameOfRegExp}${1/.+/ = /}new RegExp('${2:regexp_content_here}', ${3:/*flags_here:*/'g'});${0}
-]]></content>  
-  <tabTrigger>regex_new_obj</tabTrigger>
-  <scope>source.js, source.ts, source.jsx, source.tsx</scope>
-</snippet>

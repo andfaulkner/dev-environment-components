@@ -1,0 +1,23 @@
+<snippet>
+  <description>Custom error function. Must use function keyword.</description>
+<content><![CDATA[
+const ${1:SomeNewError} = (() => {
+    function ${1:SomeNewError}(${2:message, someOtherVar, etc, asManyAsYouWant}) {
+        Error.captureStackTrace(this);
+        this.message = message;
+        this.name = `${1:SomeNewError}`;
+        console.log('this.stack:', this.stack);
+        ${3:this.arg1 = arg1};
+        ${3:this.arg2 = arg2};
+        ${3:this.etc = etc};
+    }
+
+    ${1:SomeNewError}.prototype = Object.create(Error.prototype);
+    return ${1:SomeNewError};
+})();
+
+// Usage: new SomeNewError('arg1', 'arg2', 'etc');
+]]></content>  
+  <tabTrigger>err_custom_obj</tabTrigger>
+  <scope>source.js, source.ts, source.jsx, source.tsx</scope>
+</snippet>

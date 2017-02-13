@@ -1,0 +1,10 @@
+<snippet>
+  <description>Disable given rule for section of code of any length</description>
+<content><![CDATA[
+/* tslint:disable:${1:max-line-length} */
+${0}
+/* tslint:enable:${1:max-line-length} */
+]]></content>  
+  <tabTrigger>tslint_disable_rule_for_section</tabTrigger>
+  <scope>source.tsx</scope>
+</snippet>

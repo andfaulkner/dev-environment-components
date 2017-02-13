@@ -40,6 +40,10 @@ alias nukefirefox='ps aux | ack firefox | awk "{print \$2}" | xargs kill -9'
 alias nukesublime='ps aux | ack "[Ss]ublime" | awk "{print \$2}" | xargs kill -9'
 alias nukevscode='ps aux | ack "Visual Studio Code\.app" | awk "{print \$2}" | xargs kill -9'
 
+killmatch() {
+    ps aux | grep $1 | grep -v grep | awk '{print $2}' | xargs kill -9
+}
+
 # will kill all scripting languages & minor utils
 alias clean_mega_level1='nukeruby; nukenode; nukelisp; nukepython; nukemisc_utils'
 # will kill all scripting languages & minor utils, & nginx
@@ -108,3 +112,6 @@ alias history_sorted_cpu='ps aux | sort --key 3 | awk "{if (NF<12) { print \$1\"
 alias history_sorted_mem='ps aux | sort --key 4 | awk "{if (NF<12) { print \$1\",,,\"\$2\",,,\"\$3\",,,\"\$4\",,,\"\$9\",,,\"\$10\",,,\"\$11} else { print \$1\",,,\"\$2\",,,\"\$3\",,,\"\$4\",,,\"\$9\",,,\"\$10\",,,\"\$11\"...\" }}" | column -t -s ",,,"'
 # eval $(thefuck --alias)
 
+## TIME ##
+alias now_timestamp="date +%s"
+alias timestamp_now="now_timestamp"

@@ -1,8 +1,0 @@
-<snippet>
-  <description>Convert a string to kebab-case (aka dash-case)</description>
-<content><![CDATA[
-_.kebabCase(${1:stringToConvert})
-]]></content>  
-  <tabTrigger>_str_dashcase</tabTrigger>
-  <scope>source.js, source.ts, source.jsx, source.tsx</scope>
-</snippet>

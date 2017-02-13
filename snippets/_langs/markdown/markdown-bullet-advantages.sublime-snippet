@@ -1,0 +1,9 @@
+<snippet>
+  <description>Advantages bullet</description>
+<content><![CDATA[
+*   Advantages:
+    *   ${0}
+]]></content>  
+  <tabTrigger>adv*</tabTrigger>
+  <scope>text.html.markdown, text.md, text.markdown</scope>
+</snippet>

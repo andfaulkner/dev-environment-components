@@ -1,0 +1,8 @@
+<snippet>
+  <description>Human readable timestamp string from current time.</description>
+<content><![CDATA[
+moment(moment.now()).format("\\[YYYY/MM/DD] HH:mm:ss.SSS")${0}
+]]></content>
+  <tabTrigger>moment_format_now</tabTrigger>
+  <scope>source.js, source.ts, source.jsx, source.tsx</scope>
+</snippet>

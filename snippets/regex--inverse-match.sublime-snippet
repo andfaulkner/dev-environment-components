@@ -1,0 +1,7 @@
+<snippet>
+  <description>Reverse match: exclude lines w/ given substr. Can include $ and ^.</description>
+<content><![CDATA[
+^((?!${1:do_not_match_if_this_phrase_is_present}\$).)*\$
+]]></content>  
+  <tabTrigger>regex_inverse_match</tabTrigger>
+</snippet>

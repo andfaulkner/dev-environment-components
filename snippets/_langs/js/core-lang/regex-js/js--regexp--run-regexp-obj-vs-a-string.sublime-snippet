@@ -1,0 +1,8 @@
+<snippet>
+  <description>Run a RegExp object vs a string. null if no match.</description>
+<content><![CDATA[
+${1:regexName}.exec(${2:'string_to_search_for_the_regexp_in'});${0}
+]]></content>  
+  <tabTrigger>regex_obj_run_vs_str</tabTrigger>
+  <scope>source.js, source.ts, source.jsx, source.tsx</scope>
+</snippet>

@@ -1,0 +1,8 @@
+<snippet>
+  <description>Return true if predicate ret true for at least 1 value in the obj</description>
+<content><![CDATA[
+Object.keys(${1:someObj}).some((${2:key}) => (${1:someObj}[${2:key}] === 'something'));
+]]></content>  
+  <tabTrigger>obj_any</tabTrigger>
+  <scope>source.js, source.ts, source.jsx, source.tsx</scope>
+</snippet>

@@ -1,0 +1,7 @@
+<snippet>
+  <description>Ottawa mHealth namespace</description>
+<content><![CDATA[
+@ottawamhealth/
+]]></content>  
+  <tabTrigger>omh</tabTrigger>
+</snippet>

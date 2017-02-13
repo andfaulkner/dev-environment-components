@@ -1,8 +1,0 @@
-<snippet>
-  <description>Require moment.js</description>
-<content><![CDATA[
-${1:const moment = }require('moment');${0}
-]]></content>  
-  <tabTrigger>req_moment</tabTrigger>
-  <scope>source.js, source.ts, source.jsx, source.tsx</scope>
-</snippet>

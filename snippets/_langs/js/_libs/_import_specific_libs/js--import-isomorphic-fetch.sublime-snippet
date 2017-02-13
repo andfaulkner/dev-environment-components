@@ -1,8 +1,0 @@
-<snippet>
-  <description>Import the isomorphic-fetch library</description>
-<content><![CDATA[
-import fetch from 'isomorphic-fetch';${0}
-]]></content>  
-  <tabTrigger>imp_isomorphic_fetch</tabTrigger>
-  <scope>source.js, source.ts, source.jsx, source.tsx</scope>
-</snippet>

@@ -1,8 +1,0 @@
-<snippet>
-  <description>Return true if predicate ret true for at least 1 item in the arr</description>
-<content><![CDATA[
-${1:someArr}.some((${2:item}) => ${0:(${2:item} === 'something')});
-]]></content>  
-  <tabTrigger>arr_some</tabTrigger>
-  <scope>source.js, source.ts, source.jsx, source.tsx</scope>
-</snippet>

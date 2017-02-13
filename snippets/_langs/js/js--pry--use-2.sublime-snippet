@@ -1,0 +1,8 @@
+<snippet>
+  <description>Pause app execution & open in-app repl (if pry installed)</description>
+<content><![CDATA[
+eval(pry.it);
+]]></content>  
+  <tabTrigger>pry</tabTrigger>
+  <scope>source.js, source.ts, source.jsx, source.tsx</scope>
+</snippet>

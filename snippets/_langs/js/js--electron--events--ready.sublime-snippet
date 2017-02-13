@@ -1,8 +1,0 @@
-<snippet>
-  <description>Run on electron ready event. app is electron import. Mk window here</description>
-<content><![CDATA[
-app.on('ready', ${1:cb});
-]]></content>  
-  <tabTrigger>electron_ev_ready</tabTrigger>
-  <scope>source.js, source.ts, source.jsx, source.tsx</scope>
-</snippet>

@@ -1,0 +1,8 @@
+<snippet>
+  <description>Remove directory contents, synchronously</description>
+<content><![CDATA[
+fs.emptyDirSync(path.join(${1:rootPath, 'some/dir/path/here'}));
+]]></content>  
+  <tabTrigger>fs_rm_dir_contents_sync</tabTrigger>
+  <scope>source.js, source.ts, source.jsx, source.tsx</scope>
+</snippet>

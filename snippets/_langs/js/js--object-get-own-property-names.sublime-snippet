@@ -1,0 +1,8 @@
+<snippet>
+  <description>Get enumerable & non-enumerable props of obj (Object.keys gives just enumerable)</description>
+<content><![CDATA[
+Object.getOwnPropertyNames(${1:SomeObject});
+]]></content>  
+  <tabTrigger>obj_get_own_prop_names</tabTrigger>
+  <scope>source.js, source.ts, source.jsx, source.tsx</scope>
+</snippet>

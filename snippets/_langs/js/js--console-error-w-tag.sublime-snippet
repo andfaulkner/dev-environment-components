@@ -1,0 +1,8 @@
+<snippet>
+  <description>Console error with tag</description>
+<content><![CDATA[
+console.error(`\${TAG} ${1:content}:`, ${2:error});${0}
+]]></content>  
+  <tabTrigger>cet</tabTrigger>
+  <scope>source.js, source.ts, source.jsx, source.tsx</scope>
+</snippet>

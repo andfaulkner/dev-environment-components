@@ -1,8 +1,0 @@
-<snippet>
-	<description>Require NodeJS' fs filesystem module</description>
-	<content><![CDATA[
-const fs = require('fs');
-]]></content>
-	<tabTrigger>rqf</tabTrigger>
-	<scope>source.js, source.ts, source.jsx, source.tsx</scope>
-</snippet>

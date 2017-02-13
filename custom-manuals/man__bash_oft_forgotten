@@ -1,58 +1,72 @@
 #!/usr/bin/env sh
 
-echo ''
-echo '---------------------------------------------------------------------------------'
-echo '** BASH - OFTEN FORGOTTEN COMMANDS**'
-echo '---------------------------------------------------------------------------------'
-echo "rerun last command:                  !!"
-echo "create soft link:                    ln -s file_to_link_to shortcut_name_location"
-echo ""
-echo '# POPD AND PUSHD'
-echo "-  display popd + pushd stack:          dirs"
-echo "-  clear popd + pushd stack:            dirs -c"
-echo "-  display stack line-by-line           dirs -v"
-echo ""
-echo "# REVERSE CTRL-R SEARCH"
-echo "-  cycle backward thru matches          <CTRL-SHIFT-R>"
-echo "-  cycle forward thru matches           <CTRL-SHIFT-R>"
-echo ""
-echo "# EXECUTE STRINGS AS CODE OR TREAT CODE OUTPUT AS EMBEDDED TEXT"
-echo "-  TODO: cover eval"
-echo "-  TODO: cover \${}"
-echo "-  TODO: cover \$()"
-echo "-  TODO: cover \$SOMETHING"
-echo "-  insert view history in backticks or eval:: example:         \`echo cat \$HOME/.bash_history\`"
-echo ""
-echo "# REMOVE AN ALIAS, FUNCTION, OR VARIABLE"
-echo "-  remove an alias or method:                                  unalias aliasname"
-echo "-  remove a variable:                                          unset variablename"
-echo ""
-echo "# SUPPRESS OR 'DISCONNECT' OUTPUT"
-echo "-  suppress output:                                            some_command 2>/dev/null"
-echo "-  run app detached from terminal:                             nohup some-app-eg-gimp &"
-echo ""
-echo "# GET META-INFO:: i.e. INFO ABOUT BASH COMMANDS, INCLUDING CUSTOM DEFINITIONS"
-echo " -  Get command type:: fn, alias, app, built-in eg ls, etc:    type some-command" 
-echo "    -- examples:                                               type ln"
-echo "                                                               type gorails"
-echo "                                                               type alias"
-echo "     * can return function, alias, application location,  "
-echo " - Output the actual code of a function or alias:              type function_name_here"
-echo ''
-echo '# RENAME FILES'
-echo ' -  recursively change extension of all matching files:       rename -S .js .jsx --glob **/*.js'
-echo ''
-echo '********** CURL ************'
-echo ' - Save file received via curl by the name it is stored as on the server: example:'
-echo '   curl --remote-name --location http://pilotfiber.dl.sourceforge.net/project/mcrypt/Libmcrypt/2.5.8/libmcrypt-2.5.8.tar.gz'
-echo ''
-echo "********* BATCH RENAME RECURSIVELY **********"
-echo "find . -iname \"*.sublime-snippet\" -exec bash -c 'mv \"\$0\" \"\${0%\.sublime-snippet\}.cson\"' {} \;"
-echo ""
-echo "********* CONTROL FLOW **********"
-echo "A; B    Run A and then B, regardless of success of A"
-echo "A && B  Run B if A succeeded"
-echo "A || B  Run B if A failed"
-echo "A &     Run A in background."
-echo ""
-echo '---------------------------------------------------------------------------------\n'
+cat <<-BASH_OFT_FORGOTTEN_HEREDOC
+---------------------------------------------------------------------------------
+** BASH - OFTEN FORGOTTEN COMMANDS**
+---------------------------------------------------------------------------------
+rerun last command:                  !!
+create soft link:                    ln -s file_to_link_to shortcut_name_location
+
+# POPD AND PUSHD
+-  display popd + pushd stack:          dirs
+-  clear popd + pushd stack:            dirs -c
+-  display stack line-by-line           dirs -v
+
+# REVERSE CTRL-R SEARCH
+-  cycle backward thru matches          <CTRL-SHIFT-R>
+-  cycle forward thru matches           <CTRL-SHIFT-R>
+
+# EXECUTE STRINGS AS CODE OR TREAT CODE OUTPUT AS EMBEDDED TEXT
+-  TODO: cover eval
+-  TODO: cover \${}
+-  TODO: cover \$()
+-  TODO: cover \$SOMETHING
+-  insert view history in backticks or eval:: example:         \`at \$HOME/.bash_history\`
+
+# REMOVE AN ALIAS, FUNCTION, OR VARIABLE
+-  remove an alias or method:                                  unalias aliasname
+-  remove a variable:                                          unset variablename
+
+# SUPPRESS OR 'DISCONNECT' OUTPUT
+-  suppress output:                                            some_command 2>/dev/null
+-  run app detached from terminal:                             nohup some-app-eg-gimp &
+
+# GET META-INFO:: i.e. INFO ABOUT BASH COMMANDS, INCLUDING CUSTOM DEFINITIONS
+ -  Get command type:: fn, alias, app, built-in eg ls, etc:    type some-command"
+    -- examples:                                               type ln
+                                                               type gorails
+                                                               type alias
+     * can return function, alias, application location,  
+ - Output the actual code of a function or alias:              type function_name_here
+
+# RENAME FILES
+ -  recursively change extension of all matching files:       rename -S .js .jsx --glob **/*.js
+
+********** CURL ************
+ - Save file received via curl by the name it is stored as on the server: example:
+   curl --remote-name --location http://pilotfiber.dl.sourceforge.net/project/mcrypt/Libmcrypt/2.5.8/libmcrypt-2.5.8.tar.gz
+
+********* BATCH RENAME RECURSIVELY **********
+find . -iname \"*.sublime-snippet\" -exec bash -c 'mv \"\$0\" \"\${0%\.sublime-snippet\}.cson\"' {} \;
+
+********* CONTROL FLOW **********
+A; B    Run A and then B, regardless of success of A
+A && B  Run B if A succeeded
+A || B  Run B if A failed
+A &     Run A in background.
+
+********* ARGUMENT HANDLING *********
+- Select all args but the first:        echo "${@:2}"
+- Remove first arg from args list:      shift
+- Select all args in arg list:          $@
+
+********* COMMAND SUBSTITUTION *********
+- Run a command and return the value into a string:      var="$(command)"
+    - nesting: using $() lets you avoid quote-escaping:  var="$(command1 "$(command2)")"
+
+Links:
+- Google shell style guide: https://google.github.io/styleguide/shell.xml
+
+---------------------------------------------------------------------------------
+
+BASH_OFT_FORGOTTEN_HEREDOC

@@ -1,8 +1,0 @@
-<snippet>
-  <description>Import Colors module</description>
-<content><![CDATA[
-import * as colors from 'colors';${0}
-]]></content>  
-  <tabTrigger>impcol</tabTrigger>
-  <scope>source.js, source.ts, source.jsx, source.tsx</scope>
-</snippet>

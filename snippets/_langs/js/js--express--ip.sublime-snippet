@@ -1,0 +1,8 @@
+<snippet>
+  <description>Requesting user's IP</description>
+<content><![CDATA[
+req.connection.remoteAddress${0}
+]]></content>  
+  <tabTrigger>expr_req_ip</tabTrigger>
+  <scope>source.js, source.ts, source.jsx, source.tsx</scope>
+</snippet>

@@ -1,0 +1,23 @@
+<snippet>
+  <description>Full-featured describe block</description>
+<content><![CDATA[
+describe('${1:someItemBeingTested}', function(){
+    let itemDefinedInBefore;
+
+    before((next) => {
+        itemDefinedInBefore = ${0:'whatever itemDefinedInBefore should be'};
+        next();
+    });
+
+    it('exists', function() {
+        expect(${1:storeNewUser}).to.exist;
+    }); 
+
+    it('${2:Some test on item being tested explained here}', function() {
+
+    });
+});
+]]></content>  
+  <tabTrigger>mocha_describe_full</tabTrigger>
+  <scope>source.js, source.ts, source.jsx, source.tsx</scope>
+</snippet>

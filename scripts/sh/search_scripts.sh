@@ -180,4 +180,7 @@ function google {
 
 alias history_filtered='history | ack -v " lsa" | ack -v " ls" | ack -v "history" | ack -v "cat " | ack -v " cd " | ack -v "bashrc" | ack -v "( ruby)|( rake)" | ack -v "pwd" | ack -v "searchfn" | ack -v "rbash" | ack -v "bundler"'
 
+alias inc1='ruby -e "puts STDIN.first.to_i + 1"'
+
 echo "* search scripts loaded!"
+

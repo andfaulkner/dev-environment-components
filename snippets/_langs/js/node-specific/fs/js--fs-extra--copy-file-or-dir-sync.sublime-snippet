@@ -1,0 +1,8 @@
+<snippet>
+  <description>Copy file or directory. Like cp -rf</description>
+<content><![CDATA[
+fs.copy(path.join(${1:rootPath, 'some/dir/or/file/path/here'}), path.join(${2:rootPath, 'copy/to/here'}));${0}
+]]></content>  
+  <tabTrigger>fs_cp_sync</tabTrigger>
+  <scope>source.js, source.ts, source.jsx, source.tsx</scope>
+</snippet>

@@ -83,6 +83,18 @@ Common mistakes
     using tree-shaking, or importing individual modules from a monolith library (e.g. lodash)
     rather than the whole thing all at once. See e.g. https://lacke.mn/reduce-your-bundle-js-file-size/
 
+19. Avoid passing new closures to subcomponents.
+          <input
+              type="text"
+              value={model.name}
+              // onChange={(e) => { model.name = e.target.value }} // << Not this. Use the below:
+              onChange={this.handleChange}
+              placeholder="Your Name"
+          />
+    *   above, every time the parent component renders, a new function is created and passed
+        to the input.
+        *   If the input were a React component, this would automatically trigger it to re-render,
+            regardless of whether its other props have actually changed
 
 Often forgotten info
 ====================

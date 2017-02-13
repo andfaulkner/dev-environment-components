@@ -1,0 +1,8 @@
+<snippet>
+  <description>Console log with tag</description>
+<content><![CDATA[
+console.log(`\${TAG} ${1:content}`);${0}
+]]></content>  
+  <tabTrigger>clt</tabTrigger>
+  <scope>source.js, source.ts, source.jsx, source.tsx</scope>
+</snippet>

@@ -1,8 +1,0 @@
-<snippet>
-  <description>require handlebars</description>
-<content><![CDATA[
-const Handlebars = require('handlebars');
-]]></content>  
-  <tabTrigger>req_handlebars</tabTrigger>
-  <scope>source.js, source.ts, source.jsx, source.tsx</scope>
-</snippet>

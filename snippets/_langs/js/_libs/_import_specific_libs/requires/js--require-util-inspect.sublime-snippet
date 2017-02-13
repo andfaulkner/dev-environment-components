@@ -1,8 +1,0 @@
-<snippet>
-	<description>require util.inspect</description>
-	<content><![CDATA[
-const inspect = require('util').inspect;
-]]></content>
-	<tabTrigger>rqui</tabTrigger>
-	<scope>source.js, source.ts, source.jsx, source.tsx</scope>
-</snippet>

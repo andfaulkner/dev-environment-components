@@ -1,0 +1,24 @@
+#!/usr/bin/env sh
+
+cat <<-CLI_MANUAL_FOR_JQ
+---------------------------------------------------------------------------------
+** jq - JSON parsing tool usable directly from the CLI **
+---------------------------------------------------------------------------------
+#### Accessing individual data items ####
+- return value of item at given key:        jq .some_top_level_key example.json
+- return value of nested item:              jq .lvl_1_key.lvl_2_key example.json
+- get item at position in array:            jq .array_example[0] example.json
+    *   (example gets 1st item in array)
+- return item in key with odd chars:        jq '."key-with-dashes"' example.json
+    *    essential: quotes around keyname
+
+#### Return all keys ####
+    jq 'keys' examplejson.json
+
+#### Return json file as-is ####
+    jq '.' examplejson.json
+
+#### No quotes around output
+    jq -r .version package.json
+---------------------------------------------------------------------------------\n
+CLI_MANUAL_FOR_JQ

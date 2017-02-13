@@ -1,0 +1,11 @@
+<snippet>
+  <description>Declare a module</description>
+<content><![CDATA[
+declare module '${1:module-name}' {
+    ${2:function 2:moduleFunction(moduleName: string): any;
+    export = moduleFunction;}
+}
+]]></content>  
+  <tabTrigger>declare_mod</tabTrigger>
+  <scope>source.ts</scope>
+</snippet>

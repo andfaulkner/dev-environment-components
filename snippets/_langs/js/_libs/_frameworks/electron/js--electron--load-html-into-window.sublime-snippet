@@ -1,0 +1,12 @@
+<snippet>
+  <description>Load html into window. req index.html, url module, earlier window def</description>
+<content><![CDATA[
+window.loadURL(url.format({
+    pathname: path.join(__dirname, '${1:index.html}'),
+    protocol: 'file:',
+    slashes: true
+}));${0}
+]]></content>  
+  <tabTrigger>electron_load_html</tabTrigger>
+  <scope>source.js, source.ts, source.jsx, source.tsx</scope>
+</snippet>

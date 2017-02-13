@@ -1,8 +1,0 @@
-<snippet>
-  <description>Import enzyme library</description>
-<content><![CDATA[
-import { mount, render, shallow } from 'enzyme';
-]]></content>  
-  <tabTrigger>imp_enzyme</tabTrigger>
-  <scope>source.js, source.ts, source.jsx, source.tsx</scope>
-</snippet>

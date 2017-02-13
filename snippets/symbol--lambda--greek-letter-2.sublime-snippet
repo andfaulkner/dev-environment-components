@@ -1,0 +1,7 @@
+<snippet>
+  <description>Lambda symbol: λ</description>
+<content><![CDATA[
+λ
+]]></content>
+  <tabTrigger>lmd</tabTrigger>
+</snippet>

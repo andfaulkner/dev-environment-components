@@ -1,0 +1,8 @@
+<snippet>
+  <description>Open devtools. window is new BrowserWindow instance</description>
+<content><![CDATA[
+window.webContents.openDevTools();
+]]></content>  
+  <tabTrigger>electron_open_devtools</tabTrigger>
+  <scope>source.js, source.ts, source.jsx, source.tsx</scope>
+</snippet>

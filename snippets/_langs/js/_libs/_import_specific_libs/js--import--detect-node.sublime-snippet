@@ -1,0 +1,8 @@
+<snippet>
+  <description>Import detect-node</description>
+<content><![CDATA[
+import { isNode } from 'detect-node';
+]]></content>  
+  <tabTrigger>imp_detect-node</tabTrigger>
+  <scope>source.js, source.ts, source.jsx, source.tsx</scope>
+</snippet>

@@ -1,0 +1,8 @@
+<snippet>
+	<description>require commander (CLI tool builder library)</description>
+	<content><![CDATA[
+const program = require('commander');
+]]></content>
+	<tabTrigger>req_commander</tabTrigger>
+	<scope>source.js, source.ts, source.jsx, source.tsx</scope>
+</snippet>

@@ -1,3 +1,9 @@
+Levels of beta:
+*   internal private: Marlene, Chandhi
+*   internal public: direct invites of select outsiders, inclusion on lists
+*   external public: actual pushes into the app
+
+
 Definitions - general
 =====================
 
@@ -142,6 +148,19 @@ Definitions - general
     of the interpreter, compiler, or assembler in some way
 *   Example: Javascript's 'use strict'; directive restricts what features are allowed in the code.
 
+@### Distributed lock manager ###@
+*   purpose of a lock: ensure that among several nodes that might try to do the same 
+    piece of work, only 1 actually does it. 2 main reasons we care about this:
+    1.  efficiency: saves you from unnecessarily doing the same work twice;
+    2.  correctness: stops concurrent processes from stepping on each others’ toes & 
+        messing up the state of your system;
+*   lock managers: used by OSes to organize and serialize access to resources (?)
+*   distributed lock manager: lock manager that runs in every machine in a cluster,
+    with an identical copy of a cluster-wide lock db
+*   provides apps that are distributed across a cluster on multiple machines with a 
+    way to sync their access of shared resources
+*   can be done with Redis via the Redlock algorithm (but don't, it's slow & unsafe)
+
 # E ###################################################################################
 @### Etag ###@
 *   opaque identifier assigned by a web server to a specific version of a resource found at
@@ -169,6 +188,10 @@ Definitions - general
                    EMPLOYEE table has column DEPARTMENT_ID. Here it is the Foreign key.
         *   Parent table: DEPARTMENT
         *   Child table:  EMPLOYEE
+
+@### FOSS ###@
+*   Free and open-source
+
 # G ###################################################################################
 @### gcc [COMPILER] ###@
 *   GNU Compiler Collection
@@ -186,6 +209,24 @@ Definitions - general
 *   gcc back ends: the part that generates machine code for various processors
 
 # H ###################################################################################
+@### Heap (low-level programming) ###@
+*   stores reference type objects like strings or objects
+    *   also stores the references themselves, as well as the data being referenced
+*   all currently accessible data is connected in some way (by any number of connections) to the 'root'
+    *   root ━▷ Obj1 ━▷ Obj4 ━▷ Obj5
+        ┃ ┃
+        ▽  `━▷ Obj3
+       Obj2
+
+*   objects on the heap can reference other objects on the heap
+    *   some objects only connect to the 'root' via their connection to another object
+        *   root ━▷ Object_A ━▷ Object_B
+            *   Object_B only connects to the root via its connection to Object_A
+
+*   Actions that place items on the heap:
+    *   const someInstance = new SomePrototype
+    *   AdminUser.prototype = Object.create(User.prototype), returning an object literal from a function,
+
 @### Helper (class) [OOP] [FP] ###@
 *   a helper class is used internally to perform low-level "boilerplate" work with no specific
     business domain meaning
@@ -216,6 +257,56 @@ Definitions - general
 @### Idempotence ###@
 *    an action that is idempotent should deliver identical results if the action is repeated.
 *    GET, PUT, and DELETE requests should be idempotent. POST requests, however, needn't be
+
+# J ###################################################################################
+@### JWK (JSON Web Key) [AUTH] [JWT] ###@
+*   JSON object that represents a cryptographic key
+*   members of the object represent properties of the key, including its value
+*   also contains members that are key type-specific
+
+@### JWT (JSON Web Token) [AUTH] [JWT] ###@
+*   [JWT spec](https://tools.ietf.org/html/rfc7519)
+*   JOSE Header
+    *   typ: Type header
+    *   cty: Content type header
+    *   alg: Algorithm
+*   JWT "claims" aka properties:
+    *   sub: Subject {optional}
+        *   identifies the principal that is the subject of the JWT
+        *   claims in a JWT are normally statements about the subject
+        *   case-sensitive string containing a StringOrURI value
+        *   must either be:
+            *   scoped to be locally unique in the context of the issuer or;
+            *   globally unique
+    *   iss: Issuer {optional}
+        *   identifies the principal that issued the JWT
+    *   aud: Audience {optional}
+        *   array of case-sensitive strings, each containing a StringOrURI value
+        *   identifies the recipients that the JWT is intended for
+        *   Each principal intended to process the JWT MUST identify itself with a 
+            value in the audience claim
+            *   JWT must be rejected otherwise
+        *   very app-specific
+    *   exp: Expiry
+        *   In the form of a Unix timestamp
+    *   iat: Issuedat"
+        *   Again, as a Unix timestamp
+    *   jti: JWT ID {optional}
+        *   provides a unique identifier for the JWT
+        *   can be used to prevent the JWT from being replayed
+        *   MUST be assigned in a manner that ensures there's a negligible probability 
+            that the same val will be accidentally assigned to a different data object
+
+
+
+# K ###################################################################################
+@### "kid" (Key ID) parameter [AUTH] [JWT] ###@
+*   aspect of JSON web tokens
+*   used to choose among a set of keys in a JWK set during key rollover.
+*   When "kid" values are used within a JWK Set, different keys within the JWK Set
+    SHOULD use distinct "kid" values
+*   When used with JWS or JWE, used to match a JWS or JWE "kid" Header Parameter value
+
 
 # L ###################################################################################
 @### Ladda ###@
@@ -291,13 +382,78 @@ Definitions - general
              \-- **
 
 # P ###################################################################################
+@### Pointers [C] [Memory management] [low-level programming] ##@
+*   variable whose value is the address of another variable
+*   you must declare a pointer before using it to store any variable address
+*   Syntax:     type *var-name;
+*   Examples:
+        int    *ip;    /* pointer to an integer */
+        char   *ch     /* pointer to a character */
+        double *dp;    /* pointer to a double */
+*   actual data type of the value of pointers is always the same: a long
+    hexadecimal number that represents a memory address
+*   Store the address of a regular variable in a pointer variable like this:
+        ip = &var
+    *   e.g.:
+            int  numVar = 20;
+            int  *pointerTonumVar;
+            pointerTonumVar = &numVar
+
+
+
+
 # Q ###################################################################################
 
 # R ###################################################################################
+@### Redis [DB] ##@
+*   Great session store database
+*   stores data mainly key-value pairs, but also as:
+    *   hashmaps ( hashname => { hashkey : value })
+    *   sets (setName => { val1, val2, val3, val4... })
+        *   no order, all values unique
+        *   very fast to search and get from
+    *   lists (listName => (val1, val2, val3, val4...))
+        *   ordered, not all values necessarily unique
+        *   slower than sets for searching through
+*   best use-case: situations where you want to share some transient, approximate, 
+    fast-changing data between servers, and where it’s not a big deal if you
+    occasionally lose that data for whatever reason
+
 @### Register (CPU) [[noun - as in 'a register' not 'to register']] ##@
 *   Special storage locations in the CPU for holding small amounts of data
 *   Data in registers can be acted on ultra-rapidly, but CPUs have a very limited # of registers
     *   thus only currently used data should be placed in registers
+
+@###  Relationship: One-to-one (SQL / DBs) ###@
+*   relationship between 2 entities A and B in which an element of A can only be linked to one element of B, and vice-versa
+        A<--->B
+*   example: husband-to-wife (in mainstream Western culture)
+
+@###  Relationship: One-to-many (SQL / DBs) ###@
+*   relationship between 2 entities (see also entity–relationship model) A and B in which an element of A may be linked to many elements of B, but a member of B is linked to only one element of A
+        A---->B
+        |---->B
+        |---->B
+*   Example: mother-to-children.
+    *   one mother can have many children, but a child can only have one biological mother
+
+
+@###  Relationship: Many-to-many (SQL / DBs) ###@
+*    relationship between 2 entities A and B in which A may may contain a parent instance for which there are many children in B and vice versa
+        B      A------B  B-------A
+        |      |      | /
+        A------B------A----B-----A
+        |              
+        |------B------A----B
+        |           / | \
+        |------B   B  B  B
+
+*   Example: authors-to-books
+    *   an author can write many books. Also, a book can have many authors
+
+
+@###  Relationship: One-to-One (SQL / DBs) ###@
+
 
 @### Resource (Rails) ###@
 *   see Scaffold (Rails)
@@ -327,6 +483,9 @@ Definitions - general
                 /books/series/harry-potter?limit=1&sort=created_at 
     *   Metadata: Content-type, last-modified time, etc.
     *   Control data: Is-modifiable-since, cache-control
+
+@### RTT - Round-trip delay time ###@
+*   
 
 # S ###################################################################################
 @### Scaffold (Rails) ###@
@@ -424,6 +583,12 @@ Example
 @### stdio (aka STDIO, aka std/IO, aka stdIO, aka std/io) ###@
 *   "stdio" stands for "standard input output".
 
+@### strcpy ###@
+*   common C function used to copy a string from a given source to a given destination
+    *   returns a pointer to the destination string.
+*   really only needed if you actually care where things are stored in memory
+    *   ...so really only needed in C
+
 @### Stored procedure ###@
 *   subroutine available to applications that access a relational database management system
 *   stored in the database data dictionary
@@ -452,6 +617,15 @@ Example
     *   lets a whole organization be connected to the internet w/ a single shared network address
 *   dividing a network into 2 or more networks is called subnetting
 
+@### SUID ###@
+*   Set owner User ID up on execution
+*   special type of file permissions given to a file
+*   Normally in Unix when a program runs, it inherits access permissions from the logged in user
+*   Avoid in script files
+*   Example:
+        chmod u+s file1.txt
+
+
 # T ###################################################################################
 @### Testing: black-box testing ###@
 *   one of 3 main testing "methods" (black-box testing, white-box testing, grey-box testing)
@@ -462,6 +636,37 @@ Example
 *   Contrast:
     *   white-box testing: a detailed investigation of internal logic & structure of an app's code
     *   grey-box testing: test an app with limited knowledge (but not none) of its internal workings
+
+@### Tokens [AUTH] ###@
+*   specially crafted pieces of data that carry just enough info to either:
+    *   authorize the user to perform an action, or
+    *   allow a client to get additional info about the auth process to then complete it
+*   i.e. pieces of info that allow auth to be performed
+*   important related specs:
+    *   JWS (JSON Web Signature): allows the token to be validated so it cannot be tampered with;
+    *   JWE (JSON Web Encryption): allows the token to be encrypted so it it's opaque to the client
+
+*   Two major types of tokens:
+
+    1.  access tokens: carry the necessary info to access a resource directly
+        *   when a client passes an access token to a server managing a resource, that server can
+            use the info in the token to decide if the client is authorized or not.
+        *   Access tokens usually have an expiration date and are short-lived
+        *   direct authorization checks are usually possible against an access token
+            (no server communication required)
+        *   
+
+    2.  Refresh tokens: carry the info needed to get a new access token.
+        *   when an access token is required to access a specific resource, a client may use a 
+            refresh token to get a new access token issued by the authentication server
+        *   common use cases:
+            *   getting new access tokens after old ones have expired
+            *   getting access to a new resource for the first time
+        *   can also expire, but tend to live a long time
+        *   How does this help?
+            *   refresh tokens can be blacklisted by the authorization server
+            *   refresh tokens tend to have extremely intensive storage requirements
+            *   https://cdn.auth0.com/blog/refresh-token/diag2.png
 
 # U ###################################################################################
 

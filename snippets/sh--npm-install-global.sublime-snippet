@@ -1,0 +1,8 @@
+<snippet>
+  <description>install npm module globally: npm install -g</description>
+<content><![CDATA[
+npm install -g ${0:name-of-module}
+]]></content>  
+  <tabTrigger>nig</tabTrigger>
+  <scope>source.shell</scope>
+</snippet>

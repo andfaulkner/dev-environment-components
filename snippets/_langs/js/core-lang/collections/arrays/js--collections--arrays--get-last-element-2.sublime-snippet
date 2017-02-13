@@ -1,0 +1,8 @@
+<snippet>
+  <description>Get last element of array</description>
+<content><![CDATA[
+${1:some_array}.slice(-1)[0];${0}
+]]></content>  
+  <tabTrigger>arr_getlast</tabTrigger>
+  <scope>source.js, source.ts, source.jsx, source.tsx</scope>
+</snippet>

@@ -1,0 +1,8 @@
+<snippet>
+  <description>Get the name of the current file, minus the path. Uses Node stl.</description>
+<content><![CDATA[
+path.basename(__filename)${0}
+]]></content>  
+  <tabTrigger>filename_cur</tabTrigger>
+  <scope>source.js, source.ts, source.jsx, source.tsx</scope>
+</snippet>

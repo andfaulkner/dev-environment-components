@@ -1,0 +1,8 @@
+<snippet>
+  <description>Remove file or directory. Like rm -rf</description>
+<content><![CDATA[
+fs.removeSync(path.join(${1:rootPath, 'some/dir/or/file/path/here'}));${0}
+]]></content>  
+  <tabTrigger>fs_rm_sync</tabTrigger>
+  <scope>source.js, source.ts, source.jsx, source.tsx</scope>
+</snippet>

@@ -1,0 +1,37 @@
+#!/usr/bin/env sh
+
+cat <<-BASH_OFT_FORGOTTEN_HEREDOC
+
+shift
+---------------------------------------------------------------------------------
+** BASH - BEST PRACTICES**
+---------------------------------------------------------------------------------
+Always shebang unless it's a library:
+    #!/bin/bash
+
+Uses of sh / bash:
+-   small utilities
+-   wrapper scripts
+-   tiny glue files for calling other utilities
+
+When to avoid bash:
+-   when doing more than the most minimal data manipulation
+-   when performance matters
+-   If you need arrays (for something other than ${PIPESTATUS})
+-   If a script grows past 100 lines (at which point rewrite in another language)
+-   if you need to set user permissions on a file (don't do this in a script!)
+
+What to use instead of bash:
+-   Node
+-   Python
+-   Ruby
+
+Extension
+-   no extension if it's an executable
+-   .sh if it's a library
+
+Max sh file length: 100 lines
+-   Rewrite when the script grows longer than 100 lines
+---------------------------------------------------------------------------------
+
+BASH_OFT_FORGOTTEN_HEREDOC

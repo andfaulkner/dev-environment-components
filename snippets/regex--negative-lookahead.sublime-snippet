@@ -1,7 +1,7 @@
 <snippet>
   <description>Negative lookahead</description>
 <content><![CDATA[
-${0:actual_matcher}(?=${1:ensure_this_not_ahead})
+${0:actual_matcher}(?!${1:ensure_this_not_ahead})
 ]]></content>  
   <tabTrigger>regex_neg_lookahead</tabTrigger>
 </snippet>

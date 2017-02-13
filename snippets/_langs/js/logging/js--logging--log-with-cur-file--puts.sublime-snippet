@@ -1,7 +1,7 @@
 <snippet>
     <description>Log a var to browser console, with context included (filename & function)</description>
     <content><![CDATA[
-console.log('$TM_FILENAME::: fn ${1:fnName}:: ${2:varToLog}:'); console.log(${2:varToLog});
+console.log('$TM_FILENAME: fn ${1:fnName}:: ${2:varToLog}:'); console.log(${2:varToLog});
 ]]></content>
     <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
     <tabTrigger>putsfevar</tabTrigger>

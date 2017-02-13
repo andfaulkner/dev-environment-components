@@ -6,6 +6,15 @@ AWS - definitions
 *   avoids SRP calculations
 *   passwords are sent as plain text, which is dumb
 
+## Cognito (Amazon Cognito)
+*   service that lets you create unique identities for your users & authenticate them using either:
+    *   your own user pools
+    *   federated identity providers
+*   can also save user data e.g. game state or app preferences / settings
+
+## User pools
+*   
+
 ## Custom Authentication Flow
 __Recommended approach for authentication__
 *   auth flow designed to allow for a series of challenge & response cycles customizable to meet different requirements

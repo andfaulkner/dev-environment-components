@@ -1,0 +1,8 @@
+<snippet>
+	<description>require the NodeJS path module</description>
+	<content><![CDATA[
+const path = require('path');
+]]></content>
+	<tabTrigger>req_path</tabTrigger>
+	<scope>source.js, source.ts, source.jsx, source.tsx</scope>
+</snippet>
