@@ -1,0 +1,13 @@
+<snippet>
+  <description>Add file loader to a 'use' list (in module.loaders = [*])</description>
+<content><![CDATA[
+{
+    loader: 'file-loader',
+    options: {
+        name: '[path][name].[ext]',
+    }
+},
+]]></content>  
+  <tabTrigger>wp_loader_file</tabTrigger>
+  <scope>source.js, source.ts, source.jsx, source.tsx</scope>
+</snippet>

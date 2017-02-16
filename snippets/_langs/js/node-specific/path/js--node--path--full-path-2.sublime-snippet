@@ -1,0 +1,8 @@
+<snippet>
+  <description>Ret full path of current file</description>
+<content><![CDATA[
+__filename
+]]></content>  
+  <tabTrigger>path_full</tabTrigger>
+  <scope>source.js, source.ts, source.jsx, source.tsx</scope>
+</snippet>

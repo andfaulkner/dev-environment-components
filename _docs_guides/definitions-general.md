@@ -60,13 +60,19 @@ Definitions - general
     automatically deploy again whenever a new image is pushed or built to Docker Hub
 *   The concept is the same everywhere: automatically deploy again whenever the code changes
 
+# C ###################################################################################
+@### Cipher Block Chaining (CBC) ###@
+*   mode of operation for block ciphers
+*   each block of plaintext is XORed with the previous ciphertext block before being encrypted
+    *   each ciphertext block depends on all plaintext blocks processed up to that point
+    *   To make each message unique, an initialization vector is used in the first block
+
 @### Clock (CPU) ###@
 *   Essentially a pulser that "beats" at a fixed frequency (measured in Hz)
     *   This fixed frequency is known as the clock speed
 *   Used to synchronize execution of instructions
     *   The CPU performs one operation (i.e. follows one instruction) per pulse
 
-# C ###################################################################################
 @### Constraints (database) ###@
 *   conditions forced on the columns of the (db) table to meet the data integrity
 *   types of constraints:
@@ -209,6 +215,11 @@ Definitions - general
 *   gcc back ends: the part that generates machine code for various processors
 
 # H ###################################################################################
+@### Health check URL ###@
+*   Application health check URL is polled by a monitoring service on a given interval
+*   expected to return a "200 OK" response - if it does, the service knows the app is up
+
+
 @### Heap (low-level programming) ###@
 *   stores reference type objects like strings or objects
     *   also stores the references themselves, as well as the data being referenced
@@ -227,6 +238,7 @@ Definitions - general
     *   const someInstance = new SomePrototype
     *   AdminUser.prototype = Object.create(User.prototype), returning an object literal from a function,
 
+
 @### Helper (class) [OOP] [FP] ###@
 *   a helper class is used internally to perform low-level "boilerplate" work with no specific
     business domain meaning
@@ -239,6 +251,7 @@ Definitions - general
     *   nice example here:
         *   https://web.cs.wpi.edu/~cs1101/a05/Docs/creating-helpers.html
 
+
 @### Hertz ###@
 *    1Hz is one cycle per second
 *    Often used to measure CPU 'clock rate' - i.e. operations per second
@@ -248,10 +261,28 @@ Definitions - general
 *    1MHz is ~1,000,000 cycles per second
 *    1GHz is ~1,000,000,000 cycles per second
 
+
 @### Higher-order component ###@
 *   Function that takes a component and returns a component
     *   Can take arguments as well
 *   How they work: "secretly" wrapping the input component inside a container component
+
+
+@### HTTP Live Streaming (HLS) ###@
+*   emerging standard in adaptive bitrate video
+*   Adaptive bitrate video delivery is a combination of server and client software that detects a client's bandwidth capacity and adjusts the quality of the video stream between multiple bitrates and/or resolutions
+
+@### HTTP Strict Transport Security (HSTS) ###@
+Web security policy mechanism to help protect sites against protocol downgrade attacks & cookie hijacking
+*   protocol downgrade attack:
+    *   transparently converts a secure HTTPS connection into a plain HTTP connection
+    *   user can see that it's HTTP, but has no way of knowing that it should be HTTPS
+        *   many sites don't use HTTPS, so it's reasonable to think nothing is wrong despite seeing HTTP rather than https
+    *   sslstrip tool automates the attack
+
+HSTS Policy
+    *   communicated by server to user agent via HTTP response header field "Strict-Transport-Security"
+    *   specifies a period of time during which the user agent should only access the server in a secure fashion
 
 # I ###################################################################################
 @### Idempotence ###@
@@ -328,6 +359,11 @@ Definitions - general
         to the cache.
 *   Basically exists to prevent re-computation
 
+@### Mode of operation ###@
+*   algorithm that uses a block cipher to provide an information service such as confidentiality or authenticity
+    *   block cipher:  deterministic algorithm operating on fixed-length groups of bits, called blocks, with an unvarying transformation that is specified by a symmetric key
+*   Example: a block cipher encryption algorithm might take a 128-bit block of plaintext as input, & output a corresponding 128-bit block of ciphertext. 
+
 @### Mutex ###@
 *	program object that allows multiple program threads to share the same resource, such as file
 	access, but not simultaneously. When a program is started, a mutex is created with a unique name
@@ -347,6 +383,21 @@ Definitions - general
 	resource while the flag is set. The mutex is the flag.
 
 # N ####################################################################################
+@### NAT (Network Address Translation) ###@
+*   process where a network device, usually a firewall, assigns a public address to a computer or group of computers in a private network
+    *   main use: limit the number of public IP addresses an organization must use
+*   method of remapping an IP address space into another by modifying network address info in IP datagram packet headers while they're in transit across a traffic routing device
+*   most common form: large private network using addresses in a private range
+    *   Routers inside the network can route traffic between private addresses with no trouble. 
+    *   However, to access resources outside the network (e.g. Internet), these computers need a public address for responses to their requests to return to them.
+    *   The resource on the Internet thinks it is sending data to the firewall address
+        *   The firewall then routes the requested data to the specific user that requested it, once it arrives
+
+@### NTP (Network Time Protocol) ###@
+*   networking protocol for clock synchronization between computer systems over packet-switched, variable-latency data networks
+*   intended to synchronize all participating computers to within a few milliseconds of Coordinated Universal Time (UTC)
+*   can usually maintain time to within tens of milliseconds over the public Internet, and can achieve better than one millisecond accuracy in local area networks under ideal conditions
+
 @### Nominal typing / Nominal type system ###@
 *   type system where compatibility and equivalence of data types is determined by explicit
     declarations and/or the name of the types
@@ -357,6 +408,10 @@ Definitions - general
     *   ...meaning that one type is a subtype of another if and only if it's explicitly declared
         to be so in its definition
 *   Note: Typescript does not introduce this kind of type system.
+@### Nonce ###@
+*   arbitrary number that may only be used once
+*   often a random or pseudo-random number
+*   often issued in an auth protocol to ensure old communications can't be reused in replay attacks
 
 # O ###################################################################################
 @### Operand ###@
@@ -382,7 +437,7 @@ Definitions - general
              \-- **
 
 # P ###################################################################################
-@### Pointers [C] [Memory management] [low-level programming] ##@
+@### Pointers [C] [Memory management] [low-level programming] ###@
 *   variable whose value is the address of another variable
 *   you must declare a pointer before using it to store any variable address
 *   Syntax:     type *var-name;
@@ -399,13 +454,12 @@ Definitions - general
             int  *pointerTonumVar;
             pointerTonumVar = &numVar
 
-
-
-
 # Q ###################################################################################
+@### Quine ###@
+*   non-empty program that takes no input & outputs a copy of its own source code
 
 # R ###################################################################################
-@### Redis [DB] ##@
+@### Redis [DB] ###@
 *   Great session store database
 *   stores data mainly key-value pairs, but also as:
     *   hashmaps ( hashname => { hashkey : value })
@@ -419,17 +473,17 @@ Definitions - general
     fast-changing data between servers, and where it’s not a big deal if you
     occasionally lose that data for whatever reason
 
-@### Register (CPU) [[noun - as in 'a register' not 'to register']] ##@
+@### Register (CPU) [[noun - as in 'a register' not 'to register']] ###@
 *   Special storage locations in the CPU for holding small amounts of data
 *   Data in registers can be acted on ultra-rapidly, but CPUs have a very limited # of registers
     *   thus only currently used data should be placed in registers
 
-@###  Relationship: One-to-one (SQL / DBs) ###@
+@### Relationship: One-to-one (SQL / DBs) ###@
 *   relationship between 2 entities A and B in which an element of A can only be linked to one element of B, and vice-versa
         A<--->B
 *   example: husband-to-wife (in mainstream Western culture)
 
-@###  Relationship: One-to-many (SQL / DBs) ###@
+@### Relationship: One-to-many (SQL / DBs) ###@
 *   relationship between 2 entities (see also entity–relationship model) A and B in which an element of A may be linked to many elements of B, but a member of B is linked to only one element of A
         A---->B
         |---->B
@@ -438,7 +492,7 @@ Definitions - general
     *   one mother can have many children, but a child can only have one biological mother
 
 
-@###  Relationship: Many-to-many (SQL / DBs) ###@
+@### Relationship: Many-to-many (SQL / DBs) ###@
 *    relationship between 2 entities A and B in which A may may contain a parent instance for which there are many children in B and vice versa
         B      A------B  B-------A
         |      |      | /
@@ -452,7 +506,7 @@ Definitions - general
     *   an author can write many books. Also, a book can have many authors
 
 
-@###  Relationship: One-to-One (SQL / DBs) ###@
+@### Relationship: One-to-One (SQL / DBs) ###@
 
 
 @### Resource (Rails) ###@
@@ -484,8 +538,15 @@ Definitions - general
     *   Metadata: Content-type, last-modified time, etc.
     *   Control data: Is-modifiable-since, cache-control
 
+@### RTMP - Real-Time Messaging Protocol ###@
+*   Multimedia streaming and remote procedure call protocol primarily used in Adobe Flash
+*   Or more specifically, a protocol for streaming audio, video and data over the Internet
+    *   namely between a Flash player and a server
+    *   uses port 1935
+
 @### RTT - Round-trip delay time ###@
-*   
+How long it takes for a client to receive a resource from a network called
+*   measured from the moment it sends a request to the moment the requested resource returns
 
 # S ###################################################################################
 @### Scaffold (Rails) ###@
@@ -637,6 +698,14 @@ Example
     *   white-box testing: a detailed investigation of internal logic & structure of an app's code
     *   grey-box testing: test an app with limited knowledge (but not none) of its internal workings
 
+@### TLS (Transport Layer Security) ###@
+*   cryptographic protocols that provide communications security over a network
+*   aims primarily to provide privacy and data integrity between two communicating applications
+*   properties of a TLS connection:
+    *   private/secure due to symmetric cryptography
+    *   identity of the communicating parties can be authenticated using public-key cryptography
+    *   ensures integrity because each message transmitted includes a message integrity check using a message authentication code to prevent undetected loss or alteration of the data
+
 @### Tokens [AUTH] ###@
 *   specially crafted pieces of data that carry just enough info to either:
     *   authorize the user to perform an action, or
@@ -669,6 +738,11 @@ Example
             *   https://cdn.auth0.com/blog/refresh-token/diag2.png
 
 # U ###################################################################################
+@### UDP (User Datagram Protocol) ###@
+*   alternative communications protocol to Transmission Control Protocol (TCP)
+*   used mainly for establishing low-latency & loss tolerating connections between Internet apps
+*   core member of the Internet protocol suite
+
 
 # V ###################################################################################
 @### Volume (Docker) ###@
@@ -677,6 +751,16 @@ Example
     of the container.
     *   you could also mount a directory from your host into a container - this is also a volume
 *   something mountable is a volume
+
+@### VPC (Virtual private cloud) ###@
+*   virtual network in your own isolated section of a cloud platform (such as AWS)
+
+@### VPS (Virtual private server) ###@
+*   virtual machine sold as a service by an Internet hosting service
+*   runs its own copy of an OS
+*   may give superuser-level access to the installed OS
+    *   allows installing almost any software that runs on that OS
+*   E.g. Amazon Lightsail
 
 # W ###################################################################################
 # X ###################################################################################

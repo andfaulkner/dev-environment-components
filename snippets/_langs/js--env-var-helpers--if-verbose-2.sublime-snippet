@@ -1,0 +1,8 @@
+<snippet>
+  <description>Ret result of memoized fn testing if env var LOG_LEVEL is 'verbose'</description>
+<content><![CDATA[
+if (isVerbose) ${0}
+]]></content>  
+  <tabTrigger>ifverb</tabTrigger>
+  <scope>source.js, source.ts, source.jsx, source.tsx</scope>
+</snippet>

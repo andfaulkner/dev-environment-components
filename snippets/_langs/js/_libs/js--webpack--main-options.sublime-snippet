@@ -93,6 +93,7 @@ module.exports = {
     // webpack simply exports the global objects already present.
     'react/lib/ExecutionEnvironment': true,
     'react/lib/ReactContext': true,
+    '$': 'jQuery',
     'jquery': 'jQuery',
   },
 

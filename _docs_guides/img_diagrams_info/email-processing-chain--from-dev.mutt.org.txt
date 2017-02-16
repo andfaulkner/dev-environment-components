@@ -1,0 +1,41 @@
+== General overview of the mail processing chain ==			   
+
+A generic (yet quite common) mail processing chain.
+{{{								      	   		
+  ------------		        managed by      	        ---------------- 	
+ |   mua      |<-----------------------------------------------| user mailbox	|	
+ |(e.g. mutt) |       	       	       	       	       	       |(e.g. ~/Maildir)|	
+  ------------		 				      	----------------	
+       |  		       	       	       	       	     	 ^         ^		
+       |  compose the message and send   		      	 |     	   |		
+       |  it through a pipe	       	  		      	 |     	   |		
+       | 						      	 |     	   |	       	       	       
+       v 						      	 |     	   |	    -------------------
+  -------------						      	 |     	   |	   |  external filter  |
+ | SMTP client |					      	 |     	   |	   |(e.g. spamassassin)|    
+  -------------        	       	       	       	 	      	 |     	   |	    -------------------
+       |       					 	      	 |     	   |	       |       	   ^
+       |       					 	      	 |     	   |	       |	   |
+       |       	       	       	       	       	       	         |         |   	       |       	   |
+       |            -------------------	      file transport     |     	   |	       v       	   |
+       `---------> | SMTP local server |-------------------------       ---------------------------------   
+       ,---------> |     (e.g. exim)   |      pipe transport   	      |  mail delivery/processing agent |
+       |           |   	       	       |----------------------------->|        (e.g. procmail)       	|       	     
+       |       	   |   	       	       |-------                        ---------------------------------
+       |            -------------------	       |  	       	     			
+       |			       	       |  	       	     			
+       |			       	       |       	       	     			
+       |	  		       	       |       	       	       	       	       	
+  ------------------------     	       	       |       	       	 	  		
+ |  pop retrieval program |	       	       | SMTP transport	 
+ |  (e.g. fetchmail)      |		       |       	   	 
+  ------------------------		       |       	   
+       ^				       |
+       |				       |
+       |     	       	       	       	       |      
+       |				       v      
+  -------------------             -------------------- 
+ | remote pop/imap   |		 | remote SMTP server |
+ |      server       |           |                    |
+  -------------------		  --------------------
+}}}

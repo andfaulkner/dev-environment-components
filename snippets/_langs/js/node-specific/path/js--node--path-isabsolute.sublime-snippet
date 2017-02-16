@@ -1,0 +1,8 @@
+<snippet>
+  <description>Ret true if given string is an absolute path</description>
+<content><![CDATA[
+path.isAbsolute(${1:'./path/to/file/that/is/not/absolute/and/would/ret/false'});${0}
+]]></content>  
+  <tabTrigger>path_isabsolute</tabTrigger>
+  <scope>source.js, source.ts, source.jsx, source.tsx</scope>
+</snippet>

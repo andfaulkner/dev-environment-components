@@ -1,0 +1,8 @@
+<snippet>
+  <description>Ret filename and ext minus the rest of a path (example.txt)</description>
+<content><![CDATA[
+path.basename(${1:__dirname});${0}
+]]></content>  
+  <tabTrigger>path_basename</tabTrigger>
+  <scope>source.js, source.ts, source.jsx, source.tsx</scope>
+</snippet>

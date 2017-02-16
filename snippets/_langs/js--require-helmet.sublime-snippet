@@ -1,0 +1,8 @@
+<snippet>
+  <description>Require helmet security module</description>
+<content><![CDATA[
+const helmet = require('helmet');
+]]></content>  
+  <tabTrigger>req_helmet</tabTrigger>
+  <scope>source.js, source.ts, source.jsx, source.tsx</scope>
+</snippet>

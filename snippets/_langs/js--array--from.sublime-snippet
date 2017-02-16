@@ -1,0 +1,8 @@
+<snippet>
+  <description>Create array from an iterable or array-like object { 0: 'a', 1: 'b' ... }</description>
+<content><![CDATA[
+Array.from(${1:{0: 'a', 1: 'b', 2: 'c', 3: 'shtrh'\}})${0}
+]]></content>  
+  <tabTrigger>arr_from</tabTrigger>
+  <scope>source.js, source.ts, source.jsx, source.tsx</scope>
+</snippet>

@@ -12,6 +12,16 @@ sass-imports
 ### Options
 *   context: absolute path to foldre
 
+style-loader
+------------
+*   inject a pile of data into DOM in a <style> tag
+
+css-loader
+----------
+*   load a .css file. Can also load CSS data that is "streamed" into it (e.g. via sass-loader)
+
+
+
 ----------------------------------------------------------------------------------------------------
 Writing loaders
 ===============

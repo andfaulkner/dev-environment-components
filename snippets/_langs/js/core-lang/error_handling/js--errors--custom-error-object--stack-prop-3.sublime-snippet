@@ -1,0 +1,8 @@
+<snippet>
+  <description>Access the stacktrace in definition of a custom error fn</description>
+<content><![CDATA[
+this.stack
+]]></content>  
+  <tabTrigger>err_trace</tabTrigger>
+  <scope>source.js, source.ts, source.jsx, source.tsx</scope>
+</snippet>

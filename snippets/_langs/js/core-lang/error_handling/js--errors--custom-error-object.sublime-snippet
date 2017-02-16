@@ -8,8 +8,8 @@ const ${1:SomeNewError} = (() => {
         this.name = `${1:SomeNewError}`;
         console.log('this.stack:', this.stack);
         ${3:this.arg1 = arg1};
-        ${3:this.arg2 = arg2};
-        ${3:this.etc = etc};
+        ${4:this.arg2 = arg2};
+        ${5:this.etc = etc};
     }
 
     ${1:SomeNewError}.prototype = Object.create(Error.prototype);

@@ -1,0 +1,8 @@
+<snippet>
+  <description>Use helmet security module (must be imported)</description>
+<content><![CDATA[
+${1:app}.use(helmet());
+]]></content>  
+  <tabTrigger>expr_helmet</tabTrigger>
+  <scope>source.js, source.ts, source.jsx, source.tsx</scope>
+</snippet>
