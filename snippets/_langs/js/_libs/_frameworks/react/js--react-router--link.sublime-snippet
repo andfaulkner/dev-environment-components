@@ -1,13 +1,10 @@
 <snippet>
   <description>React Router link</description>
 <content><![CDATA[
-<Link className={classNames(
-        ${1:'dark-gray', 'ff-better-helvetica', 'fs-16', 'no-underline', 'no-hover-underline'}
-    )}
-    to={`${2:/\${linkPath\}}`}
->${0:Link Text}
+<Link to={`${2:/\${linkPath\}}`}>
+    ${0:Link Text}
 </Link>
 ]]></content>  
-  <tabTrigger>rct_rtr_link</tabTrigger>
+  <tabTrigger>rct_rtr4_link</tabTrigger>
   <scope>source.js, source.ts, source.jsx, source.tsx</scope>
 </snippet>

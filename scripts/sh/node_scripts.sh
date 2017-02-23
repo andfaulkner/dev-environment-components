@@ -149,7 +149,8 @@ alias go_ohritemplate="pushd ./; cd $PROJECTS_DIR/ohri/mhealth-template-webapp"
 alias go_mhealthtemplate="pushd ./; cd $PROJECTS_DIR/ohri/mhealth-template-webapp"
 alias go_templatemhealth="pushd ./; cd $PROJECTS_DIR/ohri/mhealth-template-webapp"
 alias gomhealthtemplate="go_templatemhealth"
-alias go_v2mhealthtemplate="pushd ./; cd $PROJECTS_DIR/ohri/v2-mhealth-template-webapp"
+alias go_v2mhealthtemplate="pushd ./; cd $PROJECTS_DIR/ohri/module-testbed/v2-mhealth-template-webapp"
+alias go_authmodule="pushd ./; cd $PROJECTS_DIR/ohri/module-testbed/@ottawamhealth-auth-handler"
 
 ################################################################################
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ EMBER ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -276,7 +277,7 @@ alias npm_ver_inc="jq .version package.json | ruby -e 'puts STDIN.first.split(/[
 # alias npm_git_tag_w_ver='git tag v"$(jq .version package.json | sed -e \'s/^"//\' -e \'s/"$//\')"'
 alias npm_git_tag_w_ver="git tag v\"\$(jq .version package.json | sed -e 's/^\"//' -e 's/\"$//')\""
 alias npm_bumptag="versiony patch; npm_git_tag_w_ver; git tag;"
-alias npm_bumptagpush="versiony patch; npm_git_tag_w_ver; git tag; git push origin \"v\$(jq -r .version package.json)\""
+alias npm_bumptagpush="git add --all; git commit --all -m 'fixes before a bump'; versiony patch; git commit --all -m 'bump'; npm_git_tag_w_ver; git tag; git push origin \"v\$(jq -r .version package.json)\""
 
 echo "* NodeJS scripts loaded!"
 

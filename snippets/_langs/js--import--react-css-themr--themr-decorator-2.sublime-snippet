@@ -1,0 +1,8 @@
+<snippet>
+  <description>Import react-css-themr module's themr decorator/HOC</description>
+<content><![CDATA[
+import { themr } from 'react-css-themr';
+]]></content>  
+  <tabTrigger>imp_themr__react_css</tabTrigger>
+  <scope>source.js, source.ts, source.jsx, source.tsx</scope>
+</snippet>

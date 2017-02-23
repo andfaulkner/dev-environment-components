@@ -1,0 +1,14 @@
+<snippet>
+  <description>Create new one-to-one relationship in data entity. Only create on 1 entity!</description>
+<content><![CDATA[
+@OneToOne((type) => ${2:LinkedTableEntityType}, {
+    cascadeInsert: true,
+    cascadeUpdate: true,
+    cascadeRemove: true,
+})
+@JoinColumn()
+${1:colName}: ${2:LinkedTableEntityType};${0}
+]]></content>  
+  <tabTrigger>tyo_col_onetoone</tabTrigger>
+  <scope>source.js, source.ts, source.jsx, source.tsx</scope>
+</snippet>

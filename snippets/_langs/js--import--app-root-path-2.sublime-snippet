@@ -1,0 +1,8 @@
+<snippet>
+  <description>Import app-root-path module</description>
+<content><![CDATA[
+import { path as rootPath } from 'app-root-path';
+]]></content>  
+  <tabTrigger>improot</tabTrigger>
+  <scope>source.js, source.ts, source.jsx, source.tsx</scope>
+</snippet>

@@ -1,0 +1,8 @@
+<snippet>
+  <description>React Router withRouter. Add all history fns to wrappedcomponent's props.</description>
+<content><![CDATA[
+withRouter(${0:someComponentHere})
+]]></content>  
+  <tabTrigger>rct_rtr4_withrouter</tabTrigger>
+  <scope>source.js, source.ts, source.jsx, source.tsx</scope>
+</snippet>

@@ -60,6 +60,11 @@ alias bir="bundle install; rbenv rehash"
 alias cut_timestamp="lsa | awk '{print \$8}' | ruby -ne 'puts \$_.split(\"\n\").map{|fn|fn.split(\"_\")[1...-1].join(\"_\")}'"
 
 # reduce annoying ruby error messages
+
+1699 matches across 188 files
+
+
+Searching 2345 files for "EmailInvalidError" (regex)
 alias be="RUBYOPT=-W0 bundle exec"
 
 # view all rake tasks

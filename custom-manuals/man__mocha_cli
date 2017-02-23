@@ -1,0 +1,36 @@
+#!/usr/bin/env sh
+
+cat <<-END_OF_TERMINAL_MANUAL_FOR_BASIC_REFERENCE
+---------------------------------------------------------------------------------
+** MOCHA CLI **
+---------------------------------------------------------------------------------
+##--  BASIC  --##
+# Running mocha from the CLI
+Basic use:                                           mocha
+ - Run all *.spec.ts files in ./test dir w/ mocha 
+
+Run with custom test dir:                            mocha ./spec
+ - Run all *.spec.ts files in ./spec dir w mocha
+ - ...instead of the ./test dir 
+
+Run with config:                                     mocha --opts ./test/mocha.opts
+- Run w the CLI opts specified in mocha.opts file
+
+Run and watch for changes:                           mocha --watch
+
+##--  HELP  --##
+Mocha help:                                          mocha -h
+
+##--  DEBUGGING  --##
+# Node debugger
+Use with Node debugger:                              mocha --debug
+Use with Node debugger, break on 1st line:           mocha --debug-brk
+Use with Node debugger, activate Chrome devtools:    mocha --debug --inspect --debug-brk
+
+# Tracing
+Trace all function calls:                            mocha --trace
+
+
+See https://mochajs.org
+---------------------------------------------------------------------------------\n
+END_OF_TERMINAL_MANUAL_FOR_BASIC_REFERENCE

@@ -43,3 +43,12 @@ WIP
     }
 
 *   [How to handle React Context](https://medium.com/react-ecosystem/how-to-handle-react-context-a7592dfdcbc#.omj2uv2yg)
+
+this._reactInternalInstance._context
+------------------------------------
+*   accesses the "global" context. Can do so from any React component.
+    *   gets set by top-level providers.
+
+this.context
+------------
+*   accesses the "local" context

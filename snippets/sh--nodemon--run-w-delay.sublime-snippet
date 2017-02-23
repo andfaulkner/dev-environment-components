@@ -1,0 +1,8 @@
+<snippet>
+  <description>Set up nodemon to have slight delay before re-run</description>
+<content><![CDATA[
+nodemon --delay ${1:300ms} ${0:command-to-run}
+]]></content>  
+  <tabTrigger>nodemon_delay</tabTrigger>
+  <scope>source.shell</scope>
+</snippet>

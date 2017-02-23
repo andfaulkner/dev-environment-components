@@ -1,0 +1,8 @@
+<snippet>
+  <description>React Router route using component. Show component on path match.</description>
+<content><![CDATA[
+<Route ${1:exact}${1/.+/ /}path={`${2:some-path/:idOrSomething}`} component={${0:MyComponent}}/>
+]]></content>  
+  <tabTrigger>rct_rtr4_route_component</tabTrigger>
+  <scope>source.js, source.ts, source.jsx, source.tsx</scope>
+</snippet>

@@ -1,0 +1,22 @@
+<snippet>
+  <description>Ensure wrapped function once runs once</description>
+<content><![CDATA[
+/**
+ * Any function wrapped by this function will only run once.
+ * Further invocations will return the result of the initial run.
+ * @param  {Function} func - Function to wrap
+ * @return {Function} wrapped function - same as input function, but will only run once
+ */
+function once (func) {
+    let fn = function (...args) {
+        if (fn.called) return fn.value;
+        fn.called = true;
+        return fn.value = func.apply(this, args);
+    }
+    fn.called = false;
+    return fn;
+}
+]]></content>  
+  <tabTrigger>fn_oncefactory</tabTrigger>
+  <scope>source.js, source.ts, source.jsx, source.tsx</scope>
+</snippet>

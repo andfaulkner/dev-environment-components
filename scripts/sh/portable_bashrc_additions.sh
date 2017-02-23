@@ -35,6 +35,7 @@ alias bashrc_android='vim "$SNIPPETS_DIR/scripts/sh/android_scripts.sh"'
 alias bashrc_git='vim "$SNIPPETS_DIR/scripts/sh/git_scripts.sh"'
 alias bashrc_ruby='vim "$SNIPPETS_DIR/scripts/sh/ruby_scripts.sh"'
 alias bashrc_sysutil='vim "$SNIPPETS_DIR/scripts/sh/sys_util_scripts.sh"'
+alias bashrc_sysportable='vim "$PORTABLE_BASHRC_ADDITIONS"'
 alias bashrc_cli='vim "$SNIPPETS_DIR/scripts/sh/cli_opts.sh"'
 alias bashrc_node='vim "$SNIPPETS_DIR/scripts/sh/node_scripts.sh"'
 alias bashrc_search='vim "$SNIPPETS_DIR/scripts/sh/search_scripts.sh"'
@@ -79,7 +80,7 @@ alias gobinhome='pushd ./; cd "$HOME/bin"'
 alias govimsetup='pushd ./; cd "$HOME.config/nvim/"'
 
 ## super-ls
-alias lsa="ls -ao"
+alias lsa='ls -ao | grep -v "[0-9][0-9] \.\.\?$"'
 
 ## use nvim instead
 alias vim="nvim"

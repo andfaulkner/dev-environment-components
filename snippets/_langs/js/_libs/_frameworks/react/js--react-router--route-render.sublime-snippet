@@ -1,0 +1,10 @@
+<snippet>
+  <description>React Router route using render. Runs function when path matches.</description>
+<content><![CDATA[
+<Route ${1:exact}${1/.+/ /}path={`${2:some-path/:idOrSomething}`} render={
+    ${0:({ match \}) => <AppContainer appState={appState\}/>}
+}/>
+]]></content>  
+  <tabTrigger>rct_rtr4_route_render</tabTrigger>
+  <scope>source.js, source.ts, source.jsx, source.tsx</scope>
+</snippet>

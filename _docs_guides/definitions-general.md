@@ -289,6 +289,13 @@ HSTS Policy
 *    an action that is idempotent should deliver identical results if the action is repeated.
 *    GET, PUT, and DELETE requests should be idempotent. POST requests, however, needn't be
 
+@### Index (DB) (Relational DB) (RDB) (SQL###@
+*   An index is a copy of selected columns of data from a table that can be searched very efficiently.
+*   Includes low-level disk block address or direct link to full row of data it was copied from
+*   Put another way: data structure that improves the speed of data retrieval operations on a database table at the cost of additional writes and storage space to maintain the index data structure.
+    *   used to quickly locate data without having to search every row in a database table every time a database table is accessed
+    *   can be created using one or more columns of a database table, providing the basis for both rapid random lookups and efficient access of ordered records
+
 # J ###################################################################################
 @### JWK (JSON Web Key) [AUTH] [JWT] ###@
 *   JSON object that represents a cryptographic key

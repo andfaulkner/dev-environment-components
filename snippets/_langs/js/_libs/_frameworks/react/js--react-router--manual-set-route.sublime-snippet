@@ -3,6 +3,6 @@
 <content><![CDATA[
 hashHistory.push(${1:`/new/path/to/\${point_to\}`});${0}
 ]]></content>  
-  <tabTrigger>rct_rtr_link_prog</tabTrigger>
+  <tabTrigger>rct_rtr4_link_prog</tabTrigger>
   <scope>source.js, source.ts, source.jsx, source.tsx</scope>
 </snippet>

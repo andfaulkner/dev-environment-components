@@ -1,0 +1,9 @@
+<snippet>
+  <description>Example with large sections of conditional text</description>
+<content><![CDATA[
+\${1/.+/\n    className={classNames\(\n        /}\${1:'dark-gray', 'ff-better-helvetica', 'fs-16', 'no-underline', 'no-hover-underline'}\${1/.+/\n    \)\}\n   /}\${1/.+/\n/}
+]]>
+</content>
+  <tabTrigger>snip_conditionals_example</tabTrigger>
+  <scope>text.xml</scope>
+</snippet>

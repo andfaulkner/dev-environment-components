@@ -28,16 +28,135 @@ Links
 
 *   [Live React Router 4 example](https://react-router.now.sh/basic)
 
-
-Notes
-=====
-"Match" component
-    matches the pattern specified in props with the current location/window.pathname
-
 Concepts
 ========
-Locations objects
------------------
+History
+-------
+*   used to track and update the URL of a webpage
+*   history object maintains a stack of locations
+*   three methods for navigation:
+        push:    adds a new location to the stack
+        replace: replaces current location with new one
+        go:      move forward or back a given number of positions
+*   does not actually maintain the stack of locations when it doesn't have to
+    *   relies on the browser whenever possible
+
+
+
+Components
+==========
+Routers
+-------
+*   used on the client side of web applications and make use of the browser's History interface.
+### <HashRouter>
+*   hash urls
+
+<BrowserRouter>
+---------------
+*   provides more traditional URLs, but requires server config to recognize routes
+
+### <MemoryRouter>
+*   React Native-only
+
+<Link />
+--------
+*   used to navigate between locations
+
+
+<Redirect />
+------------
+*   location matches a component, but you don't want the component to be rendered for the user.
+*   common use case: use not logged in
+
+    <Redirect to={ { pathname: '/' } } />
+
+<StaticRouter>
+--------------
+*   A <Router> that never changes location.
+*   useful in:
+    *   server-side rendering scenarios where user isn’t actually clicking around
+        *   ...since in such cases the location never changes
+    *   simple tests where you need to plug in a location & make assetions on the render output
+
+*   probably not that useful for us
+
+
+withRouter
+----------
+*   higher-order component
+*   gives access to the router object’s properties (recommended way to access router object)
+*   re-renders a component it wraps whenever the route changes
+*   easy to wrap classes with it:
+
+    // A simple component that shows the pathname of the current location
+    class ShowTheLocation extends React.Component {
+        static propTypes = {
+            // not 
+            location: PropTypes.object.isRequired
+        }
+
+        render() {
+            return (
+                <div>You are now at {this.props.location.pathname}</div>
+            )
+        }
+    }
+
+    // Create a new component that is connected to the router.
+    // It receives all the router's properties as props.
+    //  *   location: { pathName: string, search: string, hash: string, state: string }
+    //  *   
+    const ShowTheLocationWithRouter = withRouter(ShowTheLocation);
+
+
+
+
+DEPRECATED / REMOVED
+====================
+
+<Match /> - DEPRECATED
+----------------------
+*   used to determine whether its component should be rendered
+    *   uses the same matching mechanism as Express.
+        *   both use the path-to-regex module to compare the pattern to a location
+        *   pattern can include variables, which are prefixed with a colon
+
+*   Basic example:
+    <Match pattern='/page' />
+
+*   Exact matches:
+
+    <Match exactly pattern='/page' />
+
+*   Render the "Yay" item in children on match, and the "Nay" item on non-match:
+
+    <Match pattern='/page' children={
+        ({matched}) => (
+            <p>{
+                (matched) ? 'Yay' : 'Nay'
+            }</p>
+        )
+    } />  
+
+*   Render the items inside render on match:
+
+    <Match pattern='/page' render={
+        () => <h1>Page</h1>
+    } />
+
+*   Render the component inside component on match:
+
+    <Match pattern='/page' component={Page
+
+<ServerRouter> - DEPRECATED/DEAD
+--------------------------------
+*   Render an application on the server
+
+
+QUESTIONABLE (RESEARCH MORE)
+============================
+Location objects
+----------------
 *   allow the React Router components to determine which components should currently be rendered
 *   they use a subset of Location properties to describe a URL, with some additional properties
 
@@ -74,80 +193,3 @@ const location = {
         next: '/other-page'
     }
 };
-
-History
--------
-*   used to track and update the URL of a webpage
-*   history object maintains a stack of locations
-*   three methods for navigation:
-        push:    adds a new location to the stack
-        replace: replaces current location with new one
-        go:      move forward or back a given number of positions
-*   does not actually maintain the stack of locations when it doesn't have to
-    *   relies on the browser whenever possible
-
-
-
-Components
-==========
-Routers
--------
-*   used on the client side of web applications and make use of the browser's History interface.
-### <HashRouter>
-*   hash urls
-
-### <BrowserRouter>
-*   provides more traditional URLs, but requires server config to recognize routes
-
-### <MemoryRouter>
-*   React Native-only
-
-### <ServerRouter>
-*   Render an application on the server
-
-<Match />
----------
-*   used to determine whether its component should be rendered
-    *   uses the same matching mechanism as Express.
-        *   both use the path-to-regex module to compare the pattern to a location
-        *   pattern can include variables, which are prefixed with a colon
-
-*   Basic example:
-    <Match pattern='/page' />
-
-*   Exact matches:
-
-    <Match exactly pattern='/page' />
-
-*   Render the "Yay" item in children on match, and the "Nay" item on non-match:
-
-    <Match pattern='/page' children={
-        ({matched}) => (
-            <p>{
-                (matched) ? 'Yay' : 'Nay'
-            }</p>
-        )
-    } />  
-
-*   Render the items inside render on match:
-
-    <Match pattern='/page' render={
-        () => <h1>Page</h1>
-    } />
-
-*   Render the component inside component on match:
-
-    <Match pattern='/page' component={Page
-
-<Link />
---------
-*   used to navigate between locations
-
-
-project
-<Redirect />
-------------
-*   location matches a component, but you don't want the component to be rendered for the user.
-*   common use case: use not logged in
-
-    <Redirect to={ { pathname: '/' } } />

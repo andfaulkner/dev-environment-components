@@ -1,0 +1,8 @@
+<snippet>
+  <description>Current file, minus the path and extension, 1st letter cap</description>
+<content><![CDATA[
+\${${1:1}:\${TM_FILENAME/^(.)(.+)\..+|.*/\U$1\L$2/:name}}
+]]></content>
+  <tabTrigger>snip_filename_fcap_noextpath</tabTrigger>
+  <scope>text.xml</scope>
+</snippet>

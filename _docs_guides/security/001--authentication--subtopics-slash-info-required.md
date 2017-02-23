@@ -1,6 +1,8 @@
 Authentication - topics
 =======================
 
+*   HPKP: 
+
 *   data obscuring
     *   hashing
         *   algorithms

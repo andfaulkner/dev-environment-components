@@ -3,7 +3,9 @@
     <content><![CDATA[
 /**************************************************************************************************
 *
-*			${1:define module here - e.g. Used for external access to app playlists ... }
+*       @file ./$TM_FILENAME
+*       
+*       ${1:define module here - e.g. Used for external access to app playlists ... }
 *
 */
 ]]></content>

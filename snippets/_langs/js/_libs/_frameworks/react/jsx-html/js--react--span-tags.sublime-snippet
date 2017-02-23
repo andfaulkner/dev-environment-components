@@ -2,7 +2,7 @@
 		<description>Insert a span tag - for use in jsx files</description>
     <content><![CDATA[
 <span${1/.+/ className={/g}${1:namesOf classesHere}${1/.+/}/g}${2/.+/ style={/g}${2:style.MyComponent}${2/.+/}/g}>
-  ${0}
+    ${0}
 </span>
 ]]></content>
     <tabTrigger>span</tabTrigger>

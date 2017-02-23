@@ -60,6 +60,8 @@ function g_squash {
 }
 
 alias g_diff_files_changed='git diff `g_curbr` develop | ack "^\-{3}"'
+alias gd="git diff"
+
 # SANER GIT BRANCH DISPLAY - only show my own branches
 function g_branches {
     DASHESLINE='--------------------------------------------------------------------------------------';
@@ -100,6 +102,8 @@ alias g_repo="git remote -v | xargs ruby -e \"
 alias g_remote="git init; git remote add origin" #arg: location of repo
 alias g_rro="git remote remove origin"
 alias g_rao="git remote add origin" #[place remote repo uri here]
+
+alias gcom="git checkout master"
 
 #function reclaimbranch
 #git remote add origin git@andfaulkner.github.com:andfaulkner/$1"

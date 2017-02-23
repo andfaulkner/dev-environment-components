@@ -1,0 +1,9 @@
+<snippet>
+  <description>Collection of stylings using the colours module that blend well</description>
+<content><![CDATA[
+// colors.bgCyan.black; colors.magenta.white; colors.bgBlack.white.underline; colors.bgWhite.black;
+// colors.bgBlue.white; colors.blue.bgWhite; colors.bgYellow.black;
+]]></content>  
+  <tabTrigger>colors_good_choices</tabTrigger>
+  <scope>source.js, source.ts, source.jsx, source.tsx</scope>
+</snippet>
