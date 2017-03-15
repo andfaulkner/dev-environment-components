@@ -1,0 +1,7 @@
+<snippet>
+  <description>Pi</description>
+<content><![CDATA[
+π
+]]></content>  
+  <tabTrigger>sym_pi</tabTrigger>
+</snippet>

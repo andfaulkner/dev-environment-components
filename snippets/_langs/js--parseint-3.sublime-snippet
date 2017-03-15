@@ -1,0 +1,8 @@
+<snippet>
+  <description>parseInt - turn a string into a number</description>
+<content><![CDATA[
+parseInt(${1:number}, 10)${0}
+]]></content>  
+  <tabTrigger>math_parseint</tabTrigger>
+  <scope>source.js, source.ts, source.jsx, source.tsx</scope>
+</snippet>

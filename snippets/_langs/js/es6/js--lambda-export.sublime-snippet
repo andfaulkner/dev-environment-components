@@ -1,0 +1,10 @@
+<snippet>
+  <description>Export an immutable lambda expression assigned to a variable</description>
+<content><![CDATA[
+export const ${1:name} = (${2:/*args, go, here*/}) => {
+    ${0}
+};
+]]></content>  
+  <tabTrigger>lambda_export</tabTrigger>
+  <scope>source.js, source.ts, source.jsx, source.tsx</scope>
+</snippet>

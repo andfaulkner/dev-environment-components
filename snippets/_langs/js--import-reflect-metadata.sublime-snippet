@@ -1,0 +1,8 @@
+<snippet>
+  <description>Import reflect-metadata library</description>
+<content><![CDATA[
+import 'reflect-metadata';
+]]></content>  
+  <tabTrigger>imp_reflect_metadata</tabTrigger>
+  <scope>source.js, source.ts, source.jsx, source.tsx</scope>
+</snippet>

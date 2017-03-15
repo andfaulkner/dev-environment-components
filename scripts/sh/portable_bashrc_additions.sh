@@ -248,3 +248,8 @@ function open_in_sublime {
     echo "** opening $1 in sublime text 3"
     sublime --project "$1"
 }
+
+## ps aux | ack ... shorthand
+pa() {
+    ps aux | ack $1 | ack -v "perl \/.+bin\/ack"
+}

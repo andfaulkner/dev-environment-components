@@ -211,3 +211,10 @@
 ;   (- 50 _)
 ;   (/ _ 2))
 
+
+;
+; 
+; *** IMPORTANT GOTCHA WITH MACROS ***
+;   Variables used in a macro are bound at the point where the macro is
+;   declared, NOT at the point where the macro is used
+;

@@ -1,0 +1,8 @@
+<snippet>
+  <description>React passdown prop</description>
+<content><![CDATA[
+${1:appState}={${1:appState}}
+]]></content>  
+  <tabTrigger>rpr</tabTrigger>
+  <scope>source.js, source.ts, source.jsx, source.tsx</scope>
+</snippet>

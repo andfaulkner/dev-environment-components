@@ -53,6 +53,10 @@ alias g_tags_my="git tag | ack AF"
 # rubify this, make it check current branch first and only do this if it's on develop after checkout
 alias g_resetdev="git stash; git checkout develop; git fetch origin; git reset --hard origin/develop"
 
+alias gsa="git stash apply"
+alias gstash="git stash"
+alias gsta="git stash"
+
 # Squash together any number of the most recent commits into 1
 # @param $1 - number of commits to squash together (including HEAD, so 1 does nothing)
 function g_squash {
@@ -104,6 +108,11 @@ alias g_rro="git remote remove origin"
 alias g_rao="git remote add origin" #[place remote repo uri here]
 
 alias gcom="git checkout master"
+
+alias g_pullom="git pull origin master"
+alias g_pullm="git pull origin master"
+alias gpullm="g_pullom"
+alias gullom="g_pullom"
 
 #function reclaimbranch
 #git remote add origin git@andfaulkner.github.com:andfaulkner/$1"

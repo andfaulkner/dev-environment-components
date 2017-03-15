@@ -2,8 +2,8 @@
   <description>Create new string-based enum</description>
 <content><![CDATA[
 enum ${1:Language} {
-  ${2:English} = <any>"${2:English}",
-  ${3:German} = <any>"${3:German}"${4/.+/,\n  /}${4:French}${4/.+/ = <any>"/}${4:French}${4/.+/"/}${5/.+/,\n  /}${5:Italian}${5/.+/ = <any>"/}${5:Italian}${5/.+/"/},
+    ${2:English} = "${2:English}" as any,
+    ${3:German} = "${3:German}"${3/.+/ as any,\n    /}${4:French}${4/.+/ = "/}${4:French}${4/.+/"/}${4/.+/ as any,\n    /}${5:Italian}${5/.+/ = "/}${5:Italian}${5/.+/" as any/},
 }
 ]]></content>
   <tabTrigger>enum_str</tabTrigger>

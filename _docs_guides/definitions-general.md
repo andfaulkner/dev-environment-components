@@ -73,6 +73,38 @@ Definitions - general
 *   Used to synchronize execution of instructions
     *   The CPU performs one operation (i.e. follows one instruction) per pulse
 
+@### Closure table (database) ###@
+*   Method of handling tree data in SQL
+*   See https://www.slideshare.net/billkarwin/models-for-hierarchical-data
+*   Have a table mapping ancestors and descendants.
+
+EXAMPLE
+*   This data tree:
+        1
+      /  \
+    2     4
+    |   /   \
+    3  5     6
+             |
+             7
+
+*   ...becomes this table:
+
+        -------------------------
+        | ancestor | descendant |          .          .            .
+        -------------------------          .          .            .
+        |    1     |     1      |          |    3     |     3      |
+        |    1     |     2      |          |    4     |     4      |
+        |    1     |     3      |          |    4     |     5      |
+        |    1     |     4      |          |    4     |     6      |
+        |    1     |     5      |          |    4     |     7      |
+        |    1     |     6      |          |    5     |     5      |
+        |    1     |     7      |          |    6     |     6      |
+        |    2     |     2      |          |    6     |     7      |
+        |    2     |     3      |          |    7     |     7      |
+        .          .            .          -------------------------        
+
+
 @### Constraints (database) ###@
 *   conditions forced on the columns of the (db) table to meet the data integrity
 *   types of constraints:
@@ -415,6 +447,7 @@ HSTS Policy
     *   ...meaning that one type is a subtype of another if and only if it's explicitly declared
         to be so in its definition
 *   Note: Typescript does not introduce this kind of type system.
+
 @### Nonce ###@
 *   arbitrary number that may only be used once
 *   often a random or pseudo-random number
@@ -460,6 +493,11 @@ HSTS Policy
             int  numVar = 20;
             int  *pointerTonumVar;
             pointerTonumVar = &numVar
+
+@### Punycode ###@
+*   way to represent International Domain Names with the limited character set (A-Z, 0-9) supported by the domain name system
+*   e.g. "münich" would be encoded as "mnich-kva"
+*   JS implementation: https://github.com/bestiejs/punycode.js
 
 # Q ###################################################################################
 @### Quine ###@
@@ -752,6 +790,11 @@ Example
 
 
 # V ###################################################################################
+@### V8 ###@
+*   JS engine that powers NodeJS, Chrome, Electron, MongoDB, Opera, and Couchbase.
+*   Actual line-by-line running of the JS code.
+*   Contains no Web APIs, NodeJS modules, etc.
+
 @### Volume (Docker) ###@
 *   something that gets mounted into a container
 *   e.g. if using Mongo, you define a volume called "Mongo data", whioh persists between launches

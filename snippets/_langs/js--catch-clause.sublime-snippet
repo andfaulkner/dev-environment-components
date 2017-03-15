@@ -1,0 +1,11 @@
+<snippet>
+  <description>Catch clause of a try-catch</description>
+<content><![CDATA[
+catch (error) {
+    console.error(${1:`\${TAG\} ERROR: `, error});${0}
+    return error;
+}
+]]></content>  
+  <tabTrigger>catche</tabTrigger>
+  <scope>source.js, source.ts, source.jsx, source.tsx</scope>
+</snippet>

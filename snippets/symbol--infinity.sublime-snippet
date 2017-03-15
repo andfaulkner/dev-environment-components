@@ -1,0 +1,7 @@
+<snippet>
+  <description>Infinity symbol (sideways 8) ∞</description>
+<content><![CDATA[
+∞
+]]></content>  
+  <tabTrigger>sym_infinity</tabTrigger>
+</snippet>

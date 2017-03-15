@@ -32,5 +32,8 @@ echo ' -- rename a local branch: git branch -m <oldname> <newname>'
 echo ''
 echo 'CLONE INTO SPECIFIC FOLDER'
 echo '    git clone https://github.com/andfaulkner/some-repo name-of-folder-to-clone-into'
+echo ''
+echo 'DIFF AGAINST REMOTE'
+echo '    git diff master origin/master'
 echo '--------------------------------------------------------------------------------------------------------\n'
 

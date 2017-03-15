@@ -1,0 +1,7 @@
+<snippet>
+  <description>Symbol - upside-down question mark - ¿</description>
+<content><![CDATA[
+¿
+]]></content>  
+  <tabTrigger>sym_question_mark_upsidedown</tabTrigger>
+</snippet>

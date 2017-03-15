@@ -1,0 +1,7 @@
+<snippet>
+  <description>Backreference: match against 1st matching paren group</description>
+<content><![CDATA[
+\1
+]]></content>  
+  <tabTrigger>regex_br</tabTrigger>
+</snippet>

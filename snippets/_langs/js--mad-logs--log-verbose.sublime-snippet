@@ -1,0 +1,8 @@
+<snippet>
+  <description>log.verbose (for mad-logs)</description>
+<content><![CDATA[
+log.verbose(`${0}`);
+]]></content>  
+  <tabTrigger>logv</tabTrigger>
+  <scope>source.js, source.ts, source.jsx, source.tsx</scope>
+</snippet>

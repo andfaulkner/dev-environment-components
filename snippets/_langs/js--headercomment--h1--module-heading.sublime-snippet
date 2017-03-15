@@ -1,0 +1,18 @@
+<snippet>
+  <description>Level 1 heading: top of module</description>
+<content><![CDATA[
+/**************************************************************************************************
+*
+*   @file ${1:${TM_FILENAME/(.+)\..+|.*/$1/:name}}
+*
+*   ${2:@export {Function\} List exports & their types, 1 @export statement + definition per line
+*   @export {Object\} badassObject - One seriously badass object}
+*       
+*   @description ${0:describe module here}
+*
+*/
+
+]]></content>  
+  <tabTrigger>h1</tabTrigger>
+  <scope>source.js, source.ts, source.jsx, source.tsx</scope>
+</snippet>

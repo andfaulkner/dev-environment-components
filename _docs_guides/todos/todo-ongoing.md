@@ -1,3 +1,17 @@
+Feb 2017
+========
+auth-handler
+------------
+*   ! Install Crystal
+*   ! No errors with redis-commands.spec
+*   Remove all inclusions of redis-client in redis-client-commands.spec.ts
+*   Consider creating redis-client class instead?
+
+template-webapp
+---------------
+*   ! commented functions in display-utils.ts
+
+
 September
 =========
 
@@ -826,7 +840,3 @@ Ruby
 *   include C code in ruby?
 *   avdi rake tutorial - pt 5
 *   make own gem
-
-
-
-

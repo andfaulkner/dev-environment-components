@@ -1,0 +1,14 @@
+<snippet>
+  <description>Node-specific mad-logs logger instance setup section</description>
+<content><![CDATA[
+/******************************************** LOGGING *********************************************/
+import { buildFileTag } from 'mad-logs';
+import { nodeLogFactory } from 'mad-logs/lib/node';
+import * as colors from 'colors';
+
+const log = nodeLogFactory(buildFileTag('${TM_FILENAME}', colors.${1:green.bgWhite}));
+${0}
+]]></content>  
+  <tabTrigger>madlog_nodelog</tabTrigger>
+  <scope>source.js, source.ts, source.jsx, source.tsx</scope>
+</snippet>

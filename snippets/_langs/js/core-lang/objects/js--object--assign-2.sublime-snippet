@@ -3,6 +3,6 @@
 <content><![CDATA[
 ${1/.+/let /}${1:varToStoreNewObj}${1/.+/ = /}Object.assign(${3:{\}}, ${4:any, number_of, source, objects, ...});${0}
 ]]></content>  
-  <tabTrigger>obj_assign</tabTrigger>
+  <tabTrigger>obj_ass</tabTrigger>
   <scope>source.js, source.ts, source.jsx, source.tsx</scope>
 </snippet>

@@ -64,6 +64,11 @@ A &     Run A in background.
 - Run a command and return the value into a string:      var="$(command)"
     - nesting: using $() lets you avoid quote-escaping:  var="$(command1 "$(command2)")"
 
+
+********* PORTS AND SOCKETS *********
+View all ports in use:                                   netstat -na
+- e.g. by running servers, dbs, etc.
+
 Links:
 - Google shell style guide: https://google.github.io/styleguide/shell.xml
 

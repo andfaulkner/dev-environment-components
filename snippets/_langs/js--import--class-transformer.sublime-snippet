@@ -1,0 +1,8 @@
+<snippet>
+  <description>Import the most commonly used exports from module class-transformer</description>
+<content><![CDATA[
+import { plainToClass, Exclude, Expose, Transform, Type } from 'class-transformer';
+]]></content>  
+  <tabTrigger>imp_class_transformer</tabTrigger>
+  <scope>source.js, source.ts, source.jsx, source.tsx</scope>
+</snippet>

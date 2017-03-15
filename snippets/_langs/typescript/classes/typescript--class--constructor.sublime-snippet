@@ -2,7 +2,7 @@
   <description>Constructor</description>
 <content><![CDATA[
 constructor(${1:param1}: ${2:param1_type}) {
-  ${3:super();}${0}
+    ${3:super();}${0}
 }
 ]]></content>  
   <tabTrigger>cns</tabTrigger>

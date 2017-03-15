@@ -1,0 +1,10 @@
+<snippet>
+  <description>Constant object literal variable</description>
+<content><![CDATA[
+const ${1:varName} = {
+    ${0:prop: 'val',}
+};
+]]></content>  
+  <tabTrigger>csol</tabTrigger>
+  <scope>source.js, source.ts, source.jsx, source.tsx</scope>
+</snippet>

@@ -1,0 +1,7 @@
+<snippet>
+  <description>Symbol - sigma - angular E</description>
+<content><![CDATA[
+∑
+]]></content>  
+  <tabTrigger>sym_sigma</tabTrigger>
+</snippet>

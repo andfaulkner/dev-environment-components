@@ -1,0 +1,7 @@
+<snippet>
+  <description>Symbol - omega</description>
+<content><![CDATA[
+Ω
+]]></content>  
+  <tabTrigger>sym_omega</tabTrigger>
+</snippet>

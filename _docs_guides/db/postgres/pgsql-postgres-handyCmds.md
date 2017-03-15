@@ -1,13 +1,7 @@
 IMPORTANT
 =========
-
-look at pg_dump for preserving db examples:
-http://www.postgresql.org/docs/9.1/static/app-pgdump.html
-
-- it actually generates commands for you!!!!!
-
-
-
+[Look at pg_dump for preserving db examples:](http://www.postgresql.org/docs/9.1/static/app-pgdump.html)
+*   It actually generates commands for you
 
 ---------------------------------------------------------------------------------------------------
 POSTGRES DATABASE INFO
@@ -76,7 +70,6 @@ Determine postgres port
 
 ---------------------------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------------------------
-
 DEFINTIONS
 ==========
 
@@ -196,7 +189,6 @@ GRANT usage on schema public to postgres
 
 ---------------------------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------------------------
-
 ENVIRONMENT
 ===========
 
@@ -213,7 +205,6 @@ Set an environment variable
 
 ---------------------------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------------------------
-
 DATABASES
 =========
 
@@ -230,9 +221,21 @@ CONNECT TO A DATABASE
 
         \c name_of_database_to_connect_to
 
+DROP ALL TABLES IN CURRENTLY SELECTED TABLE
+-------------------------------------------
+*   NOTE: if the schema you operate on is not "current", you will want to
+    replace current_schema() in query with 'schematodeletetablesfrom'
+    *and* update the generate 'DROP...' accordingly.
+
+    DO $$ DECLARE
+        r RECORD;
+    BEGIN
+        FOR r IN (SELECT tablename FROM pg_tables WHERE schemaname = current_schema()) LOOP
+            EXECUTE 'DROP TABLE IF EXISTS ' || quote_ident(r.tablename) || ' CASCADE';
+        END LOOP;
+    END $$;
 
 ---------------------------------------------------------------------------------------------------
-
 ADD DATA
 ========
 
@@ -285,7 +288,6 @@ MAKE A TABLE
 
 
 ---------------------------------------------------------------------------------------------------
-
 MODIFY DATA TABLES - COLUMNS
 ============================
 
@@ -358,7 +360,6 @@ Update rows based on a search (WHERE)
 		WHERE CustomerName='Alfreds Futterkiste';
 
 ---------------------------------------------------------------------------------------------------
-
 ADD DATA
 ========
 
@@ -384,7 +385,6 @@ Insert data into table, at specific columns
 
 
 ---------------------------------------------------------------------------------------------------
-
 VIEW DATA
 =========
 
@@ -432,11 +432,16 @@ GET UNIQUE VALUES FROM TABLE
 
 				--> [a list of genres]
 
+COUNT RECORDS IN A TABLE
+------------------------
+    SELECT COUNT(*) FROM "GenericVaccineConcept";
 
+GET MATCHING RECORDS
+--------------------
+    
 
 
 ---------------------------------------------------------------------------------------------------
-
 GET DATA FROM JSON
 ==================
 
@@ -495,6 +500,7 @@ CONDITIONALLY GET DATA FROM ARRAY STORED AT SPECIFIC KEY IN JSON COL
 
         SELECT some_col,json_array_elements(json_col->'key') FROM table_name WHERE some_col='some_value';
 
+
 ---------------------------------------------------------------------------------------------------
 
 Misc
@@ -503,20 +509,14 @@ Misc
 autoincrement value in table
 ----------------------------
 
-		SEQUENCE role_id_seq
+	SEQUENCE role_id_seq
     ALTER TABLE roles ALTER id SET DEFAULT NEXTVAL('role_id_seq');
 
 *   henceforth, the default value of column 'id' will be [previous row's id] + 1.
 *   each newly inserted row is assigned an id that is 1 higher than the row added directly before
 
-
-
-
-
-
-
-
 Alter
+-----
         INSERT INTO roles(`role_id`, `role_name`) VALUES
             (1, 'agent'),
             (2, 'view_all_cases'),

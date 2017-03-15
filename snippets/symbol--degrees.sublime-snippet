@@ -1,0 +1,7 @@
+<snippet>
+  <description>Degrees (tiny top-right corner circle) - °</description>
+<content><![CDATA[
+°
+]]></content>  
+  <tabTrigger>sym_degrees</tabTrigger>
+</snippet>

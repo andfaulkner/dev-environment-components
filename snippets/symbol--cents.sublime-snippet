@@ -1,0 +1,7 @@
+<snippet>
+  <description>Symbol - cents - ¢</description>
+<content><![CDATA[
+¢
+]]></content>  
+  <tabTrigger>sym_cents</tabTrigger>
+</snippet>
