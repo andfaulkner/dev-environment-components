@@ -1,0 +1,9 @@
+<snippet>
+  <description>Create new primary key column inside data entity</description>
+<content><![CDATA[
+@PrimaryGeneratedColumn()
+id: number;
+]]></content>  
+  <tabTrigger>tyo_primarycolgen</tabTrigger>
+  <scope>source.js, source.ts, source.jsx, source.tsx</scope>
+</snippet>

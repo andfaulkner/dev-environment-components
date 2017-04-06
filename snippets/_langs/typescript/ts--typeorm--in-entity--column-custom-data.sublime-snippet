@@ -1,0 +1,15 @@
+<snippet>
+  <description>Create new column with a custom data type inside data entity</description>
+<content><![CDATA[
+// Custom data type
+@Column(${1:{
+    length: 500,
+    nullable: false,
+    unique: false,
+    default: 'placeholder_album_name',
+\}})
+${2:colName: string};
+]]></content>  
+  <tabTrigger>tyo_col_custom</tabTrigger>
+  <scope>source.js, source.ts, source.jsx, source.tsx</scope>
+</snippet>

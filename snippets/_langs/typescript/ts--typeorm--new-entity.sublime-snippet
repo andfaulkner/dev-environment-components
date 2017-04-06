@@ -1,0 +1,30 @@
+<snippet>
+  <description>Create new data entity definition</description>
+<content><![CDATA[
+@Entity('${1}')
+export class ${1:${TM_FILENAME/^(.)(.+)\..+|.*/\U$1\L$2/:name}} implements EntityInstance {
+    @PrimaryGeneratedColumn()
+    id: number;
+
+    ${0:@Column()
+    description: string;
+
+    // Custom data type
+    @Column({
+        length: 500,
+    \})
+    name: string;
+
+    @Column('integer')
+    personAge: number;
+
+    @Column('boolean')
+    isAlive: boolean;
+
+    @Column('date')
+    dateOfBirth: Date;}
+}
+]]></content>  
+  <tabTrigger>tyo_new_entity</tabTrigger>
+  <scope>source.js, source.ts, source.jsx, source.tsx</scope>
+</snippet>

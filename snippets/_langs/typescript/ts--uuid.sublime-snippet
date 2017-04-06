@@ -1,0 +1,8 @@
+<snippet>
+  <description>Create a UUID. require yarn add uuid</description>
+<content><![CDATA[
+const uuidV4 = require('uuid').v4 as () => string;
+]]></content>  
+  <tabTrigger>uuid</tabTrigger>
+  <scope>source.ts, source.tsx</scope>
+</snippet>

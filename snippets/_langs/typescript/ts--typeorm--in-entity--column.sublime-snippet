@@ -1,0 +1,9 @@
+<snippet>
+  <description>Create new column inside data entity</description>
+<content><![CDATA[
+@Column()
+${0:colName}: string;
+]]></content>  
+  <tabTrigger>tyo_col</tabTrigger>
+  <scope>source.js, source.ts, source.jsx, source.tsx</scope>
+</snippet>
