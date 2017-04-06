@@ -1,8 +1,0 @@
-<snippet>
-  <description>yarn add --dev</description>
-<content><![CDATA[
-yarn add --dev ${0:some-module}
-]]></content>  
-  <tabTrigger>yad</tabTrigger>
-  <scope>source.shell</scope>
-</snippet>

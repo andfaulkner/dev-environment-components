@@ -1,7 +1,0 @@
-<snippet>
-  <description>NodeJS shebang</description>
-<content><![CDATA[
-#!/usr/bin/env node
-]]></content>  
-  <tabTrigger>shebang_node</tabTrigger>
-</snippet>

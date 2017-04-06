@@ -1,7 +1,0 @@
-<snippet>
-  <description>Shell shebang</description>
-<content><![CDATA[
-#!/usr/bin/env sh
-]]></content>  
-  <tabTrigger>shebang_sh</tabTrigger>
-</snippet>

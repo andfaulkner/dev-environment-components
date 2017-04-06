@@ -1,8 +1,0 @@
-<snippet>
-  <description>Set up nodemon to watch extra files (files not being run or imported)</description>
-<content><![CDATA[
-nodemon --watch ${1:file-to-watch.ext}${2/.+/ --watch /}${2:another-to-watch.any} ${0:command-to-run.js}
-]]></content>  
-  <tabTrigger>nodemon_watch</tabTrigger>
-  <scope>source.shell</scope>
-</snippet>

@@ -1,8 +1,0 @@
-<snippet>
-  <description>Import a source file</description>
-<content><![CDATA[
-source '${1:./relative/path/to/file/from_directory_script_was_run_from.sh}'${0}
-]]></content>  
-  <tabTrigger>source</tabTrigger>
-  <scope>source.shell</scope>
-</snippet>

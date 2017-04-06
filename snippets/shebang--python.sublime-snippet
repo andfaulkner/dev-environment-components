@@ -1,7 +1,0 @@
-<snippet>
-  <description>Python shebang</description>
-<content><![CDATA[
-#!/usr/bin/env python
-]]></content>  
-  <tabTrigger>shebang_python</tabTrigger>
-</snippet>
