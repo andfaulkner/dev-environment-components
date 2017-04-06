@@ -1,0 +1,8 @@
+<snippet>
+  <description>Check if item is an instance of the given "class" (prototype function)</description>
+<content><![CDATA[
+expect(${1:instance}).to.be.instanceof(${2:class});${0}
+]]></content>  
+  <tabTrigger>cx_instanceof</tabTrigger>
+  <scope>source.js, source.ts, source.jsx, source.tsx</scope>
+</snippet>

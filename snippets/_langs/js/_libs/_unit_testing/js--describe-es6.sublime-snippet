@@ -1,7 +1,7 @@
 <snippet>
 	<description>describe setup (for tdd)</description>
 	<content><![CDATA[
-describe('${1:message}', () => {
+describe(`${1:message}`, function() {
 	${2:code}
 });
 ]]></content>

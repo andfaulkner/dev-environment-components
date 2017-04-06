@@ -1,7 +1,7 @@
 <snippet>
   <description>Skeleton of a new Mocha test file - old version</description>
 <content><![CDATA[
-// ensure environment knows testing is occurring
+// Ensure environment knows testing is occurring.
 process.env.mocha === true;
 
 // Store original process.argv
@@ -21,10 +21,10 @@ const path = require('path');
 const ${1:exportFromTestedFile} = require('${2:../../path/to/tested/file}');
 
 /********************************************* TESTS **********************************************/
-describe('${3:Thing that you are testing (often a class, object, or function)}', function() {
-  it('${4:exists}', function() {
-    ${5:expect(true).to.equal(true);}
-  });${0}
+describe(`${3:Thing that you are testing (often a class, object, or function)}`, function() {
+    it(`${4:exists}`, function() {
+        ${5:expect(true).to.equal(true);}
+    });${0}
 });
 
 // Restore original process.argv

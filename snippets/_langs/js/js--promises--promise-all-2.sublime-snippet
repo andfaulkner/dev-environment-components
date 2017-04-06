@@ -1,0 +1,14 @@
+<snippet>
+  <description>Promise.all - multiple promises run asynchronously</description>
+<content><![CDATA[
+Promise.all([
+    ${1: array, of, promises, here}
+]).then((resultArray) => {
+    ${0: // Runs after all promises resolve}
+}).catch((err) => {
+    ${2:throw err;}
+});
+]]></content>  
+  <tabTrigger>promall</tabTrigger>
+  <scope>source.js, source.ts, source.jsx, source.tsx</scope>
+</snippet>

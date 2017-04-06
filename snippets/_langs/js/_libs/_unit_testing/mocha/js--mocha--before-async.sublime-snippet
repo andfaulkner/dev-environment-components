@@ -1,9 +1,9 @@
 <snippet>
   <description>Async run fn before 1st test to run in cur context/describe</description>
 <content><![CDATA[
-before((next) => {
-  ${0:// run once before the entire set of tests in the current block run.}
-  return next();
+before(function(next) {
+    ${0:// run once before the entire set of tests in the current block run.}
+    return next();
 });
 ]]></content>  
   <tabTrigger>mocha_before_async</tabTrigger>

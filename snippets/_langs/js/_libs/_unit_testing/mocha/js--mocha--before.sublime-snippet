@@ -1,8 +1,8 @@
 <snippet>
   <description>Run fn before 1st test to run in the current context/describe block</description>
 <content><![CDATA[
-before(() => {
-  ${0:// run once before the entire set of tests in the current block run.}
+before(function() {
+    ${0:// run once before the entire set of tests in the current block run.}
 });
 ]]></content>  
   <tabTrigger>mocha_before</tabTrigger>

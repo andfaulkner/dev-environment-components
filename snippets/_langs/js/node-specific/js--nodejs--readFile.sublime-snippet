@@ -1,12 +1,14 @@
 <snippet>
 	<description>Read a file in, return contents as data</description>
 	<content><![CDATA[
-//Read ${2:utf8} file ${1:pathToFile}, return contents in Buffer 'data' if successful
-fs.readFile('${1:pathToFile}', ${2/.+/'$&', /g}function(err, data) {
-	if (err) {
-		throw err;
-	}
-	${0:console.log(data.toString());}
+//Read (utf8?) file ${1:pathToFile}, return contents in Buffer 'data' if successful
+fs.readFile(path.join(__dirname, ${1:'file_to_read_relative_to_cur_path'}), (err, data) => {
+    if (err) {
+        console.error('error reading file ${1}:', err);
+        throw err;
+    }
+    ${0:let dataString = data.toString();
+    console.log(dataString);}
 });
 ]]></content>
 	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->

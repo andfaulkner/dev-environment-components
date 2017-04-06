@@ -1,0 +1,8 @@
+<snippet>
+  <description>Directory the current set of scripts was run from (NOT the file)</description>
+<content><![CDATA[
+process.env.PWD
+]]></content>  
+  <tabTrigger>pwd</tabTrigger>
+  <scope>source.js, source.ts, source.jsx, source.tsx</scope>
+</snippet>

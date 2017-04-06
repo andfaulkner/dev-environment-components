@@ -1,7 +1,7 @@
 <snippet>
 	<description>it setup (for tdd)</description>
 	<content><![CDATA[
-it('${1:message}', () => {
+it(`${1:message}`, function() {
 	${2:code}
 });
 ]]></content>

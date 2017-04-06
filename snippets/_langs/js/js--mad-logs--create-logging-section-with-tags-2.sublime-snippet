@@ -2,9 +2,7 @@
   <description>Make Logging section. Imports logging deps & makes colored tag w filename</description>
 <content><![CDATA[
 /******************************************** LOGGING *********************************************/
-import { buildFileTag, logFactory } from 'mad-logs';
-import * as colors from 'colors';
-
+import { buildFileTag, colors } from 'mad-logs/lib/node';
 const TAG = buildFileTag('${TM_FILENAME}', colors.${1:bgMagenta.white});
 ${0}
 ]]></content>  

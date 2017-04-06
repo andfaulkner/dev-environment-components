@@ -1,0 +1,8 @@
+<snippet>
+  <description>Log header comment w/ 'THIRD-PARTY MODULES' centered + emphasized</description>
+<content><![CDATA[
+//************************************** THIRD-PARTY MODULES **************************************/
+]]></content>  
+  <tabTrigger>hdtpm</tabTrigger>
+  <scope>source.js, source.ts, source.jsx, source.tsx</scope>
+</snippet>

@@ -1,0 +1,8 @@
+<snippet>
+  <description>Return true if predicate ret true for all items in the arr</description>
+<content><![CDATA[
+${1:someArr}.every((${2:item}${3:, idx, coll}) => ${0:(${2:item} === 'something')});
+]]></content>  
+  <tabTrigger>arr_every</tabTrigger>
+  <scope>source.js, source.ts, source.jsx, source.tsx</scope>
+</snippet>

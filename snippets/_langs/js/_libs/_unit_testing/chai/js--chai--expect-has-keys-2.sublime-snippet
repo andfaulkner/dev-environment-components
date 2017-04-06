@@ -1,5 +1,5 @@
 <snippet>
-  <description>Determine if object has all given vals as keys</description>
+  <description>Determine if object has all given strs (and no others) as keys</description>
 <content><![CDATA[
 expect(${1:{type: 'grizzly', age: 4\}}).to.have.keys(${2:['type', 'age']});${0}
 ]]></content>  

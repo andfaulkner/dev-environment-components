@@ -1,0 +1,8 @@
+<snippet>
+  <description>Output custom formatted string from a moment object.</description>
+<content><![CDATA[
+moment(${1:someMomentObject}).format(${2:"YYYY-MM-DD"});${0}
+]]></content>  
+  <tabTrigger>moment_format</tabTrigger>
+  <scope>source.js, source.ts, source.jsx, source.tsx</scope>
+</snippet>

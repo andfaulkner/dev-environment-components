@@ -1,9 +1,9 @@
 <snippet>
   <description>async it block: i.e. asynchronously run a single test</description>
 <content><![CDATA[
-it("${1:should be able to do the thing here}", function(done) => {
-  ${0://assertion statements here e.g. chai.expect('A STRING!').to.exist;}
-  done(${2:/*optional error*/});
+it(`${1:should be able to do the thing here}`, function(done) {
+    ${0://assertion statements here e.g. chai.expect('A STRING!').to.exist;}
+    done(${2:/*optional error*/});
 });
 ]]></content>  
   <tabTrigger>mocha_it_async</tabTrigger>

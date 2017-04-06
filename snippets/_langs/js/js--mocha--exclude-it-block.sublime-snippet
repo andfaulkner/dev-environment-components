@@ -1,0 +1,8 @@
+<snippet>
+  <description>Exclude an it block from test running</description>
+<content><![CDATA[
+it.exclude
+]]></content>  
+  <tabTrigger>mocha_skip_it</tabTrigger>
+  <scope>source.js, source.ts, source.jsx, source.tsx</scope>
+</snippet>

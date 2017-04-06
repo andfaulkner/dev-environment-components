@@ -1,0 +1,8 @@
+<snippet>
+  <description>Exclude a describe block from test running</description>
+<content><![CDATA[
+describe.exclude
+]]></content>  
+  <tabTrigger>mocha_exclude_describe</tabTrigger>
+  <scope>source.js, source.ts, source.jsx, source.tsx</scope>
+</snippet>

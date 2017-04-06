@@ -1,10 +1,10 @@
 <snippet>
   <description>Skeleton of a new Mocha test file</description>
 <content><![CDATA[
-// ensure environment knows testing is occurring
+// Ensure environment knows testing is occurring.
 process.env.mocha === true;
 
-// Store original process.argv
+// Store original process.argv.
 const oldProcArgs = Object.assign({}, process.argv);
 
 /************************************** THIRD-PARTY IMPORTS ***************************************/
@@ -33,7 +33,7 @@ describe('${2/^([^,]+).*/$1/}', function() {
     });
     ${0}
 });
-${3/.+/\ndescribe\('/}${3:${2/^[^,]+,\s?([^,]+).*/$1/}}${3/.+/', function\(\) {\n    it\('exists', function\(\) {\n        expect\(/}${3/^[^,]+,\s?([^,]+).*/$1/}${3/.+/\).to.exist;\n    \}\);\n\n\}\);\n/}${__________________________________________________________}${4/.+/\ndescribe\('/}${4:${2/^[^,]+,\s?([^,]+).*/$1/}}${4/.+/', function\(\) {\n    it\('exists', function\(\) {\n        expect\(/}${4/^[^,]+,\s?([^,]+).*/$1/}${4/.+/\).to.exist;\n    \}\);\n\n\}\);\n/}
+${3/.+/\ndescribe\(`/}${3:${2/^[^,]+,\s?([^,]+).*/$1/}}${3/.+/`, function\(\) {\n    it\(`exists`, function\(\) {\n        expect\(/}${3/^[^,]+,\s?([^,]+).*/$1/}${3/.+/\).to.exist;\n    \}\);\n\n\}\);\n/}${__________________________________________________________}${4/.+/\ndescribe\(`/}${4:${2/^[^,]+,\s?([^,]+).*/$1/}}${4/.+/`, function\(\) {\n    it\(`exists`, function\(\) {\n        expect\(/}${4/^[^,]+,\s?([^,]+).*/$1/}${4/.+/\).to.exist;\n    \}\);\n\n\}\);\n/}
 // Restore original process.argv
 process.argv = Object.assign({}, oldProcArgs);
 

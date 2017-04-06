@@ -1,8 +1,8 @@
 <snippet>
   <description>Run fn before 1st test to run in the current context/describe block</description>
 <content><![CDATA[
-beforeEach(() => {
-  ${0:// run before each test in this block.
+beforeEach(function() {
+    ${0:// run before each test in this block.
 });
 ]]></content>  
   <tabTrigger>mocha_beforeeach</tabTrigger>

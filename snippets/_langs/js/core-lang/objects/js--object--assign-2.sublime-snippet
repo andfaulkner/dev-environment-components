@@ -1,7 +1,7 @@
 <snippet>
   <description>Cp enumerable props vals' from 1+ src objs to target obj; ret target obj. Non-recursive.</description>
 <content><![CDATA[
-${1/.+/let /}${1:varToStoreNewObj}${1/.+/ = /}Object.assign(${3:{\}}, ${4:any, number_of, source, objects, ...});${0}
+Object.assign(${1:{\}}, ${0:any, number_of, source, objects, ...})
 ]]></content>  
   <tabTrigger>obj_ass</tabTrigger>
   <scope>source.js, source.ts, source.jsx, source.tsx</scope>

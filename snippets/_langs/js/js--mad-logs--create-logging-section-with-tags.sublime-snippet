@@ -1,13 +1,11 @@
 <snippet>
-  <description>Make Logging section. Imports logging deps & makes colored tag w filename</description>
+    <description>Make Logging section. Imports logging deps and makes colored tag w filename</description>
 <content><![CDATA[
 /******************************************** LOGGING *********************************************/
-import { buildFileTag, logFactory } from 'mad-logs';
-import * as colors from 'colors';
-
+import { buildFileTag, nodeLogFactory, colors } from 'mad-logs/lib/node';
 const TAG = buildFileTag('${TM_FILENAME}', colors.${1:bgMagenta.white});
 ${0}
 ]]></content>  
-  <tabTrigger>madlog_tagsect</tabTrigger>
-  <scope>source.js, source.ts, source.jsx, source.tsx</scope>
+    <tabTrigger>madlog_tagsect_node</tabTrigger>
+    <scope>source.js, source.ts, source.jsx, source.tsx</scope>
 </snippet>
