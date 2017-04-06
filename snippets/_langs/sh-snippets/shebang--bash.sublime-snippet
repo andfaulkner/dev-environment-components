@@ -1,0 +1,7 @@
+<snippet>
+  <description>Bash shebang</description>
+<content><![CDATA[
+#!/usr/bin/env bash
+]]></content>  
+  <tabTrigger>shebang_bash</tabTrigger>
+</snippet>

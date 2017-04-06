@@ -1,5 +1,5 @@
 <snippet>
-	<description>If statement: block inside runs if given variable has something assigned to it</description>
+	<description>If statement: true if given var is set and isn't an empty string</description>
 	<content><![CDATA[
 if [[ -n "${1:\$SOME_VARIABLE}" ]]; then
   ${3:# do this if given variable has something assigned to it}

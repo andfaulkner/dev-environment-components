@@ -1,0 +1,8 @@
+<snippet>
+  <description>Node - debug in Google web console</description>
+<content><![CDATA[
+node --inspect --debug-brk
+]]></content>  
+  <tabTrigger>node_debug</tabTrigger>
+  <scope>source.shell</scope>
+</snippet>

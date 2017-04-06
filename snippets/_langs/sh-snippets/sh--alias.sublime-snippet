@@ -1,0 +1,8 @@
+<snippet>
+  <description>Create an alias</description>
+<content><![CDATA[
+alias ${1:my_new_alias}="${2:echo 'do cool things'}"${0}
+]]></content>  
+  <tabTrigger>als</tabTrigger>
+  <scope>source.shell</scope>
+</snippet>

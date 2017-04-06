@@ -1,0 +1,10 @@
+<snippet>
+  <description>true if given var is set. WARNING: TREATS VALS SET TO EMPTY STRINGS AS SET!</description>
+<content><![CDATA[
+if [[ ! -z \${${1:MY_VARIABLE}} ]]; then
+    ${0}
+fi
+]]></content>  
+  <tabTrigger>if_var_is_set</tabTrigger>
+  <scope>source.shell</scope>
+</snippet>

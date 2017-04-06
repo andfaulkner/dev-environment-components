@@ -1,0 +1,8 @@
+<snippet>
+  <description>yarn add</description>
+<content><![CDATA[
+yard add ${0:some-module}
+]]></content>  
+  <tabTrigger>yas</tabTrigger>
+  <scope>source.shell</scope>
+</snippet>
