@@ -1,11 +1,57 @@
+Apr 2017
+*   ! javelinInterface empty instance
+*   ! javelinJsonInterface empty instance
+*   javelinDateInstance empty instance
+
+*   ! javelinInterface empty instance
+*   ! javelinJsonInterface empty instance
+*   javelinDateInstance empty instance
+
+*   pass all built instances into JavelinLauncher
+
+*   get list of all javelinInterface methods actually used by Javelin
+*   get list of all javelinJsonInterface methods actually used by Javelin
+*   get list of all javelinDateInstance methods actually used by Javelin
+
+*   javelinInterface properly operating instance, for all places used by Javelin
+*   javelinInterface properly operating instance, for all places used by Javelin
+*   javelinJsonInterface properly operating instance, for all places used by Javelin
+*   javelinDateInstance properly operating instance, for all places used by Javelin
+
 Feb 2017
 ========
 auth-handler
 ------------
-*   ! Install Crystal
 *   ! No errors with redis-commands.spec
+*   ! remove extractChattiness
+*   ! Eliminate config/config.js references.
+*   ! Eliminate config/config.js altogether
+*   ! More versatile fetcher - both save and getData.
+*   ! Fetcher that saves.
+*   ! Remove "config/config.js doesn't exist" et al errors in clean command
+*   ! Fix 'avoid exposing config-server.js in browser' issue
+*   ! Eliminate redundant render-config.js script.
+*   ! Get build to work again with config/config.ts removed
+
+*   ! Fix auth config to work with newest auth-handler version
+*   ! Remove template-hoc, with-table-utils
+*   ! Move util components from HOC dir to components/util dir
+*   ! Get redirection working correctly in with-data-fetching.
+*   Assign data tasks to Jordan
+
+*   Replace table with version from React-Toolbar library (for hyper-customizing)
 *   Remove all inclusions of redis-client in redis-client-commands.spec.ts
 *   Consider creating redis-client class instead?
+*   Hoist statics
+*   Typed fetcher (3/4)
+*   get react-toastr working as replacement for locations alert displayed
+*   common-config - look back through it
+*   common-config - merge with individual files where required
+*   check into navigation-router index return in 2nd try-catch within /:param route handler
+    *   ensure it doesn't return index.html when nonexistent resources are requests.
+*   better documentation in navigation-router
+*   BannerEntity should properly handle "BilingualText" to actually return e.g. French if needed,
+    rather than just only returning the English string.
 
 template-webapp
 ---------------

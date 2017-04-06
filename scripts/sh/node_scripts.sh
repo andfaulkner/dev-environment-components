@@ -40,7 +40,18 @@ alias yad="yarn add --dev"
 alias yap="yarn add --peer"
 alias yas="yarn add"
 
+# Install type definition with yarn
+function yat() {
+    if [[ -n "$1" ]]; then
+        yarn add --dev "@types/$1"
+    else
+        echo "you must specify a module name to install type definitions"
+    fi
+}
+
+
 ############################### PROJECT CONVENIENCE FUNCTIONS ############################## 
+alias cnc="./common-npm-commands"
 alias mds="script/devops build development --clean"
 alias sd="script/devops"
 alias sdb="script/devops build"

@@ -228,10 +228,13 @@ function file.get_line { #arg1: filename; arg2: line
   cat $1 | awk "NR==$2"
 }
 
-# bash completion
+############# Bash completion ###############
 if [[ -f $(brew --prefix)/etc/bash_completion ]]; then
 	. $(brew --prefix)/etc/bash_completion
 fi
+
+[ -f /usr/local/etc/bash_completion ] && . /usr/local/etc/bash_completion
+#############################################
 
 # Load RVM into a shell session *as a function*
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
