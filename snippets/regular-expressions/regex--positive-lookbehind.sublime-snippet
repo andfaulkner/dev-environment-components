@@ -1,0 +1,7 @@
+<snippet>
+  <description>Positive lookbehind</description>
+<content><![CDATA[
+(?<=${1:lookbehind_for_this})${0:actual_matcher}
+]]></content>  
+  <tabTrigger>regex_pos_lookbehind</tabTrigger>
+</snippet>
