@@ -2,7 +2,7 @@
   <description>Declare a module</description>
 <content><![CDATA[
 declare module '${1:module-name}' {
-    ${2:function 2:moduleFunction(moduleName: string): any;
+    ${2:function moduleFunction(moduleName: string): any;
     export = moduleFunction;}
 }
 ]]></content>  

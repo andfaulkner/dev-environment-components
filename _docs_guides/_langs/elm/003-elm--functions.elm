@@ -1,6 +1,7 @@
 ---------------- APP STARTING POINT ----------------
 main =
     text "hello world!"
+
 -- all apps start on a function called main
 
 --------------------------------------- 2 KINDS OF FUNCTIONS ---------------------------------------
@@ -10,43 +11,48 @@ main =
 --------------------------------------- ANONYMOUS FUNCTIONS ----------------------------------------
 -- aka a lambda
 -- e.g.:
-\x -> x + 1
+
+pow n = n * n
+
     -- arguments are listed between the \ and ->
         -- in the above example, x is the only argument
     -- right side of the arrow says what to do to the arguments
     -- has implicit return (like Ruby)
 
-\x y -> x + y
+sum x y = x + y
     -- no commas between arguments
     -- above takes 2 params, x and y
 
 ----------------------------------------- NAMED FUNCTIONS ------------------------------------------
 add1 : Int -> Int  --< function signature. Optional, but recommended for clarity
-add1 x =           --< function name and args
-    x + 1          --< actions performed on the args
+add1 x = x + 1     --< LS: function name and args. RS: actions performed on the args
 
 add : Int -> Int -> Int
-add x y =
-    x + y  --> returns <function> : number -> number -> number
+add x y = x + y  --> returns <function> : number -> number -> number
+
     -- note that the function signature simply adds another arrow when another
     -- argument is received by the function. Technically Elm functions only
     -- take one argument, but thanks to auto-currying this is transparent
 
------------------------------ FUNCTION APPLICATION (RUNNING FUNCTIONS) -----------------------------
-add1 5 --> returns 6 : number
-
-add 5 8 --> returns 13 : number
-
--- function application is done with spaces rather than braces
+-- example for partial application later...
+divide x y = y / x
 
 ----------------------------------- NO-ARG FUNCTIONS (CONSTANTS) -----------------------------------
 name =
     "Meeka" --> returns "Meeka" : String
 
+----------------------------- FUNCTION APPLICATION (RUNNING FUNCTIONS) -----------------------------
+add1 5
+--> returns 6 : number
+
+add 5 8
+--> returns 13 : number
+
+-- function application is done with spaces rather than braces
+
 --------------------------------------- PARTIAL APPLICATION ----------------------------------------
 -- any function requiring multiple args can take a smaller number of args to create a partially
 -- applied function. The function will then run when the remaining args are passed in.
-divide x y = y / x
 divideBy3 = divide 3 -- << partially applied function
 divideBy3 21         --> returns 7 : Float
 
@@ -55,7 +61,7 @@ divideBy3 21         --> returns 7 : Float
     -- meaning a function consumes ("associates to/with") the leftmost values first
         -- ...aka the nearest values
 -- natural order represented by parens:
-    ((divide 3) 21)
+    --      ((divide 3) 21)
 
 -- parens can be used to control order of association, namely when calling a function with the
 -- result of another function. e.g.

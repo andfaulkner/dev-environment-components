@@ -162,6 +162,8 @@ alias go_templatemhealth="pushd ./; cd $PROJECTS_DIR/ohri/mhealth-template-webap
 alias gomhealthtemplate="go_templatemhealth"
 alias go_v2mhealthtemplate="pushd ./; cd $PROJECTS_DIR/ohri/module-testbed/v2-mhealth-template-webapp"
 alias go_authmodule="pushd ./; cd $PROJECTS_DIR/ohri/module-testbed/@ottawamhealth-auth-handler"
+alias go_misctsutils="pushd $PROJECTS_DIR/new_node_modules/misc-utils"
+alias go_javelinscript="pushd $PROJECTS_DIR/ohri/Javelin/CANImmunize-Javelinscript"
 
 ################################################################################
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ EMBER ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

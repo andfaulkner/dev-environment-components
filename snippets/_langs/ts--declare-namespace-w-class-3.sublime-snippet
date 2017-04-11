@@ -1,0 +1,15 @@
+<snippet>
+  <description>Declare a namespace with a class in a .d.ts file</description>
+<content><![CDATA[
+declare namespace ${1:name.of.namespace} {
+    class ${2:ClassName} {
+        ${0:private privateProp: number;
+        public static classMethod: (someArg: string, anotherArg: any) => any;
+        public static factoryMethod: (arg1: any, ...arg2: any[]) => ${2}
+        public someMethod: (arg: any) => any;}
+    }
+}
+]]></content>  
+  <tabTrigger>tsdecl_ns_wclass</tabTrigger>
+  <scope>source.ts</scope>
+</snippet>

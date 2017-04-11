@@ -77,3 +77,24 @@ alert(curFunc(3));
 // => 4
 alert(curFunc2(3));
 // => 16
+
+/********************************************* LENSES *********************************************/
+// see https://medium.com/javascript-inside/an-introduction-into-lenses-in-javascript-e494948d1ea5
+
+//  Definition
+//      Lens: functional getter/setter
+
+//
+// Naive implementation
+//
+
+const lens = (getter, setter) => {
+    return ({
+        get: obj => getter(obj),
+        set: (val, obj) => setter(val, obj),
+    })
+}
+
+const view = (lens, obj) => lens.get(obj);
+
+const set = (lens, val, obj) => lens.set(val, obj);
