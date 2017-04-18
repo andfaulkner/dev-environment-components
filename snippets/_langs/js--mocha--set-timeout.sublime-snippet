@@ -1,0 +1,8 @@
+<snippet>
+  <description>Set the timeout (fail test after given number of ms passes) - in describe block</description>
+<content><![CDATA[
+this.timeout(${1:30000});${0}
+]]></content>  
+  <tabTrigger>mocha_timeout_set</tabTrigger>
+  <scope>source.js, source.ts, source.jsx, source.tsx</scope>
+</snippet>

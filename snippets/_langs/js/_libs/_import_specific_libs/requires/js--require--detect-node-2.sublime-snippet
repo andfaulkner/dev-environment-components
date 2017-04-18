@@ -9,6 +9,6 @@ if (isNode) {
 }
 
 ]]></content>  
-  <tabTrigger>req_detect_node</tabTrigger>
+  <tabTrigger>req_is_node</tabTrigger>
   <scope>source.js, source.ts, source.jsx, source.tsx</scope>
 </snippet>

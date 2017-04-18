@@ -4,6 +4,7 @@
 echo '* git scripts loading...'
 alias g="git"
 alias gpom="git push origin master"
+alias gpo="git push origin"
 alias gaa="git add --all"
 alias gca="git commit --all -m"
 alias gaca="git add --all; git commit --all -m"

@@ -1,0 +1,8 @@
+<snippet>
+  <description>Import mad-logs browser-specific functionality</description>
+<content><![CDATA[
+import { logFactory, logMarkers } from 'mad-logs';
+]]></content>  
+  <tabTrigger>imp_madlogs_browser</tabTrigger>
+  <scope>source.js, source.ts, source.jsx, source.tsx</scope>
+</snippet>

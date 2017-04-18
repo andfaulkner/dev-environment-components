@@ -1,0 +1,8 @@
+<snippet>
+  <description>Import fs-promise-extra</description>
+<content><![CDATA[
+import { ensureDirSync, copySync, readdirSync, readSync, lstatSync, readFileSync, writeFileSync } from 'fs-extra-promise';
+]]></content>  
+  <tabTrigger>imp_fs_promise_extra</tabTrigger>
+  <scope>source.js, source.ts, source.jsx, source.tsx</scope>
+</snippet>

@@ -1,0 +1,8 @@
+<snippet>
+  <description>Import mad-logs node-specific functionality</description>
+<content><![CDATA[
+import { buildFileTag, nodeLogFactory, colors } from 'mad-logs/lib/node';
+]]></content>  
+  <tabTrigger>imp_madlogs_node</tabTrigger>
+  <scope>source.js, source.ts, source.jsx, source.tsx</scope>
+</snippet>
