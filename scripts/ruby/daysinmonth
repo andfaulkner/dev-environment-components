@@ -1,0 +1,67 @@
+#!/usr/bin/env ruby
+
+# Returns true if given year is a leap year
+def isLeap(year)
+    return true if year % 4 == 0 && year % 100 != 0
+    return true if year % 400 == 0
+    return false
+end
+
+def isFeb(month)
+    month == '2' || month == 'feb' || month == 'febr' || month == 'february'
+end
+
+# Display usage info.
+def usage
+    puts "\nUSAGE: daysinmonth [MONTH] [YEAR?]"
+    puts '* Returns number of days in given MONTH (e.g. jan, feb, Feb, 1, 2, january).'
+    puts '* if [MONTH] is February, [YEAR] must also be provided to determine the length.'
+    allowed_month_inputs
+    puts "Examples"
+    puts "  > daysinmonth feb 2016"
+    puts "  > daysinmonth mar"
+    puts "  > daysinmonth Sept"
+    puts "  > daysinmonth October"
+    puts "  > daysinmonth october"
+    puts "  > daysinmonth dec"
+    puts "  > daysinmonth 5"
+    puts "  > daysinmonth 2 2000"
+    exit
+end
+
+def allowed_month_inputs
+    puts "* Allowed inputs for month value (1st argument):"
+    puts "  * Numbers from 1-12"
+    puts "  * 3-letter short form of any month"
+    puts "  * Full name of any month"
+end
+
+def putsExit(num)
+    puts num
+    exit
+end
+
+# Get arguments from CLI
+month = ARGV[0] ? ARGV[0].downcase : false
+year = ARGV[1] && ARGV[1].match(/^\d+$/) ? ARGV[1].to_i : false
+
+# Ensure month arg is given, and that a year arg is given if month arg is february.
+usage if !month || (isFeb(month) && !year)
+
+# Display number of days in the month based on the given args.
+putsExit 31 if month == 'jan' || month == 'january'  || month == '1'
+putsExit 28 if isFeb(month) && !isLeap(year)
+putsExit 29 if isFeb(month) && isLeap(year)
+putsExit 31 if month == 'mar' || month == 'march'    || month == '3'
+putsExit 30 if month == 'apr' || month == 'april'    || month == '4'
+putsExit 31 if month == 'may'                        || month == '5'
+putsExit 30 if month == 'jun' || month == 'june'     || month == '6'
+putsExit 31 if month == 'jul' || month == 'july'     || month == '7'
+putsExit 31 if month == 'aug' || month == 'august'   || month == '8'
+putsExit 30 if month == 'sep' || month == 'sept'     || month == 'september' || month == '9'
+putsExit 31 if month == 'oct' || month == 'october'  || month == '10'
+putsExit 30 if month == 'nov' || month == 'november' || month == '11'
+putsExit 31 if month == 'dec' || month == 'december' || month == '12'
+
+puts "Unknown month given: #{ARGV[0]}."
+allowed_month_inputs

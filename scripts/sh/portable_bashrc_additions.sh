@@ -7,7 +7,8 @@ RUBY_SCRIPTS="$SNIPPETS_DIR/scripts/sh/ruby_scripts.sh"
 NODE_SCRIPTS="$SNIPPETS_DIR/scripts/sh/node_scripts.sh"
 CLOJURE_SCRIPTS="$SNIPPETS_DIR/scripts/sh/clojure_scripts.sh"
 PYTHON_SCRIPTS="$SNIPPETS_DIR/scripts/sh/python_scripts.sh"
-PYTHON_SCRIPTS="$SNIPPETS_DIR/scripts/sh/elixir_scripts.sh"
+ELIXIR_SCRIPTS="$SNIPPETS_DIR/scripts/sh/elixir_scripts.sh"
+ELM_SCRIPTS="$SNIPPETS_DIR/scripts/sh/elm_scripts.sh"
 
 SYSTEM_UTILITY_SCRIPTS="$SNIPPETS_DIR/scripts/sh/sys_util_scripts.sh"
 MISC_CLI_OPTIONS="$SNIPPETS_DIR/scripts/sh/cli_opts.sh"
@@ -28,6 +29,7 @@ source "$SNIPPETS_DIR/scripts/sh/node_scripts.sh"
 source "$SNIPPETS_DIR/scripts/sh/clojure_scripts.sh"
 source "$SNIPPETS_DIR/scripts/sh/python_scripts.sh"
 source "$SNIPPETS_DIR/scripts/sh/elixir_scripts.sh"
+source "$ELM_SCRIPTS"
 source ~/.profile
 
 # EDIT OTHER SCRIPT SOURCES
@@ -44,6 +46,7 @@ alias bashrc_clojure='vim "$SNIPPETS_DIR/scripts/sh/clojure_scripts.sh"'
 alias bashrc='vim "$SNIPPETS_DIR/scripts/sh/portable_bashrc_additions.sh"'
 alias bashrc_clojure='vim "$SNIPPETS_DIR/scripts/sh/clojure_scripts.sh"'
 alias bashrc_elixir='vim "$SNIPPETS_DIR/scripts/sh/elixir_scripts.sh"'
+alias bashrc_elm='vim "$ELM_SCRIPTS"'
 
 # LOAD 'MODULES'
 source "$SNIPPETS_DIR/scripts/sh/bash_modules/module_File.sh"
