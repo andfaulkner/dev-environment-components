@@ -14,10 +14,10 @@ class Instgem
 
   def display_usage
     puts 'Usage: instgem GEM [VERSION]'
-    puts '\n'
+    puts ''
     puts ' GEM       name of the gem to install'
     puts ' VERSION   optional version number to install'
-    puts '\n'
+    puts ''
     puts 'Examples:'
     puts ' instgem rspec'
     puts ' instgem minitest 4.0'

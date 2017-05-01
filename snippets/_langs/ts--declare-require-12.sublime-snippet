@@ -1,0 +1,8 @@
+<snippet>
+  <description>Declare type definition for require (module importer) function</description>
+<content><![CDATA[
+declare function require(name: string);
+]]></content>  
+  <tabTrigger>req_declare_ts</tabTrigger>
+  <scope>source.js, source.ts, source.jsx, source.tsx</scope>
+</snippet>

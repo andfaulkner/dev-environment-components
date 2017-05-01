@@ -24,4 +24,6 @@
 
 // 1.   Don't try to observe primitives. It won't work.
 //
-//
+// 2.   @observer ONLY observes the render method of a react component.
+// 
+// 3.   

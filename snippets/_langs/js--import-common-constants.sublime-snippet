@@ -1,0 +1,8 @@
+<snippet>
+  <description>Import common-constants module</description>
+<content><![CDATA[
+import { commonConstants } from 'common-constants';
+]]></content>  
+  <tabTrigger>imp_common_constants</tabTrigger>
+  <scope>source.js, source.ts, source.jsx, source.tsx</scope>
+</snippet>

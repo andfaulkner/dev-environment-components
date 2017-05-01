@@ -180,6 +180,14 @@ EXAMPLE
         b-trees
         priority queues
 
+@### Dereference ###@
+*   Dereferencing a pointer means getting the value that is stored in the memory location pointed by the pointer.
+*   In other words, it means reading the value being referenced. This resolves the pointer to
+    instead be the actual value thus 'de-referencing' (since it's not longer a reference but an actual value).
+*   In MobX:
+    *   "reading" is dereferencing an object's property, which can be done through "dotting into" it (eg. user.name) or using bracket notation (eg. user['name'])
+        *   This is largely analogous to what is done when you de-reference in C, because in MobX, your dereferencing means you're turning your "named pointer" to a data value (aka variable) into an actual value.
+
 @### Directives ###@
 *   An instruction solely for an interpreter, compiler, or assembler
 *   i.e. it doesn't eventually translate to machine code, it instead modifies the behaviour

@@ -1,0 +1,264 @@
+#!/usr/bin/env ruby
+# home_dir = Dir.home()
+
+# Emits human-readable file information about current directory. Similar to ls.
+# Makes it easy to hide directories, files, "hidden" items, and/or "unhidden" items
+# By default it displays everything.
+# 
+# -d hides directories
+# -f hides files
+# -h hides "hidden" files
+# -u hides "unhidden" files
+#
+# @param [String, #read] contents the contents to reverse 
+# @return [String] the contents reversed lexically 
+
+require "filesize"
+
+# 
+# CONSTANTS
+# 
+
+# Width of FILENAME column
+FSIZE_WIDTH = 43
+
+
+#******************************************** MODULES *********************************************#
+module TitleSettings
+    TITLE_SETTINGS = {
+        :type=>{ :text=>"T",        :width=>3  },
+        :perm=>{ :text=>"PERM",     :width=>13 },
+        :name=>{ :text=>"FILENAME", :width=>65 },
+        :size=>{ :text=>"SIZE",     :width=>12 }
+    }
+end
+
+
+#******************************************** CLASSES *********************************************#
+#
+# @class ArgHandler
+# 
+# Deal with arguments passed in from the CLI.
+#
+class ArgHandler
+    attr_accessor :hide_locked, :hide_hidden, :hide_unhidden, :hide_dirs, :hide_files
+
+    def initialize(args)
+        @args        = args
+        @dash_params = get_dash_params
+        handle_dash_params
+    end
+
+    private
+
+    def get_dash_params
+        @args
+            .reject{|arg| ! /^\-/.match arg }
+            .join
+            .gsub "-", ""
+    end
+
+    def handle_dash_params
+        @hide_locked   = @dash_params.include?("l") || false
+        @hide_hidden   = @dash_params.include?("h") || false
+        @hide_unhidden = @dash_params.include?("u") || false
+        @hide_files    = @dash_params.include?("f") || false
+        @hide_dirs     = @dash_params.include?("d") || false
+    end
+end
+
+
+## 
+# @class FileList
+#
+# Actual list of files. Also creates heading.
+# 
+class FileList
+    include TitleSettings
+
+    attr_reader   :header_length
+    attr_accessor :display_cols
+
+    def initialize(display_cols, title_config = {}, replace = false)
+        if replace == true && ! title_config.empty?
+            @headings = title_config
+        else
+            @headings = TITLE_SETTINGS.merge(title_config)
+        end
+    end
+
+    # Creates string of repeated chars, with param "width" repeats, of char "uline_char",
+    # which defaults to "_". Used for creating divider under the file grid headings.
+    def uln(width, uline_char = "_")
+        Array.new(width, uline_char).join("")
+    end
+
+    # Outputs the file grid heading, for display in the terminal.
+    # Uses TITLE_SETTINGS hash to generate it
+    # @example output:
+    #       |___|____PERM____|______FILENAME_____|__SIZE__|
+    def filegrid_headers(uline_char="_")
+        TITLE_SETTINGS.values.reduce { | head, setting |
+            head = head.instance_of?(Hash) ? [col_heading(head, uline_char, true)] : head
+            head.push(col_heading setting, uline_char)
+            head
+        }.join("")
+    end
+
+    # Output a single row of data based on the full file data, the width of the
+    # column, and the file path
+    def display_row(fdata, path_col_width, file_path)
+        puts "|"  + fdata.content_type.center(TITLE_SETTINGS[:type][:width])       +
+             "  " + fdata.perms.ljust(TITLE_SETTINGS[:perm][:width] - 1)           + 
+             "  " + file_path                                                      + 
+             "  " + fdata.pretty_filesize.ljust(TITLE_SETTINGS[:perm][:width] - 2) +
+             "|"
+    end
+
+    # Display line at top and bottom of file grid
+    def show_dashline top_or_bottom
+        bookend = Array.new filegrid_headers().length, "-"
+        puts bookend.join ""
+        puts ""                 if top_or_bottom == 'bottom'
+        puts filegrid_headers() if top_or_bottom == 'top'
+    end
+
+    # Outputs entire file grid - heading and file data - to the terminal. Display method.
+    def output_file_list(file_list, fileDataClass)
+        show_dashline 'top'
+
+        file_list.sort.each do | filename |
+            fdata          = fileDataClass.new filename
+            path_col_width = TITLE_SETTINGS[:name][:width]
+            file_path      = fdata.file_path.ljust path_col_width - 1
+            display_row fdata, path_col_width, file_path
+        end
+
+        show_dashline 'bottom'
+    end
+
+    private
+
+    # Handles 1 file grid col's title. col_heading outputs are combined into full heading
+    def col_heading(setting, uline_char, start_pipe = false)
+        text       = setting[:text]
+        width      = setting[:width]
+        title_line = text.center width, uline_char
+        "#{start_pipe ? '|' : ''}#{title_line}|"
+    end
+end
+
+
+##
+# @class FileOutput
+#
+# String for a single row of data in the file list
+# 
+class FileOutput
+    include TitleSettings
+
+    attr_reader :fstat, :file_path
+
+    def initialize(file_path)
+        @file_path      = file_path
+        @fstat          = File.symlink?(@file_path) ? '_symlink_' : File.stat(@file_path)
+        @filesize_array = filesize_arr file_bytes
+    end
+
+    # determine the raw numeric value representing the file's size in bytes
+    def file_bytes
+        @fstat ? "#{@fstat.size}" : "_"
+    end
+
+    # Convert filesize in bytes into a more readable unit (e.g. MiB) chosen based on size
+    # (e.g. 1048576B = 1.00 MiB, 1024B = 1.00 KiB). Store as array containing new value & unit
+    # Example output:       [1.18, "KiB"]
+    def filesize_arr(file_bytes)
+        @filesize_arr = "#{Filesize.from(file_bytes + "B").pretty.ljust(9)}".split /\s/
+    end
+
+    def pretty_filesize_number
+        @filesize_array[0].sub(".00", "").ljust 7
+    end
+
+    def pretty_filesize_unit
+        @filesize_array[1].ljust 3
+    end
+
+    # make the file size data human-readable
+    def pretty_filesize
+        fsize_out_arr = filesize_arr(file_bytes)
+        "#{pretty_filesize_number}#{pretty_filesize_unit}"
+    end
+
+    # determine if path is file or dir, output representing unix char for result
+    def content_type
+        if (@fstat && @fstat == '_symlink_')
+            "L"
+        else 
+            @fstat.directory? ? "d" : "f"
+        end
+    end
+
+    # convert file owner's permissions into unix-idiomatic string ("rwe" flags)
+    def owner_perms
+        if (@fstat != "_symlink_")
+            readable_char   = @fstat.readable?   ? "r" : "-"
+            writable_char   = @fstat.writable?   ? "w" : "-"
+            executable_char = @fstat.executable? ? "e" : "-"
+            "#{readable_char}#{writable_char}#{executable_char}"
+        else
+            "rwx"
+        end
+    end
+
+    # convert "world" permissions into unix-idiomatic string ("rwe" flags)
+    def world_perms
+        if (@fstat != '_symlink_')
+            readable_char = @fstat.world_readable? ? "r" : "-"
+            writable_char = @fstat.world_writable? ? "w" : "-"
+            "#{readable_char}#{writable_char}?"
+        else
+            "r-x"
+        end
+    end
+
+    # Create string displaying owner, group, & world perms for a file via "rwe" flags.
+    # Example output:
+    #       rw- r-- ---
+    def perms
+        middle = @fstat == '_symlink_' ? "r-x" : "???"
+        "#{owner_perms} #{middle} #{world_perms}"
+    end
+end
+
+
+
+#******************************************* FUNCTIONS ********************************************#
+# Display all files in the current directory.
+def list_files
+    Dir.glob '*', File::FNM_DOTMATCH
+end
+
+# Remove unwanted items from the file list, based on the CLI arguments passed in.
+def filter_file_list(hide_hidden, hide_unhidden, hide_dir, hide_files)
+    list_files.reject { |file| Dir.exist? file        if hide_dir      }
+              .reject { |file| file.start_with?   "." if hide_hidden   }
+              .reject { |file| ! file.start_with? "." if hide_unhidden }
+              .reject { |file| ! Dir.exist? file      if hide_files    }
+end
+
+
+
+#******************************************* RUN SCRIPT *******************************************#
+# Create list of files in the current directory.
+file_list = FileList.new [:type, :perm, :name, :size], {}
+
+# Get CLI arguments.
+args = ArgHandler.new(ARGV || "")
+
+# Launch script's main method with CLI arguments.
+file_list.output_file_list filter_file_list(args.hide_hidden,
+                                            args.hide_unhidden,
+                                            args.hide_dirs,
+                                            args.hide_files), FileOutput
