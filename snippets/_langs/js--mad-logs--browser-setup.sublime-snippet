@@ -1,0 +1,11 @@
+<snippet>
+  <description>Set mad-logs up for use in browser in current file</description>
+<content><![CDATA[
+/******************************************** LOGGING *********************************************/
+import { logFactory, logMarkers } from 'mad-logs';
+const log = logFactory()(`$TM_FILENAME`, logMarkers.${1:lakeLouise});
+
+]]></content>  
+  <tabTrigger>madlog_browser_log_setup</tabTrigger>
+  <scope>source.js, source.ts, source.jsx, source.tsx</scope>
+</snippet>

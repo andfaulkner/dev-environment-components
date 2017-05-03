@@ -1,0 +1,8 @@
+<snippet>
+  <description>Repeat a char (or short string) n times to create longer string.</description>
+<content><![CDATA[
+Array(${1:100}).join(${2:'-'})${0}
+]]></content>  
+  <tabTrigger>chars_repeat</tabTrigger>
+  <scope>source.js, source.ts, source.jsx, source.tsx</scope>
+</snippet>

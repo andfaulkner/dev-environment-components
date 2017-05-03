@@ -26,4 +26,8 @@
 //
 // 2.   @observer ONLY observes the render method of a react component.
 // 
-// 3.   
+// 3.   If you don't use class property assignment syntax, and this doesn't get bound, the
+//      properties will sometimes display, but act like they're frozen. Switch to property
+//      assignment syntax if this happens. Relevant to MobX since mutating these is the essence
+//      of using it as a state store.
+//      

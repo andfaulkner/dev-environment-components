@@ -1,0 +1,8 @@
+<snippet>
+  <description>*ASYNCHRONOUSLY* merge given object into current React component's state</description>
+<content><![CDATA[
+this.setState({${1:propToUpdate}: ${2:'valueToUpdatePropTo'}});${0}
+]]></content>  
+  <tabTrigger>rct_setstate_basic</tabTrigger>
+  <scope>source.js, source.ts, source.jsx, source.tsx</scope>
+</snippet>

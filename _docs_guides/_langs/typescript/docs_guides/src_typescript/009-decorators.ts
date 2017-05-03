@@ -68,6 +68,42 @@ class NewClass {
   }
 }
 
+/**************************************** EVALUATION ORDER ****************************************/
+@f()
+@g()
+class MultiDecoratedClass {
+}
+
+function f() {
+    // ** 1 ** //
+    console.log("f(): evaluated (but NOT applied to class)");
+    return function (target) {
+        // ** 4 ** //
+        console.log("f(): called -- i.e. f(class MultiDecoratedClass {})");
+    }
+}
+
+function g() {
+    // ** 2 ** //
+    console.log("g(): evaluated (but NOT applied to class)");
+    return function (target) {
+        // ** 3 ** //
+        console.log("g(): called -- i.e. g(class MultiDecoratedClass {})");
+    }
+}
+
+// Output ::
+//    f(): evaluated (but NOT applied to class)
+//    g(): evaluated (but NOT applied to class)
+//    g(): called  -- i.e. g(class MultiDecoratedClass {})
+//    f(): called  -- i.e. f(class MultiDecoratedClass {})
+
+// ORDER - OVERALL:
+//    1.  Outer decorator :: Argument evaluation
+//    2.  Inner decorator :: Argument evaluation
+//    3.  Inner decorator :: Function application (i.e. decorator function runs on the class)
+//    4.  Outer decorator :: Function application
+
 
 /********************************** PROPERTY DECORATORS EXAMPLE ***********************************/
 import "reflect-metadata";
@@ -121,6 +157,40 @@ class SomeDumbClass {
 //#          TS 2: class decorators          #
 //############################################
 
+/******************************** CLASS DECORATORS WITH NO PARAMS *********************************/
+
+function ClassDecorator(
+    target: Function // The class the decorator is declared on
+    ) {
+    console.log("ClassDecorator called on: ", target);
+}
+
+@ClassDecorator
+class ClassDecoratorExample {
+}
+
+// Output ::
+//   ClassDecorator called on:  function ClassDecoratorExample() {
+//   }
 
 
+/********************************** CLASS DECORATORS WITH PARAMS **********************************/
 
+function ClassDecoratorParams(param1: number, param2: string) {
+    return function(
+        target: Function // The class the decorator is declared on
+        ) {
+        console.log("ClassDecoratorParams(" + param1 + ", '" + param2 + "') called on: ", target);
+    }
+}
+
+@ClassDecoratorParams(1, "a")
+@ClassDecoratorParams(2, "b")
+class ClassDecoratorParamsExample {
+}
+
+// Output ::
+//   ClassDecoratorParams(2, 'b') called on:  function ClassDecoratorParamsExample() {
+//   }
+//   ClassDecoratorParams(1, 'a') called on:  function ClassDecoratorParamsExample() {
+//   }
