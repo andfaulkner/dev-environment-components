@@ -1,0 +1,8 @@
+<snippet>
+  <description>Import mad-utils</description>
+<content><![CDATA[
+import { enumToStringArray, enumValToString, stringToEnumVal, capitalize } from 'mad-utils';
+]]></content>  
+  <tabTrigger>imp_madutils</tabTrigger>
+  <scope>source.js, source.ts, source.jsx, source.tsx</scope>
+</snippet>
