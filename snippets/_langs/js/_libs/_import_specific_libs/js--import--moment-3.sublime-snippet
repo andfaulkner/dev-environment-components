@@ -1,0 +1,8 @@
+<snippet>
+  <description>Import moment module</description>
+<content><![CDATA[
+import moment from 'moment';
+]]></content>
+  <tabTrigger>impmoment</tabTrigger>
+  <scope>source.js, source.ts, source.jsx, source.tsx</scope>
+</snippet>

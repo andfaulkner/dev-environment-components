@@ -1,0 +1,8 @@
+<snippet>
+  <description>Print a single line log output</description>
+<content><![CDATA[
+fmt.Println(${1:"Some text", some.Method(), "any number of args"})
+]]></content>  
+  <tabTrigger>println</tabTrigger>
+  <scope>source.go</scope>
+</snippet>
