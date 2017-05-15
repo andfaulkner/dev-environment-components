@@ -1,8 +1,8 @@
 <snippet>
-  <description>Declare a require statement (sometimes required to make compiler happy)</description>
+  <description>Declare type definition for require (module importer) function</description>
 <content><![CDATA[
-declare const require;${0}
+declare function require(name: string);
 ]]></content>  
-  <tabTrigger>de_require</tabTrigger>
-  <scope>source.tsx, source.ts</scope>
+  <tabTrigger>decl_req</tabTrigger>
+  <scope>source.js, source.ts, source.jsx, source.tsx</scope>
 </snippet>
