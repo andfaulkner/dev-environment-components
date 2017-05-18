@@ -3,7 +3,7 @@
 	<content><![CDATA[
 is_empty() {
     local var=\$1
-    [[ -z $var ]]
+    [ -z $var ]
 }
 ${0}
 ]]></content>

@@ -1,7 +1,7 @@
 <snippet>
 	<description>Unless statement: block inside runs unless given var has val assigned to it</description>
 	<content><![CDATA[
-if [[ ! -n "${1:\$SOME_VARIABLE}" ]]; then
+if [ ! -n "${1:\$SOME_VARIABLE}" ]; then
   ${3:# do this if given variable has something assigned to it}
 fi
 ]]></content>

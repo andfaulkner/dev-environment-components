@@ -1,0 +1,30 @@
+<snippet>
+  <description>An example object with nesting, functions, strings, numbers, etc.</description>
+<content><![CDATA[
+const exampleObj = {
+    func1: function() {
+        console.log('Hello from func1!');
+    },
+    a: "one",
+    b: "two",
+    c: {
+        ca: "cee_one",
+        cb: "cee_two",
+        cfunc1: function() {
+            console.log('Hello from cfunc1! I\'m nested in object c.');
+        },
+        cc: 3,
+        lambda1: ()=>console.log('Hello from a lambda arrow function!'),
+        cd: "cee_4",
+    },
+    d: "four",
+    e: 5,
+    func2: function(name) {
+        console.log(`Hello ${name}, this is func2. Say hello to my this value:`, this);
+    },
+    f: 6,
+};
+]]></content>  
+  <tabTrigger>example_object_1</tabTrigger>
+  <scope>source.js, source.ts, source.jsx, source.tsx</scope>
+</snippet>

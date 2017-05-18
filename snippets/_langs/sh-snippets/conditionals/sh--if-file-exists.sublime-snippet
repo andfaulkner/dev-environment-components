@@ -1,7 +1,7 @@
 <snippet>
 	<description>If statement: block inside runs if file exists</description>
 	<content><![CDATA[
-if [[ -e ${1:~/file/to/test/existence/of.txt} ]]; then
+if [ -e ${1:~/file/to/test/existence/of.txt} ]; then
   ${2:# do this if the file exists}
 fi
 ]]></content>

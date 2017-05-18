@@ -3,7 +3,7 @@
 	<content><![CDATA[
 is_dir() {
     local dir=\$1
-    [[ -d $dir ]]
+    [ -d $dir ]
 }
 ${0}
 ]]></content>

@@ -2,7 +2,7 @@
 	<description>If statement: block inside runs if given vars are equal</description>
 	<content><![CDATA[
 ${1:ARBITRARY_NAME_OF_VALUE}=\$( ${2:some_command__eg: grep -ic "meeka" /etc/passwd} )
-if [[ \$${1:ARBITRARY_NAME_OF_VALUE} -eq ${3:check_if_output_of_cmd_equal_to_this} ]]; then
+if [ \$${1:ARBITRARY_NAME_OF_VALUE} -eq ${3:check_if_output_of_cmd_equal_to_this} ]; then
   ${4:# do this if output of command is equal to 2nd param given to if test}
 fi
 unset \${1:ARBITRARY_NAME_OF_VALUE} #prevent global namespace pollution

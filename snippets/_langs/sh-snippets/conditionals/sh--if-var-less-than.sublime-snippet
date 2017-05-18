@@ -1,7 +1,7 @@
 <snippet>
 	<description>If statement: block inside runs if var is less than numeric value</description>
 	<content><![CDATA[
-if [[ \$${1:VARIABLE_TO_TEST} -lt ${2:NUMBER_TO_TEST_IF_VAR_LESS_THAN_EG__4} ]]; then
+if [ \$${1:VARIABLE_TO_TEST} -lt ${2:NUMBER_TO_TEST_IF_VAR_LESS_THAN_EG__4} ]; then
   ${3:# do this if ${1:VARIABLE_TO_TEST} is less than ${2:NUMBER_TO_TEST_IF_VAR_LESS_THAN_EG__4}}
 fi
 ]]></content>

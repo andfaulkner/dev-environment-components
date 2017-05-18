@@ -1,0 +1,24 @@
+<snippet>
+  <description>An example array of objects w/ booleans, strings, floats.</description>
+<content><![CDATA[
+const fruits = [
+    {
+        name: 'apple',
+        price: 1.99,
+        onSale: true
+    },
+    {
+        name: 'orange',
+        price: 0.99,
+        onSale: true
+    },
+    {
+        name: 'banana',
+        price: 1.49,
+        onSale: false
+    },
+];
+]]></content>    
+  <tabTrigger>example_object_arr_1</tabTrigger>
+  <scope>source.js, source.ts, source.jsx, source.tsx</scope>
+</snippet>

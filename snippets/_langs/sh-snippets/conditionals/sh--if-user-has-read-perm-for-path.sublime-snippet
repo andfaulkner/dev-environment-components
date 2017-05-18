@@ -1,7 +1,7 @@
 <snippet>
 	<description>If statement: block inside runs if user has permission to read given path</description>
 	<content><![CDATA[
-if [[ -r ${1:~/test/if/user/has/perm/to/read/this/path} ]]; then
+if [ -r ${1:~/test/if/user/has/perm/to/read/this/path} ]; then
   ${2:# do this if user has permission to read this path}
 fi
 ]]></content>

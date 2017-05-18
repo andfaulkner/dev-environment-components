@@ -1,7 +1,7 @@
 <snippet>
 	<description>If statement: block inside runs if given values are equal</description>
 	<content><![CDATA[
-if [[ "${1:\$VARIABLE_ONE}" = "${2:some string}" ]]; then
+if [ "${1:\$VARIABLE_ONE}" = "${2:some string}" ]; then
   ${3:# do this if values are equal}
 fi
 ]]></content>
