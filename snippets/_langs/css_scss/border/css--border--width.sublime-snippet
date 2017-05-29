@@ -1,0 +1,8 @@
+<snippet>
+  <description>border-width (size of border in px)</description>
+<content><![CDATA[
+border-width: ${1:1}px;${0}
+]]></content>  
+  <tabTrigger>border_width</tabTrigger>
+  <scope>source.css, source.postcss, source.scss</scope>
+</snippet>

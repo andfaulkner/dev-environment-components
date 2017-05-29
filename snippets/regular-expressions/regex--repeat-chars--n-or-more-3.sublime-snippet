@@ -1,0 +1,8 @@
+<snippet>
+  <description>Match n or more repetitions of char e.g. c{2,} vs ccccc : matches 'ccccc'</description>
+<content><![CDATA[
+${1:c}{${2:4},}${0}
+]]></content>  
+  <tabTrigger>regex_repeats_at_least_n</tabTrigger>
+  <scope></scope>
+</snippet>

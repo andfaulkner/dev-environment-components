@@ -1,0 +1,8 @@
+<snippet>
+  <description>Change the left border color</description>
+<content><![CDATA[
+border-left-color: ${1:#cccccc};${0}
+]]></content>  
+  <tabTrigger>border_left_color</tabTrigger>
+  <scope>source.css, source.postcss, source.scss</scope>
+</snippet>

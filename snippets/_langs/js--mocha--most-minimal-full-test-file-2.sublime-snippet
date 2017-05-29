@@ -1,0 +1,15 @@
+<snippet>
+  <description>Minimal new Mocha file that runs as-is (w no useful test yet defined)</description>
+<content><![CDATA[
+const chai = require('chai');
+const expect = chai.expect;
+
+describe('true', function() {
+    it('is true', function() {
+        expect(true).to.be.true;
+    });
+});
+]]></content>  
+  <tabTrigger>mocha_minimal_new_file</tabTrigger>
+  <scope>source.js, source.ts, source.jsx, source.tsx</scope>
+</snippet>

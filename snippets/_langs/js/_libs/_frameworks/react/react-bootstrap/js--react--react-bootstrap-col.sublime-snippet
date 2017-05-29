@@ -1,8 +1,8 @@
 <snippet>
   <description>Create a col. Must already be between Grid tags.</description>
 <content><![CDATA[
-<Col>
-  ${0}
+<Col lg={${1:1}} md={${1:1}} sm={${1:1}} xs={${1:1}}>
+    ${0}
 </Col>
 ]]></content>
   <tabTrigger>col</tabTrigger>

@@ -2,7 +2,7 @@
   <description>Create a row. Must already be between Grid tags.</description>
 <content><![CDATA[
 <Row>
-  ${0}
+    ${0}
 </Row>
 ]]></content>
   <tabTrigger>row</tabTrigger>

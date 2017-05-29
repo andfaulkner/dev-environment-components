@@ -39,11 +39,6 @@ group :development, :test do
   gem 'wirble'
   gem 'irbtools', require: 'irbtools/binding'
   gem 'irbtools-more', require: 'irbtools/binding'
-
-3166 matches across 1011 files
-
-
-Searching 34124 files for "CANImmunize" (regex)
   gem 'hirb'
   gem 'awesome_print'
   gem "binding_of_caller"

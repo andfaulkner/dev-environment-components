@@ -161,9 +161,11 @@ alias go_mhealthtemplate="pushd ./; cd $PROJECTS_DIR/ohri/mhealth-template-webap
 alias go_templatemhealth="pushd ./; cd $PROJECTS_DIR/ohri/mhealth-template-webapp"
 alias gomhealthtemplate="go_templatemhealth"
 alias go_v2mhealthtemplate="pushd ./; cd $PROJECTS_DIR/ohri/module-testbed/v2-mhealth-template-webapp"
-alias go_authmodule="pushd ./; cd $PROJECTS_DIR/ohri/module-testbed/@ottawamhealth-auth-handler"
-alias go_misctsutils="pushd $PROJECTS_DIR/new_node_modules/misc-utils"
+alias gov2mhealthtemplate="go_v2mhealthtemplate"
+alias go_authmodule="pushd $PROJECTS_DIR/ohri/module-testbed/@ottawamhealth-auth-handler"
 alias go_javelinscript="pushd $PROJECTS_DIR/ohri/Javelin/CANImmunize-Javelinscript"
+alias go_basic_js_template="pushd /$PROJECTS_DIR/own-projects/node-react-boiler-simple"
+alias gotemplate="pushd /$PROJECTS_DIR/own-projects/node-react-boiler-simple"
 
 ################################################################################
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ EMBER ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

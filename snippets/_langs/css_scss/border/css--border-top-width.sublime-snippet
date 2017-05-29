@@ -1,0 +1,8 @@
+<snippet>
+  <description>border-top-width (size/width of top border in px)</description>
+<content><![CDATA[
+border-top-width: ${1:1}px;${0}
+]]></content>  
+  <tabTrigger>border_top_width</tabTrigger>
+  <scope>source.css, source.postcss, source.scss</scope>
+</snippet>

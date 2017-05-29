@@ -1,0 +1,8 @@
+<snippet>
+  <description>border-right-width (size/width of right border in px)</description>
+<content><![CDATA[
+border-right-width: ${1:1}px;${0}
+]]></content>  
+  <tabTrigger>border_right_width</tabTrigger>
+  <scope>source.css, source.postcss, source.scss</scope>
+</snippet>

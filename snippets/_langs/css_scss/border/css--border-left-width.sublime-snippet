@@ -1,0 +1,8 @@
+<snippet>
+  <description>border-left-width (size/width of left border in px)</description>
+<content><![CDATA[
+border-left-width: ${1:1}px;${0}
+]]></content>  
+  <tabTrigger>border_left_width</tabTrigger>
+  <scope>source.css, source.postcss, source.scss</scope>
+</snippet>

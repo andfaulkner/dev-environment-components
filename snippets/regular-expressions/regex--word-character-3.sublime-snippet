@@ -1,0 +1,8 @@
+<snippet>
+  <description>\w : a-z, A-Z, 0-9, _</description>
+<content><![CDATA[
+\w
+]]></content>  
+  <tabTrigger>regex_char_word</tabTrigger>
+  <scope></scope>
+</snippet>

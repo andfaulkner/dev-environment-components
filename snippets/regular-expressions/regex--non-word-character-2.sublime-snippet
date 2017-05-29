@@ -1,0 +1,8 @@
+<snippet>
+  <description>\W: NOT 0-9, A-Z, a-z, _ ::matches all other chars (' ', \n, !@#$%^&*() etc.)</description>
+<content><![CDATA[
+\W
+]]></content>  
+  <tabTrigger>regex_nonword_char</tabTrigger>
+  <scope></scope>
+</snippet>

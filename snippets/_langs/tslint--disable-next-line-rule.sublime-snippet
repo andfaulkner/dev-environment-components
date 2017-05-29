@@ -1,0 +1,8 @@
+<snippet>
+  <description>Disable given rule(s) on the next line</description>
+<content><![CDATA[
+// tslint:disable-next-line: ${0:no-magic-numbers max-line-length}
+]]></content>  
+  <tabTrigger>tslint_disable_rule_next_line</tabTrigger>
+  <scope>source.js, source.ts, source.jsx, source.tsx</scope>
+</snippet>

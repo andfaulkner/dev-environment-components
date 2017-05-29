@@ -1,12 +1,19 @@
 <snippet>
   <description>Minimal new Mocha file that runs as-is (w no useful test yet defined)</description>
 <content><![CDATA[
-const chai = require('chai');
-const expect = chai.expect;
+/************************************** THIRD PARTY IMPORTS ***************************************/
+import { expect } from 'chai';
+${3:// const chai = require('chai');
+// const expect = chai.expect;
+}
+/************************************ IMPORT FILE TO BE TESTED ************************************/
+import * as ${4:${TM_FILENAME/([a-zA-Z])?([a-zA-Z0-9]+)?[-_]?[-_]?([a-zA-Z])?([a-zA-Z0-9]+)?[-_]?[-_]?([a-zA-Z])?([a-zA-Z0-9]+)?[-_]?[-_]?([a-zA-Z])?([a-zA-Z0-9]+)?[-_]?[-_]?([a-zA-Z])?([a-zA-Z0-9]+)?[-_]?[-_]?([a-zA-Z])?([a-zA-Z0-9]+)?\..*/\U$1\L$2\U$3\L$4\U$5\L$6\U$7\L$8\U$9\L$10\U$11\L$12/g}} from '${5}';
 
-describe('true', function() {
-    it('is true', function() {
-        expect(true).to.be.true;
+
+/********************************************* TESTS **********************************************/
+describe('${2:${TM_FILENAME/(.+)\..+|.*/$1/:name}}', function() {
+    it('exists', function() {
+        expect(${4}).to.exist;
     });
 });
 ]]></content>  

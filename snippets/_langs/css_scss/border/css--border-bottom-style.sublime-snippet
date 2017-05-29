@@ -1,0 +1,8 @@
+<snippet>
+  <description>border-bottom-style (type of border on bottom: solid|dashed|hidden|etc)</description>
+<content><![CDATA[
+border-bottom-style: ${1:solid|dashed|hidden|dotted|double|groove|inset|outset|ridge|solid};${0}
+]]></content>  
+  <tabTrigger>border_bottom_style</tabTrigger>
+  <scope>source.css, source.postcss, source.scss</scope>
+</snippet>

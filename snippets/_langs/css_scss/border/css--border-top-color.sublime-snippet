@@ -1,0 +1,8 @@
+<snippet>
+  <description>Change the top border color</description>
+<content><![CDATA[
+border-top-color: ${1:#cccccc};${0}
+]]></content>  
+  <tabTrigger>border_top_color</tabTrigger>
+  <scope>source.css, source.postcss, source.scss</scope>
+</snippet>

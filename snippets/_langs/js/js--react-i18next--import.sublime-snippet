@@ -3,6 +3,11 @@
 <content><![CDATA[
 import { translate, Interpolate } from 'react-i18next';
 import { I18n, TranslationFunction } from 'i18next';
+
+35 matches across 15 files
+
+
+Searching 3642 files for "t\?: TranslationFunction" (regex, case sensitive)
 ]]></content>  
   <tabTrigger>imp_rct_it18n</tabTrigger>
   <scope>source.js, source.ts, source.jsx, source.tsx</scope>

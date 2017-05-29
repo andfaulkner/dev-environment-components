@@ -1,0 +1,8 @@
+<snippet>
+  <description>\d : 0-9 -- digit character</description>
+<content><![CDATA[
+\d
+]]></content>  
+  <tabTrigger>regex_char_digit</tabTrigger>
+  <scope></scope>
+</snippet>

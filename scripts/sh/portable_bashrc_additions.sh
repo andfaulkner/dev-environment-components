@@ -68,19 +68,24 @@ alias back="echo 'DIR returning from:'; pwd; popd; echo 'DIR returned to:'; pwd"
 
 alias go_android_tools="pushd ./; cd $HOME/Library/Android/sdk; ls -ao; echo ''; pwd"
 
-alias downloads="pushd ./; cd $HOME/Downloads"
-alias documents="pushd ./; cd $HOME/Documents"
-alias proj="pushd ./; cd $HOME/projects"
-alias goproj="pushd ./; cd $HOME/projects"
-alias goprojects="pushd ./; cd $HOME/projects"
-alias anproj="pushd ./; cd $HOME/projects/android"
-alias goelectron="pushd ./; cd $HOME/projects/electron"
+alias downloads="pushd \"$HOME/Downloads\""
+alias documents="pushd \"$HOME/Documents\""
+alias proj="pushd \"$HOME/projects\""
+alias goproj="pushd \"$HOME/projects\""
+alias goprojects="pushd \"$HOME/projects\""
+alias anproj="pushd \"$HOME/projects/android\""
+alias goelectron="pushd \"$HOME/projects/electron\""
 
-alias godocs='pushd ./; cd "$HOME/Documents"'
-alias godownloads='pushd ./; cd "$HOME/Downloads"'
-alias gobinhome='pushd ./; cd "$HOME/bin"'
+alias godocs="pushd cd \"$HOME/Documents\""
+alias godownloads="pushd \"$HOME/Downloads\""
+alias gobinhome="pushd \"$HOME/bin\""
 
-alias govimsetup='pushd ./; cd "$HOME.config/nvim/"'
+alias govimsetup="pushd \"$HOME.config/nvim/\""
+
+alias gomadutils="pushd \"$HOME/projects/new_node_modules/mad-utils\""
+alias go_madutils="pushd \"$HOME/projects/new_node_modules/mad-utils\""
+alias goutils="pushd \"$HOME/projects/new_node_modules/mad-utils\""
+alias go_utils="pushd \"$HOME/projects/new_node_modules/mad-utils\""
 
 ## super-ls
 alias lsa='ls -ao | grep -v "[0-9][0-9] \.\.\?$"'

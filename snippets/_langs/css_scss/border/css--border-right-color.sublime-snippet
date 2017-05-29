@@ -1,0 +1,8 @@
+<snippet>
+  <description>Change the right border color</description>
+<content><![CDATA[
+border-right-color: ${1:#cccccc};${0}
+]]></content>  
+  <tabTrigger>border_right_color</tabTrigger>
+  <scope>source.css, source.postcss, source.scss</scope>
+</snippet>

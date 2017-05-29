@@ -1,0 +1,8 @@
+<snippet>
+  <description>Import chai 'expect' object</description>
+<content><![CDATA[
+import { expect } from 'chai';
+]]></content>  
+  <tabTrigger>impchaiexp</tabTrigger>
+  <scope>source.js, source.ts, source.jsx, source.tsx</scope>
+</snippet>

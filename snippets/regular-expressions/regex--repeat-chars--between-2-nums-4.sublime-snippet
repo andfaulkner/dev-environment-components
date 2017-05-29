@@ -1,0 +1,8 @@
+<snippet>
+  <description>Match between n1 & n2 repeats of char e.g. c{3,5} vs ccccccc : matches 'ccccc'</description>
+<content><![CDATA[
+${1:c}{${2:3},${3:5}}${0}
+]]></content>  
+  <tabTrigger>regex_reps_betw_n1_n2_times</tabTrigger>
+  <scope></scope>
+</snippet>

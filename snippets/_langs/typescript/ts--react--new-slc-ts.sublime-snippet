@@ -1,17 +1,20 @@
 <snippet>
-  <description>description here</description>
+  <description>New stateless functional component - typescript</description>
 <content><![CDATA[
-interface ${1:NameOfComponent}Props {
-    ${2:arg1}: any;
+import * as React from 'react';
+import * as ReactDOM from 'react-dom';
+
+interface ${1:${TM_FILENAME/([a-zA-Z])?([a-zA-Z0-9]+)?[-_]?[-_]?([a-zA-Z])?([a-zA-Z0-9]+)?[-_]?[-_]?([a-zA-Z])?([a-zA-Z0-9]+)?[-_]?[-_]?([a-zA-Z])?([a-zA-Z0-9]+)?[-_]?[-_]?([a-zA-Z])?([a-zA-Z0-9]+)?[-_]?[-_]?([a-zA-Z])?([a-zA-Z0-9]+)?\..*/\U$1\L$2\U$3\L$4\U$5\L$6\U$7\L$8\U$9\L$10\U$11\L$12/g}}Props {
+    ${2:arg1}: ${3:any};
 }
 
-const ${1:NameOfComponent} = ({${2:arg1}}: ${1:NameOfComponent}Props) => (
+export const ${1:${TM_FILENAME/([a-zA-Z])?([a-zA-Z0-9]+)?[-_]?[-_]?([a-zA-Z])?([a-zA-Z0-9]+)?[-_]?[-_]?([a-zA-Z])?([a-zA-Z0-9]+)?[-_]?[-_]?([a-zA-Z])?([a-zA-Z0-9]+)?[-_]?[-_]?([a-zA-Z])?([a-zA-Z0-9]+)?[-_]?[-_]?([a-zA-Z])?([a-zA-Z0-9]+)?\..*/\U$1\L$2\U$3\L$4\U$5\L$6\U$7\L$8\U$9\L$10\U$11\L$12/g}} = ({${2:arg1}}: ${1:NameOfComponent}Props) => (
     <div>
-        {${2:arg1}}
+        ${0:{${2:arg1}\}}
     </div>
 );
 
 ]]></content>  
-  <tabTrigger>rct_newf_slc</tabTrigger>
+  <tabTrigger>rct_ts_new_sfc</tabTrigger>
   <scope>source.tsx</scope>
 </snippet>

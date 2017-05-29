@@ -1,0 +1,8 @@
+<snippet>
+  <description>\D : NOT 0-9 - matches everything else including whitespace, tab, newline</description>
+<content><![CDATA[
+\D
+]]></content>  
+  <tabTrigger>regex_char_nondigit</tabTrigger>
+  <scope></scope>
+</snippet>

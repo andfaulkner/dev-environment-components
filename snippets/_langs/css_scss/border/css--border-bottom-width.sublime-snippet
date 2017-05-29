@@ -1,0 +1,8 @@
+<snippet>
+  <description>border-bottom-width (size/width of bottom border in px)</description>
+<content><![CDATA[
+border-bottom-width: ${1:1}px;${0}
+]]></content>  
+  <tabTrigger>border_bottom_width</tabTrigger>
+  <scope>source.css, source.postcss, source.scss</scope>
+</snippet>

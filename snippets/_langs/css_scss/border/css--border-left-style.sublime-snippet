@@ -1,0 +1,8 @@
+<snippet>
+  <description>border-left-style (type of border on left: solid|dashed|hidden|etc)</description>
+<content><![CDATA[
+border-left-style: ${1:solid|dashed|hidden|dotted|double|groove|inset|outset|ridge|solid};${0}
+]]></content>  
+  <tabTrigger>border_left_style</tabTrigger>
+  <scope>source.css, source.postcss, source.scss</scope>
+</snippet>
