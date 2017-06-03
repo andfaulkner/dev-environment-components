@@ -1,0 +1,9 @@
+<snippet>
+  <description>flex-wrap: define whether children within a parent wrap around or not</description>
+<content><![CDATA[
+flex-direction: ${1:(Define in parent. Determines whether children wrap if no space on their axis). OPTIONS:
+                    nowrap | wrap | wrap-reverse};${0}
+]]></content>  
+  <tabTrigger>flex_wrap</tabTrigger>
+  <scope>source.css, source.postcss, source.scss</scope>
+</snippet>

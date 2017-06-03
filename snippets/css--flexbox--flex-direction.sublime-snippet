@@ -1,0 +1,9 @@
+<snippet>
+  <description>flex-direction prop: define direction flex items are placed in flex container, in a wrapper.</description>
+<content><![CDATA[
+flex-direction: ${1: (Define in parent. Determines directions children align vs one another). OPTIONS:
+                    row | row-reverse | column | column-reverse};${0}
+]]></content>  
+  <tabTrigger>flex_dir</tabTrigger>
+  <scope>source.css, source.postcss, source.scss</scope>
+</snippet>

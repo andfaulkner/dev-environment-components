@@ -1,0 +1,14 @@
+<snippet>
+  <description>[PARENT] Alignment of items on cross-axis (opposite of flex-dir)</description>
+<content><![CDATA[
+align-items: ${1:[PARENT] Identical to justify-content, but for the cross-axis (opposite of flex-dir)
+                | flex-start: if flex-dir=cols, cluster all items on left; if rows, cluster at top.
+                | flex-end: if flex-dir=cols, cluster all items on right; if rows, cluster at bottom.
+                | center: cluster items in center of cross-axis (cross-axis=opposite of val set in flex-dir)
+                | stretch: lines stretch to take up remaining space.
+                | baseline};${0}
+}
+]]></content>  
+  <tabTrigger>flex_align_items</tabTrigger>
+  <scope>source.css, source.postcss, source.scss</scope>
+</snippet>

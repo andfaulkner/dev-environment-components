@@ -1,0 +1,14 @@
+<snippet>
+  <description>align-content prop: align extra space between wrapped rows (if flex-dir: rows)</description>
+<content><![CDATA[
+align-content: ${1:(LESS COMMON) (distance betw rows or cols that wrapped around from lack of space
+                   on own axis). OPTIONS:
+                   flex-start: all on left if flex-dir: cols, top if rows
+                   | flex-end: all on right if  flex-direction = cols, bottom if it = rows
+                   | center: Centre the whole group, with regular margins betw each row (if flex-dir: cols)
+                   | space-between: Maximize space between. 1st = flex-start, 2nd = center, 3rd = flex-end.
+                   | space-around: identical space betw all, while treating edges of screen as members}; ${0}
+]]></content>  
+  <tabTrigger>flex_aligncontent</tabTrigger>
+  <scope>source.css, source.postcss, source.scss</scope>
+</snippet>

@@ -1,0 +1,13 @@
+<snippet>
+  <description>[PARENT] Alignment of (spacing betw) items along main axis (as set by flex-dir)</description>
+<content><![CDATA[
+justify-content: ${1:[PARENT property]
+                 flex-start: cluster on the left if rows; top if cols.
+                 | flex-end: cluster on the right if rows; bottom if cols.
+                 | center: cluster together (regular margins between items) at the center of the row.
+                 | space-between: items maximize distance between one another
+                 | space-around: same as space-between, but edges are included as items};${0}
+]]></content>  
+  <tabTrigger>flex_justify_content</tabTrigger>
+  <scope>source.css, source.postcss, source.scss</scope>
+</snippet>
