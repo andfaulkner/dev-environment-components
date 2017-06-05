@@ -1,0 +1,13 @@
+<snippet>
+  <description>Make TS accept System.import usage</description>
+<content><![CDATA[
+declare global {
+    interface System {
+        import (request: string): Promise<any>
+    }
+    var System: System
+}
+]]></content>  
+  <tabTrigger>declare_system_import</tabTrigger>
+  <scope>source.tsx, source. ts</scope>
+</snippet>
