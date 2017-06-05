@@ -4,12 +4,17 @@
 /************************************** THIRD-PARTY IMPORTS ***************************************/
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
+const classNames = require('classnames');
 
+/******************************************** LOGGING *********************************************/
+import { logFactory, logMarkers } from 'mad-logs';
+const log = logFactory()(`${TM_FILENAME}`, logMarkers.zebra);
 
 /**************************************** TYPE DEFINITIONS ****************************************/
 interface ${1:${TM_FILENAME/([a-zA-Z])?([a-zA-Z0-9]+)?[-_]?[-_]?([a-zA-Z])?([a-zA-Z0-9]+)?[-_]?[-_]?([a-zA-Z])?([a-zA-Z0-9]+)?[-_]?[-_]?([a-zA-Z])?([a-zA-Z0-9]+)?[-_]?[-_]?([a-zA-Z])?([a-zA-Z0-9]+)?[-_]?[-_]?([a-zA-Z])?([a-zA-Z0-9]+)?\..*/\U$1\L$2\U$3\L$4\U$5\L$6\U$7\L$8\U$9\L$10\U$11\L$12/g}}Props {
     ${2:arg1}: ${3:string};
 }
+
 
 /********************************************* EXPORT *********************************************/
 /**
