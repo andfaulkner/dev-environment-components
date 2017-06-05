@@ -1,0 +1,31 @@
+<snippet>
+  <description>Import mad-utils - browser</description>
+<content><![CDATA[
+import { ${1:RequiredInjection, OptionalInjection,
+         TranslationProps, RealAny,
+         deepFreeze,
+         singleton, capitalize, cap1LowerRest,
+         NumRange0To6, boolStringToBool,
+         eliminateWhitespace,
+         eachPair,
+         getBaseFilenameFromPath,
+         endsInDotJs, endsInDotJsx, endsInDotTs, endsInDotTsx, endsInDotCss, endsInDotScss,
+         isNonMinFile, endsWithExt,
+         castToNum,
+         first, first2, firstN, last, last2, lastN,
+         withoutFirst, withoutFirst2, withoutFirstN, withoutLast, withoutLast2, withoutLastN,
+         getFunctionSrcAsArray,
+         canadaLangsObj, canadaLangNames, isMultilangTextObj,
+         isInteger, isNumberLike, isArray,
+         isLeapYear, isDateLike, now, defaultTimestampFormat,
+         isDataEnumItem, isIndexEnumItem,
+         getFirstStackItem, getSecondStackItem, removeFromStack, DecoratorError,
+         replaceAll, hasKey, matches,
+         useMiddlewareInProductionOnly composeExpressMiddlewareApplicators,
+         isDir, isFileInDir, getJsFilesInDir, replaceInFile, pathFromRoot,
+         getBaseFilenameFromPath,
+} } from 'mad-utils/lib/browser';
+]]></content>  
+  <tabTrigger>imp_madutils_node</tabTrigger>
+  <scope>source.js, source.ts, source.jsx, source.tsx</scope>
+</snippet>

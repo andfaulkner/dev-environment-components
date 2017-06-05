@@ -1,0 +1,8 @@
+<snippet>
+    <description>e.g. "?email=someone@example.com". Full query string of page URL, including '?'.</description>
+    <content><![CDATA[
+location.search
+]]></content>
+    <tabTrigger>loc_query</tabTrigger>
+    <scope>source.js, source.ts, source.jsx, source.tsx</scope>
+</snippet>

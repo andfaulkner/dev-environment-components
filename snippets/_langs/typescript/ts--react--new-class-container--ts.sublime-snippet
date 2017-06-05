@@ -1,5 +1,5 @@
 <snippet>
-  <description>New class component - typescript</description>
+  <description>New class component - container component - typescript</description>
 <content><![CDATA[
 /************************************** THIRD-PARTY IMPORTS ***************************************/
 import * as React from 'react';
@@ -8,6 +8,8 @@ const classNames = require('classnames');
 
 import { inject } from 'mobx-react';
 import { PolyglotProps } from 'mad-utils/lib/browser';
+
+import { ${TM_FILENAME/([a-zA-Z])?([a-zA-Z0-9]+)?[-_]?[-_]?([a-zA-Z])?([a-zA-Z0-9]+)?[-_]?[-_]?([a-zA-Z])?([a-zA-Z0-9]+)?[-_]?[-_]?([a-zA-Z])?([a-zA-Z0-9]+)?[-_]?[-_]?([a-zA-Z])?([a-zA-Z0-9]+)?[-_]?[-_]?([a-zA-Z])?([a-zA-Z0-9]+)?\-container\..*/\U$1\L$2\U$3\L$4\U$5\L$6\U$7\L$8\U$9\L$10\U$11\L$12/g} } from './${TM_FILENAME/(.+?)(\-container\.tsx)/\1/g}';
 
 /******************************************** LOGGING *********************************************/
 import { logFactory, logMarkers } from 'mad-logs';
@@ -25,13 +27,12 @@ export class ${1:${TM_FILENAME/([a-zA-Z])?([a-zA-Z0-9]+)?[-_]?[-_]?([a-zA-Z])?([
     render() {
         ${0}
         return (
-            <div>
-                {this.props.${2:arg1}}
-            </div>
+            <${TM_FILENAME/([a-zA-Z])?([a-zA-Z0-9]+)?[-_]?[-_]?([a-zA-Z])?([a-zA-Z0-9]+)?[-_]?[-_]?([a-zA-Z])?([a-zA-Z0-9]+)?[-_]?[-_]?([a-zA-Z])?([a-zA-Z0-9]+)?[-_]?[-_]?([a-zA-Z])?([a-zA-Z0-9]+)?[-_]?[-_]?([a-zA-Z])?([a-zA-Z0-9]+)?\-container\..*/\U$1\L$2\U$3\L$4\U$5\L$6\U$7\L$8\U$9\L$10\U$11\L$12/g} />
         )
     }
 };
+
 ]]></content>  
-  <tabTrigger>rct_ts_new_class</tabTrigger>
+  <tabTrigger>rct_ts_new_class_container</tabTrigger>
   <scope>source.tsx</scope>
 </snippet>
