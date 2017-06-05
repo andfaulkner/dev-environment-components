@@ -43,6 +43,17 @@ alias g_tag_rm="git tag -d"
 alias g_tag_new="git tag"
 alias g_tags_my="git tag | ack AF"
 
+tag_v_publish() {
+    tir package.json --replace "\"version\": \"[0-9]{1,4}\.[0-9]{1,4}\.[0-9]{1,4}\"," "\"version\": \"$1\","
+    tir package.json --replace "\.git#v[0-9]{1,4}\.[0-9]{1,4}\.[0-9]{1,4}\"" ".git#v$1\""
+    git add package.json
+    git commit -m "Bump to version $1"
+    git push origin master
+    git tag v$1; #v0.22.2
+    gpo v$1; #v0.22.2;
+    npm publish
+}
+
 # function g_diff_remote {
 #  CURRENT_BRANCH=$(echo $(g_curbr))
 #  echo $CURRENT_BRANCH

@@ -155,17 +155,18 @@ function slicesenerr {
 #       see     http://www.grymoire.com/unix/sed.html
 #####################################
 
-alias goohritemplate="pushd ./; cd $PROJECTS_DIR/ohri/mhealth-template-webapp"
-alias go_ohritemplate="pushd ./; cd $PROJECTS_DIR/ohri/mhealth-template-webapp"
-alias go_mhealthtemplate="pushd ./; cd $PROJECTS_DIR/ohri/mhealth-template-webapp"
-alias go_templatemhealth="pushd ./; cd $PROJECTS_DIR/ohri/mhealth-template-webapp"
+alias goohritemplate="pushd $PROJECTS_DIR/ohri/mhealth-template-webapp"
+alias go_ohritemplate="pushd $PROJECTS_DIR/ohri/mhealth-template-webapp"
+alias go_mhealthtemplate="pushd $PROJECTS_DIR/ohri/mhealth-template-webapp"
+alias go_templatemhealth="pushd $PROJECTS_DIR/ohri/mhealth-template-webapp"
 alias gomhealthtemplate="go_templatemhealth"
-alias go_v2mhealthtemplate="pushd ./; cd $PROJECTS_DIR/ohri/module-testbed/v2-mhealth-template-webapp"
+alias go_v2mhealthtemplate="pushd $PROJECTS_DIR/ohri/module-testbed/v2-mhealth-template-webapp"
 alias gov2mhealthtemplate="go_v2mhealthtemplate"
 alias go_authmodule="pushd $PROJECTS_DIR/ohri/module-testbed/@ottawamhealth-auth-handler"
 alias go_javelinscript="pushd $PROJECTS_DIR/ohri/Javelin/CANImmunize-Javelinscript"
-alias go_basic_js_template="pushd /$PROJECTS_DIR/own-projects/node-react-boiler-simple"
-alias gotemplate="pushd /$PROJECTS_DIR/own-projects/node-react-boiler-simple"
+alias go_basic_js_template="pushd $PROJECTS_DIR/own-projects/node-react-boiler-simple"
+alias gotemplate="pushd $PROJECTS_DIR/own-projects/node-react-boiler-simple"
+alias gowebclient="pushd $PROJECTS_DIR/ohri/module-testbed/webclient-canimmunize-v2"
 
 ################################################################################
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ EMBER ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -283,18 +284,36 @@ function bump_node {
     tir "/Users/andrew/Library/Application Support/Sublime Text 3/Packages/User/Preferences.sublime-settings" --replace "\.nvm\/versions\/node\/v[0-9]\.[0-9]\.[0-9]\/" ".nvm/versions/node/v$1/"
 }
 
+npm_tag_publish_version() {
+    tir package.json --replace "\"version\": \"[0-9]{1,4}\.[0-9]{1,4}\.[0-9]{1,4}\"," "\"version\": \"$1\","
+    tir package.json --replace "\.git#v[0-9]{1,4}\.[0-9]{1,4}\.[0-9]{1,4}\"" ".git#v$1\""
+    rm ./package.json__bk
+    git add package.json
+    git commit -m "Bump to version $1"
+    git push origin master
+    git tag v$1; #v0.22.2
+    gpo v$1; #v0.22.2;
+    npm publish
+    echo "Published v$1!"
+}
+
 alias weather="node /Users/andrew/projects/new_node_modules/weather/weather.js"
 
 ########## CouchDB ###########
 alias nukecouchdb="ps aux | ack couchdb | awk '{print \$2}' | sudo xargs kill -9"
 
-alias npm_ver_inc="jq .version package.json | ruby -e 'puts STDIN.first.split(/[.\"]/).join.to_i+1'"
+# alias npm_ver_inc="jq .version package.json | ruby -e 'puts STDIN.first.split(/[.\"]/).join.to_i+1'"
 # alias npm_git_tag_w_ver='git tag v"$(jq .version package.json | sed -e \'s/^"//\' -e \'s/"$//\')"'
 alias npm_git_tag_w_ver="git tag v\"\$(jq .version package.json | sed -e 's/^\"//' -e 's/\"$//')\""
-alias npm_bumptag="versiony patch; npm_git_tag_w_ver; git tag;"
-alias npm_bumptagpush="git add --all; git commit --all -m 'fixes before a bump'; versiony patch; git commit --all -m 'bump'; npm_git_tag_w_ver; git tag; git push origin \"v\$(jq -r .version package.json)\""
+# alias npm_bumptag="versiony patch; npm_git_tag_w_ver; git tag;"
+# alias npm_bumptagpush="git add --all; git commit --all -m 'fixes before a bump'; versiony patch; git commit --all -m 'bump'; npm_git_tag_w_ver; git tag; git push origin \"v\$(jq -r .version package.json)\""
 
 echo "* NodeJS scripts loaded!"
 
 # yard is also a type of ruby gem
 # alias yard="yarn"
+
+alias npm_hasmodule='cat package.json | ack'
+
+alias yarn_ottawamhealth_upgrade_main_internal_libs="yarn upgrade mad-utils mad-logs env-var-helpers @ottawamhealth/canimmunize-javelinscript; echo 'If required, you can also install @ottawamhealth/auth-handler next - it was left out due to having had significant breaking changes across versions. Be sure to upgrade it very carefully. Cmd:\n    yarn upgrade @ottawamhealth/auth-handler'"
+
