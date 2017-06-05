@@ -1,0 +1,8 @@
+<snippet>
+    <description>e.g. "url.io:80" in "http://url.io:80/main?lang=en#some-id".</description>
+    <content><![CDATA[
+location.host
+]]></content>
+    <tabTrigger>loc_host</tabTrigger>
+    <scope>source.js, source.ts, source.jsx, source.tsx</scope>
+</snippet>

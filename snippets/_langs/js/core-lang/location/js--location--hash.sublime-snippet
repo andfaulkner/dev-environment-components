@@ -1,0 +1,8 @@
+<snippet>
+    <description>e.g. "#some-id" in "http://url.io:80/main?lang=en#some-id". Everything past the "#"</description>
+    <content><![CDATA[
+location.hash
+]]></content>
+    <tabTrigger>loc_hash</tabTrigger>
+    <scope>source.js, source.ts, source.jsx, source.tsx</scope>
+</snippet>

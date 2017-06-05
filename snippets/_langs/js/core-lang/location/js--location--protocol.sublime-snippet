@@ -1,0 +1,8 @@
+<snippet>
+    <description>e.g. "http:" in "http://url.io:80/main?lang=en#some-id".</description>
+    <content><![CDATA[
+location.protocol
+]]></content>
+    <tabTrigger>loc_protocol</tabTrigger>
+    <scope>source.js, source.ts, source.jsx, source.tsx</scope>
+</snippet>

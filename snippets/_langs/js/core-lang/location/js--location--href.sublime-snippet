@@ -1,10 +1,8 @@
 <snippet>
-    <description>e.g. "http://localhost:3002/components/react-1/index.html". Full URL of current page.</description>
+    <description>e.g. "http://localhost:3002/components/react-1/index.html". Full current page URL</description>
     <content><![CDATA[
 location.href
 ]]></content>
-    <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
     <tabTrigger>loc_href</tabTrigger>
-    <!-- Optional: Set a scope to limit where the snippet will trigger -->
-    <!-- <scope>source.python</scope> -->
+    <scope>source.js, source.ts, source.jsx, source.tsx</scope>
 </snippet>

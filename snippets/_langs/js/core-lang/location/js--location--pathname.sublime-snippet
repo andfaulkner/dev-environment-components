@@ -1,0 +1,8 @@
+<snippet>
+    <description>e.g. "/main/en/login" in "localhost:8080/main/en/login?safe=false"</description>
+    <content><![CDATA[
+location.pathname
+]]></content>
+    <tabTrigger>loc_pathname</tabTrigger>
+    <scope>source.js, source.ts, source.jsx, source.tsx</scope>
+</snippet>

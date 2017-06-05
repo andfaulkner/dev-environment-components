@@ -1,10 +1,8 @@
 <snippet>
-    <description>e.g. "http://localhost:3002". Get current page URL minus all paths</description>
+    <description>e.g. "http://localhost:3002". Current page URL minus all paths, queries</description>
     <content><![CDATA[
 location.origin
 ]]></content>
-    <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
     <tabTrigger>loc_origin</tabTrigger>
-    <!-- Optional: Set a scope to limit where the snippet will trigger -->
     <scope>source.js, source.ts, source.jsx, source.tsx</scope>
 </snippet>
