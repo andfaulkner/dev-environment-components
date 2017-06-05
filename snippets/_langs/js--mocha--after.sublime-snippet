@@ -1,0 +1,11 @@
+<snippet>
+  <description>after block - runs after all tests in a section complete.</description>
+<content><![CDATA[
+after(function() {
+    ${0:// Remove generated mock file
+    unlinkSync(path.join(exampleFilePath));}
+});
+]]></content>  
+  <tabTrigger>mo_after</tabTrigger>
+  <scope>source.js, source.ts, source.jsx, source.tsx</scope>
+</snippet>
