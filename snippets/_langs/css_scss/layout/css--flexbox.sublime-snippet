@@ -9,6 +9,6 @@ ${1:.dose-box-wrapper} {
   align-items: ${5:center; /* align in center of axis of cur line. flex-start: align top. flex-end: align bottom; baseline: align so baselines are aligned*/}${0}
 }
 ]]></content>  
-  <tabTrigger>flex_ex</tabTrigger>
+  <tabTrigger>flex_example</tabTrigger>
   <scope>source.css, source.postcss, source.scss</scope>
 </snippet>

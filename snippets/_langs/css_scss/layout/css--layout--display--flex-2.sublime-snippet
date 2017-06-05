@@ -1,10 +1,10 @@
 <snippet>
   <description>Layout el.s in relation to one another & the page w flexboxes</description>
 <content><![CDATA[
-display: ${1:none:     hide, rm effect on flow
-         flex:         def el as flex container & kids as flex items. Block-lvl el. If child els
-                         absolutely positioned, static pos determined in ref to top left corner
-                         of parent flexbox. Centers children if their margin-left set to auto.
+display: ${1:none:  hide, remove effect on flow
+         flex:  define element as flex container, & children as flex items. Block-lvl el. If child
+                elements are absolutely positioned, static position is determined in ref to top left
+                corner of parent flexbox. Centers children if their margin-left set to auto.}
 ]]></content>  
   <tabTrigger>flex</tabTrigger>
   <scope>source.scss, source.postcss, source.css</scope>
