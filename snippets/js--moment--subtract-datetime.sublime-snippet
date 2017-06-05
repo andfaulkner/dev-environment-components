@@ -1,0 +1,16 @@
+<snippet>
+  <description>Subtract the given amount of time from a moment object</description>
+<content><![CDATA[
+${1:moment()}.subtract(${2:7}, `${3:y  | years        |
+                      Q  | quarters     |
+                      M  | months       |
+                      w  | weeks        |
+                      d  | days         |
+                      h  | hours        |
+                      m  | minutes      |
+                      s  | seconds      |
+                      ms | milliseconds}`);${0}
+]]></content>  
+  <tabTrigger>moment_subtract</tabTrigger>
+  <scope>source.js, source.ts, source.jsx, source.tsx</scope>
+</snippet>

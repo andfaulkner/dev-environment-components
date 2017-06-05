@@ -1,0 +1,8 @@
+<snippet>
+  <description>Create new moment object from given object literal</description>
+<content><![CDATA[
+:moment({${1:year: 2012, month: 10, day: 22, hour: 11, minute: 9, second: 53, ms: 123}});${0}
+]]></content>  
+  <tabTrigger>moment_new_from_obj</tabTrigger>
+  <scope>source.js, source.ts, source.jsx, source.tsx</scope>
+</snippet>

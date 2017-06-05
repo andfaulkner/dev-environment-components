@@ -1,0 +1,9 @@
+<snippet>
+  <description>Set moment obj to end of datetime unit (eg set to 59th min of cur hr)</description>
+<content><![CDATA[
+${1:moment()}.endof(`${3:year | quarter | month   | week   |
+                day  | hour    | minute  | second | millisecond}`);${0}
+]]></content>  
+  <tabTrigger>moment_endof_datetimeunit</tabTrigger>
+  <scope>source.js, source.ts, source.jsx, source.tsx</scope>
+</snippet>
