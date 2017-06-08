@@ -1,8 +1,0 @@
-<snippet>
-  <description>Suppresses all errors on the following line</description>
-<content><![CDATA[
-// tslint:disable-next-line
-]]></content>  
-  <tabTrigger>tslint_disable_next_line</tabTrigger>
-  <scope>source.js, source.ts, source.jsx, source.tsx</scope>
-</snippet>

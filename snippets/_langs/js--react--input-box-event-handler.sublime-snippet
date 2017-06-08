@@ -1,0 +1,11 @@
+<snippet>
+  <description>Input tag event handler</description>
+<content><![CDATA[
+${1:onConfirmPasswordChange} = (event: React.FormEvent<HTMLInputElement>) => {
+    log.info(`${1} :: event.target['value']: `, event.target['value']);
+    ${0}
+}
+]]></content>  
+  <tabTrigger>rct_input_ev_handler</tabTrigger>
+  <scope>source.js, source.ts, source.jsx, source.tsx</scope>
+</snippet>

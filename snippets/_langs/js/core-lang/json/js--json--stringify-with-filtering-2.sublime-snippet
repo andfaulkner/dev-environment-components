@@ -1,0 +1,15 @@
+<snippet>
+  <description>Stringify obj to JSON, applying transform+filter 1st</description>
+<content><![CDATA[
+JSON.stringify(${1:someObject}, function(key, value) {
+    ${2:if (typeof value === 'function') {
+        return value.toString();
+    \}
+    return value;
+    // This performs a transform on the object, reassigning values to returned values,
+    // and dropping any key-val pairs you return undefined for.}
+});
+]]></content>  
+  <tabTrigger>json_stringify_transform</tabTrigger>
+  <scope>source.js, source.ts, source.jsx, source.tsx</scope>
+</snippet>

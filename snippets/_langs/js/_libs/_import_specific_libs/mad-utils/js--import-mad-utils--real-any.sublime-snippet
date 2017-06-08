@@ -1,0 +1,8 @@
+<snippet>
+  <description>Import mad-utils - RealAny type</description>
+<content><![CDATA[
+import { RealAny } from 'mad-utils/lib/shared';${0}
+]]></content>  
+  <tabTrigger>imp_realany</tabTrigger>
+  <scope>source.js, source.ts, source.jsx, source.tsx</scope>
+</snippet>

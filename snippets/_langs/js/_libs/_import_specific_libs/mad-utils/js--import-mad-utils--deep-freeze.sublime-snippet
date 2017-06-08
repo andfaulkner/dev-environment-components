@@ -1,0 +1,8 @@
+<snippet>
+  <description>Import mad-utils - deepFreeze function</description>
+<content><![CDATA[
+import { deepFreeze } from 'mad-utils/lib/shared';${0}
+]]></content>  
+  <tabTrigger>imp_deepfreeze</tabTrigger>
+  <scope>source.js, source.ts, source.jsx, source.tsx</scope>
+</snippet>

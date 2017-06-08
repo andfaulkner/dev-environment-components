@@ -1,5 +1,5 @@
 <snippet>
-  <description>ok</description>
+  <description>React version of HTML "a" (link) tag.</description>
 <content><![CDATA[
 <a href=${1:"#"}>${2:Link text or img etc.}</a>
 ]]></content>  

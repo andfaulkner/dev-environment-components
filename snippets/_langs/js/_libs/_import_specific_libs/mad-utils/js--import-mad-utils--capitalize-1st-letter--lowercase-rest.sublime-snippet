@@ -1,0 +1,8 @@
+<snippet>
+  <description>Import mad-utils - cap1LowerRest function (capitalize 1st letter, lowercase rest)</description>
+<content><![CDATA[
+import { cap1LowerRest } from 'mad-utils/lib/shared';${0}
+]]></content>  
+  <tabTrigger>imp_cap1lowerrest</tabTrigger>
+  <scope>source.js, source.ts, source.jsx, source.tsx</scope>
+</snippet>

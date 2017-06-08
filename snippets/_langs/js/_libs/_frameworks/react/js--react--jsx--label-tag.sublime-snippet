@@ -1,0 +1,8 @@
+<snippet>
+  <description>React version of HTML "label" tag.</description>
+<content><![CDATA[
+<label>${1:Label text}</label>${0}
+]]></content>  
+  <tabTrigger><![CDATA[<label]]></tabTrigger>
+  <scope>source.jsx, source.tsx</scope>
+</snippet>

@@ -8,5 +8,5 @@ declare global {
 }
 ]]></content>  
   <tabTrigger>global_error_fix_declare</tabTrigger>
-  <scope>source.js, source.ts, source.jsx, source.tsx</scope>
+  <scope>source.ts, source.tsx</scope>
 </snippet>

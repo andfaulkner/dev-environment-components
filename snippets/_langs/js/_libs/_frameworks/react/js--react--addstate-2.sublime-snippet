@@ -1,0 +1,10 @@
+<snippet>
+    <description>Add state property to a class component</description>
+    <content><![CDATA[
+state = {
+    ${0:${1:stateType}: ${2:currentStateVal}}
+}
+]]></content>
+    <tabTrigger>rct_stateprop</tabTrigger>
+    <scope>source.js, source.ts, source.jsx, source.tsx</scope>
+</snippet>

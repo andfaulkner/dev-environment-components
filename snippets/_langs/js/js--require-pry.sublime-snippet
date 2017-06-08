@@ -1,8 +1,0 @@
-<snippet>
-  <description>Import pry. Can pause app exec & run in-app repl. Install pryjs 1st. Must require, can't use w import</description>
-<content><![CDATA[
-const pry = require('pryjs');
-]]></content>  
-  <tabTrigger>req_pry</tabTrigger>
-  <scope>source.js, source.ts, source.jsx, source.tsx</scope>
-</snippet>

@@ -10,35 +10,31 @@ import * as moment from 'moment';
 import { observable, computed, autorun, action } from 'mobx';
 import { observer, inject } from 'mobx-react';
 
-import autobind from 'autobind-decorator';
-
 /******************************************** LOGGING *********************************************/
 import { logFactory, logMarkers } from 'mad-logs';
 const log = logFactory()('name-store.ts', logMarkers.nightmare);
 
 /********************************************* STORE **********************************************/
 /**
- * @export NameStore
+ * @export ${1:NameStore}
  * @singleton
  */
-@autobind
-class NameStore {
-    // Stores single allowed NameStore instance
-    private static _instance: NameStore;
+class ${1:NameStore} {
+    // Stores single allowed ${1:NameStore} instance
+    private static _instance: ${1:NameStore};
     @observable private _javelinscript: JavelinInstance;
 
     /**
      * @constructor
      * Factory method (The true constructor)
      */
-    static new = (): NameStore => {
-        if (!NameStore._instance) {
-            NameStore._instance = new NameStore();
-            log.verbose(`NameStore created: `, NameStore._instance);
-        }        return NameStore._instance;
+    static new = (): ${1:NameStore} => {
+        if (!${1:NameStore}._instance) {
+            ${1:NameStore}._instance = new ${1:NameStore}();
+            log.verbose(`${1:NameStore} created: `, ${1:NameStore}._instance);
+        }        return ${1:NameStore}._instance;
     }
     private constructor() { this._javelinscript = loadJavelinscript() }
-
 }
 ]]></content>  
   <tabTrigger>mobx_new_store_w_javelinscript</tabTrigger>

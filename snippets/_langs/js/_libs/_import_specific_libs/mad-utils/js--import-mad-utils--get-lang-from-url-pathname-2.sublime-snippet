@@ -1,0 +1,8 @@
+<snippet>
+  <description>Import mad-utils - getLangFromUrlPathname function</description>
+<content><![CDATA[
+import { getLangFromUrlPathname } from 'mad-utils/lib/shared';${0}
+]]></content>  
+  <tabTrigger>imp_langfromurlpathname</tabTrigger>
+  <scope>source.js, source.ts, source.jsx, source.tsx</scope>
+</snippet>

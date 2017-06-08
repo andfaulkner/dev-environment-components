@@ -4,5 +4,5 @@
 declare function require(name: string);
 ]]></content>  
   <tabTrigger>decl_req_ts</tabTrigger>
-  <scope>source.js, source.ts, source.jsx, source.tsx</scope>
+  <scope>source.ts, source.tsx</scope>
 </snippet>

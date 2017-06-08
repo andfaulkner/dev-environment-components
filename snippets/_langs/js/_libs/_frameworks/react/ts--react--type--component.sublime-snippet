@@ -1,0 +1,13 @@
+<snippet>
+  <description>React component class</description>
+<content><![CDATA[
+export class ${1:ComponentName} extends React.Component<${2:${1}Props}, ${3:${1}State}> {
+render() {
+    return (
+        ${0:<span></span>}
+    );
+}
+]]></content>  
+  <tabTrigger>rct_class_new</tabTrigger>
+  <scope>source.ts, source.tsx</scope>
+</snippet>
