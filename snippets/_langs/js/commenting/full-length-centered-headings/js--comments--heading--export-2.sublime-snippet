@@ -1,0 +1,8 @@
+<snippet>
+  <description>'EXPORT' header comment</description>
+<content><![CDATA[
+/********************************************* EXPORT *********************************************/
+]]></content>  
+  <tabTrigger>hdexport</tabTrigger>
+  <scope>source.js, source.ts, source.jsx, source.tsx</scope>
+</snippet>

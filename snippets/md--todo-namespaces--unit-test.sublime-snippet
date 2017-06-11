@@ -1,0 +1,8 @@
+<snippet>
+  <description>Unit testing-related TODO item</description>
+<content><![CDATA[
+*   [UNIT TESTING] :: 
+]]></content>  
+  <tabTrigger>to_test</tabTrigger>
+  <scope>text.html.markdown, text.md, text.markdown</scope>
+</snippet>

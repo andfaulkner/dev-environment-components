@@ -1,0 +1,8 @@
+<snippet>
+  <description>Webpack-related TODO item</description>
+<content><![CDATA[
+*   [WEBPACK] :: 
+]]></content>  
+  <tabTrigger>to_wp</tabTrigger>
+  <scope>text.html.markdown, text.md, text.markdown</scope>
+</snippet>

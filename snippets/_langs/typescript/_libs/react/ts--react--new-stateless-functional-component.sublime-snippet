@@ -1,5 +1,5 @@
 <snippet>
-  <description>description here</description>
+  <description>Create new React stateless functional component</description>
 <content><![CDATA[
 const ${1:NameOfComponent} = (${2/.+/{/}${2:params}${2/.+/\}/}) => (
     ${0}  

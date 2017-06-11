@@ -1,0 +1,8 @@
+<snippet>
+  <description>Deployment-related TODO item</description>
+<content><![CDATA[
+*   [DEPLOYMENT] :: 
+]]></content>  
+  <tabTrigger>todeployment</tabTrigger>
+  <scope>text.html.markdown, text.md, text.markdown</scope>
+</snippet>

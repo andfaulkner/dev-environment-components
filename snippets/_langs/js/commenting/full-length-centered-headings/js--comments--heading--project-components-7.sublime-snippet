@@ -1,0 +1,8 @@
+<snippet>
+  <description>'PROJECT COMPONENTS' header comment</description>
+<content><![CDATA[
+/*************************************** PROJECT COMPONENTS ***************************************/
+]]></content>  
+  <tabTrigger>hdprojectcmp</tabTrigger>
+  <scope>source.js, source.ts, source.jsx, source.tsx</scope>
+</snippet>

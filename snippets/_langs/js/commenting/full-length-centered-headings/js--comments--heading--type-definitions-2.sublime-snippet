@@ -1,0 +1,8 @@
+<snippet>
+  <description>'TYPE DEFINITIONS' header comment</description>
+<content><![CDATA[
+/**************************************** TYPE DEFINITIONS ****************************************/
+]]></content>  
+  <tabTrigger>hdtd</tabTrigger>
+  <scope>source.js, source.ts, source.jsx, source.tsx</scope>
+</snippet>

@@ -1,0 +1,8 @@
+<snippet>
+  <description>Make element responsive to clicks, highlights, hovers (reverses pointer-events:none)</description>
+<content><![CDATA[
+pointer-events: auto;
+]]></content>  
+  <tabTrigger>pointer_events_auto</tabTrigger>
+  <scope>source.css, source.postcss, source.scss</scope>
+</snippet>

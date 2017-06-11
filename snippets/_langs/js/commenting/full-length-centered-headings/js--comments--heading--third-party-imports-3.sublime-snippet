@@ -1,0 +1,8 @@
+<snippet>
+  <description>'THIRD-PARTY IMPORTS' header comment</description>
+<content><![CDATA[
+/************************************** THIRD-PARTY IMPORTS ***************************************/
+]]></content>  
+  <tabTrigger>hdthirdpartyimp</tabTrigger>
+  <scope>source.js, source.ts, source.jsx, source.tsx</scope>
+</snippet>

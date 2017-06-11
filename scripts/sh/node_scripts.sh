@@ -308,6 +308,8 @@ alias npm_git_tag_w_ver="git tag v\"\$(jq .version package.json | sed -e 's/^\"/
 # alias npm_bumptag="versiony patch; npm_git_tag_w_ver; git tag;"
 # alias npm_bumptagpush="git add --all; git commit --all -m 'fixes before a bump'; versiony patch; git commit --all -m 'bump'; npm_git_tag_w_ver; git tag; git push origin \"v\$(jq -r .version package.json)\""
 
+alias npm_get_cur_proj_version='cat package.json | ack "\"version\": \"[0-9]{1,4}\.[0-9]{1,4}\.[0-9]{1,4}\","'
+
 echo "* NodeJS scripts loaded!"
 
 # yard is also a type of ruby gem

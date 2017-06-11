@@ -1,8 +1,0 @@
-<snippet>
-  <description>Log header comment w/ 'PROJECT COMPONENTS' centered + emphasized</description>
-<content><![CDATA[
-//************************************** PROJECT COMPONENTS ***************************************/
-]]></content>  
-  <tabTrigger>hdpc</tabTrigger>
-  <scope>source.js, source.ts, source.jsx, source.tsx</scope>
-</snippet>

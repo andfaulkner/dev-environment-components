@@ -1,0 +1,8 @@
+<snippet>
+  <description>Auth-related TODO item</description>
+<content><![CDATA[
+*   [AUTH] :: 
+]]></content>  
+  <tabTrigger>to_auth</tabTrigger>
+  <scope>text.html.markdown, text.md, text.markdown</scope>
+</snippet>

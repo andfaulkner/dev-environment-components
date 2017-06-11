@@ -1,0 +1,10 @@
+<snippet>
+  <description>Create a new class</description>
+<content><![CDATA[
+.${1:name-of-new-class} {
+    ${0:property: value;}
+}
+]]></content>  
+  <tabTrigger>.</tabTrigger>
+  <scope>source.css, source.postcss, source.scss</scope>
+</snippet>

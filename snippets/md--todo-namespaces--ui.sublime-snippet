@@ -1,0 +1,8 @@
+<snippet>
+  <description>UI-related TODO item</description>
+<content><![CDATA[
+*   [UI] :: 
+]]></content>  
+  <tabTrigger>to_ui</tabTrigger>
+  <scope>text.html.markdown, text.md, text.markdown</scope>
+</snippet>

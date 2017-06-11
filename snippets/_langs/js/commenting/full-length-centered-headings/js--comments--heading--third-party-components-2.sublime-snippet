@@ -1,0 +1,8 @@
+<snippet>
+  <description>'THIRD-PARTY COMPONENTS' header comment</description>
+<content><![CDATA[
+/************************************* THIRD-PARTY COMPONENTS *************************************/
+]]></content>  
+  <tabTrigger>hdtpc</tabTrigger>
+  <scope>source.js, source.ts, source.jsx, source.tsx</scope>
+</snippet>

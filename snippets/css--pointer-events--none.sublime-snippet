@@ -1,0 +1,8 @@
+<snippet>
+  <description>Make element unresponsive to clicks, highlights, hovers (but children still respond)</description>
+<content><![CDATA[
+pointer-events: none;
+]]></content>  
+  <tabTrigger>pointer_events_none</tabTrigger>
+  <scope>source.css, source.postcss, source.scss</scope>
+</snippet>
