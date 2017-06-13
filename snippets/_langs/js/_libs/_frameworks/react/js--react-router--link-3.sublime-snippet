@@ -5,6 +5,6 @@
     ${0:Link Text}
 </Link>
 ]]></content>  
-  <tabTrigger>rct_rtr_link</tabTrigger>
+  <tabTrigger>rct_router_link</tabTrigger>
   <scope>source.js, source.ts, source.jsx, source.tsx</scope>
 </snippet>
