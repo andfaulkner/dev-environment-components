@@ -1,0 +1,25 @@
+{
+  "folders":
+  [
+    {
+      "path": ".",
+      "folder_exclude_patterns": ["node_modules"]
+    },
+    {
+      "path": "/Users/andrew/Library/Application Support/Sublime Text 3/Packages/User/snippets/_docs_guides",
+      "folder_exclude_patterns": ["node_modules"]
+    },
+    {
+      "path": "/Users/andrew/projects/new_node_modules/mad-logs",
+      "folder_exclude_patterns": ["node_modules"]
+    },
+    {
+      "path": "/Users/andrew/Library/Application Support/Sublime Text 3/Packages/User/snippets/snippets",
+      "folder_exclude_patterns": ["node_modules"]
+    },
+    {
+      "path": "/Users/andrew/Library/Application Support/Sublime Text 3/Packages/User/snippets/scripts/sh",
+      "folder_exclude_patterns": ["node_modules"]
+    }
+  ]
+}

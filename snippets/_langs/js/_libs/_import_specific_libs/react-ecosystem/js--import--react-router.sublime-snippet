@@ -1,7 +1,7 @@
 <snippet>
   <description>Import react-router</description>
 <content><![CDATA[
-import { Route, Link, BrowserRouter,
+import { Route, BrowserRouter,
          Match, withRouter, Redirect, Switch, RouteComponent } from 'react-router';
 ]]></content>  
   <tabTrigger>imp_react_router</tabTrigger>
