@@ -24,7 +24,7 @@ import { ${1:RequiredInjection, OptionalInjection,
          useMiddlewareInProductionOnly composeExpressMiddlewareApplicators,
          isDir, isFileInDir, getJsFilesInDir, replaceInFile, pathFromRoot,
          getBaseFilenameFromPath,
-} } from 'mad-utils/lib/browser';
+} } from 'mad-utils/lib/node';
 ]]></content>  
   <tabTrigger>imp_madutils_node</tabTrigger>
   <scope>source.js, source.ts, source.jsx, source.tsx</scope>

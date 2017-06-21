@@ -15,6 +15,7 @@ MISC_CLI_OPTIONS="$SNIPPETS_DIR/scripts/sh/cli_opts.sh"
 SEARCH_SCRIPTS="$SNIPPETS_DIR/scripts/sh/search_scripts.sh"
 WEB_SCRIPTS="$SNIPPETS_DIR/scripts/sh/web_scripts.sh"
 PORTABLE_BASHRC_ADDITIONS="$SNIPPETS_DIR/scripts/sh/portable_bashrc_additions.sh"
+TEMPLATES_DIR="$SNIPPETS_DIR/scripts/sh/templates"
 
 source "$SNIPPETS_DIR/scripts/sh/sys_util_scripts.sh"
 source "$SNIPPETS_DIR/scripts/sh/cli_opts.sh"
@@ -51,6 +52,8 @@ alias bashrc_elm='vim "$ELM_SCRIPTS"'
 # LOAD 'MODULES'
 source "$SNIPPETS_DIR/scripts/sh/bash_modules/module_File.sh"
 
+# LOAD 'MANUALS'
+PATH=$PATH:"$SNIPPETS_DIR/custom-manuals"
 
 ################################################################################
 
