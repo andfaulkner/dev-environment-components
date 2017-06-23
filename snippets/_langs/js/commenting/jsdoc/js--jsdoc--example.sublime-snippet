@@ -1,0 +1,8 @@
+<snippet>
+  <description>jsdoc @example item</description>
+<content><![CDATA[
+@example ${0:Example}
+]]></content>  
+  <tabTrigger>atex</tabTrigger>
+  <scope>source.js, source.ts, source.jsx, source.tsx</scope>
+</snippet>
