@@ -1,0 +1,10 @@
+<snippet>
+  <description>Define SCSS variable</description>
+<content><![CDATA[
+.${1:${TM_FILENAME/(.+)\..+|.*/$1/:name}} {
+    ${0}
+}
+]]></content>  
+  <tabTrigger>css_class_fin</tabTrigger>
+  <scope>source.css, source.postcss, source.scss</scope>
+</snippet>

@@ -1,0 +1,8 @@
+<snippet>
+  <description>Use SCSS variable with interpolation (e.g. inside calc)</description>
+<content><![CDATA[
+#{${2:Helvetica, sans-serif}}
+]]></content>  
+  <tabTrigger>var_interpolated_scss</tabTrigger>
+  <scope>source.scss</scope>
+</snippet>

@@ -1,8 +1,8 @@
 <snippet>
   <description>Import react-router-dom</description>
 <content><![CDATA[
-import { Link, Route, Switch, match, matchPath,
-         BrowserRouter, Redirect, withRouter, LinkProps, Prompt } from 'react-router-dom';
+import { ${1:Link, Route, Switch, match, matchPath,
+         BrowserRouter, Redirect, withRouter, LinkProps, Prompt} } from 'react-router-dom';
 ]]></content>  
   <tabTrigger>imp_react_router_dom</tabTrigger>
   <scope>source.js, source.ts, source.jsx, source.tsx</scope>

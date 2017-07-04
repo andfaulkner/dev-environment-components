@@ -10,7 +10,7 @@ import { PolyglotProps } from 'mad-utils/lib/browser';
 const cn = require('classnames');
 
 //**************************************** PROJECT IMPORTS ****************************************/
-import { ${TM_FILENAME/([a-zA-Z])?([a-zA-Z0-9]+)?[-_]?[-_]?([a-zA-Z])?([a-zA-Z0-9]+)?[-_]?[-_]?([a-zA-Z])?([a-zA-Z0-9]+)?[-_]?[-_]?([a-zA-Z])?([a-zA-Z0-9]+)?[-_]?[-_]?([a-zA-Z])?([a-zA-Z0-9]+)?[-_]?[-_]?([a-zA-Z])?([a-zA-Z0-9]+)?\-container\..*/\U$1\L$2\U$3\L$4\U$5\L$6\U$7\L$8\U$9\L$10\U$11\L$12/g}View } from './${TM_FILENAME/(.+?)(\-container\.tsx)/\1/g}-view';
+import { ${TM_FILENAME/([a-zA-Z])?([a-zA-Z0-9]+)?[-_]?[-_]?([a-zA-Z])?([a-zA-Z0-9]+)?[-_]?[-_]?([a-zA-Z])?([a-zA-Z0-9]+)?[-_]?[-_]?([a-zA-Z])?([a-zA-Z0-9]+)?[-_]?[-_]?([a-zA-Z])?([a-zA-Z0-9]+)?[-_]?[-_]?([a-zA-Z])?([a-zA-Z0-9]+)?\..*/\U$1\L$2\U$3\L$4\U$5\L$6\U$7\L$8\U$9\L$10\U$11\L$12/g}View } from './${TM_FILENAME/(.+)\..+|.*/$1/:name}-view';
 
 /******************************************** LOGGING *********************************************/
 import { logFactory, logMarkers } from 'mad-logs';
@@ -18,7 +18,9 @@ const log = logFactory()(`${TM_FILENAME}`, logMarkers.zebra);
 
 /**************************************** TYPE DEFINITIONS ****************************************/
 interface ${1}Props extends PolyglotProps {}
-interface ${1}State extends {}
+interface ${1}State {
+    ${5:inputVal}: string;
+}
 
 
 /********************************************* EXPORT *********************************************/
@@ -27,9 +29,10 @@ interface ${1}State extends {}
  */
 @inject('polyglot', 'appState')
 export class ${1:${TM_FILENAME/([a-zA-Z])?([a-zA-Z0-9]+)?[-_]?[-_]?([a-zA-Z])?([a-zA-Z0-9]+)?[-_]?[-_]?([a-zA-Z])?([a-zA-Z0-9]+)?[-_]?[-_]?([a-zA-Z])?([a-zA-Z0-9]+)?[-_]?[-_]?([a-zA-Z])?([a-zA-Z0-9]+)?[-_]?[-_]?([a-zA-Z])?([a-zA-Z0-9]+)?\..*/\U$1\L$2\U$3\L$4\U$5\L$6\U$7\L$8\U$9\L$10\U$11\L$12/g}} extends React.Component<${1}Props, ${1}State> {
-    ${3:state = { \}}${3/.+/\n\n    /}${4:events = {
-        inputChange: (event: React.FormEvent<HTMLInputElement>) => {
-            log.info(`inputChange :: event.target['value']:`, event.target['value']);
+    ${3:state = { ${5}: '' \}}${3/.+/\n\n    /}${4:events = {
+        ${5}Change: (event: React.FormEvent<HTMLInputElement>) => {
+            log.info(`${5}Change :: event.target['value']:`, event.target['value']);
+            this.setState(Object.assign({\}, this.state, { ${5}: event.target['value'] \}));
         \},
         submitForm: (event: React.FormEvent<HTMLFormElement>) => {
             log.info(`submitForm :: event:`, event);
@@ -38,8 +41,8 @@ export class ${1:${TM_FILENAME/([a-zA-Z])?([a-zA-Z0-9]+)?[-_]?[-_]?([a-zA-Z])?([
         log.verbose(`Rendering ${1} with this.props:`, this.props);
         ${0}
         return (
-            <${TM_FILENAME/([a-zA-Z])?([a-zA-Z0-9]+)?[-_]?[-_]?([a-zA-Z])?([a-zA-Z0-9]+)?[-_]?[-_]?([a-zA-Z])?([a-zA-Z0-9]+)?[-_]?[-_]?([a-zA-Z])?([a-zA-Z0-9]+)?[-_]?[-_]?([a-zA-Z])?([a-zA-Z0-9]+)?[-_]?[-_]?([a-zA-Z])?([a-zA-Z0-9]+)?\-container\..*/\U$1\L$2\U$3\L$4\U$5\L$6\U$7\L$8\U$9\L$10\U$11\L$12/g}View events={this.events} />
-        )
+            <${TM_FILENAME/([a-zA-Z])?([a-zA-Z0-9]+)?[-_]?[-_]?([a-zA-Z])?([a-zA-Z0-9]+)?[-_]?[-_]?([a-zA-Z])?([a-zA-Z0-9]+)?[-_]?[-_]?([a-zA-Z])?([a-zA-Z0-9]+)?[-_]?[-_]?([a-zA-Z])?([a-zA-Z0-9]+)?[-_]?[-_]?([a-zA-Z])?([a-zA-Z0-9]+)?\..*/\U$1\L$2\U$3\L$4\U$5\L$6\U$7\L$8\U$9\L$10\U$11\L$12/g}View events={this.events} state={this.state} />
+        );
     }
 };
 

@@ -1,0 +1,11 @@
+<snippet>
+  <description>Define SCSS variable</description>
+<content><![CDATA[
+/******************************************** IMPORTS *********************************************/
+@import "${1:../../}styles/variables/variables.scss";
+@import "${1:../../}styles/utils/mixins.scss";
+
+]]></content>
+  <tabTrigger>imp_vars_mixins_modules</tabTrigger>
+  <scope>source.scss</scope>
+</snippet>
