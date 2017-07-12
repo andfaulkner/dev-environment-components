@@ -1,0 +1,8 @@
+<snippet>
+  <description>Replace currently selected text</description>
+<content><![CDATA[
+self.view.replace(edit, replace_region, formatted_str)
+]]></content>  
+  <tabTrigger>subl_write_replace_cur_sel</tabTrigger>
+  <scope>source.python</scope>
+</snippet>

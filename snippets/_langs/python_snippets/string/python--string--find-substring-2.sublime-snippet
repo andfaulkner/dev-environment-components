@@ -1,0 +1,8 @@
+<snippet>
+  <description>Find a substring in a string, ret index it's found at, or -1 if not present</description>
+<content><![CDATA[
+${1:some_string}.lower()
+]]></content>  
+  <tabTrigger>str_find_substr</tabTrigger>
+  <scope>source.python</scope>
+</snippet>

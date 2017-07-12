@@ -1,0 +1,8 @@
+<snippet>
+  <description>Convert string to uppercase</description>
+<content><![CDATA[
+${1:some_string}.upper()
+]]></content>  
+  <tabTrigger>str_uppercase</tabTrigger>
+  <scope>source.python</scope>
+</snippet>
