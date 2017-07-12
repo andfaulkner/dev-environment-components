@@ -1,0 +1,8 @@
+<snippet>
+  <description>Import react-document-title module</description>
+<content><![CDATA[
+import * as DocumentTitle from 'react-document-title';
+]]></content>  
+  <tabTrigger>imp_doctitle</tabTrigger>
+  <scope>source.js, source.ts, source.jsx, source.tsx</scope>
+</snippet>

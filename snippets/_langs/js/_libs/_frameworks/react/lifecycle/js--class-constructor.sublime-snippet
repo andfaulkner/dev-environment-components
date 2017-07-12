@@ -1,0 +1,11 @@
+<snippet>
+    <description>React: class constructor</description>
+    <content><![CDATA[
+constructor (${1:props}) {
+	${2:super(${1:props});}
+	${0:'first to run in a class';}
+}
+]]></content>
+    <tabTrigger>cns</tabTrigger>
+    <scope>source.js, source.ts, source.jsx, source.tsx</scope>
+</snippet>

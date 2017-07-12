@@ -1,0 +1,11 @@
+<snippet>
+    <description>React: class constructor</description>
+    <content><![CDATA[
+constructor (props) {
+	super(props);
+	${0: 'first to run in a react component class';}
+}
+]]></content>
+    <tabTrigger>rct_life_constructor_class</tabTrigger>
+    <scope>source.js, source.ts, source.jsx, source.tsx</scope>
+</snippet>

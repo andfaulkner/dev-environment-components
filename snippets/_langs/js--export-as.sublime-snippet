@@ -1,0 +1,8 @@
+<snippet>
+  <description>Export a variable by another name.</description>
+<content><![CDATA[
+export { ${1:existingVariable} as ${2:nameToExportItOn} }
+]]></content>  
+  <tabTrigger>export_as</tabTrigger>
+  <scope>source.js, source.ts, source.jsx, source.tsx</scope>
+</snippet>

@@ -130,8 +130,23 @@
 ((flip /) 9 3)
 ; => 1/3
 
+;-------------------------------------------- ^:dynamic --------------------------------------------
+; Instruction to the Clojure compiler that a symbol (as defined with def) is intended to be
+; dynamically rebound (with binding)
+; Note that it's not *great* practice most of the time
+;  - higher-order functions tend to be a better pattern in most cases where you'd use it
 
+; Example:
+  (def ^:dynamic bar 10)
+  (binding [bar 20] bar) ;; dynamically bind bar within the scope of the binding
+    ; => 20
+  bar ;; check underlying value of bar (outside the binding)
+    ; => 10
 
+;; Any functions called within the binding will see the modified value of bar (20)
+;; ...while other threads will still see the unchanged root value of 10
 
-
-
+; Without dynamic, this would fail - e.g.:
+; (def foo 1)
+; (binding [foo 2] foo)
+  ; => 'IllegalStateException Can't dynamically bind non-dynamic var'

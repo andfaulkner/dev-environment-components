@@ -1,0 +1,8 @@
+<snippet>
+  <description>Export all exports from another file.</description>
+<content><![CDATA[
+export * from '${1:./another/file}';${0}
+]]></content>  
+  <tabTrigger>export_file_exports_all</tabTrigger>
+  <scope>source.js, source.ts, source.jsx, source.tsx</scope>
+</snippet>

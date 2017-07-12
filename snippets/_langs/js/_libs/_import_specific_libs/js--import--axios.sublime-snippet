@@ -1,0 +1,8 @@
+<snippet>
+  <description>Import axios library (for HTTP requests)</description>
+<content><![CDATA[
+import axios from 'axios';
+]]></content>  
+  <tabTrigger>impaxios</tabTrigger>
+  <scope>source.js, source.ts, source.jsx, source.tsx</scope>
+</snippet>

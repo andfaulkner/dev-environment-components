@@ -1,0 +1,8 @@
+<snippet>
+    <description>Create comment in JSX block</description>
+    <content><![CDATA[
+{/* ${0} */}
+]]></content>
+    <tabTrigger>rcmt</tabTrigger>
+    <scope>source.js, source.ts, source.jsx, source.tsx</scope>
+</snippet>

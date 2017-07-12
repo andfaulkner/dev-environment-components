@@ -5,7 +5,9 @@ echo '* git scripts loading...'
 alias g="git"
 alias gpom="git push origin master"
 alias gpo="git push origin"
+alias ga="git add"
 alias gaa="git add --all"
+alias gcm="git commit -m"
 alias gca="git commit --all -m"
 alias gaca="git add --all; git commit --all -m"
 alias g_po="git push origin"
@@ -64,6 +66,9 @@ tag_v_publish() {
 
 # rubify this, make it check current branch first and only do this if it's on develop after checkout
 alias g_resetdev="git stash; git checkout develop; git fetch origin; git reset --hard origin/develop"
+
+# Convert previous git commit into a set of staged but uncommited local files, and remove the commit from the git history.
+alias g_reset_last_commit_keep_local_changes="git reset --soft HEAD~1"
 
 alias gsa="git stash apply"
 alias gstash="git stash"

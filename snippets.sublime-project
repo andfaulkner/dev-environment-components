@@ -4,9 +4,18 @@
 		{
 			"folder_exclude_patterns":
 			[
-				"node_modules",
+				"node_modules"
 			],
 			"path": "."
+		},
+		{
+			"path": "/Users/andfaulkner/Library/Application Support/Sublime Text 3/Packages/pad-comments-sublime"
+		},
+		{
+			"path": "/Users/andfaulkner/Library/Application Support/Sublime Text 3/Packages/function-name-write"
+		},
+		{
+			"path": "/Users/andfaulkner/Library/Application Support/Sublime Text 3"
 		}
 	]
 }

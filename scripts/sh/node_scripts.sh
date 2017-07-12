@@ -39,6 +39,7 @@ alias ni="npm install"
 alias yad="yarn add --dev"
 alias yap="yarn add --peer"
 alias yas="yarn add"
+alias yrem="yarn remove"
 
 # Install type definition with yarn
 function yat() {

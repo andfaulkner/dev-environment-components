@@ -1,0 +1,12 @@
+<snippet>
+  <description>Fix global error where captureStackTrace not shown as existing</description>
+<content><![CDATA[
+declare global {
+    interface Error {
+        captureStackTrace: any;
+    }
+}
+]]></content>  
+  <tabTrigger>ts_augment_global_err</tabTrigger>
+  <scope>source.ts, source.tsx</scope>
+</snippet>

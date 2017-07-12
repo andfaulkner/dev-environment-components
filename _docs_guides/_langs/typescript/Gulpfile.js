@@ -1,6 +1,7 @@
 process.setMaxListeners(0);
 require('events').EventEmitter.prototype._maxListeners = 100;
 require('rootpath')();
+var postcssPropertyLookup = require('postcss-property-lookup');
 
 var _ = require('lodash');
 var gulp = require('gulp');
@@ -26,7 +27,7 @@ gulp.task('typescript', () => {
 /**
  * Watch for changes
  */
-var rerunOnChange = (() => {
+const rerunOnChange = (() => {
   gulp.watch(PATHS.typescript, ['typescript']);
 });
 
@@ -36,3 +37,62 @@ var rerunOnChange = (() => {
 gulp.task('default', ['typescript'], function() {
   return rerunOnChange();
 });
+
+function funcOk () {
+
+}
+
+const constOk = () => {
+
+}
+
+let letOk = () => {
+
+}
+
+let varOk = () => {
+
+}
+
+const funcConstOk = function() {
+
+}
+
+let funcLetOk = function() {
+
+}
+
+let funcVarOk = function() {
+
+}
+// js:
+//     source.js
+//     meta.function.declaration.js
+//     variable.other.readwrite.js
+//     entity.name.function.js
+// ts:
+// 
+const constFuncOk = function() {
+
+}
+
+class ClassOk {
+    constructor () {
+        super();
+        'first to run in a class';
+    }
+    asdfasdfasdf = () => {
+
+    }
+    render() {
+
+    }
+    ok = 'okokokok'
+    ok = 123
+
+    // source.tsx
+    // meta.class.tsx
+    // meta.field.declaration.tsx
+    // meta.definition.property.tsx
+    // variable.object.property.tsx
+}

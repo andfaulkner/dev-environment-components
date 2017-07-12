@@ -1,39 +1,46 @@
 #!/usr/bin/env sh
 
-echo ''
-echo '--------------------------------------------------------------------------------------------------------'
-echo '** GIT **'
-echo '--------------------------------------------------------------------------------------------------------'
-echo 'DIFF AGAINST A LOCATION IN THE STASH:                git stash show -p stash@{0}'
-echo ''
-echo 'CLONING'
-echo 'Clone without .git folder: example:'
-echo '        git clone --depth=1 --branch=master https://github.com/ngmy/vim-rubocop.git'
-echo "        echo \$(echo !\$ | awk -F'.' '{print \$(NF-1)}' | awk -F'/' '{print \$NF}')/.git | xargs rm -rf"
-echo 'Clone into folder with different name from repo:'
-echo '        git clone git@github.com:andfaulkner/some-repo dir-name'
-echo ''
-echo 'Comparing state of a file in a past commit with current state (example):'
-echo '        git diff e51a122d44aacab0745230076202ae037b17414f..HEAD -- spec/services/report_service_spec.rb'
-echo ''
-echo 'Modify timestamp of most recent commit'
-echo '        git commit --amend --date="Mon Sep 12 09:13:45 2016 -0400'
-echo ' -- modify an earlier commit timestamp'
-echo '        1)  pull out the commit via hash:    git rebase -i 6e2079a8183b9a0a293398edf0f15f3243b403a6~1'
-echo '        2)  modify the date:                 git commit --amend --date="Mon Sep 12 09:13:45 2016 -0400'
-echo '        3)  carry on:                        git rebase --continue'
-echo ''
-echo 'TAGS'
-echo ' -- create tag:     git tag new-tag-name'
-echo ' -- remove tag:     git tag -d name-of-tag-to-remove'
-echo ''
-echo 'RENAMING BRANCHES'
-echo ' -- rename a local branch: git branch -m <oldname> <newname>'
-echo ''
-echo 'CLONE INTO SPECIFIC FOLDER'
-echo '    git clone https://github.com/andfaulkner/some-repo name-of-folder-to-clone-into'
-echo ''
-echo 'DIFF AGAINST REMOTE'
-echo '    git diff master origin/master'
-echo '--------------------------------------------------------------------------------------------------------\n'
+cat << GIT_MANUAL_WRAPPER
+--------------------------------------------------------------------------------------------------------
+** GIT **
+--------------------------------------------------------------------------------------------------------
+DIFF AGAINST A LOCATION IN THE STASH:                git stash show -p stash@{0}
 
+CLONING
+Clone without .git folder: example:
+        git clone --depth=1 --branch=master https://github.com/ngmy/vim-rubocop.git
+        echo \$(echo !\$ | awk -F'.' '{print \$(NF-1)}' | awk -F'/' '{print \$NF}')/.git | xargs rm -rf
+Clone into folder with different name from repo:
+        git clone git@github.com:andfaulkner/some-repo dir-name
+
+Comparing state of a file in a past commit with current state (example):
+        git diff e51a122d44aacab0745230076202ae037b17414f..HEAD -- spec/services/report_service_spec.rb
+
+Modify timestamp of most recent commit
+        git commit --amend --date="Mon Sep 12 09:13:45 2016 -0400
+ -- modify an earlier commit timestamp
+        1)  pull out the commit via hash:    git rebase -i 6e2079a8183b9a0a293398edf0f15f3243b403a6~1
+        2)  modify the date:                 git commit --amend --date="Mon Sep 12 09:13:45 2016 -0400
+        3)  carry on:                        git rebase --continue
+
+TAGS
+ -- create tag:     git tag new-tag-name
+ -- remove tag:     git tag -d name-of-tag-to-remove
+
+RENAMING BRANCHES
+ -- rename a local branch: git branch -m <oldname> <newname>
+
+CLONE INTO SPECIFIC FOLDER
+    git clone https://github.com/andfaulkner/some-repo name-of-folder-to-clone-into
+
+DIFF AGAINST REMOTE
+    git diff master origin/master
+
+STASH
+-- diff against old stash		git stash show stash@{3}
+-- list all old stashes			git stash list
+-- apply old stash			git stash apply stash@{1}s
+
+--------------------------------------------------------------------------------------------------------\n
+
+GIT_MANUAL_WRAPPER

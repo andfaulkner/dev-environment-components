@@ -1,8 +1,0 @@
-<snippet>
-  <description>Import javelinscript</description>
-<content><![CDATA[
-import { ${1:buildJavelinscript, buildJavelinscriptWithCustomConfig, Types, JavelinInstance} } from '@ottawamhealth/canimmunize-javelinscript';
-]]></content>  
-  <tabTrigger>imp_javelinscript</tabTrigger>
-  <scope>source.js, source.ts, source.jsx, source.tsx</scope>
-</snippet>

@@ -1,3 +1,9 @@
+##### ENSURE ALL TERMINALS WRITE TO SINGLE HISTORY FILE #####
+#shopt -s histappend;
+#PROMPT_COMMAND="history -a;history -c; history -r;$PROMPT_COMMAND"
+# Create effectively-infinite-length bash history file
+HISTSIZE=500000 HISTFILESIZE=5000000
+
 ################################################################################
 #~~~~~~~~~~~~~~~~~~~~~~~~~~ LOAD OTHER SOURCE SCRIPTS ~~~~~~~~~~~~~~~~~~~~~~~~~~
 ################################################################################
@@ -79,16 +85,20 @@ alias goprojects="pushd \"$HOME/projects\""
 alias anproj="pushd \"$HOME/projects/android\""
 alias goelectron="pushd \"$HOME/projects/electron\""
 
-alias godocs="pushd cd \"$HOME/Documents\""
+alias godocs="pushd \"$HOME/Documents\""
 alias godownloads="pushd \"$HOME/Downloads\""
 alias gobinhome="pushd \"$HOME/bin\""
 
 alias govimsetup="pushd \"$HOME.config/nvim/\""
 
-alias gomadutils="pushd \"$HOME/projects/new_node_modules/mad-utils\""
 alias go_madutils="pushd \"$HOME/projects/new_node_modules/mad-utils\""
-alias goutils="pushd \"$HOME/projects/new_node_modules/mad-utils\""
-alias go_utils="pushd \"$HOME/projects/new_node_modules/mad-utils\""
+alias gomadutils="go_madutils"
+alias goutils="go_madutils"
+alias go_utils="go_madutils"
+
+alias go_madlogs="pushd \"$HOME/projects/new_node_modules/mad-logs\""
+alias gomadlogs="go_madlogs"
+alias go_log_lib="go_madlogs"
 
 ## super-ls
 alias lsa='ls -ao | grep -v "[0-9][0-9] \.\.\?$"'
@@ -257,7 +267,10 @@ esac
 
 alias vimrc="vim ~/.config/nvim/init.vim"
 
-## open file in sublime text
+## Open Sublime Text 3
+alias sublime="open /Applications/Sublime\ Text.app"
+
+## Open file in Sublime Text 3
 function open_in_sublime {
     echo "** opening $1 in sublime text 3"
     sublime --project "$1"

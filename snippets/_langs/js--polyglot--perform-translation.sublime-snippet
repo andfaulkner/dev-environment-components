@@ -1,0 +1,8 @@
+<snippet>
+  <description>Display text at given string ID based on current languge</description>
+<content><![CDATA[
+${1:this.}props.polyglot.t('text.${2}')
+]]></content>  
+  <tabTrigger>pgt</tabTrigger>
+  <scope>source.js, source.ts, source.jsx, source.tsx</scope>
+</snippet>

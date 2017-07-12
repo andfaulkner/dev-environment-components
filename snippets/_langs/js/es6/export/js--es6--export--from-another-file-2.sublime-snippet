@@ -1,0 +1,8 @@
+<snippet>
+  <description>Export all exports from another file (i.e. in F1, export all from F2)</description>
+<content><![CDATA[
+export ${1:* /*OR { name1, etc \}  OR  { imp1 as name1, etc1 as etc2 \}*/} from '${2:./another/file}';${0}
+]]></content>  
+  <tabTrigger>exp_from_file</tabTrigger>
+  <scope>source.js, source.ts, source.jsx, source.tsx</scope>
+</snippet>
