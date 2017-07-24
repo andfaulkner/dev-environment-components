@@ -1,6 +1,7 @@
 #!/usr/bin/env sh
 
-cat << GIT_MANUAL_WRAPPER
+cat <<-CLI_MANUAL_FOR_GIT
+>>>>>>> Stashed changes
 --------------------------------------------------------------------------------------------------------
 ** GIT **
 --------------------------------------------------------------------------------------------------------
@@ -17,7 +18,7 @@ Comparing state of a file in a past commit with current state (example):
         git diff e51a122d44aacab0745230076202ae037b17414f..HEAD -- spec/services/report_service_spec.rb
 
 Modify timestamp of most recent commit
-        git commit --amend --date="Mon Sep 12 09:13:45 2016 -0400
+      git commit --amend --date="Fri Jul 07 15:09:22 2017 -0400"
  -- modify an earlier commit timestamp
         1)  pull out the commit via hash:    git rebase -i 6e2079a8183b9a0a293398edf0f15f3243b403a6~1
         2)  modify the date:                 git commit --amend --date="Mon Sep 12 09:13:45 2016 -0400
@@ -42,5 +43,4 @@ STASH
 -- apply old stash			git stash apply stash@{1}s
 
 --------------------------------------------------------------------------------------------------------\n
-
-GIT_MANUAL_WRAPPER
+CLI_MANUAL_FOR_GIT
