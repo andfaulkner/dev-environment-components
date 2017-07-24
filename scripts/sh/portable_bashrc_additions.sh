@@ -280,3 +280,6 @@ function open_in_sublime {
 pa() {
     ps aux | ack $1 | ack -v "perl \/.+bin\/ack"
 }
+
+alias gogameimmunitywarriors="cd $PROJECTS_DIR/own-projects/immunity-warriors-game"
+
