@@ -27,3 +27,9 @@ main = print total
 
 mainer :: IO()
 mainer = print z
+
+
+-- Get type of expression or object (in GHCi)
+:type 3 -- OUTPUT) 3 :: Num t => t
+
+-- To show the type of every expression in GHCi - :set +t
