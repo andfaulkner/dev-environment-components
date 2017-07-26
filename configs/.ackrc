@@ -21,6 +21,6 @@
 # Coffeescript
 --type-set=coffee=.coffee
 
-
-
+# JSON
+--type-set=json=.json
 
