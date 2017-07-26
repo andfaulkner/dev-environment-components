@@ -1,0 +1,8 @@
+<snippet>
+  <description>Word: __TRANSLATE__</description>
+<content><![CDATA[
+__TRANSLATE__
+]]></content>  
+  <tabTrigger>trn</tabTrigger>
+  <scope>source.json</scope>
+</snippet>

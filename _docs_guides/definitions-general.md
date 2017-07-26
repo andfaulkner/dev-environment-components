@@ -502,6 +502,15 @@ HSTS Policy
             int  *pointerTonumVar;
             pointerTonumVar = &numVar
 
+@### Polymorphic type ###@
+*   A type that can take on different forms
+*   Most common form: generic type
+    *   e.g. (in Typescript) the type "T" below is a polymorphic type:
+
+    function identity<T>(arg: T): T {
+        return arg;
+    }
+
 @### Punycode ###@
 *   way to represent International Domain Names with the limited character set (A-Z, 0-9) supported by the domain name system
 *   e.g. "münich" would be encoded as "mnich-kva"
