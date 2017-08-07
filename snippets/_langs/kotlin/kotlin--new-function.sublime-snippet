@@ -1,0 +1,14 @@
+<snippet>
+  <description>Create new function</description>
+<content><![CDATA[
+/**
+ * @function ${1}
+ * ${3:@param {String\} name Name of person.}
+ */
+fun ${1:funcName}(${2:name: String}) {
+    ${0:println("Hello \$name")}
+}
+]]></content>  
+  <tabTrigger>fun</tabTrigger>
+  <scope>source.Kotlin</scope>
+</snippet>

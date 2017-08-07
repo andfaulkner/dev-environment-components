@@ -1,0 +1,8 @@
+<snippet>
+  <description>Import classnames</description>
+<content><![CDATA[
+const cn = require('classnames');
+]]></content>  
+  <tabTrigger>impcn</tabTrigger>
+  <scope>source.js, source.ts, source.jsx, source.tsx</scope>
+</snippet>
