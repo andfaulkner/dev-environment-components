@@ -1,0 +1,13 @@
+<snippet>
+  <description>Basic stateless functional component</description>
+<content><![CDATA[
+const ${1:ComponentName} = (${2:props}) => {
+    return (
+        ${0:<div>OK</div>}
+    );
+};
+
+]]></content>
+  <tabTrigger>sfc</tabTrigger>
+  <scope>source.js, source.ts, source.jsx, source.tsx</scope>
+</snippet>

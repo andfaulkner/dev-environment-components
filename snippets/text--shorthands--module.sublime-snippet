@@ -1,0 +1,10 @@
+<snippet>
+  <description>Turns mod into module</description>
+<content><![CDATA[
+module
+]]></content>
+  <tabTrigger>mod</tabTrigger>
+<!--   <scope>source.(js | clojure | ruby | ruby.rails | shell | sql | css | yaml | sass | elixir |
+                     js.jsx | less | makefile | groovy | php | go | lisp | python | regexp | elm) OR
+           text.(html | html.markdown | xml | plain | html.handlebars)</scope> -->
+</snippet>

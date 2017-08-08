@@ -64,6 +64,10 @@ A &     Run A in background.
 - Run a command and return the value into a string:      var="$(command)"
     - nesting: using $() lets you avoid quote-escaping:  var="$(command1 "$(command2)")"
 
+******** LINKING FILES / SYMLINKS ********
+- Create a symlink:                      ln -s {/path/to/file-name} {link-name}
+              e.g.:                      ln -s  ~/.config/nvim/init.vim ~/.vimrc 
+- Read a link (get actual file path):    readlink ~/.vimrc
 
 ********* PORTS AND SOCKETS *********
 View all ports in use:                                   netstat -na

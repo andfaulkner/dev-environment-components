@@ -1,0 +1,26 @@
+# Always use color
+--color
+
+# Expand definition of CSS to include SCSS and less
+--type-add=css=scss,less
+
+##### Teach ack about more languages #####
+# JSX
+--type-set=jsx:ext:jsx
+--type-add=js=jsx
+
+# Typescript
+--type-set=ts:ext:ts,tsx
+--type-set=tsdef:match:/.+\.d\.ts/
+--type-set=tsd:match:/.+\.d\.ts/
+--type-set=tsx:ext:tsx
+
+# SCSS
+--type-set=scss:ext:scss
+
+# Coffeescript
+--type-set=coffee=.coffee
+
+# JSON
+--type-set=json=.json
+

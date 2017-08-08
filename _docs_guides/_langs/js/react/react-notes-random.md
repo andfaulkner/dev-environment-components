@@ -121,6 +121,57 @@ Worth considering
       }
     };
 
+React JSX component rendering - equivalent JS code
+==================================================
+This JS code:
+
+    return React.createElement(withProps({
+        events: this.events,
+        activeTab: this.activeTab,
+        polyglot: this.props.polyglot,
+        children: this.getTabContent()
+    })((SettingsView)))
+
+...is identical to this JSX:
+
+    return (
+        <SettingsView
+            events={this.events}
+            activeTab={this.activeTab}
+            polyglot={this.props.polyglot}
+        >
+            {this.getTabContent()}
+        </SettingsView>
+    )
+
+Another example:
+    return React.createElement(withProps({ polyglot })(child));
+
+
+Modifying a React component's children
+======================================
+Simple and illustrative (but not particularly useful) example:
+
+    export const SettingInputCol = ({ children }: { children?: JSX.Element }): JSX.Element =>
+        <div className={cn(s['settings-input-box-width'])}>
+            {React.cloneElement(React.Children.only(children), { mergeInClasses: 'ml-n40' })}
+        </div>
+
+...To use it:
+
+    <SettingInputCol>
+        <CIFormInput
+            placeholder={'Name'}
+            value={undefined}
+            onChange={(_ev) => {
+                // Handle the event
+            }}
+        />
+    </SettingInputCol>
+
+The above CIFormInput gets the { mergeInClasses: 'ml-n40' } prop injected automatically.
+
+
 Further reading
 ---------------
 https://camjackson.net/post/9-things-every-reactjs-beginner-should-know

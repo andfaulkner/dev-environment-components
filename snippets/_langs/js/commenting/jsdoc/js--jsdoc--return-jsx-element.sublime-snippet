@@ -1,0 +1,8 @@
+<snippet>
+  <description>jsdoc @return item</description>
+<content><![CDATA[
+@return {JSX.Element} Renderable ${1:ComponentName} component.
+]]></content>  
+  <tabTrigger>atrj</tabTrigger>
+  <scope>source.js, source.ts, source.jsx, source.tsx</scope>
+</snippet>

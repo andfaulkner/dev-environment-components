@@ -1,7 +1,7 @@
 <snippet>
   <description>require classnames lib for use w react. (note: 'import' broke tests here)</description>
 <content><![CDATA[
-const classNames = require('classnames');
+const cn = require('classnames');
 ]]></content>  
   <tabTrigger>imp_classnames</tabTrigger>
   <scope>source.ts, source.tsx, source.js, source.jsx</scope>
