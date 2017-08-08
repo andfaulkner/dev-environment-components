@@ -134,6 +134,7 @@ class MyClass {
 }
 
 
+
 /*************************************** METHOD DECORATORS ****************************************/
 // Example
 function enumerable(value: boolean) {
@@ -194,3 +195,29 @@ class ClassDecoratorParamsExample {
 //   }
 //   ClassDecoratorParams(1, 'a') called on:  function ClassDecoratorParamsExample() {
 //   }
+
+
+
+//################################################
+//#          TS 2: PARAMETER DECORATORS          #
+//################################################
+
+// ANOTHER PARAMETER DECORATOR EXAMPLE
+function logParameter(target: any, key : string, index : number) {
+  var metadataKey = `__log_${key}_parameters`;
+  console.log(metadataKey);
+  if (Array.isArray(target[metadataKey])) {
+    target[metadataKey].push(index);
+  }
+  else {
+    target[metadataKey] = [index];
+  }
+}
+
+
+// Usage
+class SomeTestClass {
+    testMethod(@logParameter myParam: any) {
+      // ... etc.
+    }
+}

@@ -1,0 +1,10 @@
+<snippet>
+  <description>Height - all props</description>
+<content><![CDATA[
+height: ${1:100%};
+min-height: ${1};
+max-height: ${1};
+]]></content>  
+  <tabTrigger>height</tabTrigger>
+  <scope>source.css, source.postcss, source.scss</scope>
+</snippet>

@@ -1,0 +1,10 @@
+<snippet>
+  <description>Width - all props</description>
+<content><![CDATA[
+width: ${1:100%};
+min-width: ${1};
+max-width: ${1};
+]]></content>  
+  <tabTrigger>widthall</tabTrigger>
+  <scope>source.css, source.postcss, source.scss</scope>
+</snippet>

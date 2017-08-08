@@ -1,0 +1,8 @@
+<snippet>
+  <description>import mobx - useStrict </description>
+<content><![CDATA[
+import { useStrict } from 'mobx';${0}
+]]></content>  
+  <tabTrigger>imp_mobx_strict</tabTrigger>
+  <scope>source.js, source.ts, source.jsx, source.tsx</scope>
+</snippet>

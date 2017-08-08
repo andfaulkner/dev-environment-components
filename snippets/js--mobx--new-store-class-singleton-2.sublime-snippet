@@ -1,0 +1,31 @@
+<snippet>
+  <description>Create new MobX singleton class store module with a factory</description>
+<content><![CDATA[
+/************************************** THIRD-PARTY MODULES ***************************************/
+import { observable, action, computed } from 'mobx';
+import { observer, inject } from 'mobx-react';
+
+
+/********************************************* EXPORT *********************************************/
+/**
+ * @export ${1} - ${2:Store data about 1}
+ */
+export class ${1:${TM_FILENAME/([a-zA-Z])?([a-zA-Z0-9]+)?[-_]?[-_]?([a-zA-Z])?([a-zA-Z0-9]+)?[-_]?[-_]?([a-zA-Z])?([a-zA-Z0-9]+)?[-_]?[-_]?([a-zA-Z])?([a-zA-Z0-9]+)?[-_]?[-_]?([a-zA-Z])?([a-zA-Z0-9]+)?[-_]?[-_]?([a-zA-Z])?([a-zA-Z0-9]+)?\..*/\U$1\L$2\U$3\L$4\U$5\L$6\U$7\L$8\U$9\L$10\U$11\L$12/g}} {
+    public static Instance: ${1:$TM_FILENAME} | null = null
+
+    ${0:@observable someValue = 300;}
+}
+
+/******************************************** FACTORY *********************************************/
+/**
+ * ${1} singleton factory.
+ */
+export const ${1/^([a-zA-Z])/\l\1/g}Factory = (): ${1:$TM_FILENAME} => {
+    if (!${1:$TM_FILENAME}.Instance) ${1:$TM_FILENAME}.Instance = new ${1:$TM_FILENAME}();
+    return ${1:$TM_FILENAME}.Instance;
+};
+
+]]></content>
+  <tabTrigger>mobx_new_singleton_class</tabTrigger>
+  <scope>source.js, source.ts, source.jsx, source.tsx</scope>
+</snippet>
