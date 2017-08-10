@@ -25,7 +25,11 @@ cat << SUBLIME_PROJECT_FILE > "$OUTPUT_FILE"
             "folder_exclude_patterns": ["node_modules"]
         },
         {
-            "path": "$HOME_DIR/projects/new_node_modules/mad-logs",
+            "path": "$HOME_DIR/Library/Application Support/Sublime Text 3/Packages/User/snippets/custom-manuals",
+            "folder_exclude_patterns": ["node_modules"]
+        },
+        {
+            "path": "$HOME_DIR/Library/Application Support/Sublime Text 3/Packages/User/snippets/scripts/sh",
             "folder_exclude_patterns": ["node_modules"]
         },
         {
@@ -33,7 +37,11 @@ cat << SUBLIME_PROJECT_FILE > "$OUTPUT_FILE"
             "folder_exclude_patterns": ["node_modules"]
         },
         {
-            "path": "$HOME_DIR/Library/Application Support/Sublime Text 3/Packages/User/snippets/scripts/sh",
+            "path": "$HOME_DIR/projects/new_node_modules/mad-logs",
+            "folder_exclude_patterns": ["node_modules"]
+        },
+        {
+            "path": "$HOME_DIR/projects/new_node_modules/mad-utils",
             "folder_exclude_patterns": ["node_modules"]
         }
     ]
