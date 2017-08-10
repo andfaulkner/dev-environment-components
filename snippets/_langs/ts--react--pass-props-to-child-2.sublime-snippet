@@ -1,0 +1,8 @@
+<snippet>
+  <description>Pass props to current component's child</description>
+<content><![CDATA[
+React.cloneElement(React.Children.only(children), { ${1:propKey: 'propVal'} })
+]]></content>
+  <tabTrigger>rct_props_pass_to_child</tabTrigger>
+  <scope>source.js, source.ts, source.jsx, source.tsx</scope>
+</snippet>

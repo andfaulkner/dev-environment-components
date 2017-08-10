@@ -1,0 +1,10 @@
+<snippet>
+	<description>true unless var set & not empty str ('' = false, " " = true)</description>
+	<content><![CDATA[
+if [ ! -n "\$${1:1}" ]; then
+    ${0}
+fi
+]]></content>
+	<tabTrigger>unless_var_exists</tabTrigger>
+	<scope>source.shell</scope>
+</snippet>

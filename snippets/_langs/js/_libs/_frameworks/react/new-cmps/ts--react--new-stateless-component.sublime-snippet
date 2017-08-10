@@ -1,8 +1,10 @@
 <snippet>
   <description>Create new React stateless functional component</description>
 <content><![CDATA[
-const ${1:NameOfComponent} = (${2/.+/{/}${2:params}${2/.+/\}/}) => (
-    ${0}  
+const ${1:NameOfComponent} = (${2:{ children \}: { children: JSX.Element | React.ReactElement<any> \}}) => (
+    ${0:<div>
+        {children\}
+    </div>}
 );
 ]]></content>  
   <tabTrigger>rctsfc</tabTrigger>

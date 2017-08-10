@@ -52,6 +52,6 @@ class ${1:${TM_FILENAME/(.+)\..+|.*/$1/:name}} extends React.Component<${1}Props
   }
 }
 ]]></content>  
-  <tabTrigger>rct_new_clfull</tabTrigger>
+  <tabTrigger>rct_new_life_full_class</tabTrigger>
   <scope>source.js, source.ts, source.jsx, source.tsx</scope>
 </snippet>

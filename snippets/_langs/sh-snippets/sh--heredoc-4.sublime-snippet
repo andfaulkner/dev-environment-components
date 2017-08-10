@@ -1,0 +1,13 @@
+<snippet>
+	<description>Insert a heredoc (multiline string)</description>
+	<content><![CDATA[
+<<-HEREDOC
+${0:String to output.
+As many lines as you'd like. Even 1000. A heredoc doesn't care.
+Note that you can interpolate values in here via \$VARIABLE_NAME.}
+HEREDOC
+
+]]></content>
+	<tabTrigger>str_multiline</tabTrigger>
+	<scope>source.shell</scope>
+</snippet>

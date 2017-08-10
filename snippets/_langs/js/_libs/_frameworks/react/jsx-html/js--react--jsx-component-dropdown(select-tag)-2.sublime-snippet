@@ -8,8 +8,6 @@
     <option value="${5:dropdownOpt3}">${5:dropdownOpt3}</option>
 </select>
 ]]></content>
-    <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
-    <tabTrigger>rct_select</tabTrigger>
-    <!-- Optional: Set a scope to limit where the snippet will trigger -->
+    <tabTrigger>rct_el_select</tabTrigger>
     <scope>source.js, source.ts, source.jsx, source.tsx</scope>
 </snippet>

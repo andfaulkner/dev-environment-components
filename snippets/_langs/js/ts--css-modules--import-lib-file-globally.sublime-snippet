@@ -1,0 +1,8 @@
+<snippet>
+  <description>Import a non-global CSS file, but make all contents global</description>
+<content><![CDATA[
+import '!style-loader!css-loader!${1:rodal/lib/rodal.css}';
+]]></content>  
+  <tabTrigger>imp_css_module_globally</tabTrigger>
+  <scope>source.js, source.ts, source.jsx, source.tsx</scope>
+</snippet>

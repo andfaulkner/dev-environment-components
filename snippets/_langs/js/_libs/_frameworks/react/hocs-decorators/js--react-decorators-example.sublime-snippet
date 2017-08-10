@@ -23,8 +23,6 @@ export class $2{NameOfComponent} extends React.Component {
 		);
 	}
 };]]></content>
-    <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
     <tabTrigger>rct_decorator_class</tabTrigger>
-    <!-- Optional: Set a scope to limit where the snippet will trigger -->
     <scope>source.js, source.ts, source.jsx, source.tsx</scope>
 </snippet>

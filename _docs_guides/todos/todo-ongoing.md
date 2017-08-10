@@ -44,7 +44,7 @@ auth-handler
 *   Consider creating redis-client class instead?
 *   Hoist statics
 *   Typed fetcher (3/4)
-*   get react-toastr working as replacement for locations alert displayed
+*   get react-toastr2 working as replacement for locations alert displayed
 *   common-config - look back through it
 *   common-config - merge with individual files where required
 *   check into navigation-router index return in 2nd try-catch within /:param route handler

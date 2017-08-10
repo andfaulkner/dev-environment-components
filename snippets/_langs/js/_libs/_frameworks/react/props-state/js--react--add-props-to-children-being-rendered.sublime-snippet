@@ -2,9 +2,9 @@
   <description>Add new props to this.props.children</description>
 <content><![CDATA[
 React.Children.map(this.props.children, (child) => (
-  React.cloneElement(child, { keyToAddOrAlter: valToGiveToKey })
-))
-]]></content>  
+    React.cloneElement(child, { keyToAddOrAlter: valToGiveToKey })
+));
+]]></content>
   <tabTrigger>rct_children_sendnewprops</tabTrigger>
   <scope>source.js, source.ts, source.jsx, source.tsx</scope>
 </snippet>

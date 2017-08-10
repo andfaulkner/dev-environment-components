@@ -2,6 +2,13 @@ Common mistakes
 ===============
 
 1.  Overusing state is a terrible idea. Try to basically always avoid this.setState.
+    *   Consider using MobX directly on the component
+
+    import { action, observable } from 'mobx';
+    class SomeClass extends React.Component<{}, {}> {
+        @observable notificationsDDOpen: string = '';
+        setName = action(() => this.notificationsDDOpen = !this.notificationsDDOpen);
+    }
 
 2.  Never store components in another component's state.
 
