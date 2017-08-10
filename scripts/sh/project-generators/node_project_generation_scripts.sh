@@ -4,6 +4,9 @@ echo "Project generation scripts loading..."
 #                                   NODE PROJECT GENERATION SCRIPTS                                #
 ####################################################################################################
 
+# Import external Node project generation scripts
+source './build_sublime-project_file.sh'
+
 ####################################################################################################
 ############################################ NEW FILES #############################################
 ####################################################################################################
@@ -43,15 +46,6 @@ function newnode__mocha_base_install_in_proj {
     echo "Mocha test run - ensuring install succeeded:"
     mocha
 }
-
-function newnode__sublime_project_base {
-    if [[ -n $1 ]]; then
-        cp "$TEMPLATES_DIR/project_name.sublime-project" "$PWD/$1.sublime-project"
-    else
-        cp "$TEMPLATES_DIR/project_name.sublime-project" "$PWD/$(curdir).sublime-project"
-    fi
-}
-
 
 function newnode__default_eslint {
     cp "$TEMPLATES_DIR/.eslintrc" "$PWD/.eslintrc"

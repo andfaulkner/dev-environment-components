@@ -1,11 +1,4 @@
-# if [[ -n $1 ]]; then
-#     cp "$TEMPLATES_DIR/project_name.sublime-project" "$PWD/$1.sublime-project"
-# else
-#     cp "$TEMPLATES_DIR/project_name.sublime-project" "$PWD/$(curdir).sublime-project"
-# fi
-
 alias current_directory="pwd | rev | cut -d'/' -f1 | rev"
-
 
 #=== FUNCTION ==========================================================
 #        NAME:  build_sublime_project_file
@@ -13,12 +6,12 @@ alias current_directory="pwd | rev | cut -d'/' -f1 | rev"
 #   @PARAM $1:  project name. Defaults to name of current directory.
 #=======================================================================
 function build_sublime_project_file() {
-  local OUTPUT_FILE=$([ ! -z "${1// }" ] && echo "$PWD/$1.sublime-project" || \
-                                            echo "$PWD/$(current_directory).sublime-project")
-  local HOME_DIR="$(echo ~)"
-  echo $OUTPUT_FILE
+    local OUTPUT_FILE=$([ ! -z "${1// }" ] && echo "$PWD/$1.sublime-project" || \
+                                              echo "$PWD/$(current_directory).sublime-project")
+    local HOME_DIR="$(echo ~)"
+    echo $OUTPUT_FILE
 
-############ START HEREDOC ############
+    ############ START HEREDOC ############
 cat << SUBLIME_PROJECT_FILE > "$OUTPUT_FILE"
 {
     "folders":
@@ -46,7 +39,7 @@ cat << SUBLIME_PROJECT_FILE > "$OUTPUT_FILE"
     ]
 }
 SUBLIME_PROJECT_FILE
-############ END HEREDOC ############
+    ############ END HEREDOC ############
 }
 
 alias newnode__sublime_project_base=build_sublime_project_file
