@@ -1,0 +1,8 @@
+<snippet>
+  <description>Import mad-utils React submodule</description>
+<content><![CDATA[
+import { ${1} } from 'mad-utils/lib/react';${0}
+]]></content>  
+  <tabTrigger>imp_madutilsreact</tabTrigger>
+  <scope>source.js, source.ts, source.jsx, source.tsx</scope>
+</snippet>

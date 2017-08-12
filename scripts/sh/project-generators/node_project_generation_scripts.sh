@@ -5,7 +5,7 @@ echo "Project generation scripts loading..."
 ####################################################################################################
 
 # Import external Node project generation scripts
-source './build_sublime-project_file.sh'
+source "$SNIPPETS_DIR/scripts/sh/project-generators/build_sublime-project_file.sh"
 
 ####################################################################################################
 ############################################ NEW FILES #############################################
