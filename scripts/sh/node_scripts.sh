@@ -291,17 +291,42 @@ function bump_node {
     tir "/Users/andrew/Library/Application Support/Sublime Text 3/Packages/User/Preferences.sublime-settings" --replace "\.nvm\/versions\/node\/v[0-9]\.[0-9]\.[0-9]\/" ".nvm/versions/node/v$1/"
 }
 
+#
+# Full publication workflow for npm utility modules
+#
+# 1. Change the version and the tag on the repository url in package.json to the given semver number
+# 2. Add, commit, and push the package.json change to master,
+#       commit message states what version it's being bumped to
+# 3. Create a git tag with said number (preceded by v), and push it to github.
+# 4. Publish the package to npm
+#
+# EXAMPLE
+#   npm_tag_publish_version 0.31.2
+#        - Results in package.json:
+#               ...
+#               "repository": {
+#                   "type": "git",
+#                   "url": "git+https://github.com/andfaulkner/misc-ts-utils-isomorphic.git#v0.31.2"
+#               },
+#               "version": "0.31.2"
+#               ...
+#        - commit message on change in master branch: 'Bump to version 0.31.2'
+#        - git tag created: v0.31.2
+#        - publishes package version 0.31.2 on npm
+#
+# Note: requires 'tir' replacement utility to be in your environment
+#
 npm_tag_publish_version() {
     tir package.json --replace "\"version\": \"[0-9]{1,4}\.[0-9]{1,4}\.[0-9]{1,4}\"," "\"version\": \"$1\","
     tir package.json --replace "\.git#v[0-9]{1,4}\.[0-9]{1,4}\.[0-9]{1,4}\"" ".git#v$1\""
-    rm ./package.json__bk
+    rm ./package.json__bk # Remove automatic backup file created by tir
     git add package.json
     git commit -m "Bump to version $1"
     git push origin master
-    git tag v$1; #v0.22.2
-    gpo v$1; #v0.22.2;
+    git tag v$1;
+    git push origin v$1;
     npm publish
-    echo "Published v$1!"
+    echo "Published v$1 of $(curdir)!"
 }
 
 alias weather="node /Users/andrew/projects/new_node_modules/weather/weather.js"
