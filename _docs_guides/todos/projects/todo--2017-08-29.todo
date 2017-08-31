@@ -1,0 +1,33 @@
+Articles
+-	Write article explaining SVG previewing in browser in Sublime (see https://www.granneman.com/webdev/editors/sublime-text/set-up-sublime-text-to-preview-your-code-in-a-web-browser/)
+
+Jira
+-	TODO make TODO for this.
+
+
+Refactoring
++---	Remove temp img assets
+	https://sigvaria.atlassian.net/browse/CANWEB-387
++--	Split app entry point setup tasks into a setup module/folder
+	https://sigvaria.atlassian.net/browse/CANWEB-387
++--	Split root-model into multiple components
+	https://sigvaria.atlassian.net/browse/CANWEB-383
+
++---	2 new madlogs styles
+	+-	Create madlogs style 1
+	-	Create madlogs style 2
+
+----	Make withModalHandling a generic "global" prop (in hocs)
+	Include abstraction for building 'GetModalType' functions (or have it instead accept an object)
+
+-----	Generic modal containers module/file
+	All actions that will be needed for all settings pages
+
+-----	
+
+Documentation
+-	CONTRIBUTION.md file
+
+New libs
+-	Go through & grab most essential/interesting/useful libs in todo--react-libs-to-check--2017-08-29.todo list
+-	Complete journey through open React lib tabs (in )

@@ -1,9 +1,7 @@
 <snippet>
     <content><![CDATA[
-onChange={this.${1:nameOfFnOnThisPropToCall_(e.g.:_update)}}
+onChange={${1:this.nameOfFnOnThisPropToCall_(e.g.:_update)}}
 ]]></content>
-    <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
     <tabTrigger>rct_och</tabTrigger>
-    <!-- Optional: Set a scope to limit where the snippet will trigger -->
-    <!-- <scope>source.python</scope> -->
+    <scope>source.js, source.ts, source.jsx, source.tsx</scope>
 </snippet>

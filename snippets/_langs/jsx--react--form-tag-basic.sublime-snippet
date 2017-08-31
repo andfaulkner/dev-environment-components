@@ -1,0 +1,10 @@
+<snippet>
+  <description>Basic form tag</description>
+<content><![CDATA[
+<form>
+    ${1}
+</form>
+]]></content>  
+  <tabTrigger>form</tabTrigger>
+  <scope>source.js, source.ts, source.jsx, source.tsx</scope>
+</snippet>

@@ -1,1 +1,1 @@
-/// <reference path="custom/project-typings.d.ts" />
+/// <reference path="project-typings.d.ts" />
