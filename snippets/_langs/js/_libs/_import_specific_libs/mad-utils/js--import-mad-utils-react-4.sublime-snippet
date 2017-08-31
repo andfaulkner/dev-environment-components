@@ -3,6 +3,6 @@
 <content><![CDATA[
 import { ${1:IfTruthy, IfFalsy, RouterProps, Switch, Case, Default, logSyntheticEventValue} } from 'mad-utils/lib/react';${0}
 ]]></content>  
-  <tabTrigger>imp_madutilsreact</tabTrigger>
+  <tabTrigger>impmadutilsreact</tabTrigger>
   <scope>source.js, source.ts, source.jsx, source.tsx</scope>
 </snippet>
