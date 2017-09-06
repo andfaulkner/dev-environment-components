@@ -133,9 +133,9 @@
             <key>settings</key>
             <dict>
                 <key>fontStyle</key>
-                <string>normal</string>
+                <string>italic</string>
                 <key>foreground</key>
-                <string>#cccccc22</string>
+                <string>#cccccc30</string>
             </dict>
         </dict>
 
@@ -169,7 +169,7 @@
             <key>settings</key>
             <dict>
                 <key>foreground</key>
-                <string>#cccccc55</string>
+                <string>#cccccc60</string>
             </dict>
         </dict>
         <dict>
