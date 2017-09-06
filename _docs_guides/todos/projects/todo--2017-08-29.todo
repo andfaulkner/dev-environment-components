@@ -1,9 +1,19 @@
-Articles
--	Write article explaining SVG previewing in browser in Sublime (see https://www.granneman.com/webdev/editors/sublime-text/set-up-sublime-text-to-preview-your-code-in-a-web-browser/)
++-	git amend alias
++-	git commit CANWEB bug
++-	function that git commits w/ CANWEB-# autoprefixed, w/ storage & reuse of bug number
+	Include abstraction for building 'GetModalType' functions (or have it instead accept an object)
++-----   Divide setting-modal-containers into multiple components
+	---	Generic modal containers module/file
+		All actions that will be needed for all settings pages
+	--- 	Split all modal-specific components into
++-	My Records title font
++-	Fix password reset on tiny screens issue
+---	Make withModalHandling a generic "global" prop (in app/client/hocs)
+
+
 
 Jira
 -	TODO make TODO for this.
-
 
 Refactoring
 +---	Remove temp img assets
@@ -17,17 +27,20 @@ Refactoring
 	+-	Create madlogs style 1
 	-	Create madlogs style 2
 
-----	Make withModalHandling a generic "global" prop (in hocs)
-	Include abstraction for building 'GetModalType' functions (or have it instead accept an object)
-
------	Generic modal containers module/file
-	All actions that will be needed for all settings pages
-
------	
+IDE
+-	Build level 2 header in Todone?
+.-4	(doesn't exist) Project-level hotkeys? (rapid file opening?)
++-	Fix 'commented out' items' colour
 
 Documentation
 -	CONTRIBUTION.md file
 
 New libs
 -	Go through & grab most essential/interesting/useful libs in todo--react-libs-to-check--2017-08-29.todo list
--	Complete journey through open React lib tabs (in )
+-	Complete journey through open React lib tabs (in Tabs Outliner)
+.-	(Doesn't support Typescript) Look into CodeClimate
+	-	Set it up (possibly)
+
+Articles
+-	Write article explaining SVG previewing in browser in Sublime (see https://www.granneman.com/webdev/editors/sublime-text/set-up-sublime-text-to-preview-your-code-in-a-web-browser/)
+

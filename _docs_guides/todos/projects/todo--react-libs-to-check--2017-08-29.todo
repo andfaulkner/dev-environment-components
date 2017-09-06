@@ -1,28 +1,31 @@
-Libs to examine
------	react-component-errors: Decorator that auto-wraps all component lifecycle methods so given handler is run on thrown error
+React libs to examine
+-5	react-component-errors: Decorator that auto-wraps all component lifecycle methods so given handler is run on thrown error
 	You can define error handlers at any level of the UI tree.
 	Code: `https://github.com/staxmanade/react-component-errors`
 
------	react-fix-it: Auto-writes test for any error thrown in UI. Has Babel plugin to auto-applied it to entire app.
+-5	react-fix-it: Auto-writes test for any error thrown in UI. Has Babel plugin to auto-applied it to entire app.
 	Code: `https://github.com/MicheleBertoli/react-fix-it`
 	Demo: `https://michelebertoli.github.io/react-fix-it/`
 
-----	react-notification system: Improved toast/notification lib. Potential react-toastr2 replacement.
+-5	mobx-reactor: structure MobX stores. Connect stores to sfcs w/ async actions & unidirectional data flow.
+	Code: `https://github.com/amsb/mobx-reactor`
+
+-4	react-notification system: Improved toast/notification lib. Potential react-toastr2 replacement.
 	Code: `https://github.com/igorprado/react-notification-system`
 	Demo: `http://igorprado.com/react-notification-system/`
 
-----	react-sticky: Create sticky components that e.g. bind to top of page when you scroll past them.
+-4	react-sticky: Create sticky components that e.g. bind to top of page when you scroll past them.
 	Code: `https://github.com/captivationsoftware/react-sticky`
 	Demo (simple): `http://rawgit.com/captivationsoftware/react-sticky/master/examples/basic/index.html`
 	Demo (stacked): `http://rawgit.com/captivationsoftware/react-sticky/master/examples/stacked/index.html`
 
----	styled-components
+-3	styled-components
 
----	react-joyride: Create guided tours of react apps, like Android's showcase view.
+-3	react-joyride: Create guided tours of react apps, like Android's showcase view.
 	Code: `https://github.com/gilbarbara/react-joyride`
 	Demo: `https://gilbarbara.github.io/react-joyride/`
 
----	core-decorators
+-3	core-decorators
 	Code:	  `https://github.com/mweststrate/react-mobx-shop/tree/mobx-state-tree`
 	Overview: `https://github.com/jayphelps/core-decorators`
 	Particularly interesting decorators: ///
@@ -34,54 +37,53 @@ Libs to examine
 	-   @nonenumerable:    https://github.com/jayphelps/core-decorators#nonenumerable
 			       * Lets you make properties nonenumerable (they're enumerable by default) ///
 
----	mobx-state-tree: Provides structure to your MobX states.
+-3	mobx-state-tree: Provides structure to your MobX states.
 	Code: `https://npm.hotlibs.com/mobx-state-tree/package/0.3.2`
 
---	react-resize-detector: On wrapped component resize, call given function with the new height & width .
+-2	react-resize-detector: On wrapped component resize, call given function with the new height & width .
 	Code: `https://github.com/maslianok/react-resize-detector`
 	Demo: `http://maslianok.github.io/react-resize-detector/`
 
---	react-hotkeys: Ultra-powerful hotkey handler and focus area manager. Very useful for accessibility.
+-2	react-hotkeys: Ultra-powerful hotkey handler and focus area manager. Very useful for accessibility.
 	Code: `https://github.com/chrisui/react-hotkeys`
 	Demo: `https://chrisui.github.io/react-hotkeys/`
 
---	react-scroll: a. Runs functions when scroll hits given points; b. Triggers animated scrolls (e.g. go to page top)
+-2	react-scroll: a. Runs functions when scroll hits given points; b. Triggers animated scrolls (e.g. go to page top)
 	Code: `https://github.com/fisshy/react-scroll`
-
 
 -	cerebralJS - ultra-interesting declarative single-tree state store w simple signal-based updating, built-in debugger, & querying - http://cerebraljs.com/docs/introduction/index.html
 
 
 Form handlings
 
----	react-forms: set of tools for React to handle form rendering & validation
+-3	react-forms: set of tools for React to handle form rendering & validation
 	Code: `https://github.com/prometheusresearch/react-forms`
 
 Layout systems to explore
-----	autoresponsive-react: Self-rearranging grid. May be useful for arranging the dose boxes.
+-4	autoresponsive-react: Self-rearranging grid. May be useful for arranging the dose boxes.
 	Code: `https://github.com/xudafeng/autoresponsive-react`
 	Docs: `https://xudafeng.github.io/autoresponsive-react/`
 	Demo: `http://xudafeng.github.io/autoresponsive-react/examples/`
 
---	reflexbox: React layout & grid system. Seems to mostly just wrap flexbox & box-model layout mechanisms.
+-2	reflexbox: React layout & grid system. Seems to mostly just wrap flexbox & box-model layout mechanisms.
 	Demo & docs: `http://jxnblk.com/reflexbox/`
 	Code:	     `https://github.com/jxnblk/reflexbox`
 
 -	react-flexbox-grid: Set of React components implementing Grids using flexbox + CSS Modules
 	Code: `https://github.com/roylee0704/react-flexbox-grid`
 
---	react-flip-move: Animate component position changes & swaps (Note: seems easy-to-use but very powerful)
+-2	react-flip-move: Animate component position changes & swaps (Note: seems easy-to-use but very powerful)
 	Code: `https://github.com/joshwcomeau/react-flip-move`
 	ISSUES: Doesn't work w/ sfc children. (Could possibly still be used with withClass though).
 	Demos: `http://joshwcomeau.github.io/react-flip-move/examples/#/?_k=5oyzed`
 	Tutorial on concept: `https://medium.com/developers-writing/animating-the-unanimatable-1346a5aab3cd`
 
-----	react-responsive: Media queries in react for responsive design. Looks extremely easy to use.
+-4	react-responsive: Media queries in react for responsive design. Looks extremely easy to use.
 	Code: `https://github.com/contra/react-responsive`
 	Demo: `http://contra.io/react-responsive/`
 	Can use this to define separate layouts for different screen sizes without using CSS hacks.
 
----	react-draggable: Make existing components draggable. Many options to control dragging behaviour specifics.
+-3	react-draggable: Make existing components draggable. Many options to control dragging behaviour specifics.
 	Demo: `http://mzabriskie.github.io/react-draggable/example/`
 	Code: `https://github.com/mzabriskie/react-draggable`
 	Wraps existing component & extends it with new event handlers and styles
