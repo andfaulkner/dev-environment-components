@@ -1,0 +1,8 @@
+<snippet>
+  <description>Link in a todo item comment to a code repo</description>
+<content><![CDATA[
+Code: `${1:https://github.com/andfaulkner/sublime-dev-environment-snippets}`${2/.+/\nDemo: `/}${2:http://maslianok.github.io/react-responsive-tabs/}${2/.+/`/}
+]]></content>  
+  <tabTrigger>repo_link_in_comment</tabTrigger>
+  <scope>text.todone</scope>
+</snippet>
