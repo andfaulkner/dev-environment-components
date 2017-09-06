@@ -19,6 +19,10 @@ alias gbr="git branch"
 alias gcob="git checkout -b"
 alias gs="git status"
 alias gl="git log"
+alias gamend="git amend"
+alias g_amend="git amend"
+alias g_am="git amend"
+alias gam="git amend"
 
 alias g_c="git commit"
 
@@ -107,6 +111,36 @@ function g_diff_cur_rem {
     CURRENT_BRANCH_FOR_DIFF=`g_curbr`
     echo $CURRENT_BRANCH_FOR_DIFF;
     git diff `g_curbr` remotes/origin/`g_curbr` 
+}
+
+gcmcw() {
+    if [ -n "$1" ] && [ -n "$2" ]; then
+        LAST_CANWEB_COMMIT=$1
+        echo "Commit message: CANWEB-$1: $2"
+        git commit -m "CANWEB-$1: $2"
+        echo "Set currently active bug number for 'gcmcw' to $LAST_CANWEB_COMMIT"
+
+    elif [ -n "$1" ] && [ -n "$LAST_CANWEB_COMMIT" ]; then
+        echo "Commit message: CANWEB-$LAST_CANWEB_COMMIT: $1"
+        git commit -m "CANWEB-$LAST_CANWEB_COMMIT: $1"
+
+    elif [ -n "$1" ] && [ ! -n "$LAST_CANWEB_COMMIT" ]; then
+        echo ""
+        echo "USAGE:   gcmcw ISSUE_NUMBER \"Commit message\""
+        echo "EXAMPLE: gcmcw 123 \"My first commit with CANWEB-123 issue\""
+        echo "Note: No gcmcw issue number currently active. To set it & run in future"
+        echo "      uses without the 1st param, run gcmcw with a number at least once"
+        echo ""
+
+    else
+        echo ""
+        echo "USAGE:"
+        echo "    With new issue number:"
+        echo "        gcmcw ISSUE_NUMBER \"Commit message\""
+        echo "    With already-set issue number $LAST_CANWEB_COMMIT:"
+        echo "        gcmcw \"Commit message\""
+        echo ""
+    fi
 }
 
 alias g_tree='git log --pretty=format:"%h %ad | %s%d [%an]" --graph --date=short'

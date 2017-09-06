@@ -293,28 +293,26 @@ function bump_node {
 
 #
 # Full publication workflow for npm utility modules
+#   1. Change the version & the tag on the repo url in package.json to the given semver number
+#   2. Add, commit, and push the package.json change to master,
+#         commit message states what version it's being bumped to
+#   3. Create a git tag with said number (preceded by v), and push it to github.
+#   4. Publish the package to npm
 #
-# 1. Change the version and the tag on the repository url in package.json to the given semver number
-# 2. Add, commit, and push the package.json change to master,
-#       commit message states what version it's being bumped to
-# 3. Create a git tag with said number (preceded by v), and push it to github.
-# 4. Publish the package to npm
+# EXAMPLE: npm_tag_publish_version 0.31.2
+#   - Results in package.json:
+#      ...
+#      "repository": {
+#          "type": "git",
+#          "url": "git+https://github.com/andfaulkner/misc-ts-utils-isomorphic.git#v0.31.2"
+#      },
+#      "version": "0.31.2"
+#      ...
+#   - Commits change to package.json in master branch with message 'Bump to version 0.31.2'
+#   - creates git tag v0.31.2
+#   - publishes package version 0.31.2 to npm
 #
-# EXAMPLE
-#   npm_tag_publish_version 0.31.2
-#        - Results in package.json:
-#               ...
-#               "repository": {
-#                   "type": "git",
-#                   "url": "git+https://github.com/andfaulkner/misc-ts-utils-isomorphic.git#v0.31.2"
-#               },
-#               "version": "0.31.2"
-#               ...
-#        - commit message on change in master branch: 'Bump to version 0.31.2'
-#        - git tag created: v0.31.2
-#        - publishes package version 0.31.2 on npm
-#
-# Note: requires 'tir' replacement utility to be in your environment
+# Note: requires 'tir' text replacement utility to be in your environment
 #
 npm_tag_publish_version() {
     tir package.json --replace "\"version\": \"[0-9]{1,4}\.[0-9]{1,4}\.[0-9]{1,4}\"," "\"version\": \"$1\","
