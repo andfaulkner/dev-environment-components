@@ -1,0 +1,7 @@
+<snippet>
+  <description>Down arrow symbol ⬇</description>
+<content><![CDATA[
+⬇
+]]></content>  
+  <tabTrigger>sym_arr_down</tabTrigger>
+</snippet>

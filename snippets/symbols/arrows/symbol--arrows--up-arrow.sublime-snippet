@@ -1,0 +1,7 @@
+<snippet>
+  <description>Up arrow symbol ⬆</description>
+<content><![CDATA[
+⬆
+]]></content>  
+  <tabTrigger>sym_arr_up</tabTrigger>
+</snippet>

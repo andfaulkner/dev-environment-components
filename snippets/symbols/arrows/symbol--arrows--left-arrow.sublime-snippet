@@ -1,0 +1,7 @@
+<snippet>
+  <description>Left arrow symbol ⬅</description>
+<content><![CDATA[
+⬅
+]]></content>  
+  <tabTrigger>sym_arr_left</tabTrigger>
+</snippet>
