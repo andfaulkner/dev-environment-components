@@ -1,0 +1,8 @@
+<snippet>
+  <description>Set component's display name w/ Recompose setDisplayName</description>
+<content><![CDATA[
+setDisplayName('${1:ComponentName}')
+]]></content>  
+  <tabTrigger>recom_setdisplayname</tabTrigger>
+  <scope>source.js, source.ts, source.jsx, source.tsx</scope>
+</snippet>
