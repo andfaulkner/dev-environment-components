@@ -1,0 +1,8 @@
+<snippet>
+    <description>Create Redirect tag</description>
+<content><![CDATA[
+<Redirect to={${1:`/auth/${lang ? lang + '/' : ''}login`}}/>
+]]></content>  
+    <tabTrigger>rct_rtr_redirect</tabTrigger>
+    <scope>source.jsx, source.tsx</scope>
+</snippet>
