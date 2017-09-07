@@ -1,0 +1,18 @@
+<snippet>
+  <description>Inject props that function as a component's state</description>
+<content><![CDATA[
+interface ${1} {
+    ${2}: ${3:string}
+    set${2}: (val: ${3:string}) => void
+}
+
+
+withState<${1:NameOfInterfaceWithPropsBeingInjected}>(
+    '${2:nameOfStateProp}',
+    'set${2:nameOfStateProp}',
+    ${4:'defaultValueOfStateProp'}
+)
+]]></content>  
+  <tabTrigger>recom_withstate</tabTrigger>
+  <scope>source.js, source.ts, source.jsx, source.tsx</scope>
+</snippet>
