@@ -3,6 +3,8 @@
 <content><![CDATA[
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
+
+const cn = require('classnames');
 ]]></content>  
   <tabTrigger>imp_rct_all</tabTrigger>
   <scope>source.js, source.ts, source.jsx, source.tsx</scope>

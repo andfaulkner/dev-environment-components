@@ -10,10 +10,11 @@
 +-	Fix password reset on tiny screens issue
 ---	Make withModalHandling a generic "global" prop (in app/client/hocs)
 
-
+Sidebar
+-	New data type: Users
 
 Jira
--	TODO make TODO for this.
++-	TODO make TODO for this.
 
 Refactoring
 +---	Remove temp img assets

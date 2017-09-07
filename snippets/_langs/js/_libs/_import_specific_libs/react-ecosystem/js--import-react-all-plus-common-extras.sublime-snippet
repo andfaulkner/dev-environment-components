@@ -1,0 +1,23 @@
+<snippet>
+  <description>Import React *and* React-DOM</description>
+<content><![CDATA[
+import * as React from 'react';
+import * as ReactDOM from 'react-dom';
+
+import { observer, inject } from 'mobx-react';
+import { compose } from 'recompose';
+import * as moment from 'moment';
+
+const cn = require('classnames');
+
+import { ${1:rootModel,
+         GreenBullet, SolidMiniArrow,
+         CIFormInput, RadioButtonGroup,
+         TextLink, SubmitButton
+         injectAppState, injectPolyglot, injectConfig,
+         asLaddaController, withToastNotifications,
+         ToasterProps, ConfigProps, StoreProps, LaddaProps} } from '@ottawamhealth/core-imports';
+]]></content>  
+  <tabTrigger>imp_rct_common_libs</tabTrigger>
+  <scope>source.js, source.ts, source.jsx, source.tsx</scope>
+</snippet>
