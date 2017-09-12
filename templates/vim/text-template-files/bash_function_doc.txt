@@ -1,0 +1,11 @@
+#=== FUNCTION ==========================================================
+#        NAME :  __insert_name_here__
+# DESCRIPTION :  __insert_what_it_does_here__ 
+#   @param $1 :  __insert_what_param_1_does__
+#   @param $2 :  __insert_what_param_2_does__
+#   @example  :  __insert_name_here__ "param_1_val" "param_2_val"
+#=======================================================================
+__insert_name_here__() {
+    # __insert_content_of_function_here__
+    # replace func name with %s/__insert_name_here__/function_name/g
+}
