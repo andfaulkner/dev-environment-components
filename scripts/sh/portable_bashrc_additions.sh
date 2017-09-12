@@ -61,6 +61,9 @@ source "$SNIPPETS_DIR/scripts/sh/bash_modules/module_File.sh"
 # LOAD 'MANUALS'
 PATH=$PATH:"$SNIPPETS_DIR/custom-manuals"
 
+# LOAD LOCAL BINARIES
+PATH=$PATH:"~/bin"
+
 ################################################################################
 
 
@@ -89,7 +92,7 @@ alias godocs="pushd \"$HOME/Documents\""
 alias godownloads="pushd \"$HOME/Downloads\""
 alias gobinhome="pushd \"$HOME/bin\""
 
-alias govimsetup="pushd \"$HOME.config/nvim/\""
+alias govimsetup="pushd \"$HOME/.config/nvim/\""
 
 alias go_madutils="pushd \"$HOME/projects/new_node_modules/mad-utils\""
 alias gomadutils="go_madutils"
@@ -102,6 +105,13 @@ alias go_log_lib="go_madlogs"
 
 ## super-ls
 alias lsa='ls -ao | grep -v "[0-9][0-9] \.\.\?$"'
+
+## lsa for dirs only
+alias lsda='lsa | ack "^d" | awk "{print}"' 
+
+## ls for dirs only
+# alias lsd='lsa | ack "^d" | awk "{print $9}"'
+alias lsd="lsa | ack '^d' | awk '{print \$8}'"
 
 ## use nvim instead
 alias vim="nvim"
@@ -226,6 +236,11 @@ function list_dir_files {
   cat ~/.bash_profile >> ~/.tmp_bash_source_scripts_storage
   cat ~/.bashrc >> ~/.tmp_bash_source_scripts_storage
 }
+
+# Remove colour from streaming output
+# @example ps aux | ack 'Chrome' |  strip_color
+#          -> shows list of Chrome-related processes, without "Chrome" highlighted
+alias strip_color="sed \"s,\$(printf '\033')\\[[0-9;]*[a-zA-Z],,g\""
 
 #insert text at beginning of file
 #Usage:

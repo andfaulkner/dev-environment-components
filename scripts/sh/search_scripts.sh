@@ -6,6 +6,7 @@ alias regexes="gnome-terminal --title=~REGEXES --geometry 110x50-0-0 -x vim ~/re
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ SEARCH FILES ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 ################################################################################
 
+# TODO repair lsrdeep - occasionally it puts 2 items on the same line
 function lsrdeep {
     ls -R ./ 2>/dev/null | awk '
         /:$/&&f{
@@ -181,6 +182,62 @@ function google {
 alias history_filtered='history | ack -v " lsa" | ack -v " ls" | ack -v "history" | ack -v "cat " | ack -v " cd " | ack -v "bashrc" | ack -v "( ruby)|( rake)" | ack -v "pwd" | ack -v "searchfn" | ack -v "rbash" | ack -v "bundler"'
 
 alias inc1='ruby -e "puts STDIN.first.to_i + 1"'
+
+
+################################################################################
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ IN-CLI TODO LISTS ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+################################################################################
+MASTER_TODO_PATH="$SNIPPETS_DIR/todos/master_todo.md"
+todo_new_item() {
+    echo $SNIPPETS_DIR
+    # TODO actual todo_new_item code
+    #
+    # STEPS:
+    #    find line w/ todo heading, matching ~~~~~~~~~~_TODO_~~~~~~~~~~ 
+    #    insert $1 after todo heading
+    #    insert [{firstWordInTodo}_{secondWordInTodo}]
+    #
+    # OPTIONAL:
+    #    add number of tasks total to line at top
+    #        increment number of tasks on each run of todo_new_item
+    #        insert "[{CUR_NUM_TASKS}]" at end of each new todo item
+    #    add number of tasks to do to line at top
+    #        increment number of tasks on each run of todo_new_item
+    #        decrement number of tasks on each run of todo_item_complete 
+    #    text alignment (at 4 spaces in) for all todo items
+    #
+    # OPTIONAL ADDITIONAL todo_* FEATURES:
+    #    Replace total # (top line) on each run of a todo_* func
+    #        - get # by counting /^[*!]/ matches
+    #    Do the same for number remaining, by counting /^\*/g matches
+    #    Something to handle setting date-based todos?
+    #        ? creation of new files for dates, with TODOs moved over?
+    #        ? manual selection of todos to move over to new file?
+    #            ? selection via a # range?
+    #        ? have master todo and separate date-based todos?
+    #            ? commands to print each type of todo?
+    #   Something to handle "topics"?
+    #
+    # ADDITIONAL todo_* FUNCTIONS:
+    #    1. Mark todo item done.
+    #       *   make task_tag var: $1 surrounded by [] (if it's not already)
+    #       *   search for task_tag var, find matching line
+    #       *   find line w/ "done" heading, matching ~~~~~~~~~~_DONE_~~~~~~~~~~
+    #       *   move content of line w/ task_tag match, below line w/ "done" heading
+    #       *   swap "*" at start of line with !
+    #       *   add [DONE] tag to end of line
+    #    2. Get # of todo items remaining
+    #       *   Find line containing this #, and print it
+    #
+    # NOTE: Do this in JS/TS/Node, Kotlin, Ruby, or Python
+    #
+    # *** DO NOT WRITE THIS IN BASH!!! ***
+}
+
+todo_view_list() {
+    cat "$MASTER_TODO_PATH"
+}
+
 
 echo "* search scripts loaded!"
 
