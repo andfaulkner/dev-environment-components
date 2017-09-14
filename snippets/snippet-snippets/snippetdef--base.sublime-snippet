@@ -7,9 +7,19 @@
 ${4:content here}
 ]${4/.*//}]></content>  
   <tabTrigger>${3:triggering-text}</tabTrigger>
-  <scope>${1:source.(js | clojure | ruby | ruby.rails | shell | sql | css | yaml | sass | elixir |
-                     js.jsx | less | makefile | groovy | php | go | lisp | python | regexp | elm) OR
-           text.(html | html.markdown | xml | plain | html.handlebars)}</scope>
+  <scope>${1:source.(js | js.jsx | ts | tsx | jsx | json |
+                     ruby | python | python.3 | xml | shell | regexp |
+                     css | sass | scss | postcss | less | stylus |
+                     groovy | gradle | makefile | viml | java-props | yaml |
+                     objc | Kotlin | java | swift |
+                     sql |
+                     lua | clojure | elixir | elm | haskell |
+                     php | go | lisp | c | c++ | perl | ruby.rails | js.rails | )
+           ...OR...
+           text.(html | html.markdown | html.markdown.multimarkdown
+                 html.handlebars | html.javadoc |
+                 xml |
+                 plain | todone)}</scope>
 </snippet>
 ]]></content>
   <tabTrigger>snip_base</tabTrigger>
