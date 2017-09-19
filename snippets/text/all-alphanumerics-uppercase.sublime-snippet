@@ -1,0 +1,7 @@
+<snippet>
+  <description>The full alphabet in uppercase + all single-digit numbers</description>
+<content><![CDATA[
+ABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890
+]]></content>  
+  <tabTrigger>alphanumerics_uppercase</tabTrigger>
+</snippet>
