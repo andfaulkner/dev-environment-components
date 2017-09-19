@@ -1,8 +1,0 @@
-<snippet>
-  <description>Get name of current file (in view)</description>
-<content><![CDATA[
-self.view.file_name()
-]]></content>  
-  <tabTrigger>subl_get_current_filename</tabTrigger>
-  <scope>source.python</scope>
-</snippet>

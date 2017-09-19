@@ -1,8 +1,0 @@
-<snippet>
-  <description>Insert text into file at current location</description>
-<content><![CDATA[
-self.view.insert(edit, replace_region, formatted_str)
-]]></content>  
-  <tabTrigger>subl_write_text</tabTrigger>
-  <scope>source.python</scope>
-</snippet>
