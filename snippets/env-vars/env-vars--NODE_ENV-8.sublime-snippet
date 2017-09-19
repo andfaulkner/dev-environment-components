@@ -1,0 +1,8 @@
+<snippet>
+  <description>NODE_ENV (frequently used environment variable)</description>
+<content><![CDATA[
+NODE_ENV
+]]></content>  
+  <tabTrigger>nodee</tabTrigger>
+  <scope>source</scope>
+</snippet>
