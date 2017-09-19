@@ -1,0 +1,11 @@
+<snippet>
+  <description>Create task w/ a dependency (task that runs before it)</description>
+<content><![CDATA[
+task ${1:taskToRunAfterDependedOnTask}(dependsOn: '${2:taskToRunBeforeThisOne}') << {
+    description '${3:Task that will run task taskToRunBeforeThisOne before running}.'
+    ${4:println('TASK ${1:taskRunAfterTestGradleTasks} RAN!')}
+}
+]]></content>  
+  <tabTrigger>gradle_newtask_w_dependency</tabTrigger>
+  <scope>source.groovy, source.gradle</scope>
+</snippet>

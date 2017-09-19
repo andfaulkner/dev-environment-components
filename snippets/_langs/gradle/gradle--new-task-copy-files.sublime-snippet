@@ -1,0 +1,13 @@
+<snippet>
+  <description>Create new file copying task</description>
+<content><![CDATA[
+task ${1:copyTask}(type: Copy) {
+    description '${2:Task that copies png files from src assets to build assets output dir}.'
+    from '${3:src/assets}'
+    into '${4:build/assets}'
+    include('${5:**/*.png}')
+}
+]]></content>  
+  <tabTrigger>gradle_task_new_copyfiles</tabTrigger>
+  <scope>source.groovy, source.gradle</scope>
+</snippet>

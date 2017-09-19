@@ -1,0 +1,11 @@
+<snippet>
+  <description>Create new task that will run after all other tasks</description>
+<content><![CDATA[
+task ${1:taskName} << {
+    description '${2:Task that runs after all other tasks}.'
+    ${3:println 'Will run after all other regular tasks (regular as in not inserted in this manner)'}
+}
+]]></content>  
+  <tabTrigger>gradle_newtask_last</tabTrigger>
+  <scope>source.groovy, source.gradle</scope>
+</snippet>
