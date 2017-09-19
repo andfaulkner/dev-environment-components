@@ -115,3 +115,31 @@ alias history_sorted_mem='ps aux | sort --key 4 | awk "{if (NF<12) { print \$1\"
 ## TIME ##
 alias now_timestamp="date +%s"
 alias timestamp_now="now_timestamp"
+
+## COPY / PASTE ##
+alias mergefiles__paste="/usr/bin/paste"
+
+alias copy="pbcopy"
+alias paste="pbpaste"
+
+alias cbcopy="pbcopy"
+alias cbpaste="pbpaste"
+
+alias copytocb="pbcopy"
+alias pastefromcb="pbpaste"
+
+alias copy_cli="pbcopy"
+alias paste_cli="pbpaste"
+
+alias copycb="pbcopy"
+alias pastecb="pbpaste"
+
+alias copy_cli="pbcopy"
+alias paste_cli="pbpaste"
+
+alias copystream="pbcopy"
+alias pastestream="pbpaste"
+
+alias copy_to_cb="pbcopy"
+alias paste_from_cb="pbpaste"
+
