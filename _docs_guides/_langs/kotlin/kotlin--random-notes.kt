@@ -46,15 +46,18 @@ object someObj {
 // - No matter where in the class the constructor is defined, it is always executed after
 //   all initializers have run
 
+
 /******************************* NULL-SAFE CALLS:    obj?.method() ********************************/
 // If the method in the 2nd part of the expression doesn't exist, safely returns null
 someObj?.nonexistentMethod() // => returns null if nonexistentMethod doesn't exist on someObj
 someObj?.hello("Meeka") // => returns "Hello Meeka!" (calls hello, since someObj.hello exists)
 
+
 /************************************** ELVIS OPERATOR:   ?: **************************************/
 // If the first part of the expression is "null", use the fallback value
 val someValue = someOtherVariable ?: "Fallback value"
 val someValue = someOtherVariable?.getSomething() ?: "Fallback value"
+
 
 /*********************************** NPE OPERATOR:   someVal!! ************************************/
 // Throw a null-pointer exception if the value before the operator is null
