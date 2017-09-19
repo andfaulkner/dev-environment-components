@@ -1,8 +1,0 @@
-<snippet>
-  <description>Get the full path to the current file</description>
-<content><![CDATA[
-__file__
-]]></content>  
-  <tabTrigger>filepath</tabTrigger>
-  <scope>source.python</scope>
-</snippet>
