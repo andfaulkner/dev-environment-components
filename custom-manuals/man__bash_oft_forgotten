@@ -39,6 +39,9 @@ create soft link:                    ln -s file_to_link_to shortcut_name_locatio
      * can return function, alias, application location,  
  - Output the actual code of a function or alias:              type function_name_here
 
+# ALIASES
+ - remove an alias:: unalias alias_to_erase
+
 # RENAME FILES
  -  recursively change extension of all matching files:       rename -S .js .jsx --glob **/*.js
 
