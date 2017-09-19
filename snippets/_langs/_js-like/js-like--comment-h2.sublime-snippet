@@ -1,0 +1,10 @@
+<snippet>
+  <description>Comment-based "level 2" heading</description>
+<content><![CDATA[
+// ${1:Level 2 title here}
+// ${1/./\-/g}
+${2:// }
+]]></content>  
+  <tabTrigger>h2</tabTrigger>
+  <scope>source.js, source.js.jsx, source.ts, source.tsx, source.jsx, source.Kotlin, source.css, source.scss, source.sass, source.less, source.stylus, source.postcss, source.kotlin, source.swift, source.java, source.groovy, source.gradle, source.sql, source.c, source.go</scope>
+</snippet>
