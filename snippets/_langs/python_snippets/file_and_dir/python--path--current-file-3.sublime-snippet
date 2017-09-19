@@ -1,0 +1,8 @@
+<snippet>
+  <description>Get full path to current file</description>
+<content><![CDATA[
+os.path.realpath(__file__)
+]]></content>  
+  <tabTrigger>path_to_file</tabTrigger>
+  <scope>source.python</scope>
+</snippet>

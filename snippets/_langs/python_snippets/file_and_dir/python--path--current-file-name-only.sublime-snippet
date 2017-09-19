@@ -1,0 +1,8 @@
+<snippet>
+  <description>Get name of file (NOT THE PATH)</description>
+<content><![CDATA[
+os.path.basename(__file__)
+]]></content>  
+  <tabTrigger>file_name</tabTrigger>
+  <scope>source.python</scope>
+</snippet>

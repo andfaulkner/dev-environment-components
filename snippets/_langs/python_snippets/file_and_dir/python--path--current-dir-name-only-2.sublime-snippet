@@ -1,0 +1,8 @@
+<snippet>
+  <description>Get name of dir this file is in (NOT THE PATH)</description>
+<content><![CDATA[
+os.path.dirname(os.path.realpath(__file__)).split(os.sep)[-1]
+]]></content>  
+  <tabTrigger>cur_dir_name</tabTrigger>
+  <scope>source.python</scope>
+</snippet>

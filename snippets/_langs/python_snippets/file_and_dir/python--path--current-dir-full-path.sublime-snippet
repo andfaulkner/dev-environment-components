@@ -1,0 +1,8 @@
+<snippet>
+  <description>Get full path of dir this file is in</description>
+<content><![CDATA[
+os.path.dirname(os.path.realpath(__file__))
+]]></content>  
+  <tabTrigger>dir_path</tabTrigger>
+  <scope>source.python</scope>
+</snippet>

@@ -1,8 +1,0 @@
-<snippet>
-  <description>Output current working dir (required earlier:  import os) </description>
-<content><![CDATA[
-os.getcwd()${0}
-]]></content>  
-  <tabTrigger>dir_current</tabTrigger>
-  <scope>source.python</scope>
-</snippet>
