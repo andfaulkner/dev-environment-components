@@ -1,7 +1,0 @@
-<snippet>
-  <description>The full alphabet in lowercase + all single-digit numbers</description>
-<content><![CDATA[
-abcdefghijklmnopqrstuvwxyz1234567890
-]]></content>  
-  <tabTrigger>alphanumerics_lowercase</tabTrigger>
-</snippet>

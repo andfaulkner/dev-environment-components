@@ -1,7 +1,0 @@
-<snippet>
-  <description>The full alphabet, in lowercase</description>
-<content><![CDATA[
-abcdefghijklmnopqrstuvwxyz
-]]></content>  
-  <tabTrigger>alphabet_lowercase</tabTrigger>
-</snippet>
