@@ -9,6 +9,6 @@ def ${1:func_name}(${2:params, here, param_with_default="Default Value"}):
     return "Value to return from function"}
 
 ]]></content>  
-  <tabTrigger>fn</tabTrigger>
+  <tabTrigger>def</tabTrigger>
   <scope>source.python</scope>
 </snippet>

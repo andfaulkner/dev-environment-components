@@ -1,0 +1,8 @@
+<snippet>
+  <description>Get list of object's keys</description>
+<content><![CDATA[
+dir(${1:object_to_get_full_list_of_methods_and_params_from})
+]]></content>  
+  <tabTrigger>obj_keys</tabTrigger>
+  <scope>source.python</scope>
+</snippet>
