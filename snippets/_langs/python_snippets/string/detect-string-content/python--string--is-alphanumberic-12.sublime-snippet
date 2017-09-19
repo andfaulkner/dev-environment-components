@@ -1,0 +1,8 @@
+ <snippet>
+  <description>Return true if string contains only alphanumeric chars ([a-zA-Z0-9])</description>
+<content><![CDATA[
+${1:some_string}.isalnum()
+]]></content>  
+  <tabTrigger>str_contains_alphanumeric_only</tabTrigger>
+  <scope>source.python</scope>
+</snippet>

@@ -1,0 +1,8 @@
+<snippet>
+  <description>Return true if string contains a valid number</description>
+<content><![CDATA[
+${1:some_string}.isnumeric()
+]]></content>  
+  <tabTrigger>str_isnumeric</tabTrigger>
+  <scope>source.python</scope>
+</snippet>

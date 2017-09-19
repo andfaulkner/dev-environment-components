@@ -1,0 +1,8 @@
+<snippet>
+  <description>Capitalize string</description>
+<content><![CDATA[
+${1:some_string}.capitalize()
+]]></content>  
+  <tabTrigger>str_capitalize</tabTrigger>
+  <scope>source.python</scope>
+</snippet>

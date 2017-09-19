@@ -1,0 +1,8 @@
+<snippet>
+  <description>Pad given str to given size, applying whitespace (or given char) to both sides</description>
+<content><![CDATA[
+${1:some_string}.center(${2:width}${3/.+/, "/}${3:fillchar}${3/.+/"/})
+]]></content>  
+  <tabTrigger>str_pad_center</tabTrigger>
+  <scope>source.python</scope>
+</snippet>

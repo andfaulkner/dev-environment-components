@@ -1,0 +1,8 @@
+<snippet>
+  <description>Return true if string contains only whitespace</description>
+<content><![CDATA[
+${1:some_string}.isspace()
+]]></content>  
+  <tabTrigger>str_iswhitespace</tabTrigger>
+  <scope>source.python</scope>
+</snippet>

@@ -1,0 +1,8 @@
+<snippet>
+  <description>true if str has only uppercase letters (excludes #s, symbols)</description>
+<content><![CDATA[
+${1:some_string}.str_isupper()
+]]></content>  
+  <tabTrigger>str_isuppercase</tabTrigger>
+  <scope>source.python</scope>
+</snippet>

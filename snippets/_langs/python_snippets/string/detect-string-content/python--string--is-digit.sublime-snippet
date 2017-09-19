@@ -1,0 +1,8 @@
+<snippet>
+  <description>Return true if string is a digit</description>
+<content><![CDATA[
+${1:some_string}.isdigit()
+]]></content>  
+  <tabTrigger>str_isdigit</tabTrigger>
+  <scope>source.python</scope>
+</snippet>

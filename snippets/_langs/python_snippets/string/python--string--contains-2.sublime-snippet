@@ -1,0 +1,10 @@
+<snippet>
+  <description>Determine if given string contains a given substring</description>
+<content><![CDATA[
+if ${1:"some-substring"} in ${2:"some-string"}: 
+  ${0:# do these things if ${2:"some-string"} contains ${1:"some-substring"}}
+
+]]></content>  
+  <tabTrigger>str_includes</tabTrigger>
+  <scope>source.python</scope>
+</snippet>

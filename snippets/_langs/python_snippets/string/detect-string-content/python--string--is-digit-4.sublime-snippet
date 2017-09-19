@@ -1,0 +1,8 @@
+ <snippet>
+  <description>Return true if string contains only digits (0-9)</description>
+<content><![CDATA[
+${1:some_string}.isdigit()
+]]></content>  
+  <tabTrigger>str_has_only_digits</tabTrigger>
+  <scope>source.python</scope>
+</snippet>

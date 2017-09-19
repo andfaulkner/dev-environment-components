@@ -1,0 +1,8 @@
+<snippet>
+  <description>true if str has only lowercase letters (excludes #s, symbols)</description>
+<content><![CDATA[
+${1:some_string}.str_islower()
+]]></content>  
+  <tabTrigger>str_islower</tabTrigger>
+  <scope>source.python</scope>
+</snippet>

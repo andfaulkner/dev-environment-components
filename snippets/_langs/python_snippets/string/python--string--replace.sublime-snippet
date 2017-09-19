@@ -1,0 +1,8 @@
+<snippet>
+  <description>Ret copy of str w/ matching input replaced with replacement string</description>
+<content><![CDATA[
+${1:my_string}.replace(${2:'old_str'}, ${3:'replacement_string'}${4:, optionalCount})${0}
+]]></content>  
+  <tabTrigger>str_replace</tabTrigger>
+  <scope>source.python</scope>
+</snippet>
