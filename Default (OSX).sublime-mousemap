@@ -10,5 +10,12 @@
     "modifiers": ["shift"],
     "press_command": "drag_select",
     "press_args": {"extend": true}
+  },
+  {
+      "button": "button1",
+      "count": 1,
+      "modifiers": ["super", "shift"],
+      "press_command": "drag_select",
+      "command": "goto_definition"
   }
 ]
