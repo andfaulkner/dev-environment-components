@@ -1,8 +1,0 @@
-<snippet>
-  <description>LOG_LEVEL (frequently used)</description>
-<content><![CDATA[
-LOG_LEVEL
-]]></content>  
-  <tabTrigger>logl</tabTrigger>
-  <scope>source</scope>
-</snippet>
