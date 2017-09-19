@@ -1,0 +1,12 @@
+<snippet>
+  <description>Function to get current syntax e.g. "Javascript"</description>
+<content><![CDATA[
+def get_current_syntax(view):
+    syntax_file = view.settings().get('syntax')
+    syntax_name = re.search(r"[^\/]+((?=\.sublime-syntax)|(?=\.tmLanguage))", syntax_file).group(0)
+    ${1:print("Name of syntax type:", syntax_name)}
+    return syntax_name
+]]></content>  
+  <tabTrigger>subl_get_syntax</tabTrigger>
+  <scope>source.python</scope>
+</snippet>

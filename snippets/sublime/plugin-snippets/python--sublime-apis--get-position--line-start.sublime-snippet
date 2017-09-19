@@ -1,0 +1,8 @@
+<snippet>
+  <description>Get cursor position of start of line (integer)</description>
+<content><![CDATA[
+self.view.line(self.view.sel()[0].begin()).a
+]]></content>  
+  <tabTrigger>subl_pos_line_start</tabTrigger>
+  <scope>source.python</scope>
+</snippet>

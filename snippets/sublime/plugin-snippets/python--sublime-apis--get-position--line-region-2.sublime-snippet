@@ -1,0 +1,8 @@
+<snippet>
+  <description>Get current line "region" (x-y coords + helper methods)</description>
+<content><![CDATA[
+self.view.line(self.view.sel()[0].begin())
+]]></content>  
+  <tabTrigger>subl_pos_line_region</tabTrigger>
+  <scope>source.python</scope>
+</snippet>

@@ -1,0 +1,8 @@
+<snippet>
+  <description>Insert text into file at current location</description>
+<content><![CDATA[
+self.view.insert(edit, self.view.sel()[0].begin(), ${1:"formatted_string"})
+]]></content>  
+  <tabTrigger>subl_insert_text_at_cur_location</tabTrigger>
+  <scope>source.python</scope>
+</snippet>

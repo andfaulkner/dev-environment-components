@@ -1,0 +1,8 @@
+<snippet>
+  <description>Get cursor position of end of line (integer)</description>
+<content><![CDATA[
+self.view.line(self.view.sel()[0].begin()).b
+]]></content>  
+  <tabTrigger>subl_line_end_pos</tabTrigger>
+  <scope>source.python</scope>
+</snippet>

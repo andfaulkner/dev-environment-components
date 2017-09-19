@@ -1,0 +1,8 @@
+<snippet>
+  <description>Get current cursor position (integer)</description>
+<content><![CDATA[
+self.view.sel()[0].begin()
+]]></content>  
+  <tabTrigger>subl_pos_of_cursor</tabTrigger>
+  <scope>source.python</scope>
+</snippet>

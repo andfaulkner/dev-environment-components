@@ -1,0 +1,8 @@
+<snippet>
+  <description>Insert text at start of file</description>
+<content><![CDATA[
+self.view.insert(edit, 0, ${1:"formatted_string"})
+]]></content>  
+  <tabTrigger>subl_file_start_insert_text</tabTrigger>
+  <scope>source.python</scope>
+</snippet>
