@@ -1,0 +1,8 @@
+<snippet>
+  <description>Split string on comma</description>
+<content><![CDATA[
+${1:string}.split(regex = ",".toRegex())
+]]></content>  
+  <tabTrigger>str_split_on_comma</tabTrigger>
+  <scope>source.kotlin, source.Kotlin</scope>
+</snippet>
