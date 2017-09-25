@@ -1,0 +1,8 @@
+<snippet>
+  <description>Change current dir (default: to dir relative to current dir)</description>
+<content><![CDATA[
+process.chdir(${1:path.join(process.cwd(), ${2:'relPath'})})
+]]></content>  
+  <tabTrigger>proc_cd</tabTrigger>
+  <scope>source.js, source.ts</scope>
+</snippet>

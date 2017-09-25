@@ -1,0 +1,8 @@
+<snippet>
+  <description>Get given directory contents (default: current directory)</description>
+<content><![CDATA[
+fs.readdirSync(${1:process.cwd()})
+]]></content>  
+  <tabTrigger>fs_ls_sync</tabTrigger>
+  <scope>source.js, source.ts, source.jsx, source.tsx</scope>
+</snippet>

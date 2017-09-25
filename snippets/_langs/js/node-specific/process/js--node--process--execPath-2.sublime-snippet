@@ -1,8 +1,8 @@
 <snippet>
-  <description>Ret absolute pathname (starting from root dir) of executable that started this Node process</description>
+  <description>Ret absolute path (from root dir) of executable that started this Node process</description>
 <content><![CDATA[
 process.execPath${0}
 ]]></content>  
-  <tabTrigger>execPath</tabTrigger>
-  <scope>source.js, source.ts, source.jsx, source.tsx</scope>
+  <tabTrigger>execpath</tabTrigger>
+  <scope>source.js, source.ts</scope>
 </snippet>
