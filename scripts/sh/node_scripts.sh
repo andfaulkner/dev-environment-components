@@ -96,6 +96,10 @@ alias killnpm="ps axu | grep npm | cut -d' ' -f3 | grep '$' | sudo xargs kill -9
 #kill all node-related processes
 alias bombnode="killnode; killgulp; killnodemon; killnpm"
 
+# Run ts-node with nodemon
+alias tsnodemon="nodemon --exec 'ts-node'"
+alias ts_nodemon="tsnodemon" 
+
 #overrides the one defined in bashrc_sys_util (snippets/scripts/sh/sys_util_scripts.sh)
 alias nukenode='echo "from node_scripts.sh"; ps aux | ack "node|gulp|npm|nvm|grunt|cordova|mocha|webpack|babel|livereload|pm2" | ack -v "((tsserver)|(typingsInstaller\.js)|([0-9][0-9]\.[0-9][0-9]\sn?vim\s.*))" | awk "{print \$2}" | xargs kill -9; pm2 delete all; pm2 kill'
 alias nukenodesrv="ps aux | grep node | grep -v 'gulp' | awk '{print \$2}' | xargs kill -9"

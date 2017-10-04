@@ -1,0 +1,8 @@
+<snippet>
+  <description>Safely ensure window object exists</description>
+<content><![CDATA[
+var window = window || {}; // tslint:disable-line:no-var-keyword
+]]></content>  
+  <tabTrigger>window_safe_ensure_exists</tabTrigger>
+  <scope>source.ts, source.tsx</scope>
+</snippet>

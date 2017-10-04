@@ -1,0 +1,8 @@
+<snippet>
+  <description>Safely ensure global object exists</description>
+<content><![CDATA[
+var ${1:global} = ${1} || {}; // tslint:disable-line:no-var-keyword
+]]></content>  
+  <tabTrigger>global_safe_ensure_exists</tabTrigger>
+  <scope>source.ts, source.tsx</scope>
+</snippet>

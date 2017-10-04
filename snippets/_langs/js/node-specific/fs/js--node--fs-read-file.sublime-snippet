@@ -1,5 +1,5 @@
 <snippet>
-    <description>Read a file in, asynchronously</description>
+    <description>Read a file in asynchronously</description>
     <content><![CDATA[
 //Read (utf8?) file ${1:pathToFile}, return contents in Buffer 'data' if successful
 fs.readFile(path.join(__dirname, ${1:'file_to_read_relative_to_cur_path'}), (err, data) => {
@@ -12,5 +12,5 @@ fs.readFile(path.join(__dirname, ${1:'file_to_read_relative_to_cur_path'}), (err
 });
 ]]></content>  
     <tabTrigger>fs_read</tabTrigger>
-    <scope>source.js, source.ts, source.jsx, source.tsx</scope>
+    <scope>source.js, source.ts</scope>
 </snippet>
