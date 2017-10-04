@@ -1,0 +1,100 @@
+[
+  { "keys": ["ctrl+alt+k"], "command": "clear_console" },
+
+  { "keys": ["command+ctrl+alt+f"], "command": "run_macro_file",
+    "context": [{"key": "selector", "operator": "equal", "operand": "source.js,source.ts,source.tsx,source.jsx"}],
+    "args": {"file": "Packages/User/macros/js--replace-function-with-const-and-arrow.sublime-macro"}
+  },
+
+// "################################## SIDEBAR HANDLING ##################################",
+  { "keys": ["alt+r"], "command": "side_bar_rename" },
+  { "keys": ["alt+d"], "command": "side_bar_duplicate" },
+  { "keys": ["alt+f"], "command": "side_bar_new_directory" },
+  { "keys": ["alt+n"], "command": "side_bar_new_file" },
+  { "keys": ["alt+shift+d"], "command": "side_bar_delete" },
+  { "keys": ["ctrl+alt+x"], "command": "side_bar_cut" },
+  { "keys": ["ctrl+alt+v"], "command": "side_bar_paste" },
+  { "keys": ["command+shift+t"], "command": "open_recent_file", "args": {"index" : 0} },
+  { "keys": ["command+s"], "command": "save" },
+
+  { "keys": ["command+ctrl+shift+a"], "command": "alignment" },
+  { "keys": ["ctrl+shift+alt+l"], "command": "remove_trailing_whitespace" },
+
+//################################## SWITCH SYNTAX OF CURRENT FILE ##################################
+  { "keys": [  "command+ctrl+shift+alt+a"  ], "command": "set_file_type",
+        "args": { "syntax": "Packages/Text/Plain text.tmLanguage"                                   }},
+  {"keys": [  "command+ctrl+shift+alt+b"  ], "command": "set_file_type",
+        "args": { "syntax": "Packages/ShellScript/Shell-Unix-Generic.sublime-syntax"                }},
+  {"keys": [  "command+ctrl+shift+alt+c"  ], "command": "set_file_type",
+        "args": { "syntax": "Packages/CSS/CSS.sublime-syntax"                                       }},
+  {"keys": [  "command+ctrl+shift+alt+d"  ], "command": "set_file_type",
+        "args": { "syntax": "Packages/JavaScriptNext - ES6 Syntax/JSON (JavaScriptNext).tmLanguage" }},
+  {"keys": [  "command+ctrl+shift+alt+h"  ], "command": "set_file_type",
+        "args": { "syntax": "Packages/HTML/HTML.sublime-syntax"                                     }},
+  {"keys": [  "command+ctrl+shift+alt+j"  ], "command": "set_file_type",
+        "args": { "syntax": "Packages/JavaScriptNext - ES6 Syntax/JavaScriptNext.tmLanguage"        }},
+  {"keys": [  "command+ctrl+shift+alt+m"  ], "command": "set_file_type",
+        "args": { "syntax": "Packages/Markdown/Markdown.sublime-syntax"                             }},
+  {"keys": [  "command+ctrl+shift+alt+r"  ], "command": "set_file_type",
+        "args": { "syntax": "Packages/Ruby/Ruby.sublime-syntax"                                     }},
+  {"keys": [  "command+ctrl+shift+alt+t"  ], "command": "set_file_type", 
+        "args": { "syntax": "Packages/User/snippets/ts_extracts/lang/TypeScript.tmLanguage"         }},
+
+// ####################################### CREATE NEW FILES, MAINLY SNIPPETS #######################################
+  { "DESCRIPTION": "CREATE NEW SNIPPET", "keys": ["ctrl+shift+alt+s"],
+    "command": "side_bar_new_file", 
+    "args": {"paths": ["~/Library/Application Support/Sublime Text 3/Packages/User/snippets/snippets"]}},
+  { "DESCRIPTION": "CREATE NEW JS SNIPPET", "keys": ["ctrl+shift+alt+j"],
+    "command": "side_bar_new_file",
+    "args": {"paths": ["~/Library/Application Support/Sublime Text 3/Packages/User/snippets/snippets/_langs/js"]}
+  },
+  { "DESCRIPTION": "CREATE NEW CSS SNIPPET", "keys": ["ctrl+shift+alt+c"],
+    "command": "side_bar_new_file",
+    "args": {"paths": ["~/Library/Application Support/Sublime Text 3/Packages/User/snippets/snippets/_langs/css_scss"]}
+  },
+  { "DESCRIPTION": "CREATE NEW GUIDE FILE", "keys": ["ctrl+shift+alt+g"],
+    "command": "side_bar_new_file",
+    "args": {"paths": ["~/Library/Application Support/Sublime Text 3/Packages/User/snippets/_docs_guides/unsorted"]}
+  },
+
+  { "DESCRIPTION": "OPEN SUBLIME HOTKEYS FILE", "keys": ["ctrl+command+shift+b"],
+    "command": "open_file",
+    "args": {
+      "file": "~/Library/Application Support/Sublime Text 3/Packages/User/Default (OSX).sublime-keymap"
+    }},
+  { "DESCRIPTION": "OPEN SUBLME CUSTOM MANUAL / CHEAT NOTES", "keys": ["ctrl+command+shift+m"],
+    "command": "open_file",
+    "args": {
+      "file": "~/Library/Application Support/Sublime Text 3/Packages/User/snippets/custom-manuals/man__sublime"
+    }},
+
+  { "DESCRIPTION": "RUN MACRO",
+    "keys": ["ctrl+command+r"],
+    "command": "run_macro_file",
+    "args": { "file": "res://Packages/LocalVariable/macro/rename_variable.sublime-macro" }
+  },
+
+  { "DESCRIPTION": "SHOW JSON TREE - ESSENTIAL JSON COMMAND",
+    "keys": ["command+ctrl+alt+j"], "command": "json_tree" },
+
+// ##### TYPESCRIPT CODE NAVIGATION #####################################################################
+  { "keys": ["command+ctrl+alt+g"], "command": "typescript_go_to_definition" },
+  { "keys": ["ctrl+shift+t,ctrl+shift+r"], "command": "typescript_rename" },
+  { "keys": ["ctrl+shift+t,ctrl+shift+f"], "command": "typescript_find_references" },
+
+
+  { "DESCRIPTION": "SELECT ALL MATCHES OF CURRENT SELECTION", "keys": ["command+ctrl+g"],
+    "command": "find_all_under" },
+
+  { "keys": ["command+shift+z"], "command": "redo" },
+  { "keys": ["shift+ctrl+alt+p"], "command": "copy_path" },
+
+  { "DESCRIPTION": "OVERWRITE TEXT - I.E. 'UNINSERT'",
+    "keys": ["ctrl+command+enter"], "command": "toggle_overwrite" },
+  { "keys": ["command+ctrl+up"], "command": "swap_line_up" },
+  { "keys": ["command+ctrl+down"], "command": "swap_line_down" },
+
+  { "keys": ["ctrl+shift+alt+a"], "command": "toggle_setting", "args": {"setting": "word_wrap"} },
+
+  { "keys": ["command+k,command+b"], "command": "toggle_side_bar" }
+]
