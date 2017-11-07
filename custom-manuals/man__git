@@ -25,8 +25,9 @@ Modify timestamp of most recent commit
         3)  carry on:                        git rebase --continue
 
 TAGS
- -- create tag:     git tag new-tag-name
- -- remove tag:     git tag -d name-of-tag-to-remove
+ -- create tag:           git tag new-tag-name
+ -- remove tag:           git tag -d name-of-tag-to-remove
+ -- delete remote tag:    git push origin :refs/tags/name-of-tag-to-remove
 
 RENAMING BRANCHES
  -- rename a local branch: git branch -m <oldname> <newname>
