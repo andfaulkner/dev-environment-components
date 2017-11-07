@@ -1,0 +1,13 @@
+<snippet>
+		<description>Insert checkbox input (for use in jsx files)</description>
+    <content><![CDATA[
+<input
+    type="checkbox"
+    name="${1:checkboxName}"
+    onClick={${3:_ev => store.setCheckboxValue(!${2:store.checkboxValue})}}
+    checked={${2}}
+/>
+]]></content>
+    <tabTrigger>checkbox</tabTrigger>
+    <scope>source.js.jsx, source.js.tsx, source.tsx</scope>
+</snippet>

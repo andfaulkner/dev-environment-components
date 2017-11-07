@@ -1,0 +1,10 @@
+<snippet>
+  <description>Method with destructured object params and default values</description>
+<content><![CDATA[
+${1:methodName}({ ${2:paramName} = ${4:defval_eg_false} } : { ${2}: ${3:paramType_eg_boolean} }): ${5:outType} {
+    ${0}
+}
+]]></content>  
+  <tabTrigger>mtd_w_destructured_def_params</tabTrigger>
+  <scope>source.js, source.ts, source.jsx, source.tsx</scope>
+</snippet>

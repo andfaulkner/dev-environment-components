@@ -13,7 +13,7 @@ const cn = require('classnames');
 import { ${1:rootModel,
          GreenBullet, SolidMiniArrow,
          CIFormInput, RadioButtonGroup,
-         TextLink, SubmitButton
+         CITextLink, SubmitButton
          injectAppState, injectPolyglot, injectConfig,
          asLaddaController, withToastNotifications,
          ToasterProps, ConfigProps, StoreProps, LaddaProps} } from '@ottawamhealth/core-imports';

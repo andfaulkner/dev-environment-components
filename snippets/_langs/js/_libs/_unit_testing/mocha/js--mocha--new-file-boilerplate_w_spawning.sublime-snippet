@@ -1,5 +1,5 @@
 <snippet>
-  <description>Skeleton of a new TS Mocha test file</description>
+  <description>New TS Mocha test file requiring external process spawning</description>
 <content><![CDATA[
 // Ensure environment knows testing is occurring.
 (process.env as any).mocha = true;
@@ -15,6 +15,10 @@ import * as fs from 'fs';
 import * as path from 'path';
 import { inspect } from 'util';
 
+// Spawn other apps
+import { spawn, spawnSync, fork } from 'child_process';
+const spawnSyncOpts = { detached: true, env: process.env, stdio: 'inherit' };
+
 /************************************ IMPORT FILE TO BE TESTED ************************************/
 import { ${2:vars}${3/.+/, /}${3:toImport}${4/.+/, /}${4:forTesting} } from ${1:'./file-containing-modules-to-test'};
 
@@ -28,6 +32,6 @@ describe('${2/^([^,]+).*/$1$2/}', function() {
 ${3/.+/\ndescribe\(`/}${3:${2/^[^,]+,\s?([^,]+).*/$1/}}${3/.+/`, function\(\) {\n    it\(`exists`, function\(\) {\n        expect\(/}${3/^[^,]+,\s?([^,]+).*/$1/}${3/.+/\).to.exist;\n    \}\);\n\n\}\);\n/}${__________________________________________________________}${4/.+/\ndescribe\(`/}${4:${2/^[^,]+,\s?([^,]+).*/$1/}}${4/.+/`, function\(\) {\n    it\(`exists`, function\(\) {\n        expect\(/}${4/^[^,]+,\s?([^,]+).*/$1/}${4/.+/\).to.exist;\n    \}\);\n\n\}\);\n/}
 
 ]]></content>  
-  <tabTrigger>mocha_new_file_boiler</tabTrigger>
+  <tabTrigger>mocha_new_file_w_spawning_boiler</tabTrigger>
   <scope>source.js, source.ts, source.jsx, source.tsx</scope>
 </snippet>
