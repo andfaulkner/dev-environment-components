@@ -1,0 +1,8 @@
+<snippet>
+  <description>Expect that value/result is an array</description>
+<content><![CDATA[
+expect(${1:'test'}).to.be.array;${0}
+]]></content>  
+  <tabTrigger>cx_is_array</tabTrigger>
+  <scope>source.js, source.ts, source.jsx, source.tsx</scope>
+</snippet>

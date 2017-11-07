@@ -3,6 +3,6 @@
 <content><![CDATA[
 expect(${1:{type: 'grizzly', age: 4, c: 'cee'\}}).to.contain.keys(${2:['type', 'age']});${0}
 ]]></content>  
-  <tabTrigger>cx_contains_keys</tabTrigger>
+  <tabTrigger>cx_has_keys</tabTrigger>
   <scope>source.js, source.ts, source.jsx, source.tsx</scope>
 </snippet>

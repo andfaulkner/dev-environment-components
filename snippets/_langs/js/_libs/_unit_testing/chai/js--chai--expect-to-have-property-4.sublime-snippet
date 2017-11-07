@@ -3,6 +3,6 @@
 <content><![CDATA[
 expect(${1:{foo: 'bar'\}}).to.have.a.property(${2:'foo'});${0}
 ]]></content>  
-  <tabTrigger>cx_obj_has_property</tabTrigger>
+  <tabTrigger>cx_hasproperty</tabTrigger>
   <scope>source.js, source.ts, source.jsx, source.tsx</scope>
 </snippet>

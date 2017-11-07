@@ -1,8 +1,8 @@
 <snippet>
-  <description>Determine if object has all given strs (and no others) as keys</description>
+  <description>Ensure obj contains given keys (OK if it has others)</description>
 <content><![CDATA[
-expect(${1:{type: 'grizzly', age: 4\}}).to.have.keys(${2:['type', 'age']});${0}
+expect(${1:{type: 'grizzly', age: 4, c: 'cee'\}}).to.contain.keys(${2:['type', 'age']});${0}
 ]]></content>  
-  <tabTrigger>cx_obj_has_keys</tabTrigger>
+  <tabTrigger>cx_containskeys</tabTrigger>
   <scope>source.js, source.ts, source.jsx, source.tsx</scope>
 </snippet>

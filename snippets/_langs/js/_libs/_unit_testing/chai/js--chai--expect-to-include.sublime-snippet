@@ -1,0 +1,8 @@
+<snippet>
+  <description>Expect that arr has item, obj has k-v pair, or string has substr</description>
+<content><![CDATA[
+expect(${1:{a: 1, b: 2\} ||| ['a', 'b', 'c'] ||| 'grrr'}).to.include(${2:{a: 1\} ||| 'a' ||| 'gr'});${0}
+]]></content>  
+  <tabTrigger>cx_include</tabTrigger>
+  <scope>source.js, source.ts, source.jsx, source.tsx</scope>
+</snippet>

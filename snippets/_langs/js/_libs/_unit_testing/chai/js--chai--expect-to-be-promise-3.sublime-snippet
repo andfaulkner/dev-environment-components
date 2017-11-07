@@ -1,0 +1,8 @@
+<snippet>
+  <description>Check that item is a promise</description>
+<content><![CDATA[
+expect(${1:'something'}).to.be.a('promise');${0}
+]]></content>  
+  <tabTrigger>cx_is_promise</tabTrigger>
+  <scope>source.js, source.ts, source.jsx, source.tsx</scope>
+</snippet>
