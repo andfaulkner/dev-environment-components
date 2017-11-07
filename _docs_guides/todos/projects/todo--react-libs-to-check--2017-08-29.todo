@@ -1,4 +1,11 @@
-React libs to examine
+React/JS/TS libs to examine
+-5	nps: Cleaner npm script running - npm script management system. Should actually work to make a more maintainble node-based build system.
+	Code: `https://www.npmjs.com/package/nps`
+-	
+-5	react-delegate: Automatic delegation of certain (defined) props from view to container in React container pattern
+	Code: `https://github.com/swipesapp/react-delegate`
+	This will be a huge convenience and end up saving a lot of development time...along with making the code much client.
+
 -5	react-component-errors: Decorator that auto-wraps all component lifecycle methods so given handler is run on thrown error
 	You can define error handlers at any level of the UI tree.
 	Code: `https://github.com/staxmanade/react-component-errors`
@@ -51,7 +58,8 @@ React libs to examine
 -2	react-scroll: a. Runs functions when scroll hits given points; b. Triggers animated scrolls (e.g. go to page top)
 	Code: `https://github.com/fisshy/react-scroll`
 
--	cerebralJS - ultra-interesting declarative single-tree state store w simple signal-based updating, built-in debugger, & querying - http://cerebraljs.com/docs/introduction/index.html
+-	cerebralJS - ultra-interesting declarative single-tree state store w simple signal-based updating, built-in debugger, & querying
+	Docs: `http://cerebraljs.com/docs/introduction/index.html`
 
 
 Form handlings

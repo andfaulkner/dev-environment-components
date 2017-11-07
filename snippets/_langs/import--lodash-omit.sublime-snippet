@@ -1,0 +1,8 @@
+<snippet>
+  <description>Import lodash omit</description>
+<content><![CDATA[
+import { ${1:omit, omitBy} } from 'lodash';
+]]></content>  
+  <tabTrigger>impomit</tabTrigger>
+  <scope>source.js, source.ts, source.jsx, source.tsx</scope>
+</snippet>

@@ -1,0 +1,10 @@
++-	Comment building
+-	ARG receiving
+-	Build
+-	Watching
+-	Module installation (shard)
+-	Own module installer
+
+-	Create CLI tool
+-	Load file
+	-	load YAML?

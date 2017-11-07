@@ -1,0 +1,8 @@
+<snippet>
+  <description>New Typescript type</description>
+<content><![CDATA[
+type ${1:TypeName} = ${2:AnotherType & AThirdType & Record<string, string>};
+]]></content>  
+  <tabTrigger>typ</tabTrigger>
+  <scope>source.ts, source.tsx</scope>
+</snippet>

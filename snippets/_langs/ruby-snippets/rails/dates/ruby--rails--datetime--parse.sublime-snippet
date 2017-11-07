@@ -1,7 +1,7 @@
 <snippet>
   <description>Create new DateTime object from given string in YYYY-MM-DD format</description>
 <content><![CDATA[
-DateTime.parse(${1:string_in_yyyy-mm-dd_format})
+DateTime.parse(${1:string_in_YYYY-MM-DD_format})
 ]]></content>  
   <tabTrigger>rl_dtime_parse</tabTrigger>
   <scope>source.ruby</scope>

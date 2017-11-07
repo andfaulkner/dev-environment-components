@@ -1,0 +1,8 @@
+<snippet>
+  <description>Import Rodal</description>
+<content><![CDATA[
+import Rodal from 'rodal';
+]]></content>  
+  <tabTrigger>imp_rodal</tabTrigger>
+  <scope>source.js, source.ts, source.jsx, source.tsx</scope>
+</snippet>

@@ -1,0 +1,8 @@
+<snippet>
+  <description>Import env-var-helpers isProduction property</description>
+<content><![CDATA[
+import { isProduction } from 'env-var-helpers';
+]]></content>  
+  <tabTrigger>impisprod</tabTrigger>
+  <scope>source.js, source.ts, source.jsx, source.tsx</scope>
+</snippet>

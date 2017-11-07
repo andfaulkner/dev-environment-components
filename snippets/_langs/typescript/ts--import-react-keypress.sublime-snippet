@@ -1,0 +1,8 @@
+<snippet>
+  <description>Import query-string module</description>
+<content><![CDATA[
+import { ${1:stringify as qsStringify, parse as qsParse} } from 'query-string';
+]]></content>  
+  <tabTrigger>imp_query-string</tabTrigger>
+  <scope>source.js, source.ts, source.jsx, source.tsx</scope>
+</snippet>
