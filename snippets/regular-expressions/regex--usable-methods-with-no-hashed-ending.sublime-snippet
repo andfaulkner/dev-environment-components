@@ -1,0 +1,8 @@
+<snippet>
+  <description>Highlight usable (unhashed) methods outputted by KotlinJS</description>
+<content><![CDATA[
+${1:((?<=\.)[a-zA-Z]+(?!_[a-z0-9]\\\$)\$|(?<=\.)[a-zA-Z]+(?!_[a-z0-9]\\\$) )}
+]]></content>  
+  <tabTrigger>usable_methods</tabTrigger>
+  <scope>source.js, source.ts, source.jsx, source.tsx</scope>
+</snippet>
