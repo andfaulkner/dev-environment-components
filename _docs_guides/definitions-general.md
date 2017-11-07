@@ -17,7 +17,7 @@ Definitions - general
          hexadecimal is equivalent to the number 291 in binary.
 
 # A ###################################################################################
-@### Active record pattern (ActiveRecord) ###@
+@### Active record pattern (ActiveRecord) [design pattern] ###@
 *   An ORM-related architectural pattern for storing relational db in objects
 *   each class in ActiveRecord is a table schema, and each instance is a row in that table. When
 *   the interface of an object conforming to this pattern would include functions such as Insert,
@@ -59,6 +59,84 @@ Definitions - general
 *   If a service that uses an image stored in Docker Hub is set to "autoredeploy", it will
     automatically deploy again whenever a new image is pushed or built to Docker Hub
 *   The concept is the same everywhere: automatically deploy again whenever the code changes
+
+# B ###################################################################################
+@### Bridge [design pattern] ###@
+*   Purpose: decouple an abstraction from its implementation so the 2 can vary independently
+    *   Useful when both the class and what it does vary often
+    *   Class itself can be seen as the abstraction & what it can do the implementation
+*   Problems it solves:
+    *   An abstraction & its implementation should be defined & extended independently from each other
+    *   Compile-time binding between an abstraction & its implementation should be avoided so
+        an implementation can be selected at run-time
+*   Solutions provided:
+    *   Separates Abstraction from Implementor by putting them in separate class hierarchies
+    *   Implements Abstraction by delegating to Implementor
+
+*   Example:
+
+        abstract class DrawingAPI
+          abstract def draw_circle(x : Float64, y : Float64, radius : Float64)
+        end
+
+        class DrawingAPI1 < DrawingAPI
+          def draw_circle(x : Float, y : Float, radius : Float)
+            "API1.circle at #{x}:#{y} - radius: #{radius}"
+          end
+        end
+
+        class DrawingAPI2 < DrawingAPI
+          def draw_circle(x : Float64, y : Float64, radius : Float64)
+            "API2.circle at #{x}:#{y} - radius: #{radius}"
+          end
+        end
+
+        abstract class Shape
+          protected getter drawing_api : DrawingAPI
+
+          def initialize(@drawing_api); end
+
+          abstract def draw
+          abstract def resize_by_percentage(percent : Float64)
+        end
+
+        class CircleShape < Shape
+          getter x : Float64
+          getter y : Float64
+          getter radius : Float64
+
+          def initialize(@x, @y, @radius, drawing_api : DrawingAPI)
+            super(drawing_api)
+          end
+
+          def draw
+            @drawing_api.draw_circle(@x, @y, @radius)
+          end
+
+          def resize_by_percentage(percent : Float64)
+            @radius *= (1 + percent/100)
+          end
+        end
+
+        class BridgePattern
+          def self.test
+            shapes = [] of Shape
+            shapes << CircleShape.new(1.0, 2.0, 3.0, DrawingAPI1.new)
+            shapes << CircleShape.new(5.0, 7.0, 11.0, DrawingAPI2.new)
+
+            shapes.each do |shape|
+              shape.resize_by_percentage(2.5)
+              puts shape.draw
+            end
+          end
+        end
+
+        BridgePattern.test
+
+        # Output
+        #   API1.circle at 1.0:2.0 - radius: 3.075
+        #   API2.circle at 5.0:7.0 - radius: 11.275
+
 
 # C ###################################################################################
 @### Cipher Block Chaining (CBC) ###@
@@ -104,6 +182,80 @@ EXAMPLE
         |    2     |     3      |          |    7     |     7      |
         .          .            .          -------------------------        
 
+@### Composite pattern [design pattern] ###@
+*   Describes group of objects treated the same as a single instance of the same type of object
+*   Essentially describes a data tree, where each node can either be a 'composite' or a 'leaf'
+    *   leaf:  contains no children
+    *   composite: can contain any number of leaf and composite objects.
+*   When dealing with tree-structured data where you must discriminate between & leaf-node & a branch,
+    this is an ideal pattern.
+
+*   Example of structure built this way:
+
+                .---.
+    Client ===> | C |
+                |___|                  Labels for output (Legend)
+               /  |  \                 -------------------------------------------------------------
+              /   |   \                            L  :: Leaf
+             /    |    \                
+            /   .---.   \---.           .---.
+           L    | C |   | C |           | C |  OR  C  :: Composite (contains Leaf & Composite nodes)
+                |___|   |___|           |___|
+               /  |  \    |  \
+              L   C   L   C   C               Client  :: Object making requests to data tree.
+                 / \      |   | \
+                L   L     L   L  Ls
+
+*   Use e.g. for AST parsing.
+*   "has-a" relationship between objects
+
+*   Example (of composite pattern setup / use):
+
+        from abc import ABCMeta, abstractmethod
+
+        #### Define base interface in form of abstract class/class w required abstract method ####
+        class Graphic:
+            __metaclass__ = ABCMeta
+
+            @abstractmethod
+            def print(self): raise NotImplementedError("You should implement this.")
+
+        ######## Composite object / node ########
+        class CompositeGraphic(Graphic):
+            def __init__(self):
+                self.graphics = []
+
+            def print(self): for graphic in self.graphics: graphic.print()
+
+            def add(self, graphic): self.graphics.append(graphic)
+
+            def remove(self, graphic): self.graphics.remove(graphic)
+
+        ######## Leaf object / node ########
+        class Ellipse(Graphic):
+            def __init__(self, name): self.name = name
+
+            def print(self): print("Ellipse:", self.name)
+
+        ######## Construct data tree ########
+        ellipse1 = Ellipse("1")
+        ellipse2 = Ellipse("2")
+        ellipse3 = Ellipse("3")
+        ellipse4 = Ellipse("4")
+
+        graphic = CompositeGraphic()
+        graphic1 = CompositeGraphic()
+        graphic2 = CompositeGraphic()
+
+        graphic1.add(ellipse1)
+        graphic1.add(ellipse2)
+        graphic1.add(ellipse3)
+
+        graphic2.add(ellipse4)
+
+        graphic.add(graphic1)
+        graphic.add(graphic2)
+
 
 @### Constraints (database) ###@
 *   conditions forced on the columns of the (db) table to meet the data integrity
@@ -145,7 +297,7 @@ EXAMPLE
             database (i.e. each class in ActiveRecord is a table schema, and each instance is a row
             in that table, which one could argue === database detail exposure)
 
-@### Data mapper (DataMapper) pattern ###@
+@### Data mapper pattern (DataMapper) [design pattern] ###@
 *   ORM pattern (contrast with Active record pattern)
 *   Data Mapper objects are plain objects with no knowledge of the database or how
     they're stored - i.e. they're just data
@@ -222,6 +374,52 @@ EXAMPLE
 *   http://www.webopedia.com/TERM/E/entity_relationship_diagram.html
 
 # F ###################################################################################
+@### Facade [design pattern] ###@
+*   Object that provides a simplified interface to a larger body of code, such as a class library
+*   Used when a system is very complex or difficult to understand
+    *   It hides the complexities of the larger system & provides a simpler interface to the client
+*   Typically involves a single wrapper class that contains a set of members required by client
+    *   members access the system on behalf of the facade client & hide the implementation details
+
+*   Example:
+
+    ### COMPLEX PARTS ###
+    class CPU
+      def freeze; end
+      def jump(position); end
+      def execute; end
+    end
+
+    class Memory
+      def load(position, data); end
+    end
+
+    class HardDrive
+      def read(lba, size); end
+    end
+
+    ### FACADE ###
+    class ComputerFacade
+
+      def initialize
+        @processor = CPU.new
+        @ram = Memory.new
+        @hd = HardDrive.new
+      end
+
+      def start
+        @processor.freeze
+        @ram.load(BOOT_ADDRESS, @hd.read(BOOT_SECTOR, SECTOR_SIZE))
+        @processor.jump(BOOT_ADDRESS)
+        @processor.execute
+      end
+    end
+
+    ### CLIENT ###
+    computer_facade = ComputerFacade.new
+    computer_facade.start
+
+
 @### Foreign key ###@
 *   a type of database constraint
 *   helps to map two or more tables in the database
