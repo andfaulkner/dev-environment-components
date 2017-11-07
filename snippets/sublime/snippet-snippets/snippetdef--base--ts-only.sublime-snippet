@@ -1,5 +1,5 @@
 <snippet>
-  <description>CSS snippet skeleton</description>
+  <description>TS snippet skeleton</description>
 <content><![CDATA[
 <snippet>
   <description>${2:description here}</description>
@@ -7,9 +7,9 @@
 ${3:content here}
 ]${3/.*//}]></content>  
   <tabTrigger>${1:triggering-text}</tabTrigger>
-  <scope>source.css, source.postcss, source.scss, source.less</scope>
+  <scope>source.ts, source.tsx</scope>
 </snippet>
 ]]></content>
-  <tabTrigger>snip_css</tabTrigger>
+  <tabTrigger>st</tabTrigger>
   <scope>text.xml</scope>
 </snippet>

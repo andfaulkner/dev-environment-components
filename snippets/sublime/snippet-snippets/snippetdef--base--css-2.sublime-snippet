@@ -10,6 +10,6 @@ ${3:content here}
   <scope>source.css, source.postcss, source.scss, source.less</scope>
 </snippet>
 ]]></content>
-  <tabTrigger>snip_css</tabTrigger>
+  <tabTrigger>sc</tabTrigger>
   <scope>text.xml</scope>
 </snippet>

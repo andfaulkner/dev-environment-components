@@ -1,0 +1,8 @@
+<snippet>
+  <description>Ref existing prop converted to PascalCase.</description>
+<content><![CDATA[
+\${${2:2}:\${${1:1}/^([a-zA-Z])([^A-Z]+)([^a-z])?([^A-Z]+)?([^a-z])?([^A-Z]+)?([^a-z])?([^A-Z]+)?\$|.*/\U\$1\L\$2\U\$3\L\$4\U\$5\L\$6\U\$7\L\$8/:name}}
+]]></content>
+  <tabTrigger>snip_PascalCase_prop</tabTrigger>
+  <scope>text.xml</scope>
+</snippet>

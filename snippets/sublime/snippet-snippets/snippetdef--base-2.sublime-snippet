@@ -23,6 +23,6 @@ ${4:content here}
                  plain | todone)}</scope>
 </snippet>
 ]]></content>
-  <tabTrigger>snip_base</tabTrigger>
+  <tabTrigger>sb</tabTrigger>
   <scope>text.xml</scope>
 </snippet>
