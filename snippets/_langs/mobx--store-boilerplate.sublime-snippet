@@ -1,0 +1,102 @@
+<snippet>
+  <description>MobX store w/ req vals arr, def vals and method to set any</description>
+<content><![CDATA[
+/************************************** THIRD-PARTY MODULES ***************************************/
+import { action, observable } from 'mobx';
+
+import { singleton } from 'mad-utils/lib/shared';
+
+import { stripIndents } from 'common-tags';
+
+/**************************************** PROJECT MODULES *****************************************/
+
+/******************************************** LOGGING *********************************************/
+import { logFactory, Styles } from 'mad-logs/lib/shared';
+const log = logFactory('$TM_FILENAME', Styles.joy);
+
+/**************************************** TYPE DEFINITIONS ****************************************/
+type StoreProps = keyof Omit<${1}Store, 'setData' | 'setVal' | 'set${4:${3/^([a-zA-Z])([^A-Z]+)([^a-z])?([^A-Z]+)?([^a-z])?([^A-Z]+)?([^a-z])?([^A-Z]+)?$|.*/\U$1\L$2\U$3\L$4\U$5\L$6\U$7\L$8/:name}}s'>;
+
+/********************************************* EXPORT *********************************************/
+/**
+ * Store ${7:${1} data}. General shape/props:
+ *     default${4:${3/^([a-zA-Z])([^A-Z]+)([^a-z])?([^A-Z]+)?([^a-z])?([^A-Z]+)?([^a-z])?([^A-Z]+)?$|.*/\U$1\L$2\U$3\L$4\U$5\L$6\U$7\L$8/:name}}: 'en'          <-- ${3:exampleVal} value to default to if none set
+ *     ${3:exampleVal}:        ['en', 'fr']  <-- Current ${3:exampleVal} value
+ *     ${3:exampleVal}s:       'en'          <-- Array of allowed ${3:exampleVal} values
+ */
+@singleton
+export class ${1:${TM_FILENAME/^(.{1})([^\-\.]+)\-?(.{1})?([^\-\.]+)?\-?(.{1})?([^\-\.]+)?\-?(.{1})?([^\-\.]+)?\-store\.ts$|.*/\U$1\L$2\U$3\L$4\U$5\L$6\U$7\L$8/:name}}Store {
+    @observable public default${4:${3/^([a-zA-Z])([^A-Z]+)([^a-z])?([^A-Z]+)?([^a-z])?([^A-Z]+)?([^a-z])?([^A-Z]+)?$|.*/\U$1\L$2\U$3\L$4\U$5\L$6\U$7\L$8/:name}}: ${5:string}   = '';
+    @observable public ${3:exampleVal}:        ${5:string}   = '';
+    @observable public ${3:exampleVal}s:       ${5:string}[] = ${6:['EXAMPLE', 'VALUE', 'ARRAY']};
+
+    constructor(props: StoreProps) {
+        // Set initial values.
+        Object.keys(props).forEach(key => this[key] = props[key]);
+        // Bind methods to 'this'.
+        Object.keys(this).forEach(key => typeof this[key] === 'function' && this[key].bind(this));
+        // Log output value.
+        log.info(`${1}#constructor :: this:`, this);
+    }
+
+    /**
+     * Setter for all properties. Only accepts data properties contained on ${1}Store class.
+     */
+    @action
+    setData<P extends StoreProps>(dataType: StoreProps, val: ${1}Store[P]): ${1}Store[P] {
+        this[dataType] = val as ${1}Store[P];
+        return val;
+    }
+
+    /**
+     * Set current ${3:exampleVal}.
+     * @param {${5:string}} language Current ${3:exampleVal} value
+     */
+    @action
+    setVal(${3:exampleVal}: ${5:string} | null): ${5:string} | never {
+        if (${3:exampleVal}) {
+            if (this.${3:exampleVal}s.includes(${3:exampleVal})) {
+                this.${3:exampleVal} = ${3:exampleVal};
+            } else {
+                throw new TypeError(stripIndents`
+                    ${1}Store#${3:exampleVal} value must be present in ${1}Store#${3:exampleVal}s.
+                    ---> ${1}Store#${3:exampleVal}: ${this.${3:exampleVal}}.
+                    ---> ${1}Store#${3:exampleVal}s: ${this.${3:exampleVal}s}`);
+            }
+        } else {
+            this.${3:exampleVal} = this.default${4:${3/^([a-zA-Z])([^A-Z]+)([^a-z])?([^A-Z]+)?([^a-z])?([^A-Z]+)?([^a-z])?([^A-Z]+)?$|.*/\U$1\L$2\U$3\L$4\U$5\L$6\U$7\L$8/:name}};
+        }
+        return this.${3:exampleVal};
+    }
+
+    /**
+     * Set full list of allowed ${3:exampleVal}s.
+     */
+    @action
+    set${4:${3/^([a-zA-Z])([^A-Z]+)([^a-z])?([^A-Z]+)?([^a-z])?([^A-Z]+)?([^a-z])?([^A-Z]+)?$|.*/\U$1\L$2\U$3\L$4\U$5\L$6\U$7\L$8/:name}}s(${3:exampleVal}s: string[] | null): string[] {
+        if (${3:exampleVal}s) {
+            this.${3:exampleVal}s = ${3:exampleVal}s;
+        } else {
+            this.${3:exampleVal}s = [this.default${4:${3/^([a-zA-Z])([^A-Z]+)([^a-z])?([^A-Z]+)?([^a-z])?([^A-Z]+)?([^a-z])?([^A-Z]+)?$|.*/\U$1\L$2\U$3\L$4\U$5\L$6\U$7\L$8/:name}}];
+        }
+        return this.${3:exampleVal}s;
+    }
+}
+
+
+/***************************************** FACTORY EXPORT *****************************************/
+/**
+ * @export
+ * @factory
+ * ${1}Store factory. Build and return ${7}.
+ */
+export const build${1}Store = (props: StoreProps): ${1}Store => {
+    const ${2:${1/^([a-zA-Z])([^A-Z]+)([^a-z])?([^A-Z]+)?([^a-z])?([^A-Z]+)?([^a-z])?([^A-Z]+)?(Store)?$|.*/\L$1\L$2\U$3\L$4\U$5\L$6\U$7\L$8/:name}}Store = new ${1}Store(props);
+    log.info(`build${1}Store :: ${2:${1/^([a-zA-Z])([^A-Z]+)([^a-z])?([^A-Z]+)?([^a-z])?([^A-Z]+)?([^a-z])?([^A-Z]+)?(Store)?$|.*/\L$1\L$2\U$3\L$4\U$5\L$6\U$7\L$8/:name}}Store:`, ${2:${1/^([a-zA-Z])([^A-Z]+)([^a-z])?([^A-Z]+)?([^a-z])?([^A-Z]+)?([^a-z])?([^A-Z]+)?(Store)?$|.*/\L$1\L$2\U$3\L$4\U$5\L$6\U$7\L$8/:name}}Store);
+    return ${2:${1/^([a-zA-Z])([^A-Z]+)([^a-z])?([^A-Z]+)?([^a-z])?([^A-Z]+)?([^a-z])?([^A-Z]+)?(Store)?$|.*/\L$1\L$2\U$3\L$4\U$5\L$6\U$7\L$8/:name}}Store;
+};
+
+]]></content>  
+  <tabTrigger>mobx_store_example_w_defs</tabTrigger>
+  <scope>source.js, source.ts, source.jsx, source.tsx</scope>
+</snippet>
