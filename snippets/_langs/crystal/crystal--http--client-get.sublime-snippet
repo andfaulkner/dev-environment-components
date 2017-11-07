@@ -1,0 +1,8 @@
+<snippet>
+  <description>Perform get request to give URL</description>
+<content><![CDATA[
+${1:response} = HTTP::Client.get ${2:http://url.to/request/from}
+]]></content>  
+  <tabTrigger>http_get</tabTrigger>
+  <scope>source.crystal</scope>
+</snippet>

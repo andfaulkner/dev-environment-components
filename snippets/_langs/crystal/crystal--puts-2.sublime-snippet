@@ -1,0 +1,8 @@
+<snippet>
+  <description>Output string</description>
+<content><![CDATA[
+puts ${1:"some value"}
+]]></content>  
+  <tabTrigger>pu</tabTrigger>
+  <scope>source.crystal</scope>
+</snippet>

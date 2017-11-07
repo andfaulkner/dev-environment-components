@@ -1,0 +1,10 @@
+<snippet>
+  <description>Open a file. Returns a file handler.</description>
+<content><![CDATA[
+File.open(${1:"path/to/file.ext"}) { |file|
+  ${2:puts file}
+}
+]]></content>  
+  <tabTrigger>file_open</tabTrigger>
+  <scope>source.crystal</scope>
+</snippet>
