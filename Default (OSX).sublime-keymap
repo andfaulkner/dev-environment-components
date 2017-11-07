@@ -39,7 +39,7 @@
   { "keys": [ "ctrl+alt+shift+s"], "command": "side_bar_new_file", "args": {"paths": [
     "~/Library/Application Support/Sublime Text 3/Packages/User/snippets/snippets"
   ]}},
-  // Full path: /Users/andfaulkner/Library/Application Support/Sublime Text 3/Packages/User/snippets/snippets
+  // Full path: /Users/andfaulkner/Library/Application Support/Sublime Text 3/Packages/User/snippets/snippets/_langs
 
   // Create new JS snippet
   { "keys": [ "ctrl+alt+shift+j"], "command": "side_bar_new_file", "args": {"paths": [
@@ -121,6 +121,9 @@
   { "keys": [ "command+ctrl+down"  ], "command": "swap_line_down"   },
 
   { "keys": [ "command+k,command+b" ], "command": "toggle_side_bar" },
+
+  { "keys": [ "command+alt+ctrl+d" ], "command": "doxy_comment_nearest_entity" },
+
 
 /******************************************** LOGGING *********************************************/
   { "keys": ["ctrl+shift+l"],  "command": "console_wrap", "args": {"insert_before": false} },
