@@ -7,53 +7,41 @@ HISTSIZE=500000 HISTFILESIZE=5000000
 ################################################################################
 #~~~~~~~~~~~~~~~~~~~~~~~~~~ LOAD OTHER SOURCE SCRIPTS ~~~~~~~~~~~~~~~~~~~~~~~~~~
 ################################################################################
-ANDROID_SCRIPTS="$SNIPPETS_DIR/scripts/sh/android_scripts.sh"
-GIT_SCRIPTS="$SNIPPETS_DIR/scripts/sh/git_scripts.sh"
-RUBY_SCRIPTS="$SNIPPETS_DIR/scripts/sh/ruby_scripts.sh"
-NODE_SCRIPTS="$SNIPPETS_DIR/scripts/sh/node_scripts.sh"
-CLOJURE_SCRIPTS="$SNIPPETS_DIR/scripts/sh/clojure_scripts.sh"
-PYTHON_SCRIPTS="$SNIPPETS_DIR/scripts/sh/python_scripts.sh"
-ELIXIR_SCRIPTS="$SNIPPETS_DIR/scripts/sh/elixir_scripts.sh"
-ELM_SCRIPTS="$SNIPPETS_DIR/scripts/sh/elm_scripts.sh"
+_def_all_srcs_() {
+    local CUR_LANG=$1
+    local CUR_LANG_LC="$(echo $CUR_LANG | tr '[:upper:]' '[:lower:]')"
+    local CUR_LANG_UC="$(echo $CUR_LANG | tr '[:lower:]' '[:upper:]')" 
+    local SCRIPTS_FILE="$SNIPPETS_DIR/scripts/sh/${CUR_LANG_LC}_scripts.sh"
+    eval "${CUR_LANG_UC}_SCRIPTS=\"$SCRIPTS_FILE\""
+    eval "alias bashrc_${CURLANG_LC}='vim \"$SCRIPTS_FILE\"'"
+    eval "source \"\$${CUR_LANG_UC}_SCRIPTS\""
+}
 
-SYSTEM_UTILITY_SCRIPTS="$SNIPPETS_DIR/scripts/sh/sys_util_scripts.sh"
+_def_all_srcs_ android
+_def_all_srcs_ git 
+_def_all_srcs_ ruby 
+_def_all_srcs_ node
+_def_all_srcs_ clojure
+_def_all_srcs_ python
+_def_all_srcs_ elixir
+_def_all_srcs_ elm
+_def_all_srcs_ crystal 
+_def_all_srcs_ search
+_def_all_srcs_ web
+_def_all_srcs_ sys_util
+
 MISC_CLI_OPTIONS="$SNIPPETS_DIR/scripts/sh/cli_opts.sh"
-SEARCH_SCRIPTS="$SNIPPETS_DIR/scripts/sh/search_scripts.sh"
-WEB_SCRIPTS="$SNIPPETS_DIR/scripts/sh/web_scripts.sh"
 PORTABLE_BASHRC_ADDITIONS="$SNIPPETS_DIR/scripts/sh/portable_bashrc_additions.sh"
 TEMPLATES_DIR="$SNIPPETS_DIR/scripts/sh/templates"
 
-source "$SNIPPETS_DIR/scripts/sh/sys_util_scripts.sh"
-source "$SNIPPETS_DIR/scripts/sh/cli_opts.sh"
-source "$SNIPPETS_DIR/scripts/sh/search_scripts.sh"
-source "$SNIPPETS_DIR/scripts/sh/web_scripts.sh"
-
 # LANGUAGE- OR TOOL-SPECIFIC SCRIPT SOURCES
-source "$SNIPPETS_DIR/scripts/sh/android_scripts.sh"
-source "$SNIPPETS_DIR/scripts/sh/git_scripts.sh"
-source "$SNIPPETS_DIR/scripts/sh/ruby_scripts.sh"
-source "$SNIPPETS_DIR/scripts/sh/node_scripts.sh"
-source "$SNIPPETS_DIR/scripts/sh/clojure_scripts.sh"
-source "$SNIPPETS_DIR/scripts/sh/python_scripts.sh"
-source "$SNIPPETS_DIR/scripts/sh/elixir_scripts.sh"
-source "$ELM_SCRIPTS"
+source "$MISC_CLI_OPTIONS"
 source ~/.profile
 
 # EDIT OTHER SCRIPT SOURCES
-alias bashrc_android='vim "$SNIPPETS_DIR/scripts/sh/android_scripts.sh"'
-alias bashrc_git='vim "$SNIPPETS_DIR/scripts/sh/git_scripts.sh"'
-alias bashrc_ruby='vim "$SNIPPETS_DIR/scripts/sh/ruby_scripts.sh"'
-alias bashrc_sysutil='vim "$SNIPPETS_DIR/scripts/sh/sys_util_scripts.sh"'
 alias bashrc_sysportable='vim "$PORTABLE_BASHRC_ADDITIONS"'
 alias bashrc_cli='vim "$SNIPPETS_DIR/scripts/sh/cli_opts.sh"'
-alias bashrc_node='vim "$SNIPPETS_DIR/scripts/sh/node_scripts.sh"'
-alias bashrc_search='vim "$SNIPPETS_DIR/scripts/sh/search_scripts.sh"'
-alias bashrc_web='vim "$SNIPPETS_DIR/scripts/sh/web_scripts.sh"'
-alias bashrc_clojure='vim "$SNIPPETS_DIR/scripts/sh/clojure_scripts.sh"'
-alias bashrc='vim "$SNIPPETS_DIR/scripts/sh/portable_bashrc_additions.sh"'
-alias bashrc_clojure='vim "$SNIPPETS_DIR/scripts/sh/clojure_scripts.sh"'
-alias bashrc_elixir='vim "$SNIPPETS_DIR/scripts/sh/elixir_scripts.sh"'
-alias bashrc_elm='vim "$ELM_SCRIPTS"'
+alias bashrc='vim "$PORTABLE_BASHRC_ADDITIONS"'
 
 # LOAD 'MODULES'
 source "$SNIPPETS_DIR/scripts/sh/bash_modules/module_File.sh"
@@ -249,6 +237,13 @@ function insertfirstline {
     echo $2 | cat - $1 > temp && mv temp $1
 }
 
+####### CASING #######
+# Text streamed through gets switched to lowercase
+alias str_lowercase="tr '[:upper:]' '[:lower:]'" 
+
+# Text streamed through gets switched to uppercase
+alias str_uppercase="tr '[:lower:]' '[:upper:]'" 
+
 # get the file extension
 # @param $1 - path/to/file.ext
 # @returns file extension, excluding the dot. E.g. js
@@ -256,10 +251,12 @@ function file.gettext {
     echo "${1##*/}" | awk -F. '{print $NF}'
 }
 
+# Get first line of given file
 function file.get_first_line {
   cat $1 | awk 'NR==1'
 }
 
+# Get text of given line number
 function file.get_line { #arg1: filename; arg2: line
   cat $1 | awk "NR==$2"
 }
