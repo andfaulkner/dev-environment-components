@@ -350,6 +350,10 @@ echo "* NodeJS scripts loaded!"
 # alias yard="yarn"
 
 alias npm_hasmodule='cat package.json | ack'
+alias npm_mymodules='cat package.json | ack --no-color "\"((mad-logs)|(mad-utils)|(@ottawamhealth\/canimmunize-kavalinscript)|(env-var-helpers)|(common-constants))\"":'
+alias mymoduleversions='npm_mymodules'
+
+alias npm_mymodulesall='cat package.json | ack --no-color "\"((mad-logs)|(mad-utils)|(@ottawamhealth\/[a-zA-Z-_$]+)|(kidnap-console)|(env-var-helpers)|(errorcatcher)|(common-constants))\"":'
 
 alias yarn_ottawamhealth_upgrade_main_internal_libs="yarn upgrade mad-utils mad-logs env-var-helpers @ottawamhealth/canimmunize-javelinscript; echo 'If required, you can also install @ottawamhealth/auth-handler next - it was left out due to having had significant breaking changes across versions. Be sure to upgrade it very carefully. Cmd:\n    yarn upgrade @ottawamhealth/auth-handler'"
 

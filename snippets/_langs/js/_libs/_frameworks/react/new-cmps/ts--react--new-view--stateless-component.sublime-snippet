@@ -43,6 +43,8 @@ export const ${1} = observer((props?: ${1:NameOfComponent}Props) => {
     );
 });
 
+${1}.displayName = `${1}`;
+
 ]]></content>  
   <tabTrigger>rct_ts_new_view_sfc</tabTrigger>
   <scope>source.tsx</scope>

@@ -7,8 +7,8 @@ Adding state to a stateless functional component
  * Provide name & setName properties from app store.
  */
 const InjectNameProps = Component => inject(({ appState }: StoreProps) => ({
-    name:    appState.name,
-    setName: appState.setName,
+    name:    appState.accountStore.name,
+    setName: appState.accountStore.setName,
 }))(Component);
 
 /**
