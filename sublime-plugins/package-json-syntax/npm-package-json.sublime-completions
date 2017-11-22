@@ -1,0 +1,45 @@
+{
+  "scope": "source.npm meta.structure.toplvl-dictionary.json",
+  "completions": [
+    {
+      "trigger": "scripts\tscripts section",
+      "contents": "\"scripts\": {\n  \"test\": \"${1:echo 'Error: no test specified' && exit 1}\",\n  \"start\": \"${2:node ./index.js}\",\n},"
+    },
+    {
+      "trigger": "dependencies\tdependencies section",
+      "contents": "\"dependencies\": {\n${1}\n},"
+    },
+    {
+      "trigger": "devDependencies\tdevDependencies section",
+      "contents": "\"devDependencies\": {\n${1}\n},"
+    },
+    {
+      "trigger": "peerDependencies\tpeerDependencies section",
+      "contents": "\"peerDependencies\": {\n${1}\n},"
+    },
+    {
+      "trigger": "keywords\tkeywords array, separated by commas",
+      "contents": "\"keywords\": [${1:\"k1\", \"k2\"}],"
+    },
+    {
+      "trigger": "author\tauthor name & (optionally) email",
+      "contents": "\"author\": \"${1:My Name}${2/.+/ </}${2:myemail@host.com}${2/.+/>/}\","
+    },
+    {
+      "trigger": "license\tlicense type",
+      "contents": "\"license\": \"${1:MIT}\","
+    },
+    {
+      "trigger": "version\tversion number (e.g. 0.0.5)",
+      "contents": "\"version\": \"${1:0.0.1}\","
+    },
+    {
+      "trigger": "description\tBrief description of project (displayed on npmJS)",
+      "contents": "\"description\": \"${1:Brief description of project here}\","
+    },
+    {
+      "trigger": "name\tName of project (on npmJS). If preceded by @namespace/, makes module private",
+      "contents": "\"name\": \"${1:project-name-here}\","
+    }
+  ]
+}
