@@ -1,9 +1,16 @@
 [
-  /******************************************** CONSOLE *********************************************/
+/******************************************** CONSOLE *********************************************/
   { "keys": [ "ctrl+alt+k" ], "command": "clear_console" },
   { "keys": [ "command+ctrl+shift+l" ], "command": "sublime.log_commands(True)" },
   { "keys": [ "command+ctrl+shift+n" ], "command": "sublime.log_commands(False)" },
   { "keys": [ "command+alt+r" ], "command": "save" },
+
+/* (CTRL-SHIFT-[AVCI]) */
+/********************************************** GIT ***********************************************/
+  { "keys": [ "ctrl+shift+a" ], "command": "git_add_selected_hunk" },
+  { "keys": [ "ctrl+shift+v" ], "command": "git_toggle_annotations" },
+  { "keys": [ "ctrl+shift+c" ], "command": "git_commit" },
+  { "keys": [ "ctrl+shift+i" ], "command": "git_commit_amend" },
 
 /**************************************** SIDEBAR HANDLING ****************************************/
   { "keys": [ "alt+r" ],                "command": "side_bar_rename"                         },
