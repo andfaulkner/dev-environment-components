@@ -23,6 +23,7 @@ alias gamend="git amend"
 alias g_amend="git amend"
 alias g_am="git amend"
 alias gam="git amend"
+alias gapy="git add package.json yarn.lock"
 
 alias g_c="git commit"
 
