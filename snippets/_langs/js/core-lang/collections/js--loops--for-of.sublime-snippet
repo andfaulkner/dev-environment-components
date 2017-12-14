@@ -2,7 +2,7 @@
   <description>for-of loop. Iterate thru iterable, w each loop ret a diff item from it.</description>
 <content><![CDATA[
 for (const ${1:currentVal} of ${2:SomeInterable_e.g._an_array_or_string}) {
-  ${3:// actions to perform on each item in the 'iterable' }
+    ${o:// actions to perform on each item in the 'iterable' }
 }
 ]]></content>  
   <tabTrigger>forof</tabTrigger>
