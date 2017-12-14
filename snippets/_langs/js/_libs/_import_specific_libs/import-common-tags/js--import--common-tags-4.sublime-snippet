@@ -1,0 +1,21 @@
+<snippet>
+  <description>Import common-tags</description>
+<content><![CDATA[
+import {${1:
+    /***************************** STRING REFORMATTING ******************************/
+    // Strip initial indent from start of each line, keep subsequent lines' extra indents
+    stripIndent,
+
+    /******************** MAKE MULTILINE STRING -> 1-LINE STRING ********************/
+    oneLine,     // << Convert to 1 line w/ ' ' between each line's content
+    oneLineTrim, // << Convert to 1 line w/ newlines fully trimmed (no ' ' betw lines)
+
+    /******************************* HTML TEMPLATING ********************************/
+    html,     // << Format & indent html, w smart array handling (makes map output multiline)
+    safeHtml, // << Like html, but escapes strs from substitutions (use in html str)
+
+}} from 'common-tags'
+]]></content>  
+  <tabTrigger>imptagscommon</tabTrigger>
+  <scope>source.js, source.ts, source.jsx, source.tsx</scope>
+</snippet>
