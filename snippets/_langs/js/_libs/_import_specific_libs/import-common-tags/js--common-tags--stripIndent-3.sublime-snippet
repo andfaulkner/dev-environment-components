@@ -1,0 +1,8 @@
+<snippet>
+  <description>Strip 1st line's indent from start of each line, keep extra indent in rest of lines (need common-tags lib)</description>
+<content><![CDATA[
+stripIndent`${0}`
+]]></content>  
+  <tabTrigger>comtag_stripindent</tabTrigger>
+  <scope>source.js, source.ts, source.jsx, source.tsx</scope>
+</snippet>
