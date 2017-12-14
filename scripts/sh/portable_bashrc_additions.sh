@@ -295,3 +295,11 @@ pa() {
 
 alias gogameimmunitywarriors="cd $PROJECTS_DIR/own-projects/immunity-warriors-game"
 
+####### AUTOCOMPLETIONS ########
+_common_cmds_autocomplete()
+{
+    local cur=${COMP_WORDS[COMP_CWORD]}
+    COMPREPLY=( $(compgen -W "client server clean run clientprod serverprod cleanprod runprod help util start test" -- $cur) )
+}
+complete -F _common_cmds_autocomplete ./common-cmds
+
