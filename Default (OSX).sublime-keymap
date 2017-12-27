@@ -1,9 +1,13 @@
 [
+  // Find & replace :: in-file
+  { "keys": [ "command+shift+r" ], "command": "show_panel", "args": {"panel": "replace", "reverse": false } },
+
 /******************************************** CONSOLE *********************************************/
   { "keys": [ "ctrl+alt+k" ], "command": "clear_console" },
   { "keys": [ "command+ctrl+shift+l" ], "command": "sublime.log_commands(True)" },
   { "keys": [ "command+ctrl+shift+n" ], "command": "sublime.log_commands(False)" },
   { "keys": [ "command+alt+r" ], "command": "save" },
+
 
 /* (CTRL-SHIFT-[AVCI]) */
 /********************************************** GIT ***********************************************/
