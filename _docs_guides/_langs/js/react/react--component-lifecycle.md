@@ -28,6 +28,8 @@ INITIAL RENDER
            \/
        {children}          [3.x] - triggers initial render of child components to current component
            ┃┃                    All components' children recursively rendered until entire UI tree covered
+           ┃┃                    Child components rendering follows the normal initial render lifecycle
+           ┃┃                       (starting w/ constructor -- see above)
            ┃┃                    Runs:
            ┃┃                      ┃-> In the course of a component's render method.
            ┃┃                      ┗-> Before ANY components call componentDidMount!
@@ -52,6 +54,8 @@ INITIAL RENDER
                                    ┃-> setState. Calling it here triggers extra render,
                                    ┃             but intermediate state won't be shown
                                    ┗-> this.props (will contain prev props)
+
+[NOTE: see below for notes on decorators - they are not yet included in the above lifecycle flow]
 
 ----------------------------------------------------------------------------------------------------
 PROPS UPDATE
@@ -130,7 +134,19 @@ ON ERROR THROWN
                                    ┗-> this.props
 
 ----------------------------------------------------------------------------------------------------
+Notes on decorators
+-------------------
+Class decorators run before the constructor (because they wrap the constructor).
+*   They essentially either:
+    1. modify the constructor of a class (& thus React component) before the constructor is run; or
+    2. trigger side effects (e.g. metadata storage, logging) related to the yet-unrendered component
 
+TODO add class decorators to the initial render lifecycle (as a "step 0")
+TODO add other types of decorators to the initial render lifecycle
+     -> (method decorators, parameter decorators, property decorators)
+     -> they may actually run *before* class decorators - more research required
+
+----------------------------------------------------------------------------------------------------
 Sources
 -------
 https://engineering.musefind.com/react-lifecycle-methods-how-and-when-to-use-them-2111a1b692b1
@@ -143,3 +159,8 @@ http://busypeoples.github.io/post/react-component-lifecycle/
 https://developmentarc.gitbooks.io/react-indepth/content/life_cycle/birth/post_mount_with_component_did_mount.html
 
 React lifecycle cheatsheet :: https://gist.github.com/bvaughn/923dffb2cd9504ee440791fade8db5f9
+
+### Decorators sources
+How I fell in love with JS decorators :: https://cabbageapps.com/fell-love-js-decorators/
+TypeScript-Handbook -> Decorators :: https://github.com/Microsoft/TypeScript-Handbook/blob/master/pages/Decorators.md
+Understanding decorators :: https://survivejs.com/react/appendices/understanding-decorators/
