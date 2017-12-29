@@ -26,11 +26,14 @@ INITIAL RENDER
            ┃┃                    -- The render function has to be pure
            ┃┃                    -- NEVER CALL this.setState HERE!!!           
            \/
-       {children}          [3.x] 
+       {children}          [3.x] - triggers initial render of child components to current component
+           ┃┃                    All components' children recursively rendered until entire UI tree covered
            ┃┃                    Runs:
-           ┃┃                      ┃-> 
-           ┃┃                      ┗-> on server rendering (only lifecycle hook called on server rendering)
-           ┃┃                    
+           ┃┃                      ┃-> In the course of a component's render method.
+           ┃┃                      ┗-> Before ANY components call componentDidMount!
+           ┃┃                          -- All children (entire UI) renders first
+           ┃┃                    Uses:
+           ┃┃                      ┗-> WIP -- TODO write-up children uses [children are one of the most useful aspects of React, so this will be a large section]
            \/
     componentDidMount      [4] - componentDidMount()
                                  Note: starts at the bottom element in the UI tree & works up
@@ -104,6 +107,28 @@ ON VIEW REMOVAL / UNMOUNTING
                                  * cancel outgoing network requests
                                  * remove all event listeners associated w/ the component
                                  -- setState not available
+----------------------------------------------------------------------------------------------------
+ON ERROR THROWN
+---------------
+    componentDidCatch      [1] - componentDidCatch(error: Error, info: React.ErrorInfo)
+                                 Runs:
+                                   ┗-> When error thrown:
+                                       Any thrown error in the React tree propagates upward until
+                                       the 1st component with a componentDidCatch method.
+                                       -- Entire React UI tree detaches from the DOM if none found
+                                 Uses:
+                                   ┗-> For error boundary components to trigger display of a
+                                       fallback UI. e.g. via setState:
+                                       -- have state.hasError property on component
+                                       -- switch it to true in componentDidCatch
+                                       -- branch render method so normal UI (or children) renders
+                                          if hasError is false, & a fallback UI renders if true.
+                                          * fallback UI should (usually) just contain error info
+                                 Available:
+                                   ┃-> this.setState
+                                   ┃-> this.state
+                                   ┗-> this.props
+
 ----------------------------------------------------------------------------------------------------
 
 Sources
