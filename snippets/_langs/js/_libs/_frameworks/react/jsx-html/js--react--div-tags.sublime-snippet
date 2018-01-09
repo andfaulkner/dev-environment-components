@@ -1,7 +1,7 @@
 <snippet>
 		<description>Insert a div tag - for use in jsx files</description>
     <content><![CDATA[
-<div${1/.+/ className={/g}${1:names-of classes-here}${1/.+/}/g}>
+<div${1/.+/ className={/g}cn(`${1:names-of classes-here}`)${1/.+/}/g}>
     ${0}
 </div>
 ]]></content>

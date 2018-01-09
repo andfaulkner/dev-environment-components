@@ -1,7 +1,7 @@
 <snippet>
   <description>import mobx - observable</description>
 <content><![CDATA[
-import { observable } from 'mobx';${0}
+import {observable} from 'mobx';${0}
 ]]></content>  
   <tabTrigger>imp_mobx_observable</tabTrigger>
   <scope>source.js, source.ts, source.jsx, source.tsx</scope>
