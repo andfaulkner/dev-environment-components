@@ -30,7 +30,6 @@
   { "keys": [ "ctrl+alt+v" ],           "command": "side_bar_paste"                          },
   { "keys": [ "command+shift+t" ],      "command": "open_recent_file", "args": {"index" : 0} },
   { "keys": [ "command+s" ],            "command": "save"                                    },
-  { "keys": [ "command+s" ],            "command": "save"                                    },
 
 /******************************************* FORMATTING *******************************************/
   { "keys": [ "command+ctrl+shift+a" ], "command": "alignment"                               },
@@ -80,7 +79,6 @@
         ["paste"],
         ["save"]
   ]}},
-
 
 /******************************************* OPEN FILES *******************************************/
   // Open sublime keymap (this file)
