@@ -1,0 +1,8 @@
+<snippet>
+  <description>JSName annotation</description>
+<content><![CDATA[
+@JSName("${1:valueOfMethodBelow}")
+]]></content>
+  <tabTrigger>jsn</tabTrigger>
+  <scope>source.Kotlin</scope>
+</snippet>
