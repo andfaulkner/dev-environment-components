@@ -1,0 +1,217 @@
+{
+  "BTTPresetName" : "Default",
+  "BTTPresetUUID" : "9E6052D7-8572-4DA2-B6DC-BE96E33D9A2A",
+  "BTTPresetContent" : [
+    {
+      "BTTAppBundleIdentifier" : "BT.G",
+      "BTTAppName" : "Global",
+      "BTTAppSpecificSettings" : {
+
+      },
+      "BTTTriggers" : [
+        {
+          "BTTTriggerType" : 31,
+          "BTTTriggerTypeDescription" : "TipTap Right (2 Fingers Fix)",
+          "BTTTriggerClass" : "BTTTriggerTypeMagicMouse",
+          "BTTPredefinedActionType" : 24,
+          "BTTPredefinedActionName" : "Volume Up",
+          "BTTEnabled" : 1,
+          "BTTOrder" : 13,
+          "BTTIconData" : "Standard Close Icon",
+          "BTTAlternateIconData" : "",
+          "BTTKeySequence" : {
+
+          }
+        },
+        {
+          "BTTTriggerType" : 21,
+          "BTTTriggerTypeDescription" : "3 Finger Click",
+          "BTTTriggerClass" : "BTTTriggerTypeMagicMouse",
+          "BTTPredefinedActionType" : 49,
+          "BTTPredefinedActionName" : "Open Application \/ File \/ Apple Script …",
+          "BTTLaunchPath" : "file:\/\/\/Applications\/iTerm-2.app",
+          "BTTEnabled" : 1,
+          "BTTRequiredModifierKeys" : 1048576,
+          "BTTOrder" : 15,
+          "BTTIconData" : "Standard Close Icon",
+          "BTTAlternateIconData" : "",
+          "BTTKeySequence" : {
+
+          }
+        },
+        {
+          "BTTTriggerType" : 37,
+          "BTTTriggerTypeDescription" : "TipTap Middle (2 Fingers Fix)",
+          "BTTTriggerClass" : "BTTTriggerTypeMagicMouse",
+          "BTTPredefinedActionType" : 22,
+          "BTTPredefinedActionName" : "Mute",
+          "BTTEnabled" : 1,
+          "BTTOrder" : 14,
+          "BTTIconData" : "Standard Close Icon",
+          "BTTAlternateIconData" : "",
+          "BTTKeySequence" : {
+
+          }
+        },
+        {
+          "BTTTriggerType" : 21,
+          "BTTTriggerTypeDescription" : "3 Finger Click",
+          "BTTTriggerClass" : "BTTTriggerTypeMagicMouse",
+          "BTTPredefinedActionType" : 49,
+          "BTTPredefinedActionName" : "Open Application \/ File \/ Apple Script …",
+          "BTTLaunchPath" : "file:\/\/\/Applications\/Sublime%20Text.app",
+          "BTTEnabled" : 1,
+          "BTTRequiredModifierKeys" : 524288,
+          "BTTOrder" : 16,
+          "BTTIconData" : "Standard Close Icon",
+          "BTTAlternateIconData" : "",
+          "BTTKeySequence" : {
+
+          }
+        },
+        {
+          "BTTTriggerType" : 13,
+          "BTTTriggerTypeDescription" : "3 Finger Swipe Up",
+          "BTTTriggerClass" : "BTTTriggerTypeMagicMouse",
+          "BTTPredefinedActionType" : 5,
+          "BTTPredefinedActionName" : "Mission Control",
+          "BTTEnabled" : 1,
+          "BTTOrder" : 10,
+          "BTTIconData" : "Standard Close Icon",
+          "BTTAlternateIconData" : "",
+          "BTTKeySequence" : {
+
+          }
+        },
+        {
+          "BTTTriggerType" : 32,
+          "BTTTriggerTypeDescription" : "1 Finger Tap Above Apple",
+          "BTTTriggerClass" : "BTTTriggerTypeMagicMouse",
+          "BTTPredefinedActionType" : 112,
+          "BTTPredefinedActionName" : "Enter Fullscreen (If Supported)",
+          "BTTEnabled" : 1,
+          "BTTOrder" : 11,
+          "BTTIconData" : "Standard Close Icon",
+          "BTTAlternateIconData" : "",
+          "BTTKeySequence" : {
+
+          }
+        },
+        {
+          "BTTTriggerType" : 30,
+          "BTTTriggerTypeDescription" : "TipTap Left (2 Fingers Fix)",
+          "BTTTriggerClass" : "BTTTriggerTypeMagicMouse",
+          "BTTPredefinedActionType" : 25,
+          "BTTPredefinedActionName" : "Volume Down",
+          "BTTEnabled" : 1,
+          "BTTOrder" : 12,
+          "BTTIconData" : "Standard Close Icon",
+          "BTTAlternateIconData" : "",
+          "BTTKeySequence" : {
+
+          }
+        }
+      ]
+    },
+    {
+      "BTTAppBundleIdentifier" : "com.apple.finder",
+      "BTTAppName" : "Finder",
+      "BTTTriggers" : [
+        {
+          "BTTTriggerType" : -1,
+          "BTTTriggerClass" : "BTTTriggerTypeBTTRemote",
+          "BTTPredefinedActionType" : -1,
+          "BTTPredefinedActionName" : "No Action",
+          "BTTEnabled" : 1,
+          "BTTOrder" : 0,
+          "BTTIconData" : "Standard Close Icon",
+          "BTTAlternateIconData" : ""
+        },
+        {
+          "BTTTriggerType" : 30,
+          "BTTTriggerTypeDescription" : "TipTap Left (2 Fingers Fix)",
+          "BTTTriggerClass" : "BTTTriggerTypeMagicMouse",
+          "BTTPredefinedActionType" : 25,
+          "BTTPredefinedActionName" : "Volume Down",
+          "BTTEnabled" : 1,
+          "BTTOrder" : 2,
+          "BTTIconData" : "Standard Close Icon",
+          "BTTAlternateIconData" : ""
+        },
+        {
+          "BTTTriggerType" : 13,
+          "BTTTriggerTypeDescription" : "3 Finger Swipe Up",
+          "BTTTriggerClass" : "BTTTriggerTypeMagicMouse",
+          "BTTPredefinedActionType" : 5,
+          "BTTPredefinedActionName" : "Mission Control",
+          "BTTEnabled" : 1,
+          "BTTOrder" : 0,
+          "BTTIconData" : "Standard Close Icon",
+          "BTTAlternateIconData" : ""
+        },
+        {
+          "BTTTriggerType" : 32,
+          "BTTTriggerTypeDescription" : "1 Finger Tap Above Apple",
+          "BTTTriggerClass" : "BTTTriggerTypeMagicMouse",
+          "BTTPredefinedActionType" : 112,
+          "BTTPredefinedActionName" : "Enter Fullscreen (If Supported)",
+          "BTTEnabled" : 1,
+          "BTTOrder" : 1,
+          "BTTIconData" : "Standard Close Icon",
+          "BTTAlternateIconData" : ""
+        },
+        {
+          "BTTTriggerType" : 21,
+          "BTTTriggerTypeDescription" : "3 Finger Click",
+          "BTTTriggerClass" : "BTTTriggerTypeMagicMouse",
+          "BTTPredefinedActionType" : 49,
+          "BTTPredefinedActionName" : "Open Application \/ File \/ Apple Script …",
+          "BTTLaunchPath" : "file:\/\/\/Applications\/iTerm-2.app",
+          "BTTEnabled" : 1,
+          "BTTRequiredModifierKeys" : 1048576,
+          "BTTOrder" : 5,
+          "BTTIconData" : "Standard Close Icon",
+          "BTTAlternateIconData" : ""
+        },
+        {
+          "BTTTriggerType" : 37,
+          "BTTTriggerTypeDescription" : "TipTap Middle (2 Fingers Fix)",
+          "BTTTriggerClass" : "BTTTriggerTypeMagicMouse",
+          "BTTPredefinedActionType" : 22,
+          "BTTPredefinedActionName" : "Mute",
+          "BTTEnabled" : 1,
+          "BTTOrder" : 4,
+          "BTTIconData" : "Standard Close Icon",
+          "BTTAlternateIconData" : ""
+        },
+        {
+          "BTTTriggerType" : 21,
+          "BTTTriggerTypeDescription" : "3 Finger Click",
+          "BTTTriggerClass" : "BTTTriggerTypeMagicMouse",
+          "BTTPredefinedActionType" : 49,
+          "BTTPredefinedActionName" : "Open Application \/ File \/ Apple Script …",
+          "BTTLaunchPath" : "file:\/\/\/Applications\/Sublime%20Text.app",
+          "BTTEnabled" : 1,
+          "BTTRequiredModifierKeys" : 524288,
+          "BTTOrder" : 6,
+          "BTTIconData" : "Standard Close Icon",
+          "BTTAlternateIconData" : ""
+        },
+        {
+          "BTTTriggerType" : 31,
+          "BTTTriggerTypeDescription" : "TipTap Right (2 Fingers Fix)",
+          "BTTTriggerClass" : "BTTTriggerTypeMagicMouse",
+          "BTTPredefinedActionType" : 24,
+          "BTTPredefinedActionName" : "Volume Up",
+          "BTTEnabled" : 1,
+          "BTTOrder" : 3,
+          "BTTIconData" : "Standard Close Icon",
+          "BTTAlternateIconData" : ""
+        }
+      ]
+    }
+  ],
+  "BTTPresetSnapAreas" : [
+
+  ]
+}
