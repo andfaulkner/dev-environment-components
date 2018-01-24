@@ -70,7 +70,13 @@ tag_v_publish() {
 # alias g_diff_remote="g_diff_br_remote \$(g_curbr)"
 
 # rubify this, make it check current branch first and only do this if it's on develop after checkout
-alias g_resetdev="git stash; git checkout develop; git fetch origin; git reset --hard origin/develop"
+# alias g_resetdev="git stash; git checkout develop; git fetch origin; git reset --hard origin/develop"
+
+# Reset all staged changes to unstaged
+alias g_resethead="git reset HEAD"
+alias g_reset_staged_to_unstaged="g_resethead"
+alias g_resethead_all="g_resethead"
+alias grh="g_resethead"
 
 # Convert previous git commit into a set of staged but uncommited local files, and remove the commit from the git history.
 alias g_reset_last_commit_keep_local_changes="git reset --soft HEAD~1"
