@@ -79,31 +79,6 @@ alias ......="cd ../../../../.."
 
 alias back="echo 'DIR returning from:'; pwd; popd; echo 'DIR returned to:'; pwd"
 
-alias go_android_tools="pushd ./; cd $HOME/Library/Android/sdk; ls -ao; echo ''; pwd"
-
-alias downloads="pushd \"$HOME/Downloads\""
-alias documents="pushd \"$HOME/Documents\""
-alias proj="pushd \"$HOME/projects\""
-alias goproj="pushd \"$HOME/projects\""
-alias goprojects="pushd \"$HOME/projects\""
-alias anproj="pushd \"$HOME/projects/android\""
-alias goelectron="pushd \"$HOME/projects/electron\""
-
-alias godocs="pushd \"$HOME/Documents\""
-alias godownloads="pushd \"$HOME/Downloads\""
-alias gobinhome="pushd \"$HOME/bin\""
-
-alias govimsetup="pushd \"$HOME/.config/nvim/\""
-
-alias go_madutils="pushd \"$HOME/projects/new_node_modules/mad-utils\""
-alias gomadutils="go_madutils"
-alias goutils="go_madutils"
-alias go_utils="go_madutils"
-
-alias go_madlogs="pushd \"$HOME/projects/new_node_modules/mad-logs\""
-alias gomadlogs="go_madlogs"
-alias go_log_lib="go_madlogs"
-
 ## super-ls
 alias lsa='ls -ao | grep -v "[0-9][0-9] \.\.\?$"'
 
