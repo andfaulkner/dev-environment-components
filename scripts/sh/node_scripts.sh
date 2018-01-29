@@ -160,25 +160,6 @@ function slicesenerr {
 #       see     http://www.grymoire.com/unix/sed.html
 #####################################
 
-alias goohritemplate="pushd $PROJECTS_DIR/ohri/mhealth-template-webapp"
-alias go_ohritemplate="pushd $PROJECTS_DIR/ohri/mhealth-template-webapp"
-alias go_mhealthtemplate="pushd $PROJECTS_DIR/ohri/mhealth-template-webapp"
-alias go_templatemhealth="pushd $PROJECTS_DIR/ohri/mhealth-template-webapp"
-alias gomhealthtemplate="go_templatemhealth"
-alias go_v2mhealthtemplate="pushd $PROJECTS_DIR/ohri/module-testbed/v2-mhealth-template-webapp"
-alias gov2mhealthtemplate="go_v2mhealthtemplate"
-alias go_authmodule="pushd $PROJECTS_DIR/ohri/auth-handler"
-alias goauthhandler="pushd $PROJECTS_DIR/ohri/auth-handler"
-alias go_basic_js_template="pushd $PROJECTS_DIR/own-projects/node-react-boiler-simple"
-alias go_javelinscript="pushd $PROJECTS_DIR/ohri/CANImmunize-Javelinscript"
-alias gojavelinscript="pushd $PROJECTS_DIR/ohri/CANImmunize-Javelinscript"
-alias gotemplate="pushd $PROJECTS_DIR/own-projects/node-react-boiler-simple"
-alias gowebclient="pushd $PROJECTS_DIR/ohri/canimmunize-web-client-v2"
-alias gologs="pushd $PROJECTS_DIR/new_node_modules/mad-logs"
-alias goenvvarhelpers="pushd $PROJECTS_DIR/new_node_modules/env-var-helpers"
-alias go_errorsmith="pushd $PROJECTS_DIR/ohri/errorsmith"
-alias goerrorsmith="pushd $PROJECTS_DIR/ohri/errorsmith"
-
 ################################################################################
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ EMBER ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 ################################################################################
