@@ -1,0 +1,8 @@
+<snippet>
+  <description>Import localforage module</description>
+<content><![CDATA[
+import * as localforage from 'localforage';
+]]></content>
+  <tabTrigger>imp_lf</tabTrigger>
+  <scope>source.js, source.ts, source.jsx, source.tsx</scope>
+</snippet>
