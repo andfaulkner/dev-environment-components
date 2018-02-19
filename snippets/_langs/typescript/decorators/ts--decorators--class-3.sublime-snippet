@@ -1,0 +1,38 @@
+<snippet>
+  <description>New class decorator</description>
+<content><![CDATA[
+/**
+ * @decorator ${1:decoratorName}
+ *
+ * ${2:Decorate class, {{BINDING METADATA TO .. | ADDING METHOD TO .. | SETTING INSTANCES UP FOR ..\}\}}
+ *
+ * @param {object} config ${3:Configuration object for ${1}}
+ *
+ * @example Decorate class SomeClass: @${1} class SomeClass { ... }
+ */
+export const ${1} = function ${1}DecoratorFactory(config: ${2:{\}}) {
+    /**
+     * Actual decorator (above section is config)
+     */
+    return function ${1}Decorator<TFunc extends Function>(Target: TFunc): TFunc {
+        /**
+         * Replacement constructor (monkey patches original)
+         */
+        let newConstructor = function constructor(...args: any[]) {
+            Target.apply(this, args);
+            ${0:// Do other things here - e.g. bind metadata}
+        };
+
+        // Bind original prototype & constructor to new constructor
+        newConstructor.prototype = Object.create(Target.prototype);
+        newConstructor.prototype.constructor = Target;
+
+        // Return newly built constructor
+        return (newConstructor as any) as TFunc;
+    };
+};
+
+]]></content>  
+  <tabTrigger>class_decorator</tabTrigger>
+  <scope>source.ts, source.tsx</scope>
+</snippet>

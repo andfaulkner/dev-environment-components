@@ -1,0 +1,45 @@
+<snippet>
+  <description>New property decorator</description>
+<content><![CDATA[
+/**
+ * ${4: Perform actual decoration action, regardless of whether config was given or not}
+ */
+function ${1:example}Decorator<T extends object = object, C = {}>(config?: C) {
+    return function ${1}DecoratorInner<T>(
+        target: T,
+        key: string
+    ): void {
+      ${0:// DO THINGS}
+    };
+}
+
+/**
+ * @decorator ${1}
+ * ${3:No-configuration decorator}
+ */
+export function ${1}<T = object>(target: T, key: string): void;
+
+/**
+ * @decorator ${1}
+ * ${2:Decorator factory. Uses given config object to {?\}}
+ */
+export function ${1}(config: object): <T = object>(target: T, key: string) => void;
+
+// IMPLEMENTATION
+export function ${1}(targetOrConfig?: Object | any, key?: string) {
+    const constructor = (targetOrConfig && targetOrConfig.constructor) || null;
+    const hasOwnConstructor = targetOrConfig && targetOrConfig.hasOwnProperty('constructor');
+
+    // Bare decorator
+    if (constructor && hasOwnConstructor && typeof constructor === 'function') {
+        ${1}Decorator({})(targetOrConfig, key);
+
+    // Decorator with config prop
+    } else {
+        return ${1}Decorator(targetOrConfig);
+    }
+}
+]]></content>  
+  <tabTrigger>decorator_property</tabTrigger>
+  <scope>source.ts, source.tsx</scope>
+</snippet>
