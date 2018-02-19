@@ -1,0 +1,8 @@
+<snippet>
+  <description>tsdoc decorator marker</description>
+<content><![CDATA[
+@decorator ${0:Name}
+]]></content>  
+  <tabTrigger>atd</tabTrigger>
+  <scope>comment.block.documentation.ts</scope>
+</snippet>
