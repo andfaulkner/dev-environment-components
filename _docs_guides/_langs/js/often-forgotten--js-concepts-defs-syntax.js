@@ -29,59 +29,61 @@
 /**************************************************************************************************/
 /***************************************** Object.create ******************************************/
 /**************************************************************************************************/
-// Example use of Object.create
 
-        const User = function(firstName, lastName, password) {
-                this.firstName = firstName;
-                this.lastName = lastName;
-            this.password = password;
-        };
+//
+// EXAMPLE USE OF Object.create
+//
 
-        User.prototype.getFullName = function getFullName() {
-                return this.firstName + ' ' + this.lastName;
-        };
+const User = function(firstName, lastName, password) {
+    this.firstName = firstName;
+    this.lastName = lastName;
+    this.password = password;
+};
 
-        const Meeka = new User('meeka', 'faulkner', 'woofwoof');
-        console.log(Meeka.getFullName());
-        // => meeka faulkner
+User.prototype.getFullName = function getFullName() {
+    return this.firstName + ' ' + this.lastName;
+};
 
-        const AdminUser = function(firstName, lastName, password, secret) {
-            User.call(this, firstName, lastName, password);
-            this.secret = secret;
-        };
+const Meeka = new User('meeka', 'faulkner', 'woofwoof');
 
-        AdminUser.prototype = Object.create(User.prototype);
-        AdminUser.prototype.constructor = AdminUser;
+console.log(Meeka.getFullName()); // => "meeka faulkner"
 
-        const CallieAdmin = new AdminUser('callie', 'peeke', 'arfarf', 'I ate one of the cats');
+const AdminUser = function(firstName, lastName, password, secret) {
+    User.call(this, firstName, lastName, password);
+    this.secret = secret;
+};
 
-        console.log(CallieAdmin.getFullName());
-        // => callie peeke
+AdminUser.prototype = Object.create(User.prototype);
+AdminUser.prototype.constructor = AdminUser;
 
-        console.log(CallieAdmin.secret);
-        // => I ate one of the cats
+const CallieAdmin = new AdminUser('callie', 'peeke', 'arfarf', 'I ate one of the cats');
 
-        User.prototype.getFullName = function() {
-            const fNameCap = this.firstName.charAt(0).toUpperCase() +
-                             this.firstName.slice(1).toLowerCase();
-            const lNameCap = this.lastName.charAt(0).toUpperCase() +
-                             this.lastName.slice(1).toLowerCase();
-            return 'Woofdog ' + fNameCap + ' ' + lNameCap;
-        }
+console.log(CallieAdmin.getFullName()); // => "callie peeke"
+console.log(CallieAdmin.secret); // => "I ate one of the cats"
 
-        /**
-         * Below, notice that getFullName now not only capitalizes the names for instances of the
-         * User object (as expected, since where the prototype was actually modified), but also for
-         * instances of the AdminUser object (class?). This is because AdminUser.prototype actually
-         * stores a *reference to* User.prototype, rather than a *copy of* User.prototype. Thus,
-         * modifying a value on User.prototype results in automatically modifying that same value
-         * on AdminUser at the same time.
-        */
-        console.log(Meeka.getFullName());
-        // => 'Woofdog Meeka Faulkner'
+User.prototype.getFullName = function() {
+    const fNameCap =
+        this.firstName.charAt(0).toUpperCase() +
+        this.firstName.slice(1).toLowerCase();
+    const lNameCap =
+        this.lastName.charAt(0).toUpperCase() +
+        this.lastName.slice(1).toLowerCase();
+    return 'Woofdog ' + fNameCap + ' ' + lNameCap;
+}
 
-        console.log(CallieAdmin.getFullName());
-        // => 'Woofdog Callie Peeke'
+/**
+ * Below, notice that getFullName now not only capitalizes the names for instances of the
+ * User object (as expected, since where the prototype was actually modified), but also for
+ * instances of the AdminUser object (class?). This is because AdminUser.prototype actually
+ * stores a *reference to* User.prototype, rather than a *copy of* User.prototype. Thus,
+ * modifying a value on User.prototype results in automatically modifying that same value
+ * on AdminUser at the same time.
+*/
+console.log(Meeka.getFullName());
+// => "Woofdog Meeka Faulkner"
+
+console.log(CallieAdmin.getFullName());
+// => "Woofdog Callie Peeke"
 
 /**************************************************************************************************/
 /********************* DOM API - DOM NODE MANIPULATION / GETTING AND SETTING **********************/
