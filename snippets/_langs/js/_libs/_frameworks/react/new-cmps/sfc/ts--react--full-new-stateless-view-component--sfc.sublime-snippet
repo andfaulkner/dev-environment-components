@@ -1,5 +1,5 @@
 <snippet>
-  <description>New 'view' type stateless functional component (container-wrapped) - TS</description>
+  <description>New stateless functional component - typescript</description>
 <content><![CDATA[
 /********************************************* ASSETS *********************************************/
 const s = require('./${TM_FILENAME/(.+?)(\-((container)|(view))\.tsx)/\1/g}.scss');
@@ -7,28 +7,20 @@ const s = require('./${TM_FILENAME/(.+?)(\-((container)|(view))\.tsx)/\1/g}.scss
 /************************************** THIRD-PARTY MODULES ***************************************/
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
-import { PolyglotProps } from 'mad-utils/lib/browser';
-import { InputChangeHandler } from 'mad-utils/lib/react';
-import { observer, inject } from 'mobx-react';
+import {PolyglotProps} from 'mad-utils/lib/browser';
+import {InputChangeHandler} from 'mad-utils/lib/react';
+import {observer, inject} from 'mobx-react';
 
 const cn = require('classnames');
 
-/**************************************** PROJECT MODULES *****************************************/
-
 /******************************************** LOGGING *********************************************/
-import { logFactory, logMarkers } from 'mad-logs';
-const log = logFactory()(`${TM_FILENAME}`, logMarkers.smokeyHatesChristmas);
+import {logFactory, logMarkers} from 'mad-logs';
+const log = logFactory()(`${TM_FILENAME}`, logMarkers.bracelet);
 
 /**************************************** TYPE DEFINITIONS ****************************************/
 interface ${1:${TM_FILENAME/([a-zA-Z])?([a-zA-Z0-9]+)?[-_]?[-_]?([a-zA-Z])?([a-zA-Z0-9]+)?[-_]?[-_]?([a-zA-Z])?([a-zA-Z0-9]+)?[-_]?[-_]?([a-zA-Z])?([a-zA-Z0-9]+)?[-_]?[-_]?([a-zA-Z])?([a-zA-Z0-9]+)?[-_]?[-_]?([a-zA-Z])?([a-zA-Z0-9]+)?\..*/\U$1\L$2\U$3\L$4\U$5\L$6\U$7\L$8\U$9\L$10\U$11\L$12/g}}Props extends PolyglotProps {
-    events: {
-        ${3:inputVal}Change: InputChangeHandler,
-    };
-    state: {
-        ${3}: string,
-    };
+    ${3:// STATE STORE PROPS AND MUTATORS HERE (probably)}
 }
-
 
 /********************************************* EXPORT *********************************************/
 /**
@@ -46,6 +38,6 @@ export const ${1} = observer((props?: ${1:NameOfComponent}Props) => {
 ${1}.displayName = `${1}`;
 
 ]]></content>  
-  <tabTrigger>rct_ts_new_view_sfc</tabTrigger>
+  <tabTrigger>rct_ts_new_sfc</tabTrigger>
   <scope>source.tsx</scope>
 </snippet>

@@ -1,0 +1,18 @@
+<snippet>
+    <description>Create new React stateless functional component</description>
+<content><![CDATA[
+/**
+ * ${3: Description of ${1}}
+ */
+const ${1:NameOfComponent} = (${2:{children\}: {children: JSX.Element | React.ReactElement<any>\}}) => (
+    ${0:<div>
+        {children\}
+    </div>}
+);
+
+${1}.displayName = `${1}`;
+
+]]></content>  
+    <tabTrigger>rct_sfc</tabTrigger>
+    <scope>source.tsx</scope>
+</snippet>
