@@ -43,5 +43,11 @@ STASH
 -- list all old stashes			git stash list
 -- apply old stash			git stash apply stash@{1}s
 
+REMOTE REPO ("origin")
+-- get URL of remote location (e.g. origin)       git remote get-url origin
+-- set new URL for remote location (e.g origin)
+     1) Remove existing origin url:  git remote remove origin
+     2) Add new origin location:     git remote add origin https://github.com/andfaulkner/newrepo.git
+
 --------------------------------------------------------------------------------------------------------\n
 CLI_MANUAL_FOR_GIT
