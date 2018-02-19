@@ -1,8 +1,7 @@
 <snippet>
 	<description>es6 constant</description>
 	<content><![CDATA[
-const ${1:variable} = ${2:value};
-${3}
+const ${1:variable} = ${2}
 ]]></content>
 	<tabTrigger>cs</tabTrigger>
 	<scope>source.js, source.ts, source.jsx, source.tsx</scope>
