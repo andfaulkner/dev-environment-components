@@ -1,8 +1,8 @@
 <snippet>
-  <description>jsdoc @param item</description>
+  <description>jsdoc @param item containing type "number"</description>
 <content><![CDATA[
-@param {${1:Object}} ${2:name} ${0:Description}
+@param {number} ${1:name} ${0:Description}
 ]]></content>  
-  <tabTrigger>atp</tabTrigger>
+  <tabTrigger>atpn</tabTrigger>
   <scope>comment.block.documentation.tsx, comment.block.documentation.js, comment.block.documentation.ts, comment.block.documentation.jsx</scope>
 </snippet>
