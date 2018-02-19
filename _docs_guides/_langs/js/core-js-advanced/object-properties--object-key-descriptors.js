@@ -88,3 +88,12 @@ console.log(Object.keys(o)); // => ['a']
 
 // Still works, but would even if not enumerable
 console.log(Object.getOwnPropertyNames(o)); // => ['a']
+
+
+/******************************************** SOURCES *********************************************/
+// Main:
+//     http://arqex.com/967/javascript-properties-enumerable-writable-configurable
+//     https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/defineProperty
+
+// See also:
+//     https://developer.mozilla.org/en-US/docs/Web/JavaScript/Enumerability_and_ownership_of_properties
