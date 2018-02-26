@@ -1,0 +1,7 @@
+<snippet>
+  <description>authentication (text)</description>
+<content><![CDATA[
+authentication
+]]></content>
+  <tabTrigger>auth</tabTrigger>
+</snippet>

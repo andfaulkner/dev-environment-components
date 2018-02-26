@@ -1,0 +1,7 @@
+<snippet>
+  <description>package.json (text)</description>
+<content><![CDATA[
+package.json
+]]></content>
+  <tabTrigger>pj</tabTrigger>
+</snippet>
