@@ -1,8 +1,0 @@
-<snippet>
-  <description>Separator line</description>
-<content><![CDATA[
------------------------------------------------------------------------------------------
-]]></content>  
-  <tabTrigger>separator</tabTrigger>
-  <scope>text.html.markdown, text.md, text.markdown</scope>
-</snippet>

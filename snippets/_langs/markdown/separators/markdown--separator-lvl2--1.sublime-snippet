@@ -1,0 +1,8 @@
+<snippet>
+  <description>Separator line - shorter (level 2)</description>
+<content><![CDATA[
+--------------------------------------------------------------------------------
+]]></content>  
+  <tabTrigger>separator_lvl_2</tabTrigger>
+  <scope>text.html.markdown, text.md, text.markdown</scope>
+</snippet>
