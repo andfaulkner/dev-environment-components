@@ -1,0 +1,8 @@
+<snippet>
+  <description>Create JS script tag</description>
+<content><![CDATA[
+<script src="${1:path/to/script.js}"></script>
+]]></content>  
+  <tabTrigger>scriptjs</tabTrigger>
+  <scope>text.html</scope>
+</snippet>
