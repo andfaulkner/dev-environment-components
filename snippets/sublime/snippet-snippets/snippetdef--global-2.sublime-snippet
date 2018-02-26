@@ -1,0 +1,14 @@
+<snippet>
+  <description>Snippet skeleton</description>
+<content><![CDATA[
+<snippet>
+  <description>${2:description here}</description>
+<content><![CDATA[
+${4:content here}
+]${4/.*//}]></content>
+  <tabTrigger>${3:triggering-text}</tabTrigger>
+</snippet>
+]]></content>
+  <tabTrigger>snip_all</tabTrigger>
+  <scope>text.xml</scope>
+</snippet>

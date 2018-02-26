@@ -1,5 +1,5 @@
 <snippet>
-  <description>Snippet skeleton</description>
+  <description>Snippet skeleton - global (works in all files)</description>
 <content><![CDATA[
 <snippet>
   <description>${2:description here}</description>

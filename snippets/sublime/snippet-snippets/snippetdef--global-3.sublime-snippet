@@ -1,0 +1,14 @@
+<snippet>
+  <description>Snippet skeleton - global (works in all files)</description>
+<content><![CDATA[
+<snippet>
+  <description>${2:description here}</description>
+<content><![CDATA[
+${4:content here}
+]${4/.*//}]></content>
+  <tabTrigger>${3:triggering-text}</tabTrigger>
+</snippet>
+]]></content>
+  <tabTrigger>snip_global_everywhere</tabTrigger>
+  <scope>text.xml</scope>
+</snippet>
