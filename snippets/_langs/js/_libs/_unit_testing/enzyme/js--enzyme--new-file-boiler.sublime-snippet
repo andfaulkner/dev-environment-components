@@ -9,12 +9,12 @@ import * as _ from 'lodash';
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
 
-import { expect } from 'chai';
-import { shallow } from 'enzyme';
+import {expect} from 'chai';
+import {shallow} from 'enzyme';
 import * as sinon from 'sinon';
 import * as mocha from 'mocha';
 
-${5:import { ${1} \} from './${1}'}${5/.+/;\n\n/}describe('<${1:${TM_FILENAME/(.+)\.spec\..+|.*/$1/:name}}>', () => {
+${5:import {${1}\} from './${1}'}${5/.+/;\n\n/}describe('<${1:${TM_FILENAME/(.+)\.spec\..+|.*/$1/:name}}>', () => {
   it('${3:should be the first assertion here}', () => {
     const wrapper = shallow(<${1}${4/.+/ /}${4:style={"some-style"\} score={9\}}/>);
     ${0}

@@ -1,7 +1,7 @@
 <snippet>
   <description>Import env var helpers library</description>
 <content><![CDATA[
-import { ${1:isSilly, isVerbose, isDebug, isDevelopment, isProduction, isIECompat, isTestMode} } from 'env-var-helpers';
+import {${1:isSilly, isVerbose, isDebug, isDevelopment, isProduction, isIECompat, isTestMode}} from 'env-var-helpers';
 ]]></content>  
   <tabTrigger>imp_env_var_helpers</tabTrigger>
   <scope>source.js, source.ts, source.jsx, source.tsx</scope>

@@ -2,7 +2,7 @@
   <description>Minimal new Mocha file that runs as-is (w no useful test yet defined)</description>
 <content><![CDATA[
 /************************************** THIRD PARTY IMPORTS ***************************************/
-import { expect } from 'chai';
+import {expect} from 'chai';
 ${3:// const chai = require('chai');
 // const expect = chai.expect;
 }

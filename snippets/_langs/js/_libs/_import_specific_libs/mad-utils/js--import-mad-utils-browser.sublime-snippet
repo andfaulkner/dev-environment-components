@@ -1,7 +1,7 @@
 <snippet>
   <description>Import mad-utils - browser</description>
 <content><![CDATA[
-import { ${1:RequiredInjection, OptionalInjection,
+import {${1:RequiredInjection, OptionalInjection,
          TranslationProps, RealAny,
          deepFreeze,
          singleton, capitalize, cap1LowerRest,
@@ -22,7 +22,7 @@ import { ${1:RequiredInjection, OptionalInjection,
          isDataEnumItem, isIndexEnumItem,
          getFirstStackItem, getSecondStackItem, removeFromStack, DecoratorError,
          replaceAll, hasKey, matches
-} } from 'mad-utils/lib/browser';
+}} from 'mad-utils/lib/browser';
 ]]></content>  
   <tabTrigger>imp_madutils_browser</tabTrigger>
   <scope>source.js, source.ts, source.jsx, source.tsx</scope>

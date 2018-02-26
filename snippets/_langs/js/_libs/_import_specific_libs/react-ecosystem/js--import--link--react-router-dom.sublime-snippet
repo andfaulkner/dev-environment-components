@@ -1,0 +1,8 @@
+<snippet>
+  <description>Import Link from react-router-dom</description>
+<content><![CDATA[
+import {${1:Link}} from 'react-router-dom';
+]]></content>  
+  <tabTrigger>imp_link</tabTrigger>
+  <scope>source.js, source.ts, source.jsx, source.tsx</scope>
+</snippet>

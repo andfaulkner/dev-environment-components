@@ -1,7 +1,7 @@
 <snippet>
   <description>Import React Native</description>
 <content><![CDATA[
-import { AppRegistry, Image, View, Text, Platform, StyleSheet } from 'react-native';
+import {AppRegistry, Image, View, Text, Platform, StyleSheet} from 'react-native';
 ]]></content>  
   <tabTrigger>rena_imp</tabTrigger>
   <scope>source.js, source.ts, source.jsx, source.tsx</scope>

@@ -1,8 +1,8 @@
 <snippet>
   <description>Recompose container for "enhancing" a stateless component </description>
 <content><![CDATA[
-${5:import { compose \} from 'recompose';
-import { withState, withProps, withHandlers, mapProps,  \} from 'recompose';
+${5:import {compose\} from 'recompose';
+import {withState, withProps, withHandlers, mapProps\} from 'recompose';
 }
 
 /************************************ HIGHER-ORDER COMPONENTS *************************************/

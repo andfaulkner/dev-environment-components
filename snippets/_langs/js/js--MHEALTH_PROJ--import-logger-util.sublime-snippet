@@ -2,7 +2,7 @@
   <description>[MHEALTH SNIPPET] Import project custom logging factory</description>
 <content><![CDATA[
 //******************************************** LOGGING ********************************************/
-import { logFactory, logMarkers } from '${1:../../}helpers/client-logger';
+import {logFactory, logMarkers} from '${1:../../}helpers/client-logger';
 
 const log = logFactory('$TM_FILENAME', logMarkers.${2:default});${0}
 ]]></content>  

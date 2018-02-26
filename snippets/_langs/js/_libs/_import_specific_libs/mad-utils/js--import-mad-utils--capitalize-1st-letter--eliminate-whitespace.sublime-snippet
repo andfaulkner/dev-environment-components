@@ -1,7 +1,7 @@
 <snippet>
   <description>Import mad-utils - eliminateWhitespace function</description>
 <content><![CDATA[
-import { eliminateWhitespace } from 'mad-utils/lib/shared';${0}
+import {eliminateWhitespace} from 'mad-utils/lib/shared';${0}
 ]]></content>  
   <tabTrigger>imp_eliminatewhitespace</tabTrigger>
   <scope>source.js, source.ts, source.jsx, source.tsx</scope>

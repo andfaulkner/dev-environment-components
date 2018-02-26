@@ -1,8 +1,8 @@
 <snippet>
   <description>Import mad-utils submodules to auto-extract User Agent data</description>
 <content><![CDATA[
-import { ${1:getUserAgentString, browserVersion, browserName, userAgent,
-         browserEngineName, browserEngineVersion, osName, osVersion} } from 'mad-utils/lib/browser';
+import {${1:getUserAgentString, browserVersion, browserName, userAgent,
+         browserEngineName, browserEngineVersion, osName, osVersion}} from 'mad-utils/lib/browser';
 ]]></content>  
   <tabTrigger>imp_madutils_parse_user_agent</tabTrigger>
   <scope>source.js, source.ts, source.jsx, source.tsx</scope>

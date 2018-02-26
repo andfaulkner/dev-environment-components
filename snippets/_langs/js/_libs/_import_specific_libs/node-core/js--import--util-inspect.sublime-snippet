@@ -1,7 +1,7 @@
 <snippet>
   <description>Import util.inspect</description>
 <content><![CDATA[
-import { inspect } from 'util';
+import {inspect} from 'util';
 ]]></content>  
   <tabTrigger>imp_util_inspect</tabTrigger>
   <scope>source.js, source.ts, source.jsx, source.tsx</scope>

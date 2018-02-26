@@ -1,7 +1,7 @@
 <snippet>
   <description>Import recompose's compose function</description>
 <content><![CDATA[
-import { compose } from 'recompose';
+import {compose} from 'recompose';
 ]]></content>  
   <tabTrigger>impcompose</tabTrigger>
   <scope>source.js, source.ts, source.jsx, source.tsx</scope>

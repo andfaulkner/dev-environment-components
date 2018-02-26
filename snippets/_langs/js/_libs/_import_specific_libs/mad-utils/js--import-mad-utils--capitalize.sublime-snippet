@@ -1,7 +1,7 @@
 <snippet>
   <description>Import capitalize from mad-utils</description>
 <content><![CDATA[
-import { capitalize } from 'mad-utils';
+import {capitalize} from 'mad-utils';
 ]]></content>  
   <tabTrigger>imp_capitalize</tabTrigger>
   <scope>source.js, source.ts, source.jsx, source.tsx</scope>

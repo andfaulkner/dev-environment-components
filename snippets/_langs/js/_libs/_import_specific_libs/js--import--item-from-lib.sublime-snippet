@@ -1,7 +1,7 @@
 <snippet>
-  <description>Import one of a module's exports (import { x } from 'y')</description>
+  <description>Import one of a module's exports (import {x} from 'y')</description>
 <content><![CDATA[
-import { ${2} } from '${1}';${0}
+import {${2}} from '${1}';${0}
 ]]></content>  
   <tabTrigger>impf</tabTrigger>
   <scope>source.js, source.ts, source.jsx, source.tsx</scope>

@@ -4,13 +4,13 @@
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
 
-import { observer, inject } from 'mobx-react';
-import { compose } from 'recompose';
+import {observer, inject} from 'mobx-react';
+import {compose} from 'recompose';
 import * as moment from 'moment';
 
 const cn = require('classnames');
 
-import { ${1:rootModel,
+import {${1:rootModel,
          GreenBullet, SolidMiniArrow,
          CIFormInput, RadioButtonGroup,
          CITextLink, SubmitButton

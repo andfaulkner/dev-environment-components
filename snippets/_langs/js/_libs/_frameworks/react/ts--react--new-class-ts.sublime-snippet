@@ -6,11 +6,11 @@ import * as React from 'react';
 import * as ReactDOM from 'react-dom';
 const classNames = require('classnames');
 
-import { inject } from 'mobx-react';
-import { PolyglotProps } from 'mad-utils/lib/browser';
+import {inject} from 'mobx-react';
+import {PolyglotProps} from 'mad-utils/lib/browser';
 
 /******************************************** LOGGING *********************************************/
-import { logFactory, logMarkers } from 'mad-logs';
+import {logFactory, logMarkers} from 'mad-logs';
 const log = logFactory()(`${TM_FILENAME}`, logMarkers.zebra);
 
 /**************************************** TYPE DEFINITIONS ****************************************/

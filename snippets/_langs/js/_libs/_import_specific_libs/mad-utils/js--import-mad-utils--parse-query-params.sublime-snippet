@@ -1,7 +1,7 @@
 <snippet>
   <description>Import mad-utils - parseQueryParams function</description>
 <content><![CDATA[
-import { parseQueryParams } from 'mad-utils/lib/shared';${0}
+import {parseQueryParams} from 'mad-utils/lib/shared';${0}
 ]]></content>  
   <tabTrigger>imp_parsequeryparams</tabTrigger>
   <scope>source.js, source.ts, source.jsx, source.tsx</scope>

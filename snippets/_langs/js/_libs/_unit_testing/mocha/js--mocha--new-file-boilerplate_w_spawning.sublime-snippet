@@ -8,19 +8,19 @@
 // Testing modules
 import 'mocha';
 import * as sinon from 'sinon';
-import { expect } from 'chai';
+import {expect} from 'chai';
 
 // Utility modules
 import * as fs from 'fs';
 import * as path from 'path';
-import { inspect } from 'util';
+import {inspect} from 'util';
 
 // Spawn other apps
-import { spawn, spawnSync, fork } from 'child_process';
-const spawnSyncOpts = { detached: true, env: process.env, stdio: 'inherit' };
+import {spawn, spawnSync, fork} from 'child_process';
+const spawnSyncOpts = {detached: true, env: process.env, stdio: 'inherit'};
 
 /************************************ IMPORT FILE TO BE TESTED ************************************/
-import { ${2:vars}${3/.+/, /}${3:toImport}${4/.+/, /}${4:forTesting} } from ${1:'./file-containing-modules-to-test'};
+import {${2:vars}${3/.+/, /}${3:toImport}${4/.+/, /}${4:forTesting}} from ${1:'./file-containing-modules-to-test'};
 
 /********************************************* TESTS **********************************************/
 describe('${2/^([^,]+).*/$1$2/}', function() {

@@ -1,7 +1,7 @@
 <snippet>
   <description>Import app-root-path module</description>
 <content><![CDATA[
-import { path as rootPath } from 'app-root-path';
+import {path as rootPath} from 'app-root-path';
 ]]></content>  
   <tabTrigger>imp_root_path</tabTrigger>
   <scope>source.js, source.ts, source.jsx, source.tsx</scope>

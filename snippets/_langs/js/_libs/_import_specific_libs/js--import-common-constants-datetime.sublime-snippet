@@ -1,7 +1,7 @@
 <snippet>
   <description>Import common-constants module</description>
 <content><![CDATA[
-import { commonConstants } from 'common-constants';
+import {commonConstants} from 'common-constants';
 const { dateTime } = commonConstants;
 ]]></content>  
   <tabTrigger>imp_common_constants_datetime</tabTrigger>

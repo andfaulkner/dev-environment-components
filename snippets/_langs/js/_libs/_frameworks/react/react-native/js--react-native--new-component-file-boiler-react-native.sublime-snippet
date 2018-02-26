@@ -3,9 +3,9 @@
 <content><![CDATA[
 //************************************ THIRD-PARTY COMPONENTS *************************************/
 import * as React from 'react';
-import { AppRegistry, Image, View, Text, Platform, StyleSheet, Button  } from 'react-native';
-import { ActivityIndicator, Switch, ListView, MapView, Picker, Modal   } from 'react-native';
-import { Slider, StatusBar, TextInput, ScrollView, Alert, AsyncStorage } from 'react-native';
+import {AppRegistry, Image, View, Text, Platform, StyleSheet, Button} from 'react-native';
+import {ActivityIndicator, Switch, ListView, MapView, Picker, Modal} from 'react-native';
+import {Slider, StatusBar, TextInput, ScrollView, Alert, AsyncStorage} from 'react-native';
 
 //*************************************** PROJECT IMPORTS *****************************************/
 

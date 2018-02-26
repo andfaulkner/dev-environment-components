@@ -1,13 +1,13 @@
 <snippet>
   <description>Import react toolbox</description>
 <content><![CDATA[
-import { AppBar } from 'react-toolbox/lib/app_bar';
-import { Card, CardTitle, CardMedia, CardText, CardActions } from 'react-toolbox/lib/card'
-import { Button, IconButton } from 'react-toolbox/lib/button';
-import { IconMenu, MenuItem, MenuDivider } from 'react-toolbox/lib/menu';
-import { Link as RTLink } from 'react-toolbox/lib/link';
-import { Navigation } from 'react-toolbox/lib/navigation';
-import { Tab, Tabs } from 'react-toolbox/lib/tabs';
+import {AppBar} from 'react-toolbox/lib/app_bar';
+import {Card, CardTitle, CardMedia, CardText, CardActions} from 'react-toolbox/lib/card'
+import {Button, IconButton} from 'react-toolbox/lib/button';
+import {IconMenu, MenuItem, MenuDivider} from 'react-toolbox/lib/menu';
+import {Link as RTLink} from 'react-toolbox/lib/link';
+import {Navigation} from 'react-toolbox/lib/navigation';
+import {Tab, Tabs} from 'react-toolbox/lib/tabs';
 
 import Input from 'react-toolbox/lib/input';
 import Checkbox from 'react-toolbox/lib/checkbox';

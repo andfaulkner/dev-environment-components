@@ -2,16 +2,16 @@
   <description>Create a new singleton data store that uses Javelinscript</description>
 <content><![CDATA[
 /******************************************** IMPORTS *********************************************/
-import { loadJavelinscript } from './util/javelinscript-loader';
-import { buildJavelinscript, JavelinInstance, Types,
-         buildJavelinscriptWithCustomConfig } from '@ottawamhealth/canimmunize-javelinscript';
+import {loadJavelinscript} from './util/javelinscript-loader';
+import {buildJavelinscript, JavelinInstance, Types,
+         buildJavelinscriptWithCustomConfig} from '@ottawamhealth/canimmunize-javelinscript';
 
 import * as moment from 'moment';
-import { observable, computed, autorun, action } from 'mobx';
-import { observer, inject } from 'mobx-react';
+import {observable, computed, autorun, action} from 'mobx';
+import {observer, inject} from 'mobx-react';
 
 /******************************************** LOGGING *********************************************/
-import { logFactory, logMarkers } from 'mad-logs';
+import {logFactory, logMarkers} from 'mad-logs';
 const log = logFactory()('name-store.ts', logMarkers.nightmare);
 
 /********************************************* STORE **********************************************/

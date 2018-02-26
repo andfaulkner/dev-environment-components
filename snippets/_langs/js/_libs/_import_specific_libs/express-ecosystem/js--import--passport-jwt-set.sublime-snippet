@@ -2,8 +2,8 @@
   <description>Import group of passport modules for creating JSON web tokens (jwt)</description>
 <content><![CDATA[
 import * as passport from 'passport';
-import { Strategy as LocalStrategy } from 'passport-local';
-import { Strategy as JwtStrategy, ExtractJwt } from 'passport-jwt';
+import {Strategy as LocalStrategy} from 'passport-local';
+import {Strategy as JwtStrategy, ExtractJwt} from 'passport-jwt';
 ]]></content>  
   <tabTrigger>imp_passport_jwt_grp</tabTrigger>
   <scope>source.js, source.ts, source.jsx, source.tsx</scope>

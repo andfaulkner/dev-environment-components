@@ -1,0 +1,8 @@
+<snippet>
+  <description>'HELPERS' header comment</description>
+<content><![CDATA[
+/******************************************** HELPERS *********************************************/
+]]></content>  
+  <tabTrigger>hd_helpers</tabTrigger>
+  <scope>source.js, source.ts, source.jsx, source.tsx</scope>
+</snippet>

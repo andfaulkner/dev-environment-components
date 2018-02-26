@@ -7,17 +7,17 @@ import * as express from 'express';
 
 // utils
 import * as path from 'path';
-import { isSilly } from 'env-var-helpers';
-import { inspect } from 'util';
+import {isSilly} from 'env-var-helpers';
+import {inspect} from 'util';
 
 //Determine and store project root path
-import { path as rootPath } from 'app-root-path';
+import {path as rootPath} from 'app-root-path';
 
 /**************************************** PROJECT MODULES *****************************************/
-import { _ } from '../../../shared/lodash-mixins';
+import {_} from '../../../shared/lodash-mixins';
 
 /******************************************** LOGGING *********************************************/
-import { buildFileTag, logFactory } from 'mad-logs';
+import {buildFileTag, logFactory} from 'mad-logs';
 import * as colors from 'colors';
 
 const TAG = buildFileTag('$TM_FILENAME', colors.bgMagenta.white);

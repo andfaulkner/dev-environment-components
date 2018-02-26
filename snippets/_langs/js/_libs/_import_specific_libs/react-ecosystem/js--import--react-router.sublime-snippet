@@ -1,8 +1,8 @@
 <snippet>
   <description>Import react-router</description>
 <content><![CDATA[
-import { Route, BrowserRouter,
-         Match, withRouter, Redirect, Switch, RouteComponent } from 'react-router';
+import {Route, BrowserRouter,
+         Match, withRouter, Redirect, Switch, RouteComponent} from 'react-router';
 ]]></content>  
   <tabTrigger>imp_react_router</tabTrigger>
   <scope>source.js, source.ts, source.jsx, source.tsx</scope>
