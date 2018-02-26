@@ -167,10 +167,11 @@ alias g_rao="git remote add origin" #[place remote repo uri here]
 
 alias gcom="git checkout master"
 
+alias gpull="git pull"
 alias g_pullom="git pull origin master"
 alias g_pullm="git pull origin master"
 alias gpullm="g_pullom"
-alias gullom="g_pullom"
+alias gpullom="g_pullom"
 
 #function reclaimbranch
 #git remote add origin git@andfaulkner.github.com:andfaulkner/$1"
