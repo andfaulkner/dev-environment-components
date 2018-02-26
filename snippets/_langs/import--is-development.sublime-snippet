@@ -1,7 +1,7 @@
 <snippet>
   <description>Import env-var-helpers isDevelopment property</description>
 <content><![CDATA[
-import { isDevelopment } from 'env-var-helpers';
+import {isDevelopment} from 'env-var-helpers';
 ]]></content>  
   <tabTrigger>impisdev</tabTrigger>
   <scope>source.js, source.ts, source.jsx, source.tsx</scope>

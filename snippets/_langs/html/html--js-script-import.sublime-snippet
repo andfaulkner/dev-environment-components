@@ -1,5 +1,5 @@
 <snippet>
-  <description>Import JS script</description>
+  <description>Create JS script tag</description>
 <content><![CDATA[
 <script src="${1:path/to/script.js}"></script>
 ]]></content>  
