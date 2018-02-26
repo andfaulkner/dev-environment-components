@@ -2,16 +2,16 @@
   <description>MobX store w/ req vals arr, def vals and method to set any</description>
 <content><![CDATA[
 /************************************** THIRD-PARTY MODULES ***************************************/
-import { action, observable } from 'mobx';
+import {action, observable} from 'mobx';
 
-import { singleton } from 'mad-utils/lib/shared';
+import {singleton} from 'mad-utils/lib/shared';
 
-import { stripIndents } from 'common-tags';
+import {stripIndents} from 'common-tags';
 
 /**************************************** PROJECT MODULES *****************************************/
 
 /******************************************** LOGGING *********************************************/
-import { logFactory, Styles } from 'mad-logs/lib/shared';
+import {logFactory, Styles} from 'mad-logs/lib/shared';
 const log = logFactory('$TM_FILENAME', Styles.joy);
 
 /**************************************** TYPE DEFINITIONS ****************************************/
