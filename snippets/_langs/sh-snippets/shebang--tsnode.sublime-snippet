@@ -1,0 +1,7 @@
+<snippet>
+  <description>TSNode shebang</description>
+<content><![CDATA[
+#!/usr/bin/env ts-node
+]]></content>  
+  <tabTrigger>shebang_tsnode</tabTrigger>
+</snippet>
