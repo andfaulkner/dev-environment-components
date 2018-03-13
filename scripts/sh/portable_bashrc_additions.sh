@@ -1,3 +1,12 @@
+#
+#
+# For this to work, the following must be defined:
+#   $HOME
+#   $PROJECTS_DIR
+#   $SNIPPETS_DIR
+#   $SH_SCRIPTS_DIR
+#
+
 ##### ENSURE ALL TERMINALS WRITE TO SINGLE HISTORY FILE #####
 #shopt -s histappend;
 #PROMPT_COMMAND="history -a;history -c; history -r;$PROMPT_COMMAND"
@@ -36,7 +45,7 @@ TEMPLATES_DIR="$SNIPPETS_DIR/scripts/sh/templates"
 
 # LANGUAGE- OR TOOL-SPECIFIC SCRIPT SOURCES
 source "$MISC_CLI_OPTIONS"
-source ~/.profile
+source "$HOME/.profile"
 
 # EDIT OTHER SCRIPT SOURCES
 alias bashrc_sysportable='vim "$PORTABLE_BASHRC_ADDITIONS"'
@@ -69,7 +78,7 @@ PATH=$PATH:"~/bin"
 
 
 ################################################################################
-#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ QUICKNAV ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ QUICKNAV ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 ################################################################################
 alias ..="cd .."
 alias ...="cd ../.."
@@ -84,6 +93,7 @@ alias lsa='ls -ao | grep -v "[0-9][0-9] \.\.\?$"'
 
 ## lsa for dirs only
 alias lsda='lsa | ack "^d" | awk "{print}"' 
+alias lsad='lsda'
 
 ## ls for dirs only
 # alias lsd='lsa | ack "^d" | awk "{print $9}"'
@@ -281,13 +291,13 @@ pa() {
     ps aux | ack $1 | ack -v "perl \/.+bin\/ack"
 }
 
-alias gogameimmunitywarriors="cd $PROJECTS_DIR/own-projects/immunity-warriors-game"
+# alias gogameimmunitywarriors="cd $PROJECTS_DIR/own-projects/immunity-warriors-game"
 
 ####### AUTOCOMPLETIONS ########
-_common_cmds_autocomplete()
-{
-    local cur=${COMP_WORDS[COMP_CWORD]}
-    COMPREPLY=( $(compgen -W "client server clean run clientprod serverprod cleanprod runprod help util start test clean-full" -- $cur) )
-}
-complete -F _common_cmds_autocomplete ./common-cmds
+# _common_cmds_autocomplete()
+# {
+#     local cur=${COMP_WORDS[COMP_CWORD]}
+#     COMPREPLY=( $(compgen -W "client server clean run clientprod serverprod cleanprod runprod help util start test clean-full" -- $cur) )
+# }
+# complete -F _common_cmds_autocomplete ./common-cmds
 

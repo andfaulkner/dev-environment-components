@@ -1,8 +1,11 @@
-# export PATH="$HOME/.rbenv/bin:$PATH"
+#
+#
+# The following must be set for this to work:
+#   $HOME
+#
+#
 
 echo "* Ruby scripts loading..."
-
-# eval "$(rbenv init -)"
 
 # close ruby process that just refuses to
 alias killruby='ps aux | ack "(bin.?ruby)|(puma)" |  awk "{print \$2}" | xargs kill -9'
@@ -18,7 +21,7 @@ alias localgems='cat Gemfile | ack "^ *gem.*" | sort'
 alias bir="bundle install; rbenv rehash"
 
 function rspec_extract {
-cat $1 | ack "(^[^a-zA-Z0-9_]* it )|([^a-zA-Z0-9_]*[^\(]*?describe[ \(])|([^a-zA-Z0-9_]*context[ \(])"
+    cat $1 | ack "(^[^a-zA-Z0-9_]* it )|([^a-zA-Z0-9_]*[^\(]*?describe[ \(])|([^a-zA-Z0-9_]*context[ \(])"
 }
 
 ########## AKR-SPECIFIC KILLS ############
@@ -51,7 +54,6 @@ alias rdr="bundle exec rake db:rollback"
 alias rreset="bundle exec rake db:migrate:reset"
 alias rwipem="bundle exec rails destroy model" #NameOfModel
 alias rwipec="bundle exec rails destroy controller" #NameOfController #action_1 #action_2 ... #action_n
-# alias rgm="rails generate model" #nameOfModelHere #column1:type #col2:type ... col_n: type
 
 alias resetakr3="ps aux | ack rails | ack -v '3001' | awk '{print \$2}' | xargs kill -9; ps aux | ack rails | ack -v '3001'; bundle exec rails server"
 alias killrakeworker="ps aux | ack 'rake jobs:work' | awk '{print \$2}' | xargs kill -9; ps aux | ack 'rake jobs:work'"
@@ -77,7 +79,8 @@ alias berms="RUBYOPT=-W0 bundle exec rake db:migrate:status"
 alias bi="bundle install"
 
 alias ber="be rake"
-# display tasks
+
+# RAKE - display tasks
 alias bert="be rake -T"
 
 alias berm="be rake db:migrate"
@@ -94,12 +97,10 @@ alias rreset_db_full_DANGER="bundle exec rake db:migrate:reset"
 
 alias rjw="killrakeworker; bundle exec rake jobs:work"
 alias berjw="killrakeworker; bundle exec rake jobs:work"
-# alias rw="killrakeworker; rjw"
 
 # view all running ruby processes
 alias rubyps='ps aux | ack "ruby|rails|guard|rake|rack|puma|passenger|rbenv|irb|pry|bundler|rerun|rspec|zeus"'
 alias psruby='rubyps'
-#alias bombruby='rubyps | awk "{print \$2}" | xargs kill -9'
 
 ################################################################################
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ UTILITIES ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -248,28 +249,7 @@ function rubify {
 ################################################################################
 alias manol_rbenv="curl https://raw.githubusercontent.com/rbenv/rbenv/master/README.md"
 
-###### EXPERIMENTS #######
-# BELOW:: ATTEMPT TO DYNAMICALLY GRAB AND USE URL FROM REDIRECT
-################################################################################
-#~~~~~~~~~~~~~~~~~ Actions for use in pipes - unix middlewares ~~~~~~~~~~~~~~~~~
-################################################################################
-# alias pipes_get_redirect_address="ruby -pe '\$_ = \$_.split(\"<a href=\\\"\")[1].split(\"\\\">redirected</a>\")[0]'"
-# 
-# ################################################################################
-# #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Install downloads ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-# ################################################################################
-# alias install_get_lighttable="curl 'https://github.com/LightTable/LightTable/releases/download/0.8.1/lighttable-0.8.1-mac.tar.gz' -H 'Pragma: no-cache' -H 'Accept-Encoding: gzip, deflate, sdch, br' -H 'Accept-Language: en-GB,en-US;q=0.8,en;q=0.6' -H 'Upgrade-Insecure-Requests: 1' -H 'User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_2) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/51.0.2704.79 Safari/537.36' -H 'Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8' -H 'Referer: http://lighttable.com/' -H 'Cookie: _octo=GH1.1.1314852190.1460986531; logged_in=yes; dotcom_user=andfaulkner; _gat=1; _ga=GA1.2.39304389.1460986531; tz=America%2FMontreal; user_session=hdpUgW2Z2LJgs3rWjzjBh-cheR_9E8cfeJSSeLXVtQHceAJnV2Ow8UF1aUOY8RhJkNNat8eJYxkX4ciM; _gh_sess=eyJzZXNzaW9uX2lkIjoiMGJjMDY4NDM2ODBhMGY0ZTgwZjUwNDhkYTA1N2Q3ZWMiLCJzcHlfcmVwbyI6IkxpZ2h0VGFibGUvTGlnaHRUYWJsZSIsInNweV9yZXBvX2F0IjoxNDY2MTUxMTUzLCJsYXN0X3dyaXRlIjoxNDY1NDg0NzM5MzExfQ%3D%3D--cb4f9bf16189bc634b5f23f970865c125959b420' -H 'Connection: keep-alive' -H 'Cache-Control: no-cache' --compressed"
-# 
-# function insert_into_curl {
-#     INS_INTO_CURL_ADDRESS=$1
-#     # INS_INTO_CURL_ADDRESS=$(echo $1 | sed s/https:\\/\\//http:\\/\\//)
-#     echo $1
-#     echo ""
-#     echo $INS_INTO_CURL_ADDRESS
-#     curl "$INS_INTO_CURL_ADDRESS" 
-# }
-
-alias irbrc="vim ~/.irbrc"
+alias irbrc="vim $HOME/.irbrc"
 alias rv="ruby --version"
 alias gi="gem install "
 
@@ -302,11 +282,7 @@ function basic_ruby_project {
 alias rakeg="rake -g"
 alias rakegt="rake -g -T -a" # list all rake tasks
 
-#function ruby_versions_supported {
-#curl https://bugs.ruby-lang.org/projects/ruby/wiki/ReleaseEngineering | ack -v "(^<script.*)|(^<meta[^>]+>)|(^<link rel=\"stylesheet\".*>.*)|(^\$[\.\(].*)|(^[^a-zA-Z]*(<\/(div|body|html|ul)>)*[^a-zA-Z]*$)" | awk '{ getline currentline; gsub (/<((\\?ul)|(\\?li)|(\\?p))>/, "", currentline) ; gsub (/^<a name=\"/, "", currentline); gsub (/<?\/?\\?((li)|(a)|(p)|(h3)) ?>/, "", currentline); gsub (/">$/, "", currentline) ; gsub (/<a href=.*>/, "", currentline) ; gsub (/&para/, "", currentline) ; print currentline; }' | ack ".*[a-zA-Z].*" | ack '(^(((ABI Version)|(Status)|(201[\d]-[\d]*-[\d]*:)).*)|(.*[a-zA-Z]*\s[Mm]aintenance.*)|(ruby_[\d]_[\d].*)$)' | awk '{gsub(/ruby_/, "\nruby_", $0); print $0}'
-#}
-
-# list all ruby versions supported by parsing the website. A brutal hack.
+# List all ruby versions supported by parsing the website. A brutal hack.
 function ruby_versions_supported {
     curl https://bugs.ruby-lang.org/projects/ruby/wiki/ReleaseEngineering \
         | ack -v "(^<script.*)|(^<meta[^>]+>)|(^<link rel=\"stylesheet\".*>.*)|(^\$[\.\(].*)|(^[^a-zA-Z]*(<\/(div|body|html|ul)>)*[^a-zA-Z]*$)" \
