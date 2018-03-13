@@ -1,0 +1,8 @@
+<snippet>
+  <description>Import env-var-helpers isVerbose property</description>
+<content><![CDATA[
+import {isVerbose} from 'env-var-helpers';
+]]></content>  
+  <tabTrigger>impisverbose</tabTrigger>
+  <scope>source.js, source.ts, source.jsx, source.tsx</scope>
+</snippet>

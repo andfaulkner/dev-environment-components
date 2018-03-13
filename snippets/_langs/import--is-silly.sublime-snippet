@@ -1,0 +1,8 @@
+<snippet>
+  <description>Import env-var-helpers isSilly property</description>
+<content><![CDATA[
+import {isSilly} from 'env-var-helpers';
+]]></content>  
+  <tabTrigger>impissilly</tabTrigger>
+  <scope>source.js, source.ts, source.jsx, source.tsx</scope>
+</snippet>

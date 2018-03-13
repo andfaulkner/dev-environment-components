@@ -1,0 +1,8 @@
+<snippet>
+  <description>Import env-var-helpers isInfo property</description>
+<content><![CDATA[
+import {isInfo} from 'env-var-helpers';
+]]></content>  
+  <tabTrigger>impisinfo</tabTrigger>
+  <scope>source.js, source.ts, source.jsx, source.tsx</scope>
+</snippet>

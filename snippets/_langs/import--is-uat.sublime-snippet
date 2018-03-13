@@ -1,0 +1,8 @@
+<snippet>
+  <description>Import env-var-helpers isUAT property</description>
+<content><![CDATA[
+import {isUAT} from 'env-var-helpers';
+]]></content>  
+  <tabTrigger>impisuat</tabTrigger>
+  <scope>source.js, source.ts, source.jsx, source.tsx</scope>
+</snippet>
