@@ -1,0 +1,24 @@
+<snippet>
+  <description>New basic testcafe page model</description>
+<content><![CDATA[
+/************************************** THIRD-PARTY MODULES ***************************************/
+import {Selector} from 'testcafe';
+
+/******************************************* PAGE MODEL *******************************************/
+export class ${1:Home}Page {
+    public ${4:someDomNodeCollection} = {
+        ${5:tab1: Selector('#some-id-1'),
+        tab2: Selector('#some-id-2')}
+    };
+
+    public ${2:componentName} = Selector(`#${3:id-of-component}`);
+
+    constructor() {
+      ${0}
+    }
+}
+
+]]></content>  
+  <tabTrigger>testcafe_page_model</tabTrigger>
+  <scope>source.js, source.ts, source.jsx, source.tsx</scope>
+</snippet>

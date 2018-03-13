@@ -1,0 +1,29 @@
+<snippet>
+  <description>New testcafe page model containing "mapped" selector collection</description>
+<content><![CDATA[
+/************************************** THIRD-PARTY MODULES ***************************************/
+import {Selector} from 'testcafe';
+import {MapSelObjVals, ${4:innerTextGettersFromSelectors}} from '../helpers/ui-test-utils';
+
+/**************************************** TYPE DEFINITIONS ****************************************/
+type ${6:SomeMappedCollectionType} = MapSelObjVals<${1:Home}Page['${2:someDomNodeCollection}'], () => ${7:new_type_eg_string}>;
+
+/******************************************* PAGE MODEL *******************************************/
+export class ${1:Home}Page {
+    public ${2:someDomNodeCollection} = {
+        ${3:tab1: Selector('#some-id-1'),
+        tab2: Selector('#some-id-2')}
+    };
+
+    public ${5:mapFromSomeDomNodeCollection}: ${6:SomeMappedCollectionType};
+
+    constructor() {
+        // Example "mapping" over collection
+        this.${2:someDomNodeCollection} = ${4:innerTextGettersFromSelectors}(this.${5:mapFromSomeDomNodeCollection});
+    }
+}
+
+]]></content>  
+  <tabTrigger>testcafe_page_model_w_mapped_coll</tabTrigger>
+  <scope>source.js, source.ts, source.jsx, source.tsx</scope>
+</snippet>
