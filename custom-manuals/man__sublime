@@ -45,5 +45,6 @@ echo "# LINTING"
 echo "-  Lint view                                      ctrl+super+l"
 echo "-  Next error                                     ctrl+super+e"
 echo "-  Prev error                                     ctrl+super+shift-e"
-echo "-  See all errors (by line):                      ctrl+super+r"
+echo "-  See all errors (by line):                      ctrl+super+l"
+echo "-  More info on selected error:                   ctrl+super+r"
 echo '---------------------------------------------------------------------------------\n'
