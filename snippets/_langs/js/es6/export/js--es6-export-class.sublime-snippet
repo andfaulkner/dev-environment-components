@@ -2,7 +2,7 @@
 	<description>export es6 class</description>
 	<content><![CDATA[
 export class ${1:nameOfClass} {
-	${2}
+	${2:constructor() {${0}\}}
 }
 ]]></content>
 	<tabTrigger>expcl</tabTrigger>
