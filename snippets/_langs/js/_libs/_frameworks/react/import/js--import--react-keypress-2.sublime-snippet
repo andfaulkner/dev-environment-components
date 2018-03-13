@@ -1,0 +1,8 @@
+<snippet>
+  <description>Import react-keypress</description>
+<content><![CDATA[
+import * as Keypress from 'react-keypress';
+]]></content>  
+  <tabTrigger>impkeypressrct</tabTrigger>
+  <scope>source.js, source.ts, source.jsx, source.tsx</scope>
+</snippet>
