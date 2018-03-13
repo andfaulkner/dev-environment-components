@@ -1,0 +1,9 @@
+<snippet>
+  <description>Public property of any type, on a class</description>
+<content><![CDATA[
+public ${1:propName}${2/.+/: }${2:string} = ${0:'value'};
+
+]]></content>  
+  <tabTrigger>pubprop</tabTrigger>
+  <scope>source.ts, source.tsx</scope>
+</snippet>

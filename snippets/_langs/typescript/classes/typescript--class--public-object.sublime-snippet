@@ -1,0 +1,10 @@
+<snippet>
+  <description>Public object property on a class</description>
+<content><![CDATA[
+public ${1:objectName}${2/.+/: Record<string, /}${2:string}${2/.+/>/} = {
+    ${0:key: 'value'}
+}
+]]></content>  
+  <tabTrigger>pubobj</tabTrigger>
+  <scope>source.ts, source.tsx</scope>
+</snippet>
