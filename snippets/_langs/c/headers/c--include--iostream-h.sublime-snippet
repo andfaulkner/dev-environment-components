@@ -1,0 +1,9 @@
+<snippet>
+  <description>Include iostream.h. Allow cout, cin.</description>
+<content><![CDATA[
+#include <iostream>
+using namespace std;
+]]></content>  
+  <tabTrigger>include_iostream</tabTrigger>
+  <scope>source.c</scope>
+</snippet>

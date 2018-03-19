@@ -1,0 +1,8 @@
+<snippet>
+  <description>cout</description>
+<content><![CDATA[
+cout << ${1:"value\n"};
+]]></content>  
+  <tabTrigger>cout</tabTrigger>
+  <scope>source.c</scope>
+</snippet>

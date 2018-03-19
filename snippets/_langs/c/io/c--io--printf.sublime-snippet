@@ -1,0 +1,8 @@
+<snippet>
+  <description>Include stdio.h. Allow printf("string").</description>
+<content><![CDATA[
+printf(${1:"%s\n"}, ${2:"string_to_output_at_percent_s"});
+]]></content>  
+  <tabTrigger>printf</tabTrigger>
+  <scope>source.c</scope>
+</snippet>
