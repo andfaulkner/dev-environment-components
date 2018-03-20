@@ -1,0 +1,8 @@
+<snippet>
+  <description>Create int variable</description>
+<content><![CDATA[
+int ${1:var_name} = ${2:2231};
+]]></content>  
+  <tabTrigger>var_int</tabTrigger>
+  <scope>source.c</scope>
+</snippet>

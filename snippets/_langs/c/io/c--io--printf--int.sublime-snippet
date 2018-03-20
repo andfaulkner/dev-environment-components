@@ -1,0 +1,8 @@
+<snippet>
+  <description>(Include stdio.h 1st). Output data: printf("%d\n", int_to_output)</description>
+<content><![CDATA[
+printf(${1:"%d\n"}, ${2:int_to_output});
+]]></content>  
+  <tabTrigger>printf_int</tabTrigger>
+  <scope>source.c</scope>
+</snippet>

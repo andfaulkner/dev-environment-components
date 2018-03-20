@@ -1,0 +1,13 @@
+<snippet>
+  <description>Create struct with typedef</description>
+<content><![CDATA[
+typedef struct
+{
+    ${2:int x;
+    int y;}
+} ${1:struct_name};
+
+]]></content>  
+  <tabTrigger>var_struct</tabTrigger>
+  <scope>source.c</scope>
+</snippet>

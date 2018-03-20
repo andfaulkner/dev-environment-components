@@ -1,0 +1,10 @@
+<snippet>
+  <description>Create a function</description>
+<content><![CDATA[
+${1:ret_type_e.g.--void_int_char} ${2:function_name}(${3:int input1, char input2}) {
+    ${0:// code}
+}
+]]></content>  
+  <tabTrigger>fn</tabTrigger>
+  <scope>source.c</scope>
+</snippet>
