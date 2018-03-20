@@ -291,6 +291,9 @@ pa() {
     ps aux | ack $1 | ack -v "perl \/.+bin\/ack"
 }
 
+## Make file runnable
+alias runnable="chmod +x"
+
 # alias gogameimmunitywarriors="cd $PROJECTS_DIR/own-projects/immunity-warriors-game"
 
 ####### AUTOCOMPLETIONS ########
