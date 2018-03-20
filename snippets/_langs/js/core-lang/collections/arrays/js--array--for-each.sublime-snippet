@@ -1,0 +1,10 @@
+<snippet>
+  <description>Loop through array with for-each</description>
+<content><![CDATA[
+${1:arr}.forEach((${2:arrItem}) => {
+    ${0}
+})
+]]></content>  
+  <tabTrigger>foreach</tabTrigger>
+  <scope>source.js, source.ts, source.jsx, source.tsx</scope>
+</snippet>
