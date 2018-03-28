@@ -61,6 +61,18 @@ tag_v_publish() {
     npm publish
 }
 
+#=== FUNCTION ==========================================================
+#        NAME:  gat
+# DESCRIPTION:  Add a typescript file to git staging
+#   @PARAM $1:  Name of file to add
+#=======================================================================
+function gat {
+    location "git_scripts.sh"
+    local NAME_OF_FILE_TO_ADD=$1
+
+    git add "*$NAME_OF_FILE_TO_ADD*.ts*"
+}
+
 # function g_diff_remote {
 #  CURRENT_BRANCH=$(echo $(g_curbr))
 #  echo $CURRENT_BRANCH
