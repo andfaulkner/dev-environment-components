@@ -1,0 +1,17 @@
+<snippet>
+  <description>Function with description</description>
+<content><![CDATA[
+#=== FUNCTION ==========================================================
+#        NAME:  ${1:function_name}
+# DESCRIPTION:  ${3:What the function does}${4/.+/
+#   @PARAM \$1\:  /g}${4:${2}${2/.+/ /g}What the param (if any) is}
+#=======================================================================
+function ${1} {
+    location "$TM_FILENAME"
+${2/.+/    local /g}${2:PARAM_NAME}${2/.+/=\$1/g}${2/.+/
+/g}    ${0:# code here}
+}
+]]></content>  
+  <tabTrigger>func</tabTrigger>
+  <scope>source.shell</scope>
+</snippet>
