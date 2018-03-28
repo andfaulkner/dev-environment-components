@@ -1,0 +1,21 @@
+<snippet>
+  <description>ARIA attributes to make tabbable div, a, span, etc.</description>
+<content><![CDATA[
+role="${1:
+    link         | button      | combobox  | textbox                           <- COMMON/MAIN
+    checkbox     | switch      | option    | radio                             <- PICKERS
+    menu         | menubar     | menuitem  | menuitemcheckbox | menuitemradio  <- MENU
+    alert        | dialog      | tooltip   | status                            <- POPOVER/STATUS/LOG
+    scrollbar    | gridcell
+    tab          | tabpanel
+    slider       | treeitem
+    timer        | spinbutton
+    progressbar  | log
+    marquee
+}"
+tabIndex=${2:{0\}}
+aria-label=${3:"Back"}
+]]></content>
+  <tabTrigger>aria_tabbable</tabTrigger>
+  <scope>source.jsx, source.tsx</scope>
+</snippet>
