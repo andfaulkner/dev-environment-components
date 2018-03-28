@@ -13,6 +13,43 @@
 # Create effectively-infinite-length bash history file
 HISTSIZE=500000 HISTFILESIZE=5000000
 
+#=== FUNCTION ==========================================================
+#        NAME:  location
+# DESCRIPTION:  Name of file that function is contained in. Put directly
+#               function definition. Does nothing - a noop to tag a
+#               function's location, so `type func_name` contains it.
+#   @PARAM $1:  Name of file
+#=======================================================================
+function location {
+    local NAME_OF_HOME_FILE=$1
+}
+
+#=== FUNCTION ==========================================================
+#        NAME:  beginswith
+# DESCRIPTION:  If either string arg begins with the other, return true
+#   @PARAM $1:  FIRST_STRING First string to compare
+#   @PARAM $2:  SECOND_STRING Second string to compare
+#    @EXAMPLE:
+#       if beginswith "asdf" "as"; then echo "y"; else echo "n" fi
+#       # => "y"
+#=======================================================================
+function beginswith {
+    location "portable_bashrc_additions.sh"
+    case $1 in
+        "$2"*)
+            true
+            ;;
+        *) case $2 in
+            "$1"*)
+                true
+                ;;
+            *)
+                false
+                ;;
+        esac
+    esac
+}
+
 ################################################################################
 #~~~~~~~~~~~~~~~~~~~~~~~~~~ LOAD OTHER SOURCE SCRIPTS ~~~~~~~~~~~~~~~~~~~~~~~~~~
 ################################################################################
@@ -87,6 +124,12 @@ alias .....="cd ../../../.."
 alias ......="cd ../../../../.."
 
 alias back="echo 'DIR returning from:'; pwd; popd; echo 'DIR returned to:'; pwd"
+
+# Clear directory stack
+alias cleardirs="dirs -c"
+alias dirsclear="cleardirs"
+alias dirstackclear="cleardirs"
+alias pushpopstackclear="cleardirs"
 
 ## super-ls
 alias lsa='ls -ao | grep -v "[0-9][0-9] \.\.\?$"'
@@ -258,6 +301,16 @@ function file.get_first_line {
 function file.get_line { #arg1: filename; arg2: line
   cat $1 | awk "NR==$2"
 }
+
+# Get file size in kb.  e.g. fsizekb somefile.json
+function fsizekb {
+    local PATH_TO_FILE=$1 
+    du -k $PATH_TO_FILE | \
+        awk '{print $1" kB    "$2}' | \
+        awk '{printf ("%-16s%s", $1" "$2, $3)}'
+}
+
+alias filesizekv="fsizekb"
 
 ############# Bash completion ###############
 if [[ -f $(brew --prefix)/etc/bash_completion ]]; then
