@@ -1,0 +1,8 @@
+<snippet>
+    <description>React: clone element and inject it with prop(s)</description>
+    <content><![CDATA[
+{React.cloneElement(${1:props.children}, ${2:{props: 'to inject', polyglot: props.polyglot\}})}
+]]></content>
+    <tabTrigger>rct_clone</tabTrigger>
+    <scope>source.js, source.ts, source.jsx, source.tsx</scope>
+</snippet>
