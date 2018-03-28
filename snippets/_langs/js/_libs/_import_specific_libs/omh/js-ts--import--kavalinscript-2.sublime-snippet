@@ -1,0 +1,8 @@
+<snippet>
+  <description>Import @ottawamhealth/kavalinscript module</description>
+<content><![CDATA[
+import {${1:LocalDate, DoseInstance, ZonedDateTime}} from '@ottawamhealth/canimmunize-kavalinscript';
+]]></content>  
+  <tabTrigger>imp_kava</tabTrigger>
+  <scope>source.js, source.ts, source.jsx, source.tsx</scope>
+</snippet>

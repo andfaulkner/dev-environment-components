@@ -1,0 +1,10 @@
+<snippet>
+	<description>Else statement in if-else sequence</description>
+	<content><![CDATA[
+else
+    ${0: # do this if no other conditions in sequence matched}
+fi
+]]></content>
+	<tabTrigger>else</tabTrigger>
+	<scope>source.shell, source.sh, source.bash</scope>
+</snippet>

@@ -1,0 +1,8 @@
+<snippet>
+  <description>Import @ottawamhealth/ module</description>
+<content><![CDATA[
+import ${0:{ something or * \}} from '@ottawamhealth/${1}';
+]]></content>  
+  <tabTrigger>impom</tabTrigger>
+  <scope>source.js, source.ts, source.jsx, source.tsx</scope>
+</snippet>
