@@ -1,10 +1,10 @@
 <snippet>
-  <description>true if var is set & not blank string (' ' = false, " " = false)</description>
-<content><![CDATA[
-if [ ! -z "\${${1:1}// }" ]; then
+    <description>true if var is set & not blank string (' ' = false, " " = false)</description>
+    <content><![CDATA[
+if [ ! -z "\$${1:1}" ]; then
     ${0}
 fi
 ]]></content>  
-  <tabTrigger>if_var_set_and_non_blank_str</tabTrigger>
-  <scope>source.shell</scope>
+    <tabTrigger>if_var_set_and_non_blank_str</tabTrigger>
+    <scope>source.shell</scope>
 </snippet>
