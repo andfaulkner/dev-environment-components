@@ -1,0 +1,10 @@
+<snippet>
+  <description>Property method - class</description>
+<content><![CDATA[
+${1:@decorator}${1/.+/\n/g}${2:public}${2/.+/ /g}${3:propName} = (${4:args}) => {
+    ${0://code}
+}
+]]></content>  
+  <tabTrigger>class_prop_method</tabTrigger>
+  <scope>source.ts, source.tsx</scope>
+</snippet>
