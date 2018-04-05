@@ -347,6 +347,9 @@ pa() {
 ## Make file runnable
 alias runnable="chmod +x"
 
+## Force kill Google Chrome & all child processes
+alias killchrome="ps aux | ack \"\/[gG]oogle\ ?[cC]hrome\" | awk '{print $2}' | xargs kill -9"
+
 # alias gogameimmunitywarriors="cd $PROJECTS_DIR/own-projects/immunity-warriors-game"
 
 ####### AUTOCOMPLETIONS ########
