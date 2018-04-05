@@ -356,7 +356,7 @@ alias killchrome="ps aux | ack \"\/[gG]oogle\ ?[cC]hrome\" | awk '{print $2}' | 
 # _common_cmds_autocomplete()
 # {
 #     local cur=${COMP_WORDS[COMP_CWORD]}
-#     COMPREPLY=( $(compgen -W "client server clean run clientprod serverprod cleanprod runprod help util start test clean-full" -- $cur) )
+#     COMPREPLY=( $(compgen -W "client server clean run clientprod serverprod cleanprod cleanfull runprod help util start test getstrings jvlnslocal jvlnsremote" -- $cur) )
 # }
 # complete -F _common_cmds_autocomplete ./common-cmds
 
