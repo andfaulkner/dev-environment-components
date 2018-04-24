@@ -1,4 +1,9 @@
 [
+  { "keys": ["command+alt+n"], "command": "jump_to_interactive" },
+  { "keys": ["command+alt+shift+n"], "command": "jump_to_interactive", "args": { "extend": true } },
+
+  // Run prettier
+  { "keys": [ "command+ctrl+t" ], "command": "js_prettier" },
 
   // Copy path relative to project root
   { "keys": [ "command+ctrl+shift+p" ], "command": "side_bar_copy_path_absolute_from_project" },
@@ -11,7 +16,6 @@
   { "keys": [ "command+ctrl+shift+l" ], "command": "sublime.log_commands(True)" },
   { "keys": [ "command+ctrl+shift+n" ], "command": "sublime.log_commands(False)" },
   { "keys": [ "command+alt+r" ], "command": "save" },
-
 
 /* (CTRL-SHIFT-[AVCI]) */
 /********************************************** GIT ***********************************************/
