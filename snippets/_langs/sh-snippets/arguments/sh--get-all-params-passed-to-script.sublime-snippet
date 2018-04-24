@@ -1,0 +1,8 @@
+<snippet>
+  <description>Space-separated 'list' of all CLI args passed to current script</description>
+<content><![CDATA[
+\$@
+]]></content>  
+  <tabTrigger>vars_passed_to_script</tabTrigger>
+  <scope>source.shell</scope>
+</snippet>

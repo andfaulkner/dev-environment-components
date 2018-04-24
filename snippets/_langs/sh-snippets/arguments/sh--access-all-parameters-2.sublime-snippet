@@ -1,0 +1,8 @@
+<snippet>
+  <description>Access all args given to current fn. (echo \$@ shows this as space-sep string)</description>
+<content><![CDATA[
+\$@
+]]></content>  
+  <tabTrigger>all_args</tabTrigger>
+  <scope>source.shell</scope>
+</snippet>

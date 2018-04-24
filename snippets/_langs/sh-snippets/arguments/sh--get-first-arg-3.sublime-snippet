@@ -1,0 +1,8 @@
+<snippet>
+  <description>Get first argument passed to current function or file</description>
+<content><![CDATA[
+\$1
+]]></content>  
+  <tabTrigger>param_1</tabTrigger>
+  <scope>source.shell</scope>
+</snippet>
