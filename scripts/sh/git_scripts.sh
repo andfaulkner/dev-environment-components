@@ -23,7 +23,9 @@ alias gamend="git amend"
 alias g_amend="git amend"
 alias g_am="git amend"
 alias gam="git amend"
+
 alias gapy="git add package.json yarn.lock"
+alias gai18nci="git add app/i18n/*.json; gcm 'Updates i18n translations to latest'"
 
 alias g_c="git commit"
 
@@ -42,6 +44,7 @@ alias g_mybranches="git branch | ack 'ITPL.*[a-zA-Z]' --no-color"
 alias g_branchhistory="git for-each-ref --sort=committerdate refs/heads/ --format='%(refname) %(committerdate) %(authorname)' | sed 's/refs\/heads\///g' | awk '{print \$1}' | tail"
 
 alias gpocur='echo "$(g_curbr)" | xargs git push origin'
+alias gpocur_repeatedly='gpocur; gpocur; gpocur; gpocur; gpocur; gpocur; gpocur; gpocur; gpocur; gpocur; gpocur'
 
 alias g_co_lastedited='echo "$(g_branchhistory | tail -n 1)" | xargs git checkout'
 alias g_co_2ndlastedited='echo "$(g_branchhistory | tail -n 2 | rev | tail -n 1 | rev)" | xargs git checkout'
@@ -62,16 +65,54 @@ tag_v_publish() {
     npm publish
 }
 
-#=== FUNCTION ==========================================================
+#=== FUNCTION =============================================================
 #        NAME:  gat
-# DESCRIPTION:  Add a typescript file to git staging
-#   @PARAM $1:  Name of file to add
-#=======================================================================
+# DESCRIPTION:  Add a Typescript file to git staging
+#   @PARAM $1:  Name of file(s) to add / string contained in file(s) to add
+#==========================================================================
 function gat {
     location "git_scripts.sh"
     local NAME_OF_FILE_TO_ADD=$1
 
-    git add "*$NAME_OF_FILE_TO_ADD*.ts*"
+    git add "*$NAME_OF_FILE_TO_ADD*.ts" 2>/dev/null
+    git add "*$NAME_OF_FILE_TO_ADD*.tsx" 2>/dev/null
+
+    if [[ $NAME_OF_FILE_TO_ADD == *.ts ]] || [[ $NAME_OF_FILE_TO_ADD == *.tsx ]]; then
+        git add "*$NAME_OF_FILE_TO_ADD" 2>/dev/null
+    fi  
+}
+
+#=== FUNCTION =============================================================
+#        NAME:  gact
+# DESCRIPTION:  Add a Typescript or CSS/SCSS file to git staging
+#   @PARAM $1:  Name of file(s) to add / string contained in file(s) to add
+#==========================================================================
+function gact {
+    location "git_scripts.sh"
+    local NAME_OF_FILE_TO_ADD=$1
+
+    gat $1
+    gac $1
+}
+
+
+# TODO remove duplication between gat and gac
+
+#=== FUNCTION =============================================================
+#        NAME:  gac
+# DESCRIPTION:  Add a CSS or SCSS file to git staging
+#   @PARAM $1:  Name of file(s) to add / string contained in file(s) to add
+#==========================================================================
+function gac {
+    location "git_scripts.sh"
+    local NAME_OF_FILE_TO_ADD=$1
+
+    git add "*$NAME_OF_FILE_TO_ADD*.css" 2>/dev/null
+    git add "*$NAME_OF_FILE_TO_ADD*.scss" 2>/dev/null
+
+    if [[ $NAME_OF_FILE_TO_ADD == *.css ]] || [[ $NAME_OF_FILE_TO_ADD == *.scss ]]; then
+        git add "*$NAME_OF_FILE_TO_ADD" 2>/dev/null
+    fi  
 }
 
 # function g_diff_remote {
