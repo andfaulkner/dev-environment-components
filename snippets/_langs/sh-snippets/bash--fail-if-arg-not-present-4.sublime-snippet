@@ -1,8 +1,0 @@
-<snippet>
-  <description>Stop script execution if arg at given position is not present</description>
-<content><![CDATA[
-: \${${1:2}?"\$(echo "\n\$(${2:command_to_run_on_fail__often_usage})")"}${0: # note: 2 is the position of the param to check for}
-]]></content>  
-  <tabTrigger>end_if_arg_not_present</tabTrigger>
-  <scope>source.shell</scope>
-</snippet>

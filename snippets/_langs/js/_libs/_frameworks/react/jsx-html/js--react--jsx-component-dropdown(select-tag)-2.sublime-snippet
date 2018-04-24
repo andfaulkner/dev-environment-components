@@ -8,6 +8,6 @@
     <option value="${5:dropdownOpt3}">${5:dropdownOpt3}</option>
 </select>
 ]]></content>
-    <tabTrigger>rct_el_select</tabTrigger>
-    <scope>source.js, source.ts, source.jsx, source.tsx</scope>
+    <tabTrigger>rct_el_select_jsx</tabTrigger>
+    <scope>meta.jsx.children, meta.block.tsx, meta.block.jsx</scope>
 </snippet>

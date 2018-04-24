@@ -1,8 +1,9 @@
 <snippet>
-  <description>Inject part of the data store into a React component's this.props</description>
+  <description>Inject part of data store->React class component's props</description>
 <content><![CDATA[
-@inject(${1:'appState'}) @observer${0}
+@inject(${1:'appState'})
+@observer${0}
 ]]></content>  
-  <tabTrigger>mobx_inject_in_react</tabTrigger>
+  <tabTrigger>mobx_inject_in_react_class</tabTrigger>
   <scope>source.js, source.ts, source.jsx, source.tsx</scope>
 </snippet>

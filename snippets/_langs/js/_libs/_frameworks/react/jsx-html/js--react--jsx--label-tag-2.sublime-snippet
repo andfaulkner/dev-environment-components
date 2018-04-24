@@ -4,5 +4,5 @@
 <label>${1:Label text}</label>${0}
 ]]></content>  
   <tabTrigger><![CDATA[label]]></tabTrigger>
-  <scope>source.jsx, source.tsx</scope>
+    <scope>meta.jsx.children, meta.block.tsx, meta.block.jsx</scope>
 </snippet>

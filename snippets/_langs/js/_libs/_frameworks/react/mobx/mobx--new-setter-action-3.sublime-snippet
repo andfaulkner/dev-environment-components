@@ -1,0 +1,14 @@
+<snippet>
+  <description>Create new setter action on mobx class</description>
+<content><![CDATA[
+/**
+ * ${3:Sets ${1} value}
+ * @param {${2}} new${1/^([a-zA-Z])([^A-Z]+)([^a-z])?([^A-Z]+)?([^a-z])?([^A-Z]+)?([^a-z])?([^A-Z]+)?$|.*/\U$1\L$2\U$3\L$4\U$5\L$6\U$7\L$8/:name} New value of ${1} property
+ */
+@action
+public set${1/^([a-zA-Z])([^A-Z]+)([^a-z])?([^A-Z]+)?([^a-z])?([^A-Z]+)?([^a-z])?([^A-Z]+)?$|.*/\U$1\L$2\U$3\L$4\U$5\L$6\U$7\L$8/:name} = (new${1/^([a-zA-Z])([^A-Z]+)([^a-z])?([^A-Z]+)?([^a-z])?([^A-Z]+)?([^a-z])?([^A-Z]+)?$|.*/\U$1\L$2\U$3\L$4\U$5\L$6\U$7\L$8/:name}: ${2:"type"}) => this.${1:propName} = new${1/^([a-zA-Z])([^A-Z]+)([^a-z])?([^A-Z]+)?([^a-z])?([^A-Z]+)?([^a-z])?([^A-Z]+)?$|.*/\U$1\L$2\U$3\L$4\U$5\L$6\U$7\L$8/:name};
+
+]]></content>  
+  <tabTrigger>mobx_setter_on_class</tabTrigger>
+  <scope>source.js, source.ts, source.jsx, source.tsx</scope>
+</snippet>

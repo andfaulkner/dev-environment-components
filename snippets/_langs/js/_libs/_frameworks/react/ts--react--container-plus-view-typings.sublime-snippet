@@ -1,0 +1,26 @@
+<snippet>
+  <description>Typings for a React container and corresponding view component</description>
+<content><![CDATA[
+${6:/**************************************** TYPE DEFINITIONS ****************************************/}${6/.+/
+/g}// Grabs props off below container's 'this' value. Values to omit from view in second arg.
+type ${1}ContainerPropsNoReact = OmitReactProperties<${1}Container${5/.+/, /g}${5:'propToOmit' | 'another'}>;
+
+// Props shared by both container & view
+interface ${1:BaseComponentName}Shared extends PolyglotProps {${2/.+/
+    /g}${2:// Shared props go here (anything "passed through")}${2/.+/
+/g}}
+
+// Container props (for current file's component)
+interface ${1}ContainerProps extends ${1}Shared, StoreProps {${3/.+/
+    /g}${3:// Container-only props go here}${3/.+/
+/g}}
+
+// ${1}View props
+export interface ${1}ViewProps extends ${1}ContainerPropsNoReact, ${1}Shared {${4/.+/
+    /g}${4:// View-only props go here}${4/.+/
+/g}}
+
+]]></content>  
+  <tabTrigger>rct_typings_container_and_view</tabTrigger>
+  <scope>source.tsx</scope>
+</snippet>

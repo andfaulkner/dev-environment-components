@@ -4,5 +4,5 @@
 <a href=${1:"#"}>${2:Link text or img etc.}</a>
 ]]></content>  
   <tabTrigger><![CDATA[<a]]></tabTrigger>
-  <scope>source.jsx, source.tsx</scope>
+    <scope>meta.jsx.children, meta.block.tsx, meta.block.jsx</scope>
 </snippet>

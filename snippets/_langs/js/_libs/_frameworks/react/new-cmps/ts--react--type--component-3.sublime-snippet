@@ -14,6 +14,6 @@ ${3:@inject('appState')
 };
 
 ]]></content>  
-  <tabTrigger>rct_class_new</tabTrigger>
+  <tabTrigger>rct_new_class</tabTrigger>
   <scope>source.ts, source.tsx</scope>
 </snippet>

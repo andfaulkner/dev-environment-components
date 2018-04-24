@@ -5,6 +5,6 @@
     ${0}
 </button>
 ]]></content>
-    <tabTrigger>btn</tabTrigger>
-    <scope>source.js.jsx, source.js.tsx, source.tsx</scope>
+    <tabTrigger>btn_jsx</tabTrigger>
+    <scope>meta.jsx.children, meta.block.tsx, meta.block.jsx</scope>
 </snippet>

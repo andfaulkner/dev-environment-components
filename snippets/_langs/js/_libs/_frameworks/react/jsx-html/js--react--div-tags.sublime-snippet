@@ -1,10 +1,10 @@
 <snippet>
 		<description>Insert a div tag - for use in jsx files</description>
     <content><![CDATA[
-<div${1/.+/ className={/g}cn(`${1:names-of classes-here}`)${1/.+/}/g}>
+<div${1/.+/ className={cn\(`/g}${1:names-of classes-here}${1/.+/`\)\}/g}>
     ${0}
 </div>
 ]]></content>
-    <tabTrigger>div</tabTrigger>
-    <scope>source.js.jsx, source.js.tsx, source.tsx</scope>
+    <tabTrigger>div_jsx</tabTrigger>
+    <scope>meta.jsx.children, meta.block.tsx, meta.block.jsx</scope>
 </snippet>

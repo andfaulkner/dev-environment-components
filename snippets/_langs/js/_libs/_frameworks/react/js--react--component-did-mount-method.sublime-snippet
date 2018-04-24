@@ -1,10 +1,10 @@
 <snippet>
-  <description>React componentDidMount function</description>
-<content><![CDATA[
-componentDidMount = () => {
-    ${0}
+    <description>React: componentDidMount - class</description>
+    <content><![CDATA[
+componentDidMount() {
+    ${0:'Runs directly after 1st render of component done (after render() runs for the 1st time)';}
 }
 ]]></content>  
-  <tabTrigger>cdm</tabTrigger>
-  <scope>source.js, source.ts, source.jsx, source.tsx</scope>
+    <tabTrigger>rct_life_cdm_class</tabTrigger>
+    <scope>source.js, source.ts, source.jsx, source.tsx</scope>
 </snippet>

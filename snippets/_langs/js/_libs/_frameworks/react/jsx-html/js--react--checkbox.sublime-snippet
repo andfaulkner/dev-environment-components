@@ -8,6 +8,6 @@
     checked={${2}}
 />
 ]]></content>
-    <tabTrigger>checkbox</tabTrigger>
-    <scope>source.js.jsx, source.js.tsx, source.tsx</scope>
+    <tabTrigger>checkbox_jsx</tabTrigger>
+    <scope>meta.jsx.children, meta.block.tsx, meta.block.jsx</scope>
 </snippet>

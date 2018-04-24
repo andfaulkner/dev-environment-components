@@ -6,6 +6,6 @@
   name=${2:"name_of_input_type_here"}${3/.+/\n  value={this.state./}${3:someStateValue}${3/.+/\}/}${4/.+/\n  onChange=\{this./}${4:someHandleFn}${4/.+/.bind(this)\}/}
 />${0}
 ]]></content>
-    <tabTrigger>input</tabTrigger>
-    <scope>source.js.jsx, source.js.tsx, source.tsx</scope>
+    <tabTrigger>input_jsx</tabTrigger>
+    <scope>meta.jsx.children, meta.block.tsx, meta.block.jsx</scope>
 </snippet>
