@@ -1,0 +1,8 @@
+<snippet>
+  <description>Import omit from mad-utils</description>
+<content><![CDATA[
+import {omit} from 'mad-utils';
+]]></content>  
+  <tabTrigger>imp_omit</tabTrigger>
+  <scope>source.js, source.ts, source.jsx, source.tsx</scope>
+</snippet>
