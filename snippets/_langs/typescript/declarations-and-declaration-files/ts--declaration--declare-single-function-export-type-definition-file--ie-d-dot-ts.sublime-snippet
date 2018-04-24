@@ -2,10 +2,9 @@
   <description>Create declaration for module that exports a single function</description>
 <content><![CDATA[
 declare module '${1:module-name}' {
-function ${2:functionName___note__can_be_anything}(${3:func, args, with, types}): ${3:ReturnType};
+    function ${2:functionName___note__can_be_anything}(${3:func, args, with, types}): ${4:ReturnType};
     export = ${2};
-}${0}
-
+}
 ]]></content>
   <tabTrigger>ts_declarationfile_single_fn_export</tabTrigger>
   <scope>source.ts</scope>
