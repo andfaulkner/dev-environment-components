@@ -1,0 +1,11 @@
+<snippet>
+  <description>All common headings</description>
+<content><![CDATA[
+/************************************** THIRD-PARTY MODULES ***************************************/
+/**************************************** PROJECT MODULES *****************************************/
+/**************************************** TYPE DEFINITIONS ****************************************/
+/********************************************* EXPORT *********************************************/
+]]></content>  
+  <tabTrigger>hdallcommon</tabTrigger>
+  <scope>source.js, source.ts, source.jsx, source.tsx</scope>
+</snippet>
