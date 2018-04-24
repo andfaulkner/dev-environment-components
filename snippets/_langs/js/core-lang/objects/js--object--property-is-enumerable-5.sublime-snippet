@@ -1,0 +1,8 @@
+<snippet>
+  <description>True if prop on obj is enumerable: by obj.keys, for-in, or for-of (unless arr)</description>
+<content><![CDATA[
+${1:obj}.propertyIsEnumerable(${2:`prop`});
+]]></content>  
+  <tabTrigger>is_prop_enumerable</tabTrigger>
+  <scope>source.js, source.ts, source.jsx, source.tsx</scope>
+</snippet>
