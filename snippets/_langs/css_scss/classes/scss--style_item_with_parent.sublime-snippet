@@ -1,0 +1,10 @@
+<snippet>
+  <description>Create a new style definition for an element with a parent</description>
+<content><![CDATA[
+${1:parent_element__eg_div} > ${2:child_element__eg_ul} {
+  ${3:first_attribute}: ${4:first_attribute_value};${0}
+}
+]]></content>  
+  <tabTrigger>sel_w_parent</tabTrigger>
+  <scope>source.scss, source.postcss, source.css</scope>
+</snippet>

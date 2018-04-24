@@ -1,0 +1,10 @@
+<snippet>
+  <description>Create a new style definition for elements with a given attribute</description>
+<content><![CDATA[
+[${1:attribute}] {
+  ${2:first_attribute}: ${3:first_attribute_value};${0}
+}
+]]></content>  
+  <tabTrigger>sel_el_w_attribute</tabTrigger>
+  <scope>source.scss, source.postcss, source.css</scope>
+</snippet>

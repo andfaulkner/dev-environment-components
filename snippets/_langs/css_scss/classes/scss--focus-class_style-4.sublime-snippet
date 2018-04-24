@@ -1,0 +1,10 @@
+<snippet>
+  <description>Create a new style definition for the focus state of elements with a class</description>
+<content><![CDATA[
+.${1:class-name}:focus {
+    ${0:// styles go here}
+}
+]]></content>  
+  <tabTrigger>css_focus_class</tabTrigger>
+  <scope>source.scss, source.postcss, source.css</scope>
+</snippet>

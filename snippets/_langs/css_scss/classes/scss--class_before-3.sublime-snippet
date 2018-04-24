@@ -1,0 +1,17 @@
+<snippet>
+  <description>Create new class definition for styling area before selected tags</description>
+<content><![CDATA[
+.${1:class-name}::before {
+    ${0:// styles go here
+    content: "";
+    bottom: -0.66666666em;
+    right: 0.8em;
+    position: absolute;
+    border-right: 1.2em solid #2C2C2C;
+    border-top: 1.2em solid rgba(44, 44, 44, 0);
+    border-bottom: 1.2em solid rgba(44, 44, 44, 0);}
+}
+]]></content>  
+  <tabTrigger>before_class</tabTrigger>
+  <scope>source.scss, source.postcss, source.css</scope>
+</snippet>

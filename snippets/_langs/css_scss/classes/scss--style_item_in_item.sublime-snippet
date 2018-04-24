@@ -1,0 +1,10 @@
+<snippet>
+  <description>Style def for all els of given type within el of another given type (any layer)</description>
+<content><![CDATA[
+${1:selector_ancestor_or_parent} ${2:selector_descendent} {
+  ${3:first_attribute}: ${4:first_attribute_value};${0}
+}
+]]></content>  
+  <tabTrigger>sel_el_in_el</tabTrigger>
+  <scope>source.scss, source.postcss, source.css</scope>
+</snippet>

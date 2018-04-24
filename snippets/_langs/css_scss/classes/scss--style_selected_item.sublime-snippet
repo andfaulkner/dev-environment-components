@@ -1,0 +1,10 @@
+<snippet>
+  <description>Create a new style definition for all checked (selected) items</description>
+<content><![CDATA[
+${1:optional:some_selector_for_a_checkable_element_type__eg_input}:checked {
+  ${3:first_attribute}: ${4:first_attribute_value};${0}
+}
+]]></content>  
+  <tabTrigger>sel_checked</tabTrigger>
+  <scope>source.scss, source.postcss, source.css</scope>
+</snippet>
