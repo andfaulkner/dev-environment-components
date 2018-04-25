@@ -13,8 +13,8 @@ role="${1:
     progressbar  | log
     marquee
 }"
-tabindex=${2:0}
-aria-label=${3:"Back"}
+tabindex="${2:0}"
+aria-label="${3:Back}"
 ]]></content>
   <tabTrigger>aria_tabbable</tabTrigger>
   <scope>source.xml, text.html, text.html.handlebars, text.html.markdown, text.xml, text.html.multimarkdown</scope>

@@ -1,0 +1,8 @@
+<snippet>
+  <description>Add tabIndex prop to e.g. a div</description>
+<content><![CDATA[
+tabIndex={${1:0}}
+]]></content>
+  <tabTrigger>ti</tabTrigger>
+  <scope>source.tsx meta.tag.attributes, source.jsx meta.tag.attributes</scope>
+</snippet>

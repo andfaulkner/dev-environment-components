@@ -11,7 +11,7 @@ ${4:content here}
                      ruby | python | python.3 | xml | shell | regexp |
                      css | sass | scss | postcss | less | stylus |
                      groovy | gradle | makefile | viml | java-props | yaml |
-                     objc | Kotlin | java | swift |
+                     objc | Kotlin | java | swift | rust |
                      sql |
                      lua | clojure | elixir | elm | haskell | crystal |
                      php | go | lisp | c | c++ | perl | ruby.rails | js.rails |

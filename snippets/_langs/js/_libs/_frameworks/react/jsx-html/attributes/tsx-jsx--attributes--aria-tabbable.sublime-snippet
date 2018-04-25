@@ -17,5 +17,5 @@ tabIndex=${2:{0\}}
 aria-label=${3:"Back"}
 ]]></content>
   <tabTrigger>aria_tabbable</tabTrigger>
-  <scope>source.jsx, source.tsx</scope>
+  <scope>source.tsx meta.tag.attributes, source.jsx meta.tag.attributes</scope>
 </snippet>
