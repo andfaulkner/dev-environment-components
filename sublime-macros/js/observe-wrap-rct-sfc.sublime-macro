@@ -1,0 +1,82 @@
+[
+	{
+		"args":
+		{
+			"to": "bol"
+		},
+		"command": "move_to"
+	},
+	{
+		"args":
+		{
+			"characters": "(",
+			"extend": true
+		},
+		"command": "jump_to"
+	},
+	{
+		"args":
+		{
+			"by": "characters",
+			"forward": true
+		},
+		"command": "move"
+	},
+	{
+		"args":
+		{
+			"characters": "observer"
+		},
+		"command": "insert"
+	},
+	{
+		"args":
+		{
+			"characters": "("
+		},
+		"command": "insert"
+	},
+	{
+		"args":
+		{
+			"to": "eol"
+		},
+		"command": "move_to"
+	},
+	{
+		"args":
+		{
+			"to": "brackets"
+		},
+		"command": "move_to"
+	},
+	{
+		"args":
+		{
+			"by": "characters",
+			"forward": true
+		},
+		"command": "move"
+	},
+	{
+		"args":
+		{
+			"characters": ")"
+		},
+		"command": "insert"
+	},
+	{
+		"args":
+		{
+			"to": "brackets"
+		},
+		"command": "move_to"
+	},
+	{
+		"args":
+		{
+			"to": "bol"
+		},
+		"command": "move_to"
+	}
+]
