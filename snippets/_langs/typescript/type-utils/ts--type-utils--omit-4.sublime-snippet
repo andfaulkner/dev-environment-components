@@ -1,0 +1,8 @@
+<snippet>
+  <description>Omit utility - keep all K-V pairs in an obj besides keys in 2nd arg</description>
+<content><![CDATA[
+Omit<${1:SomeInterface|SomeObjType|typeof someObj}, ${2:'keys' | 'to' | 'omit'}>
+]]></content>  
+  <tabTrigger>omit_ts_util</tabTrigger>
+  <scope>source.ts, source.tsx</scope>
+</snippet>

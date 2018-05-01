@@ -1,0 +1,8 @@
+<snippet>
+  <description>Diff util: Keep types in the 1st type's union that aren't found in the 2nd type's union</description>
+<content><![CDATA[
+type DiffOpts = Diff<${1:'a' | 'b' | 'c' | 'd'}, ${2:'b' | 'd', 'e'}>;${3/.+/ /g}${3:// => 'a' | 'c'}
+]]></content>  
+  <tabTrigger>ts_diff_util</tabTrigger>
+  <scope>source.ts, source.tsx</scope>
+</snippet>

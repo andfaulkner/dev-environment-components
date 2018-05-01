@@ -1,0 +1,8 @@
+<snippet>
+  <description>ReturnType util: Get return type of given function type</description>
+<content><![CDATA[
+ReturnType<${1:typeof SomeFunction}>;
+]]></content>  
+  <tabTrigger>ts_util_returntype</tabTrigger>
+  <scope>source.ts, source.tsx</scope>
+</snippet>

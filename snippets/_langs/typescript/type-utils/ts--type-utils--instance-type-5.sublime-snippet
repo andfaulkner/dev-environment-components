@@ -1,0 +1,8 @@
+<snippet>
+  <description>InstanceType util: Get instance type of given class</description>
+<content><![CDATA[
+InstanceType<${1:typeof SomeClass}>;${2/.+/ /g}${2:// => SomeClass}
+]]></content>  
+  <tabTrigger>instancetype_ts_util</tabTrigger>
+  <scope>source.ts, source.tsx</scope>
+</snippet>

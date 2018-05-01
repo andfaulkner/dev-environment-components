@@ -1,0 +1,8 @@
+<snippet>
+  <description>Pick util: keep K-V pairs in obj where key matches a str in 2nd arg</description>
+<content><![CDATA[
+Pick<${1:SomeInterface|SomeObjType|typeof someObj}, ${2:'keys' | 'to' | 'keep'}>
+]]></content>  
+  <tabTrigger>ts_util_pick</tabTrigger>
+  <scope>source.ts, source.tsx</scope>
+</snippet>
