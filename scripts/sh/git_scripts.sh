@@ -25,7 +25,7 @@ alias g_am="git amend"
 alias gam="git amend"
 
 alias gapy="git add package.json yarn.lock"
-alias gai18nci="git add app/i18n/*.json; gcm 'Updates i18n translations to latest'"
+alias gai18nci="git add app/i18n/*.json; gcm 'Update i18n translations to latest'"
 
 alias g_c="git commit"
 
