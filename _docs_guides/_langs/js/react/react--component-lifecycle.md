@@ -3,106 +3,133 @@ React component lifecycle
 ----------------------------------------------------------------------------------------------------
 INITIAL RENDER
 --------------
-      constructor          [1] - constructor(props)
-           ┃┃                    Initialize state here - e.g.: this.state = { name: props.name };
-           ┃┃                        |--> Careful: state won't be up-to-date with any props update.
-           ┃┃                        ┗--> It's better to 'lift' state instead.
-           ┃┃                    Note: instantiation starts at the top element in the UI tree & works down
-           \/
-   componentWillMount      [2] - Mainly for pre-render app config. No DOM access. No setState. [not that useful]
-           ┃┃                    Uses:
-           ┃┃                      ┃-> App config in root component (MAIN USE)
-           ┃┃                      ┃-> Registering to global events such as a Flux store
-           ┃┃                      ┗-> Handlers for cmp to respond to global Native UI events (e.g. window resizing, focus changes)
-           ┃┃                    Runs:
-           ┃┃                      ┃-> NOT after new props arrive
-           ┃┃                      ┃-> immediately after component mounted (ONLY EVER CALLED ONCE!)
-           ┃┃                      ┗-> on server rendering (only lifecycle hook called on server rendering)
-           \/
-         render            [3] - render the component
-           ┃┃                    Returns the needed component markup
-           ┃┃                    Props and state values are interpreted to create the correct output.
-           ┃┃                    Neither props nor state should should be modified inside this function
-           ┃┃                    -- The render function has to be pure
-           ┃┃                    -- NEVER CALL this.setState HERE!!!           
-           \/
-       {children}          [3.x] - triggers initial render of child components to current component
-           ┃┃                    All components' children recursively rendered until entire UI tree covered
-           ┃┃                    Child components rendering follows the normal initial render lifecycle
-           ┃┃                       (starting w/ constructor -- see above)
-           ┃┃                    Runs:
-           ┃┃                      ┃-> In the course of a component's render method.
-           ┃┃                      ┗-> Before ANY components call componentDidMount!
-           ┃┃                          -- All children (entire UI) renders first
-           ┃┃                    Uses:
-           ┃┃                      ┗-> WIP -- TODO write-up children uses [children are one of the most useful aspects of React, so this will be a large section]
-           \/
-    componentDidMount      [4] - componentDidMount()
-                                 Note: starts at the bottom element in the UI tree & works up
-                                 Runs:
-                                   ┃-> NOT after new props arrive
-                                   ┗-> once all children Elements/Components are mounted (NOTE: ONLY CALLED ONCE)
-                                 Uses:
-                                   ┃-> Start data fetching - AJAX requests should always go here
-                                   ┃   ┗->> i.e. start AJAX calls to load in data for your component
-                                   ┃-> Add event listeners
-                                   ┃-> Set up subscriptions
-                                   ┃-> Do all component setup requiring DOM (& all DOM interactions in general)
-                                   ┃-> Draw on a <canvas> element (which you just rendered)
-                                   ┗-> Initialize a "masonry" grid layout from a collection of elements
-                                 Available:
-                                   ┃-> setState. Calling it here triggers extra render,
-                                   ┃             but intermediate state won't be shown
-                                   ┗-> this.props (will contain prev props)
+       constructor              [1] - constructor(props)
+           ┃┃                         Initialize state here - e.g.: this.state = { name: props.name };
+           ┃┃                             |--> Careful: state won't be up-to-date with any props update.
+           ┃┃                             ┗--> It's better to 'lift' state instead.
+           ┃┃                         Note: instantiation starts at the top element in the UI tree & works down
+           \/ 
+static getDerivedStateFromProps [2] - getDerivedStateFromProps(nextProps)
+           ┃┃                         Runs:
+           ┃┃                           ┃-> after a component is instantiated
+           ┃┃                           ┃-> when it receives new props
+           ┃┃                           ┗-> NOT when state changes
+           ┃┃                         Uses: (examples)
+           ┃┃                           ┃-> Act on specific prop changes here to trigger state transitions.
+           ┃┃                           ┗-> 
+           ┃┃                         Intentionally static to prevent reading & writing instance variables
+           \/         
+   UNSAFE_componentWillMount    [3] - UNSAFE_componentWillMount()
+           ┃┃                         Mainly for pre-render app config. No DOM access. No setState. [not that useful]
+           ┃┃                         Uses:
+           ┃┃                           ┃-> App config in root component (MAIN USE)
+           ┃┃                           ┃-> Registering to global events such as a Flux store
+           ┃┃                           ┗-> Handlers for cmp to respond to global Native UI events (e.g. window resizing, focus changes)
+           ┃┃                         Runs:
+           ┃┃                           ┃-> NOT after new props arrive
+           ┃┃                           ┃-> immediately after component mounted (ONLY EVER CALLED ONCE!)
+           ┃┃                           ┗-> on server rendering (only lifecycle hook called on server rendering)
+           \/  
+         render                 [4] - render the component
+           ┃┃                         Returns the needed component markup
+           ┃┃                         Props and state values are interpreted to create the correct output.
+           ┃┃                         Neither props nor state should should be modified inside this function
+           ┃┃                         -- The render function has to be pure
+           ┃┃                         -- NEVER CALL this.setState HERE!!!           
+           \/ 
+       {children}               [4.x] - triggers initial render of child components to current component
+           ┃┃                         All components' children recursively rendered until entire UI tree covered
+           ┃┃                         Child components rendering follows the normal initial render lifecycle
+           ┃┃                            (starting w/ constructor -- see above)
+           ┃┃                         Runs:
+           ┃┃                           ┃-> In the course of a component's render method.
+           ┃┃                           ┗-> Before ANY components call componentDidMount!
+           ┃┃                               -- All children (entire UI) renders first
+           ┃┃                         Uses:
+           ┃┃                           ┗-> WIP -- TODO write-up children uses [children are one of the most useful aspects of React, so this will be a large section]
+           \/ 
+  [UPDATES DOM and REFS]
+           ┃┃  
+           \/  
+    componentDidMount           [5] - componentDidMount()
+                                      Note : starts at the bottom element in the UI tree & works up
+                                      Runs:
+                                        ┃-> NOT after new props arrive
+                                        ┗-> once all children Elements/Components are mounted (NOTE: ONLY CALLED ONCE)
+                                      Uses:
+                                        ┃-> Start data fetching - AJAX requests should always go here
+                                        ┃   ┗->> i.e. start AJAX calls to load in data for your component
+                                        ┃-> Add event listeners
+                                        ┃-> Set up subscriptions
+                                        ┃-> Do all component setup requiring DOM (& all DOM interactions in general)
+                                        ┃-> Draw on a <canvas> element (which you just rendered)
+                                        ┗-> Initialize a "masonry" grid layout from a collection of elements
+                                      Available:
+                                        ┃-> setState. Calling it here triggers extra render,
+                                        ┃             but intermediate state won't be shown
+                                        ┗-> this.props (will contain prev props)
 
 [NOTE: see below for notes on decorators - they are not yet included in the above lifecycle flow]
 
 ----------------------------------------------------------------------------------------------------
 PROPS UPDATE
 ------------
-componentWillReceiveProps  [1] - componentWillReceiveProps(nextProps)
-           ┃┃                    Runs:
-           ┃┃                      ┃-> when new props arrive
-           ┃┃                      ┃-> NOT when state changes
-           ┃┃                      ┗-> NOT after component mounted
-           ┃┃                    Uses: (examples)
-           ┃┃                      ┃-> Act on specific prop changes here to trigger state transitions.
-           ┃┃                      ┃   ┗->> e.g. this.setState({ name: props.name });
-           ┃┃                      ┃-> react to prop changes before render by updating state w/ setState()
-           ┃┃                      ┗-> Redraw progress loader on getting new "% loaded" val
-           ┃┃                    Available:
-           ┃┃                      ┃-> setState (calling it here won't trigger additional render)
-           ┃┃                      ┃-> this.props (will contain prev props)
-           ┃┃                      ┗-> "next" props (in signature)
-           ┃┃                      NOTE: Just because this was called doesn't mean the val of props has changed
+UNSAFE_componentWillReceiveProps
+           OR
+static getDerivedStateFromProps   [1] - UNSAFE_componentWillReceiveProps(nextProps)
+           ┃┃                           Runs:
+           ┃┃                             ┃-> when new props arrive
+           ┃┃                             ┃-> NOT when state changes
+           ┃┃                             ┗-> NOT after component mounted
+           ┃┃                           Uses: (examples)
+           ┃┃                             ┃-> Act on specific prop changes here to trigger state transitions.
+           ┃┃                             ┃   ┗->> e.g. this.setState({ name: props.name });
+           ┃┃                             ┃-> react to prop changes before render by updating state w/ setState()
+           ┃┃                             ┗-> Redraw progress loader on getting new "% loaded" val
+           ┃┃                           Available:
+           ┃┃                             ┃-> setState (calling it here won't trigger additional render)
+           ┃┃                             ┃-> this.props (will contain prev props)
+           ┃┃                             ┗-> "next" props (in signature)
+           ┃┃                             NOTE: Just because this was called doesn't mean the val of props has changed
+           \/       
+  shouldComponentUpdate           [2] - getDerivedStateFromProps(nextProps, nextState)
+           ┃┃                           Runs:
+           ┃┃                             ┃-> when new props arrive
+           ┃┃                             ┃-> when state changes
+           ┃┃                             ┗-> NOT after component mounted
+           ┃┃                           If this method exists, component only updates if it returns true.
+           ┃┃                           Uses: (examples)
+           ┃┃                             ┗-> Lets component exit update lifecycle if no reason to apply new render
+           ┃┃                                 ┗->> i.e. for performance optimization, to prevent unneeded rerenders
+           ┃┃                           Use to control component re-rendering (e.g. for a game loop).
+           ┃┃                           -- setState not available
            \/
-  shouldComponentUpdate    [2] - shouldComponentUpdate(nextProps, nextState)
-           ┃┃                    Runs:
-           ┃┃                      ┃-> when new props arrive
-           ┃┃                      ┃-> when state changes
-           ┃┃                      ┗-> NOT after component mounted
-           ┃┃                    If this method exists, component only updates if it returns true.
-           ┃┃                    Uses: (examples)
-           ┃┃                      ┗-> Lets component exit update lifecycle if no reason to apply new render
-           ┃┃                          ┗->> i.e. for performance optimization, to prevent unneeded rerenders
-           ┃┃                    Use to control component re-rendering (e.g. for a game loop).
-           ┃┃                    -- setState not available
-           \/
-   componentWillUpdate     [3] - componentWillUpdate(nextProps, nextState).
-           ┃┃                    Runs:
-           ┃┃                      ┃-> when new props arrive (if shouldComponentUpdate returned true or doesn't exist)
-           ┃┃                      ┃-> when state changes (if shouldComponentUpdate returned true or doesn't exist)
-           ┃┃                      ┗-> NOT after component mounted
-           ┃┃                    Use if using shouldComponentUpdate AND you need to do something
-           ┃┃                    when the props change; otherwise akin to componentWillReceiveProps
-           ┃┃                    -- setState not available
-           \/
-         render            [4] - render the component (see above)
+ UNSAFE_componentWillUpdate            [3] - UNSAFE_componentWillUpdate(nextProps, nextState)
+           ┃┃                           Runs:
+           ┃┃                             ┃-> when new props arrive (if shouldComponentUpdate returned true or doesn't exist)
+           ┃┃                             ┃-> when state changes (if shouldComponentUpdate returned true or doesn't exist)
+           ┃┃                             ┗-> NOT after component mounted
+           ┃┃                           Use if using shouldComponentUpdate AND you need to do something
+           ┃┃                           when the props change; otherwise akin to UNSAFE_componentWillReceiveProps
+           ┃┃                           -- setState not available
+           \/      
+         render                   [4] - render the component (see above)
            ⬇
-   componentDidUpdate      [5] - componentDidUpdate(prevProps, prevState)
-                                 Update the DOM in response to prop or state changes.
-                                 Like componentDidMount, but runs after each update (vs just mount).
-                                 -- setState available
+  getSnapshotBeforeUpdate         [5] - Safely read properties from e.g. the DOM before updates are made
+           ┃┃                           Lets component get current vals (e.g. scroll pos) before they're potentially changed
+           ┃┃                           Any val it returns gets passed as a param to componentDidUpdate
+           \/
+  [UPDATES DOM and REFS]
+           ⬇       
+   componentDidUpdate             [6] - componentDidUpdate(prevProps, prevState)
+                                        Update the DOM in response to prop or state changes.
+                                        Uses:
+                                          ┗-> to perform side effects e.g.:
+                                              ┃-> data fetching
+                                              ┗-> animation
+                                        Uses: 
+                                        Like componentDidMount, but runs after each update (vs just mount).
+                                        -- setState available
 
 ----------------------------------------------------------------------------------------------------
 ON VIEW REMOVAL / UNMOUNTING
@@ -164,3 +191,6 @@ React lifecycle cheatsheet :: https://gist.github.com/bvaughn/923dffb2cd9504ee44
 How I fell in love with JS decorators :: https://cabbageapps.com/fell-love-js-decorators/
 TypeScript-Handbook -> Decorators :: https://github.com/Microsoft/TypeScript-Handbook/blob/master/pages/Decorators.md
 Understanding decorators :: https://survivejs.com/react/appendices/understanding-decorators/
+
+## Diagrams
+React 16 lifecycle: https://user-images.githubusercontent.com/1571667/38441522-dc5242ea-3999-11e8-9223-73ff7b9a6470.png
