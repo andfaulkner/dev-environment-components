@@ -1,0 +1,13 @@
+# This is Git's per-user configuration file.
+[user]
+    name = Andrew Faulkner
+    email = andfaulkner@gmail.com
+
+[alias]
+    amend = commit --amend
+    delete = branch -d 
+    rename = branch -m
+    newbranch = checkout -b
+
+[core]
+	editor = nvim
