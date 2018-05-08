@@ -12,6 +12,38 @@
 #PROMPT_COMMAND="history -a;history -c; history -r;$PROMPT_COMMAND"
 # Create effectively-infinite-length bash history file
 HISTSIZE=500000 HISTFILESIZE=5000000
+# Set history timestamp format
+# HISTTIMEFORMAT='%F %T '
+
+#------ Adapted from mrzool/sensible.bash -------#
+# Enable history expansion with <space> key
+# i.e. typing !! then pressing space (!!<space>) replaces !! w/ your last command
+bind Space:magic-space
+
+# Case-insensitive filename completion
+bind "set completion-ignore-case on"
+
+# Display ambiguous matching patterns on 1st tab nd "set show-all-if-ambiguous on"press
+# bind "set show-all-if-ambiguous on"
+
+# Immediately add trailing slash when autocompleting symlinks to dirs 
+bind "set mark-symlinked-directories on"
+
+# Don't add exit, ls, lsa, gs, gd, gl, bg, fg, history, or clear to the history list
+export HISTIGNORE="&:[ ]*:exit:ls:lsa:gs:gd:gl:bg:fg:history:clear"
+
+# Save multi-line commands to the history as one command
+shopt -s cmdhist
+
+# Prepend cd to directory names automatically
+shopt -s autocd 2> /dev/null
+# Correct spelling errors during tab-completion
+shopt -s dirspell 2> /dev/null
+# Correct spelling errors in arguments supplied to cd
+shopt -s cdspell 2> /dev/null
+#-----------------------------------------------#
+
+
 
 #=== FUNCTION ==========================================================
 #        NAME:  location
