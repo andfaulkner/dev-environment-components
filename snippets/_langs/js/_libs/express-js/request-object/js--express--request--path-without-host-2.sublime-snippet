@@ -1,0 +1,8 @@
+<snippet>
+  <description>Get the path the request was sent to (excludes host) e.g. '/auth/home'</description>
+<content><![CDATA[
+req.originalUrl
+]]></content>  
+  <tabTrigger>expr_req_path_without_host</tabTrigger>
+  <scope>source.js, source.ts, source.jsx, source.tsx</scope>
+</snippet>
