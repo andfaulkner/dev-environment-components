@@ -1,0 +1,10 @@
+<snippet>
+  <description>Create a 2-col table</description>
+<content><![CDATA[
+| ${1:Column 1 title} | ${2:Column 2 title} |
+|-${1/./-/g}-|-${2/./-/g}-|
+|${3: Col 1 content } | ${4: Col 2 content } |
+]]></content>  
+  <tabTrigger>table_2_col</tabTrigger>
+  <scope>text.html.markdown, text.md, text.markdown</scope>
+</snippet>
