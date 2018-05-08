@@ -35,13 +35,14 @@ RENAMING BRANCHES
 CLONE INTO SPECIFIC FOLDER
     git clone https://github.com/andfaulkner/some-repo name-of-folder-to-clone-into
 
-DIFF AGAINST REMOTE
-    git diff master origin/master
+DIFFING
+-- diff against remote                git diff master origin/master
+-- diff files w matching extensions   git diff branch-to-diff-against *.{js,ts,kt}
 
 STASH
 -- diff against old stash		git stash show stash@{3}
 -- list all old stashes			git stash list
--- apply old stash			git stash apply stash@{1}s
+-- apply old stash			    git stash apply stash@{1}s
 
 REMOTE REPO ("origin")
 -- get URL of remote location (e.g. origin)       git remote get-url origin
