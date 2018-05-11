@@ -101,7 +101,21 @@ alias tsnodemon="nodemon --exec 'ts-node'"
 alias ts_nodemon="tsnodemon" 
 
 #overrides the one defined in bashrc_sys_util (snippets/scripts/sh/sys_util_scripts.sh)
-alias nukenode='echo "from node_scripts.sh"; ps aux | ack "node|gulp|npm|nvm|grunt|cordova|mocha|webpack|babel|livereload|pm2" | ack -v "((tsserver)|(typingsInstaller\.js)|([0-9][0-9]\.[0-9][0-9]\sn?vim\s.*))" | awk "{print \$2}" | xargs kill -9; pm2 delete all; pm2 kill'
+function nukenode {
+    echo "from node_scripts.sh"
+
+    ps aux \
+    | ack "node|gulp|npm|nvm|grunt|cordova|mocha|webpack|babel|livereload|pm2" \
+    | ack -v "((tsserver)|(Slack)|(typingsInstaller\.js)|([0-9][0-9]\.[0-9][0-9]\sn?vim\s.*))" \
+    | awk "{print \$2}" \
+    | xargs kill -9
+
+    pm2 delete all
+    pm2 kill
+}
+
+# ps aux | ack "node|gulp|npm|nvm|grunt|cordova|mocha|webpack|babel|livereload|pm2" | ack -v "((tsserver)|(typingsInstaller\.js)|(Slack))"
+
 alias nukenodesrv="ps aux | grep node | grep -v 'gulp' | awk '{print \$2}' | xargs kill -9"
 alias nukeember="ps aux | grep ember | awk '{print \$2}' | xargs kill -9"
 
