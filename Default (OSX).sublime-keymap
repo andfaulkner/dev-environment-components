@@ -1,4 +1,7 @@
 [
+
+  { "keys": ["alt+i"], "command": "list_imports" },
+
   { "keys": ["command+alt+n"], "command": "jump_to_interactive" },
   { "keys": ["command+alt+shift+n"], "command": "jump_to_interactive", "args": { "extend": true } },
 
