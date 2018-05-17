@@ -5,7 +5,7 @@ interface ${1}Props {}
 
 ${3:@inject('appState')
 @observer}${3/.+/
-/g}export class ${1:ComponentName} extends React.Component<${2:${1}Props}, {}> {
+/g}export class ${1:ComponentName} extends React.Component<${2:${1}Props}> {
     render() {
         return (
             ${4:<span></span>}
