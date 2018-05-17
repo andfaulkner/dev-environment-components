@@ -1,0 +1,8 @@
+<snippet>
+  <description>Type w all DOM attributes for an heading HTML tag/element</description>
+<content><![CDATA[
+Partial<OmitReactProperties<HTMLAttributes.h>>
+]]></content>  
+  <tabTrigger>ts_rct_type_tag_heading</tabTrigger>
+  <scope>source.ts, source.tsx</scope>
+</snippet>

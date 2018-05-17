@@ -1,0 +1,8 @@
+<snippet>
+  <description>Type w all DOM attributes for an HTML div tag/element</description>
+<content><![CDATA[
+Partial<OmitReactProperties<HTMLAttributes.div>>
+]]></content>  
+  <tabTrigger>ts_div_type_rct</tabTrigger>
+  <scope>source.ts, source.tsx</scope>
+</snippet>
