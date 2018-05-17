@@ -1,0 +1,10 @@
+<snippet>
+  <description>New react class method</description>
+<content><![CDATA[
+public ${1:methodName} = (${2:event?: React.MouseEvent}) => {
+    ${0:// code e.g. this.props.appState.doThings}
+}
+]]></content>  
+  <tabTrigger>rct_new_class_method</tabTrigger>
+  <scope>source.ts, source.tsx</scope>
+</snippet>
