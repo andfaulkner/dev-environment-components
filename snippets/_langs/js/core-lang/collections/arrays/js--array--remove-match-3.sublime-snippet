@@ -1,0 +1,11 @@
+<snippet>
+  <description>Remove single matching item from array (MUTATIVE!)</description>
+<content><![CDATA[
+const matchIdx = ${1:arr}.findIndex(item => ${2:matchCondition e.g. item.keyToMatch === valToMatch});
+if (matchIdx !== -1) {
+    ${1:arr}.splice(matchIdx, 1);
+}
+]]></content>  
+  <tabTrigger>arr_remove_matching_item</tabTrigger>
+  <scope>source.js, source.ts, source.jsx, source.tsx</scope>
+</snippet>

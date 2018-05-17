@@ -1,0 +1,8 @@
+<snippet>
+  <description>Remove single item at index from array</description>
+<content><![CDATA[
+${1:arr}.splice(${2:idx}, 1);
+]]></content>  
+  <tabTrigger>arr_remove_item_at_idx</tabTrigger>
+  <scope>source.js, source.ts, source.jsx, source.tsx</scope>
+</snippet>
