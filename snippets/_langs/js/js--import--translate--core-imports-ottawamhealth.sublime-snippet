@@ -1,0 +1,8 @@
+<snippet>
+  <description>Import translate from Ottawa mHealth's core imports module</description>
+<content><![CDATA[
+import {translate} from '@ottawamhealth/core-imports';
+]]></content>  
+  <tabTrigger>imptranslate</tabTrigger>
+  <scope>source.js, source.ts, source.jsx, source.tsx</scope>
+</snippet>
