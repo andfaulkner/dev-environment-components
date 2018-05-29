@@ -1,0 +1,31 @@
+<snippet>
+  <description>New method decorator</description>
+<content><![CDATA[
+/**
+ * @function @decorator ${1:decoratorName}
+ * @description ${2}
+ */
+function ${1:decoratorName}(${3:args}) {
+    return function decorate${1/^([a-zA-Z])([^A-Z]+)([^a-z])?([^A-Z]+)?([^a-z])?([^A-Z]+)?([^a-z])?([^A-Z]+)?$|.*/\U$1\L$2\U$3\L$4\U$5\L$6\U$7\L$8/:name}(target, name, descriptor) {
+      const origMethod = descriptor.value;
+
+      descriptor.value = function returnedWrappedMethodFor${1/^([a-zA-Z])([^A-Z]+)([^a-z])?([^A-Z]+)?([^a-z])?([^A-Z]+)?([^a-z])?([^A-Z]+)?$|.*/\U$1\L$2\U$3\L$4\U$5\L$6\U$7\L$8/:name}(target, name, descriptor) {
+        ${0:// Note: "this" is instance of class containing the method here
+        // Runs on method call
+        // Can store the result in a prop, do things with it, then return result after e.g.:
+        //     const result = origMethod.bind(this)();
+        // No ret val required, but the orig method won't return a result if you don't
+        //   - You can return some other result instead of the result of calling the orig method
+        // **** DO NOT USE AN ARROW FUNCTION!!! It will fuck up the this binding ****
+        log.info(`returnedWrappedMethodFor${1/^([a-zA-Z])([^A-Z]+)([^a-z])?([^A-Z]+)?([^a-z])?([^A-Z]+)?([^a-z])?([^A-Z]+)?$|.*/\U$1\L$2\U$3\L$4\U$5\L$6\U$7\L$8/:name} :: this:`, this);}
+        // Original wrapped method call
+        return origMethod.bind(this)(${4:/* Place props to inject here */});
+      };
+
+      return descriptor;
+    }
+}
+]]></content>  
+  <tabTrigger>new_ts_decorator_method</tabTrigger>
+  <scope>source.ts, source.tsx</scope>
+</snippet>
