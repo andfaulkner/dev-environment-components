@@ -48,6 +48,14 @@ pip3 install --upgrade pip
 pip install --upgrade setuptools
 pip3 install --upgrade neovim # Get Neovim working with Python
 
+# Go setup installations
+brew install go
+mkdir ~/projects
+mkdir $HOME/projects/go
+export GOPATH=$HOME/projects/go
+echo 'export GOPATH=$HOME/projects/go' >> $HOME/.bash_profile
+echo 'export PATH=$PATH:$GOPATH/bin' >> $HOME/.bash_profile
+
 ##################### VERSION MANAGERS #####################
 # Install rbenv (ruby version manager)
 brew install rbenv
