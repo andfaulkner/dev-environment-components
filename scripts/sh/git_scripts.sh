@@ -239,7 +239,7 @@ alias gpullom="g_pullom"
 function g_pr {
     location "git_scripts.sh"
     if [ ! -z "$1" ] || [ ! -z "$1" ]; then
-        hub pull-request -h `g_curbr` -b $1 --message=$2
+        hub pull-request -h `g_curbr` -b $1 --message="$2"
     else
         echo "Error: g_pr requires 2 string arguments"
         echo ""
