@@ -3,45 +3,48 @@
 /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 
 # Install neovim / nvim
-brew install neovim
+brew add neovim
 
 # Install CLI utils
-brew install ack
-brew install jq
-brew install tree
-brew install readline
-brew install wget
-brew install watchman
-brew install openssl
+brew add ack
+brew add jq
+brew add tree
+brew add readline
+brew add wget
+brew add watchman
+brew add openssl
+brew add gettext
 
 # Install source control systems
-brew install git
-brew install hub # Github extensions to git
-brew install subversion
-brew install maven
+brew add git
+brew add hub # Github extensions to git
+brew add subversion
+brew add maven
 
 # Install languages
-brew install gradle
-brew install python
-brew install python3 # Also installs pip
-brew install groovy
-brew install elixir
-brew install kotlin
+brew add gradle
+brew add python
+brew add python3 # Also installs pip
+brew add groovy
+brew add elixir
+brew add kotlin
 
 # Install package managers
-brew install leiningen
-brew install yarn
+brew add leiningen
+brew add yarn
 
-# Install DBs (databases)
-brew install postgresql
-brew install redis
-brew install sqlite
-brew install mongodb
+#### Install DBs (databases) ####
+# postgres + helpers
+brew add postgresql
+brew add pgbadger
+brew add redis
+brew add sqlite
+brew add mongodb
 
 # Install completions
-brew install pip-completion
-brew install gem-completion
-brew install bash-completion
+brew add pip-completion
+brew add gem-completion
+brew add bash-completion
 
 # Python setup installations 
 pip3 install --upgrade pip
@@ -49,7 +52,7 @@ pip install --upgrade setuptools
 pip3 install --upgrade neovim # Get Neovim working with Python
 
 # Go setup installations
-brew install go
+brew add go
 mkdir ~/projects
 mkdir $HOME/projects/go
 export GOPATH=$HOME/projects/go
@@ -58,7 +61,7 @@ echo 'export PATH=$PATH:$GOPATH/bin' >> $HOME/.bash_profile
 
 ##################### VERSION MANAGERS #####################
 # Install rbenv (ruby version manager)
-brew install rbenv
+brew add rbenv
 
 # Install nvm 
 curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.8/install.sh | bash
