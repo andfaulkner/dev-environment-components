@@ -16,6 +16,7 @@ brew install openssl
 
 # Install source control systems
 brew install git
+brew install hub # Github extensions to git
 brew install subversion
 brew install maven
 
