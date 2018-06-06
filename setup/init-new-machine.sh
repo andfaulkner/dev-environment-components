@@ -5,7 +5,7 @@
 # Install neovim / nvim
 brew add neovim
 
-# Install CLI utils
+# Install CLI utils & misc
 brew add ack
 brew add jq
 brew add tree
@@ -14,6 +14,8 @@ brew add wget
 brew add watchman
 brew add openssl
 brew add gettext
+brew add curl
+brew add llvm@4
 
 # Install source control systems
 brew add git
