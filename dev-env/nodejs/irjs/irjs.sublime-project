@@ -1,0 +1,12 @@
+{
+  "folders":
+  [
+    {
+      "path": ".",
+      "folder_exclude_patterns": ["node_modules"]
+    },
+    {
+	  "path": "/Users/andrew/Library/Application Support/Sublime Text 3/Packages/User/snippets"
+	}
+  ]
+}
