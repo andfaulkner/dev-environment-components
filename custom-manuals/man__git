@@ -50,5 +50,9 @@ REMOTE REPO ("origin")
      1) Remove existing origin url:  git remote remove origin
      2) Add new origin location:     git remote add origin https://github.com/andfaulkner/newrepo.git
 
+DELETE BRANCH (BOTH LOCAL & REMOTE)
+-- Delete remote branch         git push origin --delete <branch-name>
+-- Delete local branch          git branch -D <branch-name>
+
 --------------------------------------------------------------------------------------------------------\n
 CLI_MANUAL_FOR_GIT
