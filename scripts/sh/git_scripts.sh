@@ -230,4 +230,8 @@ alias gpullom="g_pullom"
 #function reclaimbranch
 #git remote add origin git@andfaulkner.github.com:andfaulkner/$1"
 
+alias g_pr__master_to_dev='hub pull-request -h master -b dev --message="[DEPLOYMENT] master->dev" -f'
+alias g_pr__dev_to_qa='hub pull-request -h dev -b qa --message="[DEPLOYMENT] dev->qa" -f'
+alias g_pr__qa_to_uat='hub pull-request -h qa -b uat --message="[DEPLOYMENT] qa->uat" -f'
+
 echo '* git scripts loaded!'
