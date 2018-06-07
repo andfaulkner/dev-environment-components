@@ -12,7 +12,6 @@ brew add tree
 brew add readline
 brew add wget
 brew add watchman
-brew add openssl
 brew add gettext
 brew add curl
 brew add llvm@4
