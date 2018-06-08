@@ -15,6 +15,14 @@ HISTSIZE=500000 HISTFILESIZE=5000000
 # Set history timestamp format
 # HISTTIMEFORMAT='%F %T '
 
+parse_git_branch() {
+     git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ (\1)/'
+}
+
+export PS1="\W\$(parse_git_branch) \$ "
+
+#PS1="\W\$(parse_git_branch) \$ "
+
 #------ Adapted from mrzool/sensible.bash -------#
 # Enable history expansion with <space> key
 # i.e. typing !! then pressing space (!!<space>) replaces !! w/ your last command
@@ -388,7 +396,7 @@ alias killchrome="ps aux | ack \"\/[gG]oogle\ ?[cC]hrome\" | awk '{print \$2}' |
 _common_cmds_autocomplete()
 {
     local cur=${COMP_WORDS[COMP_CWORD]}
-    COMPREPLY=( $(compgen -W "client server clean run clientprod serverprod cleanprod cleanfull runprod help util start test getstrings jvlnslocal jvlnsremote" -- $cur) )
+    COMPREPLY=( $(compgen -W "client server clean run clientprod serverprod cleanprod cleanfull runprod help util start test getstrings jvlnslocal jvlnsremote prettierall" -- $cur) )
 }
 complete -F _common_cmds_autocomplete ./common-cmds
 
