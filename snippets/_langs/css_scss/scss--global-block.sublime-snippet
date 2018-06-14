@@ -1,0 +1,10 @@
+<snippet>
+	<description>Create global block</description>
+	<content><![CDATA[
+:global {
+	${0}
+}
+]]></content>
+	<tabTrigger>global</tabTrigger>
+	<scope>source.scss, source.postcss, source.css</scope>
+</snippet>
