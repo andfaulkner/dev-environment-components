@@ -5,11 +5,11 @@
  * @function @decorator ${1:decoratorName}
  * @description ${2}
  */
-function ${1:decoratorName}(${3:args}) {
+function ${1:decoratorName}(${3:opts}) {
     return function decorate${1/^([a-zA-Z])([^A-Z]+)([^a-z])?([^A-Z]+)?([^a-z])?([^A-Z]+)?([^a-z])?([^A-Z]+)?$|.*/\U$1\L$2\U$3\L$4\U$5\L$6\U$7\L$8/:name}(target, name, descriptor) {
       const origMethod = descriptor.value;
 
-      descriptor.value = function returnedWrappedMethodFor${1/^([a-zA-Z])([^A-Z]+)([^a-z])?([^A-Z]+)?([^a-z])?([^A-Z]+)?([^a-z])?([^A-Z]+)?$|.*/\U$1\L$2\U$3\L$4\U$5\L$6\U$7\L$8/:name}(target, name, descriptor) {
+      descriptor.value = function returnedWrappedMethodFor${1/^([a-zA-Z])([^A-Z]+)([^a-z])?([^A-Z]+)?([^a-z])?([^A-Z]+)?([^a-z])?([^A-Z]+)?$|.*/\U$1\L$2\U$3\L$4\U$5\L$6\U$7\L$8/:name}(...args) {
         ${0:// Note: "this" is instance of class containing the method here
         // Runs on method call
         // Can store the result in a prop, do things with it, then return result after e.g.:
