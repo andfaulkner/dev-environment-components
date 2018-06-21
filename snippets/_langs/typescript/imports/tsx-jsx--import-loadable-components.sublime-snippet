@@ -1,0 +1,8 @@
+<snippet>
+  <description>Import loadable-components module (for es6, typescript)</description>
+<content><![CDATA[
+import loadable from 'loadable-components';
+]]></content>  
+  <tabTrigger>imp_loadable_components</tabTrigger>
+  <scope>source.tsx, source.jsx</scope>
+</snippet>
