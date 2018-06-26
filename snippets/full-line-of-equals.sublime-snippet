@@ -1,0 +1,7 @@
+<snippet>
+  <description>Full line of equals signs i.e. ====[...rest of line...]====</description>
+<content><![CDATA[
+====================================================================================================
+]]></content>  
+  <tabTrigger>===</tabTrigger>
+</snippet>
