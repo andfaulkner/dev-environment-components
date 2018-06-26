@@ -1,0 +1,7 @@
+<snippet>
+  <description>Full line of dashes i.e. ----[...rest of line...]----</description>
+<content><![CDATA[
+----------------------------------------------------------------------------------------------------
+]]></content>  
+  <tabTrigger>---</tabTrigger>
+</snippet>
