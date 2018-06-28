@@ -115,6 +115,8 @@ function gac {
     fi  
 }
 
+alias gas="gac"
+
 # function g_diff_remote {
 #  CURRENT_BRANCH=$(echo $(g_curbr))
 #  echo $CURRENT_BRANCH
