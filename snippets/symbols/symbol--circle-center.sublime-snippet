@@ -1,0 +1,7 @@
+<snippet>
+  <description>Symbol: Small circle in center :: ○</description>
+<content><![CDATA[
+○
+]]></content>  
+  <tabTrigger>sym_circle_centre</tabTrigger>
+</snippet>
