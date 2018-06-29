@@ -1,0 +1,7 @@
+<snippet>
+  <description>Symbol: dot in center :: •</description>
+<content><![CDATA[
+•
+]]></content>  
+  <tabTrigger>sym_dot_centre</tabTrigger>
+</snippet>
