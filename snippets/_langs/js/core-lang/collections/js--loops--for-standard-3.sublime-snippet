@@ -1,0 +1,10 @@
+<snippet>
+  <description>Standard for loop. Iterate thru array, include index on each loop</description>
+<content><![CDATA[
+for (let ${1:idx} = 0; ${1:idx} < ${2:arr}.length; ${1:idx}++) {
+    ${0}
+}
+]]></content>  
+  <tabTrigger>forloop</tabTrigger>
+  <scope>source.js, source.ts, source.jsx, source.tsx</scope>
+</snippet>
