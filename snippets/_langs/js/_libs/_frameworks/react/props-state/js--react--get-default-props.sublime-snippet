@@ -1,5 +1,5 @@
 <snippet>
-		<description>getDefaultProps method for a react component</description>
+		<description>getDefaultProps method for a React component</description>
     <content><![CDATA[
 getDefaultProps: function(){
 	return {
@@ -8,8 +8,6 @@ getDefaultProps: function(){
 	};
 },
 ]]></content>
-    <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
     <tabTrigger>rct_gdp</tabTrigger>
-    <!-- Optional: Set a scope to limit where the snippet will trigger -->
-    <!-- <scope>source.python</scope> -->
+    <scope>source.js, source.jsx, source.ts, source.tsx</scope>
 </snippet>

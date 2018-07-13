@@ -1,0 +1,12 @@
+<snippet>
+  <description>Set default props on a React class component</description>
+<content><![CDATA[
+static defaultProps = {
+    ${1:prop1: 'propVal1',
+    prop2: 'propVal2',
+    etc: 'etc etc etc'}
+};
+]]></content>  
+  <tabTrigger>rct_default_props_set</tabTrigger>
+  <scope>source.js, source.ts, source.jsx, source.tsx</scope>
+</snippet>
