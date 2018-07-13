@@ -4,7 +4,8 @@
 
 echo "* NodeJS scripts loading..."
 
-export NODE_PATH=$NODE_PATH:/Users/andrew/.nvm/versions/node/v8.0.0/lib/node_modules:/usr/lib/nodejs:/usr/lib/node_modules:/usr/share/javascript:/usr/local/lib/node_modules
+# export NODE_PATH=$NODE_PATH:/Users/andrew/.nvm/versions/node/v8.0.0/lib/node_modules:/usr/lib/nodejs:/usr/lib/node_modules:/usr/share/javascript:/usr/local/lib/node_modules
+export NODE_PATH=$NODE_PATH:$HOME/.nvm/versions/node/v8.10.0/lib/node_modules:/usr/lib/nodejs:/usr/lib/node_modules:/usr/share/javascript:/usr/local/lib/node_modules
 
 ################################## npm ################################## 
 # GLOBAL INSTALL
@@ -49,7 +50,6 @@ function yat() {
         echo "you must specify a module name to install type definitions"
     fi
 }
-
 
 ############################### PROJECT CONVENIENCE FUNCTIONS ############################## 
 alias cnc="./common-npm-commands"
@@ -222,6 +222,7 @@ function emb_proj_deps {
     unset MAX_LENGTH
 }
 
+
 ################################################################################
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ VERSION ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 ################################################################################
@@ -229,9 +230,6 @@ alias node_version='echo "$(eval node -v)" > .node-version' # set current versio
 
 # alias slicesenerr="cat test.txt | sed 's/     at/\n          at/g' | sed 's/trace=/\n\ntrace=/g'| sed 's/column=/\n    ---->COLUMN = /g' | sed 's/\/home\/andfaulkner\/Projects\/testbed\/testbed-seneca--4//g' | sed 's/, execPath=/,\n  execPath=/g' | sed 's/, argv=/,\n  argv=/g' | sed 's/, rss=/,\n  rss=/g' | sed 's/, heapTotal=/,\n  heapTotal=/g' | sed 's/, loadav
 #alias slicesenerr="cat test.txt | sed 's/     at/\n          at/g'" 
-
-#enables completion for npm commands in cli
-. <(npm completion)
 
 # ensure proper node version loads based on value in .node-version in project folder
 # [[ -s "$HOME/.profile" ]] && source "$HOME/.profile" # Load the default .profile
@@ -286,8 +284,8 @@ alias electronrun="~/.yarn-cache/.global/node_modules/electron/dist/Electron.app
 
 # increase the current node version
 function bump_node {
-    tir "/Users/andrew/Library/Application Support/Sublime Text 3/Packages/User/SublimeLinter.sublime-settings" --replace "\.nvm\/versions\/node\/v[0-9]\.[0-9]\.[0-9]\/" ".nvm/versions/node/v$1/"
-    tir "/Users/andrew/Library/Application Support/Sublime Text 3/Packages/User/Preferences.sublime-settings" --replace "\.nvm\/versions\/node\/v[0-9]\.[0-9]\.[0-9]\/" ".nvm/versions/node/v$1/"
+    tir "$HOME/Library/Application Support/Sublime Text 3/Packages/User/SublimeLinter.sublime-settings" --replace "\.nvm\/versions\/node\/v[0-9]\.[0-9]\.[0-9]\/" ".nvm/versions/node/v$1/"
+    tir "$HOME/Library/Application Support/Sublime Text 3/Packages/User/Preferences.sublime-settings" --replace "\.nvm\/versions\/node\/v[0-9]\.[0-9]\.[0-9]\/" ".nvm/versions/node/v$1/"
 }
 
 #
@@ -326,7 +324,7 @@ npm_tag_publish_version() {
     echo "Published v$1 of $(curdir)!"
 }
 
-alias weather="node /Users/andrew/projects/new_node_modules/weather/weather.js"
+alias weather="node $HOME/projects/new_node_modules/weather/weather.js"
 
 ########## CouchDB ###########
 alias nukecouchdb="ps aux | ack couchdb | awk '{print \$2}' | sudo xargs kill -9"
@@ -339,7 +337,8 @@ alias npm_git_tag_w_ver="git tag v\"\$(jq .version package.json | sed -e 's/^\"/
 
 alias npm_get_cur_proj_version='cat package.json | ack "\"version\": \"[0-9]{1,4}\.[0-9]{1,4}\.[0-9]{1,4}\","'
 
-echo "* NodeJS scripts loaded!"
+# Enables completion for npm commands in cli
+. <(npm completion)
 
 # yard is also a type of ruby gem
 # alias yard="yarn"
@@ -351,4 +350,6 @@ alias mymoduleversions='npm_mymodules'
 alias npm_mymodulesall='cat package.json | ack --no-color "\"((mad-logs)|(mad-utils)|(@ottawamhealth\/[a-zA-Z-_$]+)|(kidnap-console)|(env-var-helpers)|(errorcatcher)|(common-constants))\"":'
 
 alias yarn_ottawamhealth_upgrade_main_internal_libs="yarn upgrade mad-utils mad-logs env-var-helpers @ottawamhealth/canimmunize-javelinscript; echo 'If required, you can also install @ottawamhealth/auth-handler next - it was left out due to having had significant breaking changes across versions. Be sure to upgrade it very carefully. Cmd:\n    yarn upgrade @ottawamhealth/auth-handler'"
+
+echo "* NodeJS scripts loaded!"
 
