@@ -8,6 +8,7 @@
     delete = branch -d 
     rename = branch -m
     newbranch = checkout -b
+    co = checkout 
 
 [core]
 	editor = nvim
