@@ -1,7 +1,7 @@
 <snippet>
-  <description>Ultra-verbose inspect config output</description>
+  <description>Node: ultra-verbose inspect config output</description>
 <content><![CDATA[
-{ showHidden: true, colors: true, depth: 10, maxArrayLength: Infinity }
+{showHidden: true, colors: true, depth: 10, maxArrayLength: Infinity}
 ]]></content>  
   <tabTrigger>inspect_verbose_output</tabTrigger>
   <scope>source.js, source.ts, source.jsx, source.tsx</scope>
