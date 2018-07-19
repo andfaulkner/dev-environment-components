@@ -15,6 +15,7 @@ brew add watchman
 brew add gettext
 brew add curl
 brew add llvm@4
+brew add moreutils # Adds sponge, etc
 
 # Install source control systems
 brew add git
