@@ -288,7 +288,8 @@ function bump_node {
     tir "$HOME/Library/Application Support/Sublime Text 3/Packages/User/Preferences.sublime-settings" --replace "\.nvm\/versions\/node\/v[0-9]\.[0-9]\.[0-9]\/" ".nvm/versions/node/v$1/"
 }
 
-# local VERSION_INPUT="$(jq '.version' package.json | tr -d '\"v')"
+# Get npm package version from current project
+alias npm_get_package_version="echo $(jq '.version' package.json | tr -d '\"v')"
 
 # Set package version to given value
 function npm_set_package_version() {
