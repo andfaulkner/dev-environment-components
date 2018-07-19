@@ -97,9 +97,6 @@ alias g_deploy_qa_to_uat="__g_deploy_branch1_to_branch2__ qa uat"
 # Create deployment PR from qa to uat branch (optional: new version #)
 alias g_deploy_uat_to_prod="__g_deploy_branch1_to_branch2__ uat prod"
 
-# alias g_deploy_dev_to_qa='git checkout dev; git pull origin dev; git push origin dev; g_pr__dev_to_qa'
-# alias g_deploy_qa_to_uat='git checkout qa; git pull origin qa; git push origin qa; g_pr__qa_to_uat'
-
 ######################################## MODULE PUBLISHING #########################################
 #=== FUNCTION ==========================================================
 # Full publication workflow for npm utility modules
