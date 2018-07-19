@@ -15,7 +15,7 @@ brew add watchman
 brew add gettext
 brew add curl
 brew add llvm@4
-brew add moreutils # Adds sponge, etc
+brew add moreutils # Adds sponge, etc - see https://rentes.github.io/unix/utilities/2015/07/27/moreutils-package
 
 # Install source control systems
 brew add git
