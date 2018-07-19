@@ -243,6 +243,10 @@ export NVM_DIR="$HOME/.nvm"
 
 alias ember_dep_surge="rm -rf dist; ember build --environment=development; cd dist; cp index.html 200.html; surge" # if site already exists, provide it here 
 
+####################################################################################################
+########################### NPM PUBLISHING & VERSION HANDLING UTILITIES ############################
+####################################################################################################
+source "$SNIPPETS_DIR/scripts/sh/npm_publishing_utils.sh"
 
 ####################################################################################################
 ################################### NEW NODE PROJECT GENERATORS ####################################
@@ -254,6 +258,7 @@ alias typescript='find . -name "*.ts" | xargs tsc -w'
 # customized REPL. Provides certain preloadingactions as present in repls like irb
 alias irjs='"$SNIPPETS_DIR/dev-env/nodejs/irjs/irjs"'
 
+# TODO remove typings scripts
 ########### TYPESCRIPT #############
 function type_install_global {
     typings install --global --save "dt~$1"
@@ -273,95 +278,19 @@ function tnis {
     set +o nounset
 }
 
-
 alias npmscripts='awk "/scripts/,/}/" package.json | ack -v "\s\s}" | ack -v "\s\s\"scripts\":"'
 alias npmreact_deps='cat package.json | ack "react|redux|recompose|jsdom|reselect|normalizr|enzyme|jest|updeep|reduce-reducers|mobx" | trim'
 
+# Misc external programs
 alias twitter="echo 'logging into twitter via birdknife...'; birdknife"
-
 alias electronrun="~/.yarn-cache/.global/node_modules/electron/dist/Electron.app/Contents/MacOS/Electron"
-
-################################### NPM VERSIONING / PUBLISHING ####################################
-# Increase the current node version
-function bump_node {
-    tir "$HOME/Library/Application Support/Sublime Text 3/Packages/User/SublimeLinter.sublime-settings" --replace "\.nvm\/versions\/node\/v[0-9]\.[0-9]\.[0-9]\/" ".nvm/versions/node/v$1/"
-    tir "$HOME/Library/Application Support/Sublime Text 3/Packages/User/Preferences.sublime-settings" --replace "\.nvm\/versions\/node\/v[0-9]\.[0-9]\.[0-9]\/" ".nvm/versions/node/v$1/"
-}
-
-# Get npm package version from current project
-alias npm_get_package_version="echo $(jq '.version' package.json | tr -d '\"v')"
-
-# Set package version to given value
-function npm_set_package_version() {
-    if [ -n "$1" ]; then
-        local VERSION_INPUT="$(echo $1 | tr -d '\"v')"
-        jq ".version = \"$VERSION_INPUT\"" package.json | sponge package.json
-    else
-        echo "npm_set_package_version requires a version number"
-        echo "Usage:    npm_set_package_version VERSION_NUMBER"
-        echo "Example:  npm_set_package_version 1.5.21"
-    fi
-}
-
-# Full publication workflow for npm utility modules
-#   1. Change the version & the tag on the repo url in package.json to the given semver number
-#   2. Add, commit, and push the package.json change to master,
-#         commit message states what version it's being bumped to
-#   3. Create a git tag with said number (preceded by v), and push it to github.
-#   4. Publish the package to npm
-#
-# EXAMPLE: npm_tag_publish_version 0.31.2
-#   - Results in package.json:
-#      ...
-#      "repository": {
-#          "type": "git",
-#          "url": "git+https://github.com/andfaulkner/misc-ts-utils-isomorphic.git#v0.31.2"
-#      },
-#      "version": "0.31.2"
-#      ...
-#   - Commits change to package.json in master branch with message 'Bump to version 0.31.2'
-#   - creates git tag v0.31.2
-#   - publishes package version 0.31.2 to npm
-#
-# Note: requires 'tir' text replacement utility to be in your environment
-#
-npm_tag_publish_version() {
-    tir package.json --replace "\"version\": \"[0-9]{1,4}\.[0-9]{1,4}\.[0-9]{1,4}\"," "\"version\": \"$1\","
-    tir package.json --replace "\.git#v[0-9]{1,4}\.[0-9]{1,4}\.[0-9]{1,4}\"" ".git#v$1\""
-    rm ./package.json__bk # Remove automatic backup file created by tir
-    git add package.json
-    git commit -m "Bump to version $1"
-    git push origin master
-    git tag v$1;
-    git push origin v$1;
-    npm publish
-    echo "Published v$1 of $(curdir)!"
-}
-
 alias weather="node $HOME/projects/new_node_modules/weather/weather.js"
 
 ########## CouchDB ###########
 alias nukecouchdb="ps aux | ack couchdb | awk '{print \$2}' | sudo xargs kill -9"
 
-# alias npm_ver_inc="jq .version package.json | ruby -e 'puts STDIN.first.split(/[.\"]/).join.to_i+1'"
-# alias npm_git_tag_w_ver='git tag v"$(jq .version package.json | sed -e \'s/^"//\' -e \'s/"$//\')"'
-alias npm_git_tag_w_ver="git tag v\"\$(jq .version package.json | sed -e 's/^\"//' -e 's/\"$//')\""
-# alias npm_bumptag="versiony patch; npm_git_tag_w_ver; git tag;"
-# alias npm_bumptagpush="git add --all; git commit --all -m 'fixes before a bump'; versiony patch; git commit --all -m 'bump'; npm_git_tag_w_ver; git tag; git push origin \"v\$(jq -r .version package.json)\""
-
-alias npm_get_cur_proj_version='cat package.json | ack "\"version\": \"[0-9]{1,4}\.[0-9]{1,4}\.[0-9]{1,4}\","'
-
 # Enables completion for npm commands in cli
 . <(npm completion)
-
-# yard is also a type of ruby gem
-# alias yard="yarn"
-
-alias npm_hasmodule='cat package.json | ack'
-alias npm_mymodules='cat package.json | ack --no-color "\"((mad-logs)|(mad-utils)|(@ottawamhealth\/canimmunize-kavalinscript)|(env-var-helpers)|(common-constants))\"":'
-alias mymoduleversions='npm_mymodules'
-
-alias npm_mymodulesall='cat package.json | ack --no-color "\"((mad-logs)|(mad-utils)|(@ottawamhealth\/[a-zA-Z-_$]+)|(kidnap-console)|(env-var-helpers)|(errorcatcher)|(common-constants))\"":'
 
 alias yarn_ottawamhealth_upgrade_main_internal_libs="yarn upgrade mad-utils mad-logs env-var-helpers @ottawamhealth/canimmunize-javelinscript; echo 'If required, you can also install @ottawamhealth/auth-handler next - it was left out due to having had significant breaking changes across versions. Be sure to upgrade it very carefully. Cmd:\n    yarn upgrade @ottawamhealth/auth-handler'"
 
