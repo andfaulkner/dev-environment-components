@@ -279,16 +279,29 @@ alias npmreact_deps='cat package.json | ack "react|redux|recompose|jsdom|reselec
 
 alias twitter="echo 'logging into twitter via birdknife...'; birdknife"
 
-
 alias electronrun="~/.yarn-cache/.global/node_modules/electron/dist/Electron.app/Contents/MacOS/Electron"
 
-# increase the current node version
+################################### NPM VERSIONING / PUBLISHING ####################################
+# Increase the current node version
 function bump_node {
     tir "$HOME/Library/Application Support/Sublime Text 3/Packages/User/SublimeLinter.sublime-settings" --replace "\.nvm\/versions\/node\/v[0-9]\.[0-9]\.[0-9]\/" ".nvm/versions/node/v$1/"
     tir "$HOME/Library/Application Support/Sublime Text 3/Packages/User/Preferences.sublime-settings" --replace "\.nvm\/versions\/node\/v[0-9]\.[0-9]\.[0-9]\/" ".nvm/versions/node/v$1/"
 }
 
-#
+# local VERSION_INPUT="$(jq '.version' package.json | tr -d '\"v')"
+
+# Set package version to given value
+function npm_set_package_version() {
+    if [ -n "$1" ]; then
+        local VERSION_INPUT="$(echo $1 | tr -d '\"v')"
+        jq ".version = \"$VERSION_INPUT\"" package.json | sponge package.json
+    else
+        echo "npm_set_package_version requires a version number"
+        echo "Usage:    npm_set_package_version VERSION_NUMBER"
+        echo "Example:  npm_set_package_version 1.5.21"
+    fi
+}
+
 # Full publication workflow for npm utility modules
 #   1. Change the version & the tag on the repo url in package.json to the given semver number
 #   2. Add, commit, and push the package.json change to master,
