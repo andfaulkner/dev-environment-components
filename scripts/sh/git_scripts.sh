@@ -229,28 +229,4 @@ alias g_pullm="git pull origin master"
 alias gpullm="g_pullom"
 alias gpullom="g_pullom"
 
-#function reclaimbranch
-#git remote add origin git@andfaulkner.github.com:andfaulkner/$1"
-
-#=== FUNCTION ==========================================================
-#        NAME:  g_pr
-# DESCRIPTION:  Quickly create a PR to given branch, from current branch
-#   @PARAM $1:  Branch to PR to (from current branch)
-#   @PARAM $2:  Title of new Pull Request
-#=======================================================================
-function g_pr {
-    location "git_scripts.sh"
-    if [ ! -z "$1" ] || [ ! -z "$1" ]; then
-        hub pull-request -h `g_curbr` -b $1 --message="$2"
-    else
-        echo "Error: g_pr requires 2 string arguments"
-        echo ""
-        echo 'Usage [g_pr]  ::  g_pr branch-to-pr-to-from-cur-branch "Pull Request Title HERE"'
-    fi
-}
-
-alias g_pr__master_to_dev='hub pull-request -h master -b dev --message="[DEPLOYMENT] master->dev" -f'
-alias g_pr__dev_to_qa='hub pull-request -h dev -b qa --message="[DEPLOYMENT] dev->qa" -f'
-alias g_pr__qa_to_uat='hub pull-request -h qa -b uat --message="[DEPLOYMENT] qa->uat" -f'
-
 echo '* git scripts loaded!'
