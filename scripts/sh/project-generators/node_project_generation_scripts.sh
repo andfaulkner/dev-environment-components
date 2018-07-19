@@ -1,4 +1,4 @@
-echo "Project generation scripts loading..."
+echo "  -> Project generation scripts loading..."
 
 ####################################################################################################
 #                                   NODE PROJECT GENERATION SCRIPTS                                #
@@ -366,4 +366,4 @@ TYPESCRIPT
 
 source "$SNIPPETS_DIR/scripts/sh/project-generators/starterpack_node_webpack_babel_ts.sh"
 
-echo "Project generation scripts loaded!"
+echo "  -> Project generation scripts loaded!"
