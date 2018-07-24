@@ -1,0 +1,10 @@
+<snippet>
+  <description>Class getter</description>
+<content><![CDATA[
+get ${1:remainingTodosCount}()${2/.+/: /}${2:RetType} {
+    ${0:return this.todos.length - this.completedTodosCount;}
+}
+]]></content>  
+  <tabTrigger>cls_getter</tabTrigger>
+  <scope>source.ts, source.tsx</scope>
+</snippet>
