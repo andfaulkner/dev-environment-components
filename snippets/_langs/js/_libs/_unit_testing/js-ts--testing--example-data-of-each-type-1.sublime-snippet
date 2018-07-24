@@ -1,0 +1,35 @@
+<snippet>
+  <description>Set of example data items covering every type</description>
+<content><![CDATA[
+null
+undefined
+-Infinity
+-1
+0
+1
+Infinity
+NaN
+''
+'y'
+'Cannagittawawa'
+'Can I get a wat wat?'
+String()
+Function
+Function.prototype
+Object.prototype
+() => ''
+() => 'Some test function'
+function f() {}
+{}
+{a: 1}
+[]
+[null]
+['a', 999]
+true
+false
+Symbol()
+Symbol('Q')
+]]></content>  
+  <tabTrigger>test_example_data_of_each_type</tabTrigger>
+  <scope>source.js, source.ts, source.jsx, source.tsx</scope>
+</snippet>
