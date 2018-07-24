@@ -1,0 +1,14 @@
+<snippet>
+  <description>Create new computed getter on mobx class</description>
+<content><![CDATA[
+${4:/**
+ * description
+ */}
+@computed
+${3:public}${3/.+/ /}get ${1:remainingTodosCount}()${2/.+/: /}${2:RetType} {
+    ${0:return this.todos.length - this.completedTodosCount;}
+}
+]]></content>  
+  <tabTrigger>cls_getter_computed_mobx</tabTrigger>
+  <scope>source.js, source.ts, source.jsx, source.tsx</scope>
+</snippet>
