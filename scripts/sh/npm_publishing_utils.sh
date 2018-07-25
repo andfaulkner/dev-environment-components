@@ -63,8 +63,13 @@ alias g_pr__qa_to_uat='hub pull-request -h qa -b uat --message="[DEPLOYMENT] qa-
 function git_checkout_sync_branch() {
     if [ -n "$1" ]; then
         git checkout $1
-        git pull origin $1
+        git fetch origin $1
+        git merge -s recursive -X theirs origin/$1 -m "Merge from remote $1 branch [AUTOCOMMIT]"
         git push origin $1
+
+        # git checkout $1
+        # git pull origin $1 -m "Merged from remote $1 branch"
+        # git push origin $1
     else
         echo "USAGE: git_checkout_sync_branch BRANCH/BranchToCheckoutPullAndPush"
     fi
@@ -77,7 +82,8 @@ function __g_deploy_branch1_to_branch2__ {
     if [ -n "$3" ]; then
         jq ".version = \"$3\"" package.json | sponge package.json
         git add ./package.json
-        git commit -m "Bump package.json to v$3"
+        git commit -m "Bump package.json to v$3 [AUTOCOMMIT]"
+        git merge -s recursive -X ours origin/$1 -m "Merge from remote $1 branch after v$3 deploy to $2 [AUTOCOMMIT]"
         git push origin $1
     fi
     local VERSION="$(npm_get_package_version)" # Get npm package version
@@ -97,16 +103,24 @@ alias g_deploy_qa_to_uat="__g_deploy_branch1_to_branch2__ qa uat"
 # Create deployment PR from qa to uat branch (optional: new version #)
 alias g_deploy_uat_to_prod="__g_deploy_branch1_to_branch2__ uat prod"
 
+function _wait_2_min_w_info_during_deploy {
+    sleep 120
+    echo "$1 min passed (out of 11min wait)"
+}
 
 function _git_postdeployment_backmerge {
-    # Wait for deploy to finish
-    sleep 660
-    # Merge in back-commits from deployment
+    echo "Waiting 11min for deploy to finish..."
+    _wait_2_min_w_info_during_deploy 2
+    _wait_2_min_w_info_during_deploy 4
+    _wait_2_min_w_info_during_deploy 6
+    _wait_2_min_w_info_during_deploy 8
+    _wait_2_min_w_info_during_deploy 10
+    # Merge back-commits into original branch after deployment
     git checkout $1
     git add .
-    git commit -a -m "LOCAL CHANGES TO $1 BRANCH PRE-DEPLOY TO $2 [AUTOMATIC BRANCH]"
+    git commit -a -m "Local changes to $1 branch before deploy to $2 [AUTOCOMMIT]"
     git fetch origin $1
-    git merge -s recursive -X theirs origin/$1
+    git merge -s recursive -X theirs origin/$1 -m "Merge from remote $1 branch after deploy to $2 [AUTOCOMMIT]"
     git push origin $1
 	git checkout $2
 }
@@ -148,7 +162,6 @@ function g_deploy_full_master_to_uat {
 		g_deploy_qa_to_uat $1
 		# Merge changes deployment made to qa
 		_git_postdeployment_backmerge qa uat		
-		_git_postdeployment_backmerge qa uat
 		# Wait for deploy to finish
 		# sleep 660
         # Merge in back-commits from deployment
