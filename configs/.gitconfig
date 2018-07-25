@@ -9,6 +9,9 @@
     rename = branch -m
     newbranch = checkout -b
     co = checkout 
+    revert1 = revert HEAD
+    revert2 = revert HEAD~1^..HEAD
+    revert3 = revert HEAD~2^..HEAD
 
 [core]
 	editor = nvim
