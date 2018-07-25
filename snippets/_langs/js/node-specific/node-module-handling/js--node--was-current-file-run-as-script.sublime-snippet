@@ -1,0 +1,10 @@
+<snippet>
+  <description>Run the given function if the current file was run as a script</description>
+<content><![CDATA[
+const findFilenameRegex = new RegExp(path.basename(__filename).replace('.', '.'));
+const wasScript = !!findFilenameRegex.exec(process.argv[1]);
+if (wasScript) ${1:exportedFunctionToRun}();
+]]></content>  
+  <tabTrigger>was_run_as_script_node</tabTrigger>
+  <scope>source.js, source.ts</scope>
+</snippet>
