@@ -286,6 +286,16 @@ alias twitter="echo 'logging into twitter via birdknife...'; birdknife"
 alias electronrun="~/.yarn-cache/.global/node_modules/electron/dist/Electron.app/Contents/MacOS/Electron"
 alias weather="node $HOME/projects/new_node_modules/weather/weather.js"
 
+####################################################################################################
+################################# COMMON-CMDS CONVENIENCE ALIASES ##################################
+####################################################################################################
+alias ccr="./common-cmds run"
+alias ccs="./common-cmds server"
+alias cclcl="./common-cmds cleanclient"
+alias ccl="./common-cmds client"
+
+alias nrbw="npm run build-full; npm run watch-export"
+
 ########## CouchDB ###########
 alias nukecouchdb="ps aux | ack couchdb | awk '{print \$2}' | sudo xargs kill -9"
 
