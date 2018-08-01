@@ -1,9 +1,11 @@
 [
+  // Import handling
+  { "keys": [ "alt+i", "alt+l" ], "command": "list_imports" },
+  { "keys": [ "alt+i", "alt+u" ], "command": "remove_unused_imports" },
 
-  { "keys": ["alt+i"], "command": "list_imports" },
-
-  { "keys": ["command+alt+n"], "command": "jump_to_interactive" },
-  { "keys": ["command+alt+shift+n"], "command": "jump_to_interactive", "args": { "extend": true } },
+  // Hop to location in line based on match
+  { "keys": ["command+alt+n"],       "command": "jump_to_interactive" },
+  { "keys": ["command+alt+shift+n"], "command": "jump_to_interactive", "args": { "extend": true }},
 
   // Run prettier
   { "keys": [ "command+ctrl+t" ], "command": "js_prettier" },
@@ -12,40 +14,40 @@
   { "keys": [ "command+ctrl+shift+p" ], "command": "side_bar_copy_path_absolute_from_project" },
 
   // Find & replace :: in-file
-  { "keys": [ "command+shift+r" ], "command": "show_panel", "args": {"panel": "replace", "reverse": false } },
+  { "keys": [ "command+shift+r" ], "command": "show_panel", "args": {"panel": "replace", "reverse": false }},
 
 /******************************************** CONSOLE *********************************************/
-  { "keys": [ "ctrl+alt+k" ], "command": "clear_console" },
-  { "keys": [ "command+ctrl+shift+l" ], "command": "sublime.log_commands(True)" },
-  { "keys": [ "command+ctrl+shift+n" ], "command": "sublime.log_commands(False)" },
-  { "keys": [ "command+alt+r" ], "command": "save" },
+  { "keys": [ "ctrl+alt+k" ],           "command": "clear_console"                            },
+  { "keys": [ "command+ctrl+shift+l" ], "command": "sublime.log_commands(True)"               },
+  { "keys": [ "command+ctrl+shift+n" ], "command": "sublime.log_commands(False)"              },
+  { "keys": [ "command+alt+r" ],        "command": "save"                                     },
 
 /* (CTRL-SHIFT-[AVCI]) */
 /********************************************** GIT ***********************************************/
-  { "keys": [ "ctrl+shift+a" ], "command": "git_add_selected_hunk" },
-  { "keys": [ "ctrl+shift+v" ], "command": "git_toggle_annotations" },
-  { "keys": [ "ctrl+shift+g" ], "command": "git_commit" },
-  { "keys": [ "ctrl+shift+i" ], "command": "git_commit_amend" },
+  { "keys": [ "ctrl+shift+a" ], "command": "git_add_selected_hunk"                            },
+  { "keys": [ "ctrl+shift+v" ], "command": "git_toggle_annotations"                           },
+  { "keys": [ "ctrl+shift+g" ], "command": "git_commit"                                       },
+  { "keys": [ "ctrl+shift+i" ], "command": "git_commit_amend"                                 },
 
 /**************************************** SIDEBAR HANDLING ****************************************/
-  { "keys": [ "alt+r" ],                "command": "side_bar_rename"                         },
-  { "keys": [ "alt+d" ],                "command": "side_bar_duplicate"                      },
-  { "keys": [ "alt+f" ],                "command": "side_bar_new_directory"                  },
-  { "keys": [ "alt+n" ],                "command": "side_bar_new_file"                       },
-  { "keys": [ "alt+shift+d" ],          "command": "side_bar_delete"                         },
-  { "keys": [ "ctrl+alt+x" ],           "command": "side_bar_cut"                            },
-  { "keys": [ "ctrl+alt+v" ],           "command": "side_bar_paste"                          },
-  { "keys": [ "command+shift+t" ],      "command": "open_recent_file", "args": {"index" : 0} },
-  { "keys": [ "command+s" ],            "command": "save"                                    },
+  { "keys": [ "alt+r" ],                "command": "side_bar_rename"                          },
+  { "keys": [ "alt+f" ],                "command": "side_bar_new_directory"                   },
+  { "keys": [ "alt+n" ],                "command": "side_bar_new_file"                        },
+  { "keys": [ "alt+shift+d" ],          "command": "side_bar_delete"                          },
+  { "keys": [ "ctrl+alt+x" ],           "command": "side_bar_cut"                             },
+  { "keys": [ "ctrl+alt+v" ],           "command": "side_bar_paste"                           },
+  { "keys": [ "command+shift+t" ],      "command": "open_recent_file", "args": {"index" : 0}  },
+  { "keys": [ "command+s" ],            "command": "save"                                     },
+  { "keys": [ "alt+d" ],                "command": "side_bar_duplicate", "args": {"paths": []}},
 
 /******************************************* FORMATTING *******************************************/
-  { "keys": [ "command+ctrl+shift+a" ], "command": "alignment"                               },
-  { "keys": [ "ctrl+alt+shift+l" ],     "command": "remove_trailing_whitespace"              },
-  { "keys": [ "command+alt+j" ],        "command": "json_comma"                              },
-  { "keys": [ "ctrl+shift+d" ],         "command": "convert_to_dash"                         },
-  { "keys": [ "ctrl+shift+u" ],         "command": "convert_to_snake"                        },
-  { "keys": [ "ctrl+shift+c" ],         "command": "convert_to_camel"                        },
-  { "keys": [ "ctrl+shift+p" ],         "command": "convert_to_pascal"                       },
+  { "keys": [ "command+ctrl+shift+a" ], "command": "alignment"                                },
+  { "keys": [ "ctrl+alt+shift+l" ],     "command": "remove_trailing_whitespace"               },
+  { "keys": [ "command+alt+j" ],        "command": "json_comma"                               },
+  { "keys": [ "ctrl+shift+d" ],         "command": "convert_to_dash"                          },
+  { "keys": [ "ctrl+shift+u" ],         "command": "convert_to_snake"                         },
+  { "keys": [ "ctrl+shift+c" ],         "command": "convert_to_camel"                         },
+  { "keys": [ "ctrl+shift+p" ],         "command": "convert_to_pascal"                        },
   // command + ctrl + j                 pretty_json
 
 /********************************* SWITCH SYNTAX OF CURRENT FILE **********************************/
@@ -140,11 +142,11 @@
   { "keys": [ "ctrl+alt+shift+p" ], "command": "copy_path" },
 
   // Overwrite text - i.e. 'uninsert'
-  { "keys": [ "command+ctrl+enter" ], "command": "toggle_overwrite" },
-  { "keys": [ "command+ctrl+up"    ], "command": "swap_line_up"     },
-  { "keys": [ "command+ctrl+down"  ], "command": "swap_line_down"   },
+  { "keys": [ "command+ctrl+enter" ], "command": "toggle_overwrite"},
+  { "keys": [ "command+ctrl+up"    ], "command": "swap_line_up"    },
+  { "keys": [ "command+ctrl+down"  ], "command": "swap_line_down"  },
 
-  { "keys": [ "command+k,command+b" ], "command": "toggle_side_bar" },
+  { "keys": [ "command+k,command+b" ], "command": "toggle_side_bar"},
 
   { "keys": [ "command+alt+ctrl+d" ], "command": "doxy_comment_nearest_entity" },
 
