@@ -1,10 +1,10 @@
 [
   // Import handling
-  { "keys": [ "alt+i", "alt+l" ], "command": "list_imports" },
+  { "keys": [ "alt+i", "alt+l" ], "command": "list_imports"          },
   { "keys": [ "alt+i", "alt+u" ], "command": "remove_unused_imports" },
 
   // Hop to location in line based on match
-  { "keys": ["command+alt+n"],       "command": "jump_to_interactive" },
+  { "keys": ["command+alt+n"],       "command": "jump_to_interactive"                            },
   { "keys": ["command+alt+shift+n"], "command": "jump_to_interactive", "args": { "extend": true }},
 
   // Run prettier
@@ -29,16 +29,19 @@
   { "keys": [ "ctrl+shift+g" ], "command": "git_commit"                                       },
   { "keys": [ "ctrl+shift+i" ], "command": "git_commit_amend"                                 },
 
-/**************************************** SIDEBAR HANDLING ****************************************/
+/************************************* SIDEBAR / FILE HANDLING *************************************/
   { "keys": [ "alt+r" ],                "command": "side_bar_rename"                          },
   { "keys": [ "alt+f" ],                "command": "side_bar_new_directory"                   },
   { "keys": [ "alt+n" ],                "command": "side_bar_new_file"                        },
   { "keys": [ "alt+shift+d" ],          "command": "side_bar_delete"                          },
   { "keys": [ "ctrl+alt+x" ],           "command": "side_bar_cut"                             },
   { "keys": [ "ctrl+alt+v" ],           "command": "side_bar_paste"                           },
-  { "keys": [ "command+shift+t" ],      "command": "open_recent_file", "args": {"index" : 0}  },
+  { "keys": [ "command+shift+t" ],      "command": "open_recent_file",  "args": {"index" : 0} },
   { "keys": [ "command+s" ],            "command": "save"                                     },
   { "keys": [ "alt+d" ],                "command": "side_bar_duplicate", "args": {"paths": []}},
+
+  // Add new folder to project (opens prompt to select one)
+  { "keys": ["command+ctrl+shift+d"], "command": "prompt_add_folder" },
 
 /******************************************* FORMATTING *******************************************/
   { "keys": [ "command+ctrl+shift+a" ], "command": "alignment"                                },
@@ -112,9 +115,6 @@
   // View currently selected file in browser
   { "keys": ["ctrl+shift+alt+v"], "command": "view_in_browser" },
 
-  // Add new folder to project (opens prompt to select one)
-  { "keys": ["command+ctrl+shift+d"], "command": "prompt_add_folder" },
-
 /**************************************** CODE NAVIGATION *****************************************/
   { "keys": [ "command+ctrl+alt+g"        ], "command": "typescript_go_to_definition" },
   { "keys": [ "ctrl+shift+t,ctrl+shift+r" ], "command": "typescript_rename"           },
@@ -138,15 +138,15 @@
   { "keys": [ "ctrl+alt+shift+a" ], "command": "toggle_setting", "args": {"setting": "word_wrap"} },
 
 /********************************************** MISC **********************************************/
-  { "keys": [ "command+shift+z" ], "command": "redo" },
+  { "keys": [ "command+shift+z"  ], "command": "redo"      },
   { "keys": [ "ctrl+alt+shift+p" ], "command": "copy_path" },
 
   // Overwrite text - i.e. 'uninsert'
-  { "keys": [ "command+ctrl+enter" ], "command": "toggle_overwrite"},
-  { "keys": [ "command+ctrl+up"    ], "command": "swap_line_up"    },
-  { "keys": [ "command+ctrl+down"  ], "command": "swap_line_down"  },
+  { "keys": [ "command+ctrl+enter" ], "command": "toggle_overwrite" },
+  { "keys": [ "command+ctrl+up"    ], "command": "swap_line_up"     },
+  { "keys": [ "command+ctrl+down"  ], "command": "swap_line_down"   },
 
-  { "keys": [ "command+k,command+b" ], "command": "toggle_side_bar"},
+  { "keys": [ "command+k,command+b" ], "command": "toggle_side_bar" },
 
   { "keys": [ "command+alt+ctrl+d" ], "command": "doxy_comment_nearest_entity" },
 
