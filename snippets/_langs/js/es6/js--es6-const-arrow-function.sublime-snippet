@@ -1,0 +1,8 @@
+<snippet>
+	<description>es6 constant</description>
+	<content><![CDATA[
+const ${1:variable} = (${2:args}) => ${0://code}
+]]></content>
+	<tabTrigger>csfn</tabTrigger>
+	<scope>source.js, source.ts, source.jsx, source.tsx</scope>
+</snippet>
