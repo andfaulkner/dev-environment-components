@@ -1,7 +1,9 @@
 <snippet>
-	<description>es6 constant</description>
+	<description>Constant containing an arrow function</description>
 	<content><![CDATA[
-const ${1:variable} = (${2:args}) => ${0://code}
+const ${1:variable} = (${2:args}) => ${0:{
+
+\};}
 ]]></content>
 	<tabTrigger>csfn</tabTrigger>
 	<scope>source.js, source.ts, source.jsx, source.tsx</scope>
