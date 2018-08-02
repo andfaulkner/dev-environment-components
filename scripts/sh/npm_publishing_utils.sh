@@ -142,7 +142,7 @@ function g_deploy_full_master_to_qa {
         # Return to master
 		git checkout master
     fi
-
+}
 
 function g_deploy_full_master_to_uat {
     if [ ! -n "$1" ]; then
