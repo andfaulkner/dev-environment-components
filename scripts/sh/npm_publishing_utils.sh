@@ -125,6 +125,25 @@ function _git_postdeployment_backmerge {
 	git checkout $2
 }
 
+function g_deploy_full_master_to_qa {
+    if [ ! -n "$1" ]; then
+        echo "USAGE: g_deploy_full_master_to_uat VERSION"
+    else
+		# Deploy master -> dev
+        g_deploy_master_to_dev $1
+		# Merge changes deployment made to master
+		_git_postdeployment_backmerge master dev
+
+        # Deploy dev -> qa
+        g_deploy_dev_to_qa $1
+		# Merge changes deployment made to dev
+		_git_postdeployment_backmerge dev qa
+
+        # Return to master
+		git checkout master
+    fi
+
+
 function g_deploy_full_master_to_uat {
     if [ ! -n "$1" ]; then
         echo "USAGE: g_deploy_full_master_to_uat VERSION"
