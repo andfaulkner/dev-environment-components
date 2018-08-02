@@ -238,6 +238,13 @@ todo_view_list() {
     cat "$MASTER_TODO_PATH"
 }
 
+# Convenience aliases for getting various numbers of items from end of lists
+alias tail1="tail -n 1"
+alias tail2="tail -n 2"
+alias tail3="tail -n 3"
+alias tail4="tail -n 4"
+alias tail5="tail -n 5"
+
 
 echo "* search scripts loaded!"
 
