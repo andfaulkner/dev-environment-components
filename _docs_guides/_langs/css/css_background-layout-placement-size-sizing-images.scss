@@ -1,0 +1,59 @@
+/**************************************** background-size *****************************************/
+// Automatically calculate the size based on the actual size of the image and the aspect ratio
+.bgsize-auto {background-size: auto}
+
+// Always show the whole image, even if that leaves a little space to the sides or bottom
+.bgsize-contain {background-size: contain}
+
+// Make sure the image always covers the entire container, even if it has to
+// stretch the image or cut a little bit off one of the edges
+.bgsize-cover {background-size: cover}
+
+// Set image width to 100px, set image height to 'auto'
+.bgsize-100px {background-size: 100px}
+
+// Set both image width & image height to 100px
+.bgsize-100x100y {background-size: 100px 100px}
+
+.bgsize-auto-100p {background-size: auto 100%}
+
+/*************************************** background-repeat ****************************************/
+// Don't repeat the background
+.bgrepeat-no-repeat {background-repeat: no-repeat};
+
+// Scales image as large as possible without stretching it
+// If the proportions of the image differ from the element, it is cropped
+// either vertically or horizontally so that no empty space remains
+.bgrepeat-cover {background-repeat: cover};
+
+/************************************** background-position ***************************************/
+/**
+ * Sets the initial position
+ * Gets set relative to the background position layer defined by
+ * background-origin - for each defined background image
+ */
+
+// Place image in very middle (same as '50% 50%' and 'center center')
+//  ___________
+//  |         |
+//  |    *    |
+//  |_________|
+.bgpos-center {background-position: center}
+
+// Place image in middle of left side
+//  ___________
+//  |         |
+//  |*        |
+//  |_________|
+.bgpos-center-left {background-position: center left}
+
+// Place image in middle of top (same as just 'top')
+//  ___________
+//  |    *    |
+//  |         |
+//  |_________|
+.bgpos-center-left {background-position: top center}
+
+// Place image in middle of top (same as 'top center')
+.bgpos-top {background-position: center}
+
