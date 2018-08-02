@@ -152,44 +152,16 @@ function g_deploy_full_master_to_uat {
         g_deploy_master_to_dev $1
 		# Merge changes deployment made to master
 		_git_postdeployment_backmerge master dev
-
-        # Wait for deploy to finish
-        # sleep 660
-        # Merge in back-commits from deployment
-        # git checkout master
-        # git add .
-        # git commit -a -m "LOCAL CHANGES TO master BRANCH PRE-DEPLOY TO dev [AUTOMATIC BRANCH]"
-        # git fetch origin master
-        # git merge -s recursive -X theirs origin/master
-		# git push origin master
         
         # Deploy dev -> qa
         g_deploy_dev_to_qa $1
 		# Merge changes deployment made to dev
 		_git_postdeployment_backmerge dev qa
-        # Wait for deploy to finish
-        # sleep 660
-        # Merge in back-commits from deployment
-        # git checkout dev
-        # git add .
-        # git commit -a -m "LOCAL CHANGES TO dev BRANCH PRE-DEPLOY TO qa [AUTOMATIC BRANCH]"
-        # git fetch origin dev
-		# git merge -s recursive -X theirs origin/dev
-		# git push origin dev
 
         # Deploy qa -> uat
 		g_deploy_qa_to_uat $1
 		# Merge changes deployment made to qa
 		_git_postdeployment_backmerge qa uat		
-		# Wait for deploy to finish
-		# sleep 660
-        # Merge in back-commits from deployment
-        # git checkout qa 
-        # git add .
-        # git commit -a -m "LOCAL CHANGES TO qa BRANCH PRE-DEPLOY TO uat [AUTOMATIC BRANCH]"
-        # git fetch origin qa
-        # git merge -s recursive -X theirs origin/qa
-        # git push origin qa
 
 		# Return to master
 		git checkout master
