@@ -1,7 +1,7 @@
 <snippet>
   <description>New class component - container component - typescript</description>
 <content><![CDATA[
-/************************************** THIRD-PARTY IMPORTS ***************************************/
+/************************************** THIRD-PARTY MODULES ***************************************/
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
 import {inject, observer} from 'mobx-react';
@@ -9,7 +9,7 @@ import {PolyglotProps} from 'mad-utils/lib/browser';
 
 const cn = require('classnames');
 
-//**************************************** PROJECT IMPORTS ****************************************/
+/**************************************** PROJECT MODULES *****************************************/
 import {${TM_FILENAME/([a-zA-Z])?([a-zA-Z0-9]+)?[-_]?[-_]?([a-zA-Z])?([a-zA-Z0-9]+)?[-_]?[-_]?([a-zA-Z])?([a-zA-Z0-9]+)?[-_]?[-_]?([a-zA-Z])?([a-zA-Z0-9]+)?[-_]?[-_]?([a-zA-Z])?([a-zA-Z0-9]+)?[-_]?[-_]?([a-zA-Z])?([a-zA-Z0-9]+)?container\..*/\U$1\L$2\U$3\L$4\U$5\L$6\U$7\L$8\U$9\L$10\U$11\L$12/g}View} from './${TM_FILENAME/(.+)(-container)\..+|.*/$1/:name}-view';
 
 /******************************************** LOGGING *********************************************/

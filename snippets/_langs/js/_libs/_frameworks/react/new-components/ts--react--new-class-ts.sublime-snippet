@@ -1,33 +1,32 @@
 <snippet>
-  <description>New class component - typescript</description>
+  <description>New React class component - typescript</description>
 <content><![CDATA[
 /************************************** THIRD-PARTY IMPORTS ***************************************/
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
-const classNames = require('classnames');
+import {observe, inject} from 'mobx-react';
 
-import {inject} from 'mobx-react';
-import {PolyglotProps} from 'mad-utils/lib/browser';
+const classNames = require('classnames');
 
 /******************************************** LOGGING *********************************************/
 import {logFactory, logMarkers} from 'mad-logs';
 const log = logFactory()(`${TM_FILENAME}`, logMarkers.zebra);
 
 /**************************************** TYPE DEFINITIONS ****************************************/
-interface ${1}Props extends PolyglotProps {}
-
+interface ${1}Props {}
 
 /********************************************* EXPORT *********************************************/
 /**
- * ${3: DESCRIPTION}
- */
+ * ${2: DESCRIPTION}
+ */${3:
+@observe}
 export class ${1:${TM_FILENAME/([a-zA-Z])?([a-zA-Z0-9]+)?[-_]?[-_]?([a-zA-Z])?([a-zA-Z0-9]+)?[-_]?[-_]?([a-zA-Z])?([a-zA-Z0-9]+)?[-_]?[-_]?([a-zA-Z])?([a-zA-Z0-9]+)?[-_]?[-_]?([a-zA-Z])?([a-zA-Z0-9]+)?[-_]?[-_]?([a-zA-Z])?([a-zA-Z0-9]+)?\..*/\U$1\L$2\U$3\L$4\U$5\L$6\U$7\L$8\U$9\L$10\U$11\L$12/g}} extends React.Component<${1}Props, {}> {
     render() {
         ${0}
         return (
-            <div>
-                {this.props.${2:arg1}}
-            </div>
+            ${0:<div>
+                {this.props.arg1}
+            </div>}
         )
     }
 };
