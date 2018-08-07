@@ -1,26 +1,24 @@
 <snippet>
-  <description>Typings for a React container and corresponding view component</description>
+  <description>Types for React container and view component</description>
 <content><![CDATA[
-${6:/**************************************** TYPE DEFINITIONS ****************************************/}${6/.+/
-/g}// Grabs props off below container's 'this' value. Values to omit from view in second arg.
-type ${1}ContainerPropsNoReact = OmitReactProperties<${1}Container${5/.+/, /g}${5:'propToOmit' | 'another'}>;
+// Grabs props from 'this' value of below component, omitting values in 2nd arg
+type ${1:${TM_FILENAME/([a-zA-Z])?([a-zA-Z0-9]+)?[-_]?[-_]?([a-zA-Z])?([a-zA-Z0-9]+)?[-_]?[-_]?([a-zA-Z])?([a-zA-Z0-9]+)?[-_]?[-_]?([a-zA-Z])?([a-zA-Z0-9]+)?[-_]?[-_]?([a-zA-Z])?([a-zA-Z0-9]+)?[-_]?[-_]?([a-zA-Z])?([a-zA-Z0-9]+)?container\..*/\U$1\L$2\U$3\L$4\U$5\L$6\U$7\L$8\U$9\L$10\U$11\L$12/g}}ContainerPropsNoReact = OmitReactProperties<${1}>;
 
 // Props shared by both container & view
-interface ${1:BaseComponentName}Shared extends PolyglotProps {${2/.+/
+interface ${1}PropsShared {${2/.+/
     /g}${2:// Shared props go here (anything "passed through")}${2/.+/
 /g}}
 
-// Container props (for current file's component)
-interface ${1}ContainerProps extends ${1}Shared, StoreProps {${3/.+/
+// Container props for current file's component
+interface ${1}ContainerProps extends ${1}PropsShared {${3/.+/
     /g}${3:// Container-only props go here}${3/.+/
 /g}}
 
-// ${1}View props
-export interface ${1}ViewProps extends ${1}ContainerPropsNoReact, ${1}Shared {${4/.+/
+// View props for UI component rendered by this file's container component
+export interface ${1}ViewProps extends ${1}PropsShared, ${1}ContainerPropsNoReact {${4/.+/
     /g}${4:// View-only props go here}${4/.+/
 /g}}
-
-]]></content>  
+]]></content>
   <tabTrigger>rct_typings_container_and_view</tabTrigger>
   <scope>source.tsx</scope>
 </snippet>
