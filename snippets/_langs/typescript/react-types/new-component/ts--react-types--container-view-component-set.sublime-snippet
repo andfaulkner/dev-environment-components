@@ -1,0 +1,24 @@
+<snippet>
+  <description>Types for React container and view cmp</description>
+<content><![CDATA[
+// Grabs props from 'this' value of below component, omitting values in 2nd arg
+type ${1:${TM_FILENAME/([a-zA-Z])?([a-zA-Z0-9]+)?[-_]?[-_]?([a-zA-Z])?([a-zA-Z0-9]+)?[-_]?[-_]?([a-zA-Z])?([a-zA-Z0-9]+)?[-_]?[-_]?([a-zA-Z])?([a-zA-Z0-9]+)?[-_]?[-_]?([a-zA-Z])?([a-zA-Z0-9]+)?[-_]?[-_]?([a-zA-Z])?([a-zA-Z0-9]+)?container\..*/\U$1\L$2\U$3\L$4\U$5\L$6\U$7\L$8\U$9\L$10\U$11\L$12/g}}ContainerPropsNoReact = OmitReactProperties<${1}>;
+
+// Props shared by both container & view
+interface ${1}PropsShared {${2/.+/
+    /g}${2:// Shared props go here (anything "passed through")}${2/.+/
+/g}}
+
+// Container props for current file's component
+interface ${1}ContainerProps extends ${1}PropsShared {${3/.+/
+    /g}${3:// Container-only props go here}${3/.+/
+/g}}
+
+// View props for UI component rendered by this file's container component
+export interface ${1}ViewProps extends ${1}PropsShared, ${1}ContainerPropsNoReact {${4/.+/
+    /g}${4:// View-only props go here}${4/.+/
+/g}}
+]]></content>
+  <tabTrigger>ts_rct_cntview_proptypes</tabTrigger>
+  <scope>source.js, source.ts, source.jsx, source.tsx</scope>
+</snippet>
