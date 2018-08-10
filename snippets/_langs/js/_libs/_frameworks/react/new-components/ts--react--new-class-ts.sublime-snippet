@@ -3,10 +3,8 @@
 <content><![CDATA[
 /************************************** THIRD-PARTY IMPORTS ***************************************/
 import * as React from 'react';
-import * as ReactDOM from 'react-dom';
+import * as cn from 'classnames';
 import {observe, inject} from 'mobx-react';
-
-const classNames = require('classnames');
 
 /******************************************** LOGGING *********************************************/
 import {logFactory, logMarkers} from 'mad-logs';
