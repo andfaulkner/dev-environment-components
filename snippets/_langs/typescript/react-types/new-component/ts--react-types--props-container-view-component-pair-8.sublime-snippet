@@ -14,7 +14,9 @@ interface ${1}ContainerProps extends ${1}PropsShared {${3/.+/
     /g}${3:// Container-only props go here}${3/.+/
 /g}}
 
-// View props for UI component rendered by this file's container component
+/**
+ * Props for ${1}View (UI component rendered by ${1}Container)
+ */
 export interface ${1}ViewProps extends ${1}PropsShared, ${1}ContainerPropsNoReact {${4/.+/
     /g}${4:// View-only props go here}${4/.+/
 /g}}
