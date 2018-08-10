@@ -1,14 +1,12 @@
 <snippet>
-  <description>Import React *and* React-DOM</description>
+  <description>Import React, React-DOM, and libs commonly used w React</description>
 <content><![CDATA[
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
-
+import * as moment from 'moment';
+import * as cn from 'classnames';
 import {observer, inject} from 'mobx-react';
 import {compose} from 'recompose';
-import * as moment from 'moment';
-
-const cn = require('classnames');
 
 import {${1:rootModel,
          GreenBullet, SolidMiniArrow,

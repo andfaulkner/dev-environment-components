@@ -3,8 +3,7 @@
 <content><![CDATA[
 /************************************** THIRD-PARTY MODULES ***************************************/
 import * as React from 'react';
-
-const cn = require('classnames');
+import * as cn from 'classnames';
 
 /**************************************** PROJECT MODULES *****************************************/
 
