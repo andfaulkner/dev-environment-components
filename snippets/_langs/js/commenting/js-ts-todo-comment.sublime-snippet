@@ -1,0 +1,8 @@
+<snippet>
+  <description>Create TODO comment</description>
+<content><![CDATA[
+// TODO 
+]]></content>  
+  <tabTrigger>todo</tabTrigger>
+  <scope>source.js, source.ts, source.jsx, source.tsx</scope>
+</snippet>
