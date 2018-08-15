@@ -1,8 +1,0 @@
-<snippet>
-  <description>Import PolyglotProps type (browser)</description>
-<content><![CDATA[
-import {PolyglotProps} from 'mad-utils';
-]]></content>  
-  <tabTrigger>imp_polyglotprops</tabTrigger>
-  <scope>source.js, source.ts, source.jsx, source.tsx</scope>
-</snippet>
