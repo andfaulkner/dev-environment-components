@@ -8,7 +8,6 @@ const s = require('./${TM_FILENAME/(.+?)(\-((container)|(view))\.tsx)/\1/g}.scss
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
 import * as cn from 'classnames';
-import {PolyglotProps} from 'mad-utils/lib/browser';
 import {InputChangeHandler} from 'mad-utils/lib/react';
 import {observer, inject} from 'mobx-react';
 
