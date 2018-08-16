@@ -3,6 +3,6 @@
 <content><![CDATA[
 ${1:.el_to_get_1st_of_among_its_siblings}:last-child
 ]]></content>  
-  <tabTrigger>sel_lastchild</tabTrigger>
+  <tabTrigger>lastchild_sel</tabTrigger>
   <scope>source.css, source.postcss, source.scss</scope>
 </snippet>

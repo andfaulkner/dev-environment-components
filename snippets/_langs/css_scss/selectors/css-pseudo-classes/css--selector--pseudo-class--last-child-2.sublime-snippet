@@ -1,7 +1,7 @@
 <snippet>
-  <description>Selects last child element of an element's parent. Use: li:last-child { ..styles.. }</description>
+  <description>Sel last child of parent e.g. li:last-child {} gets last li among siblings</description>
 <content><![CDATA[
-:last-child
+${1:.el_to_get_1st_of_among_its_siblings}:last-child
 ]]></content>  
   <tabTrigger>sel_pc_lastchild</tabTrigger>
   <scope>source.css, source.postcss, source.scss</scope>

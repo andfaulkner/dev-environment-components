@@ -1,7 +1,7 @@
 <snippet>
-  <description>Selects first child element of an element's parent. Use: li:first-child { ..styles.. }</description>
+  <description>Sel 1st child of parent e.g. li:first-child {} gets 1st li among siblings</description>
 <content><![CDATA[
-:first-child
+${1:.el_to_get_1st_of_among_its_siblings}:first-child
 ]]></content>  
   <tabTrigger>sel_pc_firstchild</tabTrigger>
   <scope>source.css, source.postcss, source.scss</scope>
