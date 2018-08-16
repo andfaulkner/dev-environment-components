@@ -5,17 +5,18 @@
 # Install neovim / nvim
 brew add neovim
 
-# Install CLI utils & misc
+# Install CLI utils 
 brew add ack
-brew add jq
 brew add tree
-brew add readline
-brew add wget
-brew add watchman
 brew add gettext
+brew add moreutils   # Adds sponge, etc - see https://rentes.github.io/unix/utilities/2015/07/27/moreutils-package
+brew add readline
+brew add watchman
+
+# Install web utils
+brew install googler # Search google from the CLI
 brew add curl
-brew add llvm@4
-brew add moreutils # Adds sponge, etc - see https://rentes.github.io/unix/utilities/2015/07/27/moreutils-package
+brew add wget
 
 # Install source control systems
 brew add git
@@ -30,6 +31,10 @@ brew add python3 # Also installs pip
 brew add groovy
 brew add elixir
 brew add kotlin
+
+# Install misc programming utils
+brew add jq
+brew add llvm@4
 
 # Install package managers
 brew add leiningen
