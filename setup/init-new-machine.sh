@@ -31,6 +31,7 @@ brew add python3 # Also installs pip
 brew add groovy
 brew add elixir
 brew add kotlin
+brew install sass/sass/sass
 
 # Install misc programming utils
 brew add jq
