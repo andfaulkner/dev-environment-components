@@ -39,6 +39,7 @@ alias ni="npm install"
 ########## YARN ##########
 # Install all given modules (as standard dependencies) with yarn
 function yas() {
+    """ node_scripts.sh """
     if [[ -n "$1" ]]; then
         for name_of_npm_module in "$@"
         do
@@ -65,6 +66,7 @@ function yas() {
 
 # Install all given modules (as dev dependencies) with yarn
 function yad() {
+    """ node_scripts.sh """
     if [[ -n "$1" ]]; then
         for name_of_npm_module in "$@"
         do
@@ -77,6 +79,7 @@ function yad() {
 
 # Install all given modules (as peer dependencies) with yarn
 function yap() {
+    """ node_scripts.sh """
     if [[ -n "$1" ]]; then
         for name_of_npm_module in "$@"
         do
@@ -89,6 +92,7 @@ function yap() {
 
 # Install all given type definitions with yarn
 function yat() {
+    """ node_scripts.sh """
     if [[ -n "$1" ]]; then
         for name_of_npm_module in "$@"
         do
@@ -101,6 +105,7 @@ function yat() {
 
 # Remove type definitions with yarn
 function yrem() {
+    """ node_scripts.sh """
     if [[ -n "$1" ]]; then
         for name_of_npm_module in "$@"
         do
@@ -113,6 +118,7 @@ function yrem() {
 
 # Install all modules (as standard dependencies) & their corresponding type defs
 function yafs() {
+    """ node_scripts.sh """
     if [[ -n "$1" ]]; then
         for name_of_npm_module in "$@"
         do
@@ -125,6 +131,7 @@ function yafs() {
 
 # Install all modules (as dev dependencies) & their corresponding type defs
 function yafd() {
+    """ node_scripts.sh """
     if [[ -n "$1" ]]; then
         for name_of_npm_module in "$@"
         do
@@ -137,6 +144,7 @@ function yafd() {
 
 # Install all modules (as peer dependencies) & their corresponding type defs
 function yafp() {
+    """ node_scripts.sh """
     if [[ -n "$1" ]]; then
         for name_of_npm_module in "$@"
         do
