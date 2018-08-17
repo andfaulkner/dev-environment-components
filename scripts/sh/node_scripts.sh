@@ -37,19 +37,35 @@ alias imgencanim="script/imgen/imgen create-can-immunize-component"
 alias ni="npm install"
 
 ########## YARN ##########
+alias yas="yarn add"
 alias yad="yarn add --dev"
 alias yap="yarn add --peer"
-alias yas="yarn add"
 alias yrem="yarn remove"
 
 # Install type definition with yarn
 function yat() {
     if [[ -n "$1" ]]; then
-        yarn add --dev "@types/$1"
+        yad "@types/$1"
     else
         echo "you must specify a module name to install type definitions"
     fi
 }
+
+# Install type def & module (as normal dependency) 
+function yafs() {
+    yas $1 && yat $1
+}
+
+# Install type def & module (as dev dependency) 
+function yafd() {
+    yad $1 && yat $1
+}
+
+# Install type def & module (as peer dependency) 
+function yafp() {
+    yap $1 && yat $1
+}
+
 
 ############################### PROJECT CONVENIENCE FUNCTIONS ############################## 
 alias cnc="./common-npm-commands"
