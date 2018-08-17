@@ -1,0 +1,10 @@
+<snippet>
+  <description>For-of loop - i.e. run on each item in list (such as current fn args)</description>
+<content><![CDATA[
+for ${1:current_value} in ${2:"\$@"}; do
+    ${3:#statements run one-by-one on each val}
+done
+]]></content>  
+  <tabTrigger>foreach</tabTrigger>
+  <scope>source.shell</scope>
+</snippet>

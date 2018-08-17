@@ -1,0 +1,14 @@
+<snippet>
+  <description>For-of loop run on each argument given to current function</description>
+<content><![CDATA[
+if [[ -n "\$1" ]]; then
+    for ${2:current_value} in "\$@"; do
+        ${0:# Statements to run one-by-one for each val}
+    done
+else
+    ${4:echo "You must provide at least 1 argument"}
+fi
+]]></content>  
+  <tabTrigger>foreacharg</tabTrigger>
+  <scope>meta.function.shell</scope>
+</snippet>
