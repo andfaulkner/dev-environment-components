@@ -37,35 +37,115 @@ alias imgencanim="script/imgen/imgen create-can-immunize-component"
 alias ni="npm install"
 
 ########## YARN ##########
-alias yas="yarn add"
-alias yad="yarn add --dev"
-alias yap="yarn add --peer"
-alias yrem="yarn remove"
-
-# Install type definition with yarn
-function yat() {
+# Install all given modules (as standard dependencies) with yarn
+function yas() {
     if [[ -n "$1" ]]; then
-        yad "@types/$1"
+        for name_of_npm_module in "$@"
+        do
+            yarn add $name_of_npm_module
+        done
     else
-        echo "you must specify a module name to install type definitions"
+        echo "You must specify at least 1 module to install"
     fi
 }
 
-# Install type def & module (as normal dependency) 
+# Alternative that passes all arguments to yarn at once
+# function yas() {
+#     local ALL_ARGS=""
+#     if [[ -n "$1" ]]; then
+#         for name_of_npm_module in "$@"
+#         do
+#             ALL_ARGS="$ALL_ARGS $name_of_npm_module"
+#         done
+#         yarn add "$ALL_ARGS"
+#     else
+#         echo "You must specify at least 1 module to install"
+#     fi
+# }
+
+# Install all given modules (as dev dependencies) with yarn
+function yad() {
+    if [[ -n "$1" ]]; then
+        for name_of_npm_module in "$@"
+        do
+            yarn add --dev $name_of_npm_module
+        done
+    else
+        echo "You must specify at least 1 module to install"
+    fi
+}
+
+# Install all given modules (as peer dependencies) with yarn
+function yap() {
+    if [[ -n "$1" ]]; then
+        for name_of_npm_module in "$@"
+        do
+            yarn add --peer $name_of_npm_module
+        done
+    else
+        echo "You must specify at least 1 module to install"
+    fi
+}
+
+# Install all given type definitions with yarn
+function yat() {
+    if [[ -n "$1" ]]; then
+        for name_of_npm_module in "$@"
+        do
+            yad "@types/$name_of_npm_module"
+        done
+    else
+        echo "You must specify at least 1 module to install type definitions for"
+    fi
+}
+
+# Remove type definitions with yarn
+function yrem() {
+    if [[ -n "$1" ]]; then
+        for name_of_npm_module in "$@"
+        do
+            yarn remove $name_of_npm_module
+        done
+    else
+        echo "You must specify at least 1 module to remove"
+    fi
+}
+
+# Install all modules (as standard dependencies) & their corresponding type defs
 function yafs() {
-    yas $1 && yat $1
+    if [[ -n "$1" ]]; then
+        for name_of_npm_module in "$@"
+        do
+            yas $name_of_npm_module && yat $name_of_npm_module
+        done
+    else
+        echo "You must specify at least 1 module to install"
+    fi
 }
 
-# Install type def & module (as dev dependency) 
+# Install all modules (as dev dependencies) & their corresponding type defs
 function yafd() {
-    yad $1 && yat $1
+    if [[ -n "$1" ]]; then
+        for name_of_npm_module in "$@"
+        do
+            yad $name_of_npm_module && yat $name_of_npm_module
+        done
+    else
+        echo "You must specify at least 1 module to install"
+    fi
 }
 
-# Install type def & module (as peer dependency) 
+# Install all modules (as peer dependencies) & their corresponding type defs
 function yafp() {
-    yap $1 && yat $1
+    if [[ -n "$1" ]]; then
+        for name_of_npm_module in "$@"
+        do
+            yap $name_of_npm_module && yat $name_of_npm_module
+        done
+    else
+        echo "You must specify at least 1 module to install"
+    fi
 }
-
 
 ############################### PROJECT CONVENIENCE FUNCTIONS ############################## 
 alias cnc="./common-npm-commands"
