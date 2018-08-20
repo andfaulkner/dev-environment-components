@@ -1,5 +1,5 @@
 <snippet>
-  <description>media query: only apply certain classes below given height</description>
+  <description>media query: apply styles below given height</description>
 <content><![CDATA[
 @media (max-height: ${1:992px}) {
     ${0:div.panel.panel-default {

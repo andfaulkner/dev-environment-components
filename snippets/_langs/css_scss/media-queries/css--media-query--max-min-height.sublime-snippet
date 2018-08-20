@@ -1,0 +1,24 @@
+<snippet>
+  <description>media query: apply styles below and above height</description>
+<content><![CDATA[
+@media (max-height: ${1:1050px}) {
+    ${2:div.panel.panel-default {
+        margin-left: 0px;
+    \}
+    div.panel-wrapper-col {
+        height: 100%;
+    \}}
+}
+
+@media (min-height: ${1:1050px}) {
+    ${0:div.panel.panel-default {
+        margin-left: 0px;
+    \}
+    div.panel-wrapper-col {
+        height: 100%;
+    \}}
+}
+]]></content>  
+  <tabTrigger>media_h</tabTrigger>
+  <scope>source.css, source.postcss, source.scss</scope>
+</snippet>

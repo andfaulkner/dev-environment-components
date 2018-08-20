@@ -1,7 +1,7 @@
 <snippet>
-  <description>media query: only apply certain classes below given width</description>
+  <description>media query: apply styles above given width</description>
 <content><![CDATA[
-@media (max-width: ${1:992px}) {
+@media (min-width: ${1:992px}) {
     ${0:div.panel.panel-default {
         margin-left: 0px;
         margin-right: 0px;
@@ -12,6 +12,6 @@
     \}}
 }
 ]]></content>  
-  <tabTrigger>media_maxw</tabTrigger>
+  <tabTrigger>media_minw</tabTrigger>
   <scope>source.css, source.postcss, source.scss</scope>
 </snippet>

@@ -1,0 +1,24 @@
+<snippet>
+  <description>media query: apply styles below and above width</description>
+<content><![CDATA[
+@media (max-width: ${1:1050px}) {
+    ${2:div.panel.panel-default {
+        margin-left: 0px;
+    \}
+    div.panel-wrapper-col {
+        width: 100%;
+    \}}
+}
+
+@media (min-width: ${1:1050px}) {
+    ${0:div.panel.panel-default {
+        margin-left: 0px;
+    \}
+    div.panel-wrapper-col {
+        width: 100%;
+    \}}
+}
+]]></content>  
+  <tabTrigger>media_w</tabTrigger>
+  <scope>source.css, source.postcss, source.scss</scope>
+</snippet>
