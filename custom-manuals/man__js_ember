@@ -1,9 +1,12 @@
 #!/usr/bin/env sh
 
-echo ''
-echo '---------------------------------------------------------------------------------'
-echo '** EMBER CLI **'
-echo '---------------------------------------------------------------------------------'
-echo "## generate a route:       ember g route route_name"
-echo "   -   create route handler, template route renders, and test file for route"
-echo '---------------------------------------------------------------------------------\n'
+cat << TERMINAL_EMBER_JS_MANUAL_FOR_REFERENCE
+
+---------------------------------------------------------------------------------
+** EMBER CLI **
+---------------------------------------------------------------------------------
+## generate a route:       ember g route route_name
+   -   create route handler, template route renders, and test file for route
+---------------------------------------------------------------------------------
+
+TERMINAL_EMBER_JS_MANUAL_FOR_REFERENCE
