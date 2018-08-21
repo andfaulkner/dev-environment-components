@@ -1,29 +1,32 @@
 #!/usr/bin/env sh
 
-echo ''
-echo '---------------------------------------------------------------------------------'
-echo '** RSPEC **'
-echo '---------------------------------------------------------------------------------'
-echo "###### MATCHERS ######"
-echo " BE matchers"
-echo '    be_truthy OR be:     expect("something").to be_truthy   # be === be_truthy'
+cat << TERMINAL_MANUAL_QUICK_REF
+
+---------------------------------------------------------------------------------
+** RSPEC **
+---------------------------------------------------------------------------------
+###### MATCHERS ######
+ BE matchers
+    be_truthy OR be:     expect("something").to be_truthy   # be === be_truthy
 echo '    be_falsy:            expect("something").to be_falsy' 
-echo '    be_nil:              expect(obj).to be_nil'
-echo '    not_to be:           expect(3).not_to be_nil'
-echo ' INCLUDES'
-echo '    include:             expect("a string").to include("a")'
-echo '    not_to include:      expect("b string").not_to include("a")'
-echo '    not_to include:      expect("b string").not_to include("a")'
-echo ' EQUALS'
-echo '    eq:                  expect("a string").to eq("a string")'
-echo '    equal:               expect("a string").to equal("a string")   # => false'
-echo '                          * passes if both --> same obj'
-echo " NUMERIC"
-echo "    odd, even:           expect(3).to (be_odd)"
-echo "    <, >:                expect(9).to (be < 10)"
-echo "    be_an Integer:       expect(4).to (be_an(Integer))"
-echo '    be_within:           expect(8).be_within(0.5).of(8.3)'
-echo " ERRORS"
-echo '    raise_error:         expect { 3 / 0 }.to raise_error'
-echo ""
-echo '---------------------------------------------------------------------------------\n'
+    be_nil:              expect(obj).to be_nil
+    not_to be:           expect(3).not_to be_nil
+ INCLUDES
+    include:             expect("a string").to include("a")
+    not_to include:      expect("b string").not_to include("a")
+    not_to include:      expect("b string").not_to include("a")
+ EQUALS
+    eq:                  expect("a string").to eq("a string")
+    equal:               expect("a string").to equal("a string")   # => false
+                          * passes if both --> same obj
+ NUMERIC
+    odd, even:           expect(3).to (be_odd)
+    <, >:                expect(9).to (be < 10)
+    be_an Integer:       expect(4).to (be_an(Integer))
+    be_within:           expect(8).be_within(0.5).of(8.3)
+ ERRORS
+    raise_error:         expect { 3 / 0 }.to raise_error
+
+---------------------------------------------------------------------------------
+
+TERMINAL_MANUAL_QUICK_REF
