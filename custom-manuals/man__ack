@@ -1,6 +1,6 @@
 #!/usr/bin/env sh
 
-cat << END_OF_TERMINAL_MANUAL_FOR_BASIC_REFERENCE
+cat <<-'TERMINAL_MANUAL_QUICK_REF'
 
 ---------------------------------------------------------------------------------
 ** ACK and GREP **
@@ -25,5 +25,6 @@ List matching filenames in current and child directories. Alter search-for-this:
 multiline search in grep!:    grep -Pzo "(?s)^(\s*)\N*main.*?{.*?^\1}" *.c
    -  see http://stackoverflow.com/questions/3717772/regex-grep-for-multi-line-search-needed#answer-7167115
 
----------------------------------------------------------------------------------\n
-END_OF_TERMINAL_MANUAL_FOR_BASIC_REFERENCE
+---------------------------------------------------------------------------------
+
+TERMINAL_MANUAL_QUICK_REF

@@ -1,9 +1,9 @@
 #!/usr/bin/env sh
 
-cat << TERMINAL_MANUAL_QUICK_REF
+cat <<-'TERMINAL_MANUAL_QUICK_REF'
 
 ---------------------------------------------------------------------------------
-** BASH - CONDITIONALS (IF-THEN STATEMENTS, ETC.) **
+** BASH - CONDITIONALS (IF-THEN STATEMENTS, ETC) **
 ---------------------------------------------------------------------------------
 # CONTROL FLOW
 - if-then one-liner:
@@ -65,7 +65,6 @@ cat << TERMINAL_MANUAL_QUICK_REF
 
 # TODO:: MULTIPLE CONDITIONS IN ONE TEST
       if [[ "${RELEASE_MODE}" == "true" ]]; then echo "Release mode is true!"; fi
-
 ---------------------------------------------------------------------------------
 
 TERMINAL_MANUAL_QUICK_REF

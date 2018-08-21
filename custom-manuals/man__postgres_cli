@@ -1,6 +1,6 @@
 #!/usr/bin/env sh
 
-cat << 'POSTGRES_CLI_CHEATSHEET'
+cat <<-'POSTGRES_CLI_CHEATSHEET'
 
 ---------------------------------------------------------------------------------
 ** Postgres CLI cheatsheet **

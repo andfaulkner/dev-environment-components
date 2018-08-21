@@ -1,13 +1,12 @@
 #!/usr/bin/env sh
 
-cat << TERMINAL_MANUAL_QUICK_REF
+cat <<-'TERMINAL_MANUAL_QUICK_REF'
 
 ---------------------------------------------------------------------------------
 ** CLOJURE CLI **
 ---------------------------------------------------------------------------------
 ## run built clojure script
    -- java -jar target/uberjar/#{PROJECT_NAME}-#{VERSION}-SNAPSHOT-standalone.jar
-
 ---------------------------------------------------------------------------------
 
 TERMINAL_MANUAL_QUICK_REF

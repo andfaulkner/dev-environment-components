@@ -1,6 +1,6 @@
 #!/usr/bin/env sh
 
-cat <<-BASH_OFT_FORGOTTEN_HEREDOC
+cat <<-'BASH_OFT_FORGOTTEN_HEREDOC'
 
 ---------------------------------------------------------------------------------
 ** BASH - OFTEN FORGOTTEN COMMANDS**

@@ -1,6 +1,6 @@
 #!/usr/bin/env sh
 
-cat << 'TERMINAL_MANUAL_QUICK_REF'
+cat <<-'TERMINAL_MANUAL_QUICK_REF'
 
 ---------------------------------------------------------------------------------
 ** EMACS **

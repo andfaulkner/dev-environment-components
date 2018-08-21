@@ -1,6 +1,6 @@
 #!/usr/bin/env sh
 
-cat << TERMINAL_MANUAL_JS_FOR_QUICK_REF
+cat <<-'TERMINAL_MANUAL_JS_FOR_QUICK_REF'
 
 ---------------------------------------------------------------------------------
 ** JS_OFT_FORGOTTEN **
@@ -9,5 +9,3 @@ join array into string:    someArr.join(``);
 ---------------------------------------------------------------------------------
 
 TERMINAL_MANUAL_JS_FOR_QUICK_REF
-
-

@@ -1,6 +1,6 @@
 #!/usr/bin/env sh
 
-cat << END_OF_TERMINAL_MANUAL_FOR_BASIC_REFERENCE
+cat <<-'TERMINAL_MANUAL_QUICK_REF'
 
 ---------------------------------------------------------------------------------
 ** ls **
@@ -31,5 +31,6 @@ cat << END_OF_TERMINAL_MANUAL_FOR_BASIC_REFERENCE
                       |    |       |          |      date/time          pathname
    num links->file --/    owner   group     bytes
 
----------------------------------------------------------------------------------\n
-END_OF_TERMINAL_MANUAL_FOR_BASIC_REFERENCE
+---------------------------------------------------------------------------------
+
+TERMINAL_MANUAL_QUICK_REF

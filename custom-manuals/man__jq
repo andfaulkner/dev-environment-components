@@ -1,6 +1,6 @@
 #!/usr/bin/env sh
 
-cat <<-CLI_MANUAL_FOR_JQ
+cat <<-'CLI_MANUAL_FOR_JQ'
 
 ---------------------------------------------------------------------------------
 ** jq - JSON parsing tool usable directly from the CLI **

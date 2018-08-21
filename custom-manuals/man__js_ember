@@ -1,6 +1,6 @@
 #!/usr/bin/env sh
 
-cat << TERMINAL_EMBER_JS_MANUAL_FOR_REFERENCE
+cat <<-'TERMINAL_EMBER_JS_MANUAL_FOR_REFERENCE'
 
 ---------------------------------------------------------------------------------
 ** EMBER CLI **
