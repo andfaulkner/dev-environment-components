@@ -1,80 +1,71 @@
 #!/usr/bin/env sh
-set -o histexpand
 
-cat << END_OF_MANUAL
+cat <<-'TERMINAL_MANUAL_QUICK_REF'
 
 ---------------------------------------------------------------------------------
 ** AWK - COMMON USE **
 ---------------------------------------------------------------------------------
 # PRINT COLUMNS
-- print 2nd-last column:                    awk '{print \$(NF-1)'
+- Print 2nd-last column:                    awk '{print \$(NF-1)}'
 
 # PRINT ROWS
-- print last line of file                   awk 'END{print}'
-- print first line of file                  awk 'NR>1{exit};1'
-- print first 11 lines of file              awk 'NR < 11'
-END_OF_MANUAL
-echo '- print last 2 lines of file                awk '"'"'{y=x "\\n" $0; x=$0};END{print y}'"'"
-cat << END_OF_MANUAL
+- Print last line of file                   awk 'END{print}'
+- Print first line of file                  awk 'NR>1{exit};1'
+- Print first 11 lines of file              awk 'NR < 11'
+- Print last 2 lines of file                awk '{y=x "\n" $0; x=$0};END{print y}'
 
 # SPLIT
-- split into columns based on a delimiter:  awk -F'/' '{print \$(NF)}' 
+- Split into columns based on a delimiter   awk -F'/' '{print \$(NF)}'
   -- (delimiter is '/' in the example)
 
 # MULTILINE SEARCH
 - match from 1st occurrence of matcher1, to 1st occurrence of matcher2
       awk '/matcher1/,/matcher2/' some_file
     -- this also works if you pipe values in, you don\'t need to use some_file
-- return section of file from match to end of file
+- Return section of file from match to end of file
       awk '/matcher_here/,EOF'
 
 # MATCH LINES
-- return all lines matching a regex
+- Return all lines matching a regex
       awk '/matcher1/'
-- return all lines *NOT* matching a regex
-END_OF_MANUAL
-echo '      awk '"'"'!/matcher1/'"'"''
-cat << END_OF_MANUAL
-- print line immediately after match, but not the line itself
+- Return all lines *NOT* matching a regex
+      awk '!/matcher1/'
+- Print line immediately after match but not the line itself
       awk '/regex/{getline;print}'
 
 # FIELDS
-- Get number of fields in a row:                  NF
+- Get number of fields in a row               NF
 - Fields are divided by the field separator
   -- a space by default
-END_OF_MANUAL
-echo '- print all fields in a line                      print $0'
-echo '- print a specific field, by number               print $1'
-cat << END_OF_MANUAL
+- Print all fields in a line                  print $0
+- Print a specific field, by number           print $1
 
 # FIELD MATCHING
-- print lines based on matching fields. Examples:
-  -- print lines where field 5 matches "abc123":         awk '$5 == "abc123"'
-END_OF_MANUAL
-echo '  -- print lines where field 5 does NOT match "abc123":  awk '"'"'$5 != "abc123"'"'"''
-echo '      * (also prints lines with less than 5 fields)'
-echo '  -- print line if field 7 matches the regex:            awk '"'"'$7  ~ /^[a-f]/'"'"''
-echo '  -- print line if field 7 DOES NOT match the regex:     awk '"'"'$7  !~ /^[a-f]/'"'"''
-echo ''
-echo '# FIELD MODIFICATION'
-echo '- switch the first 2 fields of every line                awk '"'"'{temp = $1; $1 = $2; $2 = temp}'"'"' file'
-cat << END_OF_MANUAL
+- Print lines based on matching fields. Examples:
+  -- Print lines where field 5 matches "abc123"          awk '$5 == "abc123"'
+  -- Print lines where field 5 does NOT match "abc123"   awk '$5 != "abc123"'
+      * (also prints lines with less than 5 fields)
+  -- Print line if field 7 matches the regex             awk '$7  ~ /^[a-f]/'
+  -- Print line if field 7 DOES NOT match the regex      awk '$7  !~ /^[a-f]/'
+
+# FIELD MODIFICATION
+- Switch the first 2 fields of every line                awk '{temp = $1; $1 = $2; $2 = temp}' some_file
 
 # MODIFY FILES (note: you need to write back into the file for this to work)
-- replace all instances of 'err' with 'poo' in test.js   awk '{gsub(/err/,"poo")}; 1' test.js
-- replace instances of matcher with value in test.js if:
+- Replace all instances of 'err' with 'poo' in test.js   awk '{gsub(/err/,"poo")}; 1' test.js
+- Replace instances of matcher with value in test.js if:
   -  the line also contains "baz":                       awk '/baz/{gsub(/matcher/, "value")}; 1' test.js
   -  the line DOES NOT contains "baz":                   awk '/baz/{gsub(/matcher/, "value")}; 1' test.js
   -  only if the line 
-- replace all instance of any of "scarlet" or "ruby" or "puce" to "red":
+- Replace all instance of any of "scarlet" or "ruby" or "puce" to "red":
   awk '{gsub(/scarlet|ruby|puce/, "red")}; 1'
 
 # DELETING LINES
-- delete ALL blank lines from a file                awk NF
-END_OF_MANUAL
-echo '- remove duplicate, consecutive lines of file       awk '"'"'a !~ $0; {a=$0}'"'"''
-echo '- remove duplicate, non-consecutive lines of file   awk '"'"'!($0 in a){a[$0];print}'"'"''
+- Delete ALL blank lines from a file                     awk NF
+- Remove duplicate, consecutive lines of file            awk 'a !~ $0; {a=$0}'
+- Remove duplicate, non-consecutive lines of file        awk '!($0 in a){a[$0];print}'
+---------------------------------------------------------------------------------
 
-echo '---------------------------------------------------------------------------------'
+# See http://www.pement.org/awk/awk1line.txt
 
-# see http://www.pement.org/awk/awk1line.txt
+TERMINAL_MANUAL_QUICK_REF
