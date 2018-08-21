@@ -1,6 +1,7 @@
 #!/usr/bin/env sh
 
 cat << END_OF_TERMINAL_MANUAL_FOR_BASIC_REFERENCE
+
 ---------------------------------------------------------------------------------
 ** EXTRA SUBLIME INFO, HOTKEYS
 ---------------------------------------------------------------------------------
@@ -47,5 +48,6 @@ HOTKEYS
 -  Prev error                                     ctrl+super+shift-e
 -  See all errors (by line):                      ctrl+super+l
 -  More info on selected error:                   ctrl+super+r
----------------------------------------------------------------------------------\n
+---------------------------------------------------------------------------------
+
 END_OF_TERMINAL_MANUAL_FOR_BASIC_REFERENCE

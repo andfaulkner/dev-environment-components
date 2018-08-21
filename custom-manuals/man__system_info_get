@@ -1,20 +1,20 @@
 #!/usr/bin/env sh
 
-echo ''
-echo '---------------------------------------------------------------------------------'
-echo '** NEW_TYPE **'
-echo '---------------------------------------------------------------------------------'
-echo 'get system info'
-echo ''
-echo "## output system type                                          uname -a ack linux"
-echo ''
-echo '## Get free disk space                                         df'
-echo ''
-echo '## Get user login name                                         logname'
-echo ''
-echo '## Show how command would be interpreted if used:              type'
-echo '    *   e.g.    type ls'
-echo '    *   e.g.    type man__system_info_get'
-echo '    *   Provides info in numerous places where "which" fails'
-echo ''
-echo '---------------------------------------------------------------------------------\n'
+cat << END_OF_TERMINAL_MANUAL_FOR_BASIC_REFERENCE
+
+---------------------------------------------------------------------------------
+** SYSTEM & FILE INFO **
+---------------------------------------------------------------------------------
+## Output system type                                     uname -a ack linux
+## Get free disk space                                    df
+## Get user login name                                    logname
+
+# FILE INFO
+## Show how command would be interpreted if used:         type
+    *   e.g.:  type ls
+    *   e.g.:  type man__system_info_get
+    *   Provides info in numerous places "which" fails
+
+---------------------------------------------------------------------------------
+
+END_OF_TERMINAL_MANUAL_FOR_BASIC_REFERENCE
