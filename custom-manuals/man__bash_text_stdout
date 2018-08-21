@@ -1,38 +1,41 @@
 #!/usr/bin/env sh
 
-echo ''
-echo '---------------------------------------------------------------------------------'
-echo '** Processing stdout text stream in CLI **'
-echo '---------------------------------------------------------------------------------'
-echo 'trim: remove trailing and leading whitespace. e.g. cat my-file.txt | trim'
-echo ''
-echo '## sort'
-echo "   -- by text (alphabetical):   cat mytext.txt | sort"
-echo "   -- by number:                cat mytext.txt | sort -n"
-echo ""
-echo "## column: arrange output into neat columns:"
-echo "   -- left-justified text in columns:  cat file.txt | column -t"
-echo ""
-echo "## gsub: replace one character or string in a stream with another"
-echo '   -- replace one string with another:     awk "{gsub(/text-to-replace/,\"replacement-text\",\$0); print \$0}"'
-echo '   -- replace on string stored in a var:   awk "{gsub(/$1/,\"replacement-text\",\$0); print \$0}'
-echo '   -- remove substring from a string:      awk "{gsub(/text-to-replace/,\"\",\$0); print \$0}'
-echo ''
-echo "## get number of chars in each line piped in:  awk '{print length($0)}'"
-echo ""
-echo "## bash multiline string: example:"
-echo "cat << EndOfMessage"
-echo "    This is line 1."
-echo "    This is line 2."
-echo "EndOfMessage"
-echo ""
-echo "##COLOURS"
-echo "   -- Reset colors:"
-echo "        tput sgr0"
-echo '        echo -e "\033[0mNC (No color)"'
-echo " -- Set color examples:"
-echo '        echo -e "\033[0;35m[@@@ typings-install.sh @@@]\t"'
-echo '        echo -e "\033[1;30mSUCCESS\t\033[0;37mLIGHT_GRAY"'
-echo '        echo -e "\033[0;36mCYAN\t\033[1;36mLIGHT_CYAN"'
-echo ""
-echo '---------------------------------------------------------------------------------\n'
+cat <<-'TERMINAL_MANUAL_QUICK_REF'
+
+---------------------------------------------------------------------------------
+** Processing stdout text stream in CLI **
+---------------------------------------------------------------------------------
+trim: remove trailing and leading whitespace. e.g. cat my-file.txt | trim
+
+## sort
+   -- by text (alphabetical):   cat mytext.txt | sort
+   -- by number:                cat mytext.txt | sort -n
+
+## column: arrange output into neat columns:
+   -- left-justified text in columns:  cat file.txt | column -t
+
+## gsub: replace one character or string in a stream with another
+   -- replace one string with another:     awk "{gsub(/text-to-replace/,\"replacement-text\",\$0); print \$0}"
+   -- replace on string stored in a var:   awk "{gsub(/$1/,\"replacement-text\",\$0); print \$0}
+   -- remove substring from a string:      awk "{gsub(/text-to-replace/,\"\",\$0); print \$0}
+
+## get number of chars in each line piped in:  awk '{print length($0)}'
+
+## bash multiline string: example:
+cat << EndOfMessage
+    This is line 1.
+    This is line 2.
+EndOfMessage
+
+##COLOURS
+   -- Reset colors:
+        tput sgr0
+        echo -e "\033[0mNC (No color)"
+ -- Set color examples:
+        echo -e "\033[0;35m[@@@ typings-install.sh @@@]\t"
+        echo -e "\033[1;30mSUCCESS\t\033[0;37mLIGHT_GRAY"
+        echo -e "\033[0;36mCYAN\t\033[1;36mLIGHT_CYAN"
+
+---------------------------------------------------------------------------------
+
+TERMINAL_MANUAL_QUICK_REF
