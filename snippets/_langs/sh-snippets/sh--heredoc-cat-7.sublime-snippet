@@ -1,0 +1,13 @@
+<snippet>
+	<description>Bash cmd to display a heredoc (multiline string)</description>
+	<content><![CDATA[
+cat << ${1:DOC_STRING_HERE}
+${0:String to output.
+As many lines as you'd like. Even 1000. A heredoc doesn't care.
+Note that you can interpolate values in here via \$VARIABLE_NAME.}
+${1}
+
+]]></content>
+	<tabTrigger>show_doc_heredoc</tabTrigger>
+	<scope>source.shell</scope>
+</snippet>
