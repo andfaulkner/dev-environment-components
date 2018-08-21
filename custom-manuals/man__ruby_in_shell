@@ -1,44 +1,46 @@
 #!/usr/bin/env sh
 
-cat << RUBY_USAGE_IN_SHELL
+cat <<-'RUBY_USAGE_IN_SHELL'
 
 ---------------------------------------------------------------------------------
-** RUBY USAGE IN SHELL **
+** RUBY USAGE IN SHELL (CLI, GEMS) **
 ---------------------------------------------------------------------------------
 - ruby cli gems
 
 ## RERUN GEM:
-   -- Custom watch pattern: use | to alternate. Example:
-      rerun --pattern  "**/*.{rb,js,coffee,css,scss,erb,html,ru,yml,md,feature}|Rakefile" rake tasks
+-- Custom watch pattern: use | to alternate. Example:
+    rerun --pattern "**/*.{rb,js,coffee,css,scss,erb,html,ru,yml,md,feature}|Rakefile" rake tasks
 
 ## RAKE GEM:
- - args for rake tasks:
+-- args for rake tasks:
     * passing args to rake from terminal:
-        *   one arg:                           rake sometask[arg]
-        *   multiple args:                     rake sometask[arg1,arg2,arg3]
+        *   one arg                           rake sometask[arg]
+        *   multiple args                     rake sometask[arg1,arg2,arg3]
+
     * get rake task to access args (in Rakefile):
         task :sometask, [:arg1, arg2, ...] do |task, args|
-            # all args  accessible through args.argname e.g. args.arg1
+            # all args accessible through args.argname e.g. args.arg1
         end
- - list rake tasks in a namespace e.g.:        rake -T db
- - display rake task path e.g.:                rake -W db:migrate
- - set environment to run rake task in e.g.:   RAILS_ENV=test rake db:migrate
- - view list of rake task prerequisites:       rake -P 
- - view general rake tracing info:             rake --trace
- - view tracing info about rake rules:         rake --rules
+
+-- list rake tasks in a namespace e.g.        rake -T db
+-- display rake task path e.g.                rake -W db:migrate
+-- set environment to run rake task in e.g.   RAILS_ENV=test rake db:migrate
+-- view list of rake task prerequisites       rake -P
+-- view general rake tracing info             rake --trace
+-- view tracing info about rake rules         rake --rules
 
  ## PIPE TO RUBY ONE-LINER:
         some_cmd | ruby -pe 'pipe to ruby one-liner, modify in some way' | cmd
 -   specific examples:
-        output the first value ("identity" example): echo "something" | ruby -e "puts STDIN.first"
-        access 1st val, increment by 1 & output:     echo "3" | ruby -e "puts STDIN.first.to_i + 1"
-        split input into multiple lines:             echo "3\\n4" | ruby -e "puts STDIN.first.split('\n')"
+        output the first value ("identity" example)   echo "something" | ruby -e "puts STDIN.first"
+        access 1st val, increment by 1 & output       echo "3" | ruby -e "puts STDIN.first.to_i + 1"
+        split input into multiple lines               echo "3\\n4" | ruby -e "puts STDIN.first.split('\n')"
 
  ## PARSE JSON RESPONSE FROM curl - EXAMPLE:"
         cat jsonfile.txt | ruby -pe 'require "json"; \$_ = JSON.parse(\$_)[0]["cardnumber"]'
 
  ## RBENV
- - list all gems available to install:    rbenv install --list'
+ - list all gems available to install    rbenv install --list'
 ---------------------------------------------------------------------------------\n
 
 RUBY_USAGE_IN_SHELL
