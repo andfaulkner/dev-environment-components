@@ -1,19 +1,21 @@
 #!/usr/bin/env sh
 
-echo ''
-echo '---------------------------------------------------------------------------------'
-echo '** at bash tool**'
-echo '---------------------------------------------------------------------------------'
-echo '- schedule tasks'
-echo ''
-echo "## List all scheduled task:                     atq"
-echo "## Delete a task:                               atrm 1     << if the task # is 1"
-echo ''
-echo 'SCHEDULING EXAMPLES'
-echo "## Schedule a task for 1min from now:           at +1 minute"
-echo "## Schedule a task for 2min from now:           at +2 minutes"
-echo "## Schedule a task for 8hr from now:            at +8 hours"
-echo "## Schedule a task for a specific time today:   at 01:54"
-echo "## Schedule a task for a specific date & time:  at 2pm January 15"
-echo ""
-echo '---------------------------------------------------------------------------------\n'
+cat << TERMINAL_MANUAL_QUICK_REF
+
+---------------------------------------------------------------------------------
+** 'at' bash tool (akin to cron) **
+---------------------------------------------------------------------------------
+- schedule tasks
+
+## List all scheduled task:                     atq
+## Delete a task:                               atrm 1     << if the task # is 1
+
+SCHEDULING EXAMPLES
+## Schedule a task for 1min from now:           at +1 minute
+## Schedule a task for 2min from now:           at +2 minutes
+## Schedule a task for 8hr from now:            at +8 hours
+## Schedule a task for a specific time today:   at 01:54
+## Schedule a task for a specific date & time:  at 2pm January 15
+---------------------------------------------------------------------------------
+
+TERMINAL_MANUAL_QUICK_REF
