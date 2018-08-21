@@ -1,6 +1,6 @@
 #!/usr/bin/env sh
 
-cat << TERMINAL_MANUAL_QUICK_REF
+cat <<-'TERMINAL_MANUAL_QUICK_REF'
 
 ---------------------------------------------------------------------------------
 ** RSPEC **
@@ -8,7 +8,7 @@ cat << TERMINAL_MANUAL_QUICK_REF
 ###### MATCHERS ######
  BE matchers
     be_truthy OR be:     expect("something").to be_truthy   # be === be_truthy
-echo '    be_falsy:            expect("something").to be_falsy' 
+echo '    be_falsy:            expect("something").to be_falsy'
     be_nil:              expect(obj).to be_nil
     not_to be:           expect(3).not_to be_nil
  INCLUDES
@@ -26,7 +26,6 @@ echo '    be_falsy:            expect("something").to be_falsy'
     be_within:           expect(8).be_within(0.5).of(8.3)
  ERRORS
     raise_error:         expect { 3 / 0 }.to raise_error
-
 ---------------------------------------------------------------------------------
 
 TERMINAL_MANUAL_QUICK_REF

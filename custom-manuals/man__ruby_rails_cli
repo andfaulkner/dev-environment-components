@@ -1,6 +1,6 @@
 #!/usr/bin/env sh
 
-cat << TERMINAL_RAILS_MANUAL_FOR_QUICK_REF
+cat <<-'TERMINAL_RAILS_MANUAL_FOR_QUICK_REF'
 
 ---------------------------------------------------------------------------------
 ** Rails cli
@@ -15,7 +15,7 @@ rails g devise User
   ---- add confirmable to req email conf; lockable locks usrs out after a few tries
   -- config/initializers/devise.rb to configure things.
   ------ put from email in mailer_sender
-  ------ slightly tweak a random token generation key in config.secret_key 
+  ------ slightly tweak a random token generation key in config.secret_key
 rails g devise:views
 
 rake db:migrate after all the things
@@ -40,4 +40,3 @@ Rollback db: rake db:rollback
 ---------------------------------------------------------------------------------
 
 TERMINAL_RAILS_MANUAL_FOR_QUICK_REF
-
