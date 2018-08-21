@@ -1,11 +1,11 @@
 #!/usr/bin/env sh
 
-cat << END_OF_TERMINAL_MANUAL_FOR_BASIC_REFERENCE
+cat << TERMINAL_MANUAL_QUICK_REF
 
 ---------------------------------------------------------------------------------
 ** USER INFO **
 ---------------------------------------------------------------------------------
 - Get current user:      echo $USER
+---------------------------------------------------------------------------------
 
----------------------------------------------------------------------------------\n
-END_OF_TERMINAL_MANUAL_FOR_BASIC_REFERENCE
+TERMINAL_MANUAL_QUICK_REF
