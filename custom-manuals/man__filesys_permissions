@@ -1,42 +1,44 @@
 #!/usr/bin/env sh
 
-echo ''
-echo '------------------------------------------------------------------------------------------'
-echo '** FILE PERMISSIONS **'
-echo '------------------------------------------------------------------------------------------'
-echo '# PERMISSION TYPES'
-echo '-  give permission to execute file:                               chmod +x path/to/file'
-echo '-  give only the owner read-write permission:                     chmod 644 path/to/file'
-echo '-  owner: read & write only. All others: read & execute only:     chmod 655 path/to/file'
-echo '-  Owner: read, write, execute. All others: read & execute only:  chmod 755 path/to/file'
-echo '   -- very common for web servers'
-echo '-  give everyone permission to read, write, execute file:         chmod 777 path/to/file'
-echo ''
-echo '# RECURSIVE PERMISSION CHANGES:: USE -R:                          chmod -R 777 path'
-echo ''
-echo "# COMMON 'REASONABLY SECURE' SETUP"
-echo '        sudo find /path/to/Dir -type f -print0 | xargs -0 sudo chmod 644'
-echo '        sudo find /path/to/Dir -type d -print0 | xargs -0 sudo chmod 755'
-echo '- assigns permission 644 to files, and permission 755 to folders'
-echo ''
-echo '# WHAT THE NUMBERS MEAN: '
-echo ' ## Digits: '
-echo '      0 – no permission'
-echo '      1 – execute'
-echo '      2 – write'
-echo '      3 – write and execute'
-echo '      4 – read'
-echo '      5 – read and execute'
-echo '      6 – read and write'
-echo '      7 – read, write, and execute'
-echo ' ## Positions:'
-echo "      1st number - permissions assigned to of owner"
-echo "      2nd number - permissions of group: users w same user privilege level as owner"
-echo "      3rd number - permissions of 'others': all other users (general public)"
-echo ' ## Example:'
-echo '      650'
-echo "      - owner can read & write      (6   <<< owner   ...because it's in 1st pos)"
-echo "      - group can read and execute  (5   <<< group   ...because it's in 2nd pos)"
-echo "      - others have no permissions  (0   <<< others  ...because it's in 3rd pos)"
-echo '------------------------------------------------------------------------------------------'
-echo ''
+cat <<-'TERMINAL_MANUAL_QUICK_REF'
+
+------------------------------------------------------------------------------------------
+** FILE PERMISSIONS **
+------------------------------------------------------------------------------------------
+# PERMISSION TYPES
+-  give permission to execute file:                               chmod +x path/to/file
+-  give only the owner read-write permission:                     chmod 644 path/to/file
+-  owner: read & write only. All others: read & execute only:     chmod 655 path/to/file
+-  Owner: read, write, execute. All others: read & execute only:  chmod 755 path/to/file
+   -- very common for web servers
+-  give everyone permission to read, write, execute file:         chmod 777 path/to/file
+
+# RECURSIVE PERMISSION CHANGES:: USE -R:                          chmod -R 777 path
+
+# COMMON 'REASONABLY SECURE' SETUP
+        sudo find /path/to/Dir -type f -print0 | xargs -0 sudo chmod 644
+        sudo find /path/to/Dir -type d -print0 | xargs -0 sudo chmod 755
+- assigns permission 644 to files, and permission 755 to folders
+
+# WHAT THE NUMBERS MEAN: 
+ ## Digits: 
+      0 – no permission
+      1 – execute
+      2 – write
+      3 – write and execute
+      4 – read
+      5 – read and execute
+      6 – read and write
+      7 – read, write, and execute
+ ## Positions:
+      1st number - permissions assigned to of owner
+      2nd number - permissions of group: users w same user privilege level as owner
+      3rd number - permissions of 'others': all other users (general public)
+ ## Example:
+      650
+      - owner can read & write      (6   <<< owner   ...because it's in 1st pos)
+      - group can read and execute  (5   <<< group   ...because it's in 2nd pos)
+      - others have no permissions  (0   <<< others  ...because it's in 3rd pos)
+------------------------------------------------------------------------------------------
+
+TERMINAL_MANUAL_QUICK_REF
