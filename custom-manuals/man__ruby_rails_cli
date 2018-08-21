@@ -1,41 +1,43 @@
 #!/usr/bin/env sh
 
-#!/usr/bin/env sh
+cat << TERMINAL_RAILS_MANUAL_FOR_QUICK_REF
 
-echo ''
-echo '---------------------------------------------------------------------------------'
-echo '** Rails cli'
-echo '---------------------------------------------------------------------------------'
-echo "rails new appname --database=postgresql"
-echo 'rails g controller Name'
-echo 'rails destroy controller Name'
-echo ''
-echo "rails g devise:install"
-echo "rails g devise User"
-echo "  -- models/user.rb is all good to go now"
-echo "  ---- add confirmable to req email conf; lockable locks usrs out after a few tries"
-echo "  -- config/initializers/devise.rb to configure things."
-echo "  ------ put from email in mailer_sender"
-echo "  ------ slightly tweak a random token generation key in config.secret_key "
-echo "rails g devise:views"
-echo ""
-echo "rake db:migrate after all the things"
-echo ""
-echo "key gems: devise, rabl, delayed_job, grape, jquery-turbolinks, better_errors, meta_request, rspec-rails, factory_girl_rails, simple_form" 
-echo "----careful with draper, use these:"
-echo "--------gem 'activemodel-serializers-xml', github: 'rails/activemodel-serializers-xml'" 
-echo "--------gem 'draper', github: 'audionerd/draper', branch: 'rails5'"
-echo ""
-echo "simple_form"
-echo "rails generate simple_form:install --bootstrap"
-echo ""
-echo "### rails data types ###  << accepted by items in rails model or scaffold generation"
-echo ":binary, :boolean, :date, :datetime, :decimal, :float, :integer, :primary_key, :string, :text, :time, :timestamp"
-echo ""
-echo 'Scaffold: complex example'
-echo "rails g scaffold BearInfo name:string years_species_existed:integer bear_celebratory_day:date description:text latin_name:string locations_found:string favorite_foods:string eats_meat:binary eats_nonmeat:binary"
-echo ""
-echo "Destroy scaffold example: rails destroy scaffold BearInfo"
-echo ""
-echo "Rollback db: rake db:rollback"
-echo '---------------------------------------------------------------------------------\n'
+---------------------------------------------------------------------------------
+** Rails cli
+---------------------------------------------------------------------------------
+rails new appname --database=postgresql
+rails g controller Name
+rails destroy controller Name
+
+rails g devise:install
+rails g devise User
+  -- models/user.rb is all good to go now
+  ---- add confirmable to req email conf; lockable locks usrs out after a few tries
+  -- config/initializers/devise.rb to configure things.
+  ------ put from email in mailer_sender
+  ------ slightly tweak a random token generation key in config.secret_key 
+rails g devise:views
+
+rake db:migrate after all the things
+
+key gems: devise, rabl, delayed_job, grape, jquery-turbolinks, better_errors, meta_request, rspec-rails, factory_girl_rails, simple_form"
+----careful with draper, use these:
+--------gem 'activemodel-serializers-xml', github: 'rails/activemodel-serializers-xml'"
+--------gem 'draper', github: 'audionerd/draper', branch: 'rails5'
+
+simple_form
+rails generate simple_form:install --bootstrap
+
+### rails data types ###  << accepted by items in rails model or scaffold generation
+:binary, :boolean, :date, :datetime, :decimal, :float, :integer, :primary_key, :string, :text, :time, :timestamp
+
+Scaffold: complex example
+rails g scaffold BearInfo name:string years_species_existed:integer bear_celebratory_day:date description:text latin_name:string locations_found:string favorite_foods:string eats_meat:binary eats_nonmeat:binary
+
+Destroy scaffold example: rails destroy scaffold BearInfo
+
+Rollback db: rake db:rollback
+---------------------------------------------------------------------------------
+
+TERMINAL_RAILS_MANUAL_FOR_QUICK_REF
+
