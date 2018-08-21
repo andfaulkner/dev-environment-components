@@ -1,11 +1,15 @@
 #!/usr/bin/env sh
 
-echo '----------------------------------------------------------------------------'
-echo 'ln --- link'
-echo '---- create a symlink'
-echo '----------------------------------------------------------------------------'
-echo 'Basic symlink:        ln -s file/being/linked/to location/to/place/link'
-echo '  example:            ln -s "$SNIPPETS_DIR/dev-env/vim_configs/vim" ~/vim'
-echo '  example 2:'
-echo '    ln -s "/Users/andrewfaulkner/Library/Application Support/Sublime Text 3/Packages/User/sublime-dev-environment-snippet/scripts/sh/sys_util_scripts.sh" ~/scripts/sys_util_scripts.sh'
-echo '----------------------------------------------------------------------------'
+cat <<-'TERMINAL_MANUAL_QUICK_REF'
+
+----------------------------------------------------------------------------
+ln --- link
+---- create a symlink
+----------------------------------------------------------------------------
+Basic symlink:        ln -s file/being/linked/to location/to/place/link
+  example:            ln -s "$SNIPPETS_DIR/dev-env/vim_configs/vim" ~/vim
+  example 2:
+    ln -s "/Users/andrewfaulkner/Library/Application Support/Sublime Text 3/Packages/User/sublime-dev-environment-snippet/scripts/sh/sys_util_scripts.sh" ~/scripts/sys_util_scripts.sh
+----------------------------------------------------------------------------
+
+TERMINAL_MANUAL_QUICK_REF
