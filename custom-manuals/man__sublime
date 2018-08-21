@@ -1,50 +1,51 @@
 #!/usr/bin/env sh
 
-echo ''
-echo '---------------------------------------------------------------------------------'
-echo '** EXTRA SUBLIME INFO, HOTKEYS'
-echo '---------------------------------------------------------------------------------'
-echo "-  see cmd name for each action in console:       sublime.log_commands(True)"
-echo ''
-echo 'HOTKEYS'
-echo "-  Go to definition using mouse click only:       ALT--LEFT_CLICK"
-echo "-  clear console if using ClearConsole plugin:    CTRL-ALT-k"
-echo "-  rename currently selected file:                ALT-r"
-echo "-  create new file in current dir:                ALT-n"
-echo "-  create new folder in current dir:              ALT-f"
-echo "-  duplicate currently selected file:             ALT-d"
-echo "-  open autocompletions menu:                     CTRL-SPACE"
-echo "-  toggle side menu:                              CMD-K, B"
-echo "-  go to symbol (fns, css blocks, classes, etc.)  CMD-r"
-echo "-  select cur scope. Expand more w each tap:      CMD-SHIFT-SPACE"
-echo "-  select full contents of current parens:        CTRL-SHIFT-M"
-echo "-  insert line before current line:               CMD-SHIFT-ENTER"
-echo "-  insert line after current line:                CMD-ENTER"
-echo "-  uppercase:                                     CTRL-k, u"
-echo "-  lowercase:                                     CTRL-k, l  (ell)"
-echo "-  del word forward:                              CTRL-DEL"
-echo "-  del word backward:                             CTRL-BACKSPACE"
-echo ""
-echo "# HOTKEYS: BOOKMARKS"
-echo "-  bookmark location:                             CMD-F2"
-echo "-  goto next bookmark::                           F2"
-echo "-  goto previous bookmark::                       SHIFT-F2"
-echo ""
-echo "# HOTKEYS: OPEN FILES"
-echo "- open hotkeys file:                              CTRL-CMD-b"
-echo ""
-echo "# MACROS"
-echo "-  Start & stop recording macro:                  CTRL-Q"
-echo "-  Playback macro:                                CTRL-SHIFT-Q"
-echo ""
-echo "# STRINGS"
-echo "-  To uppercase:                                  CMD-k,CMD-u    << in sequence"
-echo "-  To lowercase:                                  CMD-k,CMD-l    << in sequence"
-echo ""
-echo "# LINTING"
-echo "-  Lint view                                      ctrl+super+l"
-echo "-  Next error                                     ctrl+super+e"
-echo "-  Prev error                                     ctrl+super+shift-e"
-echo "-  See all errors (by line):                      ctrl+super+l"
-echo "-  More info on selected error:                   ctrl+super+r"
-echo '---------------------------------------------------------------------------------\n'
+cat << END_OF_TERMINAL_MANUAL_FOR_BASIC_REFERENCE
+---------------------------------------------------------------------------------
+** EXTRA SUBLIME INFO, HOTKEYS
+---------------------------------------------------------------------------------
+-  see cmd name for each action in console:       sublime.log_commands(True)
+
+HOTKEYS
+-  Go to definition using mouse click only:       ALT--LEFT_CLICK
+-  clear console if using ClearConsole plugin:    CTRL-ALT-k
+-  rename currently selected file:                ALT-r
+-  create new file in current dir:                ALT-n
+-  create new folder in current dir:              ALT-f
+-  duplicate currently selected file:             ALT-d
+-  open autocompletions menu:                     CTRL-SPACE
+-  toggle side menu:                              CMD-K, B
+-  go to symbol (fns, css blocks, classes, etc.)  CMD-r
+-  select cur scope. Expand more w each tap:      CMD-SHIFT-SPACE
+-  select full contents of current parens:        CTRL-SHIFT-M
+-  insert line before current line:               CMD-SHIFT-ENTER
+-  insert line after current line:                CMD-ENTER
+-  uppercase:                                     CTRL-k, u
+-  lowercase:                                     CTRL-k, l  (ell)
+-  del word forward:                              CTRL-DEL
+-  del word backward:                             CTRL-BACKSPACE
+
+# HOTKEYS: BOOKMARKS
+-  bookmark location:                             CMD-F2
+-  goto next bookmark::                           F2
+-  goto previous bookmark::                       SHIFT-F2
+
+# HOTKEYS: OPEN FILES
+- open hotkeys file:                              CTRL-CMD-b
+
+# MACROS
+-  Start & stop recording macro:                  CTRL-Q
+-  Playback macro:                                CTRL-SHIFT-Q
+
+# STRINGS
+-  To uppercase:                                  CMD-k,CMD-u    << in sequence
+-  To lowercase:                                  CMD-k,CMD-l    << in sequence
+
+# LINTING
+-  Lint view                                      ctrl+super+l
+-  Next error                                     ctrl+super+e
+-  Prev error                                     ctrl+super+shift-e
+-  See all errors (by line):                      ctrl+super+l
+-  More info on selected error:                   ctrl+super+r
+---------------------------------------------------------------------------------\n
+END_OF_TERMINAL_MANUAL_FOR_BASIC_REFERENCE
