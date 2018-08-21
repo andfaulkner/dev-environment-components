@@ -1,19 +1,22 @@
 #!/usr/bin/env sh
 
-echo ''
-echo '---------------------------------------------------------------------------------'
-echo '** ZIP, RAR, TAR.GZ -- ARCHIVE HANDLING **'
-echo '---------------------------------------------------------------------------------'
-echo "TAR"
-echo "## UNTAR A TAR, TAR.GZ, OR TAR.BZ ARCHIVE"
-echo "---- Untar in current dir:        tar -xvf sometarfile.tar.gz"
-echo "---- Untar in specified dir:      tar -xvf sometarfile.tar.gz -C path/to/output/dir"
-echo "---- Untar in dir (all systems):  tar -xzvf sometarfile.tar.gz"
-echo ""
-echo "## LIST TAR ARCHIVE CONTENT:      tar -tvf sometarfile.tar.gz"
-echo "## VIEW TAR ARCHIVE SIZE:         tar -czf sometarfile.tar.gz \| wc -c"
-echo ""
-echo "---------------------------------------------------------------------------------"
-echo "ZIP"
-echo "## UNZIP INTO SPECIFIED DIR:      unzip somezipfile.zip -d ./output_dir"
-echo '---------------------------------------------------------------------------------\n'
+cat << 'TERMINAL_MANUAL_QUICK_REF'
+
+---------------------------------------------------------------------------------
+** ZIP, RAR, TAR.GZ -- ARCHIVE HANDLING **
+---------------------------------------------------------------------------------
+TAR
+## UNTAR A TAR, TAR.GZ, OR TAR.BZ ARCHIVE
+---- Untar in current dir:        tar -xvf sometarfile.tar.gz
+---- Untar in specified dir:      tar -xvf sometarfile.tar.gz -C path/to/output/dir
+---- Untar in dir (all systems):  tar -xzvf sometarfile.tar.gz
+
+## LIST TAR ARCHIVE CONTENT:      tar -tvf sometarfile.tar.gz
+## VIEW TAR ARCHIVE SIZE:         tar -czf sometarfile.tar.gz \| wc -c
+
+---------------------------------------------------------------------------------
+ZIP
+## UNZIP INTO SPECIFIED DIR:      unzip somezipfile.zip -d ./output_dir
+---------------------------------------------------------------------------------
+
+TERMINAL_MANUAL_QUICK_REF
