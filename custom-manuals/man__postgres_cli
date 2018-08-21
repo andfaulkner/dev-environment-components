@@ -1,9 +1,9 @@
 #!/usr/bin/env sh
 
-cat << POSTGRES_CLI_CHEATSHEET 
+cat << 'POSTGRES_CLI_CHEATSHEET'
 
 ---------------------------------------------------------------------------------
-** postgres cli cheatsheet **
+** Postgres CLI cheatsheet **
 ---------------------------------------------------------------------------------
 - default pg port: 5432
 
@@ -33,7 +33,7 @@ cat << POSTGRES_CLI_CHEATSHEET
  drop a user:                              dropuser postgres
  list all users:                           psql postgres -c "SELECT rolname FROM pg_roles;"
   - assumes user postgres already exists
-  another 'list all users' example:        psql -U username -d mydatabase -c 'SELECT * FROM mytable' 
+  another 'list all users' example:        psql -U username -d mydatabase -c 'SELECT * FROM mytable'
 
 # dbs
  list all dbs                              psql --username=postgres --list
@@ -48,7 +48,6 @@ cat << POSTGRES_CLI_CHEATSHEET
  \conninfo    - tells you about current connection - username, db, port
 
 Completely remove postgres: https://gist.github.com/Atlas7/b1a40a2ffd85728b33e7
----------------------------------------------------------------------------------\n
+---------------------------------------------------------------------------------
 
 POSTGRES_CLI_CHEATSHEET
-
