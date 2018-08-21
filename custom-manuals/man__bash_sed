@@ -1,27 +1,30 @@
 #!/usr/bin/env sh
 
-echo ''
-echo '---------------------------------------------------------------------------------'
-echo '** sed cheatsheet **'
-echo '---------------------------------------------------------------------------------'
-echo '- find and replace text tool'
-echo ""
-echo "## Insert a line into a file:          sed -i '2 i\\\text to insert' path/to/file"
-echo "  -- insert 'text to insert' at line 2 of a file"
-echo ""
-echo "## Find and replace from a stream:     ... | sed s/text-to-replace/new-text/g"
-echo "  -- replace text-to-replace matches from a stream with new-text"
-echo ""
-echo "## sed characters requiring escape:"
-echo "  -- place a backslash before:         $.*/[\]^"
-echo "  -- get single quote in output via:   '\''"
-echo "  -- get single quote in output via:   '\''"
-echo "  -- in replacement text, quote:       &\/"
-echo ""
-echo "## find and replace from all files, recursively from current dir"
-echo "  -- example:"
-echo "      find . -name '*.sublime-snippet' -print0 | xargs -0 sed -i \"\" \"s/>source.js</>source.js, source.ts</g\""
-echo ''
-echo '## Replace in place (replace from stream):'
-echo "    echo 'hi there' | sed 's/hi/hello/'"
-echo '---------------------------------------------------------------------------------\n'
+cat << TERMINAL_MANUAL_QUICK_REF
+
+---------------------------------------------------------------------------------
+** sed cheatsheet **
+---------------------------------------------------------------------------------
+- find and replace text tool
+
+## Insert a line into a file:          sed -i '2 i\\\text to insert' path/to/file
+  -- insert 'text to insert' at line 2 of a file
+
+## Find and replace from a stream:     ... | sed s/text-to-replace/new-text/g
+  -- replace text-to-replace matches from a stream with new-text
+
+## sed characters requiring escape:
+  -- place a backslash before:         $.*/[\]^
+  -- get single quote in output via:   '\''
+  -- get single quote in output via:   '\''
+  -- in replacement text, quote:       &\/
+
+## find and replace from all files, recursively from current dir
+  -- example:
+      find . -name '*.sublime-snippet' -print0 | xargs -0 sed -i \"\" \"s/>source.js</>source.js, source.ts</g\"
+
+## Replace in place (replace from stream):
+    echo 'hi there' | sed 's/hi/hello/'
+---------------------------------------------------------------------------------\n
+
+TERMINAL_MANUAL_QUICK_REF
