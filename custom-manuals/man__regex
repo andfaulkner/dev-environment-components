@@ -1,43 +1,47 @@
 #!/usr/bin/env sh
-cat <<HEREDOC
+
+cat <<-'TERMINAL_MANUAL_QUICK_REF'
 
 ----------------------------------------------------------------------------------------------
 COLLECTION OF HANDY REGEXES
 ----------------------------------------------------------------------------------------------
 Select all lines containing a puts statement added for debugging (for replacement)
-        \n^[^a-zA-Z0-9_]*puts\s['"].*$"']
+    \n^[^a-zA-Z0-9_]*puts\s['"].*$"']
 Sublime snippets: only create a comma if there is anything inputted for $2
-        ${2/(.+)/, /g}
+    ${2/(.+)/, /g}
 
 LOOKBEHIND & LOOKAHEAD
-    Positive Lookbehind:     (?<=foo)'	
-    Negative Lookbehind:     (?<!foo)'	
-    Positive Lookahead:      (?=foo)'	
-    Negative Lookahead:      (?!foo)'	
+    Positive lookbehind     (?<=foo)
+    Negative lookbehind     (?<!foo)
+    Positive lookahead      (?=foo)
+    Negative lookahead      (?!foo)
 
  Examples: 
     * Positive Lookahead 
-        v^(?=\w{6,10}$)                validate that str solely made of 6-10 word char
+        v^(?=\w{6,10}$)           validate that str solely made of 6-10 word char
 
-        (?=[^a-z]*[a-z](\!|"))         match 0+ non-lowercase chars, then 1 lowercase char
-                                       then at some point in the rest of the line, either a 
-                                       ! or a "
+        (?=[^a-z]*[a-z](\!|"))    match 0+ non-lowercase chars, then 1 lowercase char
+                                  then at some point in the rest of the line, either a
+                                  ! or a "
     * Negative Lookbehind 
-        (?<!USD)10212                  will match JPX10212 & USDA10212, but not USD10212.' 
-                                       Matches 10212 as long as USD is not DIRECTLY before it
+        (?<!USD)10212             will match JPX10212 & USDA10212, but not USD10212.'
+                                  Matches 10212 as long as USD is not DIRECTLY before it
 
 NOTES: Order of Lookaheads barely Matters. See http://www.rexegg.com/regex-lookarounds.html
 
 ANDROID STUDIO FIND & REPLACES
-    * Replace verbose empty contents of auto-generated methods with a concise { }: 
-        \{\n.*?\/\/[\s\t]{0,2}((TODO Auto-generated method stub)|(\/\/.?do nothing))*?$\n((.*?\})|.*?\n.*?\}) 
+    * Replace verbose empty contents of auto-generated methods with a concise { }:
+        \{\n.*?\/\/[\s\t]{0,2}((TODO Auto-generated method stub)|(\/\/.?do nothing))*?$\n((.*?\})|.*?\n.*?\})
+
     * Replace multiline split-up else statements (   } \n  else  \n  { ) with single line:
-         \}\n[^a-zA-Z0-9_\n]*else\n[^a-zA-Z0-9\n_]*\{ 
-    * Replace if(  with if (  << add a space 
-         FIND:     if\(      REPLACE:     if ( 
+         \}\n[^a-zA-Z0-9_\n]*else\n[^a-zA-Z0-9\n_]*\{
+
+    * Replace if(  with if (  << add a space
+         FIND:     if\(      REPLACE:     if (
 
 ## Android app log filtering
     * exclude all lines containing pointless OS-level getSlotFromBufferLocked C++ error:
-        ^(?:(?! E/Surface: getSlotFromBufferLocked: unknown buffer: ).)*$\r?\n? 
+        ^(?:(?! E/Surface: getSlotFromBufferLocked: unknown buffer: ).)*$\r?\n?
 ----------------------------------------------------------------------------------------------
-HEREDOC
+
+TERMINAL_MANUAL_QUICK_REF
