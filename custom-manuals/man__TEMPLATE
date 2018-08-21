@@ -1,6 +1,7 @@
 #!/usr/bin/env sh
 
-cat <<-END_OF_TERMINAL_MANUAL_FOR_BASIC_REFERENCE
+cat <<-'TERMINAL_MANUAL_QUICK_REF'
+
 ---------------------------------------------------------------------------------
 ** NEW_TYPE **
 ---------------------------------------------------------------------------------
@@ -14,6 +15,6 @@ cat <<-END_OF_TERMINAL_MANUAL_FOR_BASIC_REFERENCE
    -- subitem here:           syntax here
    -- subitem here:           syntax here
    -- subitem here:           syntax here
+---------------------------------------------------------------------------------
 
----------------------------------------------------------------------------------\n
-END_OF_TERMINAL_MANUAL_FOR_BASIC_REFERENCE
+TERMINAL_MANUAL_QUICK_REF

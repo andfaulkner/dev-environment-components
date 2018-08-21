@@ -1,6 +1,6 @@
 #!/usr/bin/env sh
 
-cat << END_OF_TERMINAL_MANUAL_FOR_BASIC_REFERENCE
+cat <<-'END_OF_TERMINAL_MANUAL_FOR_BASIC_REFERENCE'
 
 ---------------------------------------------------------------------------------
 ** SYSTEM & FILE INFO **
