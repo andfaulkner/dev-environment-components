@@ -1,6 +1,6 @@
 #!/usr/bin/env sh
 
-cat << END_OF_TERMINAL_MANUAL_FOR_BASIC_REFERENCE
+cat << TERMINAL_MANUAL_QUICK_REF
 
 ---------------------------------------------------------------------------------
 ** ELIXIR **
@@ -17,4 +17,4 @@ cat << END_OF_TERMINAL_MANUAL_FOR_BASIC_REFERENCE
   -- cli:         relixer [directory-or-file-to-watch] [elixir-file-to-run-on-change]
 ---------------------------------------------------------------------------------
 
-END_OF_TERMINAL_MANUAL_FOR_BASIC_REFERENCE
+TERMINAL_MANUAL_QUICK_REF

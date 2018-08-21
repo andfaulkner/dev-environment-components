@@ -1,6 +1,6 @@
 #!/usr/bin/env sh
 
-cat << TERMINAL_MANUAL_RUBY_OFT_FORGOTTEN_QUICK_REF
+cat << TERMINAL_MANUAL_QUICK_REF
 
 ---------------------------------------------------------------------------------
 ** Ruby: often forgotten commands cheatsheet **
@@ -33,4 +33,4 @@ sleep(numseconds)
 require 'something/somethingelse/file' calls are relative to the project root, not the current file
 ---------------------------------------------------------------------------------
 
-TERMINAL_MANUAL_RUBY_OFT_FORGOTTEN_QUICK_REF
+TERMINAL_MANUAL_QUICK_REF

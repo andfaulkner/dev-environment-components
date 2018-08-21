@@ -1,6 +1,6 @@
 #!/usr/bin/env sh
 
-cat << END_OF_TERMINAL_MANUAL_FOR_BASIC_REFERENCE
+cat << TERMINAL_MANUAL_QUICK_REF
 
 ---------------------------------------------------------------------------------
 ** EXTRA SUBLIME INFO, HOTKEYS
@@ -50,4 +50,4 @@ HOTKEYS
 -  More info on selected error:                   ctrl+super+r
 ---------------------------------------------------------------------------------
 
-END_OF_TERMINAL_MANUAL_FOR_BASIC_REFERENCE
+TERMINAL_MANUAL_QUICK_REF
