@@ -1,21 +1,24 @@
 #!/usr/bin/env sh
 
-echo ''
-echo '---------------------------------------------------------------------------------'
-echo '** MAC KEYS **'
-echo '---------------------------------------------------------------------------------'
-echo '- HOTKEYS'
-echo "    OPTION-CMD-ESCAPE     Open force quit app selector" 
-echo "    SHIFT--CMD-3          Take screenshot"
-echo ""
-echo "- BROWSER (Chrome)"
-echo "    CMD-ALT-I             Open or close Chrome dev tools"
-echo ''
-echo '- MAC KEY SYMBOLS'
-echo '    ⌘     CMD'
-echo '    ⌥     OPTION / ALT'
-echo '    ^     CTRL / CONTROL'
-echo '    ⇧     SHIFT'
-echo '    ⇪     CAPS LOCK'
-echo '    Fn    FUNCTION'
-echo '---------------------------------------------------------------------------------\n'
+cat <<-'TERMINAL_MANUAL_QUICK_REF'
+
+---------------------------------------------------------------------------------
+** MAC KEYS **
+---------------------------------------------------------------------------------
+- HOTKEYS
+    OPTION-CMD-ESCAPE     Open force quit app selector
+    SHIFT--CMD-3          Take screenshot
+
+- BROWSER (Chrome)
+    CMD-ALT-I             Open or close Chrome dev tools
+
+- MAC KEY SYMBOLS
+    ⌘     CMD
+    ⌥     OPTION / ALT
+    ^     CTRL / CONTROL
+    ⇧     SHIFT
+    ⇪     CAPS LOCK
+    Fn    FUNCTION
+---------------------------------------------------------------------------------
+
+TERMINAL_MANUAL_QUICK_REF
