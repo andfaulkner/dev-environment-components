@@ -1,17 +1,20 @@
 #!/usr/bin/env sh
 
-echo ''
-echo '---------------------------------------------------------------------------------'
-echo '** ELIXIR **'
-echo '---------------------------------------------------------------------------------'
-echo "# Create Elixir project:                         mix new project-name --sup"
-echo "  -- create a test suite (in new Elixir proj):  mix test"
-echo ""
-echo "# IEX (Elixir REPL):                             iex"
-echo "  -- in-iex help                                 h()"
-echo "  -- compile a given Elixir file (from iex)      c(inputfile, outputfile)" 
-echo "  -- open iex within a project:                  iex -S mix"
-echo ""
-echo "# RERUN ON CHANGE"
-echo "  -- cli:         relixer [directory-or-file-to-watch] [elixir-file-to-run-on-change]"
-echo '---------------------------------------------------------------------------------\n'
+cat << END_OF_TERMINAL_MANUAL_FOR_BASIC_REFERENCE
+
+---------------------------------------------------------------------------------
+** ELIXIR **
+---------------------------------------------------------------------------------
+# Create Elixir project:                         mix new project-name --sup
+  -- create a test suite (in new Elixir proj):  mix test
+
+# IEX (Elixir REPL):                             iex
+  -- in-iex help                                 h()
+  -- compile a given Elixir file (from iex)      c(inputfile, outputfile)
+  -- open iex within a project:                  iex -S mix
+
+# RERUN ON CHANGE
+  -- cli:         relixer [directory-or-file-to-watch] [elixir-file-to-run-on-change]
+---------------------------------------------------------------------------------
+
+END_OF_TERMINAL_MANUAL_FOR_BASIC_REFERENCE
