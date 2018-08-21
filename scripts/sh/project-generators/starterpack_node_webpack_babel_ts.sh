@@ -99,7 +99,7 @@ function starterpack_node_webpack_babel_ts {
         
         #### react ####
         yarn add mobx react-mobx                           # state store
-        yarn add react-intl react-toastr2                  # react components
+        yarn add react-intl react-toastr                  # react components
 
         #### env config ####
         yarn add --dev dotenv

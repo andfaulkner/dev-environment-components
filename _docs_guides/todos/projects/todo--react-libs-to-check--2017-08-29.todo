@@ -17,7 +17,7 @@ React/JS/TS libs to examine
 -5	mobx-reactor: structure MobX stores. Connect stores to sfcs w/ async actions & unidirectional data flow.
 	Code: `https://github.com/amsb/mobx-reactor`
 
--4	react-notification system: Improved toast/notification lib. Potential react-toastr2 replacement.
+-4	react-notification system: Improved toast/notification lib. Potential react-toastr replacement.
 	Code: `https://github.com/igorprado/react-notification-system`
 	Demo: `http://igorprado.com/react-notification-system/`
 
