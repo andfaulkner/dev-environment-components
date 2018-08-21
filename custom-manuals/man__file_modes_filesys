@@ -1,0 +1,24 @@
+#!/usr/bin/env sh
+
+cat <<-'TERMINAL_MANUAL_QUICK_REF'
+
+---------------------------------------------------------------------------------
+** FILE MODES **
+---------------------------------------------------------------------------------
+r         Open file for reading.
+
+r+        Open file for reading and writing.
+
+w         Truncate file to zero length or create text file for writing.
+
+w+        Open for reading and writing.  The file is created if it doesn't
+          exist, otherwise it's truncated
+
+a         Write-only. Open for appending (writing at end of file). File
+          created if it doesn't exist.
+
+a+        Open for reading & appending (writing at end of file). File
+          created if it doesn't exist.
+---------------------------------------------------------------------------------
+
+TERMINAL_MANUAL_QUICK_REF
