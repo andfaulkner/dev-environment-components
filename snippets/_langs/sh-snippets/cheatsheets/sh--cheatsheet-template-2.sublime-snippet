@@ -1,0 +1,25 @@
+<snippet>
+	<description>Create a cheatsheet file</description>
+	<content><![CDATA[
+#!/usr/bin/env sh
+
+cat << ${1:TERMINAL_MANUAL_FOR_BASIC_REFERENCE}
+
+---------------------------------------------------------------------------------
+** ${2:name-of-command} cheatsheet **
+---------------------------------------------------------------------------------
+- ${3:what the command is e.g.: find and replace text tool}
+
+## ${4:Insert a line into a file:          sed -i '2 i\\\text to insert' path/to/file}
+  ${5:-- insert 'text to insert' at line 2 of a file}
+
+## ${6}
+  -- ${7}
+---------------------------------------------------------------------------------
+
+${1}
+
+]]></content>
+	<tabTrigger>man__cheatsheet_shell</tabTrigger>
+	<scope>source.shell</scope>
+</snippet>
