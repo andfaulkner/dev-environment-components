@@ -1,52 +1,55 @@
 #!/usr/bin/env sh
 
-echo ''
-echo '---------------------------------------------------------------------------------'
-echo '** VIM **'
-echo '---------------------------------------------------------------------------------'
-echo '- random things I forget about vim'
-echo "## Set syntax to ruby:                   :set syntax=ruby"
-echo "## Turn numbers off:                     :set nonumber"
-echo "## Turn numbers on:                      :set number"
-echo ""
-echo "***** INLINE CONSOLE *****"
-echo "## Open a console in current panel       :e term://bash"
-echo "## Open a console in new panel below:    :sp term://bash"
-echo "## Open a console in new panel to right: :vsp term://bash"
-echo ""
-echo "**** FIND AND REPLACE EXAMPLES *****"
-echo "remove start-of-line irb(main):020:0> + a space    < :%s/irb(main):.*>\s//g"
-echo "remove start-of-line => + a space                  :%s/^=>\s//g"
-echo ""
-echo "**** REMAP KEYS ****"
-echo ":map   OR map!"
-echo "   * show list of existing key maps:"
-echo "       map     OR    map!"
-echo "   * map a sequence of keys to another sequence of keys: generic:"
-echo "       :map #{key} :#{output "
-echo "   * example: maps F2 to show current date and time:"
-echo "        map <F2> :echo 'Current time is ' . strftime('%c')<CR>"
-echo "   * example: maps <F3> to insert current current date and time in current buffer:"
-echo "        map! <F3> <C-R>=strftime('%c')<CR>"
-echo ":noremap"
-echo "   * define literal keymap: no key substitutions"
-echo ":unmap"
-echo "   * unmap a key you no longer want mapped:       unmap <F8>    OR unmap! <F8>"
-echo "## REMAP MODES: i.e. prefix before map, unmap, nnoremap:"
-echo "  i       e.g. :imap - insert mode maps"
-echo "  v       e.g. :vmap - visual and select mode maps"
-echo "  s       e.g. :smap - select mode maps"
-echo "  x       e.g. :xmap - visual mode maps"
-echo "  c       e.g. :cmap - command-line mode maps"
-echo "  o       e.g. :omap - operator pending mode maps"
-echo ""
-echo "mapleader: "
-echo ""
-echo "**** AUTORUN A COMMAND BEFORE VIM STARTS (E.G. KEY MAPPING) ****"
-echo "autocmd VimEnter"
-echo "   * do something immediately when vim starts. Example:"
-echo "        autocmd * unmap! <F8>"
-echo "autocmd FileType #{some file type} #{cmd}"
-echo "   * do something immediately when vim loads a specific file type. Example:"
-echo "        autocmd Filetype python unmap! <F8>"
-echo '---------------------------------------------------------------------------------\n'
+cat <<-'TERMINAL_MANUAL_QUICK_REF'
+
+---------------------------------------------------------------------------------
+** VIM **
+---------------------------------------------------------------------------------
+- random things I forget about vim
+## Set syntax to ruby:                   :set syntax=ruby
+## Turn numbers off:                     :set nonumber
+## Turn numbers on:                      :set number
+
+***** INLINE CONSOLE *****
+## Open a console in current panel       :e term://bash
+## Open a console in new panel below:    :sp term://bash
+## Open a console in new panel to right: :vsp term://bash
+
+**** FIND AND REPLACE EXAMPLES *****
+remove start-of-line irb(main):020:0> + a space    < :%s/irb(main):.*>\s//g
+remove start-of-line => + a space                  :%s/^=>\s//g
+
+**** REMAP KEYS ****
+:map   OR map!
+   * show list of existing key maps:
+       map     OR    map!
+   * map a sequence of keys to another sequence of keys: generic:
+       :map #{key} :#{output 
+   * example: maps F2 to show current date and time:
+        map <F2> :echo 'Current time is ' . strftime('%c')<CR>
+   * example: maps <F3> to insert current current date and time in current buffer:
+        map! <F3> <C-R>=strftime('%c')<CR>
+:noremap
+   * define literal keymap: no key substitutions
+:unmap
+   * unmap a key you no longer want mapped:       unmap <F8>    OR unmap! <F8>
+## REMAP MODES: i.e. prefix before map, unmap, nnoremap:
+  i       e.g. :imap - insert mode maps
+  v       e.g. :vmap - visual and select mode maps
+  s       e.g. :smap - select mode maps
+  x       e.g. :xmap - visual mode maps
+  c       e.g. :cmap - command-line mode maps
+  o       e.g. :omap - operator pending mode maps
+
+mapleader: 
+
+**** AUTORUN A COMMAND BEFORE VIM STARTS (E.G. KEY MAPPING) ****
+autocmd VimEnter
+   * do something immediately when vim starts. Example:
+        autocmd * unmap! <F8>
+autocmd FileType #{some file type} #{cmd}
+   * do something immediately when vim loads a specific file type. Example:
+        autocmd Filetype python unmap! <F8>
+---------------------------------------------------------------------------------
+
+TERMINAL_MANUAL_QUICK_REF
