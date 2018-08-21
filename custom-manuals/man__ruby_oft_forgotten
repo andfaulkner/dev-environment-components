@@ -1,34 +1,36 @@
 #!/usr/bin/env sh
 
-echo ''
-echo '---------------------------------------------------------------------------------'
-echo '** Ruby: often forgotten commands cheatsheet **'
-echo '---------------------------------------------------------------------------------'
-echo '- things I just cannot seem to remember in Ruby'
-echo ""
-echo "## Multiline strings          <<-STRINGNAME"
-echo "                                text goes here"
-echo "                              STRINGNAME"
-echo "## pipe to ruby one-liner"
-echo "        ffruby -pe:           cmd | ruby -pe '$_ = $_.modify_in_some_way' | cmd"
-echo ""
-echo "*** NUMBER TO NUMBERIC TYPE CONVERSIONS ***"
-echo "5.kilobytes"
-echo "5.megabytes"
-echo "5.gigabytes"
-echo "5.terabytes"
-echo "5.petabytes"
-echo ""
-echo "5.seconds"
-echo "5.minutes"
-echo "5.hours"
-echo "5.days"
-echo "5.months"
-echo ""
-echo "*** PAUSE EXECUTION ***"
-echo "sleep(numseconds)"
-echo "   *   does not work properly in rake tasks!"
-echo ""
-echo "require 'something/somethingelse/file' calls are relative to the project root, not the current file"
-echo '---------------------------------------------------------------------------------\n'
+cat << TERMINAL_MANUAL_RUBY_OFT_FORGOTTEN_QUICK_REF
 
+---------------------------------------------------------------------------------
+** Ruby: often forgotten commands cheatsheet **
+---------------------------------------------------------------------------------
+- things I just cannot seem to remember in Ruby
+
+## Multiline strings  <<-STRINGNAME
+                        text goes here
+                      STRINGNAME
+## pipe to ruby one-liner
+    ffruby -pe:           cmd | ruby -pe '$_ = $_.modify_in_some_way' | cmd
+
+*** NUMBER TO NUMBERIC TYPE CONVERSIONS ***
+5.kilobytes
+5.megabytes
+5.gigabytes
+5.terabytes
+5.petabytes
+
+5.seconds
+5.minutes
+5.hours
+5.days
+5.months
+
+*** PAUSE EXECUTION ***
+sleep(numseconds)
+   *   does not work properly in rake tasks!
+
+require 'something/somethingelse/file' calls are relative to the project root, not the current file
+---------------------------------------------------------------------------------
+
+TERMINAL_MANUAL_RUBY_OFT_FORGOTTEN_QUICK_REF
