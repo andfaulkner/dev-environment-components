@@ -1,0 +1,8 @@
+<snippet>
+  <description>Set displayName for a React SFC (stateless functional component)</description>
+<content><![CDATA[
+${1:CmpName}.displayName = `${1}`;
+]]></content>  
+  <tabTrigger>dname</tabTrigger>
+  <scope>source.js, source.ts, source.jsx, source.tsx</scope>
+</snippet>
