@@ -97,6 +97,8 @@ function gact {
     gac $1
 }
 
+alias gast="gact"
+
 
 # TODO remove duplication between gat and gac
 
