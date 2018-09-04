@@ -18,7 +18,7 @@
         height: 100%;
     \}}
 }
-]]></content>  
+]]></content>
   <tabTrigger>media_height</tabTrigger>
   <scope>source.css, source.postcss, source.scss</scope>
 </snippet>

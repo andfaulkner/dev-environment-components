@@ -11,7 +11,7 @@
         width: 100%;
     \}}
 }
-]]></content>  
+]]></content>
   <tabTrigger>media_minw</tabTrigger>
   <scope>source.css, source.postcss, source.scss</scope>
 </snippet>

@@ -18,7 +18,7 @@
         width: 100%;
     \}}
 }
-]]></content>  
+]]></content>
   <tabTrigger>media_width_both</tabTrigger>
   <scope>source.css, source.postcss, source.scss</scope>
 </snippet>
