@@ -1,7 +1,7 @@
 <snippet>
   <description>React version of HTML "a" (link) tag.</description>
 <content><![CDATA[
-<a href=${1:"#"}>${2:Link text or img etc.}</a>
+<a href={${1:`#`}}${2/.+/ target=\{/}${2:`_blank`}${2/.+/\}/}>${0:Link text or img etc.}</a>
 ]]></content>  
   <tabTrigger><![CDATA[<a]]></tabTrigger>
     <scope>meta.jsx.children, meta.block.tsx, meta.block.jsx</scope>
