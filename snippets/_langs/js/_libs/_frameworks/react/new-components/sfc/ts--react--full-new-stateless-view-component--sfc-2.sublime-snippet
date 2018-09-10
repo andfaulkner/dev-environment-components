@@ -7,7 +7,6 @@ const s = require('./${TM_FILENAME/(.+?)(\-((container)|(view))\.tsx)/\1/g}.scss
 /************************************** THIRD-PARTY MODULES ***************************************/
 import * as React from 'react';
 import * as cn from 'classnames';
-import {InputChangeHandler} from 'mad-utils/lib/react';
 import {observer, inject} from 'mobx-react';
 
 /******************************************** LOGGING *********************************************/
@@ -15,13 +14,13 @@ import {logFactory, logMarkers} from 'mad-logs';
 const log = logFactory()(`${TM_FILENAME}`, logMarkers.smokeyHatesChristmas);
 
 /**************************************** TYPE DEFINITIONS ****************************************/
-interface ${1:${TM_FILENAME/([a-zA-Z])?([a-zA-Z0-9]+)?[-_]?[-_]?([a-zA-Z])?([a-zA-Z0-9]+)?[-_]?[-_]?([a-zA-Z])?([a-zA-Z0-9]+)?[-_]?[-_]?([a-zA-Z])?([a-zA-Z0-9]+)?[-_]?[-_]?([a-zA-Z])?([a-zA-Z0-9]+)?[-_]?[-_]?([a-zA-Z])?([a-zA-Z0-9]+)?\..*/\U$1\L$2\U$3\L$4\U$5\L$6\U$7\L$8\U$9\L$10\U$11\L$12/g}}Props extends PolyglotProps {
+interface ${1:${TM_FILENAME/([a-zA-Z])?([a-zA-Z0-9]+)?[-_]?[-_]?([a-zA-Z])?([a-zA-Z0-9]+)?[-_]?[-_]?([a-zA-Z])?([a-zA-Z0-9]+)?[-_]?[-_]?([a-zA-Z])?([a-zA-Z0-9]+)?[-_]?[-_]?([a-zA-Z])?([a-zA-Z0-9]+)?[-_]?[-_]?([a-zA-Z])?([a-zA-Z0-9]+)?\..*/\U$1\L$2\U$3\L$4\U$5\L$6\U$7\L$8\U$9\L$10\U$11\L$12/g}}Props {
     ${3:// STATE STORE PROPS AND MUTATORS HERE (probably)}
 }
 
 /********************************************* EXPORT *********************************************/
 /**
- * @export ${1} - ${2:UI of ...DESCRIPTION...}
+ * ${2:UI of ...DESCRIPTION...}
  */
 export const ${1} = observer((props?: ${1:NameOfComponent}Props) => {
     log.verbose(`Rendering ${1} with props:`, props);
