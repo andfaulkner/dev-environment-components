@@ -3,6 +3,6 @@
 <content><![CDATA[
 <a href={${1:`#`}}${2/.+/ target=\{/}${2:`_blank`}${2/.+/\}/}>${0:Link text or img etc}</a>
 ]]></content>  
-  <tabTrigger><![CDATA[<a]]></tabTrigger>
+  <tabTrigger>a_jsx</tabTrigger>
     <scope>meta.jsx.children, meta.block.tsx, meta.block.jsx</scope>
 </snippet>
