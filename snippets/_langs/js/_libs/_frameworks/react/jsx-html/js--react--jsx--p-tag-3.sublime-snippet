@@ -1,0 +1,8 @@
+<snippet>
+  <description>React version of HTML "p" (paragraph) tag</description>
+<content><![CDATA[
+<p${2/.+/ className=\{cn\(`/}${2:classes here}${2/.+/`\)\}/}>${0:Paragraph text}</p>
+]]></content>  
+  <tabTrigger>p_tsx</tabTrigger>
+    <scope>meta.jsx.children, meta.block.tsx, meta.block.jsx</scope>
+</snippet>
