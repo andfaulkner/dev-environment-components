@@ -6,6 +6,6 @@ ${1:@decorator}${1/.+/\n/g}${2:public}${2/.+/ /g}${3:propName} = (${4:args}) => 
 };
 
 ]]></content>  
-  <tabTrigger>class_property_method</tabTrigger>
+  <tabTrigger>mtd</tabTrigger>
   <scope>source.ts, source.tsx</scope>
 </snippet>
