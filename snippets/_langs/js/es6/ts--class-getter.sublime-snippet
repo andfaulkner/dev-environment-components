@@ -1,7 +1,7 @@
 <snippet>
   <description>Class getter</description>
 <content><![CDATA[
-get ${1:remainingTodosCount}()${2/.+/: /}${2:RetType} {
+${1:@computed}${1/.+/\n/g}${2:public}${2/.+/ /g}get ${3:remainingTodosCount}()${4/.+/: /}${4:RetType} {
     ${0:return this.todos.length - this.completedTodosCount;}
 }
 ]]></content>  
