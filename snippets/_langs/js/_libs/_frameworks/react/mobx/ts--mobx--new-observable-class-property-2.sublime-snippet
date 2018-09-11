@@ -1,8 +1,9 @@
 <snippet>
   <description>Create new observable class property</description>
 <content><![CDATA[
-@observable public ${1:propName}${2/.+/: /g}${2:Type} = ${3:value|null};
-]]></content>  
-  <tabTrigger>obsprop_mobx</tabTrigger>
+@observable
+${4:public}${4/.+/ /}${1:propName}${2/.+/: /g}${2:string} = ${3:null};
+]]></content>
+  <tabTrigger>mobx_obs_prop</tabTrigger>
   <scope>source.ts, source.tsx</scope>
 </snippet>
