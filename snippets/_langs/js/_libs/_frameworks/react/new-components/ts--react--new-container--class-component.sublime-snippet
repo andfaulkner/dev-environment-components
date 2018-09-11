@@ -3,7 +3,6 @@
 <content><![CDATA[
 /************************************** THIRD-PARTY MODULES ***************************************/
 import * as React from 'react';
-import * as cn from 'classnames';
 import {inject, observer} from 'mobx-react';
 
 /**************************************** PROJECT MODULES *****************************************/
@@ -14,7 +13,11 @@ import {logFactory, logMarkers} from 'mad-logs';
 const log = logFactory()(`${TM_FILENAME}`, logMarkers.zebra);
 
 /**************************************** TYPE DEFINITIONS ****************************************/
-interface ${1}Props {}
+interface ${TM_FILENAME/([a-zA-Z])?([a-zA-Z0-9]+)?[-_]?[-_]?([a-zA-Z])?([a-zA-Z0-9]+)?[-_]?[-_]?([a-zA-Z])?([a-zA-Z0-9]+)?[-_]?[-_]?([a-zA-Z])?([a-zA-Z0-9]+)?[-_]?[-_]?([a-zA-Z])?([a-zA-Z0-9]+)?[-_]?[-_]?([a-zA-Z])?([a-zA-Z0-9]+)?container\..*/\U$1\L$2\U$3\L$4\U$5\L$6\U$7\L$8\U$9\L$10\U$11\L$12/g}SharedProps {}
+
+interface ${TM_FILENAME/([a-zA-Z])?([a-zA-Z0-9]+)?[-_]?[-_]?([a-zA-Z])?([a-zA-Z0-9]+)?[-_]?[-_]?([a-zA-Z])?([a-zA-Z0-9]+)?[-_]?[-_]?([a-zA-Z])?([a-zA-Z0-9]+)?[-_]?[-_]?([a-zA-Z])?([a-zA-Z0-9]+)?[-_]?[-_]?([a-zA-Z])?([a-zA-Z0-9]+)?container\..*/\U$1\L$2\U$3\L$4\U$5\L$6\U$7\L$8\U$9\L$10\U$11\L$12/g}ContainerProps extends ${TM_FILENAME/([a-zA-Z])?([a-zA-Z0-9]+)?[-_]?[-_]?([a-zA-Z])?([a-zA-Z0-9]+)?[-_]?[-_]?([a-zA-Z])?([a-zA-Z0-9]+)?[-_]?[-_]?([a-zA-Z])?([a-zA-Z0-9]+)?[-_]?[-_]?([a-zA-Z])?([a-zA-Z0-9]+)?[-_]?[-_]?([a-zA-Z])?([a-zA-Z0-9]+)?container\..*/\U$1\L$2\U$3\L$4\U$5\L$6\U$7\L$8\U$9\L$10\U$11\L$12/g}SharedProps {}
+
+export interface ${TM_FILENAME/([a-zA-Z])?([a-zA-Z0-9]+)?[-_]?[-_]?([a-zA-Z])?([a-zA-Z0-9]+)?[-_]?[-_]?([a-zA-Z])?([a-zA-Z0-9]+)?[-_]?[-_]?([a-zA-Z])?([a-zA-Z0-9]+)?[-_]?[-_]?([a-zA-Z])?([a-zA-Z0-9]+)?[-_]?[-_]?([a-zA-Z])?([a-zA-Z0-9]+)?container\..*/\U$1\L$2\U$3\L$4\U$5\L$6\U$7\L$8\U$9\L$10\U$11\L$12/g}ViewProps extends ${TM_FILENAME/([a-zA-Z])?([a-zA-Z0-9]+)?[-_]?[-_]?([a-zA-Z])?([a-zA-Z0-9]+)?[-_]?[-_]?([a-zA-Z])?([a-zA-Z0-9]+)?[-_]?[-_]?([a-zA-Z])?([a-zA-Z0-9]+)?[-_]?[-_]?([a-zA-Z])?([a-zA-Z0-9]+)?[-_]?[-_]?([a-zA-Z])?([a-zA-Z0-9]+)?container\..*/\U$1\L$2\U$3\L$4\U$5\L$6\U$7\L$8\U$9\L$10\U$11\L$12/g}SharedProps {}
 
 /********************************************* EXPORT *********************************************/
 /**
@@ -22,7 +25,7 @@ interface ${1}Props {}
  */
 @inject('appState')
 @observer
-export class ${1:${TM_FILENAME/([a-zA-Z])?([a-zA-Z0-9]+)?[-_]?[-_]?([a-zA-Z])?([a-zA-Z0-9]+)?[-_]?[-_]?([a-zA-Z])?([a-zA-Z0-9]+)?[-_]?[-_]?([a-zA-Z])?([a-zA-Z0-9]+)?[-_]?[-_]?([a-zA-Z])?([a-zA-Z0-9]+)?[-_]?[-_]?([a-zA-Z])?([a-zA-Z0-9]+)?\..*/\U$1\L$2\U$3\L$4\U$5\L$6\U$7\L$8\U$9\L$10\U$11\L$12/g}} extends React.Component<${1}Props, {}> {
+export class ${1:${TM_FILENAME/([a-zA-Z])?([a-zA-Z0-9]+)?[-_]?[-_]?([a-zA-Z])?([a-zA-Z0-9]+)?[-_]?[-_]?([a-zA-Z])?([a-zA-Z0-9]+)?[-_]?[-_]?([a-zA-Z])?([a-zA-Z0-9]+)?[-_]?[-_]?([a-zA-Z])?([a-zA-Z0-9]+)?[-_]?[-_]?([a-zA-Z])?([a-zA-Z0-9]+)?\..*/\U$1\L$2\U$3\L$4\U$5\L$6\U$7\L$8\U$9\L$10\U$11\L$12/g}} extends React.Component<${TM_FILENAME/([a-zA-Z])?([a-zA-Z0-9]+)?[-_]?[-_]?([a-zA-Z])?([a-zA-Z0-9]+)?[-_]?[-_]?([a-zA-Z])?([a-zA-Z0-9]+)?[-_]?[-_]?([a-zA-Z])?([a-zA-Z0-9]+)?[-_]?[-_]?([a-zA-Z])?([a-zA-Z0-9]+)?[-_]?[-_]?([a-zA-Z])?([a-zA-Z0-9]+)?container\..*/\U$1\L$2\U$3\L$4\U$5\L$6\U$7\L$8\U$9\L$10\U$11\L$12/g}ContainerProps, {}> {
     render() {
         log.verbose(`Rendering ${1} with this.props:`, this.props);
         ${0}
