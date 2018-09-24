@@ -1,7 +1,7 @@
 <snippet>
     <description>React: componentWillUnmount - class</description>
     <content><![CDATA[
-componentWillUnmount = () => {
+componentWillUnmount() {
 	${1: 'Runs just before component is removed';}
 }
 ]]></content>
