@@ -30,7 +30,8 @@ static getDerivedStateFromProps [2] - getDerivedStateFromProps(nextProps)
            ┃┃                           ┃-> immediately after component mounted (ONLY EVER CALLED ONCE!)
            ┃┃                           ┗-> on server rendering (only lifecycle hook called on server rendering)
            \/  
-         render                 [4] - render the component
+         render                 [4] - render(): void  << No arguments or return val
+           ┃┃                         Render the component
            ┃┃                         Returns the needed component markup
            ┃┃                         Props and state values are interpreted to create the correct output.
            ┃┃                         Neither props nor state should should be modified inside this function
@@ -76,7 +77,7 @@ PROPS UPDATE
 ------------
 UNSAFE_componentWillReceiveProps
            OR
-static getDerivedStateFromProps   [1] - UNSAFE_componentWillReceiveProps(nextProps)
+static getDerivedStateFromProps  [1A] - UNSAFE_componentWillReceiveProps(nextProps)
            ┃┃                           Runs:
            ┃┃                             ┃-> when new props arrive
            ┃┃                             ┃-> NOT when state changes
@@ -91,8 +92,24 @@ static getDerivedStateFromProps   [1] - UNSAFE_componentWillReceiveProps(nextPro
            ┃┃                             ┃-> this.props (will contain prev props)
            ┃┃                             ┗-> "next" props (in signature)
            ┃┃                             NOTE: Just because this was called doesn't mean the val of props has changed
+           ┃┃                             NOTE: Just because this was called doesn't mean the val of props has changed
+           ┃┃
+           ┃┃                    *PREFERRED ::*
+           ┃┃                    [1B] - static getDerivedStateFromProps(nextProps, nextState): Object
+           ┃┃                           Allows change of state to occur when new props enter
+           ┃┃                           -- setState not available, but value returned from this becomes the new state
+           ┃┃                           Runs:
+           ┃┃                             ┃-> When new props arrive
+           ┃┃                             ┃-> NOT when state changes (confirm this)
+           ┃┃                             ┃-> Right before checked whether to render
+           ┃┃                             ┗-> after component initially mounted
+           ┃┃                           Uses: (examples)
+           ┃┃                             ┃-> Recording the current scroll direction based on a changing offset prop
+           ┃┃                             ┃-> Loading external data specified by a source prop (e.g containing a URL)
+           ┃┃                             ┗-> Use only as a last resort
+           ┃┃                                 ┗->> See https://reactjs.org/docs/react-component.html#static-getderivedstatefromprops
            \/       
-  shouldComponentUpdate           [2] - getDerivedStateFromProps(nextProps, nextState)
+  shouldComponentUpdate           [2] - shouldComponentUpdate(nextProps, nextState): boolean
            ┃┃                           Runs:
            ┃┃                             ┃-> when new props arrive
            ┃┃                             ┃-> when state changes
@@ -104,7 +121,7 @@ static getDerivedStateFromProps   [1] - UNSAFE_componentWillReceiveProps(nextPro
            ┃┃                           Use to control component re-rendering (e.g. for a game loop).
            ┃┃                           -- setState not available
            \/
- UNSAFE_componentWillUpdate            [3] - UNSAFE_componentWillUpdate(nextProps, nextState)
+ UNSAFE_componentWillUpdate       [3] - UNSAFE_componentWillUpdate(nextProps, nextState)
            ┃┃                           Runs:
            ┃┃                             ┃-> when new props arrive (if shouldComponentUpdate returned true or doesn't exist)
            ┃┃                             ┃-> when state changes (if shouldComponentUpdate returned true or doesn't exist)
@@ -134,7 +151,8 @@ static getDerivedStateFromProps   [1] - UNSAFE_componentWillReceiveProps(nextPro
 ----------------------------------------------------------------------------------------------------
 ON VIEW REMOVAL / UNMOUNTING
 ----------------------------
-  componentWillUnmount     [1] - Cleanup. e.g.:
+  componentWillUnmount     [1] - componentWillUnmount(): void   << No arguments or return val
+                                 Cleanup. e.g.:
                                  * cancel outgoing network requests
                                  * remove all event listeners associated w/ the component
                                  -- setState not available
