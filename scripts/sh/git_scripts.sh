@@ -44,6 +44,7 @@ alias g_mybranches="git branch | ack 'ITPL.*[a-zA-Z]' --no-color"
 alias g_branchhistory="git for-each-ref --sort=committerdate refs/heads/ --format='%(refname) %(committerdate) %(authorname)' | sed 's/refs\/heads\///g' | awk '{print \$1}' | tail"
 alias gbhistory="g_branchhistory"
 alias gbhis="g_branchhistory"
+alias ghis="g_branchhistory"
 
 alias gpocur='echo "$(g_curbr)" | xargs git push origin'
 alias gpocur_repeatedly='gpocur; gpocur; gpocur; gpocur; gpocur; gpocur; gpocur; gpocur; gpocur; gpocur; gpocur'
