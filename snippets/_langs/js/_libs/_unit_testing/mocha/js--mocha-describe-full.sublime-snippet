@@ -11,11 +11,6 @@ describe('${1:someItemBeingTested}', function(){
 
     it('exists', function() {
         expect(${1:storeNewUser}).to.exist;
-
-30 matches across 7 files
-
-
-Searching 7232 files for "storeNewUser:" (regex, case sensitive)
     }); 
 
     it('${2:Some test on item being tested explained here}', function() {
