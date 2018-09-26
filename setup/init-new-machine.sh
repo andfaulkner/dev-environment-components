@@ -24,6 +24,13 @@ brew add hub # Github extensions to git
 brew add subversion
 brew add maven
 
+# Generate TOC for git README
+mkdir ~/bin
+pushd ~/bin
+wget https://raw.githubusercontent.com/ekalinin/github-markdown-toc/master/gh-md-toc
+chmod a+x gh-md-toc
+popd
+
 ### Install languages ###
 brew add gradle
 brew add python
