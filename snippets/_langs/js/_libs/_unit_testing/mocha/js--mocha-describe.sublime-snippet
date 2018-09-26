@@ -1,0 +1,12 @@
+<snippet>
+  <description>Mocha describe block</description>
+<content><![CDATA[
+describe(`${1:someItemBeingTested}`, function(){
+    ${0:it(`exists`, function() {
+        expect(true).to.eql(true);
+    \});}
+});
+]]></content>  
+  <tabTrigger>modesc</tabTrigger>
+  <scope>source.js, source.ts, source.jsx, source.tsx</scope>
+</snippet>
