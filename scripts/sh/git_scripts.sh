@@ -45,6 +45,8 @@ alias g_branchhistory="git for-each-ref --sort=committerdate refs/heads/ --forma
 alias gbhistory="g_branchhistory"
 alias gbhis="g_branchhistory"
 alias ghis="g_branchhistory"
+alias gbrh="g_branchhistory"
+alias g_branch_history="gbranchhistory"
 
 alias gpocur='echo "$(g_curbr)" | xargs git push origin'
 alias gpocur_repeatedly='gpocur; gpocur; gpocur; gpocur; gpocur; gpocur; gpocur; gpocur; gpocur; gpocur; gpocur'
