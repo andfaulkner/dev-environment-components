@@ -1,0 +1,8 @@
+<snippet>
+  <description>Import Mobx - inject. Usage: @inject('appState') class SomeClass ...</description>
+<content><![CDATA[
+import {inject} from 'mobx-react';${0}
+]]></content>  
+  <tabTrigger>imp_inject</tabTrigger>
+  <scope>source.js, source.ts, source.jsx, source.tsx</scope>
+</snippet>
