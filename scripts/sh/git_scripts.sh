@@ -102,6 +102,21 @@ function gact {
 
 alias gast="gact"
 
+#=== FUNCTION =============================================================
+#        NAME:  gaj
+# DESCRIPTION:  Add a JSON file (or files) to git staging
+#   @PARAM $1:  Name of JSON file(s) to add / string in filename(s) to add
+#==========================================================================
+function gaj {
+    location "git_scripts.sh"
+    local NAME_OF_FILE_TO_ADD=$1
+
+    git add "*$NAME_OF_FILE_TO_ADD*.json" 2>/dev/null
+
+    if [[ $NAME_OF_FILE_TO_ADD == *.json ]]; then
+        git add "*$NAME_OF_FILE_TO_ADD" 2>/dev/null
+    fi
+}
 
 # TODO remove duplication between gat and gac
 
