@@ -56,7 +56,7 @@ brew add redis
 brew add sqlite
 brew add mongodb
 
-#----- Install completions -----#
+#----- Install completion utils -----#
 brew add pip-completion
 brew add gem-completion
 brew add bash-completion
@@ -91,4 +91,14 @@ nvm ls | ack '\s+v' | tail -n1 | awk '{print $2}'
 #----- Enable scrolling in less -----#
 defaults write com.googlecode.iterm2 AlternateMouseScroll -bool true
 
+
+########################## AUTOCOMPLETIONS ##########################
+#----- Add npm completions -----#
+mkdir ~/.config
+mkdir ~/.config/npm
+npm completion > ~/.config/npm/npm-completion.sh
+
+echo "
+source ~/.config/npm/npm-completion.sh
+" >> ~/.bash_profile
 
