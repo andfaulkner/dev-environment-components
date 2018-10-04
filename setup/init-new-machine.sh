@@ -94,8 +94,8 @@ defaults write com.googlecode.iterm2 AlternateMouseScroll -bool true
 
 ########################## AUTOCOMPLETIONS ##########################
 #----- Add npm completions -----#
-mkdir ~/.config
-mkdir ~/.config/npm
+mkdir ~/.config 2>/dev/null
+mkdir ~/.config/npm 2>/dev/null
 npm completion > ~/.config/npm/npm-completion.sh
 
 echo "
