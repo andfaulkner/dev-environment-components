@@ -342,7 +342,12 @@ function file.get_line { #arg1: filename; arg2: line
   cat $1 | awk "NR==$2"
 }
 
-alias diskspace="df -h";
+# Get amount of free disk space
+function diskspace() {
+    echo ""
+    df -h | ack -v "map"
+    echo ""
+}
 
 # Get file size in kb.  e.g. fsizekb somefile.json
 function fsizekb {
