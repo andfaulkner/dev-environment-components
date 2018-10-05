@@ -1,0 +1,8 @@
+<snippet>
+  <description>Wrap React SFC w observe & inject</description>
+<content><![CDATA[
+inject(${1:'config'})(observer(${0:$SELECTION}))
+]]></content>
+  <tabTrigger>mobxobsinj</tabTrigger>
+  <scope>source.ts, source.tsx</scope>
+</snippet>
