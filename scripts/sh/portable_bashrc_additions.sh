@@ -344,8 +344,11 @@ function file.get_line { #arg1: filename; arg2: line
 
 # Get amount of free disk space
 function diskspace {
+    location "portable_bashrc_additions.sh"
     echo ""
-    df -h | ack -v "map"
+    echo "$(df -Hm | awk 'NR<2 {print $1" Size(GB) "$3" "$4" "$5" "$9" "$10}; NR>1 {print $1" "$2/1024" "$3/1024" "$4/1024" "$5" "$9" "$10}')" \
+        | column -t -s ' ' \
+        | ack -v "map  "
     echo ""
 }
 
