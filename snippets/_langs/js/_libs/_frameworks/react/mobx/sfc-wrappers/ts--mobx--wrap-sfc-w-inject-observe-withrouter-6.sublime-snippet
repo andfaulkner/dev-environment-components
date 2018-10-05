@@ -1,0 +1,8 @@
+<snippet>
+  <description>Wrap React SFC w observe, inject, withRouter</description>
+<content><![CDATA[
+inject(${1:'config'})(withRouter(observer(${0:$SELECTION})))
+]]></content>
+  <tabTrigger>withrouter_inj_obs_sfc</tabTrigger>
+  <scope>source.ts, source.tsx</scope>
+</snippet>
