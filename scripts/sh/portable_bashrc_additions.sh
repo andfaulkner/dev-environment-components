@@ -356,7 +356,13 @@ function diskspace {
 # Gives a single conglomerate output
 function fsize {
     location "portable_bashrc_additions.sh"
-    du -sh
+    du -sh $1
+}
+
+# Get size of all top-level items (dirs & files) in current directory
+function fsize_all_in_dir {
+    location "portable_bashrc_additions.sh"
+    du -d1 -h
 }
 
 # Get file size in kb.  e.g. fsizekb somefile.json
