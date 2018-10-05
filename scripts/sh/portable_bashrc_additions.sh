@@ -342,6 +342,8 @@ function file.get_line { #arg1: filename; arg2: line
   cat $1 | awk "NR==$2"
 }
 
+alias diskspace="df -h";
+
 # Get file size in kb.  e.g. fsizekb somefile.json
 function fsizekb {
     local PATH_TO_FILE=$1 
@@ -350,7 +352,7 @@ function fsizekb {
         awk '{printf ("%-16s%s", $1" "$2, $3)}'
 }
 
-alias filesizekv="fsizekb"
+alias filesizekb="fsizekb"
 
 ############# Bash completion ###############
 if [[ -f $(brew --prefix)/etc/bash_completion ]]; then
