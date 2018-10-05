@@ -4,14 +4,30 @@
     email = andfaulkner@gmail.com
 
 [alias]
+    ac = !git add . && git commit --all -m
     amend = commit --amend
-    delete = branch -d 
-    rename = branch -m
+    br = branch
+    browse = !git open
+    co = checkout
+    conflicts = diff --name-only --diff-filter=U
+    delete = branch -d
+    lg = log --color --graph --abbrev-commit\n           --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%C(bold blue)<%an>%Creset'
     newbranch = checkout -b
-    co = checkout 
+    pm = push origin master
+    rename = branch -m
     revert1 = revert HEAD
     revert2 = revert HEAD~1^..HEAD
     revert3 = revert HEAD~2^..HEAD
+    squash2 = rebase -i HEAD~2
+    squash3 = rebase -i HEAD~3
+    squash4 = rebase -i HEAD~4
+    squash5 = rebase -i HEAD~5
+    squash6 = rebase -i HEAD~6
+    squash7 = rebase -i HEAD~7
+    squash8 = rebase -i HEAD~8
+    squash9 = rebase -i HEAD~9
+    open = !open `git config remote.origin.url`
 
 [core]
-	editor = nvim
+    autocrlf = input
+    editor = nvim
