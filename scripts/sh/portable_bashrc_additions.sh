@@ -343,10 +343,17 @@ function file.get_line { #arg1: filename; arg2: line
 }
 
 # Get amount of free disk space
-function diskspace() {
+function diskspace {
     echo ""
     df -h | ack -v "map"
     echo ""
+}
+
+# Get size of given file or directory
+# Gives a single conglomerate output
+function fsize {
+    location "portable_bashrc_additions.sh"
+    du -sh
 }
 
 # Get file size in kb.  e.g. fsizekb somefile.json
