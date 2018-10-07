@@ -10,11 +10,14 @@ export NODE_PATH=$NODE_PATH:~/.nvm/versions/node/v8.10.0/lib/node_modules:/usr/l
 ################################## npm ################################## 
 # GLOBAL INSTALL
 # alias nig="npm install -g"
-alias nig="npm install --global"
-alias nis="npm install --save"
-alias nus="npm uninstall --save"
+alias nis="npm install"
 alias nisd="npm install --save-dev"
+alias nid="npm install --save-dev"
+alias nig="npm install --global"
+
+alias nus="npm uninstall --save"
 alias nusd="npm uninstall --save-dev"
+alias nud="npm uninstall --save-dev"
 
 alias nr="npm run" 
 alias nrn="npm run nodemon"
