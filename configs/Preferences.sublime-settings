@@ -1,0 +1,120 @@
+{
+	"afn_blacklist_scopes":
+	[
+		"string.regexp.js"
+	],
+	"afn_valid_scopes":
+	[
+		"string",
+		"css",
+		"sass",
+		"less",
+		"scss"
+	],
+	"auto_complete_cycle": true,
+	"binary_file_patterns":
+	[
+		"*.kotlin_module",
+		"*.kotlin_metadata",
+		"*.kjsm",
+		"*.ttf",
+		"*.tga",
+		"*.dds",
+		"*.eot",
+		"*.rar",
+		"*.zip",
+		"*.jar",
+		"*.app",
+		"*.bin",
+		"*.exe",
+		"*.dll",
+		"*.pdf",
+		"*.swf",
+		"*.map",
+		"*.gzip",
+		"*.jpg",
+		"*.png",
+		"*.svg",
+		"*.gif"
+	],
+	"color_scheme": "Packages/Color Scheme - Default/Monokai.sublime-color-scheme",
+	"enable_tab_scrolling": false,
+	"file_exclude_patterns":
+	[
+		"*.kotlin_module",
+		"*.kotlin_metadata",
+		"*.kjsm",
+		"*.pyc",
+		"*.pyo",
+		"*.exe",
+		"*.dll",
+		"*.obj",
+		"*.o",
+		"*.a",
+		"*.lib",
+		"*.so",
+		"*.dylib",
+		"*.ncb",
+		"*.sdf",
+		"*.suo",
+		"*.pdb",
+		"*.idb",
+		".DS_Store",
+		"*.class",
+		"*.psd",
+		"*.db",
+		"*.sublime-workspace"
+	],
+	"font_size": 12,
+	"ignored_packages":
+	[
+		"Auto Hide Sidebar",
+		"CSS",
+		"Haskell",
+		"JavaScript Completions",
+		"ListOpenFiles",
+		"Tagify",
+		"Vintage"
+	],
+	"index_exclude_patterns":
+	[
+		"*.log",
+		"yarn.lock",
+		"**/build/**/*.js",
+		"**/node_modules/**",
+		"**/.tmpbuf*",
+		".node_history",
+		"*.kotlin_metadata",
+		"*.kotlin_module",
+		"*.kjsm",
+		"*.d.ts",
+		"stats.json",
+		"**/build-jvlns/**"
+	],
+	"jsoncomma_on_save": true,
+	"material_theme_small_tab": true,
+	"material_theme_tabs_autowidth": true,
+	"predawn_findreplace_small": true,
+	"predawn_quick_panel_small": true,
+	"predawn_sidebar_arrows": true,
+	"predawn_sidebar_large": false,
+	"predawn_sidebar_medium": false,
+	"predawn_sidebar_narrow": false,
+	"predawn_sidebar_small": false,
+	"predawn_sidebar_xlarge": false,
+	"predawn_sidebar_xsmall": true,
+	"predawn_tabs_active_underline": true,
+	"predawn_tabs_large": false,
+	"predawn_tabs_medium": false,
+	"predawn_tabs_small": true,
+	"rulers":
+	[
+		80,
+		100
+	],
+	"tab_size": 4,
+	"theme": "predawn-DEV.sublime-theme",
+	"translate_tabs_to_spaces": true,
+	"typescript_tsdk": "/Users/andfaulkner/.nvm/versions/node/v8.10.0/lib/node_modules/typescript/lib",
+	"word_wrap": false
+}
