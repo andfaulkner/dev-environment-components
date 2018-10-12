@@ -399,9 +399,11 @@ alias weather="node $HOME/projects/new_node_modules/weather/weather.js"
 alias ccr="./common-cmds run"
 alias ccs="./common-cmds server"
 alias cclcl="./common-cmds cleanclient"
+alias cccc="./common-cmds cleanclient"
 alias ccl="./common-cmds client"
 
 alias nrbw="npm run build-full; npm run watch-export"
+alias ccjb="npm run build-full; npm run watch-export"
 
 ########## CouchDB ###########
 alias nukecouchdb="ps aux | ack couchdb | awk '{print \$2}' | sudo xargs kill -9"
