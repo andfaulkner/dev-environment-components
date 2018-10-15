@@ -49,6 +49,7 @@ alias gbrh="g_branchhistory"
 alias g_branch_history="gbranchhistory"
 
 alias gpocur='echo "$(g_curbr)" | xargs git push origin'
+alias gpocurf='gpocur --force'
 alias gpocur_repeatedly='gpocur; gpocur; gpocur; gpocur; gpocur; gpocur; gpocur; gpocur; gpocur; gpocur; gpocur'
 
 alias g_co_lastedited='echo "$(g_branchhistory | tail -n 1)" | xargs git checkout'
