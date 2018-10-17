@@ -102,3 +102,11 @@ echo "
 source ~/.config/npm/npm-completion.sh
 " >> ~/.bash_profile
 
+#### COPY SUBLIME PREFERENCES ####
+echo "Copying sublime preferences files. Warning: return and edit them to reflect machine-specific info"
+cp $SNIPPETS_DIR/setup/sublime-settings/JSPrettier.sublime-settings $SUBLIME_DIR/Packages/User/JsPrettier.sublime-settings
+cp $SNIPPETS_DIR/setup/sublime-settings/import_helper.sublime-settings $SUBLIME_DIR/Packages/User/import_helper.sublime-settings
+
+#### DISPLAY NEW MACHINE INFO ####
+cat $SNIPPETS_DIR/setup/new-machine-info.md
+
