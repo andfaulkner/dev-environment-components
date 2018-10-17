@@ -3,7 +3,7 @@
 <content><![CDATA[
 /******************************************** LOGGING *********************************************/
 import {logFactory, Styles} from 'mad-logs/lib/shared';
-const log = logFactory('${2:$TM_FILENAME}', Styles.${1:cantTouch});
+const log = logFactory(`${2:$TM_FILENAME}`, Styles.${1:cantTouch});
 
 ]]></content>  
   <tabTrigger>madlog_iso</tabTrigger>
