@@ -5,7 +5,10 @@
 echo "* NodeJS scripts loading..."
 
 # export NODE_PATH=$NODE_PATH:/Users/andrew/.nvm/versions/node/v8.0.0/lib/node_modules:/usr/lib/nodejs:/usr/lib/node_modules:/usr/share/javascript:/usr/local/lib/node_modules
-export NODE_PATH=$NODE_PATH:~/.nvm/versions/node/v8.10.0/lib/node_modules:/usr/lib/nodejs:/usr/lib/node_modules:/usr/share/javascript:/usr/local/lib/node_modules
+
+export NODE_CURRENT_VERSION_PATH="$HOME/.nvm/versions/node/v8.10.0"
+
+export NODE_PATH=$NODE_PATH:$NODE_CURRENT_VERSION_PATH/lib/node_modules:/usr/lib/nodejs:/usr/lib/node_modules:/usr/share/javascript:/usr/local/lib/node_modules
 
 ################################## npm ################################## 
 # GLOBAL INSTALL
