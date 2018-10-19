@@ -1,6 +1,8 @@
 # Install scripts to synchronize bash history between terminal windows
+echo "Installing script to merge bash history between terminal windows..."
 wget -O ~/merge_history.bash http://raw.github.com/pts/pts-merge-history-bash/master/merge_history.bash
 touch ~/.merged_bash_history
+echo "Successfully installed script for merging bash history between terminal windows!"
 
 ################## INSTALLATIONS ##################
 #----- Install Homebrew -----#
@@ -155,10 +157,11 @@ fi
 
 
 ########################## NVIM SETUP ##########################
+echo "--- ADDING SHARED NEOVIM CONFIG ---"
+
 # Symlink neovim config location to neovim config file in current project
 # Allows synchronization of nvim config across projects
 if [ ! -e ~/.config/nvim/init.vim ]; then
-    echo "--- ADDING SHARED NEOVIM CONFIG ---"
     echo "init.vim exists, not symlinking"
     echo 'To do so anyway, run:'
     echo '    mv ~/.config/nvim/init.vim ~/.config/nvim/init.vim_BK'
@@ -170,5 +173,5 @@ else
     echo "neovim config added!"
 fi
 
-#### DISPLAY NEW MACHINE INFO ####
+##################### DISPLAY NEW MACHINE INFO #####################
 cat $SNIPPETS_DIR/setup/new-machine-info.md
