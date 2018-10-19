@@ -1,0 +1,8 @@
+<snippet>
+  <description>Pretty print object. First add: from pprint import pprint</description>
+<content><![CDATA[
+pprint(vars(${1:nameOfObject}))
+]]></content>  
+  <tabTrigger>obj_print</tabTrigger>
+  <scope>source.python</scope>
+</snippet>
