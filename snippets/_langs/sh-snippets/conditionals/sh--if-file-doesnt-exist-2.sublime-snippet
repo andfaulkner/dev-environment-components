@@ -1,0 +1,10 @@
+<snippet>
+    <description>If file doesn't exist, run block (if statement)</description>
+	<content><![CDATA[
+if [ ! -e ${1:~/file/to/test/existence/of.txt} ]; then
+  ${2:# do this if the file exists}
+fi
+]]></content>
+	<tabTrigger>if_file_not_present</tabTrigger>
+	<scope>source.shell</scope>
+</snippet>
