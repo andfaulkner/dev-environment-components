@@ -3,6 +3,6 @@
 <content><![CDATA[
 cursor: text${0:;}
 ]]></content>  
-  <tabTrigger>cur_text</tabTrigger>
+  <tabTrigger>cursor_text</tabTrigger>
   <scope>source.css, source.postcss, source.scss</scope>
 </snippet>

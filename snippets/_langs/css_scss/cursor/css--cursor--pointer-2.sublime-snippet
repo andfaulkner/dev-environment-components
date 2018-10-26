@@ -3,6 +3,6 @@
 <content><![CDATA[
 cursor: pointer${0:;}
 ]]></content>  
-  <tabTrigger>cur_link</tabTrigger>
+  <tabTrigger>cursor_link</tabTrigger>
   <scope>source.css, source.postcss, source.scss</scope>
 </snippet>
