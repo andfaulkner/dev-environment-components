@@ -1,0 +1,8 @@
+<snippet>
+  <description>Sel 1st child of parent eg li:first-child gets last li of its siblings</description>
+<content><![CDATA[
+${1:.el_to_get_1st_of_among_its_siblings}:first-child
+]]></content>  
+  <tabTrigger>selector_firstchild</tabTrigger>
+  <scope>source.css, source.postcss, source.scss</scope>
+</snippet>
