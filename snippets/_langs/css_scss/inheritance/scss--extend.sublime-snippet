@@ -1,0 +1,8 @@
+<snippet>
+  <description>Extend another class</description>
+<content><![CDATA[
+@extend .${0:class-to-inherit-from};
+]]></content>  
+  <tabTrigger>extend</tabTrigger>
+  <scope>source.scss</scope>
+</snippet>
