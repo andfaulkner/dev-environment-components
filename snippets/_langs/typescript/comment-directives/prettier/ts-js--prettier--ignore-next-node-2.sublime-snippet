@@ -4,5 +4,5 @@
 // prettier-ignore
 ]]></content>  
   <tabTrigger>ignore_prettier</tabTrigger>
-  <scope>source.js, source.ts, source.jsx, source.tsx</scope>
+  <scope>source.js, source.ts, source.jsx, source.tsx, source.css, source.scss</scope>
 </snippet>
