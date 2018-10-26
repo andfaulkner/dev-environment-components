@@ -7,8 +7,8 @@ import * as cn from 'classnames';
 import {observe, inject} from 'mobx-react';
 
 /******************************************** LOGGING *********************************************/
-import {logFactory, logMarkers} from 'mad-logs';
-const log = logFactory()(`${TM_FILENAME}`, logMarkers.zebra);
+import {logFactory, Styles} from 'mad-logs/lib/shared';
+const log = logFactory(`${TM_FILENAME}`, Styles.zebra);
 
 /**************************************** TYPE DEFINITIONS ****************************************/
 interface ${1}Props {}
