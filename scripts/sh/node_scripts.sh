@@ -181,12 +181,23 @@ alias npmpv="npm list -g | grep"
 
 alias nodelist="ls /usr/local/lib/node_modules/; echo '-------------------------------------'; echo 'global node modules location:'; echo '/usr/local/lib/node_modules/'; echo '-------------------------------------';"
 
-#information about npm and node modules [TOADD]
+# Information about npm and node modules
 alias npminfo="npm config list"
 
-#list all globally installed node modules [TOADD]
+# List all globally installed node modules
 alias npmglist="npm list -g --depth=0"
 alias npm_modules_g_list="npm list -g --depth=0"
+
+# List all locally installed node modules
+alias npm_list_project_modules="cat package.json | jq '{optionalDependencies: .optionalDependencies, peerDependencies: .peerDependencies, dependencies: .dependencies, devDependencies: .devDependencies}'"
+alias npm_list_modules_project='npm_list_project_modules'
+alias npm_modules_project_list='npm_list_project_modules'
+alias npm_project_modules_list='npm_list_project_modules'
+alias npm_modules_list_project='npm_list_project_modules'
+alias list_modules_npm_project='npm_list_project_modules'
+alias list_npm_modules_project='npm_list_project_modules'
+alias modules_npm_project_list='npm_list_project_modules'
+alias project_npm_modules_list='npm_list_project_modules'
 
 alias npmkeyinfo="npm config ls -l | grep 'userconfig\|loglevel\|init-module\|cache\s\|^prefix\|shell\|node\-version\|globalignorefile\|globalconfig\|editor\|color' | rev | cut -d';' -f1 | rev | trim; npm config list | grep 'HOME\|cwd\|bin' | rev | cut -d';' -f1 | rev | trim"
 
