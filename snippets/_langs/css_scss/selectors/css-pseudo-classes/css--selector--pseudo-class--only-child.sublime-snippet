@@ -1,5 +1,5 @@
 <snippet>
-  <description>Selects any matching element that is the only child of its parent. Use: li:only-child { ..styles.. }</description>
+  <description>Sel matching el if only child eg li:only-child</description>
 <content><![CDATA[
 :only-child
 ]]></content>  
