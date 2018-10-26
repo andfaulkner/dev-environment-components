@@ -1,7 +1,7 @@
 <snippet>
   <description>Import omit from mad-utils (browser module)</description>
 <content><![CDATA[
-import {omit} from 'mad-utils/lib/browser';
+import {omit} from 'mad-utils/lib/react';
 ]]></content>  
   <tabTrigger>impomitb</tabTrigger>
   <scope>source.js, source.ts, source.jsx, source.tsx</scope>
