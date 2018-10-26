@@ -11,8 +11,8 @@ import {InputChangeHandler} from 'mad-utils/lib/react';
 import {observer, inject} from 'mobx-react';
 
 /******************************************** LOGGING *********************************************/
-import {logFactory, logMarkers} from 'mad-logs';
-const log = logFactory()(`${TM_FILENAME}`, logMarkers.bracelet);
+import {logFactory, Styles} from 'mad-logs/lib/shared';
+const log = logFactory(`${TM_FILENAME}`, Styles.bracelet);
 
 /**************************************** TYPE DEFINITIONS ****************************************/
 interface ${1:${TM_FILENAME/([a-zA-Z])?([a-zA-Z0-9]+)?[-_]?[-_]?([a-zA-Z])?([a-zA-Z0-9]+)?[-_]?[-_]?([a-zA-Z])?([a-zA-Z0-9]+)?[-_]?[-_]?([a-zA-Z])?([a-zA-Z0-9]+)?[-_]?[-_]?([a-zA-Z])?([a-zA-Z0-9]+)?[-_]?[-_]?([a-zA-Z])?([a-zA-Z0-9]+)?\..*/\U$1\L$2\U$3\L$4\U$5\L$6\U$7\L$8\U$9\L$10\U$11\L$12/g}}Props extends PolyglotProps {
