@@ -5,6 +5,6 @@ ${1:parent-el_eg-div} > ${2:child-el_eg-span} ${3:{
     ${0}
 \}}
 ]]></content>  
-  <tabTrigger>sel_child_of</tabTrigger>
+  <tabTrigger>parent_selector</tabTrigger>
   <scope>source.scss, source.postcss, source.css</scope>
 </snippet>
