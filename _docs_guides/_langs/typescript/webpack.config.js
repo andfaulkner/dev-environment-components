@@ -68,23 +68,8 @@ module.exports = {
       //     presets: ["react"]
       //   },
       //   loader: 'babel?cacheDirectory=cache'
-      {
-        test: /\.json$/,
-        loader: 'json'
-      },
-      { test: /\.css$/, loader: "style-loader!css-loader!postcss-loader" }
-
-      // {
-      //   test: /\.css$/,
-      //   loader: ExtractTextPlugin.extract("style-loader", "css-loader")
-      //   // loaders: ['style',
-      //   //      /**/ 'css?modules' +
-      //   //              '&importLoaders=1']
-      //           // +
-      //           // '!' +
-      //           //  'postcss-loader' +
-      //           //        '?sourceMap=inline'
-      // }
+      {test: /\.json$/, loader: 'json'},
+      {test: /\.css$/, loader: "style-loader!css-loader!postcss-loader"}
     ]
   },
 
