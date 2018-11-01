@@ -1,7 +1,7 @@
 <snippet>
-	<description>Use a mixin, including passing it vars</description>
+    <description>Use a mixin. In a selector e.g.: .sel { @include mi($val); }</description>
 	<content><![CDATA[
-@include ${1:name-of-mixin}(${2:args-for-mixin--eg--10px});${0}
+@include ${1:name-of-mixin}(\$${2:variable-or-value-to-use});
 ]]></content>
 	<tabTrigger>use_mixin</tabTrigger>
 	<scope>source.scss</scope>

@@ -8,6 +8,6 @@ ${3:  -webkit-border-radius: \$${2:variable--eg--radius};
           border-radius: \$${2:variable--eg--radius};}
 }
 ]]></content>
-	<tabTrigger>define_mixin</tabTrigger>
+	<tabTrigger>create_mixin</tabTrigger>
 	<scope>source.scss</scope>
 </snippet>

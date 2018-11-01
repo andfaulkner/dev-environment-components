@@ -3,6 +3,6 @@
 	<content><![CDATA[
 @include ${1:name-of-mixin}(\$${2:variable-or-value-to-use});
 ]]></content>
-	<tabTrigger>mixin_use</tabTrigger>
+	<tabTrigger>call_mixin</tabTrigger>
 	<scope>source.scss</scope>
 </snippet>
