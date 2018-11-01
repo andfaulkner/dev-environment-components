@@ -18,6 +18,19 @@ alias nisd="npm install --save-dev"
 alias nid="npm install --save-dev"
 alias nig="npm install --global"
 
+
+# Install all given type definitions with yarn
+function nit() {
+    location "node_scripts.sh"
+    if [[ -n "$1" ]]; then
+        npm install --save-dev "${@/#/@types/}"
+    else
+        echo "You must specify at least 1 module to install type definitions for"
+    fi
+}
+
+# Remove type definitions with yarn
+
 alias nus="npm uninstall --save"
 alias nusd="npm uninstall --save-dev"
 alias nud="npm uninstall --save-dev"
@@ -401,6 +414,7 @@ function tnis {
 
 alias npmscripts='awk "/scripts/,/}/" package.json | ack -v "\s\s}" | ack -v "\s\s\"scripts\":"'
 alias npmreact_deps='cat package.json | ack "react|redux|recompose|jsdom|reselect|normalizr|enzyme|jest|updeep|reduce-reducers|mobx" | trim'
+alias vimpj="vim ./package.json"
 
 # Misc external programs
 alias twitter="echo 'logging into twitter via birdknife...'; birdknife"
