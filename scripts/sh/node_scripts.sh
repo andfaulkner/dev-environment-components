@@ -18,7 +18,6 @@ alias nisd="npm install --save-dev"
 alias nid="npm install --save-dev"
 alias nig="npm install --global"
 
-
 # Install all given type definitions with yarn
 function nit() {
     location "node_scripts.sh"
@@ -60,10 +59,7 @@ alias ni="npm install"
 function yas() {
     location "node_scripts.sh"
     if [[ -n "$1" ]]; then
-        for name_of_npm_module in "$@"
-        do
-            yarn add $name_of_npm_module
-        done
+        yarn add $@
     else
         echo "You must specify at least 1 module to install"
     fi
@@ -87,10 +83,7 @@ function yas() {
 function yad() {
     location "node_scripts.sh"
     if [[ -n "$1" ]]; then
-        for name_of_npm_module in "$@"
-        do
-            yarn add --dev $name_of_npm_module
-        done
+        yarn add --dev $@
     else
         echo "You must specify at least 1 module to install"
     fi
@@ -100,10 +93,7 @@ function yad() {
 function yap() {
     location "node_scripts.sh"
     if [[ -n "$1" ]]; then
-        for name_of_npm_module in "$@"
-        do
-            yarn add --peer $name_of_npm_module
-        done
+        yarn add --peer $@
     else
         echo "You must specify at least 1 module to install"
     fi
@@ -113,10 +103,7 @@ function yap() {
 function yat() {
     location "node_scripts.sh"
     if [[ -n "$1" ]]; then
-        for name_of_npm_module in "$@"
-        do
-            yad "@types/$name_of_npm_module"
-        done
+        yad "${@/#/@types/}"
     else
         echo "You must specify at least 1 module to install type definitions for"
     fi
@@ -126,10 +113,7 @@ function yat() {
 function yrem() {
     location "node_scripts.sh"
     if [[ -n "$1" ]]; then
-        for name_of_npm_module in "$@"
-        do
-            yarn remove $name_of_npm_module
-        done
+        yarn remove $@
     else
         echo "You must specify at least 1 module to remove"
     fi
@@ -139,10 +123,7 @@ function yrem() {
 function yafs() {
     location "node_scripts.sh"
     if [[ -n "$1" ]]; then
-        for name_of_npm_module in "$@"
-        do
-            yas $name_of_npm_module && yat $name_of_npm_module
-        done
+        yas $@ && yat $@
     else
         echo "You must specify at least 1 module to install"
     fi
@@ -152,10 +133,7 @@ function yafs() {
 function yafd() {
     location "node_scripts.sh"
     if [[ -n "$1" ]]; then
-        for name_of_npm_module in "$@"
-        do
-            yad $name_of_npm_module && yat $name_of_npm_module
-        done
+        yad $@ && yat $@
     else
         echo "You must specify at least 1 module to install"
     fi
@@ -165,10 +143,7 @@ function yafd() {
 function yafp() {
     location "node_scripts.sh"
     if [[ -n "$1" ]]; then
-        for name_of_npm_module in "$@"
-        do
-            yap $name_of_npm_module && yat $name_of_npm_module
-        done
+        yap $@ && yat $@
     else
         echo "You must specify at least 1 module to install"
     fi
