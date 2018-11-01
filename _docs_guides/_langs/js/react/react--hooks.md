@@ -54,7 +54,7 @@ Impact
 *   No breaking changes
 
 
-----------------------------------------------------------------------------------------------------
+
 ----------------------------------------------------------------------------------------------------
 Usage
 =====
@@ -69,6 +69,8 @@ General syntax of hook usage:
 State hook
 ----------
 Hook name: `useState`
+
+Provides local state to an SFC
 
 ### Syntax
     const [currentState, setCurrentState] = useState(initialStateValue);
@@ -100,6 +102,102 @@ function SomeComponent() {
     );
 }
 ```
+
+
+Effect hook
+-----------
+Hook name: `useEffect`
+
+Perform side effects from an SFC
+
+Serves the same purpose as the following React class lifecycle methods:
+*   componentDidMount
+*   componentDidUpdate
+*   componentWillUnmount
+
+### Usage
+*   When you call useEffect, you’re telling React to run your "effect" function
+    after flushing changes to the DOM
+*   Effects have access to an SFC's props & state, since they're declared
+    inside the SFC
+*   Runs the effects after every render, including the first render
+*   Can optionally specify how to "clean up" after them by returning a function
+*   Can use more than one in an SFC
+
+*   Lets you organize side effects in an SFC by what pieces are related (e.g.
+    adding & removing a subscription), rather than forcing a split based on
+    lifecycle methods
+
+### Sample uses
+From within React SFCs:
+*   Perform data fetching
+*   Subscribe (to...uh...subscriptions)
+*   Manually change the DOM
+
+### Example
+```
+import {useState, useEffect} from 'react';
+
+function SomeComponent() {
+  const [count, setCount] = useState(0);
+
+  // Similar to componentDidMount & componentDidUpdate
+  useEffect(() => {
+    // Update document title using browser API - a side effect
+    document.title = `You clicked ${count} times`;
+
+    // Optional "clean up" behaviour run on SFC unmount
+    return () => {
+        console.log(`Run this when component unmounts`)
+    }
+  });
+
+  return (
+    <div>
+      <p>You clicked {count} times</p>
+      <button onClick={() => setCount(count + 1)}>Click me</button>
+    </div>
+  );
+}
+```
+
+
+Context hook
+------------
+Hook name: `useContext`
+
+*   When the provider updates, this Hook will trigger a rerender with the latest context value
+
+### Example
+```
+import {useState, useEffect} from 'react';
+
+function SomeComponent() {
+    const context = useContext(Context);
+}
+```
+
+
+
+----------------------------------------------------------------------------------------------------
+Rules of hooks
+==============
+Always use Hooks at the top level of your React SFC
+
+Don't call Hooks inside loops, conditions, or nested functions
+*   Easier if always used at the top level of an SFC
+    *   Why? Ensures Hooks are called in the same order each time an SFC renders
+        *   It breaks the state if they're not called in the same order each time
+        *   !!! React relies on the order in which Hooks are called !!!
+
+Related: DO NOT make hook calls conditional
+
+Don’t call Hooks from regular JavaScript functions - only call them from:
+*   Call Hooks from React SFCs
+*   Call Hooks from custom Hooks
+
+Don't call Hooks from React classes
+
 
 ----------------------------------------------------------------------------------------------------
 TODO: Finish this mini-guide - it is currently a WIP.
