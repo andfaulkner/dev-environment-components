@@ -18,7 +18,7 @@ alias nisd="npm install --save-dev"
 alias nid="npm install --save-dev"
 alias nig="npm install --global"
 
-# Install all given type definitions with yarn
+# Install all given type definitions with npm
 function nit() {
     location "node_scripts.sh"
     if [[ -n "$1" ]]; then
@@ -28,7 +28,16 @@ function nit() {
     fi
 }
 
-# Remove type definitions with yarn
+# Install all given dev modules & their type definitions with npm
+function nisdt() {
+    location "node_scripts.sh"
+    if [[ -n "$1" ]]; then
+        npm install --save-dev $@ "${@/#/@types/}"
+    else
+        echo "You must specify at least 1 module to install type definitions for"
+    fi
+}
+alias nidt="nisdt"
 
 alias nus="npm uninstall --save"
 alias nusd="npm uninstall --save-dev"
