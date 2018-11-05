@@ -1,8 +1,8 @@
 <snippet>
-  <description>Tail: Get all but first element of array</description>
+  <description>Get all but first element of array ("tail")</description>
 <content><![CDATA[
-${1:some_array}.slice(1)[0];${0}
-]]></content>  
+${1:some_array}.slice(1)${0}
+]]></content>
   <tabTrigger>arr_get_all_but_first</tabTrigger>
   <scope>source.js, source.ts, source.jsx, source.tsx</scope>
 </snippet>
