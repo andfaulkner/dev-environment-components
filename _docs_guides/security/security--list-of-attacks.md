@@ -1,7 +1,7 @@
+WIP
 
 Man-in-the-middle attack
 ------------------------
-*   
 
 Protocol downgrade attack
 -------------------------
