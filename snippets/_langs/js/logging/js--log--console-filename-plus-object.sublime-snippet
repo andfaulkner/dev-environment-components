@@ -1,7 +1,7 @@
 <snippet>
-    <description>Log object w/ file & object name, </description>
+    <description>Log object with file and object name</description>
     <content><![CDATA[
-console.log('$TM_FILENAME:: ${2:nameOfFn:}${1:nameOfObject}:', ${1:nameOfObject});
+console.log(`$TM_FILENAME:: ${2:nameOfFn:}${1:nameOfObject}:`, ${1:nameOfObject});
 ]]></content>
     <tabTrigger>clfo</tabTrigger>
     <scope>source.js, source.ts, source.jsx, source.tsx</scope>
