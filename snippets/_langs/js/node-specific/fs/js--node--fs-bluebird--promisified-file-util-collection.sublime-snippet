@@ -1,12 +1,12 @@
 <snippet>
   <description>Import a collection of utils to make async fs operations easier.</description>
 <content><![CDATA[
-import * as util from 'util';
-import * as _ from 'lodash';
-import * as fs from 'fs';
-import * as path from 'path';
+import util from 'util';
+import _ from 'lodash';
+import fs from 'fs';
+import path from 'path';
 
-import * as Bluebird from 'bluebird';
+import Bluebird from 'bluebird';
 
 const readFileAsync = Bluebird.promisify(fs.readFile);
 const writeFileAsync = Bluebird.promisify(fs.writeFile);

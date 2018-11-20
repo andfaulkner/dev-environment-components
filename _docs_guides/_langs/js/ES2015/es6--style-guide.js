@@ -74,7 +74,7 @@
 // 11. Avoid wildcard imports
 
     // bad
-    // import * as OmNomNomBear from './OmNomNomBear';
+    // import OmNomNomBear from './OmNomNomBear';
 
     // good
     // import OmNomNomBear from './OmNomNomBear';

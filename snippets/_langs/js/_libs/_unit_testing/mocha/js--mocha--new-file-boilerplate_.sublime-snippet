@@ -7,12 +7,12 @@
 /************************************** THIRD-PARTY IMPORTS ***************************************/
 // Testing modules
 import 'mocha';
-import * as sinon from 'sinon';
+import sinon from 'sinon';
 import {expect} from 'chai';
 
 // Utility modules
-import * as fs from 'fs';
-import * as path from 'path';
+import fs from 'fs';
+import path from 'path';
 import {inspect} from 'util';
 
 /************************************ IMPORT FILE TO BE TESTED ************************************/

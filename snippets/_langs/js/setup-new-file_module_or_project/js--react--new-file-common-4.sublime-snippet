@@ -2,8 +2,8 @@
   <description>New react file - common starting point</description>
 <content><![CDATA[
 /************************************** THIRD-PARTY MODULES ***************************************/
-import * as React from 'react';
-import * as cn from 'classnames';
+import React from 'react';
+import cn from 'classnames';
 
 /**************************************** PROJECT MODULES *****************************************/
 

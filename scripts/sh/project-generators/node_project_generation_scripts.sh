@@ -345,9 +345,9 @@ cat > app/components/$1/$1.tsx <<-TYPESCRIPT
 
 declare function require(name: string);
 
-import * as _ from 'lodash';
-import * as React from 'react';
-import * as ReactDOM from 'react-dom';
+import _ from 'lodash';
+import React from 'react';
+import ReactDOM from 'react-dom';
 
 require('./$1.css');
 

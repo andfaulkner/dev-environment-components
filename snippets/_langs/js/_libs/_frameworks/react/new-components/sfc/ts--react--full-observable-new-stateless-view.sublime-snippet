@@ -5,8 +5,8 @@
 const s = require('./${TM_FILENAME/(.+?)(\-((container)|(view))\.tsx)/\1/g}.scss');
 
 /************************************** THIRD-PARTY MODULES ***************************************/
-import * as React from 'react';
-import * as cn from 'classnames';
+import React from 'react';
+import cn from 'classnames';
 import {InputChangeHandler} from 'mad-utils/lib/react';
 import {observer, inject} from 'mobx-react';
 

@@ -2,8 +2,8 @@
 /// <reference path="../typings/globals/react-dom/index.d.ts" />
 /// <reference path="../typings/globals/react-bootstrap/index.d.ts" />
 
-import * as React from 'react';
-import * as ReactDOM from 'react-dom';
+import React from 'react';
+import ReactDOM from 'react-dom';
 
 import { Button } from 'react-bootstrap';
 

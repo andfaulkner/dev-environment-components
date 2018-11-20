@@ -5,10 +5,10 @@
 
 declare function require(name: string);
 
-import * as _ from 'lodash';
-import * as React from 'react';
-import * as ReactDOM from 'react-dom';
-import * as $ from 'jquery';
+import _ from 'lodash';
+import React from 'react';
+import ReactDOM from 'react-dom';
+import $ from 'jquery';
 
 require('./Cannon.css');
 

@@ -1,6 +1,6 @@
 /// <reference path="../../typings/lodash/lodash.d.ts" />
 
-import * as _ from "lodash";
+import _ from "lodash";
 
 let data: Array<Object> = [
   { title: 'Boolean: ', item: 'asdf'}

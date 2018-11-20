@@ -2,8 +2,8 @@
   <description>New React class component - typescript</description>
 <content><![CDATA[
 /************************************** THIRD-PARTY IMPORTS ***************************************/
-import * as React from 'react';
-import * as cn from 'classnames';
+import React from 'react';
+import cn from 'classnames';
 import {observe, inject} from 'mobx-react';
 
 /******************************************** LOGGING *********************************************/

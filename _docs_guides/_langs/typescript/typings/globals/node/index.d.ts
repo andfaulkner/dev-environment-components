@@ -554,9 +554,9 @@ declare module "events" {
 }
 
 declare module "http" {
-    import * as events from "events";
-    import * as net from "net";
-    import * as stream from "stream";
+    import events from "events";
+    import net from "net";
+    import stream from "stream";
 
     export interface RequestOptions {
         protocol?: string;
@@ -721,8 +721,8 @@ declare module "http" {
 }
 
 declare module "cluster" {
-    import * as child from "child_process";
-    import * as events from "events";
+    import child from "child_process";
+    import events from "events";
 
     export interface ClusterSettings {
         exec?: string;
@@ -778,7 +778,7 @@ declare module "cluster" {
 }
 
 declare module "zlib" {
-    import * as stream from "stream";
+    import stream from "stream";
     export interface ZlibOptions { chunkSize?: number; windowBits?: number; level?: number; memLevel?: number; strategy?: number; dictionary?: any; }
 
     export interface Gzip extends stream.Transform { }
@@ -885,9 +885,9 @@ declare module "os" {
 }
 
 declare module "https" {
-    import * as tls from "tls";
-    import * as events from "events";
-    import * as http from "http";
+    import tls from "tls";
+    import events from "events";
+    import http from "http";
 
     export interface ServerOptions {
         pfx?: any;
@@ -953,8 +953,8 @@ declare module "punycode" {
 }
 
 declare module "repl" {
-    import * as stream from "stream";
-    import * as events from "events";
+    import stream from "stream";
+    import events from "events";
 
     export interface ReplOptions {
         prompt?: string;
@@ -971,8 +971,8 @@ declare module "repl" {
 }
 
 declare module "readline" {
-    import * as events from "events";
-    import * as stream from "stream";
+    import events from "events";
+    import stream from "stream";
 
     export interface Key {
         sequence?: string;
@@ -1052,8 +1052,8 @@ declare module "vm" {
 }
 
 declare module "child_process" {
-    import * as events from "events";
-    import * as stream from "stream";
+    import events from "events";
+    import stream from "stream";
 
     export interface ChildProcess extends events.EventEmitter {
         stdin: stream.Writable;
@@ -1263,7 +1263,7 @@ declare module "dns" {
 }
 
 declare module "net" {
-    import * as stream from "stream";
+    import stream from "stream";
 
     export interface Socket extends stream.Duplex {
         // Extended base methods
@@ -1348,7 +1348,7 @@ declare module "net" {
 }
 
 declare module "dgram" {
-    import * as events from "events";
+    import events from "events";
 
     interface RemoteInfo {
         address: string;
@@ -1379,8 +1379,8 @@ declare module "dgram" {
 }
 
 declare module "fs" {
-    import * as stream from "stream";
-    import * as events from "events";
+    import stream from "stream";
+    import events from "events";
 
     interface Stats {
         isFile(): boolean;
@@ -1834,9 +1834,9 @@ declare module "string_decoder" {
 }
 
 declare module "tls" {
-    import * as crypto from "crypto";
-    import * as net from "net";
-    import * as stream from "stream";
+    import crypto from "crypto";
+    import net from "net";
+    import stream from "stream";
 
     var CLIENT_RENEG_LIMIT: number;
     var CLIENT_RENEG_WINDOW: number;
@@ -2168,7 +2168,7 @@ declare module "crypto" {
 }
 
 declare module "stream" {
-    import * as events from "events";
+    import events from "events";
 
     export class Stream extends events.EventEmitter {
         pipe<T extends NodeJS.WritableStream>(destination: T, options?: { end?: boolean; }): T;
@@ -2340,7 +2340,7 @@ declare module "assert" {
 }
 
 declare module "tty" {
-    import * as net from "net";
+    import net from "net";
 
     export function isatty(fd: number): boolean;
     export interface ReadStream extends net.Socket {
@@ -2356,7 +2356,7 @@ declare module "tty" {
 }
 
 declare module "domain" {
-    import * as events from "events";
+    import events from "events";
 
     export class Domain extends events.EventEmitter implements NodeJS.Domain {
         run(fn: Function): void;

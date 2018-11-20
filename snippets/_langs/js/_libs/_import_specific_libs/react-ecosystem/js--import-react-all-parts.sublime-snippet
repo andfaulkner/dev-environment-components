@@ -1,9 +1,9 @@
 <snippet>
   <description>Import React *and* React-DOM</description>
 <content><![CDATA[
-import * as React from 'react';
-import * as ReactDOM from 'react-dom';
-import * as cn from 'classnames';
+import React from 'react';
+import ReactDOM from 'react-dom';
+import cn from 'classnames';
 ]]></content>  
   <tabTrigger>imp_rct_all</tabTrigger>
   <scope>source.js, source.ts, source.jsx, source.tsx</scope>

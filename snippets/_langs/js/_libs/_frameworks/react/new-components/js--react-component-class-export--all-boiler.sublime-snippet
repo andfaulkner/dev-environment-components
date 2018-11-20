@@ -1,7 +1,7 @@
 <snippet>
   <description>Simple class-based react component, with export; includes all imports</description>
   <content><![CDATA[
-import * as React from 'react';
+import React from 'react';
 import {ReactRouter, Link, Router, Route, hashHistory} from 'react-router';
 
 export class ${1:${TM_FILENAME/(.+)\..+|.*/$1/:name}} extends React.Component {

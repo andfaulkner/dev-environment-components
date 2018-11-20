@@ -5,14 +5,14 @@
 
 declare function require(name: string);
 
-import * as _ from 'lodash';
-import * as React from 'react';
-import * as ReactDOM from 'react-dom';
+import _ from 'lodash';
+import React from 'react';
+import ReactDOM from 'react-dom';
 
 import {expect} from 'chai';
 import {shallow} from 'enzyme';
-import * as sinon from 'sinon';
-import * as mocha from 'mocha';
+import sinon from 'sinon';
+import mocha from 'mocha';
 
 ${5:import {${1}\} from './${1}'}${5/.+/;\n\n/}describe('<${1:${TM_FILENAME/(.+)\.spec\..+|.*/$1/:name}}>', () => {
   it('${3:should be the first assertion here}', () => {

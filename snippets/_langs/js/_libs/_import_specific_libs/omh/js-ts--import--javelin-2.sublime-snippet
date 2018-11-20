@@ -2,7 +2,7 @@
   <description>Import @ottawamhealth/javelin module</description>
 <content><![CDATA[
 import {${1:LocalDate, DoseInstance, ZonedDateTime}} from '@ottawamhealth/javelin';
-]]></content>
-  <tabTrigger>imp_jvlns</tabTrigger>
+]]></content>  
+  <tabTrigger>imp_javelin</tabTrigger>
   <scope>source.js, source.ts, source.jsx, source.tsx</scope>
 </snippet>

@@ -1,7 +1,7 @@
 <snippet>
   <description>Import group of passport modules for creating JSON web tokens (jwt)</description>
 <content><![CDATA[
-import * as passport from 'passport';
+import passport from 'passport';
 import {Strategy as LocalStrategy} from 'passport-local';
 import {Strategy as JwtStrategy, ExtractJwt} from 'passport-jwt';
 ]]></content>  

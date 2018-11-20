@@ -2,7 +2,7 @@
     <description>New class component - container component - typescript</description>
 <content><![CDATA[
 /************************************** THIRD-PARTY MODULES ***************************************/
-import * as React from 'react';
+import React from 'react';
 import {inject, observer} from 'mobx-react';
 
 /**************************************** PROJECT MODULES *****************************************/

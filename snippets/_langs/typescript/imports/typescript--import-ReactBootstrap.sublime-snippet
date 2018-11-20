@@ -1,7 +1,7 @@
 <snippet>
   <description>Import ReactBootstrap ref path for js lib import</description>
 <content><![CDATA[
-import * as ReactBootstrap from 'react-bootstrap';${0}
+import ReactBootstrap from 'react-bootstrap';${0}
 ]]></content>  
   <tabTrigger>imp_rct_bootstrap</tabTrigger>
   <scope>source.ts, source.tsx, source.js, source.jsx</scope>

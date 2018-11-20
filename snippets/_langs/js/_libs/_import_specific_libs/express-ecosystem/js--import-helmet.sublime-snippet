@@ -1,7 +1,7 @@
 <snippet>
   <description>Import helmet security module</description>
 <content><![CDATA[
-import * as helmet from 'helmet';
+import helmet from 'helmet';
 ]]></content>  
   <tabTrigger>imp_helmet</tabTrigger>
   <scope>source.js, source.ts, source.jsx, source.tsx</scope>
