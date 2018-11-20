@@ -46,15 +46,15 @@
 	<key>NSWindow Frame NSFontPanel</key>
 	<string>0 122 445 103 0 0 1440 877 </string>
 	<key>NSWindow Frame ProfilesPanel</key>
-	<string>-3015 667 735 382 -3360 -11 1920 1080 </string>
+	<string>-1235 448 735 382 -1440 61 1440 900 </string>
 	<key>NSWindow Frame SessionsPreferences</key>
-	<string>-1300 243 606 456 -1440 61 1440 900 </string>
+	<string>-3138 155 606 456 -3360 -11 1920 1080 </string>
 	<key>NSWindow Frame SharedPreferences</key>
-	<string>-1115 178 796 473 -1440 61 1440 900 </string>
+	<string>-1115 182 796 473 -1440 61 1440 900 </string>
 	<key>NSWindow Frame UKCrashReporter</key>
 	<string>127 422 592 584 0 0 1680 1027 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>-1440 194 410 352 -1440 89 1440 877 </string>
+	<string>0 0 838 873 0 0 1680 1027 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
 	<string>475 158 410 352 0 0 1440 877 </string>
 	<key>NSWindow Frame iTerm Window 2</key>
@@ -747,6 +747,8 @@
 	<true/>
 	<key>SUSendProfileInfo</key>
 	<false/>
+	<key>Secure Input</key>
+	<true/>
 	<key>ShowFullScreenTabBar</key>
 	<false/>
 	<key>UKCrashReporterLastCrashReportDate</key>
