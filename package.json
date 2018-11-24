@@ -22,7 +22,7 @@
     "babel-core": "^6.4.5",
     "babel-preset-es2015": "^6.3.13",
     "lodash": "^4.17.11",
-    "mad-utils": "^0.85.1",
+    "mad-utils": "^0.85.2",
     "moment": "^2.22.2",
     "morgan": "^1.9.0",
     "prettier": "^1.15.2",
