@@ -1,0 +1,8 @@
+<snippet>
+  <description>Move cursor (like the cursor seen when moving a window)</description>
+<content><![CDATA[
+cursor: move${0:;}
+]]></content>  
+  <tabTrigger>pointer_move</tabTrigger>
+  <scope>source.css, source.postcss, source.scss</scope>
+</snippet>

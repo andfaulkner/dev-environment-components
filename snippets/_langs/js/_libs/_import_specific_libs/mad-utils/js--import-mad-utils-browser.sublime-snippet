@@ -22,7 +22,7 @@ import {${1:RequiredInjection, OptionalInjection,
          isDataEnumItem, isIndexEnumItem,
          getFirstStackItem, getSecondStackItem, removeFromStack, DecoratorError,
          replaceAll, hasKey, matches
-}} from 'mad-utils/lib/browser';
+}} from 'mad-utils/lib/react';
 ]]></content>  
   <tabTrigger>imp_madutils_browser</tabTrigger>
   <scope>source.js, source.ts, source.jsx, source.tsx</scope>

@@ -2,7 +2,7 @@
 /// <reference path="../../typings/react/react.d.ts" />
 
 import { MenuBar, MenuItem, Menu, Separator } from 'react-menu-bar';
-import * as React from 'react';
+import React from 'react';
 
 interface HeaderProps {  }
 interface HeaderState {  }

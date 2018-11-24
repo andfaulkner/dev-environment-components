@@ -18,6 +18,27 @@ alias nisd="npm install --save-dev"
 alias nid="npm install --save-dev"
 alias nig="npm install --global"
 
+# Install all given type definitions with npm
+function nit() {
+    location "node_scripts.sh"
+    if [[ -n "$1" ]]; then
+        npm install --save-dev "${@/#/@types/}"
+    else
+        echo "You must specify at least 1 module to install type definitions for"
+    fi
+}
+
+# Install all given dev modules & their type definitions with npm
+function nisdt() {
+    location "node_scripts.sh"
+    if [[ -n "$1" ]]; then
+        npm install --save-dev $@ "${@/#/@types/}"
+    else
+        echo "You must specify at least 1 module to install type definitions for"
+    fi
+}
+alias nidt="nisdt"
+
 alias nus="npm uninstall --save"
 alias nusd="npm uninstall --save-dev"
 alias nud="npm uninstall --save-dev"
@@ -47,10 +68,7 @@ alias ni="npm install"
 function yas() {
     location "node_scripts.sh"
     if [[ -n "$1" ]]; then
-        for name_of_npm_module in "$@"
-        do
-            yarn add $name_of_npm_module
-        done
+        yarn add $@
     else
         echo "You must specify at least 1 module to install"
     fi
@@ -74,10 +92,7 @@ function yas() {
 function yad() {
     location "node_scripts.sh"
     if [[ -n "$1" ]]; then
-        for name_of_npm_module in "$@"
-        do
-            yarn add --dev $name_of_npm_module
-        done
+        yarn add --dev $@
     else
         echo "You must specify at least 1 module to install"
     fi
@@ -87,10 +102,7 @@ function yad() {
 function yap() {
     location "node_scripts.sh"
     if [[ -n "$1" ]]; then
-        for name_of_npm_module in "$@"
-        do
-            yarn add --peer $name_of_npm_module
-        done
+        yarn add --peer $@
     else
         echo "You must specify at least 1 module to install"
     fi
@@ -100,10 +112,7 @@ function yap() {
 function yat() {
     location "node_scripts.sh"
     if [[ -n "$1" ]]; then
-        for name_of_npm_module in "$@"
-        do
-            yad "@types/$name_of_npm_module"
-        done
+        yad "${@/#/@types/}"
     else
         echo "You must specify at least 1 module to install type definitions for"
     fi
@@ -113,10 +122,7 @@ function yat() {
 function yrem() {
     location "node_scripts.sh"
     if [[ -n "$1" ]]; then
-        for name_of_npm_module in "$@"
-        do
-            yarn remove $name_of_npm_module
-        done
+        yarn remove $@
     else
         echo "You must specify at least 1 module to remove"
     fi
@@ -126,10 +132,7 @@ function yrem() {
 function yafs() {
     location "node_scripts.sh"
     if [[ -n "$1" ]]; then
-        for name_of_npm_module in "$@"
-        do
-            yas $name_of_npm_module && yat $name_of_npm_module
-        done
+        yas $@ && yat $@
     else
         echo "You must specify at least 1 module to install"
     fi
@@ -139,10 +142,7 @@ function yafs() {
 function yafd() {
     location "node_scripts.sh"
     if [[ -n "$1" ]]; then
-        for name_of_npm_module in "$@"
-        do
-            yad $name_of_npm_module && yat $name_of_npm_module
-        done
+        yad $@ && yat $@
     else
         echo "You must specify at least 1 module to install"
     fi
@@ -152,10 +152,7 @@ function yafd() {
 function yafp() {
     location "node_scripts.sh"
     if [[ -n "$1" ]]; then
-        for name_of_npm_module in "$@"
-        do
-            yap $name_of_npm_module && yat $name_of_npm_module
-        done
+        yap $@ && yat $@
     else
         echo "You must specify at least 1 module to install"
     fi
@@ -181,12 +178,23 @@ alias npmpv="npm list -g | grep"
 
 alias nodelist="ls /usr/local/lib/node_modules/; echo '-------------------------------------'; echo 'global node modules location:'; echo '/usr/local/lib/node_modules/'; echo '-------------------------------------';"
 
-#information about npm and node modules [TOADD]
+# Information about npm and node modules
 alias npminfo="npm config list"
 
-#list all globally installed node modules [TOADD]
+# List all globally installed node modules
 alias npmglist="npm list -g --depth=0"
 alias npm_modules_g_list="npm list -g --depth=0"
+
+# List all locally installed node modules
+alias npm_list_project_modules="cat package.json | jq '{optionalDependencies: .optionalDependencies, peerDependencies: .peerDependencies, dependencies: .dependencies, devDependencies: .devDependencies}'"
+alias npm_list_modules_project='npm_list_project_modules'
+alias npm_modules_project_list='npm_list_project_modules'
+alias npm_project_modules_list='npm_list_project_modules'
+alias npm_modules_list_project='npm_list_project_modules'
+alias list_modules_npm_project='npm_list_project_modules'
+alias list_npm_modules_project='npm_list_project_modules'
+alias modules_npm_project_list='npm_list_project_modules'
+alias project_npm_modules_list='npm_list_project_modules'
 
 alias npmkeyinfo="npm config ls -l | grep 'userconfig\|loglevel\|init-module\|cache\s\|^prefix\|shell\|node\-version\|globalignorefile\|globalconfig\|editor\|color' | rev | cut -d';' -f1 | rev | trim; npm config list | grep 'HOME\|cwd\|bin' | rev | cut -d';' -f1 | rev | trim"
 
@@ -390,6 +398,7 @@ function tnis {
 
 alias npmscripts='awk "/scripts/,/}/" package.json | ack -v "\s\s}" | ack -v "\s\s\"scripts\":"'
 alias npmreact_deps='cat package.json | ack "react|redux|recompose|jsdom|reselect|normalizr|enzyme|jest|updeep|reduce-reducers|mobx" | trim'
+alias vimpj="vim ./package.json"
 
 # Misc external programs
 alias twitter="echo 'logging into twitter via birdknife...'; birdknife"

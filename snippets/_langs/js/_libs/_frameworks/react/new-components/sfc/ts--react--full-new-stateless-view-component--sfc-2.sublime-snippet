@@ -5,16 +5,16 @@
 const s = require('./${TM_FILENAME/(.+?)(\-((container)|(view))\.tsx)/\1/g}.scss');
 
 /************************************** THIRD-PARTY MODULES ***************************************/
-import * as React from 'react';
-import * as cn from 'classnames';
+import React from 'react';
+import cn from 'classnames';
 import {observer, inject} from 'mobx-react';
 
 /**************************************** PROJECT MODULES *****************************************/
 import {${1:${TM_FILENAME/([a-zA-Z])?([a-zA-Z0-9]+)?[-_]?[-_]?([a-zA-Z])?([a-zA-Z0-9]+)?[-_]?[-_]?([a-zA-Z])?([a-zA-Z0-9]+)?[-_]?[-_]?([a-zA-Z])?([a-zA-Z0-9]+)?[-_]?[-_]?([a-zA-Z])?([a-zA-Z0-9]+)?[-_]?[-_]?([a-zA-Z])?([a-zA-Z0-9]+)?\..*/\U$1\L$2\U$3\L$4\U$5\L$6\U$7\L$8\U$9\L$10\U$11\L$12/g}}Props} from './${TM_FILENAME/(.+)(-view)\..+|.*/$1/:name}-container';
 
 /******************************************** LOGGING *********************************************/
-import {logFactory, logMarkers} from 'mad-logs';
-const log = logFactory()(`${TM_FILENAME}`, logMarkers.smokeyHatesChristmas);
+import {logFactory, Styles} from 'mad-logs/lib/shared';
+const log = logFactory(`${TM_FILENAME}`, Styles.smokeyHatesChristmas);
 
 /********************************************* EXPORT *********************************************/
 /**

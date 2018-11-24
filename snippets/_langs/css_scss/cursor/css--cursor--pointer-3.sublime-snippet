@@ -1,0 +1,8 @@
+<snippet>
+  <description>Pointer cursor (e.g. as you'd see over a link)</description>
+<content><![CDATA[
+cursor: pointer${0:;}
+]]></content>  
+  <tabTrigger>pointer_cursor</tabTrigger>
+  <scope>source.css, source.postcss, source.scss</scope>
+</snippet>

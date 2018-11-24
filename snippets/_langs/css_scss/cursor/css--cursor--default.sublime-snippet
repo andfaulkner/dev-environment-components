@@ -3,6 +3,6 @@
 <content><![CDATA[
 cursor: default${0:;}
 ]]></content>  
-  <tabTrigger>cur_default</tabTrigger>
+  <tabTrigger>cursor_default</tabTrigger>
   <scope>source.css, source.postcss, source.scss</scope>
 </snippet>

@@ -1,5 +1,5 @@
 
-import * as React from 'react';
+import React from 'react';
 
 export class TestComponent extends React.Component<{}, {}> {
   render() {

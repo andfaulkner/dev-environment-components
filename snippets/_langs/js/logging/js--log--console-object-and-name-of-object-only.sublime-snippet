@@ -1,7 +1,7 @@
 <snippet>
     <description>Log object & name of object</description>
     <content><![CDATA[
-console.log('${1:nameOfObject}:', ${1:nameOfObject});
+console.log(`${1:nameOfObject}:`, ${1:nameOfObject});
 ]]></content>
     <tabTrigger>clo</tabTrigger>
     <scope>source.js, source.ts, source.jsx, source.tsx</scope>

@@ -1,0 +1,8 @@
+<snippet>
+  <description>Create a range</description>
+<content><![CDATA[
+range(${1:min}, ${2:max}, ${3:step})
+]]></content>  
+  <tabTrigger>range_new</tabTrigger>
+  <scope>source.python</scope>
+</snippet>

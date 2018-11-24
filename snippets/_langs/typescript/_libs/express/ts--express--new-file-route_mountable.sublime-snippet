@@ -1,7 +1,7 @@
 <snippet>
   <description>Boilerplate for a new Express route file in Typescript</description>
 <content><![CDATA[
-import * as express from 'express';
+import express from 'express';
 
 let app: express.Router = express();
 

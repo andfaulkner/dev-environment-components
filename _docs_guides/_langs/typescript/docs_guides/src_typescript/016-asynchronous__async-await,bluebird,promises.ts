@@ -1,7 +1,7 @@
 // PROMISES: EXAMPLE USE OF bluebird
 
-import * as Promise from 'bluebird';
-import * as fs from 'fs';
+import Promise from 'bluebird';
+import fs from 'fs';
 
 const readFileAsync = Promise.promisify(fs.readFile);
 

@@ -1,7 +1,7 @@
 <snippet>
   <description>Import jsonwebtoken library</description>
 <content><![CDATA[
-import * as jsonwebtoken from 'jsonwebtoken';
+import jsonwebtoken from 'jsonwebtoken';
 ]]></content>  
   <tabTrigger>imp_jsonwebtoken</tabTrigger>
   <scope>source.js, source.ts, source.jsx, source.tsx</scope>

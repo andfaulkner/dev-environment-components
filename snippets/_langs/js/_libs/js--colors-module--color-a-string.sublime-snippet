@@ -1,7 +1,7 @@
 <snippet>
-  <description>Style a colour (import * as colors from 'colors';)</description>
+  <description>Style a colour (import colors from 'colors';)</description>
 <content><![CDATA[
-${1:import * as colors from 'colors';}${1/.+/\n\n/}colors.${2:black/*|red|yellow|green|blue|magenta|gray|cyan|gray|white : fg*/}
+${1:import colors from 'colors';}${1/.+/\n\n/}colors.${2:black/*|red|yellow|green|blue|magenta|gray|cyan|gray|white : fg*/}
       ${3/.+/./}${3:bgBlack/*|bgRed|bgYellow|bgGreen|bgBlue|bgMagenta|bgCyan|bgWhite*/}
       ${4/.+/./}${4:bold/*|italic|underline|inverse|strikethrough|hidden*/}
       ${5/.+/./}${5:zebra|rainbow|trap|america}(${0});

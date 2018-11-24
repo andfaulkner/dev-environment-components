@@ -1,7 +1,7 @@
 <snippet>
-  <description>Turns puts into console.log, because I can't break my puts habit from ruby</description>
+  <description>Turns puts to console.log (I can`t break my puts habit from ruby)</description>
 <content><![CDATA[
-console.log('${1:${TM_FILENAME/(.+)\..+|.*/$1/:name}}${1/.+/#/}${2:fnName}${2/.+/:/}${2/.+/ /}${3:varToLog}${3/.+/:/}${0}'${3/.+/, /}${3});
+console.log(`${1:${TM_FILENAME/(.+)\..+|.*/$1/:name}}${1/.+/#/}${2:fnName}${2/.+/:/}${2/.+/ /}${3:varToLog}${3/.+/:/}${0}`${3/.+/, /}${3});
 ]]></content>  
   <tabTrigger>puts</tabTrigger>
   <scope>source.js, source.ts, source.jsx, source.tsx</scope>

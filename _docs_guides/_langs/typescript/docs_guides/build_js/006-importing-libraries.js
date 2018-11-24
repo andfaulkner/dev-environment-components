@@ -10,11 +10,11 @@
 //   3) Include a declaration like this in the typescript file you are using the library in: e.g.:
 //#//          ///<reference path="../../typings/lodash/lodash.d.ts" />
 //   4) Import the library normally (ES6 module syntax): e.g.:
-//             import * as _ from "lodash";
+//             import _ from "lodash";
 //
 // SOLUTION 2: import lib normally in src typescript file, & manually copy lib to same dir as src.
 //             Code in the source file:
-//             import * as _ from 'lodash';
+//             import _ from 'lodash';
 //   A HORRIBLE SOLUTION. DON'T DO THIS.
 //
 /// <reference path="../../typings/lodash/lodash.d.ts" />

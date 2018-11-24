@@ -24,7 +24,7 @@
 /******************************************************************/
 //  In context, the simplest use of <Motion> would look like this:
 
-import * as React from 'react';
+import React from 'react';
 
 class APP extends React.Container {
 
@@ -44,7 +44,7 @@ render() {
 // A more complex example using <Motion>
 //
 
-import * as React from 'react';
+import React from 'react';
 
 // Value of 1 degree in radians
 const DEG_TO_RAD = 0.0174533;

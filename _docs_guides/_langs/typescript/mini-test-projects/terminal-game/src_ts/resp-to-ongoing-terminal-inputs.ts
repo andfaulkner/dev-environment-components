@@ -2,7 +2,7 @@
 /// <reference path="../typings/keypress/keypress.d.ts" />
 /// <reference path="../typings/globals/node/index.d.ts" />
 
-import * as _ from 'lodash';
+import _ from 'lodash';
 
 
 

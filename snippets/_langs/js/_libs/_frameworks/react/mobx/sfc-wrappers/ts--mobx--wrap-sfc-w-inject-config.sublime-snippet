@@ -1,0 +1,8 @@
+<snippet>
+  <description>Inject config into a React SFC (MobX)</description>
+<content><![CDATA[
+inject(${1:'config'})(${0:$SELECTION})
+]]></content>
+  <tabTrigger>injconf</tabTrigger>
+  <scope>source.ts, source.tsx</scope>
+</snippet>

@@ -3,7 +3,7 @@
 <content><![CDATA[
 /// <reference path="${1:../../typings/index.d.ts}" />
 
-import * as _ from 'lodash';
+import _ from 'lodash';
 
 declare function require(name: string);
 ${0}

@@ -82,10 +82,10 @@ console.log('***************** WORKING WITH EXISTING JS LIBRARIES **************
 console.log(" ----- To load and use untyped standard JS modules:: ------");
 console.log(" ----- 1) Declare ambient modules in a .d.ts file w top-level export declarations -----");
 console.log(" ----- 2) import the file using /// <reference path='./place/to/go/for/refs.d.ts' /> -----");
-console.log(" ----- 3) load modules in with import * as NameOfModule from 'name_of_module' -----");
+console.log(" ----- 3) load modules in with import NameOfModule from 'name_of_module' -----");
 // Below works, but it's a mess, and I eliminated
 //
-// import * as path from "path";
+// import path from "path";
 // import url = require("url");
 // console.log(path);
 // console.log(url);

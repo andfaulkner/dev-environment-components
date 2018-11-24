@@ -2,7 +2,7 @@
 /// <reference path="../../typings/globals/node/index.d.ts" />
 /// <reference path="./testmodules/sideEffectsTestModuleSideEffects.d.ts"/>
 
-import * as _ from 'lodash';
+import _ from 'lodash';
 
 console.log('----------------------------------------------------------------------------------');
 //#########################################
@@ -35,13 +35,13 @@ console.log(" ----- (note that this allows multiple import of same item) -----")
 import { MyCup as AnotherCup } from './testmodules/test-module-1';
 
 console.log(" ----- Import all exports from a module into a single variable -----");
-import * as SetOfExports from './testmodules/test-module-1';
+import SetOfExports from './testmodules/test-module-1';
 
 console.log(" ----- Access arbitrary item from import of all items in module into 1 variable -----");
 console.log('numberRegexp from testmodules/test-module-1:', SetOfExports.numberRegexp);
 
 console.log(" ----- Import for side effects -----");
-import * as testModuleSideEffects from "testModuleSideEffects";
+import testModuleSideEffects from "testModuleSideEffects";
 import './testmodules/test-module-sideeffects';
 
 console.log(" ----- View side effects produced -----");
@@ -122,11 +122,11 @@ console.log('***************** WORKING WITH EXISTING JS LIBRARIES **************
 console.log(" ----- To load and use untyped standard JS modules:: ------");
 console.log(" ----- 1) Declare ambient modules in a .d.ts file w top-level export declarations -----");
 console.log(" ----- 2) import the file using /// <reference path='./place/to/go/for/refs.d.ts' /> -----");
-console.log(" ----- 3) load modules in with import * as NameOfModule from 'name_of_module' -----");
+console.log(" ----- 3) load modules in with import NameOfModule from 'name_of_module' -----");
 
 // Below works, but it's a mess, and I eliminated
 //
-// import * as path from "path";
+// import path from "path";
 // import url = require("url");
 
 // console.log(path);
@@ -138,7 +138,7 @@ console.log('-------------------------------------------------------------------
 //#          USE "NAMESPACE IMPORT PATTERN" IF IMPORTING MANY THINGS          #
 //#############################################################################
 console.log('***************** USE "NAMESPACE IMPORT PATTERN" IF IMPORTING MANY THINGS *****************');
-import * as testModuleBundle from "./testmodules/test-module-1";
+import testModuleBundle from "./testmodules/test-module-1";
 
 let doggie = new testModuleBundle.Someone(12345323, 'meeka', 'bobeeka');
 console.log('doggie (new Someone class from mega-import w "Namespace import pattern"):', doggie);

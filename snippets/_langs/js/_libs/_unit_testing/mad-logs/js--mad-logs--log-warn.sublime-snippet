@@ -1,0 +1,8 @@
+<snippet>
+  <description>log.warn (for mad-logs)</description>
+<content><![CDATA[
+log.warn(`${0}`);
+]]></content>  
+  <tabTrigger>logw</tabTrigger>
+  <scope>source.js, source.ts, source.jsx, source.tsx</scope>
+</snippet>

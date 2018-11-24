@@ -1,0 +1,8 @@
+<snippet>
+  <description>Sel matching el if only child eg li:only-child</description>
+<content><![CDATA[
+:only-child
+]]></content>  
+  <tabTrigger>child_only_sel</tabTrigger>
+  <scope>source.css, source.postcss, source.scss</scope>
+</snippet>

@@ -1,10 +1,10 @@
 <snippet>
   <description>Import React, React-DOM, and libs commonly used w React</description>
 <content><![CDATA[
-import * as React from 'react';
-import * as ReactDOM from 'react-dom';
-import * as moment from 'moment';
-import * as cn from 'classnames';
+import React from 'react';
+import ReactDOM from 'react-dom';
+import moment from 'moment';
+import cn from 'classnames';
 import {observer, inject} from 'mobx-react';
 import {compose} from 'recompose';
 

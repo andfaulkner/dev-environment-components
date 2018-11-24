@@ -1,7 +1,7 @@
 <snippet>
   <description>Import </description>
 <content><![CDATA[
-import * as Polyglot from 'node-polyglot';
+import Polyglot from 'node-polyglot';
 ]]></content>  
   <tabTrigger>imp_polyglot</tabTrigger>
   <scope>source.js, source.ts, source.jsx, source.tsx</scope>

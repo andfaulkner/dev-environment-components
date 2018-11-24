@@ -1,0 +1,8 @@
+<snippet>
+  <description>Create a lambda</description>
+<content><![CDATA[
+${1:my_lambda}${1/.+/ = /}lambda ${2:arg1, arg2}: ${0:arg1 + arg2}
+]]></content>  
+  <tabTrigger>lambda_new</tabTrigger>
+  <scope>source.python</scope>
+</snippet>

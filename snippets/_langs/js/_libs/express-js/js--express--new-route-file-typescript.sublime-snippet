@@ -3,10 +3,10 @@
 <content><![CDATA[
 //************************************** THIRD-PARTY MODULES **************************************/
 // import express
-import * as express from 'express';
+import express from 'express';
 
 // utils
-import * as path from 'path';
+import path from 'path';
 import {isSilly} from 'env-var-helpers';
 import {inspect} from 'util';
 
@@ -18,7 +18,7 @@ import {_} from '../../../shared/lodash-mixins';
 
 /******************************************** LOGGING *********************************************/
 import {buildFileTag, logFactory} from 'mad-logs';
-import * as colors from 'colors';
+import colors from 'colors';
 
 const TAG = buildFileTag('$TM_FILENAME', colors.bgMagenta.white);
 

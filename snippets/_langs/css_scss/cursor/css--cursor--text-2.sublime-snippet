@@ -1,0 +1,8 @@
+<snippet>
+  <description>Text cursor (as you'd see when selecting text)</description>
+<content><![CDATA[
+cursor: text${0:;}
+]]></content>  
+  <tabTrigger>pointer_text</tabTrigger>
+  <scope>source.css, source.postcss, source.scss</scope>
+</snippet>

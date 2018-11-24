@@ -1,5 +1,5 @@
 /// <reference path="./sideEffectsTestModuleSideEffects.d.ts" />
-import * as GLOBAL from 'GLOBAL';
+import GLOBAL from 'GLOBAL';
 
 process["sideEffect"] = "hey look a side effect!";
 

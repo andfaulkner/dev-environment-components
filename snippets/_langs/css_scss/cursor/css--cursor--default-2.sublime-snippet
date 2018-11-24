@@ -1,0 +1,8 @@
+<snippet>
+  <description>Default cursor (as if there were nothing selected/hovered/etc.)</description>
+<content><![CDATA[
+cursor: default${0:;}
+]]></content>  
+  <tabTrigger>pointer_default</tabTrigger>
+  <scope>source.css, source.postcss, source.scss</scope>
+</snippet>

@@ -1,6 +1,6 @@
 // **************** SUMMARY:: ALL FORMS OF IMPORT ****************
 //    // IMPORT ALL
-//    import * as name from "module-name";
+//    import name from "module-name";
 //    import "module-name";   // import for side effects
 //
 //    // NAMED IMPORTS
@@ -52,7 +52,7 @@ console.log('msg: successful import maybe');
 // hiImASideEffect();
 
 // import all exported functions in module to variable mathOps
-import * as mathOps from './export-on-fn-def';
+import mathOps from './export-on-fn-def';
 // => { addTwoNums: [Function: addTwoNums], multiplyTwoNums: [Function: multiplyTwoNums] }
 
 // import specific named exports (members of the module) from module

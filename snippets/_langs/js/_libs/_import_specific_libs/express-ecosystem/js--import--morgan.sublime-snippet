@@ -1,7 +1,7 @@
 <snippet>
   <description>Import morgan server-side logging module</description>
 <content><![CDATA[
-import * as morgan from 'morgan';
+import morgan from 'morgan';
 ]]></content>  
   <tabTrigger>imp_morgan</tabTrigger>
   <scope>source.js, source.ts, source.jsx, source.tsx</scope>

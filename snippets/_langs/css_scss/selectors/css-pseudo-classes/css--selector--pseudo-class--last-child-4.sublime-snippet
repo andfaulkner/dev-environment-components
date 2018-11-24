@@ -1,7 +1,7 @@
 <snippet>
-  <description>Sel last child of parent e.g. li:last-child {} gets last li among siblings</description>
+  <description>Sel last child of parent eg li:last-child gets last li of its siblings</description>
 <content><![CDATA[
-${1:.el_to_get_1st_of_among_its_siblings}:last-child
+${1:.el_to_get_last_of_among_its_siblings}:last-child
 ]]></content>  
   <tabTrigger>lastchild_sel</tabTrigger>
   <scope>source.css, source.postcss, source.scss</scope>
