@@ -1,0 +1,15 @@
+{
+    "extends": "./configs/tsconfig-base",
+    "compilerOptions": {
+        "types": ["node"],
+        "outDir": "./",
+        "strictFunctionTypes": true,
+        "skipLibCheck": true
+    },
+    "include": [
+        "./*.ts",
+        "./scripts/**/*.ts",
+        "./scripts/ts/**/*.ts"
+    ],
+    "exclude": ["*.js", "*.json", "doc/*.ts"]
+}

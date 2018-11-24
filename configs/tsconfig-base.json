@@ -1,0 +1,38 @@
+{
+    "version": "3.1.6",
+    "compilerOptions": {
+        // Uncomment to see all import errors
+        // "noUnusedLocals": true,
+        // "noUnusedParameters": true,
+
+        // Use newer import style (removes issues with "someImport.default")
+        "esModuleInterop": true,
+
+        "allowJs": true,
+        "allowSyntheticDefaultImports": true,
+        "emitDecoratorMetadata": true,
+        "experimentalDecorators": true,
+
+        // tslib
+        "importHelpers": true,
+
+        "jsx": "react",
+        "module": "CommonJS",
+        "moduleResolution": "node",
+
+        "noImplicitAny": false,
+        "preserveConstEnums": true,
+        "pretty": true,
+
+        "removeComments": false,
+        "skipLibCheck": true,
+        "sourceMap": true,
+        "strictNullChecks": false,
+        "target": "es5",
+
+        "lib": ["es2018"],
+        "typeRoots": [
+            "../node_modules/@types"
+        ]
+    }
+}
