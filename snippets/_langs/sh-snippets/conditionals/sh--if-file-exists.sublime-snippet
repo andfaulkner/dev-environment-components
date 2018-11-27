@@ -1,5 +1,5 @@
 <snippet>
-	<description>If statement: block inside runs if file exists</description>
+    <description>If file exists, run block inside if statement</description>
 	<content><![CDATA[
 if [ -e ${1:~/file/to/test/existence/of.txt} ]; then
   ${2:# do this if the file exists}

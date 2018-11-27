@@ -14,6 +14,5 @@ brew install yarn
 brew install tree 
 brew install nvim
 
-
-
 echo 'source ~/.nvimrc' > ~/.config/nvim/init.vim
+

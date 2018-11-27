@@ -1,3 +1,9 @@
+# Install scripts to synchronize bash history between terminal windows
+echo "Installing script to merge bash history between terminal windows..."
+wget -O ~/merge_history.bash http://raw.github.com/pts/pts-merge-history-bash/master/merge_history.bash
+touch ~/.merged_bash_history
+echo "Successfully installed script for merging bash history between terminal windows!"
+
 ################## INSTALLATIONS ##################
 #----- Install Homebrew -----#
 /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
@@ -25,7 +31,7 @@ brew add subversion
 brew add maven
 
 # Generate TOC for git README
-mkdir ~/bin
+mkdir ~/bin 2>/dev/null
 pushd ~/bin
 wget https://raw.githubusercontent.com/ekalinin/github-markdown-toc/master/gh-md-toc
 chmod a+x gh-md-toc
@@ -66,13 +72,21 @@ pip3 install --upgrade pip
 pip install --upgrade setuptools
 pip3 install --upgrade neovim # Get Neovim working with Python
 
-#----- Go setup installations -----#
+#----- Go installation & setup -----#
+echo "--- SETTING UP GO (golang) ---"
 brew add go
-mkdir ~/projects
-mkdir $HOME/projects/go
-export GOPATH=$HOME/projects/go
-echo 'export GOPATH=$HOME/projects/go' >> $HOME/.bash_profile
-echo 'export PATH=$PATH:$GOPATH/bin' >> $HOME/.bash_profile
+if grep -Fq 'export GOPATH=$HOME/projects/go' ~/.bash_profile; then
+    echo "go config already present, not adding again"
+else
+    mkdir ~/projects 2>/dev/null
+    mkdir $HOME/projects/go 2>/dev/null
+    export GOPATH=$HOME/projects/go
+    echo ""
+    echo '#----- Go config -----#' >> $HOME/.bash_profile
+    echo 'export GOPATH=$HOME/projects/go' >> $HOME/.bash_profile
+    echo 'export PATH=$PATH:$GOPATH/bin' >> $HOME/.bash_profile
+    echo "go config added! (including write to to .bash_profile)"
+fi
 
 
 ########################## VERSION MANAGERS ##########################
@@ -87,26 +101,77 @@ nvm install --lts
 nvm ls | ack '\s+v' | tail -n1 | awk '{print $2}'
 
 
+########################## GLOBAL NPM MODULES ##########################
+npm install -g npm-upgrade
+npm install -g ts-node
+npm install -g typescript
+
+
 ########################## SETTINGS ##########################
 #----- Enable scrolling in less -----#
 defaults write com.googlecode.iterm2 AlternateMouseScroll -bool true
 
 
+########################## COPY SUBLIME PREFERENCES ##########################
+echo "Copying sublime preferences files. Warning: return and edit them to reflect machine-specific info"
+if [ ! -e "$SUBLIME_DIR/Packages/User/JsPrettier.sublime-settings" ]; then
+    echo "Adding Sublime plugin 'JSPrettier' settings"
+    cp "$SNIPPETS_DIR/setup/sublime-settings/JSPrettier.sublime-settings" "$SUBLIME_DIR/Packages/User/JsPrettier.sublime-settings"
+else
+    echo "Not adding Sublime plugin 'JSPrettier' settings - already present"
+fi
+
+if [ ! -e $SUBLIME_DIR/Packages/User/import_helper.sublime-settings ]; then
+    echo "Adding Sublime plugin 'import_helper' settings"
+    cp "$SNIPPETS_DIR/setup/sublime-settings/import_helper.sublime-settings" "$SUBLIME_DIR/Packages/User/import_helper.sublime-settings"
+else
+    echo "Not adding Sublime plugin 'import_helper' settings - already present"
+fi
+
+
 ########################## AUTOCOMPLETIONS ##########################
 #----- Add npm completions -----#
-mkdir ~/.config 2>/dev/null
-mkdir ~/.config/npm 2>/dev/null
-npm completion > ~/.config/npm/npm-completion.sh
+echo "--- ADDING npm COMPLETIONS TO .bash_profile ---"
 
-echo "
-source ~/.config/npm/npm-completion.sh
-" >> ~/.bash_profile
+# Create npm completions dir & add npm completion script to it
+if [ ! -e ~/.config/npm/npm-completion.sh ]; then
+    echo "Making npm completions dir, downloading npm-completion.sh script"
+    mkdir ~/.config 2>/dev/null
+    mkdir ~/.config/npm 2>/dev/null
+    # Download npm completion file and store in correct config location
+    npm completion > ~/.config/npm/npm-completion.sh
+else
+    echo "npm completion script already present, not downloading again"
+fi
 
-#### COPY SUBLIME PREFERENCES ####
-echo "Copying sublime preferences files. Warning: return and edit them to reflect machine-specific info"
-cp $SNIPPETS_DIR/setup/sublime-settings/JSPrettier.sublime-settings $SUBLIME_DIR/Packages/User/JsPrettier.sublime-settings
-cp $SNIPPETS_DIR/setup/sublime-settings/import_helper.sublime-settings $SUBLIME_DIR/Packages/User/import_helper.sublime-settings
+# Only add npm completions if they're not already added
+if grep -Fq "source ~/.config/npm/npm-completion.sh" ~/.bash_profile; then
+    echo "npm-completion already added to bash_profile, not adding again"
+else
+    echo "" >> ~/.bash_profile
+    echo "#----- Add npm completions -----#" >> ~/.bash_profile
+    echo "source ~/.config/npm/npm-completion.sh" >> ~/.bash_profile
+    echo "" >> ~/.bash_profile
+    echo "Added npm completion setup to bash_profile"
+fi
 
-#### DISPLAY NEW MACHINE INFO ####
+
+########################## NVIM SETUP ##########################
+echo "--- ADDING SHARED NEOVIM CONFIG ---"
+
+# Symlink neovim config location to neovim config file in current project
+# Allows synchronization of nvim config across projects
+if [ ! -e ~/.config/nvim/init.vim ]; then
+    echo "init.vim exists, not symlinking"
+    echo 'To do so anyway, run:'
+    echo '    mv ~/.config/nvim/init.vim ~/.config/nvim/init.vim_BK'
+    echo '    ln -s "$SNIPPETS_DIR/setup/config/init.vim" ~/.config/nvim/init.vim'
+else
+    mkdir ~/.config 2>/dev/null
+    mkdir ~/.config/nvim 2>/dev/null
+    ln -s "$SNIPPETS_DIR/setup/config/init.vim" "~/.config/nvim/init.vim"
+    echo "neovim config added!"
+fi
+
+##################### DISPLAY NEW MACHINE INFO #####################
 cat $SNIPPETS_DIR/setup/new-machine-info.md
-

@@ -1,0 +1,8 @@
+<snippet>
+  <description>Pretty print. First add: from pprint import pprint</description>
+<content><![CDATA[
+pprint(${1:"string or var containing string to output"})
+]]></content>  
+  <tabTrigger>pretty_print</tabTrigger>
+  <scope>source.python</scope>
+</snippet>

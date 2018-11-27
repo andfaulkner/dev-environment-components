@@ -151,6 +151,9 @@ PATH=$PATH:"$SNIPPETS_DIR/custom-manuals"
 # LOAD LOCAL BINARIES
 PATH=$PATH:"~/bin"
 
+# LOAD LOCAL SCRIPTS
+PATH=$PATH:"$SNIPPETS_DIR/scripts/ts"
+
 # SET ANDROID PATH
 export ANDROID_HOME="$HOME/Library/Android/sdk"
 export PATH=$PATH:$ANDROID_HOME/tools:$ANDROID_HOME/platform-tools
