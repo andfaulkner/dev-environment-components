@@ -161,7 +161,7 @@ Simple and illustrative (but not particularly useful) example:
 
     export const SettingInputCol = ({ children }: { children?: JSX.Element }): JSX.Element =>
         <div className={cn(s['settings-input-box-width'])}>
-            {React.cloneElement(React.Children.only(children), { mergeInClasses: 'ml-n40' })}
+            {React.cloneElement(React.Children.only(children), { mergeClasses: 'ml-n40' })}
         </div>
 
 ...To use it:
@@ -176,7 +176,7 @@ Simple and illustrative (but not particularly useful) example:
         />
     </SettingInputCol>
 
-The above CIFormInput gets the { mergeInClasses: 'ml-n40' } prop injected automatically.
+The above CIFormInput gets the { mergeClasses: 'ml-n40' } prop injected automatically.
 
 
 Further reading
