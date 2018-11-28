@@ -1,8 +1,8 @@
-<snippet>
+<!-- <snippet>
   <description>Create a first-level bullet</description>
 <content><![CDATA[
 *   ${0}
-]]></content>  
+]]></content>
   <tabTrigger>-</tabTrigger>
   <scope>text.html.markdown, text.md, text.markdown</scope>
-</snippet>
+</snippet> -->
