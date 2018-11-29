@@ -1,8 +1,12 @@
 declare function require(name: string);
 
 /************************************** THIRD-PARTY IMPORTS ***************************************/
-import './src/augment-global-prototypes/augment-array-prototype';
+import * as __AUGMENT_GLOBAL_PROTOTYPE__ from '../augment-global-prototypes/augment-global-prototypes';
+
 import * as lodash from 'lodash';
+import * as moment from 'moment';
+import * as madUtils from 'mad-utils';
+
 import * as util from 'util';
 import * as repl from 'repl';
 import * as path from 'path';
@@ -10,7 +14,8 @@ import * as fs from 'fs';
 import * as os from 'os';
 import {path as rootPath} from 'app-root-path';
 
-(global as any).testValue = `OKOK`;
+/**************************************** PROJECT MODULES *****************************************/
+import {ls, cd} from './shell-cmds';
 
 /********************************** REPL NODE ENVIRONMENT SETUP ***********************************/
 util.inspect.defaultOptions.colors = true;
@@ -19,8 +24,7 @@ util.inspect.defaultOptions.breakLength = 100;
 util.inspect.defaultOptions.showHidden = true;
 
 /****************************************** CONFIG REPL *******************************************/
-const packageJson = fs.readFileSync(path.join(rootPath, `./package.json`)); //require('./package.json');
-
+// const packageJson = fs.readFileSync(path.join(rootPath, `./package.json`)).toString(); //require('./package.json');
 
 const {defineProperty} = Object;
 
@@ -108,22 +112,28 @@ const ctxProps = {
     // Helper libraries
     // bluebird,
     lodash,
-    // madUtils,
-    _: lodash,
-    // _m: madUtils,
+    l_: lodash,
+    madUtils,
+    m_: madUtils,
+    ls,
+    cd,
+
+    // Date handling
+    moment,
 
     // Logging & object info-related
     inspect,
 
     // package.json content
-    packageJson,
+    // packageJson,
 };
 
 /**
  * Extra descriptions for bound properties
  */
 const descriptions = {
-    _: 'lodash alias',
+    l_: `lodash alias`,
+    m_: `mad-utils alias`,
 };
 
 // Attach props to REPL (repl is in repl setup)
