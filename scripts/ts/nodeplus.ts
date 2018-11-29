@@ -3,6 +3,8 @@ declare function require(name: string);
 /************************************** THIRD-PARTY IMPORTS ***************************************/
 import './src/augment-global-prototypes/augment-array-prototype';
 import * as lodash from 'lodash';
+import * as moment from 'moment';
+import * as madUtils from 'mad-utils';
 import * as util from 'util';
 import * as repl from 'repl';
 import * as path from 'path';
@@ -108,9 +110,11 @@ const ctxProps = {
     // Helper libraries
     // bluebird,
     lodash,
-    // madUtils,
-    _: lodash,
-    // _m: madUtils,
+    l_: lodash,
+    moment,
+
+    madUtils,
+    m_: madUtils,
 
     // Logging & object info-related
     inspect,
@@ -123,7 +127,10 @@ const ctxProps = {
  * Extra descriptions for bound properties
  */
 const descriptions = {
-    _: 'lodash alias',
+    l_: `lodash alias`,
+    m_: `mad-utils alias`,
+    madUtils: `moment alias`,
+    moment: `moment alias`,
 };
 
 // Attach props to REPL (repl is in repl setup)
