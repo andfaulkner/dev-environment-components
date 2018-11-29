@@ -1,0 +1,16 @@
+{
+    "extends": "../../../configs/tsconfig-base",
+    "compilerOptions": {
+        "types": ["node"],
+        "outDir": "./.nodeplus-build",
+        "strictFunctionTypes": true,
+        "skipLibCheck": true
+    },
+    "include": [
+        "./augment-global-prototypes/*.ts",
+        "./augment-global-prototypes/**/*.ts",
+        "./nodeplus/*.ts",
+        "./nodeplus/**/*.ts"
+    ],
+    "exclude": ["*.js", "*.json", "doc/*.ts"]
+}
