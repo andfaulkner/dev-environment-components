@@ -93,10 +93,6 @@ function beginswith {
 ################################################################################
 #~~~~~~~~~~~~~~~~~~~~~~~~~~ LOAD OTHER SOURCE SCRIPTS ~~~~~~~~~~~~~~~~~~~~~~~~~~
 ################################################################################
-# LANGUAGE- OR TOOL-SPECIFIC SCRIPT SOURCES
-source "$MISC_CLI_OPTIONS"
-source "$HOME/.profile"
-
 _def_all_srcs_() {
     local CUR_LANG=$1
     local CUR_LANG_LC="$(echo $CUR_LANG | tr '[:upper:]' '[:lower:]')"
@@ -120,9 +116,14 @@ _def_all_srcs_ search
 _def_all_srcs_ web
 _def_all_srcs_ sys_util
 
+# LANGUAGE- OR TOOL-SPECIFIC SCRIPT SOURCES
 MISC_CLI_OPTIONS="$SNIPPETS_DIR/scripts/sh/cli_opts.sh"
 PORTABLE_BASHRC_ADDITIONS="$SNIPPETS_DIR/scripts/sh/portable_bashrc_additions.sh"
 TEMPLATES_DIR="$SNIPPETS_DIR/scripts/sh/templates"
+
+# LANGUAGE- OR TOOL-SPECIFIC SCRIPT SOURCES
+source "$MISC_CLI_OPTIONS"
+source "$HOME/.profile"
 
 # EDIT OTHER SCRIPT SOURCES
 alias bashrc_sysportable='vim "$PORTABLE_BASHRC_ADDITIONS"'
