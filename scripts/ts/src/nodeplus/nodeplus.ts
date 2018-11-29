@@ -15,7 +15,7 @@ import * as os from 'os';
 import {path as rootPath} from 'app-root-path';
 
 /**************************************** PROJECT MODULES *****************************************/
-import {ls} from './ls';
+import {ls, cd} from './shell-cmds';
 
 /********************************** REPL NODE ENVIRONMENT SETUP ***********************************/
 util.inspect.defaultOptions.colors = true;
@@ -116,6 +116,7 @@ const ctxProps = {
     madUtils,
     m_: madUtils,
     ls,
+    cd,
 
     // Date handling
     moment,
