@@ -60,6 +60,7 @@ export const inspect = (...args) => {
 
 /****************************************** CREATE REPL *******************************************/
 export const r = repl.start({useColors: true});
+(global as any).r = r;
 
 // Add REPL history file
 const historyFile = path.join(os.homedir(), `.nodeplus_history`);

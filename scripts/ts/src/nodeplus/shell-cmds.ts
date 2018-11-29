@@ -1,4 +1,22 @@
+/************************************** THIRD-PARTY MODULES ***************************************/
 import fs from 'fs';
+import path from 'path';
+import {REPLServer} from 'repl';
+
+import {path as rootPath} from 'app-root-path';
+
+import {
+    defineImmutableProp,
+    defineMutableProp,
+    getArgNames as getArgs,
+    inspectKeyTree,
+    isRegexString,
+    getFlagsFromRegexString,
+    removeSurroundingQuotes,
+    removeSlashesFlagsSurroundingRegexString,
+} from 'mad-utils/lib/shared';
+
+const r = (global as any).r as REPLServer;
 
 /******************************************** HELPERS *********************************************/
 /**
@@ -10,6 +28,11 @@ const isDir = (inode: string): boolean => fs.lstatSync(inode).isDirectory();
  * Is the given path an absolute path?
  */
 const isAbsPath = (newPath: string): boolean => !!newPath.match(/^\//);
+
+/**
+ * @return {boolean} True if directory is within project
+ */
+const isWithinProj = (newPath: string): boolean => !!newPath.match(new RegExp(`^` + rootPath));
 
 /**
  * Build list of all directories in given inode
