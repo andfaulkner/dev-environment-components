@@ -93,6 +93,10 @@ function beginswith {
 ################################################################################
 #~~~~~~~~~~~~~~~~~~~~~~~~~~ LOAD OTHER SOURCE SCRIPTS ~~~~~~~~~~~~~~~~~~~~~~~~~~
 ################################################################################
+# LANGUAGE- OR TOOL-SPECIFIC SCRIPT SOURCES
+source "$MISC_CLI_OPTIONS"
+source "$HOME/.profile"
+
 _def_all_srcs_() {
     local CUR_LANG=$1
     local CUR_LANG_LC="$(echo $CUR_LANG | tr '[:upper:]' '[:lower:]')"
@@ -119,10 +123,6 @@ _def_all_srcs_ sys_util
 MISC_CLI_OPTIONS="$SNIPPETS_DIR/scripts/sh/cli_opts.sh"
 PORTABLE_BASHRC_ADDITIONS="$SNIPPETS_DIR/scripts/sh/portable_bashrc_additions.sh"
 TEMPLATES_DIR="$SNIPPETS_DIR/scripts/sh/templates"
-
-# LANGUAGE- OR TOOL-SPECIFIC SCRIPT SOURCES
-source "$MISC_CLI_OPTIONS"
-source "$HOME/.profile"
 
 # EDIT OTHER SCRIPT SOURCES
 alias bashrc_sysportable='vim "$PORTABLE_BASHRC_ADDITIONS"'
@@ -358,6 +358,12 @@ function diskspace {
         | ack -v "map  "
     echo ""
 }
+
+alias space_drive="diskspace"
+alias drive_space="diskspace"
+alias memory_on_drive="diskspace"
+alias drive_memory="diskspace"
+alias memory_drive="diskspace"
 
 # Get size of given file or directory
 # Gives a single conglomerate output
