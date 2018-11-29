@@ -1,7 +1,7 @@
 declare function require(name: string);
 
 /************************************** THIRD-PARTY IMPORTS ***************************************/
-import * as __AUGMENT_GLOBAL_PROTOTYPE__ from './src/augment-global-prototypes/augment-global-prototypes';
+import * as __AUGMENT_GLOBAL_PROTOTYPE__ from '../augment-global-prototypes/augment-global-prototypes';
 
 import * as lodash from 'lodash';
 import * as moment from 'moment';
@@ -14,7 +14,8 @@ import * as fs from 'fs';
 import * as os from 'os';
 import {path as rootPath} from 'app-root-path';
 
-(global as any).testValue = `OKOK`;
+/**************************************** PROJECT MODULES *****************************************/
+import {ls} from './ls';
 
 /********************************** REPL NODE ENVIRONMENT SETUP ***********************************/
 util.inspect.defaultOptions.colors = true;
@@ -23,8 +24,7 @@ util.inspect.defaultOptions.breakLength = 100;
 util.inspect.defaultOptions.showHidden = true;
 
 /****************************************** CONFIG REPL *******************************************/
-const packageJson = fs.readFileSync(path.join(rootPath, `./package.json`)); //require('./package.json');
-
+// const packageJson = fs.readFileSync(path.join(rootPath, `./package.json`)).toString(); //require('./package.json');
 
 const {defineProperty} = Object;
 
@@ -113,17 +113,18 @@ const ctxProps = {
     // bluebird,
     lodash,
     l_: lodash,
-
-    moment,
-
     madUtils,
     m_: madUtils,
+    ls,
+
+    // Date handling
+    moment,
 
     // Logging & object info-related
     inspect,
 
     // package.json content
-    packageJson,
+    // packageJson,
 };
 
 /**

@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+
+DIR=`dirname "$0"`
+
+npx ts-node "$DIR/src/nodeplus/nodeplus.ts"
