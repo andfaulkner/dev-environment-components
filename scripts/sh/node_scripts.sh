@@ -19,31 +19,31 @@ alias nid="npm install --save-dev"
 alias nig="npm install --global"
 alias nug="npm uninstall --global"
 
-#=== FUNCTION ==========================================================
+#=== FUNCTION ===========================================================
 #        NAME:  nifu
-# DESCRIPTION:  Update given npm module to latest major version, as
-#               correct dependency type
+# DESCRIPTION:  Update given npm module to latest version (major, minor,
+#               and patch), as correct dependency type
+#               Note: doesn't handle peer dependencies
 #   @PARAM $1:  Module to update
-#   @PARAM $2:  --no-install If set, don't install if module not already
-#                            installed
-#=======================================================================
+#   @PARAM $2:  --install If set, install if module not already installed
+#========================================================================
 function nifu {
     location "node_scripts.sh"
 
     if [ ! -z "$3" ]; then
         echo "Invalid arguments provided."
-        echo "Usage: nifu module-name [--no-install]"
+        echo "Usage: nifu module-name [--install]"
     fi
 
     ### Get arguments ###
     for ARG in "$@"; do
-        if [ "$ARG" = "--no-install" ] || [ "$ARG" = "--noinstall" ]; then
-            if [ "$NO_INSTALL" = "TRUE" ]; then
-                echo "Cannot set --no-install twice"
-                echo "Usage: nifu module-name [--no-install]"
+        if [ "$ARG" = "--install" ] || [ "$ARG" = "--install" ]; then
+            if [ "$INSTALL" = "TRUE" ]; then
+                echo "Cannot set --install twice."
+                echo "Usage: nifu module-name [--install]"
                 return
             else
-                local NO_INSTALL="TRUE"
+                local INSTALL="TRUE"
             fi
         else
             local MODULE="$ARG"
@@ -53,38 +53,32 @@ function nifu {
     ### Detect module type ###
     IS_DEP="`jq --raw-output .dependencies."$MODULE" ./package.json`"
     IS_DEVDEP="`jq --raw-output .devDependencies."$MODULE" ./package.json`"
-    IS_PEERDEP="`jq --raw-output .peerDependencies."$MODULE" ./package.json`"
     IS_OPTDEP="`jq --raw-output .optionalDependencies."$MODULE" ./package.json`"
 
     ### Handle already installed condition ##
     # Dependency
     if [ "$IS_DEP" != 'null' ]; then
-        echo "Updating dependency $MODULE"
+        echo "Updating dependency $MODULE."
         npm uninstall "$MODULE"
         npm install "$MODULE"
     # devDependency
     elif [ "$IS_DEVDEP" != 'null' ]; then
-        echo "Updating devDependency $MODULE"
+        echo "Updating devDependency $MODULE."
         npm uninstall --dev "$MODULE"
         npm install --save-dev "$MODULE"
-    # peerDependency
-    elif [ "$IS_PEERDEP" != 'null' ]; then
-        echo "Updating peer dependency $MODULE"
-        npm uninstall --peer "$MODULE"
-        npm install --save-peer "$MODULE"
     # optionalDependency
     elif [ "$IS_OPTDEP" != 'null' ]; then
-        echo "Updating optional dependency $MODULE"
+        echo "Updating optional dependency $MODULE."
         npm uninstall --optional "$MODULE"
         npm install --save-optional "$MODULE"
 
     ### Handle not installed condition ##
     else
-        echo "Dependency $MODULE not found in package.json"
-        if [ ! -z "$NO_INSTALL" ]; then
-            echo "--no-install flag set, not installing package"
+        echo "Dependency $MODULE not found in package.json."
+        if [ -z "$INSTALL" ]; then
+            echo "--install flag not set, not installing package."
         else
-            echo "Installing $MODULE for first time as standard dependency"
+            echo "--install flag set. Installing $MODULE as a standard dependency."
             npm install "$MODULE"
         fi
     fi
