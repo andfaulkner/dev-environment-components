@@ -15,7 +15,6 @@ import {${1:RequiredInjection, OptionalInjection,
          first, first2, firstN, last, last2, lastN,
          withoutFirst, withoutFirst2, withoutFirstN, withoutLast, withoutLast2, withoutLastN,
          getFunctionSrcAsArray,
-         getFromStorage,
          canadaLangsObj, canadaLangNames,
          isInteger, isNumberLike, isArray,
          isLeapYear, isDateLike, now, defaultTimestampFormat,
@@ -23,7 +22,7 @@ import {${1:RequiredInjection, OptionalInjection,
          getFirstStackItem, getSecondStackItem, removeFromStack, DecoratorError,
          replaceAll, hasKey, matches
 }} from 'mad-utils/lib/react';
-]]></content>  
+]]></content>
   <tabTrigger>imp_madutils_browser</tabTrigger>
   <scope>source.js, source.ts, source.jsx, source.tsx</scope>
 </snippet>

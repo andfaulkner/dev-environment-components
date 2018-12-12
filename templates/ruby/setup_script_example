@@ -1,4 +1,6 @@
-########### setup -- only do once ########### 
+#!/usr/bin/env bash
+
+########### setup -- only do once ###########
 npm install -g avn avn-nvm avn-n
 avn setup
 brew install nvm
@@ -49,13 +51,6 @@ cat << 'EOF' >> app/assets/stylesheets/home.scss
 @import "bootstrap/theme";
 EOF
 
-
-4901 matches across 1459 files
-
-
-
-Searching 32189 files for "import.*\.tsx" (regex)
-
 ######## application.html.erb groundwork - give it new content ########
 rm app/views/layouts/application.html.erb
 cat << 'EOF' >> app/views/layouts/application.html.erb
@@ -89,7 +84,7 @@ cat << 'EOF' >> app/views/layouts/application.html.erb
 EOF
 
 
-######## Basic helper to render the app header ######## 
+######## Basic helper to render the app header ########
 rm app/helpers/application_helper.rb
 cat << 'EOF' >> app/helpers/application_helper.rb
 module ApplicationHelper
@@ -99,7 +94,7 @@ module ApplicationHelper
 end
 EOF
 
-######## Basic re-route of application root ######## 
+######## Basic re-route of application root ########
 rm config/routes.rb
 cat << 'EOF' >> config/routes.rb
 Rails.application.routes.draw do
@@ -121,7 +116,7 @@ inject_at_match.rb --before Gemfile "^# Use jquery as the JavaScript library" "g
 ## Create user model for devise
 rails generate devise User
 
-## allow user to provide their name as an option 
+## allow user to provide their name as an option
 inject_at_match.rb --before db/migrate/*_devise_create_users.rb "^[^a-zA-Z0-9#]+t\.timestamps null: " "      t.string  :name
 "
 

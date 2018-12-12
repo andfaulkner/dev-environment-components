@@ -2,20 +2,26 @@
   <description>Import React, React-DOM, and libs commonly used w React</description>
 <content><![CDATA[
 import React from 'react';
-import ReactDOM from 'react-dom';
 import moment from 'moment';
 import cn from 'classnames';
 import {observer, inject} from 'mobx-react';
-import {compose} from 'recompose';
 
-import {${1:rootModel,
-         GreenBullet, SolidMiniArrow,
-         CIFormInput, RadioButtonGroup,
-         CITextLink, SubmitButton
-         injectAppState, injectPolyglot, injectConfig,
-         asLaddaController, withToastNotifications,
-         ToasterProps, ConfigProps, StoreProps, LaddaProps} } from '@ottawamhealth/core-imports';
-]]></content>  
+import {
+    ${1:rootModel,
+    GreenBullet,
+    SolidMiniArrow,
+    RadioButtonGroup,
+    SubmitButton
+    CIFormInput,
+    CITextLink,
+    asLaddaController,
+    withToastNotifications,
+    ToasterProps,
+    ConfigProps,
+    StoreProps,
+    LaddaProps,}
+} from '@ottawamhealth/core-imports';
+]]></content>
   <tabTrigger>imp_rct_common_libs</tabTrigger>
   <scope>source.js, source.ts, source.jsx, source.tsx</scope>
 </snippet>

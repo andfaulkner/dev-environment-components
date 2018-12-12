@@ -1,15 +1,10 @@
 <snippet>
-  <description>onClick event</description>
-
-829 matches across 197 files
-
-
-Searching 34452 files for "width-100p" (regex)
+  <description>jQuery onClick event</description>
 <content><![CDATA[
 \$("${1:selectorForElementThatClickEventIsBoundTo").click((event) => {
   ${0://action that occurs on click}
 });
-]]></content>  
+]]></content>
   <tabTrigger>jq_ev_click</tabTrigger>
   <scope>source.js, source.ts, source.jsx, source.tsx</scope>
 </snippet>

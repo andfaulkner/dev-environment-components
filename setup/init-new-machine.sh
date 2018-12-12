@@ -52,7 +52,6 @@ brew add llvm@4
 
 #----- Install package managers -----#
 brew add leiningen
-brew add yarn
 
 #### Install DBs (databases) ####
 ### postgres + helpers ###
@@ -105,7 +104,7 @@ nvm ls | ack '\s+v' | tail -n1 | awk '{print $2}'
 npm install -g npm-upgrade
 npm install -g ts-node
 npm install -g typescript
-
+npm install -g yarn
 
 ########################## SETTINGS ##########################
 #----- Enable scrolling in less -----#

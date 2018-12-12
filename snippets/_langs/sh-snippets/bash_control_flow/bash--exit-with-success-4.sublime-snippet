@@ -1,0 +1,8 @@
+<snippet>
+  <description>Exit with success code 0</description>
+<content><![CDATA[
+exit 0
+]]></content>
+  <tabTrigger>success_exit</tabTrigger>
+  <scope>source.shell</scope>
+</snippet>
