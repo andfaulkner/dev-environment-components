@@ -6,7 +6,7 @@ echo "* NodeJS scripts loading..."
 
 # export NODE_PATH=$NODE_PATH:/Users/andrew/.nvm/versions/node/v8.0.0/lib/node_modules:/usr/lib/nodejs:/usr/lib/node_modules:/usr/share/javascript:/usr/local/lib/node_modules
 
-export NODE_CURRENT_VERSION_PATH="$HOME/.nvm/versions/node/v8.10.0"
+export NODE_CURRENT_VERSION_PATH="$HOME/.nvm/versions/node/v10.13.0"
 
 export NODE_PATH=$NODE_PATH:$NODE_CURRENT_VERSION_PATH/lib/node_modules:/usr/lib/nodejs:/usr/lib/node_modules:/usr/share/javascript:/usr/local/lib/node_modules
 
@@ -173,7 +173,7 @@ alias nkn='nkn_PARTIAL 2>/dev/null | grep -v "\(\(\Use \`pm2 show <id|name>\`.*d
 #alias mg="make gulp"
 #alias eri="make es-reindex-data"
 
-#find version of globally installed package
+# Find version of globally installed package
 alias npmpv="npm list -g | grep"
 
 alias nodelist="ls /usr/local/lib/node_modules/; echo '-------------------------------------'; echo 'global node modules location:'; echo '/usr/local/lib/node_modules/'; echo '-------------------------------------';"
