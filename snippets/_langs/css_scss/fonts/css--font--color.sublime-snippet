@@ -1,18 +1,8 @@
 <snippet>
-  <description>Color your text</description>
+  <description>Font/text color</description>
 <content><![CDATA[
 color: ${1:black|red|green|blue|#FFF(black)|#333(dark-gray)|#000(white)|#FF00FF(magenta)|orange|#800000(maroon)|etc.};${0}
-
-121 matches across 30 files
-
-
-Searching 34521 files for "-grey" (regex)
-
-65 matches across 25 files
-
-
-Searching 9660 files for "status-grey" (regex)
-]]></content>  
+]]></content>
   <tabTrigger>font_color</tabTrigger>
   <scope>source.scss, source.postcss, source.css</scope>
 </snippet>
