@@ -19,6 +19,8 @@ alias nid="npm install --save-dev"
 alias nig="npm install --global"
 alias nug="npm uninstall --global"
 
+alias npm_refresh_modules="rm -rf ./node_modules; npm install"
+
 #=== FUNCTION ===========================================================
 #        NAME:  nifu
 # DESCRIPTION:  Update given npm module to latest version (major, minor,
