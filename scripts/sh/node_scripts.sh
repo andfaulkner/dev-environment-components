@@ -10,13 +10,85 @@ export NODE_CURRENT_VERSION_PATH="$HOME/.nvm/versions/node/v10.13.0"
 
 export NODE_PATH=$NODE_PATH:$NODE_CURRENT_VERSION_PATH/lib/node_modules:/usr/lib/nodejs:/usr/lib/node_modules:/usr/share/javascript:/usr/local/lib/node_modules
 
-################################## npm ################################## 
+################################## npm ##################################
 # GLOBAL INSTALL
 # alias nig="npm install -g"
 alias nis="npm install"
 alias nisd="npm install --save-dev"
 alias nid="npm install --save-dev"
 alias nig="npm install --global"
+alias nug="npm uninstall --global"
+
+#=== FUNCTION ==========================================================
+#        NAME:  nifu
+# DESCRIPTION:  Update given npm module to latest major version, as
+#               correct dependency type
+#   @PARAM $1:  Module to update
+#   @PARAM $2:  --no-install If set, don't install if module not already
+#                            installed
+#=======================================================================
+function nifu {
+    location "node_scripts.sh"
+
+    if [ ! -z "$3" ]; then
+        echo "Invalid arguments provided."
+        echo "Usage: nifu module-name [--no-install]"
+    fi
+
+    ### Get arguments ###
+    for ARG in "$@"; do
+        if [ "$ARG" = "--no-install" ] || [ "$ARG" = "--noinstall" ]; then
+            if [ "$NO_INSTALL" = "TRUE" ]; then
+                echo "Cannot set --no-install twice"
+                echo "Usage: nifu module-name [--no-install]"
+                return
+            else
+                local NO_INSTALL="TRUE"
+            fi
+        else
+            local MODULE="$ARG"
+        fi
+    done
+
+    ### Detect module type ###
+    IS_DEP="`jq --raw-output .dependencies."$MODULE" ./package.json`"
+    IS_DEVDEP="`jq --raw-output .devDependencies."$MODULE" ./package.json`"
+    IS_PEERDEP="`jq --raw-output .peerDependencies."$MODULE" ./package.json`"
+    IS_OPTDEP="`jq --raw-output .optionalDependencies."$MODULE" ./package.json`"
+
+    ### Handle already installed condition ##
+    # Dependency
+    if [ "$IS_DEP" != 'null' ]; then
+        echo "Updating dependency $MODULE"
+        npm uninstall "$MODULE"
+        npm install "$MODULE"
+    # devDependency
+    elif [ "$IS_DEVDEP" != 'null' ]; then
+        echo "Updating devDependency $MODULE"
+        npm uninstall --dev "$MODULE"
+        npm install --save-dev "$MODULE"
+    # peerDependency
+    elif [ "$IS_PEERDEP" != 'null' ]; then
+        echo "Updating peer dependency $MODULE"
+        npm uninstall --peer "$MODULE"
+        npm install --save-peer "$MODULE"
+    # optionalDependency
+    elif [ "$IS_OPTDEP" != 'null' ]; then
+        echo "Updating optional dependency $MODULE"
+        npm uninstall --optional "$MODULE"
+        npm install --save-optional "$MODULE"
+
+    ### Handle not installed condition ##
+    else
+        echo "Dependency $MODULE not found in package.json"
+        if [ ! -z "$NO_INSTALL" ]; then
+            echo "--no-install flag set, not installing package"
+        else
+            echo "Installing $MODULE for first time as standard dependency"
+            npm install "$MODULE"
+        fi
+    fi
+}
 
 # Install all given type definitions with npm
 function nit() {
@@ -37,13 +109,13 @@ function nisdt() {
         echo "You must specify at least 1 module to install type definitions for"
     fi
 }
-alias nidt="nisdt"
 
+alias nidt="nisdt"
 alias nus="npm uninstall --save"
 alias nusd="npm uninstall --save-dev"
 alias nud="npm uninstall --save-dev"
 
-alias nr="npm run" 
+alias nr="npm run"
 alias nrn="npm run nodemon"
 
 alias nrnd="export LOG_LEVEL=debug; npm run nodemon"
@@ -158,7 +230,7 @@ function yafp() {
     fi
 }
 
-############################### PROJECT CONVENIENCE FUNCTIONS ############################## 
+############################### PROJECT CONVENIENCE FUNCTIONS ##############################
 alias cnc="./common-npm-commands"
 alias mds="script/devops build development --clean"
 alias sd="script/devops"
@@ -216,7 +288,7 @@ alias bombnode="killnode; killgulp; killnodemon; killnpm"
 
 # Run ts-node with nodemon
 alias tsnodemon="nodemon --exec 'ts-node'"
-alias ts_nodemon="tsnodemon" 
+alias ts_nodemon="tsnodemon"
 
 #overrides the one defined in bashrc_sys_util (snippets/scripts/sh/sys_util_scripts.sh)
 function nukenode {
@@ -286,7 +358,7 @@ alias __slicesenerr_slicer="sed 's/     at/\n          at/g' | \
 function slicesenerr {
     cat $1 | __slicesenerr_slicer
 }
-#Note: '&' in sed in the 'replace' area (s/capture/replace/g) references 
+#Note: '&' in sed in the 'replace' area (s/capture/replace/g) references
 #          whatever was captured in the capture area.
 #       '\1' references the 1st parenthesized capture group, \2 the 2nd, and so on
 #       see     http://www.grymoire.com/unix/sed.html
@@ -347,7 +419,7 @@ function emb_proj_deps {
 alias node_version='echo "$(eval node -v)" > .node-version' # set current version of node as project root node version
 
 # alias slicesenerr="cat test.txt | sed 's/     at/\n          at/g' | sed 's/trace=/\n\ntrace=/g'| sed 's/column=/\n    ---->COLUMN = /g' | sed 's/\/home\/andfaulkner\/Projects\/testbed\/testbed-seneca--4//g' | sed 's/, execPath=/,\n  execPath=/g' | sed 's/, argv=/,\n  argv=/g' | sed 's/, rss=/,\n  rss=/g' | sed 's/, heapTotal=/,\n  heapTotal=/g' | sed 's/, loadav
-#alias slicesenerr="cat test.txt | sed 's/     at/\n          at/g'" 
+#alias slicesenerr="cat test.txt | sed 's/     at/\n          at/g'"
 
 # ensure proper node version loads based on value in .node-version in project folder
 # [[ -s "$HOME/.profile" ]] && source "$HOME/.profile" # Load the default .profile
@@ -358,7 +430,7 @@ export NVM_DIR="$HOME/.nvm"
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
 [[ -s "$HOME/.avn/bin/avn.sh" ]] && source "$HOME/.avn/bin/avn.sh" # load avn
 
-alias ember_dep_surge="rm -rf dist; ember build --environment=development; cd dist; cp index.html 200.html; surge" # if site already exists, provide it here 
+alias ember_dep_surge="rm -rf dist; ember build --environment=development; cd dist; cp index.html 200.html; surge" # if site already exists, provide it here
 
 ####################################################################################################
 ########################### NPM PUBLISHING & VERSION HANDLING UTILITIES ############################
