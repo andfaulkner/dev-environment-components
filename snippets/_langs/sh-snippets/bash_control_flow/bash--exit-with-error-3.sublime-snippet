@@ -1,0 +1,8 @@
+<snippet>
+  <description>Exit with error code 1 (general error)</description>
+<content><![CDATA[
+exit 1
+]]></content>
+  <tabTrigger>exit_with_basic_error</tabTrigger>
+  <scope>source.shell</scope>
+</snippet>
