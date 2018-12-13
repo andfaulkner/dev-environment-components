@@ -3,6 +3,6 @@
 <content><![CDATA[
 import * as path from 'path';${0}
 ]]></content>  
-  <tabTrigger>imppath</tabTrigger>
+  <tabTrigger>imp_path</tabTrigger>
   <scope>source.js, source.ts, source.jsx, source.tsx</scope>
 </snippet>

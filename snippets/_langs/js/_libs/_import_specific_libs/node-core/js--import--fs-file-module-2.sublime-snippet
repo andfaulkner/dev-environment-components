@@ -1,0 +1,8 @@
+<snippet>
+  <description>Import Node fs module</description>
+<content><![CDATA[
+import * as fs from 'fs';${0}
+]]></content>  
+  <tabTrigger>imp_fs</tabTrigger>
+  <scope>source.js, source.ts, source.jsx, source.tsx</scope>
+</snippet>

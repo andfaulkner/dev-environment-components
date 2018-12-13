@@ -3,6 +3,6 @@
 <content><![CDATA[
 import * as util from 'util';${0}
 ]]></content>  
-  <tabTrigger>imputil</tabTrigger>
+  <tabTrigger>imp_util</tabTrigger>
   <scope>source.js, source.ts, source.jsx, source.tsx</scope>
 </snippet>
