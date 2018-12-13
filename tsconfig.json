@@ -9,7 +9,8 @@
     "include": [
         "./*.ts",
         "./scripts/**/*.ts",
-        "./scripts/ts/**/*.ts"
+        "./scripts/ts/**/*.ts",
+        "./node_modules/"
     ],
     "exclude": ["*.js", "*.json", "doc/*.ts"]
 }
