@@ -1,0 +1,8 @@
+<snippet>
+  <description>In JS file, tell TS to ignore any error from next line</description>
+<content><![CDATA[
+// @ts-ignore
+]]></content>  
+  <tabTrigger>tsignore</tabTrigger>
+  <scope>source.js, source.jsx</scope>
+</snippet>

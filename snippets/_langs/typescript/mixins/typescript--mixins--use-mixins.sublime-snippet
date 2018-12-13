@@ -1,8 +1,0 @@
-<snippet>
-  <description>Mix a mixin (or mixins) into a class</description>
-<content><![CDATA[
-applyMixins(${1:classHavingMixinsMixedIn, [${2:Classes, Being, Mixed, In]);${0}
-]]></content>  
-  <tabTrigger>ts_mixinuse</tabTrigger>
-  <scope>source.js, source.ts</scope>
-</snippet>

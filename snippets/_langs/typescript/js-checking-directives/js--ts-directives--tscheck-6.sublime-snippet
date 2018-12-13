@@ -1,0 +1,8 @@
+<snippet>
+  <description>Tell Typescript to check current JS file (place at top)</description>
+<content><![CDATA[
+// @ts-check
+]]></content>  
+  <tabTrigger>check_with_typescript</tabTrigger>
+  <scope>source.js, source.jsx</scope>
+</snippet>
