@@ -55,16 +55,25 @@ util.inspect.defaultOptions.maxArrayLength = Infinity;
  * is more readble in a REPL environment
  */
 Object.defineProperty(global.Function.prototype, `toS`, {
-    value: function toS() {
+    get: function toS() {
         const s = this && this.toString();
         if (s) {
+             // @ts-ignore
+            const args = inspect.getArgs(this);
+            console.log(``);
+            console.log(madUtils.deindent`
+                /**
+                *  @name ${this.name}
+                *  ${args ? '\n*  @param ' + args.join(`\n*  @param `) : ``}
+                */`
+            );
             const splitStr = s.split(`\n`);
             if (splitStr.length === 1) return splitStr[0];
             console.log(splitStr.join('\n'));
         }
-        return undefined;
+        // String designed to display as blank line
+        return '--<__BLOCK_OUTPUT__>--';
     },
-    writable: false,
     configurable: false,
     enumerable: false
 });
@@ -108,7 +117,7 @@ const ctxProps = {
 const descriptions = {
     _: `lodash alias`,
     m_: `mad-utils alias`,
-    Function: `Standard global has added property 'toS' for displaying as a clean array`
+    Function: `Standard global has added property 'toS' for displaying as a clean string`
 };
 
 // Attach props to REPL (repl is in repl setup)

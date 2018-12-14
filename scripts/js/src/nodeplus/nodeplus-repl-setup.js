@@ -53,7 +53,11 @@ String.prototype.toCamelCase = function toCamelCase() {
 const r = repl.start({
     prompt,
     useGlobal: true,
-    ignoreUndefined: true
+    // ignoreUndefined: true,
+    writer: output => {
+        if (output === `--<__BLOCK_OUTPUT__>--`) return ``;
+        return util.inspect(output);
+    }
     // eval: (cmd, context, filename, callback) => {
     //     const cleanCmd = cmd.replace(/\n$/, ``);
     //     // console.log(`callback:`, callback.toString());
@@ -145,7 +149,7 @@ const bindPropsToRepl = (ctxProps, descriptions, prompt) => {
     return r;
 };
 
-/******************************************** LOGGING *********************************************/
+/******************************************* LOGGING *********************************************/;
 /**
  * Run when inspect is called in the repl
  */
