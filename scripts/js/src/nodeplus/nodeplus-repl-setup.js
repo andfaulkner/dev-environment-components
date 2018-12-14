@@ -1,5 +1,9 @@
+// @ts-check
+
 /************************************** THIRD-PARTY MODULES ***************************************/
-// @ts-ignore
+/**
+ * Lodash module
+ */
 const _ = require('lodash');
 
 const fs = require('fs');
@@ -39,6 +43,7 @@ const prompt = `> `;
 
 // @ts-ignore
 String.prototype.toCamelCase = function toCamelCase() {
+    // @ts-ignore
     return convertToCamelCase(this);
 };
 
@@ -70,25 +75,16 @@ replHistory(r, historyFile);
 // Acts as identifier that REPL is currently running
 defineImmutableProp(r.context.process.env, `IN_REPL`, true);
 
-/******************************************** HELPERS *********************************************/
 /**
- * Bind given properties to the repl context, with the given values
- * Display as list on repl load, with descriptions for each specified in
+ * Display props bound to repl context, with descriptions for each specified in
  * descriptions prop
- *
- * Example: bindPropsToRepl(repl.start(), {_: lodash, projData}, {_: `Util lib`})
- *
  * @param {Object} ctxProps - Bind each given value to its corresponding key
  *                            e.g. {_: lodash, _m: madUtils, Promise: bluebird}
  * @param {Object} descriptions - Optional matching descriptions to display
  *                                beside prop with given key :: {[key: string]: string}
  *                 e.g.: {_: `lodash alias`, bluebird: `promises library`}
- * @param {string} title - Title to display
- * @param {string} prompt - Prompt string
  */
-const bindPropsToRepl = (ctxProps, descriptions, prompt) => {
-    console.log(`\nWelcome to the enhanced Node.js REPL!\n`);
-
+const displayProps = (ctxProps, descriptions) => {
     console.log(`Custom properties bound to the top-level context:`);
 
     // Iterate through the given context properties
@@ -114,7 +110,30 @@ const bindPropsToRepl = (ctxProps, descriptions, prompt) => {
             console.log(` * ${key}`);
         }
     }
+
     process.stdout.write(prompt || `> `);
+};
+
+/******************************************** HELPERS *********************************************/
+/**
+ * Bind given properties to the repl context, with the given values
+ * Display as list on repl load, with descriptions for each specified in
+ * descriptions prop
+ *
+ * Example: bindPropsToRepl(repl.start(), {_: lodash, projData}, {_: `Util lib`})
+ *
+ * @param {Object} ctxProps - Bind each given value to its corresponding key
+ *                            e.g. {_: lodash, _m: madUtils, Promise: bluebird}
+ * @param {Object} descriptions - Optional matching descriptions to display
+ *                                beside prop with given key :: {[key: string]: string}
+ *                 e.g.: {_: `lodash alias`, bluebird: `promises library`}
+ * @param {string} title - Title to display
+ * @param {string} [prompt] - Prompt string
+ */
+const bindPropsToRepl = (ctxProps, descriptions, prompt) => {
+    console.log(`\nWelcome to the enhanced Node.js REPL!\n`);
+    displayProps(ctxProps, descriptions);
+    return r;
 };
 
 /******************************************** LOGGING *********************************************/
@@ -158,30 +177,29 @@ const keys = (obj, showHidden = true, showKeyPosInProtoChain = false) => {
 
 /***************************** DIRECTORIES / NAVIGATION / FILESYSTEM ******************************/
 /**
- * Is the given inode a directory?
- * @param {string} iNode
+ * Is the given iNode (file, dir, socket, etc) a directory?
+ * @param {string} iNode path
  * @return {boolean}
  */
-const isDir = inode => fs.lstatSync(inode).isDirectory();
+const isDir = iNode => fs.lstatSync(iNode).isDirectory();
 
 /**
  * Is the given path an absolute path?
- * @param {string} iNode
+ * @param {string} newPath
  * @return {boolean}
  */
 const isAbsPath = newPath => !!newPath.match(/^\//);
 
 /**
+ * @param {string} newPath
  * @return {boolean} True if directory is within project
- * @param {string} iNode
- * @return {boolean}
  */
 const isWithinProj = newPath => !!newPath.match(new RegExp(`^` + rootPath));
 
 /**
  * Build list of all directories in given inode
  * @param {string} dirPath
- * @return {string}
+ * @return {string[]}
  */
 const buildLs = dirPath =>
     fs.readdirSync(dirPath).map(inode => (isDir(inode) ? `[D]  ${inode}` : `     ${inode}`));
@@ -279,15 +297,18 @@ const history = (showNums = true) => (matchInput = ``) => {
  * @param {boolean} showNums If true, show history item number beside each line
  *                           e.g. [18] let a = 1
  * @return {Function} With signature: (filter) => void
- *         @param {string} filter String to match against
- *                                Only return items containing given string
  */
 const filteredHist = function filteredHistNoNum(showNums = true) {
+    /**
+     * @this {REPLServer}
+     * @param {string} filter String to match against
+     *                        Only return items containing given string
+     */
     return function filteredHist(filter = ``) {
         this.bufferedCommand = ``;
         const cleanFilter = removeSurroundingQuotes(filter);
 
-        /** @type {RegExp|string} preppedFilter */
+        /** @type {string} preppedFilter */
         let preppedFilter = cleanFilter;
         if (isRegexString(cleanFilter)) {
             const regxStr = removeSlashesFlagsSurroundingRegexString(cleanFilter);
@@ -305,6 +326,7 @@ const filteredHist = function filteredHistNoNum(showNums = true) {
 /**
  * Filtered repl history with numbered lines
  */
+// @ts-ignore
 r.defineCommand(`hist`, {
     help: oneLine`
         Display all repl history items matching given string (or full history if none
@@ -315,6 +337,7 @@ r.defineCommand(`hist`, {
 /**
  * Filtered repl history without numbered lines
  */
+// @ts-ignore
 r.defineCommand(`histnonum`, {
     help: oneLine`Display all repl history items matching given string
                   (or full history if none given), with no line number included`,
@@ -324,6 +347,7 @@ r.defineCommand(`histnonum`, {
 module.exports = {
     r,
     bindPropsToRepl,
+    displayProps,
     inspect,
     keys,
     cd,

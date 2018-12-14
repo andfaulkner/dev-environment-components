@@ -1,3 +1,5 @@
+// @ts-check
+
 /* POLYFILL BROWSER WINDOW OBJECT */
 // @ts-ignore
 const JSDOM = require('jsdom');
@@ -23,11 +25,23 @@ const util = require('util');
 const appRootPath = require('app-root-path');
 const rootPath = appRootPath.path;
 
+// ShellJS
+const shellJS = require('shelljs');
+
 // const packageJson = require('../package.json');
 const packageJson = JSON.parse(fs.readFileSync('./package.json').toString());
 
 /**************************************** PROJECT IMPORTS *****************************************/
-const {bindPropsToRepl, cat, cd, ls, pwd, inspect, keys} = require('./nodeplus-repl-setup');
+const {
+    bindPropsToRepl,
+    cat,
+    cd,
+    ls,
+    pwd,
+    inspect,
+    keys,
+    displayProps
+} = require('./nodeplus-repl-setup');
 
 /********************************** REPL NODE ENVIRONMENT SETUP ***********************************/
 util.inspect.defaultOptions.colors = true;
@@ -53,7 +67,7 @@ Object.defineProperty(global.Function.prototype, `toS`, {
     },
     writable: false,
     configurable: false,
-    enumerable: false,
+    enumerable: false
 });
 
 const nJvlnsLine = `\n          `;
@@ -75,6 +89,7 @@ const ctxProps = {
 
     // Logging & object info-related
     inspect,
+    // @ts-ignore
     getArgs: inspect.getArgs,
     keys,
 
@@ -85,7 +100,7 @@ const ctxProps = {
     pwd: {val: pwd, mutable: true},
 
     // package.json content
-    packageJson,
+    packageJson
 };
 
 /**
@@ -93,8 +108,16 @@ const ctxProps = {
  */
 const descriptions = {
     _: `lodash alias`,
-    m_: `mad-utils alias`,
+    m_: `mad-utils alias`
 };
 
 // Attach props to REPL (repl is in repl setup)
-bindPropsToRepl(ctxProps, descriptions);
+const r = bindPropsToRepl(ctxProps, descriptions, `> `);
+
+/**
+ * Filtered repl history without numbered lines
+ */
+r.defineCommand(`help_added_globals`, {
+    help: ``,
+    action: () => displayProps(ctxProps, descriptions)
+});
