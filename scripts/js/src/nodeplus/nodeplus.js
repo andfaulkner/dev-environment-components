@@ -54,16 +54,15 @@ util.inspect.defaultOptions.maxArrayLength = Infinity;
  * Augment functions with toS function providing a function source output that
  * is more readble in a REPL environment
  */
-
 Object.defineProperty(global.Function.prototype, `toS`, {
     value: function toS() {
         const s = this && this.toString();
         if (s) {
             const splitStr = s.split(`\n`);
             if (splitStr.length === 1) return splitStr[0];
-            return splitStr;
+            console.log(splitStr.join('\n'));
         }
-        return null;
+        return undefined;
     },
     writable: false,
     configurable: false,
@@ -108,7 +107,8 @@ const ctxProps = {
  */
 const descriptions = {
     _: `lodash alias`,
-    m_: `mad-utils alias`
+    m_: `mad-utils alias`,
+    Function: `Standard global has added property 'toS' for displaying as a clean array`
 };
 
 // Attach props to REPL (repl is in repl setup)
@@ -118,6 +118,6 @@ const r = bindPropsToRepl(ctxProps, descriptions, `> `);
  * Filtered repl history without numbered lines
  */
 r.defineCommand(`help_added_globals`, {
-    help: ``,
+    help: `Display custom objects/functions added to the top-level context`,
     action: () => displayProps(ctxProps, descriptions)
 });

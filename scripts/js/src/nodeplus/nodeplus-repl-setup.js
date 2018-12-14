@@ -52,7 +52,8 @@ String.prototype.toCamelCase = function toCamelCase() {
  */
 const r = repl.start({
     prompt,
-    useGlobal: true
+    useGlobal: true,
+    ignoreUndefined: true
     // eval: (cmd, context, filename, callback) => {
     //     const cleanCmd = cmd.replace(/\n$/, ``);
     //     // console.log(`callback:`, callback.toString());
@@ -85,7 +86,7 @@ defineImmutableProp(r.context.process.env, `IN_REPL`, true);
  *                 e.g.: {_: `lodash alias`, bluebird: `promises library`}
  */
 const displayProps = (ctxProps, descriptions) => {
-    console.log(`Custom properties bound to the top-level context:`);
+    console.log(`\nCustom properties bound to the top-level context:`);
 
     // Iterate through the given context properties
     /**
@@ -93,14 +94,6 @@ const displayProps = (ctxProps, descriptions) => {
      * @param {Object} val
      */
     for (let [key, val] of _.toPairs(ctxProps)) {
-        // Add current prop's value to repl context. Mutable if requested,
-        // immutable otherwise
-        if (typeof val === `object` && get(val, `val`) && get(val, `mutable`)) {
-            defineImmutableProp(r.context, key, get(val, `val`));
-        } else {
-            defineImmutableProp(r.context, key, val);
-        }
-
         // Display prop and (if defined) prop description on repl boot
         if (descriptions[key]) {
             console.log(` * ${key}: ${descriptions[key]}`);
@@ -127,11 +120,27 @@ const displayProps = (ctxProps, descriptions) => {
  * @param {Object} descriptions - Optional matching descriptions to display
  *                                beside prop with given key :: {[key: string]: string}
  *                 e.g.: {_: `lodash alias`, bluebird: `promises library`}
- * @param {string} title - Title to display
  * @param {string} [prompt] - Prompt string
+ * @return {repl.REPLServer} REPL object
  */
 const bindPropsToRepl = (ctxProps, descriptions, prompt) => {
-    console.log(`\nWelcome to the enhanced Node.js REPL!\n`);
+    console.log(`\nWelcome to the enhanced Node.js REPL!`);
+
+    // Iterate through the given context properties
+    /**
+     * @param {string} key
+     * @param {Object} val
+     */
+    for (let [key, val] of _.toPairs(ctxProps)) {
+        // Add current prop's value to repl context. Mutable if requested,
+        // immutable otherwise
+        if (typeof val === `object` && get(val, `val`) && get(val, `mutable`)) {
+            defineImmutableProp(r.context, key, get(val, `val`));
+        } else {
+            defineImmutableProp(r.context, key, val);
+        }
+    }
+
     displayProps(ctxProps, descriptions);
     return r;
 };
