@@ -29,7 +29,7 @@
     "jsdom": "^13.0.0",
     "lodash": "^4.17.11",
     "mad-logs": "^11.2.0",
-    "mad-utils": "^0.89.0",
+    "mad-utils": "^0.89.1",
     "moment": "^2.22.2",
     "morgan": "^1.9.0",
     "prettier": "^1.15.3",
