@@ -23,8 +23,13 @@ String.prototype.camelCase = function camelCase() {
     return toCamelCase(this);
 };
 
-repl.start({
+const r = repl.start({
     prompt: `Node.js via stdin> `,
     input: process.stdin,
     output: process.stdout,
 });
+
+r.context.String = String;
+r.context.String.prototype.camelCase = function camelCase() {
+    return toCamelCase(this);
+};
