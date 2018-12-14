@@ -8,6 +8,7 @@
     },
     "include": [
         "./*.ts",
+        "./*.mjs",
         "./scripts/**/*.ts",
         "./scripts/ts/**/*.ts",
         "./node_modules/"
