@@ -87,7 +87,6 @@ else
     echo "go config added! (including write to to .bash_profile)"
 fi
 
-
 ########################## VERSION MANAGERS ##########################
 #----- Install rbenv (ruby version manager) -----#
 brew add rbenv
@@ -172,5 +171,10 @@ else
     echo "neovim config added!"
 fi
 
+############## XCode installation ##############
+xcode-select --install
+
+
 ##################### DISPLAY NEW MACHINE INFO #####################
 cat $SNIPPETS_DIR/setup/new-machine-info.md
+
