@@ -1,5 +1,5 @@
-# Install scripts to synchronize bash history between terminal windows
 echo "Installing script to merge bash history between terminal windows..."
+
 wget -O ~/merge_history.bash http://raw.github.com/pts/pts-merge-history-bash/master/merge_history.bash
 touch ~/.merged_bash_history
 echo "Successfully installed script for merging bash history between terminal windows!"
@@ -104,6 +104,7 @@ npm install -g npm-upgrade
 npm install -g ts-node
 npm install -g typescript
 npm install -g yarn
+npm install -g nodemon
 
 ########################## SETTINGS ##########################
 #----- Enable scrolling in less -----#
@@ -179,5 +180,4 @@ fi
 
 ##################### DISPLAY NEW MACHINE INFO #####################
 cat $SNIPPETS_DIR/setup/new-machine-info.md
-
 
