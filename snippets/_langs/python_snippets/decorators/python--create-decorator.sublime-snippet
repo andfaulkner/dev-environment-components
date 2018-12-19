@@ -1,0 +1,15 @@
+<snippet>
+  <description>Create decorator function</description>
+<content><![CDATA[
+def ${1:decorator_name}(${2:function_being_wrapped}):
+    """${4:Documentation for decorator}"""
+    def ${3:wrapper_function}():
+        result = ${2}()
+        ${0}
+        return result
+    return ${3}
+
+]]></content>
+  <tabTrigger>decorator</tabTrigger>
+  <scope>source.python</scope>
+</snippet>
