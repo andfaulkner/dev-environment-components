@@ -3,7 +3,7 @@ def addthree(n):
 
 x = int(raw_input("Please enter an integer: "))
 
-print addthree(x)
+print(addthree(x))
 
 # this is OK too:
 # 		print addthree(int(raw_input("Please enter an integer: ")))

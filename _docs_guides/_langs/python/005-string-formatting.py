@@ -1,12 +1,12 @@
 name = "Meeka"
-print "Hello, %s" % name
+print("Hello, %s" % name)
 
 age = 4
 
-print "%s is %d years old" % (name, age)
+print("%s is %d years old" % (name, age))
 
 mylist = [1, 2, 3]
-print "A list: %s" % mylist
+print("A list: %s" % mylist)
 
 # STRING ARGUMENT SPECIFIERS:
 # %s - String (or any object with a string representation, like numbers)
