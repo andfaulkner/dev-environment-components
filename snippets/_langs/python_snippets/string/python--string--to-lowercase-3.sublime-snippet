@@ -1,0 +1,8 @@
+<snippet>
+  <description>Convert string to lowercase</description>
+<content><![CDATA[
+${1:some_string}.lower()
+]]></content>
+  <tabTrigger>tolowercase</tabTrigger>
+  <scope>source.python</scope>
+</snippet>

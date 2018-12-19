@@ -3,6 +3,6 @@
 <content><![CDATA[
 ${1:some_string}.upper()
 ]]></content>
-  <tabTrigger>str_uppercase</tabTrigger>
+  <tabTrigger>str_upper</tabTrigger>
   <scope>source.python</scope>
 </snippet>

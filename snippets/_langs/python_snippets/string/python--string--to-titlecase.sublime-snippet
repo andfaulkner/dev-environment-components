@@ -1,8 +1,8 @@
 <snippet>
-  <description>Return string converted to titlecase</description>
+  <description>Return string converted to Title Case</description>
 <content><![CDATA[
 ${1:some_string}.title()
-]]></content>  
+]]></content>
   <tabTrigger>str_titlecase</tabTrigger>
   <scope>source.python</scope>
 </snippet>
