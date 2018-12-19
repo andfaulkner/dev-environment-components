@@ -1,0 +1,8 @@
+<snippet>
+  <description>Get # of args (req `import sys`) (Incl.s run script cmd)</description>
+<content><![CDATA[
+len(sys.argv)
+]]></content>
+  <tabTrigger>count_args</tabTrigger>
+  <scope>source.python</scope>
+</snippet>
