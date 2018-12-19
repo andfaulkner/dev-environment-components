@@ -1,0 +1,9 @@
+
+<snippet>
+  <description>Determine if array contains given item</description>
+<content><![CDATA[
+${1:some_array}.__contains__(${2:"some_item"})
+]]></content>
+  <tabTrigger>arr_includes</tabTrigger>
+  <scope>source.python</scope>
+</snippet>
