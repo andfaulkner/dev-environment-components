@@ -34,7 +34,7 @@ const packageJson = JSON.parse(fs.readFileSync('./package.json').toString());
 /**************************************** PROJECT IMPORTS *****************************************/
 const {
     bindPropsToRepl,
-    cat,
+    // cat,
     cd,
     ls,
     pwd,
@@ -42,6 +42,36 @@ const {
     keys,
     displayProps
 } = require('./nodeplus-repl-setup');
+
+const {
+    cat,
+    // cd,
+    chmod,
+    cp,
+    dirs,
+    echo,
+    exec,
+    exit,
+    find,
+    grep,
+    uniq,
+    which,
+    touch,
+    test,
+    sort,
+    tail,
+    head,
+    ln,
+    // ls,
+    mkdir,
+    mv,
+    popd,
+    pushd,
+    // pwd,
+    rm,
+    sed,
+    set
+} = require('shelljs');
 
 /********************************** REPL NODE ENVIRONMENT SETUP ***********************************/
 util.inspect.defaultOptions.colors = true;
@@ -58,15 +88,14 @@ Object.defineProperty(global.Function.prototype, `toS`, {
     get: function toS() {
         const s = this && this.toString();
         if (s) {
-             // @ts-ignore
+            // @ts-ignore
             const args = inspect.getArgs(this);
             console.log(``);
             console.log(madUtils.deindent`
                 /**
                 *  @name ${this.name}
                 *  ${args ? '\n*  @param ' + args.join(`\n*  @param `) : ``}
-                */`
-            );
+                */`);
             const splitStr = s.split(`\n`);
             if (splitStr.length === 1) return splitStr[0];
             console.log(splitStr.join('\n'));
@@ -86,6 +115,33 @@ const nJsLine = `\n                  `;
  * Properties to bind to repl context (available at top level in repl)
  */
 const ctxProps = {
+    // Shell
+    cat,
+    chmod,
+    cp,
+    dirs,
+    echo,
+    exec,
+    exit,
+    find,
+    grep,
+    uniq,
+    which,
+    touch,
+    test,
+    sort,
+    tail,
+    head,
+    ln,
+    mkdir,
+    mv,
+    popd,
+    pushd,
+    // pwd,
+    rm,
+    sed,
+    "set": set,
+
     // Helper libraries
     lodash,
     moment,
@@ -103,7 +159,6 @@ const ctxProps = {
 
     // Navigation, filesystem helpers
     cd,
-    cat,
     ls: {val: ls, mutable: true},
     pwd: {val: pwd, mutable: true},
 
