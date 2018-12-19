@@ -172,9 +172,12 @@ else
 fi
 
 ############## XCode installation ##############
-xcode-select --install
+if [ "$(uname -s)" = "Darwin" ]; then
+    xcode-select --install
+fi
 
 
 ##################### DISPLAY NEW MACHINE INFO #####################
 cat $SNIPPETS_DIR/setup/new-machine-info.md
+
 
