@@ -1,0 +1,10 @@
+<snippet>
+  <description>for-each loop thru array</description>
+<content><![CDATA[
+for ${1:item} in ${2:array}:
+    ${0:print(i)}
+
+]]></content>
+  <tabTrigger>foreach_array</tabTrigger>
+  <scope>source.python</scope>
+</snippet>

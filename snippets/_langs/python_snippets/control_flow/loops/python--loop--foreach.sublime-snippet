@@ -1,10 +1,10 @@
 <snippet>
-  <description>for-each loop thru list (aka array), string, or tuple. (but not thru dictionary)</description>
+  <description>for-each loop thru list (aka array), string, or tuple (but not thru dict)</description>
 <content><![CDATA[
 for ${1:item} in ${2:['some_sequence_of_items', 'string__tuple__list_aka_array__']}:
-  ${0:things_to_do_with_${1:item}}
+    ${0:things_to_do_with_${1:item}}
 
-]]></content>  
+]]></content>
   <tabTrigger>loop_foreach</tabTrigger>
   <scope>source.python</scope>
 </snippet>
