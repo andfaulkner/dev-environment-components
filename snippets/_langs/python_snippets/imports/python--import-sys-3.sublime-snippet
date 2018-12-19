@@ -1,0 +1,8 @@
+<snippet>
+  <description>Import sys, providing e.g. arguments</description>
+<content><![CDATA[
+import sys
+]]></content>
+  <tabTrigger>imp_sys</tabTrigger>
+  <scope>source.python</scope>
+</snippet>
