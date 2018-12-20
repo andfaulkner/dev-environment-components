@@ -9,26 +9,26 @@ echo "Successfully installed script for merging bash history between terminal wi
 /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 
 #----- Install neovim / nvim -----#
-brew add neovim
+brew install neovim
 
 #----- Install CLI utils -----#
-brew add ack
-brew add tree
-brew add gettext
-brew add moreutils   # Adds sponge, etc - see https://rentes.github.io/unix/utilities/2015/07/27/moreutils-package
-brew add readline
-brew add watchman
+brew install ack
+brew install tree
+brew install gettext
+brew install moreutils   # Adds sponge, etc - see https://rentes.github.io/unix/utilities/2015/07/27/moreutils-package
+brew install readline
+brew install watchman
 
 #----- Install web utils -----#
 brew install googler # Search google from the CLI
-brew add curl
-brew add wget
+brew install curl
+brew install wget
 
 #----- Install source control systems -----#
-brew add git
-brew add hub # Github extensions to git
-brew add subversion
-brew add maven
+brew install git
+brew install hub # Github extensions to git
+brew install subversion
+brew install maven
 
 # Generate TOC for git README
 mkdir ~/bin 2>/dev/null
@@ -38,33 +38,33 @@ chmod a+x gh-md-toc
 popd
 
 #----- Install languages -----#
-brew add gradle
-brew add python
-brew add python3 # Also installs pip
-brew add groovy
-brew add elixir
-brew add kotlin
+brew install gradle
+brew install python
+brew install python3 # Also installs pip
+brew install groovy
+brew install elixir
+brew install kotlin
 brew install sass/sass/sass
 
 #----- Install misc programming utils -----#
-brew add jq
-brew add llvm@4
+brew install jq
+brew install llvm@4
 
 #----- Install package managers -----#
-brew add leiningen
+brew install leiningen
 
 #### Install DBs (databases) ####
 ### postgres + helpers ###
-brew add postgresql
-brew add pgbadger
-brew add redis
-brew add sqlite
-brew add mongodb
+brew install postgresql
+brew install pgbadger
+brew install redis
+brew install sqlite
+brew install mongodb
 
 #----- Install completion utils -----#
-brew add pip-completion
-brew add gem-completion
-brew add bash-completion
+brew install pip-completion
+brew install gem-completion
+brew install bash-completion
 
 #----- Python setup installations  -----#
 pip3 install --upgrade pip
@@ -73,7 +73,7 @@ pip3 install --upgrade neovim # Get Neovim working with Python
 
 #----- Go installation & setup -----#
 echo "--- SETTING UP GO (golang) ---"
-brew add go
+brew install go
 if grep -Fq 'export GOPATH=$HOME/projects/go' ~/.bash_profile; then
     echo "go config already present, not adding again"
 else
@@ -89,7 +89,7 @@ fi
 
 ########################## VERSION MANAGERS ##########################
 #----- Install rbenv (ruby version manager) -----#
-brew add rbenv
+brew install rbenv
 
 #----- Install nvm -----#
 curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.8/install.sh | bash
