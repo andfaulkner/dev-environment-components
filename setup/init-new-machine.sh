@@ -180,4 +180,3 @@ fi
 
 ##################### DISPLAY NEW MACHINE INFO #####################
 cat $SNIPPETS_DIR/setup/new-machine-info.md
-
