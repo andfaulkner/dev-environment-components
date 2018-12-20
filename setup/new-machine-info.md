@@ -18,7 +18,13 @@ Install the following python libraries:
     rerun
     matplotlib
     virtualenv
+    ipython
+    ipykernel
+    wxPython
+    PyYaml
+    Requests
+    pycosat
 
 Oftentimes:
-pip3.6 install --upgrade numpy scipy tensorflow setuptools wheel rerun matplotlib virtualenv
+pip3.6 install --upgrade numpy scipy tensorflow setuptools wheel rerun matplotlib virtualenv ipython ipykernel wxPython PyYaml Requests pycosat
 ...with pip3.6 swapped out with whatever the current pip is
