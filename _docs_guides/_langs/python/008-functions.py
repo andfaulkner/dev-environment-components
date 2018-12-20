@@ -29,3 +29,12 @@ hello_all("Meeka", "Callie", "Logan")
 # => Hello Meeka
 # => Hello Callie
 # => Hello Logan
+
+#------------------------------- VARIABLE NUMBER OF NAMED ARGUMENTS -------------------------------#
+def greet_me(**kwargs):
+    if kwargs is not None:
+        for key, value in kwargs.items():
+            print(key, "::", value)
+
+greet_me(name="Moomlington")
+# => name :: Moomlington
