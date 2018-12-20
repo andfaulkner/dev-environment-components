@@ -1,0 +1,8 @@
+<snippet>
+  <description>Get all but first item in array</description>
+<content><![CDATA[
+${1:some_array}[1:]
+]]></content>
+  <tabTrigger>arr_tail</tabTrigger>
+  <scope>source.python</scope>
+</snippet>
