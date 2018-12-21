@@ -1,0 +1,11 @@
+<snippet>
+  <description>Open file at given path, in text mode</description>
+<content><![CDATA[
+with open(${1:path_to_file}) as ${2:f}:
+    ${3:print("\nFull file path:", ${2}.name)
+    print("\nFile name:", path.basename(${2}.name))
+    print("File content:\n", ${2}.read(), "\n")}
+]]></content>
+  <tabTrigger>open_file_text</tabTrigger>
+  <scope>source.python</scope>
+</snippet>
