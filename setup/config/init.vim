@@ -60,14 +60,14 @@ NeoBundle 'scrooloose/nerdtree'
 NeoBundle 'leafgarland/typescript-vim'
 
 " fuzzy-search code completion. Painful to install, but totally essential
-NeoBundle 'Valloric/YouCompleteMe', {
-     \ 'build'      : {
-        \ 'mac'     : './install.sh --clang-completer --system-libclang --omnisharp-completer',
-        \ 'unix'    : './install.sh --clang-completer --system-libclang --omnisharp-completer',
-        \ 'windows' : './install.sh --clang-completer --system-libclang --omnisharp-completer',
-        \ 'cygwin'  : './install.sh --clang-completer --system-libclang --omnisharp-completer'
-        \ }
-     \ }
+" NeoBundle 'Valloric/YouCompleteMe', {
+"     \ 'build'      : {
+"        \ 'mac'     : './install.sh --clang-completer --system-libclang --omnisharp-completer',
+"        \ 'unix'    : './install.sh --clang-completer --system-libclang --omnisharp-completer',
+"        \ 'windows' : './install.sh --clang-completer --system-libclang --omnisharp-completer',
+"        \ 'cygwin'  : './install.sh --clang-completer --system-libclang --omnisharp-completer'
+"        \ }
+"     \ }
 
 "
 " END NEOBUNDLE PLUGINS
