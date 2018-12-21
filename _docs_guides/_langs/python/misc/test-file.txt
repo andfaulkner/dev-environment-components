@@ -1,0 +1,4 @@
+--- Start of test-file.txt ---
+Example text
+Second line
+--- End of test-file.txt ---
