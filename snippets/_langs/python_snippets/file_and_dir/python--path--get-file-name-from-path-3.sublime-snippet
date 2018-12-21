@@ -1,0 +1,8 @@
+<snippet>
+  <description>Get file name from a path string</description>
+<content><![CDATA[
+os.path.basename(${1:os.path.realpath(__file__)})
+]]></content>
+  <tabTrigger>filename_from_path_string</tabTrigger>
+  <scope>source.python</scope>
+</snippet>
