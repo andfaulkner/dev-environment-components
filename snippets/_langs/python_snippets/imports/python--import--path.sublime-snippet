@@ -1,0 +1,8 @@
+<snippet>
+  <description>Import path module</description>
+<content><![CDATA[
+from os import path
+]]></content>
+  <tabTrigger>import_path</tabTrigger>
+  <scope>source.python</scope>
+</snippet>

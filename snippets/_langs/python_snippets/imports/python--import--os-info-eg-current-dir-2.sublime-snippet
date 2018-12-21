@@ -3,6 +3,6 @@
 <content><![CDATA[
 import os
 ]]></content>
-  <tabTrigger>import_os</tabTrigger>
+  <tabTrigger>imp_os</tabTrigger>
   <scope>source.python</scope>
 </snippet>
