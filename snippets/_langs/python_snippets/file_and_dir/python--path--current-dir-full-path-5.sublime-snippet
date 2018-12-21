@@ -3,6 +3,6 @@
 <content><![CDATA[
 os.path.dirname(os.path.realpath(__file__))
 ]]></content>
-  <tabTrigger>curdir_path</tabTrigger>
+  <tabTrigger>path_curfile_dir</tabTrigger>
   <scope>source.python</scope>
 </snippet>
