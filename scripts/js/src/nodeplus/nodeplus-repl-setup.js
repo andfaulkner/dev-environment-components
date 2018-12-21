@@ -222,6 +222,7 @@ const buildLs = dirPath =>
  * WARNING: MUST BE STORED AS MUTABLE VALUE!
  */
 let curDir = process.cwd();
+console.log("curDir:", curDir);
 
 /**
  *  View content of current directory. Labels directories with [D]
@@ -229,36 +230,41 @@ let curDir = process.cwd();
  */
 let ls = buildLs(curDir);
 
+// TODO Clean up cd implementation and code it's using
 /**
  * Change directory to given path. Prevents exiting project
  * @param {string} newPath Relative or absolute path to chagne directory to
  */
 const cd = newPath => {
     // Temp storage of path
-    const curDirTemp = `` + curDir;
+    // const curDirTemp = `` + curDir;
 
-    // Handle absolute vs relative paths appropriately
-    curDir = isAbsPath(newPath) ? newPath : path.join(curDir, newPath);
+    // // Handle absolute vs relative paths appropriately
+    // curDir = isAbsPath(newPath) ? newPath : path.join(curDir, newPath);
 
-    // Prevent navigation out of project directory
-    if (!isWithinProj(curDir)) {
-        curDir = curDirTemp;
-        return console.log(`ERROR :: Cannot navigate below project root: ${rootPath}`);
-    }
+    // // Prevent navigation out of project directory
+    // if (!isWithinProj(curDir)) {
+    //     curDir = curDirTemp;
+    //     return console.log(`ERROR :: Cannot navigate below project root: ${rootPath}`);
+    // }
 
     // Ensure cd succeeds - roll back stored current directory if it fails
     try {
-        process.chdir(curDir);
+        process.chdir(newPath);
+        curDir = process.cwd();
     } catch (error) {
-        curDir = curDirTemp;
-        return console.log(`Directory ${curDir} doesn't exist:`, error);
+        // process.chdir(curDir);
+        // curDir = curDirTemp;
+        return console.log(`Directory ${newPath} doesn't exist:`, error);
     }
 
-    // Store new path and path dir contents in appropriate global properties
-    defineMutableProp(r.context, `pwd`, curDir);
-    ls = buildLs(curDir);
-    defineMutableProp(r.context, `ls`, ls);
     return curDir;
+
+    // // Store new path and path dir contents in appropriate global properties
+    // defineMutableProp(r.context, `pwd`, curDir);
+    // ls = buildLs(curDir);
+    // defineMutableProp(r.context, `ls`, ls);
+    // return curDir;
 };
 
 /**
@@ -367,5 +373,4 @@ module.exports = {
     ls,
     cat,
     history,
-    pwd: curDir
 };

@@ -28,8 +28,13 @@ const rootPath = appRootPath.path;
 // ShellJS
 const shellJS = require('shelljs');
 
-// const packageJson = require('../package.json');
-const packageJson = JSON.parse(fs.readFileSync('./package.json').toString());
+let packageJson;
+
+try {
+    packageJson = JSON.parse(fs.readFileSync('./package.json').toString());
+} catch (err) {
+    console.error(`Error:`, err);
+}
 
 /**************************************** PROJECT IMPORTS *****************************************/
 const {
@@ -140,7 +145,7 @@ const ctxProps = {
     // pwd,
     rm,
     sed,
-    "set": set,
+    set: set,
 
     // Helper libraries
     lodash,
@@ -159,12 +164,11 @@ const ctxProps = {
 
     // Navigation, filesystem helpers
     cd,
-    ls: {val: ls, mutable: true},
-    pwd: {val: pwd, mutable: true},
-
-    // package.json content
-    packageJson
+    ls: {val: ls, mutable: true}
 };
+
+// package.json content
+if (packageJson) ctxProps.packageJson = packageJson;
 
 /**
  * Extra descriptions for bound properties
@@ -172,6 +176,8 @@ const ctxProps = {
 const descriptions = {
     _: `lodash alias`,
     m_: `mad-utils alias`,
+    // TODO pwd description not showing
+    pwd: `Show current working directory (like pwd in bash)`,
     Function: `Standard global has added property 'toS' for displaying as a clean string`
 };
 
@@ -185,3 +191,16 @@ r.defineCommand(`help_added_globals`, {
     help: `Display custom objects/functions added to the top-level context`,
     action: () => displayProps(ctxProps, descriptions)
 });
+
+Reflect.defineProperty(r.context, 'pwd', {
+    get: function() {
+        return process.cwd();
+    }
+});
+
+// r.context['pwd'] = {
+//         get val() {
+//             return process.cwd();
+//         },
+//         mutable: true
+//     }
