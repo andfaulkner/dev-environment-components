@@ -1,0 +1,9 @@
+<snippet>
+  <description>Get path to file relative to current file</description>
+<content><![CDATA[
+${1:cur_file_path} = path.realpath(path.dirname(__file__))
+${2:test_file_path} = path.join(${1}, ${3:'misc', 'test-file.txt'})
+]]></content>
+  <tabTrigger>relative_path_from_cur_file</tabTrigger>
+  <scope>source.python</scope>
+</snippet>
