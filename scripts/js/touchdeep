@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+
+DIR=`dirname "$0"`
+node "$DIR/src/touchdeep/touchdeep.js" $@
