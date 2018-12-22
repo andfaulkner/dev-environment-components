@@ -5,6 +5,16 @@ touch ~/.merged_bash_history
 echo "Successfully installed script for merging bash history between terminal windows!"
 
 ################## INSTALLATIONS ##################
+# If Mac
+if [ "$(uname)" == "Darwin" ]; then
+    echo "Mac detected"
+
+# If Linux
+elif [ "$(expr substr $(uname -s) 1 5)" == "Linux" ]; then
+    echo "Linux detected"
+    sudo apt-get install ruby-full
+fi
+
 #----- Install Homebrew -----#
 /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 
@@ -52,6 +62,10 @@ brew install llvm@4
 
 #----- Install package managers -----#
 brew install leiningen
+brew install composer
+touch ~/.composer
+touch ~/.composer/vendor
+touch ~/.composer/vendor/bin
 
 #### Install DBs (databases) ####
 ### postgres + helpers ###
