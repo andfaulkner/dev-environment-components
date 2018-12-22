@@ -20,7 +20,7 @@ function lsrdeep {
             next
         }
         NF&&f{
-            print s"/"$0 
+            print s"/"$0
         }
     ' | ack $1 2>/dev/null
 }
@@ -30,9 +30,23 @@ function lsrdeep {
 ################################################################################
 # namespace: txt_
 
-# rm leading & trailing whitespace from output 
-#(yes, technically chomp only refers to removing trailing, but 'slice' was taken) 
-alias chomp="awk '{\$1=\$1}1'"  
+#=== FUNCTION ==========================================================
+#        NAME:  string_includes
+# DESCRIPTION:  Search string for substring
+#   @PARAM $1:  HAYSTACK String to search
+#   @PARAM $2:  NEEDLE Substring to find
+#   @RETURN:    Success code if substring found, otherwise error code
+#=======================================================================
+function string_includes() {
+    location "search_scripts.sh"
+    local HAYSTACK=$1
+    local NEEDLE=$2
+    [ -z "${1##*$2*}" ]
+}
+
+# rm leading & trailing whitespace from output
+#(yes, technically chomp only refers to removing trailing, but 'slice' was taken)
+alias chomp="awk '{\$1=\$1}1'"
 alias txt_chomp="chomp"
 
 function tp_appendtext {
@@ -40,7 +54,7 @@ function tp_appendtext {
 }
 alias txt_tp_appendtext='tp_appendtext'
 
-#conglomerates 2 separate variables into a single string 
+#conglomerates 2 separate variables into a single string
 function tp_glue_vars {
   $(echo ${1}${2})
 }
@@ -56,8 +70,8 @@ alias col1="awk '{print \$1}'"
 
 #=== FUNCTION ==========================================================
 #        NAME:  tp_transpose
-# DESCRIPTION:  turn table outputted to cli 90 degrees 
-#               rows-->cols, cols-->rows 
+# DESCRIPTION:  turn table outputted to cli 90 degrees
+#               rows-->cols, cols-->rows
 #=======================================================================
 function tp_transpose {
     awk '
@@ -117,14 +131,14 @@ alias countf='find . | wc -l'
 
 #=== FUNCTION ==========================================================
 #        NAME:  searchfn
-# DESCRIPTION:  Search that matches all files in current dir or its           
+# DESCRIPTION:  Search that matches all files in current dir or its
 #               subdirs w/ the given text anywhere in their file name
 #=======================================================================
 function searchfn {
   if [ $# -eq 0 ]; then
     echo "Usage: searchfn [regex]"
     echo "  Matches only on file name & extension - path is excluded"
-    echo "  [regex] - string or regular expression to match on" 
+    echo "  [regex] - string or regular expression to match on"
   else
     find . -regex ".*$1[^\/]*$" 2>/dev/null
   fi
@@ -137,7 +151,7 @@ function searchfn {
 #               To return an exact extension:   findtype -a pattern
 #=======================================================================
 function findtype {
-   #if 2 parameters have been passed into this 
+   #if 2 parameters have been passed into this
    if [ ! -z "$2" ]
    then
       if [ "$1" = "-a" ]
@@ -145,7 +159,7 @@ function findtype {
          find . -name "*.$2" 2>/dev/null
          find . -name "*.$2" 2>/dev/null |wc -l
       fi
-   #if only 1 param passed, 
+   #if only 1 param passed,
    else
       find . -name "*\.$1*" 2>/dev/null
       find . -name "*\.$1*" 2>/dev/null |wc -l
@@ -154,7 +168,7 @@ function findtype {
 #=======================================================================
 
 #=== FUNCTION ==========================================================
-# NAME: grep_ex1_inc2           
+# NAME: grep_ex1_inc2
 # DESCRIPTION:  displays lines containing $2 that do not contain $1
 #=======================================================================
 function grepx1i2 {
@@ -164,12 +178,12 @@ function grepx1i2 {
 
 #=== FUNCTION ==========================================================
 #        NAME:  google
-# DESCRIPTION:  Search google for given param e.g. 
+# DESCRIPTION:  Search google for given param e.g.
 #                   google "om nom nom"
 #               To use literal strs in search, use single quotes on the
-#               outside & double quotes inside: e.g. 
+#               outside & double quotes inside: e.g.
 #                   google '"om nom nom"'
-#               All regular google keywords work e.g. 
+#               All regular google keywords work e.g.
 #                   google '"om nom" OR omnom"'
 #
 # PARAMETER 1:  the string you're searching, between quotes.
@@ -193,7 +207,7 @@ todo_new_item() {
     # TODO actual todo_new_item code
     #
     # STEPS:
-    #    find line w/ todo heading, matching ~~~~~~~~~~_TODO_~~~~~~~~~~ 
+    #    find line w/ todo heading, matching ~~~~~~~~~~_TODO_~~~~~~~~~~
     #    insert $1 after todo heading
     #    insert [{firstWordInTodo}_{secondWordInTodo}]
     #
@@ -203,7 +217,7 @@ todo_new_item() {
     #        insert "[{CUR_NUM_TASKS}]" at end of each new todo item
     #    add number of tasks to do to line at top
     #        increment number of tasks on each run of todo_new_item
-    #        decrement number of tasks on each run of todo_item_complete 
+    #        decrement number of tasks on each run of todo_item_complete
     #    text alignment (at 4 spaces in) for all todo items
     #
     # OPTIONAL ADDITIONAL todo_* FEATURES:
