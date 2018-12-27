@@ -1,22 +1,42 @@
 #!/usr/bin/env python3
 
-from os import path
-
-cur_file_path = path.realpath(path.dirname(__file__))
-print("Current directory path:", cur_file_path)
-
-test_file_path = path.join(cur_file_path, 'misc', 'test-file.txt')
-print("Test file path:", test_file_path)
-
 # 'with' is a mechanism to ensure teardown code runs
+# Usage: when you have 2 related operations you’d like to execute as a pair,
+# with a block of code in between
 
-#--------------------------------- USAGE WITH SUPPORTING OBJECTS ----------------------------------#
+### SETUP ###
+from os import path
+cur_file_path = path.realpath(path.dirname(__file__))
+test_file_path = path.join(cur_file_path, 'misc', 'test-file.txt')
+
+#----------------------------- USING with-SUPPORTING OBJECTS (COMMON) -----------------------------#
+# Opens a file, ensuring close gets called at the end even if it throws
 with open(test_file_path) as f:
     print("\nFull file path:", f.name)
     print("\nFile name:", path.basename(f.name))
     print("File content:\n", f.read(), "\n")
 
-#--------------------------------- WRITING OWN with-USING OBJECT ----------------------------------#
+#------------------------------ WRITING OWN with-SUPPORTING FUNCTION ------------------------------#
+from contextlib import contextmanager
+
+@contextmanager
+def log_result(func):
+    print(func)
+    try:
+        print(f"Running function: {func.__name__}")
+        res = yield func()
+        print(f"Returned from {func.__name__}:", res)
+    finally:
+        print(f"Done running {func.__name__}\n")
+
+def test_print():
+    print("test_print ran")
+    return "OK"
+
+with log_result(test_print) as result:
+    print("result:", result)
+
+#------------------------------- WRITING OWN with-SUPPORTING OBJECT -------------------------------#
 class WithableClass():
     """Class where 'with' works"""
 
@@ -36,9 +56,10 @@ class WithableClass():
 
 with WithableClass("Meeka") as example:
     print(example.name)
-    print("Goodbye")
+    raise Exception("fail")
+    print("Doesn't display")
 
-print("Would run if True returned from __exit__")
+print("Runs if True returned from __exit__")
 
 ### OUTPUT ###
 # => Entering with block for WithableClass!
@@ -50,4 +71,5 @@ print("Would run if True returned from __exit__")
 # => Exception: fail
 
 ### Links
+# https://preshing.com/20110920/the-python-with-statement-by-example/
 # http://effbot.org/zone/python-with-statement.htm
