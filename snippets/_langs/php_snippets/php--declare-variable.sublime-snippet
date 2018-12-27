@@ -1,0 +1,8 @@
+<snippet>
+  <description>Declare variable</description>
+<content><![CDATA[
+\$${1:var_name} = ${2:999};
+]]></content>
+  <tabTrigger>var</tabTrigger>
+  <scope>source.php</scope>
+</snippet>

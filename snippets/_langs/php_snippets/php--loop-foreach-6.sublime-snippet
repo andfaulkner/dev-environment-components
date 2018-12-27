@@ -1,0 +1,10 @@
+<snippet>
+  <description>Loop through array items</description>
+<content><![CDATA[
+foreach (\$${1:array_name} as \$${2:item}) {
+    ${0:echo "<span>\$${2}</span>";}
+}
+]]></content>
+  <tabTrigger>forof</tabTrigger>
+  <scope>source.php</scope>
+</snippet>

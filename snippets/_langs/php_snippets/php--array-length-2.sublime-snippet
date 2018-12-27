@@ -1,0 +1,8 @@
+<snippet>
+  <description>Get length of array</description>
+<content><![CDATA[
+count(${1:array_name});
+]]></content>
+  <tabTrigger>arr_length</tabTrigger>
+  <scope>source.php</scope>
+</snippet>

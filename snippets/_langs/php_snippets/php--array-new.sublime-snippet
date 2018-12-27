@@ -1,0 +1,8 @@
+<snippet>
+  <description>Create new array</description>
+<content><![CDATA[
+\$${1:test_array} = [${2:"Content", "Goes", "Here"}];
+]]></content>
+  <tabTrigger>arr</tabTrigger>
+  <scope>source.php</scope>
+</snippet>
