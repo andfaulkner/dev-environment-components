@@ -8,6 +8,11 @@ alias regexes="gnome-terminal --title=~REGEXES --geometry 110x50-0-0 -x vim ~/re
 
 # TODO repair lsrdeep - occasionally it puts 2 items on the same line
 function lsrdeep {
+    if [ ! -z "$1" ]; then
+        ARG=$1
+    else
+        ARG="./"
+    fi
     ls -R ./ 2>/dev/null | awk '
         /:$/&&f{
             s=$0;
@@ -22,7 +27,7 @@ function lsrdeep {
         NF&&f{
             print s"/"$0
         }
-    ' | ack $1 2>/dev/null
+    ' | ack --no-color $ARG 2>/dev/null
 }
 
 ################################################################################
