@@ -11,6 +11,59 @@
         See https://symfony.com/doc/master/introduction/from_flat_php_to_symfony2.html
     -->
 
+    <!----------------------------- USING PDO TO CONNECT TO POSTGRES ------------------------------>
+    <h1>USING PDO:</h1>
+    <div>
+        <?php
+            // Connect to the database, return object.
+            echo "Result of connection attempt: ";
+            $pg_pdo = new PDO("pgsql:host=localhost;dbname=postgres;", "andrew");
+
+            /****** Perform a query ******/
+            echo "<br />Result of query: ";
+            $result = $pg_pdo->query('SELECT * FROM starter_data');
+
+            // Display error and exit if query fails.
+            if (!$result) {
+                echo "An error occurred in the query.\n";
+                exit;
+            } else {
+                echo "Query succeeded!";
+            }
+
+            /******* Display results from query *******/
+            echo "<br /><h2>Data by result (row-by-row):</h2>";
+            $all_rows = array();
+
+            // Display one row at a time.
+            while ($row = $result->fetch(PDO::FETCH_ASSOC)) {
+                print_r($row);
+                foreach ($row as $key => $value) {
+                    $clean_val = ($value === False) ? "0" : $value;
+                    print_r("<br />$key : $clean_val");
+                }
+                echo "<br /><br />";
+
+                // Store all rows.
+                $all_rows[] = $row;
+            }
+
+            // Display all results in a single object.
+            echo "<br />all_rows object:<br />";
+            print_r($all_rows);
+
+            // Disconnect from the database.
+            $pg_pdo = null;
+        ?>
+    </div>
+
+
+
+
+
+    <!------------------------------------------------------------>
+    <!--------------- DO NOT USE THE BELOW MECHANISM ------------->
+    <!------------------------------------------------------------>
 
     <!-- See: http://php.net/manual/en/book.pgsql.php -->
     <!---------------------- USING CLASSIC MECHANISM TO CONNECT TO POSTGRES ----------------------->
@@ -72,45 +125,6 @@
             ?>
         </h2>
     </div>
-
-
-
-
-    <!----------------------------- USING PDO TO CONNECT TO POSTGRES ------------------------------>
-    <h1>USING PDO:</h1>
-    <div>
-        <?php
-            // Connect to the database, return object.
-            echo "Result of connection attempt: ";
-            $pg_pdo = new PDO("pgsql:host=localhost;dbname=postgres;", "andrew");
-
-            // Perform a query.
-            echo "<br />Result of query: ";
-            $result = $pg_pdo->query('SELECT * FROM starter_data');
-            if (!$result) {
-                echo "An error occurred.\n";
-                exit;
-            } else {
-                echo "Query succeeded!";
-            }
-
-            // Display results from query.
-            echo "<br /><h2>Data by result (row-by-row):</h2>";
-            $all_rows = array();
-            while ($row = $result->fetch(PDO::FETCH_ASSOC)) {
-                print_r($row);
-                echo "<br />";
-                $all_rows[] = $row;
-            }
-
-            echo "<br /><br />\$all_rows object:<br />";
-            print_r($all_rows);
-
-            // Disconnect from the database.
-            $pg_pdo = null;
-        ?>
-    </div>
-
 
 </body>
 </html>
