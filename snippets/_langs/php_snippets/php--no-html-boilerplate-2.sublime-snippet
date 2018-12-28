@@ -3,7 +3,9 @@
 <content><![CDATA[
 <?php
     error_reporting(E_ALL);
-    ${0:print_r("OK");}
+    ${0:print_r("OK");
+
+    include "${1:./dir/file.php}";}
 ?>
 
 ]]></content>
