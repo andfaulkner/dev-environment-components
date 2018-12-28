@@ -28,6 +28,7 @@ brew install gettext
 brew install moreutils   # Adds sponge, etc - see https://rentes.github.io/unix/utilities/2015/07/27/moreutils-package
 brew install readline
 brew install watchman
+brew install phplint
 
 #----- Install web utils -----#
 brew install googler # Search google from the CLI
@@ -52,13 +53,17 @@ brew install gradle
 brew install python
 brew install python3 # Also installs pip
 brew install groovy
+brew install erlang
 brew install elixir
 brew install kotlin
 brew install sass/sass/sass
+brew install crystal
+brew install crystal-lang
 
 #----- Install misc programming utils -----#
 brew install jq
 brew install llvm@4
+brew install docker
 
 #----- Install package managers -----#
 brew install leiningen
@@ -67,7 +72,7 @@ touch ~/.composer
 touch ~/.composer/vendor
 touch ~/.composer/vendor/bin
 
-#### Install DBs (databases) ####
+#----- Install DBs (databases) -----#
 ### postgres + helpers ###
 brew install postgresql
 brew install pgbadger
@@ -101,7 +106,7 @@ else
     echo "go config added! (including write to to .bash_profile)"
 fi
 
-########################## VERSION MANAGERS ##########################
+#################### VERSION MANAGERS & PLATFORMS ####################
 #----- Install rbenv (ruby version manager) -----#
 brew install rbenv
 
@@ -109,6 +114,8 @@ brew install rbenv
 curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.8/install.sh | bash
 
 #----- Install NodeJS - latest LTS version & set it as default version -----#
+brew uninstall --ignore-dependencies node icu4c
+brew install node
 nvm install --lts
 nvm ls | ack '\s+v' | tail -n1 | awk '{print $2}'
 
