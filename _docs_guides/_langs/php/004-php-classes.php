@@ -3,6 +3,8 @@
     // This will cover the entire file
     namespace Organisms;
 
+    echo "<h3>START 004-php-classes.php</h3>";
+
     /****** CREATING CLASSES ******/
     /**
      * Create animal
@@ -39,8 +41,8 @@
     }
 
     // Display class data
-    echo "Name of class (including namespace): ";
-    echo Animal::class . "\n";
+    echo "004 :: Name of class (including namespace): ";
+    echo "004 :: " . Animal::class . "<br />";
 
     /****** INSTANTIATING OBJECTS FROM CLASSES ******/
     // Instantiate class
@@ -50,14 +52,19 @@
     print_r($animal);
     // => Animal Object ( [name] => Meeka [age] => 7 [animal_type] => Dog )
 
-    print_r("\n");
+    print_r("<br />");
 
     // Display single property from object
     print_r($animal->name);
     // => "Meeka"
 
-    print_r("\n");
+    print_r("<br />");
 
     // Run method on object
     print_r($animal->am_i_old());
+
+    const ANIMAL_TYPES = ["Dog", "Cat", "Lizard", "Bear", "Yak"];
+
+    echo "<br />";
+    echo "<h3>END 004-php-classes.php</h3>";
 ?>

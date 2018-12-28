@@ -28,4 +28,22 @@
     $str = require "./src/script-to-require.php";
 
     print_r("<br />" . $str);
+
+    /*************** IMPORTING NAMESPACE ****************/
+    echo "<br />Loading 004-php-classes.php:<br />";
+
+    // Import file with namespace (it's the same).
+    require_once('004-php-classes.php');
+
+    // Instantiate object from class in namespace.
+    $callie = new \Organisms\Animal("Callie", 15, "Dog");
+
+    echo "Displaying dog object (with namespace):<br />";
+    print_r($callie);
+
+    echo "<br />";
+
+    // Show constant defined in namespace.
+    print_r(\Organisms\ANIMAL_TYPES);
+
 ?>
