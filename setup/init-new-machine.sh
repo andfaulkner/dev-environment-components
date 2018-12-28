@@ -77,7 +77,9 @@ touch ~/.composer/vendor/bin
 # Make composer work for PHP 7.3 by shutting PHP JIT off
 replace ";pcre.jit=1" "pcre.jit=0" -- /usr/local/etc/php/7.3/php.ini 2>/dev/null
 brew install phplint
+
 composer global require "squizlabs/php_codesniffer=*"
+composer global require "phpmd/phpmd=*"
 
 #----- Install DBs (databases) -----#
 ### postgres + helpers ###
