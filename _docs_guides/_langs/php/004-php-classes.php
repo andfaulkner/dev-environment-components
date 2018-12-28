@@ -60,10 +60,8 @@
 
     print_r("<br />");
 
-    // Run method on object
+    // Run method on object.
     print_r($animal->am_i_old());
-
-    const ANIMAL_TYPES = ["Dog", "Cat", "Lizard", "Bear", "Yak"];
 
     echo "<br />";
     echo "<h3>END 004-php-classes.php</h3>";

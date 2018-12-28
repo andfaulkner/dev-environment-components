@@ -29,7 +29,7 @@
 
     print_r("<br />" . $str);
 
-    /*************** IMPORTING NAMESPACE ****************/
+    /*************** IMPORTING NAMESPACES ****************/
     echo "<br />Loading 004-php-classes.php:<br />";
 
     // Import file with namespace (it's the same).
@@ -38,12 +38,25 @@
     // Instantiate object from class in namespace.
     $callie = new \Organisms\Animal("Callie", 15, "Dog");
 
-    echo "Displaying dog object (with namespace):<br />";
+    echo "<h3 style=\"margin-bottom: 5px;\">Displaying dog object (with namespace):</h3>";
     print_r($callie);
+    echo "</div>";
 
     echo "<br />";
 
+    /*************** IMPORTING CONSTANTS ****************/
+    require_once("./005-php-constants.php");
+
+    // Local-only variable - wouldn't be accessible outside
+    $cur_file = "<br />006-php-importing.php :: ";
+    echo "$cur_file";
+
     // Show constant defined in namespace.
-    print_r(\Organisms\ANIMAL_TYPES);
+    print_r(\PHPConstantsLearning\ANIMAL_TYPES);
+
+    // Show constant defined by define() function.
+    print_r($cur_file . "NUM_MAMMAL_LEGS: " . constant("NUM_MAMMAL_LEGS"));
+
+    // This wouldn't work:  print_r(\PHPConstantsLearning\NUM_MAMMAL_LEGS);
 
 ?>
