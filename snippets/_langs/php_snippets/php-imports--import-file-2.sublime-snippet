@@ -1,0 +1,9 @@
+<snippet>
+  <description>Import PHP file and assign return to variable</description>
+<content><![CDATA[
+${1/.+/\$/}${1:imported_code}${1/.+/ = /}require "${2:./src/included-script.php}";
+
+]]></content>
+  <tabTrigger>import_as_var</tabTrigger>
+  <scope>embedding.php</scope>
+</snippet>

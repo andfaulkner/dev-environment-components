@@ -1,0 +1,9 @@
+<snippet>
+  <description>Import PHP file once</description>
+<content><![CDATA[
+${1/.+/\$/}${1:imported_code}${1/.+/ = /}require_once "${2:./src/included-script.php}";
+
+]]></content>
+  <tabTrigger>req_once</tabTrigger>
+  <scope>embedding.php</scope>
+</snippet>
