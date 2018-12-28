@@ -12,6 +12,7 @@ if [ "$(uname)" == "Darwin" ]; then
 # If Linux
 elif [ "$(expr substr $(uname -s) 1 5)" == "Linux" ]; then
     echo "Linux detected"
+    # Install Ruby
     sudo apt-get install ruby-full
 fi
 
@@ -28,7 +29,6 @@ brew install gettext
 brew install moreutils   # Adds sponge, etc - see https://rentes.github.io/unix/utilities/2015/07/27/moreutils-package
 brew install readline
 brew install watchman
-brew install phplint
 
 #----- Install web utils -----#
 brew install googler # Search google from the CLI
@@ -67,10 +67,17 @@ brew install docker
 
 #----- Install package managers -----#
 brew install leiningen
+
+#----- Install PHP tooling -----#
 brew install composer
 touch ~/.composer
 touch ~/.composer/vendor
 touch ~/.composer/vendor/bin
+
+# Make composer work for PHP 7.3 by shutting PHP JIT off
+replace ";pcre.jit=1" "pcre.jit=0" -- /usr/local/etc/php/7.3/php.ini 2>/dev/null
+brew install phplint
+composer global require "squizlabs/php_codesniffer=*"
 
 #----- Install DBs (databases) -----#
 ### postgres + helpers ###
