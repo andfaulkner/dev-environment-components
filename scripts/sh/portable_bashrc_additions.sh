@@ -34,7 +34,7 @@ bind "set completion-ignore-case on"
 # Display ambiguous matching patterns on 1st tab nd "set show-all-if-ambiguous on"press
 # bind "set show-all-if-ambiguous on"
 
-# Immediately add trailing slash when autocompleting symlinks to dirs 
+# Immediately add trailing slash when autocompleting symlinks to dirs
 bind "set mark-symlinked-directories on"
 
 # Don't add exit, ls, lsa, gs, gd, gl, bg, fg, history, or clear to the history list
@@ -96,7 +96,7 @@ function beginswith {
 _def_all_srcs_() {
     local CUR_LANG=$1
     local CUR_LANG_LC="$(echo $CUR_LANG | tr '[:upper:]' '[:lower:]')"
-    local CUR_LANG_UC="$(echo $CUR_LANG | tr '[:lower:]' '[:upper:]')" 
+    local CUR_LANG_UC="$(echo $CUR_LANG | tr '[:lower:]' '[:upper:]')"
     local SCRIPTS_FILE="$SNIPPETS_DIR/scripts/sh/${CUR_LANG_LC}_scripts.sh"
     eval "${CUR_LANG_UC}_SCRIPTS=\"$SCRIPTS_FILE\""
     eval "alias bashrc_${CURLANG_LC}='vim \"$SCRIPTS_FILE\"'"
@@ -104,14 +104,14 @@ _def_all_srcs_() {
 }
 
 _def_all_srcs_ android
-_def_all_srcs_ git 
-_def_all_srcs_ ruby 
+_def_all_srcs_ git
+_def_all_srcs_ ruby
 _def_all_srcs_ node
 _def_all_srcs_ clojure
 _def_all_srcs_ python
 _def_all_srcs_ elixir
 _def_all_srcs_ elm
-_def_all_srcs_ crystal 
+_def_all_srcs_ crystal
 _def_all_srcs_ search
 _def_all_srcs_ web
 _def_all_srcs_ sys_util
@@ -159,6 +159,9 @@ PATH=$PATH:"$SNIPPETS_DIR/scripts/ts":"$SNIPPETS_DIR/scripts/js"
 export ANDROID_HOME="$HOME/Library/Android/sdk"
 export PATH=$PATH:$ANDROID_HOME/tools:$ANDROID_HOME/platform-tools
 
+# ADD COMPOSER-INSTALLED BINS TO PATH
+export PATH="$PATH:$HOME/.composer/vendor/bin"
+
 ################################################################################
 
 
@@ -183,7 +186,7 @@ alias pushpopstackclear="cleardirs"
 alias lsa='ls -ao | grep -v "[0-9][0-9] \.\.\?$"'
 
 ## lsa for dirs only
-alias lsda='lsa | ack "^d" | awk "{print}"' 
+alias lsda='lsa | ack "^d" | awk "{print}"'
 alias lsad='lsda'
 
 ## ls for dirs only
@@ -328,10 +331,10 @@ function insertfirstline {
 
 ####### CASING #######
 # Text streamed through gets switched to lowercase
-alias str_lowercase="tr '[:upper:]' '[:lower:]'" 
+alias str_lowercase="tr '[:upper:]' '[:lower:]'"
 
 # Text streamed through gets switched to uppercase
-alias str_uppercase="tr '[:lower:]' '[:upper:]'" 
+alias str_uppercase="tr '[:lower:]' '[:upper:]'"
 
 # get the file extension
 # @param $1 - path/to/file.ext
@@ -381,7 +384,7 @@ function fsize_all_in_dir {
 
 # Get file size in kb.  e.g. fsizekb somefile.json
 function fsizekb {
-    local PATH_TO_FILE=$1 
+    local PATH_TO_FILE=$1
     du -k $PATH_TO_FILE | \
         awk '{print $1" kB    "$2}' | \
         awk '{printf ("%-16s%s", $1" "$2, $3)}'
