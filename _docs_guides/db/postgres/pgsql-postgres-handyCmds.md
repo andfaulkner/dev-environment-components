@@ -137,6 +137,14 @@ Postgres CLI 'select current database'
 
         \c nameofdbtoselect
 
+Postgres CLI :: get current database name
+-----------------------------------------
+    SELECT current_database();
+
+Postgres CLI :: get current user name
+-------------------------------------
+    SELECT current_user;
+
 ---------------------------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------------------------
 
@@ -251,7 +259,7 @@ Data types
         *   These evaluate to false: FALSE, 'f', 'false', 'n', 'no' 'off', '0'
 7.  Date - usually in YYYY-MM-DD format
 8.  Real - a numeric value allowing decimals
-9.  
+9.  WIP
 
 
 MAKE A SCHEMA
@@ -286,6 +294,53 @@ MAKE A TABLE
             rar BOOLEAN
         );
 
+---------------------------------------------------------------------------------------------------
+ADD DATA
+========
+
+Insert data into table, at specific columns
+-------------------------------------------
+Generic:
+
+    INSERT INTO table_name (
+        row_1_name,
+        row_n_name
+    ) VALUES (
+        'Value 1',
+        'Value 2'
+    );
+
+Example 1:
+
+        INSERT INTO test_entity_1 (
+            omnom,
+            name,
+            price,
+            ent_num,
+            id
+        ) VALUES (
+            'omnomnomnom',
+            'omnomnomnom man',
+            '1.423',
+            '5',
+            'd6c95a2b-bd81-4e7b-a0f8-d15d8f28d097'
+        );
+
+Example 2:
+
+    INSERT INTO starter_data (
+        first_name,
+        last_name,
+        colour,
+        favorite_bear,
+        rar
+    ) VALUES (
+        'Meeka',
+        'Faulkner',
+        'Blue',
+        'Grizzly',
+        TRUE
+    );
 
 ---------------------------------------------------------------------------------------------------
 MODIFY DATA TABLES - COLUMNS
@@ -359,30 +414,6 @@ Update rows based on a search (WHERE)
 		SET ContactName='Alfred Schmidt', City='Hamburg'
 		WHERE CustomerName='Alfreds Futterkiste';
 
----------------------------------------------------------------------------------------------------
-ADD DATA
-========
-
-Insert data into table, at specific columns
--------------------------------------------
-*   example:
-
-        INSERT INTO test_entity_1 (
-            omnom,
-            name,
-            price,
-            ent_num,
-            id
-        ) VALUES (
-            'omnomnomnom',
-            'omnomnomnom man',
-            '1.423',
-            '5',
-            'd6c95a2b-bd81-4e7b-a0f8-d15d8f28d097'
-        );
-
-*   generic:
-
 
 ---------------------------------------------------------------------------------------------------
 VIEW DATA
@@ -438,7 +469,7 @@ COUNT RECORDS IN A TABLE
 
 GET MATCHING RECORDS
 --------------------
-    
+
 
 
 ---------------------------------------------------------------------------------------------------
