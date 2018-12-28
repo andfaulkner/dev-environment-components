@@ -1,0 +1,10 @@
+<snippet>
+  <description>If statement that runs on a mac</description>
+<content><![CDATA[
+if [ "\$(uname -s)" = "Darwin" ]; then
+    ${0:echo "I'm a Mac!"}
+fi
+]]></content>
+  <tabTrigger>if_is_mac</tabTrigger>
+  <scope>source.shell</scope>
+</snippet>

@@ -1,0 +1,10 @@
+<snippet>
+  <description>If statement that runs on a mac</description>
+<content><![CDATA[
+if [ "\$(expr substr \$(uname -s) 1 5)" == "Linux" ]; then
+    ${0:echo "I'm a Linux box!"}
+fi
+]]></content>
+  <tabTrigger>if_linux</tabTrigger>
+  <scope>source.shell</scope>
+</snippet>
