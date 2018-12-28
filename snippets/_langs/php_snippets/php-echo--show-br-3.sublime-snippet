@@ -1,0 +1,8 @@
+<snippet>
+  <description>Echo br tag</description>
+<content><![CDATA[
+echo "<br />";
+]]></content>
+  <tabTrigger>br_echo</tabTrigger>
+  <scope>embedding.php</scope>
+</snippet>
