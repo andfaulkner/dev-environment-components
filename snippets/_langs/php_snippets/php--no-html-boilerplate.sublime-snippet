@@ -1,0 +1,12 @@
+<snippet>
+  <description>PHP boilerplate file with no HTML</description>
+<content><![CDATA[
+<?php
+    error_reporting(E_ALL);
+    ${0:print_r("OK");}
+?>
+
+]]></content>
+  <tabTrigger>boiler_php_nohtml</tabTrigger>
+  <scope>embedding.php</scope>
+</snippet>
