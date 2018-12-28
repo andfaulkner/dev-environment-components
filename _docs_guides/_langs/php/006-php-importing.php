@@ -1,7 +1,7 @@
 <?php
     error_reporting(E_ALL);
 
-    print_r("<br />OK: 005-php-importing-classes-namespaces-scripts.php loaded");
+    print_r("<br />OK: 006-php-importing.php loaded");
 
     //
     // Use require_once() or require() almost always for importing other files.
@@ -57,6 +57,15 @@
     // Show constant defined by define() function.
     print_r($cur_file . "NUM_MAMMAL_LEGS: " . constant("NUM_MAMMAL_LEGS"));
 
-    // This wouldn't work:  print_r(\PHPConstantsLearning\NUM_MAMMAL_LEGS);
+    // Show class constant from class exported from php-importing.php.
+    // Note that no instantiation is required to use it.
+    echo "<br />IS FRUIT DELICIOUS? ";
+    echo \PHPConstantsLearning\Fruit::IS_DELICIOUS;
 
+    echo "<br /><br />";
+
+    // Run static method returning hashmap of all class constants from class
+    // exported in php-importing.php.
+    // Note that no instantiation is required to use it.
+    print_r(\PHPConstantsLearning\Fruit::get_constants());
 ?>
