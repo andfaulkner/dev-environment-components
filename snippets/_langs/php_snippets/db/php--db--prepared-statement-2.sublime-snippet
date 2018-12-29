@@ -1,0 +1,11 @@
+<snippet>
+  <description>Create new prepared statement w DB connection obj</description>
+<content><![CDATA[
+\$${1:prepared_statement} = \$${2:connection}->prepare(
+    ${3:"INSERT INTO todo_items VALUES (?, ?, false)"}
+);
+\$${1}->execute([${4:\$value_to_insert_at_1st_?__eg_new_todo, \$insert_at_2nd_?}]);
+]]></content>
+  <tabTrigger>prepared_statement</tabTrigger>
+  <scope>source.php</scope>
+</snippet>
