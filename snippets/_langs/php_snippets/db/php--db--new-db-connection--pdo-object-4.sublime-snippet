@@ -1,0 +1,8 @@
+<snippet>
+  <description>Create new DB connection w PDO object</description>
+<content><![CDATA[
+\$${1:connection} = new PDO("${2:pgsql}:host=${3:localhost};dbname=${4:todos};", "${5:username_eg_andrew}");
+]]></content>
+  <tabTrigger>pdo_new_db_connection</tabTrigger>
+  <scope>source.php</scope>
+</snippet>
