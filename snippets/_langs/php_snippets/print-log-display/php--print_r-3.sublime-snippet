@@ -1,0 +1,8 @@
+<snippet>
+  <description>Print an object to the screen</description>
+<content><![CDATA[
+print_r(${1:\$something_to_display_content_of});
+]]></content>
+  <tabTrigger>prr</tabTrigger>
+  <scope>source.php</scope>
+</snippet>
