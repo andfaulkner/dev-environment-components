@@ -1,0 +1,8 @@
+<snippet>
+  <description>Remove 1st item from array and return result (non-mutative)</description>
+<content><![CDATA[
+array_slice(${1:\$array_name}, 1);
+]]></content>
+  <tabTrigger>array_tail</tabTrigger>
+  <scope>source.php</scope>
+</snippet>
