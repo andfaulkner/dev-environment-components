@@ -1,0 +1,8 @@
+<snippet>
+  <description>Return true if value is set</description>
+<content><![CDATA[
+isset(${1:\$_POST["some-argument"]})
+]]></content>
+  <tabTrigger>is_set</tabTrigger>
+  <scope>embedding.php</scope>
+</snippet>
