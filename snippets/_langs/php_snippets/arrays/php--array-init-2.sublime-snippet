@@ -1,0 +1,8 @@
+<snippet>
+  <description>Remove last item from array and return result (non-mutative)</description>
+<content><![CDATA[
+array_slice(${1:\$array_name}, 0, -1);
+]]></content>
+  <tabTrigger>arr_init</tabTrigger>
+  <scope>source.php</scope>
+</snippet>
