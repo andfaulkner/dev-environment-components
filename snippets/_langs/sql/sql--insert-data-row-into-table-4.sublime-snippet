@@ -1,0 +1,18 @@
+<snippet>
+	<description>Insert data row into table</description>
+	<content><![CDATA[
+INSERT INTO ${1:table_name} (
+    ${2:row_name_1,
+    row_name_2,
+    row_3,
+    ...}
+) VALUES (
+    ${3:'row',
+    TRUE,
+    22,
+    ...}
+);
+]]></content>
+	<tabTrigger>data_add</tabTrigger>
+	<scope>source.sql</scope>
+</snippet>
