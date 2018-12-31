@@ -1,0 +1,12 @@
+<snippet>
+	<description>Create new SQL table w data and ID cols. Takes any # cols.</description>
+	<content><![CDATA[
+CREATE TABLE ${1:table_name} (
+    ${2:id} SERIAL PRIMARY KEY,
+	${3:col1_name} ${4:col1_type_eg_TEXT_INTEGER_JSON},
+	${5:col2_name} ${6:eg_CHAR(36)_VARCHAR(255)_BOOLEAN_BYTEA_DATE_TIME_NUMERIC}${0}
+);
+]]></content>
+	<tabTrigger>table_new</tabTrigger>
+	<scope>source.sql</scope>
+</snippet>
