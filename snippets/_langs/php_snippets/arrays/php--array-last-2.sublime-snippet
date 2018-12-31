@@ -1,0 +1,8 @@
+<snippet>
+  <description>Get last item from array (non-mutative)</description>
+<content><![CDATA[
+end(${1:\$some_array});
+]]></content>
+  <tabTrigger>array_last</tabTrigger>
+  <scope>source.php</scope>
+</snippet>
