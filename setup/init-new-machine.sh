@@ -17,7 +17,13 @@ elif [ "$(expr substr $(uname -s) 1 5)" == "Linux" ]; then
 fi
 
 #----- Install Homebrew -----#
-/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+# Install homebrew if not present already
+[ ! $(which brew) ] && \
+    /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)" || \
+    echo "Brew already installed - continuing..."
+
+# Exit init script if Homebrew install failed
+[ ! $(which brew) ] && echo "Brew installation failed - exiting init script" && exit 1
 
 #----- Install neovim / nvim -----#
 brew install neovim
