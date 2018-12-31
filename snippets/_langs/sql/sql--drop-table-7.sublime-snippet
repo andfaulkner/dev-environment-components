@@ -1,0 +1,7 @@
+<snippet>
+    <description>Drop a table (SQL)</description>
+    <content><![CDATA[
+DROP TABLE ${1:table_name};
+]]></content>
+    <tabTrigger>sql_drop_table</tabTrigger>
+</snippet>
