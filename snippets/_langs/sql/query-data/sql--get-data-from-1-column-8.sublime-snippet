@@ -1,0 +1,8 @@
+<snippet>
+	<description>Return data from 1 column in 1 table</description>
+	<content><![CDATA[
+SELECT ${1:column_name} FROM ${2:table_name};
+]]></content>
+	<tabTrigger>select_1_col_data</tabTrigger>
+    <scope>source.sql</scope>
+</snippet>

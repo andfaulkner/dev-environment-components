@@ -1,0 +1,8 @@
+<snippet>
+	<description>Return all data from table</description>
+	<content><![CDATA[
+SELECT * FROM ${1:table_name};
+]]></content>
+	<tabTrigger>select_table_data_all</tabTrigger>
+    <scope>source.sql</scope>
+</snippet>
