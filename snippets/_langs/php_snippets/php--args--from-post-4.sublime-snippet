@@ -1,0 +1,8 @@
+<snippet>
+  <description>Get argument from POST request</description>
+<content><![CDATA[
+\$_POST[${1:"some-post-argument"}]
+]]></content>
+  <tabTrigger>req_arg_post</tabTrigger>
+  <scope>embedding.php</scope>
+</snippet>
