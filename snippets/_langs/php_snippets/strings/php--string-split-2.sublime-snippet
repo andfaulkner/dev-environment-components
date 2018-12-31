@@ -1,0 +1,8 @@
+<snippet>
+  <description>Split string at regex matches</description>
+<content><![CDATA[
+preg_split("/${1:regex}/", ${2:"string-to-split"});
+]]></content>
+  <tabTrigger>split_str</tabTrigger>
+  <scope>source.php</scope>
+</snippet>
