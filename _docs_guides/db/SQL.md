@@ -153,12 +153,20 @@ CREATE INDEX
 ON keyword
 ==========
 
-INSERT
+UNIQUE constraint
+=================
+Create column that only allows one of each value.
 
+
+INSERT
+======
+
+
+Misc
+====
 autoincrement value in table
 ----------------------------
-
-		SEQUENCE role_id_seq
+	SEQUENCE role_id_seq
     ALTER TABLE roles ALTER id SET DEFAULT NEXTVAL('role_id_seq');
 
 *  henceforth, the default value of column 'id' will be [previous row's id] + 1.
