@@ -93,6 +93,9 @@ brew install phplint
 composer global require "squizlabs/php_codesniffer=*"
 composer global require "phpmd/phpmd=*"
 
+# Install proper php shell (psysh)
+pushd ~/bin; wget https://psysh.org/psysh; chmod +x psysh; popd;
+
 #----- Install DBs (databases) -----#
 ### postgres + helpers ###
 brew install postgresql
