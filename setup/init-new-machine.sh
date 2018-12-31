@@ -76,6 +76,7 @@ brew install crystal-lang
 brew install jq
 brew install llvm@4
 brew install docker
+brew install nginx
 
 #----- Install package managers -----#
 brew install leiningen
