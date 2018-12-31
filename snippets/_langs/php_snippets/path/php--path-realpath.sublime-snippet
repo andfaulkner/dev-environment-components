@@ -1,0 +1,8 @@
+<snippet>
+  <description>Resolve string (w /.. etc) to usable file path (.. requires / b4)</description>
+<content><![CDATA[
+realpath(${1:\$_SERVER['DOCUMENT_ROOT'] . '/..'});
+]]></content>
+  <tabTrigger>path_join</tabTrigger>
+  <scope>source.php</scope>
+</snippet>
