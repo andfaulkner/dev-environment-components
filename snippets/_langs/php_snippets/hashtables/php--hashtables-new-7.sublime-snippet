@@ -1,0 +1,12 @@
+<snippet>
+  <description>Create new PHP hashtable</description>
+<content><![CDATA[
+\$${1:var_name} = [${4/.+/
+    /}${2:"key"} => ${3:"value"}${4/.+/,
+    /}${4:"k2" => "v2",
+    "k3" => "v3"}${4/.+/
+/}];
+]]></content>
+  <tabTrigger>map_new</tabTrigger>
+  <scope>source.php</scope>
+</snippet>
