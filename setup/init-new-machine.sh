@@ -14,7 +14,10 @@ elif [ "$(expr substr $(uname -s) 1 5)" == "Linux" ]; then
     echo "Linux detected"
     # Install Ruby
     sudo apt-get install ruby-full
+    # Exit if Ruby install failed
+    [ ! $(which ruby) ] && echo "Ruby installation failed - exiting init script" && exit 1
 fi
+
 
 #----- Install Homebrew -----#
 # Install homebrew if not present already
@@ -24,6 +27,9 @@ fi
 
 # Exit init script if Homebrew install failed
 [ ! $(which brew) ] && echo "Brew installation failed - exiting init script" && exit 1
+
+# Perform a post-install cleanup
+brew cleanup
 
 #----- Install neovim / nvim -----#
 brew install neovim
@@ -47,7 +53,7 @@ brew install hub # Github extensions to git
 brew install subversion
 brew install maven
 
-# Generate TOC for git README
+# Install package to generate TOC for git README
 mkdir ~/bin 2>/dev/null
 pushd ~/bin
 wget https://raw.githubusercontent.com/ekalinin/github-markdown-toc/master/gh-md-toc
