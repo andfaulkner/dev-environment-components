@@ -1,0 +1,8 @@
+<snippet>
+  <description>Return true (1) if regex match found (for if statements)</description>
+<content><![CDATA[
+preg_match("/${1:some_pattern}/", ${2:"string with pattern possibly in it"});
+]]></content>
+  <tabTrigger>str_match</tabTrigger>
+  <scope>source.php</scope>
+</snippet>
