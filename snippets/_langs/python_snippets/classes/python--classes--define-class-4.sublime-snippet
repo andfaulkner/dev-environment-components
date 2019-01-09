@@ -5,7 +5,10 @@ class ${1:MyClass}${2/.+/\(/g}${2:OptionalClassToInheritFrom}${2/.+/\)/g}:
     """${3:docstring for class}"""${5/.+/
 
     def __init__\(self/}${4/.+/, /}${4:args}${5/.+/\):
-        /}${5:self.some_instance_var = arg}
+        /}${5:self.some_instance_var = arg}${6/.+/
+
+    def /}${6:some_method(self, args):
+        print(args)}
 
 ]]></content>
   <tabTrigger>define_class</tabTrigger>
