@@ -1,0 +1,10 @@
+<snippet>
+  <description>Open file at path and read line-by-line</description>
+<content><![CDATA[
+with open(${1:path_to_file}) as ${2:fp}:
+    for line in ${2}.readlines():
+        print(line)
+]]></content>
+  <tabTrigger>read_file_line_by_line</tabTrigger>
+  <scope>source.python.3</scope>
+</snippet>
