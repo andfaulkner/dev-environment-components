@@ -112,8 +112,10 @@ brew install bash-completion
 
 #----- Python setup installations  -----#
 pip3 install --upgrade pip
-pip install --upgrade setuptools
+pip3 install --upgrade setuptools
 pip3 install --upgrade neovim # Get Neovim working with Python
+pip3 install --upgrade rerun
+pip3 install --upgrade pexpect
 
 #----- Go installation & setup -----#
 echo "--- SETTING UP GO (golang) ---"
