@@ -1,0 +1,8 @@
+<snippet>
+  <description>Import subprocess, providing powerful spawning</description>
+<content><![CDATA[
+import subprocess
+]]></content>
+  <tabTrigger>impsubprocess</tabTrigger>
+  <scope>source.python</scope>
+</snippet>
