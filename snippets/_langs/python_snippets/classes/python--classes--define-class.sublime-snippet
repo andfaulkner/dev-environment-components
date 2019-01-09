@@ -1,0 +1,13 @@
+<snippet>
+  <description>Create a basic new class definition</description>
+<content><![CDATA[
+class ${1:MyClass}${2/.+/\(/g}${2:OptionalClassToInheritFrom}${2/.+/\)/g}:
+    """${3:docstring for class}"""${5/.+/
+
+    def __init__\(self/}${4/.+/, /}${4:args}${5/.+/\):
+        /}${5:self.some_instance_var = arg}
+
+]]></content>
+  <tabTrigger>classdef</tabTrigger>
+  <scope>source.python</scope>
+</snippet>
