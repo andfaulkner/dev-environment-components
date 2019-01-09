@@ -123,7 +123,7 @@ TEMPLATES_DIR="$SNIPPETS_DIR/scripts/sh/templates"
 
 # LANGUAGE- OR TOOL-SPECIFIC SCRIPT SOURCES
 source "$MISC_CLI_OPTIONS"
-source "$HOME/.profile"
+# source "$HOME/.profile"
 
 # EDIT OTHER SCRIPT SOURCES
 alias bashrc_sysportable='vim "$PORTABLE_BASHRC_ADDITIONS"'
@@ -144,7 +144,7 @@ alias bashrc_sys_util='vim "$SNIPPETS_DIR/scripts/sh/sys_util_scripts.sh"'
 alias bashrc='vim "$PORTABLE_BASHRC_ADDITIONS"'
 
 # LOAD 'MODULES'
-source "$SNIPPETS_DIR/scripts/sh/bash_modules/module_File.sh"
+source "$SNIPPETS_DIR/scripts/sh/bash_modules/module_file.sh"
 
 # LOAD 'MANUALS'
 PATH=$PATH:"$SNIPPETS_DIR/custom-manuals"
@@ -404,9 +404,9 @@ fi
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
 
 # load .bashrc file
-case $- in
-   *i*) source ~/.bashrc
-esac
+# case $- in
+#    *i*) source ~/.bashrc
+# esac
 
 alias vimrc="vim ~/.config/nvim/init.vim"
 
