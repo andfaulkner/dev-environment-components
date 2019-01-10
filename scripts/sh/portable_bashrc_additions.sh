@@ -393,15 +393,22 @@ function fsizekb {
 alias filesizekb="fsizekb"
 
 ############# Bash completion ###############
-if [[ -f $(brew --prefix)/etc/bash_completion ]]; then
-	. $(brew --prefix)/etc/bash_completion
+
+if [ "$(uname -s)" = "Darwin" ]; then
+    . $(brew --prefix)/etc/bash_completion
 fi
 
+# if [ -f $(brew --prefix)/etc/bash_completion ]; then
+	# . $(brew --prefix)/etc/bash_completion
+# fi
+
+
 [ -f /usr/local/etc/bash_completion ] && . /usr/local/etc/bash_completion
+[ -f /usr/local/etc/bash-completion ] && . /usr/local/etc/bash-completion
 #############################################
 
 # Load RVM into a shell session *as a function*
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
+[ -s "$HOME/.rvm/scripts/rvm" ] && source "$HOME/.rvm/scripts/rvm"
 
 # load .bashrc file
 # case $- in
