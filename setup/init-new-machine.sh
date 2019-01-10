@@ -23,6 +23,9 @@ elif [ "$(expr substr $(uname -s) 1 5)" == "Linux" ]; then
     # Exit if Ruby install failed
     [ ! $(which ruby) ] && echo "Ruby installation failed - exiting init script" && exit 1
 
+    # Install PHP for apache
+    sudo apt install php-pear php-fpm php-dev php-zip php-curl php-xmlrpc php-gd php-mysql php-mbstring php-xml libapache2-mod-php
+
     __INSTALL_CMD__="sudo apt-get"
     __CLEAN_CMD__="cleanup"
 fi
