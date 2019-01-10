@@ -103,3 +103,15 @@ _____ _ __ _______________
 2.  password <<< never actually set
 3.  group ID (GID)
 4.  Group List: list of usernames that are members of the group
+
+add & modify users/privileges
+=============================
+## adduser
+Example:
+
+    adduser new_user_name_here
+
+## usermod
+Example - adds a user to the sudo group:
+
+    usermod -aG sudo user_name_here
