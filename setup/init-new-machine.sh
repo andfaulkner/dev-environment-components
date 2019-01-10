@@ -4,10 +4,16 @@ wget -O ~/merge_history.bash http://raw.github.com/pts/pts-merge-history-bash/ma
 touch ~/.merged_bash_history
 echo "Successfully installed script for merging bash history between terminal windows!"
 
+# System-specific install command
+__INSTALL_CMD__=""
+__CLEAN_CMD__=""
+
 ################## INSTALLATIONS ##################
 # If Mac
 if [ "$(uname)" == "Darwin" ]; then
     echo "Mac detected"
+    __INSTALL_CMD__="brew"
+    __CLEAN_CMD__="brew"
 
 # If Linux
 elif [ "$(expr substr $(uname -s) 1 5)" == "Linux" ]; then
@@ -16,7 +22,11 @@ elif [ "$(expr substr $(uname -s) 1 5)" == "Linux" ]; then
     sudo apt-get install ruby-full
     # Exit if Ruby install failed
     [ ! $(which ruby) ] && echo "Ruby installation failed - exiting init script" && exit 1
+
+    __INSTALL_CMD__="sudo apt-get"
+    __CLEAN_CMD__="cleanup"
 fi
+
 
 
 #----- Install Homebrew -----#
@@ -29,29 +39,29 @@ fi
 [ ! $(which brew) ] && echo "Brew installation failed - exiting init script" && exit 1
 
 # Perform a post-install cleanup
-brew cleanup
+$__INSTALL_CMD__ $__CLEAN_CMD__
 
 #----- Install neovim / nvim -----#
-brew install neovim
+$__INSTALL_CMD__ install neovim
 
 #----- Install CLI utils -----#
-brew install ack
-brew install tree
-brew install gettext
-brew install moreutils   # Adds sponge, etc - see https://rentes.github.io/unix/utilities/2015/07/27/moreutils-package
-brew install readline
-brew install watchman
+$__INSTALL_CMD__ install ack
+$__INSTALL_CMD__ install tree
+$__INSTALL_CMD__ install gettext
+$__INSTALL_CMD__ install moreutils   # Adds sponge, etc - see https://rentes.github.io/unix/utilities/2015/07/27/moreutils-package
+$__INSTALL_CMD__ install readline
+$__INSTALL_CMD__ install watchman
 
 #----- Install web utils -----#
-brew install googler # Search google from the CLI
-brew install curl
-brew install wget
+$__INSTALL_CMD__ install googler # Search google from the CLI
+$__INSTALL_CMD__ install curl
+$__INSTALL_CMD__ install wget
 
 #----- Install source control systems -----#
-brew install git
-brew install hub # Github extensions to git
-brew install subversion
-brew install maven
+$__INSTALL_CMD__ install git
+$__INSTALL_CMD__ install hub # Github extensions to git
+$__INSTALL_CMD__ install subversion
+$__INSTALL_CMD__ install maven
 
 # Install package to generate TOC for git README
 mkdir ~/bin 2>/dev/null
@@ -61,35 +71,35 @@ chmod a+x gh-md-toc
 popd
 
 #----- Install languages -----#
-brew install gradle
-brew install python
-brew install python3 # Also installs pip
-brew install groovy
-brew install erlang
-brew install elixir
-brew install kotlin
-brew install sass/sass/sass
-brew install crystal
-brew install crystal-lang
+$__INSTALL_CMD__ install gradle
+$__INSTALL_CMD__ install python
+$__INSTALL_CMD__ install python3 # Also installs pip
+$__INSTALL_CMD__ install groovy
+$__INSTALL_CMD__ install erlang
+$__INSTALL_CMD__ install elixir
+$__INSTALL_CMD__ install kotlin
+$__INSTALL_CMD__ install sass/sass/sass
+$__INSTALL_CMD__ install crystal
+$__INSTALL_CMD__ install crystal-lang
 
 #----- Install misc programming utils -----#
-brew install jq
-brew install llvm@4
-brew install docker
-brew install nginx
+$__INSTALL_CMD__ install jq
+$__INSTALL_CMD__ install llvm@4
+$__INSTALL_CMD__ install docker
+$__INSTALL_CMD__ install nginx
 
 #----- Install package managers -----#
-brew install leiningen
+$__INSTALL_CMD__ install leiningen
 
 #----- Install PHP tooling -----#
-brew install composer
+$__INSTALL_CMD__ install composer
 touch ~/.composer
 touch ~/.composer/vendor
 touch ~/.composer/vendor/bin
 
 # Make composer work for PHP 7.3 by shutting PHP JIT off
 replace ";pcre.jit=1" "pcre.jit=0" -- /usr/local/etc/php/7.3/php.ini 2>/dev/null
-brew install phplint
+$__INSTALL_CMD__ install phplint
 
 composer global require "squizlabs/php_codesniffer=*"
 composer global require "phpmd/phpmd=*"
@@ -99,16 +109,16 @@ pushd ~/bin; wget https://psysh.org/psysh; chmod +x psysh; popd;
 
 #----- Install DBs (databases) -----#
 ### postgres + helpers ###
-brew install postgresql
-brew install pgbadger
-brew install redis
-brew install sqlite
-brew install mongodb
+$__INSTALL_CMD__ install postgresql
+$__INSTALL_CMD__ install pgbadger
+$__INSTALL_CMD__ install redis
+$__INSTALL_CMD__ install sqlite
+$__INSTALL_CMD__ install mongodb
 
 #----- Install completion utils -----#
-brew install pip-completion
-brew install gem-completion
-brew install bash-completion
+$__INSTALL_CMD__ install pip-completion
+$__INSTALL_CMD__ install gem-completion
+$__INSTALL_CMD__ install bash-completion
 
 #----- Python setup installations  -----#
 pip3 install --upgrade pip
@@ -119,7 +129,7 @@ pip3 install --upgrade pexpect
 
 #----- Go installation & setup -----#
 echo "--- SETTING UP GO (golang) ---"
-brew install go
+$__INSTALL_CMD__ install go
 if grep -Fq 'export GOPATH=$HOME/projects/go' ~/.bash_profile; then
     echo "go config already present, not adding again"
 else
@@ -135,14 +145,14 @@ fi
 
 #################### VERSION MANAGERS & PLATFORMS ####################
 #----- Install rbenv (ruby version manager) -----#
-brew install rbenv
+$__INSTALL_CMD__ install rbenv
 
 #----- Install nvm -----#
 curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.8/install.sh | bash
 
 #----- Install NodeJS - latest LTS version & set it as default version -----#
-brew uninstall --ignore-dependencies node icu4c
-brew install node
+$__INSTALL_CMD__ uninstall --ignore-dependencies node icu4c
+$__INSTALL_CMD__ install node
 nvm install --lts
 nvm ls | ack '\s+v' | tail -n1 | awk '{print $2}'
 
