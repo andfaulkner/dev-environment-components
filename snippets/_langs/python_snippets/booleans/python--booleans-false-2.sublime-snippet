@@ -1,0 +1,8 @@
+<snippet>
+  <description>Boolean false</description>
+<content><![CDATA[
+False
+]]></content>
+  <tabTrigger>false</tabTrigger>
+  <scope>source.python</scope>
+</snippet>

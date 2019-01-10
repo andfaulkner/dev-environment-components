@@ -1,0 +1,8 @@
+<snippet>
+  <description>Boolean true</description>
+<content><![CDATA[
+True
+]]></content>
+  <tabTrigger>boolean_true</tabTrigger>
+  <scope>source.python</scope>
+</snippet>
