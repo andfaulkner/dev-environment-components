@@ -158,12 +158,25 @@ nvm ls | ack '\s+v' | tail -n1 | awk '{print $2}'
 
 
 ########################## GLOBAL NPM MODULES ##########################
-npm install -g npm-upgrade
-npm install -g ts-node
-npm install -g typescript
-npm install -g yarn
-npm install -g nodemon
+# Code cleanup
 npm install -g prettier
+
+# Package management
+npm install -g npm-upgrade
+npm install -g yarn
+
+# Typescript
+npm install -g typescript
+npm install -g ts-node
+
+# Node daemons
+npm install -g nodemon
+npm install -g pm2
+
+# Automatically change node version on visiting directory with .node-version file
+npm install -g avn avn-nvm avn-n
+avn setup
+
 
 ########################## SETTINGS ##########################
 #----- Enable scrolling in less -----#
