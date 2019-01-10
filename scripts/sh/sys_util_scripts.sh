@@ -4,7 +4,7 @@ alias dirsizes='du -s * | sort -nr'
 alias get_pid='awk "{print \$2}"'
 
 function procfind {
-    ps aux | ack $1 | ack -v "/usr/bin/ack" 
+    ps aux | ack $1 | ack -v "/usr/bin/ack"
 }
 
 function procfindpid {
@@ -140,3 +140,14 @@ alias pastestream="pbpaste"
 alias copy_to_cb="pbcopy"
 alias paste_from_cb="pbpaste"
 
+#=== FUNCTION ==========================================================
+#        NAME:  tab_title
+# DESCRIPTION:  Change the tab title to the given parameter
+#   @PARAM $1:  NEW_TITLE What title to change the tab to
+#               Run with no param to reset to default
+#=======================================================================
+function tab_title {
+    location "sys_util_scripts.sh"
+    local NEW_TITLE=$1
+    PROMPT_COMMAND="echo -en \"\033]0;$NEW_TITLE\a\""
+}
