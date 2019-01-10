@@ -1,0 +1,10 @@
+<snippet>
+  <description>Run given number of times</description>
+<content><![CDATA[
+for ${1:cur_num} in range(${2:start_val_eg__0}, ${3:end_val_eg__5}):
+    ${0:print(${1})}
+
+]]></content>
+  <tabTrigger>for_loop_repeat_num_times</tabTrigger>
+  <scope>source.python</scope>
+</snippet>
