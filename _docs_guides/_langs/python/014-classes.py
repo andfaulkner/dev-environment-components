@@ -38,6 +38,7 @@ print(meeka.breed)
 # ------- Create class with static property ------- #
 class Aardvark:
     """An aardvark animal"""
+
     num_aardvarks = 0
 
     def __init__(self):
@@ -51,3 +52,31 @@ johnny = Aardvark()
 
 # -- Reference static property -- #
 print("Number of aardvarks:", Aardvark.num_aardvarks)
+# => Number of aardvarks: 2
+
+
+# ------- Create class with static method ------- #
+class Alpaca:
+    """An alpaca animal"""
+
+    num_alpacas = 0
+
+    def __init__(self):
+        print("Created an alpaca!")
+        Alpaca.num_alpacas = Alpaca.num_alpacas + 1
+
+    @staticmethod
+    def herd_noise():
+        for x in range(0, Alpaca.num_alpacas):
+            print("YEEEEEUUUUU!")
+
+
+carl = Alpaca()
+jack = Alpaca()
+jodie = Alpaca()
+
+# -- Call static method -- #
+Alpaca.herd_noise()
+# => YEEEEEUUUUU!
+# => YEEEEEUUUUU!
+# => YEEEEEUUUUU!
