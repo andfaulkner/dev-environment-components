@@ -1,0 +1,8 @@
+<snippet>
+  <description>Import shutil module (for e.g. file handling like copy)</description>
+<content><![CDATA[
+import shutil
+]]></content>
+  <tabTrigger>import_shutil</tabTrigger>
+  <scope>source.python</scope>
+</snippet>
