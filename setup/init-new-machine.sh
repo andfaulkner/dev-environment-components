@@ -66,6 +66,9 @@ $__INSTALL_CMD__ install hub # Github extensions to git
 $__INSTALL_CMD__ install subversion
 $__INSTALL_CMD__ install maven
 
+# Configure git - set up git to globally store login data
+git config --global credential.helper store
+
 # Install package to generate TOC for git README
 mkdir ~/bin 2>/dev/null
 pushd ~/bin
