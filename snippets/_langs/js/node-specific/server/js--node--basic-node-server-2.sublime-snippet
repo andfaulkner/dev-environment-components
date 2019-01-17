@@ -1,0 +1,27 @@
+<snippet>
+  <description>Minimal node server (0 dependencies)</description>
+<content><![CDATA[
+#!/usr/bin/env node
+
+const http = require('http');
+
+// Create a server object
+const server = http
+    .createServer((req, res) => {
+        if (req.url === `/`) {
+            res.write(`Hello user! Root path!`);
+        } else {
+            res.write(`Hello user! Non-root path!`);
+        }
+        res.end();
+    })
+
+    // Server object listens for requests on port 8080
+    .listen(8080, () => {
+        console.log(`\nWow. So server. Very running. Much bootup success. Such win.\n`);
+    });
+
+]]></content>
+  <tabTrigger>server_node_minimal</tabTrigger>
+  <scope>source.js, source.ts, source.jsx, source.tsx</scope>
+</snippet>
