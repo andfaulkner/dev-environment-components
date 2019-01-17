@@ -1,0 +1,34 @@
+#!/usr/bin/env sh
+
+cat <<-'TERMINAL_MANUAL_QUICK_REF'
+
+---------------------------------------------------------------------------------
+** PORTS **
+---------------------------------------------------------------------------------
+20 / 21 ::      FTP ports (21 = FTP control; 20 = data transfer)
+22      ::      SSH port (including SSH to AWS)
+23      ::      Telnet port
+
+25      ::      SMTP - email
+                - Transfers email between mail servers (src -> destination)
+                - Used to send email to a mail system
+
+80      ::      HTTP  - web server
+443     ::      HTTPS - secure web server
+
+# Version control
+3690    ::      Default svn port
+9418    ::      Default git port
+
+# Databases
+1433    ::      SQL server default port
+3306    ::      MySQL and MariaDB default port
+5432    ::      PostgreSQL DB default
+5984    ::      CouchDB default
+6379    ::      Redis default
+27017   ::      MongoDB - main default    - when running "mongod" & "mongos"
+27018   ::      MongoDB - sharded default - when running "mongod --shardsvr"
+
+---------------------------------------------------------------------------------
+
+TERMINAL_MANUAL_QUICK_REF
