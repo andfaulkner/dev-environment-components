@@ -1,0 +1,8 @@
+<snippet>
+  <description>Get doc string from a function</description>
+<content><![CDATA[
+${1:fn_to_get_doc_from}.__doc__
+]]></content>  
+  <tabTrigger>doc_of_fn</tabTrigger>
+  <scope>source.python</scope>
+</snippet>
