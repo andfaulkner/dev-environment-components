@@ -130,6 +130,22 @@ pip3 install --upgrade neovim # Get Neovim working with Python
 pip3 install --upgrade rerun
 pip3 install --upgrade pexpect
 
+# Install AWS
+pip3 install --upgrade awscli
+pip3 install --upgrade aws-shell
+pip3 install awscli --ignore-installed six
+
+# Install AWS completions permanently (to .bash_profile)
+complete -C aws_completer aws
+if grep -Fq 'complete -C aws_completer aws' ~/.bash_profile; then
+    echo "AWS completions already present, not adding again"
+else
+    echo "" >> ~/.bash_profile
+    echo "#----- Add AWS completions -----#" >> ~/.bash_profile
+    echo "complete -C aws_completer aws" >> ~/.bash_profile
+    echo "" >> ~/.bash_profile
+fi
+
 #----- Go installation & setup -----#
 echo "--- SETTING UP GO (golang) ---"
 $__INSTALL_CMD__ install go
