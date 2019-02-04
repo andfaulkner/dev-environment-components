@@ -38,22 +38,22 @@ alias berspec_cleanslate="RAILS_ENV=test bundle exec rake db:setup; bundle exec 
 alias rake_no_err="RUBYOPT=-W0 rake"
 
 # run with defined server
-alias rs="killakr3; bundle exec rails server"
-alias rsv="bundle exec rails server -p 3001"
-alias rsakr="killakr3; bundle exec rails server"
+alias rlss="killakr3; bundle exec rails server"
+alias rlssv="bundle exec rails server -p 3001"
+alias rlssakr="killakr3; bundle exec rails server"
 # run with puma server
-alias rsp="bundle exec rails server puma"
+alias rlssp="bundle exec rails server puma"
 alias beg="bundle exec rake db:test:prepare; bundle exec guard"
-alias rc="bundle exec rails console"
-alias rcs="bundle exec rails console --sandbox" # any changes made are rolled back on exit
-alias rg="bundle exec rails generate"
-alias rgc="bundle exec rails generate controller"
-alias rdm="bundle exec rake db:migrate"
-alias rgmig="bundle exec rails generate migration" #AddSomecolumnToSometable #colname:coltype
-alias rdr="bundle exec rake db:rollback"
-alias rreset="bundle exec rake db:migrate:reset"
-alias rwipem="bundle exec rails destroy model" #NameOfModel
-alias rwipec="bundle exec rails destroy controller" #NameOfController #action_1 #action_2 ... #action_n
+alias rlsc="bundle exec rails console"
+alias rlscs="bundle exec rails console --sandbox" # any changes made are rolled back on exit
+alias rlsg="bundle exec rails generate"
+alias rlsgc="bundle exec rails generate controller"
+alias rlsdm="bundle exec rake db:migrate"
+alias rlsgmig="bundle exec rails generate migration" #AddSomecolumnToSometable #colname:coltype
+alias rlsdr="bundle exec rake db:rollback"
+alias rlsreset="bundle exec rake db:migrate:reset"
+alias rlswipem="bundle exec rails destroy model" #NameOfModel
+alias rlswipec="bundle exec rails destroy controller" #NameOfController #action_1 #action_2 ... #action_n
 
 alias resetakr3="ps aux | ack rails | ack -v '3001' | awk '{print \$2}' | xargs kill -9; ps aux | ack rails | ack -v '3001'; bundle exec rails server"
 alias killrakeworker="ps aux | ack 'rake jobs:work' | awk '{print \$2}' | xargs kill -9; ps aux | ack 'rake jobs:work'"
