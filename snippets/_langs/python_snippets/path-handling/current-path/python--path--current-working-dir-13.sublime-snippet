@@ -2,7 +2,7 @@
   <description>Output full path to current working dir (requires import os) </description>
 <content><![CDATA[
 os.getcwd()${0}
-]]></content>  
-  <tabTrigger>cwd_path</tabTrigger>
+]]></content>
+  <tabTrigger>pwd_path</tabTrigger>
   <scope>source.python</scope>
 </snippet>
