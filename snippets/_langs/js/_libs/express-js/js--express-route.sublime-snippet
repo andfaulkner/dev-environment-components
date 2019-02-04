@@ -1,10 +1,10 @@
 <snippet>
-	<description>create an express route</description>
+	<description>Create an express route</description>
 	<content><![CDATA[
-app.get('${1:route_eg_/home}', (req, res) => {
-	${2}
-	res.send('response here');
+${1:app}.${2:get_OR_put_OR_post}(`${3:route_to_handle_eg /home OR /* OR ^/[^\.]+\$}`, (req, res) => {
+    ${4:res.send(`response here`);}
 });
+
 ]]></content>
 	<tabTrigger>expr_route</tabTrigger>
 	<scope>source.js, source.ts, source.jsx, source.tsx</scope>
