@@ -1,0 +1,8 @@
+<snippet>
+  <description>Get args list (req `import sys`)</description>
+<content><![CDATA[
+sys.argv
+]]></content>
+  <tabTrigger>args_list</tabTrigger>
+  <scope>source.python</scope>
+</snippet>
