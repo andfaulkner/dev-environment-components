@@ -31,7 +31,6 @@ elif [ "$(expr substr $(uname -s) 1 5)" == "Linux" ]; then
 fi
 
 
-
 #----- Install Homebrew -----#
 # Install homebrew if not present already
 [ ! $(which brew) ] && \
@@ -44,16 +43,25 @@ fi
 # Perform a post-install cleanup
 $__INSTALL_CMD__ $__CLEAN_CMD__
 
+# Install mac-specific brew modules
+if [ "$(uname -s)" = "Darwin" ]; then
+    # Install FUSE for Mac & sshfs from brew
+    brew cask install osxfuse
+fi
+
 #----- Install neovim / nvim -----#
 $__INSTALL_CMD__ install neovim
 
 #----- Install CLI utils -----#
 $__INSTALL_CMD__ install ack
+$__INSTALL_CMD__ install ripgrep
+$__INSTALL_CMD__ install the_silver_searcher
 $__INSTALL_CMD__ install tree
 $__INSTALL_CMD__ install gettext
 $__INSTALL_CMD__ install moreutils   # Adds sponge, etc - see https://rentes.github.io/unix/utilities/2015/07/27/moreutils-package
 $__INSTALL_CMD__ install readline
 $__INSTALL_CMD__ install watchman
+$__INSTALL_CMD__ install sshfs
 
 #----- Install web utils -----#
 $__INSTALL_CMD__ install googler # Search google from the CLI
@@ -194,6 +202,10 @@ npm install -g ts-node
 # Node daemons
 npm install -g nodemon
 npm install -g pm2
+
+# JS/TS linters
+npm install -g tslint
+npm install -g eslint
 
 # Automatically change node version on visiting directory with .node-version file
 npm install -g avn avn-nvm avn-n
