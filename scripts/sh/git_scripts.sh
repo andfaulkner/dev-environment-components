@@ -85,7 +85,7 @@ function gat {
 
     if [[ $NAME_OF_FILE_TO_ADD == *.ts ]] || [[ $NAME_OF_FILE_TO_ADD == *.tsx ]]; then
         git add "*$NAME_OF_FILE_TO_ADD" 2>/dev/null
-    fi  
+    fi
 }
 
 #=== FUNCTION =============================================================
@@ -135,7 +135,7 @@ function gac {
 
     if [[ $NAME_OF_FILE_TO_ADD == *.css ]] || [[ $NAME_OF_FILE_TO_ADD == *.scss ]]; then
         git add "*$NAME_OF_FILE_TO_ADD" 2>/dev/null
-    fi  
+    fi
 }
 
 alias gas="gac"
@@ -184,13 +184,13 @@ function g_branches {
         sed 's/remotes\/origin\//RO - /' |
         sed 's/^\*\s/CUR - /' |
         sort -nr |
-	sed 's/CUR\s-\s/--------------------------------------------------------------------------------------\n CURRENT BRANCH:\n   * /g';	
+	sed 's/CUR\s-\s/--------------------------------------------------------------------------------------\n CURRENT BRANCH:\n   * /g';
     echo $DASHESLINE;
     echo '';
 }
 
 function g_diff_br_remote {
-  git diff $1 remotes/origin/$1  
+  git diff $1 remotes/origin/$1
 }
 
 function g_diff_cur_rem {
@@ -233,8 +233,8 @@ alias g_tree='git log --pretty=format:"%h %ad | %s%d [%an]" --graph --date=short
 
 # get the remote repository location
 alias g_repo="git remote -v | xargs ruby -e \"
-    puts 'git@andfaulkner.github.com:andfaulkner' + ARGV.find { |arg| 
-        /^git@.*:/.match(arg) 
+    puts 'git@andfaulkner.github.com:andfaulkner' + ARGV.find { |arg|
+        /^git@.*:/.match(arg)
     }.split('/').last
 \" 2>/dev/null"
 
