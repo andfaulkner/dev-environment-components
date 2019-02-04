@@ -1,0 +1,13 @@
+<snippet>
+  <description>Create React semantic UI btn group (fluid = fit 2 container)</description>
+<content><![CDATA[
+<Button.Group${1/.+/ /g}${1:basic vertical compact fluid floated='left|right'
+    color="red|blue|etc" className={\}
+    size="mini|tiny|small|medium|large|big|huge|massive" }>
+    ${0:<Button>Content 1</Button>
+    <Button>Content 2</Button>}
+</Button.Group>
+]]></content>
+  <tabTrigger>rsu_btngrp</tabTrigger>
+  <scope>source.js, source.ts, source.jsx, source.tsx</scope>
+</snippet>

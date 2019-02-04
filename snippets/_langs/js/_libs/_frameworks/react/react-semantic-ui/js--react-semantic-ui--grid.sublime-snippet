@@ -1,0 +1,13 @@
+<snippet>
+  <description>Create React semantic UI Grid</description>
+<content><![CDATA[
+<Grid${1/.+/ /g}${1:centered stretched(so contents reach full grid height) celled
+    divided|divided={"vertically"\}(have dividers betw rows)
+    padded|padded={"horizontally"|"vertically"\}
+    columns={1|3|..|10|..|'equal'\}(equal: resizes rows to split available width evenly)}>
+    ${0}
+</Grid>
+]]></content>
+  <tabTrigger>rsu_grid</tabTrigger>
+  <scope>source.js, source.ts, source.jsx, source.tsx</scope>
+</snippet>
