@@ -1,0 +1,8 @@
+<snippet>
+  <description>Import os module</description>
+<content><![CDATA[
+import os
+]]></content>
+  <tabTrigger>impos</tabTrigger>
+  <scope>source.python</scope>
+</snippet>
