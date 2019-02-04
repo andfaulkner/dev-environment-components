@@ -1,12 +1,11 @@
 <snippet>
-  <description>Handler for all requests (of all types) sent to a given path</description>
+  <description>Handler for requests of all types sent to a given path</description>
 <content><![CDATA[
-app.get(${1:'/path/to/handle'}, (req, res) => {
-  ${2://code to run when any request made to ${1:'/path/to/handle'}. e.g.
-  // console.log("in route ${1:'/path/to/handle'}");
-  // res.send('Hello World!');}
-});${0}
-]]></content>  
+${1:app}.all(`${2:route_to_handle_eg /home OR /* OR ^/[^\.]+\$ OR /:param}`, (req, res) => {
+    ${3:res.send(`response here`);}
+});
+
+]]></content>
   <tabTrigger>expr_route_all</tabTrigger>
   <scope>source.js, source.ts, source.jsx, source.tsx</scope>
 </snippet>
