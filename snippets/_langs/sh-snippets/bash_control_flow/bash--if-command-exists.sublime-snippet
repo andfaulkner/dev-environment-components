@@ -1,0 +1,10 @@
+<snippet>
+  <description>If runnable command found</description>
+<content><![CDATA[
+if [ "\$(command -v ${1:runnable_command_to_search_for})" ]; then
+    ${0:echo "do this if command found"}
+fi
+]]></content>
+  <tabTrigger>if_command_found</tabTrigger>
+  <scope>source.shell</scope>
+</snippet>
