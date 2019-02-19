@@ -1,0 +1,12 @@
+<snippet>
+  <description>If string not found in file</description>
+<content><![CDATA[
+if grep -Fq "${1:String 2 seek. Esc \$. and \", but / OK.}" "${2:\$HOME/file/to/search.sh}"; then
+    :
+else
+    ${0:echo "Do if string NOT found in file"}
+fi
+]]></content>
+  <tabTrigger>if_file_doesnt_have_string</tabTrigger>
+  <scope>source.shell</scope>
+</snippet>
