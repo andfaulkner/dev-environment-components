@@ -1,0 +1,10 @@
+<snippet>
+	<description>If statement: block runs if path isn't a dir</description>
+	<content><![CDATA[
+if [ ! -d ${1:~/test/if/this/path/is/a/dir} ]; then
+    ${2:# do this if the path isn't a directory}
+fi
+]]></content>
+	<tabTrigger>if_dir_doesnt_exist</tabTrigger>
+	<scope>source.shell</scope>
+</snippet>
