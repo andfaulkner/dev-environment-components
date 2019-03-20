@@ -1,0 +1,8 @@
+<snippet>
+  <description>Import general core-imports pseudo-module</description>
+<content><![CDATA[
+import {${1:clientConfig}} from 'core-imports${2}';
+]]></content>
+  <tabTrigger>imp_coreimports</tabTrigger>
+  <scope>source.js, source.ts, source.jsx, source.tsx</scope>
+</snippet>
