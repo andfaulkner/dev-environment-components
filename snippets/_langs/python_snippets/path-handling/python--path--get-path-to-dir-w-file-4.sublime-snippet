@@ -1,0 +1,8 @@
+<snippet>
+  <description>Get parent dir of file, given full path string</description>
+<content><![CDATA[
+${1:path_to_dir_w_file}${1/.+/ = /}os.path.dirname(os.path.realpath(${2:abs_input_path}))
+]]></content>
+  <tabTrigger>file_get_parent_dir</tabTrigger>
+  <scope>source.python</scope>
+</snippet>
