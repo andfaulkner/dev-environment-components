@@ -13,7 +13,7 @@
 # Create effectively-infinite-length bash history file
 HISTSIZE=500000 HISTFILESIZE=5000000
 # Set history timestamp format
-# HISTTIMEFORMAT='%F %T '
+HISTTIMEFORMAT='%F %T '
 
 parse_git_branch() {
      git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ (\1)/'
