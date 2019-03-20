@@ -1,0 +1,8 @@
+<snippet>
+  <description>Redirect both stderr and stdout to file</description>
+<content><![CDATA[
+${1:cmd_to_redirect_both_stderr_and_stdout_from} &> ${0:file_to_redirect_to}
+]]></content>
+  <tabTrigger>stdout_and_stderr_pipe_to_file</tabTrigger>
+  <scope>source.shell</scope>
+</snippet>
