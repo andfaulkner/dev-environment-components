@@ -3,9 +3,9 @@
 <content><![CDATA[
 /******************************************** LOGGING *********************************************/
 import {logFactory, Styles} from 'mad-logs/lib/shared';
-const log = logFactory(`$TM_FILENAME`, Styles.${1:lakeLouise});
+const log = logFactory(__filename.replace(`\${__dirname}/`, ``), Styles.${1:lakeLouise});
 
-]]></content>  
+]]></content>
   <tabTrigger>madlog_browser_log_setup</tabTrigger>
   <scope>source.js, source.ts, source.jsx, source.tsx</scope>
 </snippet>

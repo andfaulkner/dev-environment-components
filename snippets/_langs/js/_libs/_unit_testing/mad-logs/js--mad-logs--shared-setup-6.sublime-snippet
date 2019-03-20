@@ -3,9 +3,9 @@
 <content><![CDATA[
 /******************************************** LOGGING *********************************************/
 import {logFactory, Styles} from 'mad-logs/lib/shared';
-const log = logFactory(`${2:$TM_FILENAME}`, Styles.${1:farmerBrown});
+const log = logFactory(__filename.replace(`\${__dirname}/`, ``), Styles.${1:farmerBrown});
 
-]]></content>  
+]]></content>
   <tabTrigger>imp_madlogs_shared</tabTrigger>
   <scope>source.js, source.ts, source.jsx, source.tsx</scope>
 </snippet>
