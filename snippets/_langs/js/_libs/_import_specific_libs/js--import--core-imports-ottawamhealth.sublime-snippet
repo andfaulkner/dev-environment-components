@@ -1,8 +1,0 @@
-<snippet>
-  <description>Import Ottawa mHealth's core imports module</description>
-<content><![CDATA[
-import {${1:MobxDevtool, translate}} from '@ottawamhealth/core-imports';
-]]></content>  
-  <tabTrigger>impcoreimports</tabTrigger>
-  <scope>source.js, source.ts, source.jsx, source.tsx</scope>
-</snippet>
