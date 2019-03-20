@@ -1,0 +1,16 @@
+<snippet>
+  <description>Import semantic-ui-react library</description>
+<content><![CDATA[
+import {${1:
+    Segment, Container, Divider, Grid,
+    Table,
+    Header,
+    Icon, Image, Button,
+    Input, Label, Search,
+    Breadcrumb, Popup,
+    Menu, Dropdown
+}} from 'semantic-ui-react';
+]]></content>
+  <tabTrigger>import_sur</tabTrigger>
+  <scope>source.js, source.ts, source.jsx, source.tsx</scope>
+</snippet>
