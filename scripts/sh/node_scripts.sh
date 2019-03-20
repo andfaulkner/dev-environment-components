@@ -304,7 +304,13 @@ alias nu="nukenode"
 alias ns="npm start"
 alias nns="nu; npm start"
 alias nrt="npm run test"
-alias nrc="npm run clean"
+alias nr_clean="npm run clean"
+alias nrclean="npm run clean"
+
+alias nrc="npm run watch-client"
+alias nrclient="npm run watch-client"
+alias nrs="npm run watch-server"
+alias nrr="npm run watch-run"
 
 # view running NodeJS processes
 alias anynode='ps aux | ack node'
