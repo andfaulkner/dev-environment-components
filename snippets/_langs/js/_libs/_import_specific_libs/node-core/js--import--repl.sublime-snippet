@@ -1,8 +1,8 @@
 <snippet>
   <description>Import Node repl module</description>
 <content><![CDATA[
-import * as repl from 'repl';${0}
-]]></content>  
+import repl from 'repl';${0}
+]]></content>
   <tabTrigger>imprepl</tabTrigger>
   <scope>source.js, source.ts, source.jsx, source.tsx</scope>
 </snippet>

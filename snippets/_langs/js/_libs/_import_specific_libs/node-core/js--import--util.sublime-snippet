@@ -1,8 +1,8 @@
 <snippet>
   <description>Import Node util module</description>
 <content><![CDATA[
-import * as util from 'util';${0}
-]]></content>  
+import util from 'util';${0}
+]]></content>
   <tabTrigger>imputil</tabTrigger>
   <scope>source.js, source.ts, source.jsx, source.tsx</scope>
 </snippet>

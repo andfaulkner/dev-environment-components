@@ -1,8 +1,8 @@
 <snippet>
   <description>Import Node path module</description>
 <content><![CDATA[
-import * as path from 'path';${0}
-]]></content>  
+import path from 'path';${0}
+]]></content>
   <tabTrigger>imp_path</tabTrigger>
   <scope>source.js, source.ts, source.jsx, source.tsx</scope>
 </snippet>
