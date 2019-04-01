@@ -1,13 +1,18 @@
 [
   // Import handling
-  { "keys": [ "alt+i", "alt+l" ], "command": "list_imports"          },
+  { "keys": [ "alt+i", "alt+l" ], "command": "list_imports" },
 
   // Hop to location in line based on match
   { "keys": ["command+alt+n"],       "command": "jump_to_interactive"                            },
   { "keys": ["command+alt+shift+n"], "command": "jump_to_interactive", "args": { "extend": true }},
 
   // Run prettier
-  { "keys": [ "command+ctrl+t" ], "command": "js_prettier" },
+  { "keys": [ "command+ctrl+t" ], "command": "js_prettier"},
+  {
+    "keys": [ "command+ctrl+t" ],
+    "command": "pep8_autoformat",
+    "context": [{ "key": "selector", "operator": "equal", "operand": "source.python" }]
+  },
 
   // Copy path relative to project root
   { "keys": [ "command+ctrl+shift+p" ], "command": "side_bar_copy_path_absolute_from_project" },
