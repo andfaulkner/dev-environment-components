@@ -1,8 +1,8 @@
 <snippet>
   <description>'COMPONENTS' header comment</description>
 <content><![CDATA[
-/******************************************* COMPONENTS *******************************************/
-]]></content>  
+/*------------------------------------------ COMPONENTS ------------------------------------------*/
+]]></content>
   <tabTrigger>hdcomponents</tabTrigger>
   <scope>source.js, source.ts, source.jsx, source.tsx</scope>
 </snippet>

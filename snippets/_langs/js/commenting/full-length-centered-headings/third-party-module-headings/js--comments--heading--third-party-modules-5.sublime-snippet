@@ -1,8 +1,8 @@
 <snippet>
   <description>'THIRD-PARTY MODULES' header comment</description>
 <content><![CDATA[
-/************************************** THIRD-PARTY MODULES ***************************************/
-]]></content>  
+/*------------------------------------- THIRD-PARTY MODULES --------------------------------------*/
+]]></content>
   <tabTrigger>hdthirdpartymodules</tabTrigger>
   <scope>source.js, source.ts, source.jsx, source.tsx</scope>
 </snippet>

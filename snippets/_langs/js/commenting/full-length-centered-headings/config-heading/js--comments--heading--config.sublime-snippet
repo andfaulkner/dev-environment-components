@@ -1,8 +1,8 @@
 <snippet>
   <description>'CONFIG' header comment</description>
 <content><![CDATA[
-/********************************************* CONFIG *********************************************/
-]]></content>  
+/*-------------------------------------------- CONFIG --------------------------------------------*/
+]]></content>
   <tabTrigger>hdconfig</tabTrigger>
   <scope>source.js, source.ts, source.jsx, source.tsx</scope>
 </snippet>

@@ -1,8 +1,8 @@
 <snippet>
   <description>'IMPORTS' header comment</description>
 <content><![CDATA[
-/******************************************** IMPORTS *********************************************/
-]]></content>  
+/*------------------------------------------- IMPORTS --------------------------------------------*/
+]]></content>
   <tabTrigger>hdi</tabTrigger>
   <scope>source.js, source.ts, source.jsx, source.tsx</scope>
 </snippet>

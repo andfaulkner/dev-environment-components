@@ -1,0 +1,8 @@
+<snippet>
+  <description>'LIFECYCLE' subheader comment</description>
+<content><![CDATA[
+/*------------------------------ LIFECYCLE -------------------------------*/
+]]></content>
+  <tabTrigger>hdrctlifecycle</tabTrigger>
+  <scope>source.js, source.ts, source.jsx, source.tsx</scope>
+</snippet>

@@ -1,8 +1,8 @@
 <snippet>
   <description>'COMPONENTS' header comment</description>
 <content><![CDATA[
-/******************************************* COMPONENTS *******************************************/
-]]></content>  
+/*------------------------------------------ COMPONENTS ------------------------------------------*/
+]]></content>
   <tabTrigger>hd_cmp</tabTrigger>
   <scope>source.js, source.ts, source.jsx, source.tsx</scope>
 </snippet>

@@ -1,8 +1,8 @@
 <snippet>
   <description>'PROJECT IMPORTS' header comment</description>
 <content><![CDATA[
-/**************************************** PROJECT IMPORTS *****************************************/
-]]></content>  
+/*--------------------------------------- PROJECT IMPORTS ----------------------------------------*/
+]]></content>
   <tabTrigger>hdprojimp</tabTrigger>
   <scope>source.js, source.ts, source.jsx, source.tsx</scope>
 </snippet>

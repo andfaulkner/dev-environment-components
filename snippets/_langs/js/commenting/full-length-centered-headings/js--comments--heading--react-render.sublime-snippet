@@ -1,0 +1,8 @@
+<snippet>
+  <description>'RENDER' subheader comment</description>
+<content><![CDATA[
+/*-------------------------------- RENDER --------------------------------*/
+]]></content>
+  <tabTrigger>hdrender</tabTrigger>
+  <scope>source.js, source.ts, source.jsx, source.tsx</scope>
+</snippet>

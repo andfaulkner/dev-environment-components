@@ -1,0 +1,8 @@
+<snippet>
+  <description>'EVENTS' subheader comment</description>
+<content><![CDATA[
+/*-------------------------------- EVENTS --------------------------------*/
+]]></content>
+  <tabTrigger>hdevents</tabTrigger>
+  <scope>source.js, source.ts, source.jsx, source.tsx</scope>
+</snippet>
