@@ -131,8 +131,11 @@ function searchhist {
 alias history_cmds_only="history | awk '{\$1=\"\"; print \$0}' | awk '{\$1=\$1}1'"
 #########################################################################
 
-#count number of results a search returns
+# Count number of results a search returns
 alias countf='find . | wc -l'
+
+# Count number of lines in output
+alias countlines='wc -l'
 
 #=== FUNCTION ==========================================================
 #        NAME:  searchfn
