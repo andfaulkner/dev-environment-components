@@ -10,7 +10,7 @@ import {${TM_FILENAME/([a-zA-Z])?([a-zA-Z0-9]+)?[-_]?[-_]?([a-zA-Z])?([a-zA-Z0-9
 
 /******************************************** LOGGING *********************************************/
 import {logFactory, Styles} from 'mad-logs/lib/shared';
-const log = logFactory(`${TM_FILENAME}`, Styles.zebra);
+const log = logFactory(__filename.replace(`${__dirname}/`, ``), Styles.zebra);
 
 /**************************************** TYPE DEFINITIONS ****************************************/
 interface ${TM_FILENAME/([a-zA-Z])?([a-zA-Z0-9]+)?[-_]?[-_]?([a-zA-Z])?([a-zA-Z0-9]+)?[-_]?[-_]?([a-zA-Z])?([a-zA-Z0-9]+)?[-_]?[-_]?([a-zA-Z])?([a-zA-Z0-9]+)?[-_]?[-_]?([a-zA-Z])?([a-zA-Z0-9]+)?[-_]?[-_]?([a-zA-Z])?([a-zA-Z0-9]+)?container\..*/\U$1\L$2\U$3\L$4\U$5\L$6\U$7\L$8\U$9\L$10\U$11\L$12/g}SharedProps {}
@@ -35,7 +35,7 @@ export class ${1:${TM_FILENAME/([a-zA-Z])?([a-zA-Z0-9]+)?[-_]?[-_]?([a-zA-Z])?([
     }
 };
 
-]]></content>  
+]]></content>
     <tabTrigger>rct_ts_new_class_container</tabTrigger>
     <scope>source.tsx</scope>
 </snippet>
