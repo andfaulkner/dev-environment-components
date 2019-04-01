@@ -8,7 +8,7 @@ import {observe, inject} from 'mobx-react';
 
 /******************************************** LOGGING *********************************************/
 import {logFactory, Styles} from 'mad-logs/lib/shared';
-const log = logFactory(`${TM_FILENAME}`, Styles.zebra);
+const log = logFactory(__filename.replace(`${__dirname}/`, ``), Styles.zebra);
 
 /**************************************** TYPE DEFINITIONS ****************************************/
 interface ${1}Props {}
@@ -28,7 +28,7 @@ export class ${1:${TM_FILENAME/([a-zA-Z])?([a-zA-Z0-9]+)?[-_]?[-_]?([a-zA-Z])?([
         )
     }
 };
-]]></content>  
+]]></content>
   <tabTrigger>rct_ts_new_class</tabTrigger>
   <scope>source.tsx</scope>
 </snippet>
