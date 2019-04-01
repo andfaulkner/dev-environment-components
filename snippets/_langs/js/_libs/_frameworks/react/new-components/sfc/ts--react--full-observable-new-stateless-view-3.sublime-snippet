@@ -12,7 +12,7 @@ import {observer, inject} from 'mobx-react';
 
 /******************************************** LOGGING *********************************************/
 import {logFactory, Styles} from 'mad-logs/lib/shared';
-const log = logFactory(`${TM_FILENAME}`, Styles.bracelet);
+const log = logFactory(__filename.replace(`${__dirname}/`, ``), Styles.bracelet);
 
 /**************************************** TYPE DEFINITIONS ****************************************/
 interface ${1:${TM_FILENAME/([a-zA-Z])?([a-zA-Z0-9]+)?[-_]?[-_]?([a-zA-Z])?([a-zA-Z0-9]+)?[-_]?[-_]?([a-zA-Z])?([a-zA-Z0-9]+)?[-_]?[-_]?([a-zA-Z])?([a-zA-Z0-9]+)?[-_]?[-_]?([a-zA-Z])?([a-zA-Z0-9]+)?[-_]?[-_]?([a-zA-Z])?([a-zA-Z0-9]+)?\..*/\U$1\L$2\U$3\L$4\U$5\L$6\U$7\L$8\U$9\L$10\U$11\L$12/g}}Props extends PolyglotProps {
@@ -34,7 +34,7 @@ export const ${1} = observer((props?: ${1:NameOfComponent}Props) => {
 
 ${1}.displayName = `${1}`;
 
-]]></content>  
+]]></content>
   <tabTrigger>rct_full_view</tabTrigger>
   <scope>source.tsx</scope>
 </snippet>
