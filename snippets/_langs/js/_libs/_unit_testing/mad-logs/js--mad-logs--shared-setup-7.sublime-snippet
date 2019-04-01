@@ -1,7 +1,7 @@
 <snippet>
   <description>Set mad-logs up for isomorphic use</description>
 <content><![CDATA[
-/******************************************** LOGGING *********************************************/
+/*------------------------------------------- LOGGING --------------------------------------------*/
 import {logFactory, Styles} from 'mad-logs/lib/shared';
 const log = logFactory(__filename.replace(`\${__dirname}/`, ``), Styles.${1:joy});
 
