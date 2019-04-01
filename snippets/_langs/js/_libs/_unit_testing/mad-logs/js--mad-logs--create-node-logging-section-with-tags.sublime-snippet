@@ -1,7 +1,7 @@
 <snippet>
   <description>Node-specific mad-logs logger instance setup section</description>
 <content><![CDATA[
-/******************************************** LOGGING *********************************************/
+/*------------------------------------------- LOGGING --------------------------------------------*/
 import {buildFileTag, nodeLogFactory, colors} from 'mad-logs/lib/node';
 const log = nodeLogFactory(buildFileTag('\${TM_FILENAME}', colors.${1:green.bgWhite}));
 ${0}
