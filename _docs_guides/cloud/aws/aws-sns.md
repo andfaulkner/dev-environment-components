@@ -31,3 +31,11 @@
     group iOS (push notifications), Android (push notifications), and SMS recipients
 -   One publish to a topic delivers appropriately formatted copies of your
     message to each subscriber.
+
+## More info
+
+Getting started with AWS SNS
+    https://docs.aws.amazon.com/sns/latest/dg/sns-getting-started.html
+
+Tutorial: Publishing Amazon SNS Messages Privately from Amazon VPC
+    https://docs.aws.amazon.com/sns/latest/dg/sns-vpc-tutorial.html

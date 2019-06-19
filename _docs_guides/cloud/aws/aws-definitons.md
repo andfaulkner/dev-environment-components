@@ -113,6 +113,22 @@
 -   Send messages (SMS, email, push notifications, messages to HTTP endpoints, etc)
     out to various endpoints & "topics" grouping endpoints into categories (e.g. mobile devices)
 
+## Elastic Transcoder
+
+- Converts files to different media formats, in the cloud.
+
+## API Gateway
+
+-   Fully managed service that makes it easy for devs to public, maintain, monitor, & secure APIs
+
+-   Basically a doorway into your AWS environment.
+
+-   Lets you create an API that acts as a front door for apps to access data,
+    services, business logic, etc from your backend services e.g.:
+        -   Code running on AWS Lambda
+        -   Any web application
+        -   Applications running on EC2 (Amazon Elastic Compute Cloud)
+
 ---
 
 # Additional modules to do (minimum):
