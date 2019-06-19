@@ -1,0 +1,8 @@
+<snippet>
+  <description>Import random module</description>
+<content><![CDATA[
+import random
+]]></content>
+  <tabTrigger>import_random</tabTrigger>
+  <scope>source.python</scope>
+</snippet>
