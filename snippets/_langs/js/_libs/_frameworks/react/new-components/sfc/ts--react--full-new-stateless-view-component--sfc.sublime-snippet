@@ -1,30 +1,30 @@
 <snippet>
   <description>New 'view' type stateless functional component (container-wrapped) - TS</description>
 <content><![CDATA[
-/********************************************* ASSETS *********************************************/
+/*-------------------------------------------- ASSETS --------------------------------------------*/
 const s = require('./${TM_FILENAME/(.+?)(\-((container)|(view))\.tsx)/\1/g}.scss');
 
-/************************************** THIRD-PARTY MODULES ***************************************/
+/*------------------------------------- THIRD-PARTY MODULES --------------------------------------*/
 import React from 'react';
 import cn from 'classnames';
 import {observer, inject} from 'mobx-react';
 
-/**************************************** PROJECT MODULES *****************************************/
+/*--------------------------------------- PROJECT MODULES ----------------------------------------*/
 import {${1:${TM_FILENAME/([a-zA-Z])?([a-zA-Z0-9]+)?[-_]?[-_]?([a-zA-Z])?([a-zA-Z0-9]+)?[-_]?[-_]?([a-zA-Z])?([a-zA-Z0-9]+)?[-_]?[-_]?([a-zA-Z])?([a-zA-Z0-9]+)?[-_]?[-_]?([a-zA-Z])?([a-zA-Z0-9]+)?[-_]?[-_]?([a-zA-Z])?([a-zA-Z0-9]+)?\..*/\U$1\L$2\U$3\L$4\U$5\L$6\U$7\L$8\U$9\L$10\U$11\L$12/g}}Props} from './${TM_FILENAME/(.+)(-view)\..+|.*/$1/:name}-container';
 
-/******************************************** LOGGING *********************************************/
+/*------------------------------------------- LOGGING --------------------------------------------*/
 import {logFactory, Styles} from 'mad-logs/lib/shared';
-const log = logFactory(__filename.replace(`${__dirname}/`, ``), Styles.aquarium);
+const log = logFactory(__filename.replace(`\${__dirname}/`, ``), Styles.aquarium);
 
-/********************************************* EXPORT *********************************************/
+/*-------------------------------------------- EXPORT --------------------------------------------*/
 /**
- * ${2:UI of ...DESCRIPTION...}
+ * ${2:UI of ${1}.}
  */
 export const ${1} = observer((props?: ${1:NameOfComponent}Props) => {
     log.verbose(`Rendering ${1} with props:`, props);
     return (
         <div>
-            ${0:Inside ${1} stateless functional component, in ${1}.tsx.}
+            ${0:Inside ${1} view}
         </div>
     );
 });
