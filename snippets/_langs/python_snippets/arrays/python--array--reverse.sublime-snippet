@@ -1,0 +1,8 @@
+<snippet>
+  <description>Reverse an array (mutably). Doesn't return it - mutates only</description>
+<content><![CDATA[
+${1:some_array}.reverse()
+]]></content>
+  <tabTrigger>arr_reverse</tabTrigger>
+  <scope>source.python</scope>
+</snippet>

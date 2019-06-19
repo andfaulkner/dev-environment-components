@@ -1,0 +1,8 @@
+<snippet>
+  <description>Get length of array/list</description>
+<content><![CDATA[
+len(${1:some_array})
+]]></content>
+  <tabTrigger>arr_len</tabTrigger>
+  <scope>source.python</scope>
+</snippet>

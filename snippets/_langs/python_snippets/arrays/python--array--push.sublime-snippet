@@ -1,0 +1,8 @@
+<snippet>
+  <description>Add item to end of array</description>
+<content><![CDATA[
+${1:some_array}.append(${2:val_to_add})
+]]></content>
+  <tabTrigger>arr_push</tabTrigger>
+  <scope>source.python</scope>
+</snippet>
