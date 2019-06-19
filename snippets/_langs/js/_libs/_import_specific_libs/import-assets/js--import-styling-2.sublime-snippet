@@ -1,9 +1,9 @@
 <snippet>
   <description>Import styling for current component (in scss file of same name)</description>
 <content><![CDATA[
-/******************************************** STYLING *********************************************/
+/*------------------------------------------- STYLING --------------------------------------------*/
 const s = require('./${1:${TM_FILENAME/(.+)\..+|.*/$1/:name}}.scss');
-]]></content>  
+]]></content>
   <tabTrigger>impstyling</tabTrigger>
   <scope>source.js, source.ts, source.jsx, source.tsx</scope>
 </snippet>
