@@ -1,0 +1,8 @@
+<snippet>
+  <description>Import saveFile module for browser</description>
+<content><![CDATA[
+import saveFile from 'save-file/browser'
+]]></content>
+  <tabTrigger>imp_save_file_browser</tabTrigger>
+  <scope>source.js, source.ts, source.jsx, source.tsx</scope>
+</snippet>
