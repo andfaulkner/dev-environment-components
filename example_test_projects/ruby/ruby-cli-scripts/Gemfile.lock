@@ -102,7 +102,7 @@ GEM
     pg (0.18.4)
     pkg-config (1.1.7)
     powerpack (0.1.1)
-    puma (3.4.0)
+    puma (3.12.2)
     rack (2.0.0.rc1)
       json
     rack-test (0.6.3)
@@ -178,6 +178,7 @@ GEM
       actionpack (>= 4.0)
       activesupport (>= 4.0)
       sprockets (>= 3.0.0)
+    table_print (1.5.6)
     thor (0.19.1)
     thread_safe (0.3.5)
     tilt (2.0.5)
@@ -213,13 +214,14 @@ DEPENDENCIES
   jquery-rails
   listen (~> 3.0.5)
   pg (~> 0.18)
-  puma (~> 3.0)
+  puma (~> 3.12)
   rails (>= 5.0.0.rc2, < 5.1)
   rspec
   rubocop
   sass-rails (~> 5.0)
   spring
   spring-watcher-listen (~> 2.0.0)
+  table_print
   trollop
   turbolinks (~> 5.x)
   tzinfo-data
