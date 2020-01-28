@@ -1,0 +1,30 @@
+<snippet>
+  <description>New react SFC file (Typescript)</description>
+<content><![CDATA[
+/*------------------------------------- THIRD-PARTY MODULES --------------------------------------*/
+import React from 'react';
+import cn from 'classnames';
+
+/*--------------------------------------- PROJECT MODULES ----------------------------------------*/
+
+/*------------------------------------------- LOGGING --------------------------------------------*/
+import {logFactory, Styles} from 'mad-logs/lib/shared';
+const log = logFactory(__filename.replace(`\${__dirname}/`, ``), Styles.${2:cult});
+
+/*--------------------------------------- TYPE DEFINITIONS ---------------------------------------*/
+
+/*-------------------------------------------- EXPORT --------------------------------------------*/
+/**
+ * ${4:${1} component}
+ */
+export const ${1:${TM_FILENAME/([a-zA-Z])?([a-zA-Z0-9]+)?[-_]?[-_]?([a-zA-Z])?([a-zA-Z0-9]+)?[-_]?[-_]?([a-zA-Z])?([a-zA-Z0-9]+)?[-_]?[-_]?([a-zA-Z])?([a-zA-Z0-9]+)?[-_]?[-_]?([a-zA-Z])?([a-zA-Z0-9]+)?[-_]?[-_]?([a-zA-Z])?([a-zA-Z0-9]+)?\..*/\U$1\L$2\U$3\L$4\U$5\L$6\U$7\L$8\U$9\L$10\U$11\L$12/g}} = (${3:props: {\}}) => {
+    ${0:return(
+    );}
+};
+
+${1}.displayName = `${1}`;
+
+]]></content>
+  <tabTrigger>rct_sfc_new_file</tabTrigger>
+  <scope>source.js, source.ts, source.jsx, source.tsx</scope>
+</snippet>
