@@ -1,8 +1,8 @@
 <snippet>
   <description>New Express router file - typescript</description>
 <content><![CDATA[
-/************************************** THIRD-PARTY MODULES ***************************************/
-import express from 'express';
+/*------------------------------------- THIRD-PARTY MODULES --------------------------------------*/
+import express, {Router, Request, Response} from 'express';
 
 import path from 'path';
 import {isSilly} from 'env-var-helpers';
@@ -10,28 +10,29 @@ import {inspect} from 'util';
 
 import {path as rootPath} from 'app-root-path';
 
-/******************************************** LOGGING *********************************************/
+/*------------------------------------------- LOGGING --------------------------------------------*/
 import {logFactory, Styles} from 'mad-logs/lib/shared';
-const log = logFactory(`api/api.ts`, Styles.bracelet);
+const log = logFactory(__filename.replace(`${__dirname}/`, ``), Styles.bracelet);
 
-/************************************ CONFIG & INITIALIZATION *************************************/
-const app: express.Router = express();
+/*----------------------------------- CONFIG & INITIALIZATION ------------------------------------*/
+const app: Router = express();
 
-/********************************************* ROUTES *********************************************/
+/*-------------------------------------------- ROUTES --------------------------------------------*/
 /**
- * POST /${2:parent/route}/${1}
+ * ${5:Handles requests to ${2}${1}}
+ * POST ${2:/}${1}
  */
-app.all('/${1:my/:route}', (req: express.Request, res: express.Response) => {
-    console.log(req.params);
-    const reqData = req.read(); // get data from params
-    console.log(reqData); // display data from params
+app.all(`/${1:my/:route-param}`, (req: Request, res: Response) => {
+    console.log(req.params); // get data from params
+    console.log(req.params[`route-param`]); // route-param param defined because of :route-param
+    console.log(req.query); // data in URL query params `?key=value`
     res.json({});
 });
 
 /**
- * @export
+ * Export new API route
  */
-export {app as ${3:${TM_FILENAME/([a-zA-Z])?([a-zA-Z0-9]+)?[-_]?[-_]?([a-zA-Z])?([a-zA-Z0-9]+)?[-_]?[-_]?([a-zA-Z])?([a-zA-Z0-9]+)?[-_]?[-_]?([a-zA-Z])?([a-zA-Z0-9]+)?[-_]?[-_]?([a-zA-Z])?([a-zA-Z0-9]+)?[-_]?[-_]?([a-zA-Z])?([a-zA-Z0-9]+)?\..*/\L$1\L$2\U$3\L$4\U$5\L$6\U$7\L$8\U$9\L$10\U$11\L$12/g}Routes}}
+export {app as ${4:${TM_FILENAME/([a-zA-Z])?([a-zA-Z0-9]+)?[-_]?[-_]?([a-zA-Z])?([a-zA-Z0-9]+)?[-_]?[-_]?([a-zA-Z])?([a-zA-Z0-9]+)?[-_]?[-_]?([a-zA-Z])?([a-zA-Z0-9]+)?[-_]?[-_]?([a-zA-Z])?([a-zA-Z0-9]+)?[-_]?[-_]?([a-zA-Z])?([a-zA-Z0-9]+)?\..*/\L$1\L$2\U$3\L$4\U$5\L$6\U$7\L$8\U$9\L$10\U$11\L$12/g}}}
 
 ]]></content>
   <tabTrigger>expr_new_router_ts</tabTrigger>
