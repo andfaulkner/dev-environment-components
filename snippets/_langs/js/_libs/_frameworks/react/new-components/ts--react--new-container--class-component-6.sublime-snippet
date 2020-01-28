@@ -40,6 +40,6 @@ export class ${1:${TM_FILENAME/([a-zA-Z])?([a-zA-Z0-9]+)?[-_]?[-_]?([a-zA-Z])?([
 };
 
 ]]></content>
-    <tabTrigger>rct_ts_new_class_container</tabTrigger>
+    <tabTrigger>rct_new_ts_container_class</tabTrigger>
     <scope>source.tsx</scope>
 </snippet>
