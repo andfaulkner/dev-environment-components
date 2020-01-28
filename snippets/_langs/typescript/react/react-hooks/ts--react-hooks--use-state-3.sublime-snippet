@@ -1,0 +1,8 @@
+<snippet>
+  <description>Create react useState hook</description>
+<content><![CDATA[
+const [${2:observableVal}, set${2/^([a-z1-9])(.+)/\U$1\E$2/}] = useState(${1:defaultVal});
+]]></content>
+  <tabTrigger>rct_usestate_hook_ts</tabTrigger>
+  <scope>source.ts, source.tsx</scope>
+</snippet>
