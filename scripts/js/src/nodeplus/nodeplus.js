@@ -5,6 +5,22 @@
 const JSDOM = require('jsdom');
 const jsDom = new JSDOM.JSDOM();
 
+/**
+ * Try to find a .nodeplus file in current directory
+ * Add all items found in it to global
+ */
+const augmentations = {};
+try {
+    const nodeplus = require(process.cwd() + `/.nodeplus`);
+    console.log(`nodeplus:`, nodeplus);
+    Object.keys(nodeplus).forEach(key => (augmentations[key] = nodeplus[key]));
+    // console.log(`augmentations:`, augmentations);
+} catch (e) {
+    console.log(`nodeplus augmentations not found`);
+}
+
+// Note that this accepts augmentations
+
 Object.defineProperty(global, 'window', {value: jsDom.window, enumerable: false});
 Object.defineProperty(global, 'document', {value: jsDom.window.document, enumerable: false});
 Object.defineProperty(global, 'navigator', {value: jsDom.window.navigator, enumerable: false});
@@ -22,6 +38,7 @@ const fs = require('fs');
 const path = require('path');
 const repl = require('repl');
 const util = require('util');
+const fetch = require('isomorphic-fetch');
 const appRootPath = require('app-root-path');
 const rootPath = appRootPath.path;
 
@@ -121,6 +138,11 @@ const nJsLine = `\n                  `;
  */
 const ctxProps = {
     // Shell
+    cd,
+    ls: {val: ls, mutable: true},
+    mv,
+    ln,
+    mkdir,
     cat,
     chmod,
     cp,
@@ -137,22 +159,20 @@ const ctxProps = {
     sort,
     tail,
     head,
-    ln,
-    mkdir,
-    mv,
     popd,
     pushd,
     // pwd,
     rm,
     sed,
-    set: set,
+    [`set`]: set,
 
     // Helper libraries
     lodash,
     moment,
     madUtils,
     m_: madUtils,
-    _: lodash,
+    ld: lodash,
+    fetch,
 
     Function,
 
@@ -161,24 +181,28 @@ const ctxProps = {
     // @ts-ignore
     getArgs: inspect.getArgs,
     keys,
-
-    // Navigation, filesystem helpers
-    cd,
-    ls: {val: ls, mutable: true}
+    ...augmentations
 };
 
 // package.json content
 if (packageJson) ctxProps.packageJson = packageJson;
 
+const descAdditions = Object.keys(augmentations).reduce((acc, key) => {
+    if (augmentations[key].__repl_description__) acc[key] = augmentations[key].__repl_description__;
+    return acc;
+}, {})
+
 /**
  * Extra descriptions for bound properties
  */
 const descriptions = {
-    _: `lodash alias`,
+    _: `Result of last command`,
+    ld: `lodash alias`,
     m_: `mad-utils alias`,
     // TODO pwd description not showing
     pwd: `Show current working directory (like pwd in bash)`,
-    Function: `Standard global has added property 'toS' for displaying as a clean string`
+    Function: `Standard global has added property 'toS' for displaying as a clean string`,
+    ...descAdditions,
 };
 
 // Attach props to REPL (repl is in repl setup)
