@@ -1,0 +1,8 @@
+<snippet>
+  <description>Get object's keys</description>
+<content><![CDATA[
+Object.keys(${2:objectToGetKeysOf})${0}
+]]></content>
+  <tabTrigger>keys_obj</tabTrigger>
+  <scope>source.js, source.ts, source.jsx, source.tsx</scope>
+</snippet>
