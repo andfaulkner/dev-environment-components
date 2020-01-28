@@ -1,44 +1,71 @@
+---
+---
+---
+
 # USERS
 
 ---
 
----
+## USERS - Get user info
 
----
+### USERS - Get current user
 
-## Current user
+-   Command: `whoami`
+-   Example output: `andrew`
 
-### Get current user
-
-Command: `whoami`
-Example output: `andrew`
-
-### Switch current user (in terminal)
-
-Command: `su - {username}` # Or input no username to switch to root
-
-### Who is user 500?
+### USERS - Who is user 500?
 
 -   The 1st "real" (non-admin etc) user on AWS Linux. Just a normal user.
--   Not found in /etc/passwd or /etc/group.
+    -   Note: sometimes it's actually 1000! (AWS)
+-   Not found in `/etc/passwd` or `/etc/group`.
+
+### USERS - Get ID of given username (UID)
+
+-   Command: `id {username}`
+-   Example output: `500`
+
+### USERS - List all users & info on them
+
+-   Command: `getent passwd`
+-   Example output:
+
+```
+root:x:0:0:root:/root:/bin/bash
+bin:x:1:1:bin:/bin:/sbin/nologin
+daemon:x:2:2:daemon:/sbin:/sbin/nologin
+```
+
+(See `/etc/group` file section below for more info)
 
 ---
 
-## Add & modify users/privileges
+## USERS - Edit user permissions
 
-### Change file owner
+### USERS - Change user's ID (UID)
 
-Command: `chown new-user ./file/or/dir/to/change/owner/of`
-Modifies what user owns a given file or directory.
+-   Command: `usermod -u {new_id} {username}`
+-   Example: `usermod -u 10000 tom`
+    -   Changes UID of user `tom` to `10000`
 
-### Create a new user
+### USERS - Switch currently active user (in terminal)
 
-Command: `adduser`
-Example: `adduser new_user_name_here`
+-   Command: `su - {username}` # Or input no username to switch to root
 
-### Add a user to the sudo group
+### USERS - Change file owner
 
-Command: `usermod -aG sudo user_name_here`
+-   Command: `chown new-user ./file/or/dir/to/change/owner/of`
+-   Modifies what user owns a given file or directory.
+
+### USERS - Create a new user
+
+-   Command: `adduser`
+-   Example: `adduser new_user_name_here`
+
+### USERS - Add a user to the sudo group
+
+-   Command: `usermod -aG sudo user_name_here`
+
+### USERS - Rename a user
 
 ---
 
@@ -48,81 +75,121 @@ Command: `usermod -aG sudo user_name_here`
 
 # GROUPS
 
-## List groups
+---
 
-### Get a list of all groups
+## GROUPS - List info on all groups
 
-Command: `groups`
+### GROUPS - Get a list of all groups
 
-Outputs list of all groups that exist. e.g. output:
+-   Command: `groups`
+-   Outputs list of all groups that exist.
 
-    andrew adm cdrom sudo dip plugdev lpadmin sambashare
+-   Example output: `andrew adm cdrom sudo dip plugdev lpadmin sambashare`
 
-### Get a list of all gids (for each group)
+### Get a list of all gids (for all groups)
 
-Command: `id`
-
-Example output:
-
-    uid=1000(andrew) gid=1000(andrew) groups=1000(andrew),4(adm),24(cdrom),27(sudo),30(dip),46(plugdev),108(lpadmin),110(sambashare)
+-   Command: `id`
+-   Example output:
+    `uid=1000(andrew) gid=1000(andrew) groups=1000(andrew),4(adm),24(cdrom),27(sudo),30(dip),46(plugdev),108(lpadmin),110(sambashare)`
 
 ---
 
-## Group info on specific user
+## GROUPS - Get single user's group info
 
-### Get a list of all groups a user is part of (names) - including supplementary groups
+### GROUPS - List all groups a user is in
 
-    groups {username}
-        # OR
-    id -GN {username}
+-   Command: `groups {username}` OR `id -GN {username}`
+    -   Outputs list of all groups user is part of, including supplementary groups
+-   Example output:
+    -   andrew : andrew adm cdrom sudo dip plugdev lpadmin sambashare
+        -   # OR (if you use the 2nd option)
+    -   andrew adm cdrom sudo dip plugdev lpadmin sambashare
 
-    - output list of all groups user is part of. e.g. output:
+### GROUPS - List all groups a specific user is in
 
-            andrew : andrew adm cdrom sudo dip plugdev lpadmin sambashare
-                # OR (if you use the 2nd option)
-            andrew adm cdrom sudo dip plugdev lpadmin sambashare
+-   Command: `id -gn {username}`
+-   Example output: `andrew`
 
-### Get specific user's group name
+### GROUPS - Get current user's group id
 
-Command: `id -gn {username}`
-Example output: `andrew`
+-   Command: `id -g`
+-   Example output: `1000`
 
-### Get current user's group id
+### GROUPS - Get specific user's group id
 
-Command: `id -g`
-Example output: `1000`
+-   Command: `id -g {username}`
+-   Example output: `1000`
 
-### Get specific user's group id
+### GROUPS - Get list of all group ids/groups a user is part of (including supplementary groups)
 
-Command: `id -g {username}`
-Example output: `1000`
-
-### Get list of all group ids/groups a user is part of (including supplementary groups)
-
-Command: `id -G {username}`
-Example output: `1000 4 24 27 30 46 108 110`
+-   Command: `id -G {username}`
+-   Example output: `1000 4 24 27 30 46 108 110`
 
 -   First group outputted is the primary group (generally?)
 -   Full list of all groups user is part of
 
-### Get specific user's group name
+### GROUPS - Get specific user's group name
 
-Command: `id -gn {username}`
-Example output: `andrew`
+-   Command: `id -gn {username}`
+-   Example output: `andrew`
 
 ---
 
-## Creating groups
+## GROUPS - Creating groups
 
-### Create new group 'common'
+### GROUPS - Create new group
 
-    sudo groupadd common
+-   Example - Create new `common` group: `sudo groupadd common`
 
-## /etc/group file
+---
+
+## GROUPS - `/etc/group` file
+
+-   See CONFIG FILES section below
+
+---
+
+---
+
+---
+
+# CONFIG FILES
+
+---
+
+## `/etc/passwd` - access with `vipw`
+
+-   Contains all custom-defined users
+-   Edit with `vipw`
+    -   provides some safeguards to ensure you don't mess it up too badly
+
+-   Example content (numbers & lines added for labelling purposes):
+
+```
+ec2-user:x:1000:1000:EC2 Default User:/home/ec2-user:/bin/bash
+|        |  |    |   \______________/ \____________/ \_______/
+|        |  |    |          |               |            |
+1        2  3    4          5               6            7
+```
+
+1.  Username
+2.  Password <<< never actually set
+3.  User ID (UID)
+4.  Group ID (GID)
+5.  User ID info (basically the comment field)
+6.  Home directory: absolute path to dir the user will be in when they log in. Defaults to `/`.
+7.  Command/shell: Absolute path of a command or shell (/bin/bash)
+
+---
+
+## `/etc/group` file
 
 -   Stores group info, defines user groups (groups users belong to)
 -   Can create new groups here
+-   Edit with `vigr`
+    -   provides some safeguards to ensure you don't mess it up too badly
 -   Example content (numbers & lines added for labelling purposes):
+
 ```
 cdrom:x:24:andrew,postgres
 |     | |  |
