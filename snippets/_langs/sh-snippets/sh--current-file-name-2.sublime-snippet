@@ -1,8 +1,8 @@
 <snippet>
-  <description>Get the name of the current file</description>
+  <description>Get the name of the current file (name only, no path)</description>
 <content><![CDATA[
-basename $0
-]]></content>  
+basename \$0
+]]></content>
   <tabTrigger>file_current</tabTrigger>
   <scope>source.shell</scope>
 </snippet>
