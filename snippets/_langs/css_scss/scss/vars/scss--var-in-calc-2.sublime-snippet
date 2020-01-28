@@ -1,0 +1,8 @@
+<snippet>
+  <description>Use calc with SCSS variable in it</description>
+<content><![CDATA[
+calc(${1:100% - }#{\$${2:var-to-use-here}});
+]]></content>
+  <tabTrigger>scss_calc_with_var</tabTrigger>
+  <scope>source.scss</scope>
+</snippet>
