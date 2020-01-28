@@ -1,0 +1,8 @@
+<snippet>
+  <description>Get list of function's params' types</description>
+<content><![CDATA[
+${1/.+/type /}${1:typeName}${1/.+/ = /}Parameters<typeof ${2:functionName}>;
+]]></content>
+  <tabTrigger>ts_util_parameters</tabTrigger>
+  <scope>source.ts, source.tsx</scope>
+</snippet>
