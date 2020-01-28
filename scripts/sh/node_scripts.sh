@@ -5,7 +5,7 @@ echo "* NodeJS scripts loading..."
 # alias nig="npm install -g"
 alias nis="npm install"
 alias nisd="npm install --save-dev"
-alias nid="npm install --save-dev"
+alias nid="nisd"
 alias nig="npm install --global"
 alias nug="npm uninstall --global"
 
@@ -462,7 +462,7 @@ alias tig="type_install_global"
 
 function tnisd {
     set -o nounset
-    (npm install $1 --save-dev) && (typings install --global dt~$1 || typings install --global npm~$1 || typings install npm~$1 || typings install dt~$1 || npm install --save @types/$1 || (echo "WARNING: NO TYPE DEFINITION FOUND FOR $1."))
+    (npm install--save-dev $1) && (typings install --global dt~$1 || typings install --global npm~$1 || typings install npm~$1 || typings install dt~$1 || npm install --save @types/$1 || (echo "WARNING: NO TYPE DEFINITION FOUND FOR $1."))
     set +o nounset
 }
 
