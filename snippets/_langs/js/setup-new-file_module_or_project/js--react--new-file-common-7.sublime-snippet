@@ -1,21 +1,21 @@
 <snippet>
   <description>New react file - common starting point</description>
 <content><![CDATA[
-/************************************** THIRD-PARTY MODULES ***************************************/
+/*------------------------------------- THIRD-PARTY MODULES --------------------------------------*/
 import React from 'react';
 import cn from 'classnames';
 
-/**************************************** PROJECT MODULES *****************************************/
+/*--------------------------------------- PROJECT MODULES ----------------------------------------*/
 
-/******************************************** LOGGING *********************************************/
+/*------------------------------------------- LOGGING --------------------------------------------*/
 import {logFactory, Styles} from 'mad-logs/lib/shared';
 const log = logFactory(`$TM_FILENAME`, Styles.${1:aquarium|bracelet|cult|hatBlock|joy|lucky|potOfGold});
 
-/**************************************** TYPE DEFINITIONS ****************************************/
+/*--------------------------------------- TYPE DEFINITIONS ---------------------------------------*/
 
-/********************************************* EXPORT *********************************************/
+/*-------------------------------------------- EXPORT --------------------------------------------*/
 
-]]></content>  
+]]></content>
   <tabTrigger>rct_file_new_basic</tabTrigger>
   <scope>source.js, source.ts, source.jsx, source.tsx</scope>
 </snippet>
