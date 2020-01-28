@@ -55,6 +55,9 @@ REMOTE REPO ("origin")
 DELETE BRANCH (BOTH LOCAL & REMOTE)
 -- Delete remote branch         git push origin --delete <branch-name>
 -- Delete local branch          git branch -D <branch-name>
+
+VIEW CURRENT BRANCH
+-- git rev-parse --abbrev-ref HEAD
 -----------------------------------------------------------------------------------------------------
 
 CLI_MANUAL_FOR_GIT
