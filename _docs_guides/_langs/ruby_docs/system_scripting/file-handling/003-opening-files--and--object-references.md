@@ -15,14 +15,14 @@ Opening a file
 -   path of File.open is relative to CWD.
 
 
-###File object
+### File object
 
 -   File.open('filePathAndName.ext')
-		-		opens a file, preps it for use  
+		-		opens a file, preps it for use
 		-		ARGUMENTS ::: filePathAndName.ext: name and path to file
 
 -   File.open('filePathAndName.ext').readlines
-		-		opens a file, preps it for use, converts each line of file into a string, 
+		-		opens a file, preps it for use, converts each line of file into a string,
 				stores these strings in an array, emits these strings to the terminal
 		-		ARGUMENTS ::: filePathAndName.ext: name and path to file
 
