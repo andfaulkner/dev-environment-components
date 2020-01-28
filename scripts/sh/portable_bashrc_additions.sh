@@ -7,6 +7,8 @@
 #   $SH_SCRIPTS_DIR
 #
 
+
+#------------------------------------------ BASH HISTORY -----------------------------------------# 
 ##### ENSURE ALL TERMINALS WRITE TO SINGLE HISTORY FILE #####
 #shopt -s histappend;
 #PROMPT_COMMAND="history -a;history -c; history -r;$PROMPT_COMMAND"
@@ -15,10 +17,10 @@ HISTSIZE=500000 HISTFILESIZE=5000000
 # Set history timestamp format
 HISTTIMEFORMAT='%F %T '
 
+# Show name of git branch in current directory
 parse_git_branch() {
      git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ (\1)/'
 }
-
 export PS1="\W\$(parse_git_branch) \$ "
 
 #PS1="\W\$(parse_git_branch) \$ "
@@ -39,6 +41,8 @@ bind "set mark-symlinked-directories on"
 
 # Don't add exit, ls, lsa, gs, gd, gl, bg, fg, history, or clear to the history list
 export HISTIGNORE="&:[ ]*:exit:ls:lsa:gs:gd:gl:bg:fg:history:clear"
+# Store history immediately
+export PROMPT_COMMAND='history -a'
 
 # Save multi-line commands to the history as one command
 shopt -s cmdhist
@@ -49,8 +53,7 @@ shopt -s autocd 2> /dev/null
 shopt -s dirspell 2> /dev/null
 # Correct spelling errors in arguments supplied to cd
 shopt -s cdspell 2> /dev/null
-#-----------------------------------------------#
-
+#-------------------------------------------------------------------------------------------------# 
 
 
 #=== FUNCTION ==========================================================
@@ -150,7 +153,7 @@ source "$SNIPPETS_DIR/scripts/sh/bash_modules/module_file.sh"
 PATH=$PATH:"$SNIPPETS_DIR/custom-manuals"
 
 # LOAD LOCAL BINARIES
-PATH=$PATH:"~/bin"
+PATH=$PATH:"~/bin":"~/bin/cypher-shell"
 
 # LOAD LOCAL TS & JS SCRIPTS
 PATH=$PATH:"$SNIPPETS_DIR/scripts/ts":"$SNIPPETS_DIR/scripts/js"
@@ -183,7 +186,7 @@ alias dirstackclear="cleardirs"
 alias pushpopstackclear="cleardirs"
 
 ## super-ls
-alias lsa='ls -ao | grep -v "[0-9][0-9] \.\.\?$"'
+alias lsa='ls -aoh | grep -v "[0-9][0-9] \.\.\?$"'
 
 ## lsa for dirs only
 alias lsda='lsa | ack "^d" | awk "{print}"'
@@ -375,6 +378,10 @@ function fsize {
     location "portable_bashrc_additions.sh"
     du -sh $1
 }
+
+alias dirsize="fsize"
+alias total_dir_contents_size="fsize"
+alias file.dirsize="fsize"
 
 # Get size of all top-level items (dirs & files) in current directory
 function fsize_all_in_dir {
