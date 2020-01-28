@@ -1,15 +1,15 @@
 <snippet>
   <description>Create MobX singleton class store w factory method</description>
 <content><![CDATA[
-/************************************** THIRD-PARTY MODULES ***************************************/
+/*------------------------------------- THIRD-PARTY MODULES --------------------------------------*/
 import {observable, action, computed, IObservableArray} from 'mobx';
 import {Int, Any, pushIfNew} from 'mad-utils/lib/shared';
 
-/******************************************** LOGGING *********************************************/
+/*------------------------------------------- LOGGING --------------------------------------------*/
 import {logFactory, Styles} from 'mad-logs/lib/shared';
 const log = logFactory(`${1}`, Styles.hatBlock);
 
-/********************************************* EXPORT *********************************************/
+/*-------------------------------------------- EXPORT --------------------------------------------*/
 /**
  * ${3: MobX store containing data about ${1}}
  */
