@@ -119,7 +119,30 @@ ALTER TABLE
         ALTER TABLE test_entity_1
             ADD COLUMN omnomnomnom CHARACTER VARYING;
 
+----------------------------------------------------------------------------------------------------
+UPDATE
+======
+-   Modify existing records in a table (i.e. modify cell values)
 
+-   Syntax:
+
+    UPDATE some_db.table_name
+        SET column1 = value1, column2 = value2, columnN = valueN
+        WHERE [condition];
+
+-   Example:
+
+    UPDATE some_db.project_info
+        SET launch_fleet_pending = 1
+        WHERE projectid="123456";
+
+-   Update all null columns example:
+
+        UPDATE some_db.project_info
+            SET launch_fleet_pending = 0
+            WHERE launch_fleet_pending is NULL;
+
+----------------------------------------------------------------------------------------------------
 OWNER
 =====
 
