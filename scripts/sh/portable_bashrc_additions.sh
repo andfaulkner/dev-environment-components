@@ -53,6 +53,7 @@ shopt -s autocd 2> /dev/null
 shopt -s dirspell 2> /dev/null
 # Correct spelling errors in arguments supplied to cd
 shopt -s cdspell 2> /dev/null
+
 #-------------------------------------------------------------------------------------------------# 
 
 
@@ -124,7 +125,7 @@ MISC_CLI_OPTIONS="$SNIPPETS_DIR/scripts/sh/cli_opts.sh"
 PORTABLE_BASHRC_ADDITIONS="$SNIPPETS_DIR/scripts/sh/portable_bashrc_additions.sh"
 TEMPLATES_DIR="$SNIPPETS_DIR/scripts/sh/templates"
 
-# LANGUAGE- OR TOOL-SPECIFIC SCRIPT SOURCES
+# LANGUAGE OR TOOL-SPECIFIC SCRIPT SOURCES
 source "$MISC_CLI_OPTIONS"
 # source "$HOME/.profile"
 
@@ -145,6 +146,8 @@ alias bashrc_android='vim "$SNIPPETS_DIR/scripts/sh/android_scripts.sh"'
 alias bashrc_file_builder='vim "$SNIPPETS_DIR/scripts/sh/file_builder_scripts.sh"'
 alias bashrc_sys_util='vim "$SNIPPETS_DIR/scripts/sh/sys_util_scripts.sh"'
 alias bashrc='vim "$PORTABLE_BASHRC_ADDITIONS"'
+
+echo "portable_bashrc_additions.sh: Loading bash modules..."
 
 # LOAD 'MODULES'
 source "$SNIPPETS_DIR/scripts/sh/bash_modules/module_file.sh"
