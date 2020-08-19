@@ -47,7 +47,7 @@ alias gbhistory="g_branchhistory"
 alias gbhis="g_branchhistory"
 alias ghis="g_branchhistory"
 alias gbrh="g_branchhistory"
-alias g_branch_history="gbranchhistory"
+alias g_branch_history="g_branchhistory"
 
 alias gpocur='echo "$(g_curbr)" | xargs git push origin'
 alias gpocurf='gpocur --force'
