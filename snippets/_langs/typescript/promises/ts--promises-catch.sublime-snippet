@@ -1,0 +1,12 @@
+<snippet>
+  <description>Create promise error handler</description>
+<content><![CDATA[
+// Error handler
+.catch(err => {
+    log.error(`${1:functionName} :: ${2:Some action failed}:`, err);
+    throw err;
+})
+]]></content>
+  <tabTrigger>prom_catch</tabTrigger>
+  <scope>source.js, source.ts, source.jsx, source.tsx</scope>
+</snippet>

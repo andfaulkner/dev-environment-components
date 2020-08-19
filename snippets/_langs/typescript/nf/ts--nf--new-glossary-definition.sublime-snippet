@@ -1,0 +1,11 @@
+<snippet>
+    <description>New definition object (from glossary)</description>
+    <content><![CDATA[
+{
+    term: `${1}`,
+    def: `${0}`.oneLine,
+},
+]]></content>
+    <tabTrigger>nf_def_glossary</tabTrigger>
+    <scope>source.ts, source.tsx, source.js, source.jsx</scope>
+</snippet>

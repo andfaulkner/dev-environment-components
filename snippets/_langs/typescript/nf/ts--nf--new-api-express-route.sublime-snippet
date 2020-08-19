@@ -1,0 +1,80 @@
+<snippet>
+    <description>Basic NF graph API Express route file</description>
+    <content><![CDATA[
+/*------------------------------------- THIRD-PARTY MODULES --------------------------------------*/
+import {Request, Response} from 'express';
+import {addRoute, cypher} from 'core-imports-server';
+
+/*------------------------------------------- LOGGING --------------------------------------------*/
+import {logFactory, Styles} from 'mad-logs/lib/shared';
+const log = logFactory(__filename.replace(`${__dirname}/`, ``), Styles.potOfGold);
+
+/*-------------------------------------------- CONFIG --------------------------------------------*/
+/*
+ * ROUTES
+ */
+const apiRoute = `${1:/api/gdb/tooltip/:tooltipId}`;
+
+/*----------------------------------------- DATA CONFIG ------------------------------------------*/
+/**
+ * GET ${1}
+ *
+ * Get data for a single tooltip
+ *
+ * Path params:
+ *     :tooltipId - ID of tooltip to get data for
+ *
+ * @route
+ */
+const ${2:apiGdbTooltip} = addRoute.GET(
+    {
+        apiRoute,
+        description: `Get data for a single tooltip`,
+        routeParams: {
+            tooltipId: `ID of tooltip to get data for`,
+        },
+    },
+    (req: Request, res: Response) => {
+        log.info(`${apiRoute} :: req['params']:`, req['params']);
+
+        const tooltipIdRaw = req.params[`tooltipId`];
+        const tooltipId = parseInt(tooltipIdRaw);
+
+        // Handle missing tooltip case
+        if (!tooltipId || isNaN(tooltipId)) {
+            return res.json({
+                code: `ERROR`,
+                results: `Tooltip ID must be provided to ${apiRoute} route, and must be an integer`,
+            });
+        }
+
+        const {searchQuery, limitClause} = cypher.reqUtils.getCommonReqVals(req);
+        log.info(`${apiRoute} searchQuery:`, searchQuery);
+
+        // Get tooltip data
+        return (
+            cypher
+                .submitCypherFile<any>('app/server/graph-api/${3:tooltip/tooltip-get}.cypher', {
+                    params: {tooltipId},
+                    route: apiRoute,
+                })
+
+                // Return result to client
+                .then(data => {
+                    log.info(`${apiRoute} data:`, data);
+                    return res.json({
+                        code: `SUCCESS`,
+                        ...data,
+                    });
+                })
+        );
+    }
+);
+
+/*-------------------------------------------- EXPORT --------------------------------------------*/
+export {${2:apiGdbTooltip}};
+
+]]></content>
+    <tabTrigger>nf_new_api_route_graph</tabTrigger>
+    <scope>source.ts</scope>
+</snippet>

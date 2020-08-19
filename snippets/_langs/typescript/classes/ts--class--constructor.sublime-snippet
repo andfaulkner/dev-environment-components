@@ -1,10 +1,10 @@
 <snippet>
-  <description>Constructor</description>
+    <description>Constructor</description>
 <content><![CDATA[
-constructor(${1:param1}: ${2:param1_type}) {
-    ${3:super();}${0}
+constructor(${1:param1: param1_type}) {
+    ${2:super();}${0}
 }
-]]></content>  
-  <tabTrigger>cns</tabTrigger>
-  <scope>source.ts, source.tsx</scope>
+]]></content>
+    <tabTrigger>cns</tabTrigger>
+    <scope>source.ts, source.tsx, source.js, source.jsx</scope>
 </snippet>
