@@ -1,0 +1,8 @@
+<snippet>
+  <description>Add \${apiTag} :: text in string</description>
+<content><![CDATA[
+\${apiTag} ${0}
+]]></content>
+  <tabTrigger>atag</tabTrigger>
+  <scope>string.template.js, string.template.ts, string.template.jsx, string.template.tsx</scope>
+</snippet>

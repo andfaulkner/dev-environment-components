@@ -1,0 +1,8 @@
+<snippet>
+  <description>Add \${apiRoute} :: text in string</description>
+<content><![CDATA[
+\${apiRoute} :: ${0}
+]]></content>
+  <tabTrigger>ar</tabTrigger>
+  <scope>string.template.js, string.template.ts, string.template.jsx, string.template.tsx</scope>
+</snippet>
