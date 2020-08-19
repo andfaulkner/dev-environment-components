@@ -1,0 +1,17 @@
+<snippet>
+  <description>Create observable mobx store property with setter</description>
+<content><![CDATA[
+@observable
+${5:public}${5/.+/ /}${1:propName}${2/.+/: /g}${2:string} = ${4:null};
+
+/**
+ * ${3:Sets ${1} value}
+ * @param {${2}} new${1/^([a-zA-Z])([^A-Z]+)([^a-z])?([^A-Z]+)?([^a-z])?([^A-Z]+)?([^a-z])?([^A-Z]+)?$|.*/\U$1\L$2\U$3\L$4\U$5\L$6\U$7\L$8/:name} New value of ${1} property
+ */
+@action
+public set${1/^([a-zA-Z])([^A-Z]+)([^a-z])?([^A-Z]+)?([^a-z])?([^A-Z]+)?([^a-z])?([^A-Z]+)?$|.*/\U$1\L$2\U$3\L$4\U$5\L$6\U$7\L$8/:name} = (new${1/^([a-zA-Z])([^A-Z]+)([^a-z])?([^A-Z]+)?([^a-z])?([^A-Z]+)?([^a-z])?([^A-Z]+)?$|.*/\U$1\L$2\U$3\L$4\U$5\L$6\U$7\L$8/:name}: ${2:"type"}) => this.${1:propName} = new${1/^([a-zA-Z])([^A-Z]+)([^a-z])?([^A-Z]+)?([^a-z])?([^A-Z]+)?([^a-z])?([^A-Z]+)?$|.*/\U$1\L$2\U$3\L$4\U$5\L$6\U$7\L$8/:name};
+
+]]></content>
+  <tabTrigger>mobx_setter_w_property</tabTrigger>
+  <scope>source.ts, source.tsx</scope>
+</snippet>

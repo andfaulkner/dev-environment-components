@@ -2,12 +2,11 @@
   <description>Create MobX non-singleton class store</description>
 <content><![CDATA[
 /*------------------------------------- THIRD-PARTY MODULES --------------------------------------*/
-import {observable, action, computed, IObservableArray} from 'mobx';
-import {Int, Any, pushIfNew} from 'mad-utils/lib/shared';
+import {observable, action} from 'mobx';
 
 /*------------------------------------------- LOGGING --------------------------------------------*/
 import {logFactory, Styles} from 'mad-logs/lib/shared';
-const log = logFactory(`${1}`, Styles.hatBlock);
+const log = logFactory(__filename.replace(`\${__dirname}/`, ``), Styles.ohMy);
 
 /*-------------------------------------------- EXPORT --------------------------------------------*/
 /**
