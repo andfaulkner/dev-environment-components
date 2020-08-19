@@ -6,6 +6,6 @@ constructor (${1:props}) {
 	${0:'first to run in a class';}
 }
 ]]></content>
-    <tabTrigger>cns</tabTrigger>
+    <tabTrigger>cns_rct</tabTrigger>
     <scope>source.js, source.ts, source.jsx, source.tsx</scope>
 </snippet>

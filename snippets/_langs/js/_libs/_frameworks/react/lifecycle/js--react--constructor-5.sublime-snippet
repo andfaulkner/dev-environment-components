@@ -5,6 +5,6 @@ constructor (props${1/.+/: /}${1:Props}) {
     super(props);${2/.+/\n    /}${2:'first to run in a react component class';}${0}
 }
 ]]></content>
-    <tabTrigger>rct_life_constructor_class</tabTrigger>
-    <scope>source.js, source.ts, source.jsx, source.tsx</scope>
+    <tabTrigger>react_cns</tabTrigger>
+    <scope>source.ts, source.tsx</scope>
 </snippet>
