@@ -44,5 +44,134 @@
 		],
 		"description": "Create a full-line divider",
 		"prefix": ["---", "cmntdiv"]
-	}
+	},
+
+	"Type definitions header": {
+		"scope": "javascript,typescript,typescriptreact,jsonc",
+		"body": [
+			"/*--------------------------------------- TYPE DEFINITIONS ---------------------------------------*/",
+		],
+		"description": "Create a full-line TYPE DEFINITIONS header",
+		"prefix": ["hdtd", "hdtypedefs"]
+	},
+	"Project modules header": {
+		"scope": "javascript,typescript,typescriptreact,jsonc",
+		"body": [
+			"/*--------------------------------------- PROJECT MODULES ----------------------------------------*/",
+		],
+		"description": "Create a full-line PROJECT MODULES header",
+		"prefix": ["hdpm", "hd_projmodules"]
+	},
+	"Third-party modules header": {
+		"scope": "javascript,typescript,typescriptreact,jsonc",
+		"body": [
+			"/*------------------------------------- THIRD-PARTY MODULES --------------------------------------*/",
+		],
+		"description": "Create a full-line THIRD-PARTY MODULES header",
+		"prefix": ["hdtp", "hdtpm"]
+	},
+	"Export header": {
+		"scope": "javascript,typescript,typescriptreact,jsonc",
+		"body": [
+			"/*-------------------------------------------- EXPORT --------------------------------------------*/",
+		],
+		"description": "Create a full-line EXPORT header",
+		"prefix": ["hde", "hdexport"]
+	},
+	"Logging header": {
+		"scope": "javascript,typescript,typescriptreact,jsonc",
+		"body": [
+			"/*------------------------------------------- LOGGING --------------------------------------------*/",
+		],
+		"description": "Create a full-line LOGGING header",
+		"prefix": ["hdlogging", "hdlog"]
+	},
+	"Routes header": {
+		"scope": "javascript,typescript,typescriptreact,jsonc",
+		"body": [
+			"/*-------------------------------------------- ROUTES --------------------------------------------*/",
+		],
+		"description": "Create a full-line ROUTES header",
+		"prefix": ["hdroutes", "hdroute", "hdrts", "hdexprroute", "hd_routes"]
+	},
+	"Setup header": {
+		"scope": "javascript,typescript,typescriptreact,jsonc",
+		"body": [
+			"/*-------------------------------------------- SETUP ---------------------------------------------*/",
+		],
+		"description": "Create a full-line SETUP header",
+		"prefix": "hdsetup"
+	},
+	"Tests header": {
+		"scope": "javascript,typescript,typescriptreact,jsonc",
+		"body": [
+			"/*-------------------------------------------- TESTS ---------------------------------------------*/",
+		],
+		"description": "Create a full-line TESTS header",
+		"prefix": ["hdtests", "hdtest", "hdtst"]
+	},
+	"Helpers header": {
+		"scope": "javascript,typescript,typescriptreact,jsonc",
+		"body": [
+			"/*------------------------------------------- HELPERS --------------------------------------------*/",
+		],
+		"description": "Create a full-line TESTS header",
+		"prefix": ["hdh", "hdhelpers"]
+	},
+	"Styling header": {
+		"scope": "javascript,typescript,typescriptreact,jsonc",
+		"body": [
+			"/*------------------------------------------- STYLING --------------------------------------------*/",
+		],
+		"description": "Create a full-line STYLING header",
+		"prefix": ["hdstyling", "hdstyl"]
+	},
+	"Config header": {
+		"scope": "javascript,typescript,typescriptreact,jsonc",
+		"body": [
+			"/*-------------------------------------------- CONFIG --------------------------------------------*/",
+		],
+		"description": "Create a full-line CONFIG header",
+		"prefix": ["hdconfig", "hdconf"]
+	},
+	"Components header": {
+		"scope": "javascript,typescript,typescriptreact,jsonc",
+		"body": [
+			"/*------------------------------------------ COMPONENTS ------------------------------------------*/",
+		],
+		"description": "Create a full-line COMPONENTS header",
+		"prefix": ["hdcomponents", "hdcmp", "hdcmps"]
+	},
+	"Barrel exports header": {
+		"scope": "javascript,typescript,typescriptreact,jsonc",
+		"body": [
+			"/*---------------------------------------- BARREL EXPORTS ----------------------------------------*/",
+		],
+		"description": "Create a full-line BARREL EXPORTS header",
+		"prefix": ["hdbarrelexports", "hdbes", "hdbe"]
+	},
+	"Assets header": {
+		"scope": "javascript,typescript,typescriptreact,jsonc",
+		"body": [
+			"/*-------------------------------------------- ASSETS --------------------------------------------*/",
+		],
+		"description": "Create a full-line ASSETS header",
+		"prefix": ["hdassets", "hdass", "hda"]
+	},
+	"Hooks header": {
+		"scope": "javascript,typescript,typescriptreact,jsonc",
+		"body": [
+			"/*-------------------------------------------- HOOKS ---------------------------------------------*/",
+		],
+		"description": "Create a full-line HOOKS header",
+		"prefix": "hdhooks"
+	},
+	"Cache header": {
+		"scope": "javascript,typescript,typescriptreact,jsonc",
+		"body": [
+			"/*-------------------------------------------- CACHE ---------------------------------------------*/",
+		],
+		"description": "Create a full-line CACHE header",
+		"prefix": "hdcache"
+	},
 }
