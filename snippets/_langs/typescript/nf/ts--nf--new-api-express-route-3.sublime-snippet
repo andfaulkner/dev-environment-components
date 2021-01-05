@@ -1,0 +1,58 @@
+<snippet>
+    <description>Basic NF graph API Express route file</description>
+    <content><![CDATA[
+/*------------------------------------- THIRD-PARTY MODULES --------------------------------------*/
+import path from 'path';
+import Bluebird from 'bluebird';
+
+/*--------------------------------------- PROJECT MODULES ----------------------------------------*/
+import {addGraphRoute} from 'server-imports';
+
+/*------------------------------------------- LOGGING --------------------------------------------*/
+import {logFactory, Styles} from 'mad-logs/lib/shared';
+const log = logFactory(__filename.replace(`${__dirname}/`, ``), Styles.lucky);
+
+/*-------------------------------------------- CONFIG --------------------------------------------*/
+/*
+ * ROUTES
+ */
+const apiRoute = `/api/gdb/${1:route/:someRouteParam}`;
+const apiTag = `${apiRoute} ::`;
+
+/*----------------------------------------- DATA CONFIG ------------------------------------------*/
+/**
+ * ${2:GET|POST|PUT} /api/gdb/${1}
+ *
+ * ${3:description goes here}
+ *
+ * ${5:route|query|body} params:
+ *     :${7:someVar} - ${8:Description of variable}
+ *
+ * @route
+ */
+export const ${4:apiGdbNameOfApiRoute} = addGraphRoute.${2}(
+    {
+        apiRoute,
+        description: `${3}`,
+        ${5}Params: {
+            ${7}: `${8}`,
+        },
+    },
+    async (req, apiUtil) => {
+        log.info(`\${apiTag} req['${6:params|query|body}']:`, req['${6}']);
+
+        const ${7} = req.${6}[`${7}`];
+
+        // Validate
+        if (!${7}) {
+            throw new Error(`\${apiRoute} requires ${7} ${5} param`);
+        }
+
+        ${0:return 'whatever';}
+    }
+);
+
+]]></content>
+    <tabTrigger>nf_new_api_route_express</tabTrigger>
+    <scope>source.ts</scope>
+</snippet>
