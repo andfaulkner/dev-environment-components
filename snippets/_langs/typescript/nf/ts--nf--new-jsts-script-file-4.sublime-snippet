@@ -1,0 +1,80 @@
+<snippet>
+    <description>File to generate standalone script in TS-enabled JS</description>
+    <content><![CDATA[
+#!/usr/bin/env node
+
+// @ts-check
+
+/*------------------------------------- THIRD-PARTY MODULES --------------------------------------*/
+const path = require('path');
+const fs = require('fs');
+const Bluebird = require('bluebird');
+const {path: rootPath} = require('app-root-path');
+
+const {keys} = Object;
+
+const readFileAsync = Bluebird.promisify(fs.readFile);
+const writeFileAsync = Bluebird.promisify(fs.writeFile);
+
+/*--------------------------------------- PROJECT MODULES ----------------------------------------*/
+/** @type {typeof import("${1:..}/shared/augment-global-prototypes/augment-global-prototypes") } */
+require(path.join(rootPath, './build/shared/augment-global-prototypes/augment-global-prototypes'));
+
+/*-------------------------------------- ARGUMENT HANDLING ---------------------------------------*/
+/**
+ * Stores CLI arguments. Accepts --quiet and --help.
+ */
+const allArgs = {quiet: false, help: false};
+
+// Extract CLI args, store in allArgs
+((process && process.argv) || []).forEach(arg => {
+    if (arg.match(/^\-?\-?quiet\$/gi)) allArgs['quiet'] = true;
+    if (arg.match(/^((\-?\-?help)|(\-h))\$/gi)) allArgs['help'] = true;
+});
+
+/**
+ * Help text to display in CLI if --help argument passed to script.
+ */
+const cliHelpText = `
+    NAME: ${TM_FILENAME}
+
+    USAGE: ${TM_FILENAME} [--quiet]
+
+    OPTIONS:
+        --help: Show flags & options
+        --quiet: Run without showing the created typedef file content
+
+    DESCRIPTION:
+        ${2: What it does.
+
+         Maybe put more description here}${3/.+/
+
+    OUTPUT:
+        /}${3:optional/path/to/output/file/if/any.d.ts}${3/.+/
+/}`.removeIndent;
+
+/*-------------------------------------------- CONFIG --------------------------------------------*/
+
+/*------------------------------------------- HELPERS --------------------------------------------*/
+
+/*---------------------------------- RUN IF LAUNCHED AS SCRIPT -----------------------------------*/
+/**
+ * Main script function - runs of file launched directly as a script.
+ */
+const main = () => {
+    ${0}
+};
+
+if (require.main === module) {
+    // Show help text instead of running if --help argument given in CLI
+    if (allArgs['help']) {
+        console.log(`\n` + cliHelpText + `\n`);
+        process.exit();
+    }
+    main();
+}
+
+]]></content>
+    <tabTrigger>nf_new_script_standalone_jsts</tabTrigger>
+    <scope>source.js</scope>
+</snippet>
