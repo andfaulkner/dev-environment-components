@@ -8,11 +8,6 @@
 
   // Run prettier
   { "keys": [ "command+ctrl+t" ], "command": "js_prettier"},
-  {
-    "keys": [ "command+ctrl+t" ],
-    "command": "black_file", // Alternative: pep8_autoformat
-    "context": [{ "key": "selector", "operator": "equal", "operand": "source.python" }]
-  },
 
   // Copy path relative to project root
   { "keys": [ "command+ctrl+shift+p" ], "command": "side_bar_copy_path_absolute_from_project" },
@@ -22,16 +17,6 @@
 
 /******************************************** CONSOLE *********************************************/
   { "keys": [ "ctrl+alt+k" ],           "command": "clear_console"                            },
-  { "keys": [ "command+ctrl+shift+l" ], "command": "sublime.log_commands(True)"               },
-  { "keys": [ "command+ctrl+shift+n" ], "command": "sublime.log_commands(False)"              },
-  { "keys": [ "command+alt+r" ],        "command": "save"                                     },
-
-/* (CTRL-SHIFT-[AVCI]) */
-/********************************************** GIT ***********************************************/
-  { "keys": [ "ctrl+shift+a" ], "command": "git_add_selected_hunk"                            },
-  { "keys": [ "ctrl+shift+v" ], "command": "git_toggle_annotations"                           },
-  { "keys": [ "ctrl+shift+g" ], "command": "git_commit"                                       },
-  { "keys": [ "ctrl+shift+i" ], "command": "git_commit_amend"                                 },
 
 /************************************* SIDEBAR / FILE HANDLING *************************************/
   { "keys": [ "alt+r" ],                "command": "side_bar_rename"                          },
@@ -56,17 +41,6 @@
   { "keys": [ "ctrl+shift+c" ],         "command": "convert_to_camel"                         },
   { "keys": [ "ctrl+shift+p" ],         "command": "convert_to_pascal"                        },
   // command + ctrl + j                 pretty_json
-
-/********************************* SWITCH SYNTAX OF CURRENT FILE **********************************/
-  { "keys": [ "command+ctrl+alt+shift+a" ], "command": "set_file_type", "args": { "syntax": "~/Library/Application Support/Sublime Text 3/Packages/Text/Plain text.tmLanguage"                                   }},
-  { "keys": [ "command+ctrl+alt+shift+b" ], "command": "set_file_type", "args": { "syntax": "~/Library/Application Support/Sublime Text 3/Packages/ShellScript/Shell-Unix-Generic.sublime-syntax"                }},
-  { "keys": [ "command+ctrl+alt+shift+c" ], "command": "set_file_type", "args": { "syntax": "~/Library/Application Support/Sublime Text 3/Packages/CSS/CSS.sublime-syntax"                                       }},
-  { "keys": [ "command+ctrl+alt+shift+d" ], "command": "set_file_type", "args": { "syntax": "~/Library/Application Support/Sublime Text 3/Packages/JavaScriptNext - ES6 Syntax/JSON (JavaScriptNext).tmLanguage" }},
-  { "keys": [ "command+ctrl+alt+shift+h" ], "command": "set_file_type", "args": { "syntax": "~/Library/Application Support/Sublime Text 3/Packages/HTML/HTML.sublime-syntax"                                     }},
-  { "keys": [ "command+ctrl+alt+shift+j" ], "command": "set_file_type", "args": { "syntax": "~/Library/Application Support/Sublime Text 3/Packages/JavaScriptNext - ES6 Syntax/JavaScriptNext.tmLanguage"        }},
-  { "keys": [ "command+ctrl+alt+shift+m" ], "command": "set_file_type", "args": { "syntax": "~/Library/Application Support/Sublime Text 3/Packages/Markdown/Markdown.sublime-syntax"                             }},
-  { "keys": [ "command+ctrl+alt+shift+r" ], "command": "set_file_type", "args": { "syntax": "~/Library/Application Support/Sublime Text 3/Packages/Ruby/Ruby.sublime-syntax"                                     }},
-  { "keys": [ "command+ctrl+alt+shift+t" ], "command": "set_file_type",  "args": { "syntax": "~/Library/Application Support/Sublime Text 3/Packages/User/snippets/ts_extracts/lang/TypeScript.tmLanguage"        }},
 
 /******************************* CREATE NEW FILES, MAINLY SNIPPETS ********************************/
   // Create new snippet
@@ -111,11 +85,6 @@
     "command": "open_file",
     "args":  { "file": "~/Library/Application Support/Sublime Text 3/Packages/User/snippets/custom-manuals/man__sublime" }},
 
-  // Open react libs list
-  { "keys": [ "command+ctrl+shift+r"],
-    "command": "open_file",
-    "args":  { "file": "~/Library/Application Support/Sublime Text 3/Packages/User/snippets/_docs_guides/todos/projects/todo--react-libs-to-check--2017-08-29.todo" }},
-
   // View currently selected file in browser
   { "keys": ["ctrl+shift+alt+v"], "command": "view_in_browser" },
 
@@ -151,13 +120,6 @@
   { "keys": [ "command+ctrl+down"  ], "command": "swap_line_down"   },
 
   { "keys": [ "command+k,command+b" ], "command": "toggle_side_bar" },
-
-  { "keys": [ "command+alt+ctrl+d" ], "command": "doxy_comment_nearest_entity" },
-
-
-/******************************************** LOGGING *********************************************/
-  { "keys": ["ctrl+shift+l"],  "command": "console_wrap", "args": {"insert_before": false} },
-  { "keys": ["ctrl+alt+shift+l"],  "command": "console_wrap", "args": {"insert_before": true} },
 
 /********************************************* MACROS *********************************************/
   { "keys": [ "command+ctrl+alt+f" ], "command": "run_macro_file",
