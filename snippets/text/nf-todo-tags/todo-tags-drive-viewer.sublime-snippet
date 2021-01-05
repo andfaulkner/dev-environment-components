@@ -1,0 +1,8 @@
+<snippet>
+  <description>DRIVE VIEWER :: </description>
+<content>
+    <![CDATA[-   DRIVE VIEWER :: ]]>
+</content>
+  <tabTrigger>tdv</tabTrigger>
+  <scope>text.markdown, text.html.markdown</scope>
+</snippet>

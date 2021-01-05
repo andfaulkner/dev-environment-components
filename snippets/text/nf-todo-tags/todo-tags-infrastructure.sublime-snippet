@@ -1,0 +1,8 @@
+<snippet>
+  <description>INFRASTRUCTURE ::</description>
+<content>
+    <![CDATA[-   INFRASTRUCTURE :: ]]>
+</content>
+  <tabTrigger>tinf</tabTrigger>
+  <scope>text.markdown, text.html.markdown</scope>
+</snippet>
