@@ -1,7 +1,7 @@
 React/JS/TS libs to examine
 -5	nps: Cleaner npm script running - npm script management system. Should actually work to make a more maintainble node-based build system.
 	Code: `https://www.npmjs.com/package/nps`
--	
+-
 -5	react-delegate: Automatic delegation of certain (defined) props from view to container in React container pattern
 	Code: `https://github.com/swipesapp/react-delegate`
 	This will be a huge convenience and end up saving a lot of development time...along with making the code much client.
