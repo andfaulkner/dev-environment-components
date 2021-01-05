@@ -1,0 +1,26 @@
+<snippet>
+  <description>Block to run current file as node.js script if executed from CLI</description>
+<content><![CDATA[
+/// <reference path="${3:../../}node_modules/@types/node/index.d.ts" />
+
+/*-------------------------------- ACTIVATE GLOBAL TYPE OVERRIDES --------------------------------*/
+// Note: import is a dummy, but TS must return a val from a module to apply the module's global vals
+import * as AUGMENT_GLOBAL_PROTOTYPES from '${3}shared/augment-global-prototypes/augment-global-prototypes';
+log.verbose(`AUGMENT_GLOBAL_PROTOTYPES:`, AUGMENT_GLOBAL_PROTOTYPES); // Ensure uptake of augmentations
+
+${0}
+
+/*---------------------------------- RUN IF EXECUTED AS SCRIPT -----------------------------------*/
+const main = () => {
+    const ${2:result} = ${1:functionToRun};
+    log.info(`main :: ${2}:`, ${2});
+};
+
+if (require.main === module) {
+    main();
+}
+
+]]></content>
+  <tabTrigger>run_as_script</tabTrigger>
+  <scope>source.js, source.ts, source.jsx, source.tsx</scope>
+</snippet>
