@@ -3,7 +3,7 @@
 <content><![CDATA[
 /*------------------------------------------- LOGGING --------------------------------------------*/
 import {logFactory, Styles} from 'mad-logs/lib/shared';
-const log = logFactory(__filename.replace(`\${__dirname}/`, ``), Styles.${1:ohMy});
+const log = logFactory(__filename.replace(`\${__dirname}/`, ``), Styles.${1:seafoamSalad});
 
 ]]></content>
   <tabTrigger>madlog_iso_log_setup</tabTrigger>
