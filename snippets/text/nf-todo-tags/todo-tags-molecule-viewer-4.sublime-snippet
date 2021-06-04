@@ -1,0 +1,8 @@
+<snippet>
+  <description>[MOLECULE VIEWER]</description>
+<content>
+    <![CDATA[[MOLECULE VIEWER] ]]>
+</content>
+  <tabTrigger>tmolv</tabTrigger>
+  <scope>text.markdown, text.html.markdown</scope>
+</snippet>

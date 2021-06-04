@@ -1,0 +1,7 @@
+<snippet>
+  <description>Symbol: "2" subscript e.g. H₂O (tiny lowered 2) </description>
+<content><![CDATA[
+₂
+]]></content>
+  <tabTrigger>sym_2_subscript</tabTrigger>
+</snippet>

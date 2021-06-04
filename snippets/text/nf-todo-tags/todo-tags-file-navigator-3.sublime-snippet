@@ -1,0 +1,8 @@
+<snippet>
+  <description>[FILE NAVIGATOR]</description>
+<content>
+    <![CDATA[[FILE NAVIGATOR] ]]>
+</content>
+  <tabTrigger>tfv</tabTrigger>
+  <scope>text.markdown, text.html.markdown</scope>
+</snippet>

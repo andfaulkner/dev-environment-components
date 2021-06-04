@@ -1,7 +1,7 @@
 <snippet>
-  <description>MANUAL PROJECTS :: </description>
+  <description>[MANUAL PROJECTS]</description>
 <content>
-    <![CDATA[-   MANUAL PROJECTS :: ]]>
+    <![CDATA[[MANUAL PROJECTS] ]]>
 </content>
   <tabTrigger>tmp</tabTrigger>
   <scope>text.markdown, text.html.markdown</scope>

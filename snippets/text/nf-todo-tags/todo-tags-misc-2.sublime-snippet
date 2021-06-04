@@ -1,7 +1,7 @@
 <snippet>
-  <description>MISC ::</description>
+  <description>[MISC]</description>
 <content>
-    <![CDATA[-   MISC :: ]]>
+    <![CDATA[[MISC] ]]>
 </content>
   <tabTrigger>tmisc</tabTrigger>
   <scope>text.markdown, text.html.markdown</scope>

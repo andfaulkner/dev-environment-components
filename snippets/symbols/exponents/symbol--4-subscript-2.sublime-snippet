@@ -1,0 +1,7 @@
+<snippet>
+  <description>Symbol: "4" subscript e.g. H₄C (tiny lowered 4) </description>
+<content><![CDATA[
+₄
+]]></content>
+  <tabTrigger>sym_subscript_4</tabTrigger>
+</snippet>

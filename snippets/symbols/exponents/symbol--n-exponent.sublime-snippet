@@ -1,0 +1,7 @@
+<snippet>
+  <description>Symbol: "n" exponent e.g. sⁿ (tiny raised n) </description>
+<content><![CDATA[
+ⁿ
+]]></content>
+  <tabTrigger>sym_n_exponent</tabTrigger>
+</snippet>

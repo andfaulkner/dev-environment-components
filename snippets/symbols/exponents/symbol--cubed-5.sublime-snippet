@@ -1,0 +1,7 @@
+<snippet>
+  <description>Symbol: cubed (e.g. s³) </description>
+<content><![CDATA[
+³
+]]></content>
+  <tabTrigger>sym_exponent_3</tabTrigger>
+</snippet>

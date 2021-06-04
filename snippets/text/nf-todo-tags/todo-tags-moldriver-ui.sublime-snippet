@@ -1,7 +1,7 @@
 <snippet>
-  <description>MOLDRIVER UI :: </description>
+  <description>[MOLDRIVER]</description>
 <content>
-    <![CDATA[-   MOLDRIVER UI :: ]]>
+    <![CDATA[[MOLDRIVER] ]]>
 </content>
   <tabTrigger>tmd</tabTrigger>
   <scope>text.markdown, text.html.markdown</scope>

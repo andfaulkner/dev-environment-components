@@ -1,0 +1,7 @@
+<snippet>
+  <description>Symbol: squared (e.g. s²) </description>
+<content><![CDATA[
+²
+]]></content>
+  <tabTrigger>sym_superscript_2</tabTrigger>
+</snippet>

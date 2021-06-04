@@ -1,0 +1,7 @@
+<snippet>
+  <description>Symbol: "minus" exponent e.g. n⁻² (tiny raised -) </description>
+<content><![CDATA[
+⁻
+]]></content>
+  <tabTrigger>sym_minus_superscript</tabTrigger>
+</snippet>

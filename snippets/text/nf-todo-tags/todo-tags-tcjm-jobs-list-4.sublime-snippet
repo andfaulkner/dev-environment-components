@@ -1,0 +1,8 @@
+<snippet>
+  <description>[TCJM JOBS LIST]</description>
+<content>
+    <![CDATA[[TCJM JOBS LIST] ]]>
+</content>
+  <tabTrigger>ttcjmjl</tabTrigger>
+  <scope>text.markdown, text.html.markdown</scope>
+</snippet>

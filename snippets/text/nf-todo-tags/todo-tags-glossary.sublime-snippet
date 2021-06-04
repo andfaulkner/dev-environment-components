@@ -1,7 +1,7 @@
 <snippet>
-  <description>GLOSSARY ::</description>
+  <description>[GLOSSARY]</description>
 <content>
-    <![CDATA[-   GLOSSARY :: ]]>
+    <![CDATA[[GLOSSARY] ]]>
 </content>
   <tabTrigger>tgl</tabTrigger>
   <scope>text.markdown, text.html.markdown</scope>

@@ -1,0 +1,8 @@
+<snippet>
+  <description>[SCENE BUILDER]</description>
+<content>
+    <![CDATA[[SCENE BUILDER] ]]>
+</content>
+  <tabTrigger>tsb</tabTrigger>
+  <scope>text.markdown, text.html.markdown</scope>
+</snippet>

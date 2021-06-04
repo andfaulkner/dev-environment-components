@@ -1,0 +1,8 @@
+<snippet>
+  <description>[GLOBAL]</description>
+<content>
+    <![CDATA[[GLOBAL] ]]>
+</content>
+  <tabTrigger>tglobal</tabTrigger>
+  <scope>text.markdown, text.html.markdown</scope>
+</snippet>

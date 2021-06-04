@@ -1,7 +1,7 @@
 <snippet>
-  <description>BUILD :: </description>
+  <description>[BUILD]</description>
 <content>
-    <![CDATA[-   BUILD :: ]]>
+    <![CDATA[[BUILD] ]]>
 </content>
   <tabTrigger>tbd</tabTrigger>
   <scope>text.markdown, text.html.markdown</scope>

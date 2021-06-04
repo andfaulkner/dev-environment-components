@@ -1,0 +1,11 @@
+<snippet>
+  <description>Loop through all files at current path (for-each on current dir; uses ls)</description>
+<content><![CDATA[
+for file in `ls -o | awk '{print \$8}'`
+do
+    ${1:echo "Adding ext 'test' to \$file"; cp ./\$file ./\$file.test}
+done
+]]></content>
+  <tabTrigger>loop_thru_cur_dir_files</tabTrigger>
+  <scope>source.shell</scope>
+</snippet>

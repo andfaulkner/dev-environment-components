@@ -1,0 +1,8 @@
+<snippet>
+  <description>[SEARCH TABLES]</description>
+<content>
+    <![CDATA[[SEARCH TABLES] ]]>
+</content>
+  <tabTrigger>ttable</tabTrigger>
+  <scope>text.markdown, text.html.markdown</scope>
+</snippet>

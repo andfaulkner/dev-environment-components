@@ -1,0 +1,7 @@
+<snippet>
+    <description>NE URL</description>
+    <content><![CDATA[
+https://nanoexplorer.mechanochem.com
+]]></content>
+    <tabTrigger>neurl</tabTrigger>
+</snippet>

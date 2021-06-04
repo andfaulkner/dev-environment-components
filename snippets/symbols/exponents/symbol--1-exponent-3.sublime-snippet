@@ -1,0 +1,7 @@
+<snippet>
+  <description>Symbol: "1" exponent e.g. n¹ (tiny raised 1) </description>
+<content><![CDATA[
+¹
+]]></content>
+  <tabTrigger>sym_superscript_1</tabTrigger>
+</snippet>

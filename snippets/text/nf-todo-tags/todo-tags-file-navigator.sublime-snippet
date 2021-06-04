@@ -1,7 +1,7 @@
 <snippet>
-  <description>DRIVE VIEWER :: </description>
+  <description>[FILE NAVIGATOR]</description>
 <content>
-    <![CDATA[-   DRIVE VIEWER :: ]]>
+    <![CDATA[[FILE NAVIGATOR] ]]>
 </content>
   <tabTrigger>tdv</tabTrigger>
   <scope>text.markdown, text.html.markdown</scope>

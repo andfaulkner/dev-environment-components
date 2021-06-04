@@ -1,0 +1,7 @@
+<snippet>
+  <description>Symbol: "3" subscript e.g. H₃C (tiny lowered 3) </description>
+<content><![CDATA[
+₃
+]]></content>
+  <tabTrigger>sym_3_subscript</tabTrigger>
+</snippet>

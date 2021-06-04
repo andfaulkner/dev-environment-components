@@ -1,7 +1,7 @@
 <snippet>
-  <description>LOGISTICS :: </description>
+  <description>[LOGISTICS]</description>
 <content>
-    <![CDATA[-   LOGISTICS :: ]]>
+    <![CDATA[[LOGISTICS] ]]>
 </content>
   <tabTrigger>tlo</tabTrigger>
   <scope>text.markdown, text.html.markdown</scope>
