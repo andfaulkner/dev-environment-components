@@ -103,17 +103,20 @@ function todo_add_random {
 
 alias read_pdf="open -a Preview.app" #path-to-pdf-here
 
-## HISTORY ##
+############ HISTORY ############
 #alias history_reduced='ps aux | sort --key 3 | awk \'{if (NF<12) { print \$1",,,"\$2",,,"\$3",,,"\$4",,,"\$9",,,"\$10",,,"\$11} else { print \$1",,,"\$2",,,"\$3",,,"\$4",,,"\$9",,,"\$10",,,"\$11"..." }}\' | column -t -s ",,,"'
 alias history_sorted_cpu='ps aux | sort --key 3 | awk "{if (NF<12) { print \$1\",,,\"\$2\",,,\"\$3\",,,\"\$4\",,,\"\$9\",,,\"\$10\",,,\"\$11} else { print \$1\",,,\"\$2\",,,\"\$3\",,,\"\$4\",,,\"\$9\",,,\"\$10\",,,\"\$11\"...\" }}" | column -t -s ",,,"'
 alias history_sorted_mem='ps aux | sort --key 4 | awk "{if (NF<12) { print \$1\",,,\"\$2\",,,\"\$3\",,,\"\$4\",,,\"\$9\",,,\"\$10\",,,\"\$11} else { print \$1\",,,\"\$2\",,,\"\$3\",,,\"\$4\",,,\"\$9\",,,\"\$10\",,,\"\$11\"...\" }}" | column -t -s ",,,"'
 # eval $(thefuck --alias)
 
-## TIME ##
+############ DATE / TIME ############
 alias now_timestamp="date +%s"
 alias timestamp_now="now_timestamp"
 
-## COPY / PASTE ##
+# Grab days_in_month util
+source "$SNIPPETS_DIR/scripts/sh/tools/days-in-month.sh"
+
+############ COPY / PASTE ############
 alias mergefiles__paste="/usr/bin/paste"
 
 alias copy="pbcopy"
