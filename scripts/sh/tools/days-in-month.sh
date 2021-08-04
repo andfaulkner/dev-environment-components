@@ -1,11 +1,13 @@
 #!/usr/bin/env bash
 
 #
-# Utility for returning the number of days in the current month, or the given month
+# Utility for returning the number of days in the current month, the given month, or all months.
 #
 # Args:
-#   --help      :: Show the help text
-#   [MONTH]     :: Month to display number of days in
+#   --help        :: Show the help text
+#   current       :: Show number of days in current month
+#   [MONTH]       :: Month to display number of days in
+#   all           :: Show full list of dates and months as key-value pairs (default if no arg given)
 #
 days_in_month() {
     location "days-in-month.sh"
@@ -19,15 +21,20 @@ days_in_month() {
         echo ""
         echo "    [MONTH] inputs allowed: month # (e.g. 7), name (e.g. july), shorthand (e.g. jul)"
         echo      "       Also allows any casing (e.g. jul, Jul, JUL)"
-        echo "    If [MONTH] not given, provides number of days in current month"
+        echo      "       If 'cur' or 'current' given, provides # of days in current month"
+        echo "    If [MONTH] not given, show for all months (same if 'all' or 'list' given)"
         echo ""
         echo "EXAMPLES"
-        echo "    days_in_month             -> \"The current month (August) contains 31 days\""
-        echo "    days_in_month 1           -> \"January contains 31 days\""
-        echo "    days_in_month november    -> \"November contains 30 days\""
-        echo "    days_in_month November    -> \"November contains 30 days\""
-        echo "    days_in_month SEP         -> \"September contains 30 days\""
-        echo "    days_in_month sept        -> \"September contains 30 days\""
+        echo "    days_in_month             -> (*shows each month paired with # of days in it)"
+        echo ""
+        echo "    days_in_month cur         -> \"August (current month) has 31 days\""
+        echo "    days_in_month current     -> \"August (current month) has 31 days\""
+        echo ""
+        echo "    days_in_month 1           -> \"January has 31 days\""
+        echo "    days_in_month november    -> \"November has 30 days\""
+        echo "    days_in_month November    -> \"November has 30 days\""
+        echo "    days_in_month SEP         -> \"September has 30 days\""
+        echo "    days_in_month sept        -> \"September has 30 days\""
         echo ""
         return 1
     }
@@ -38,100 +45,122 @@ days_in_month() {
         return 1
     fi
 
-    local HAD_ARG=""
-    local CUR_MNTH=""
+    local HAD_CUR_ARG="FALSE"
+    local MNTH=""
 
+    #  If no arg given, set month to 'all'
     if [ ! -n "$1" ]; then
-        HAD_ARG="FALSE"
-        CUR_MNTH="$(date +%b)"
+        MNTH="all"
+    #  If 'cur' or 'current' given, set month to current date, and mark that cur was given as an arg (HAD_CUR_ARG)
+    elif [ "$1" = "cur" ] || [ "$1" = "Cur" ] || [ "$1" = "CUR" ] || [ "$1" = "current" ] || [ "$1" = "CURRENT" ] || [ "$1" = "Current" ] || [ "$1" = "--cur" ] || [ "$1" = "--current" ] || [ "$1" = "now" ]; then
+        HAD_CUR_ARG="TRUE"
+        MNTH="$(date +%b)"
+    #  If any other arg given, set the month to the argument given
     else
-        HAD_ARG="TRUE"
-        CUR_MNTH="$1"
+        MNTH="$1"
     fi
 
-    if [ "$CUR_MNTH" = "jan" ] || [ "$CUR_MNTH" = "january" ] || [ "$CUR_MNTH" = "Jan" ] || [ "$CUR_MNTH" = "January" ] || [ "$CUR_MNTH" = "JAN" ] || [ "$CUR_MNTH" = "JANUARY" ] || [ "$CUR_MNTH" = "1" ]; then
-        if [ "$HAD_ARG" = "TRUE" ]; then
-            echo "January contains 31 days"
+    ## HANDLE MONTH ARGUMENTS ##
+    if [ "$MNTH" = "jan" ] || [ "$MNTH" = "january" ] || [ "$MNTH" = "Jan" ] || [ "$MNTH" = "January" ] || [ "$MNTH" = "JAN" ] || [ "$MNTH" = "JANUARY" ] || [ "$MNTH" = "1" ]; then
+        if [ "$HAD_CUR_ARG" = "FALSE" ]; then
+            echo "January has 31 days"
         else
-            echo "The current month (January) contains 31 days"
+            echo "January (current month) has 31 days"
         fi
 
-    elif [ "$CUR_MNTH" = "feb" ] || [ "$CUR_MNTH" = "february" ] || [ "$CUR_MNTH" = "Feb" ] || [ "$CUR_MNTH" = "February" ] || [ "$CUR_MNTH" = "FEB" ] || [ "$CUR_MNTH" = "FEBRUARY" ] || [ "$CUR_MNTH" = "2" ]; then
-        if [ "$HAD_ARG" = "TRUE" ]; then
-            echo "February contains 28 days"
+    elif [ "$MNTH" = "feb" ] || [ "$MNTH" = "february" ] || [ "$MNTH" = "Feb" ] || [ "$MNTH" = "February" ] || [ "$MNTH" = "FEB" ] || [ "$MNTH" = "FEBRUARY" ] || [ "$MNTH" = "2" ]; then
+        if [ "$HAD_CUR_ARG" = "FALSE" ]; then
+            echo "February has 28 days"
         else
-            echo "The current month (February) contains 28 days"
+            echo "February (current month) has 28 days"
         fi
 
-    elif [ "$CUR_MNTH" = "mar" ]  || [ "$CUR_MNTH" = "march" ]     || [ "$CUR_MNTH" = "Mar" ]  || [ "$CUR_MNTH" = "March" ]     || [ "$CUR_MNTH" = "MAR" ]  || [ "$CUR_MNTH" = "MARCH" ]     || [ "$CUR_MNTH" = "3" ]; then
-        if [ "$HAD_ARG" = "TRUE" ]; then
-            echo "March contains 31 days"
+    elif [ "$MNTH" = "mar" ]  || [ "$MNTH" = "march" ]     || [ "$MNTH" = "Mar" ]  || [ "$MNTH" = "March" ]     || [ "$MNTH" = "MAR" ]  || [ "$MNTH" = "MARCH" ]     || [ "$MNTH" = "3" ]; then
+        if [ "$HAD_CUR_ARG" = "FALSE" ]; then
+            echo "March has 31 days"
         else
-            echo "The current month (March) contains 31 days"
+            echo "March (current month) has 31 days"
         fi
 
-    elif [ "$CUR_MNTH" = "apr" ]  || [ "$CUR_MNTH" = "april" ]     || [ "$CUR_MNTH" = "Apr" ]  || [ "$CUR_MNTH" = "April" ]     || [ "$CUR_MNTH" = "APR" ]  || [ "$CUR_MNTH" = "APRIL" ]     || [ "$CUR_MNTH" = "4" ]; then
-        if [ "$HAD_ARG" = "TRUE" ]; then
-            echo "April contains 30 days"
+    elif [ "$MNTH" = "apr" ]  || [ "$MNTH" = "april" ]     || [ "$MNTH" = "Apr" ]  || [ "$MNTH" = "April" ]     || [ "$MNTH" = "APR" ]  || [ "$MNTH" = "APRIL" ]     || [ "$MNTH" = "4" ]; then
+        if [ "$HAD_CUR_ARG" = "FALSE" ]; then
+            echo "April has 30 days"
         else
-            echo "The current month (April) contains 30 days"
+            echo "April (current month) has 30 days"
         fi
 
-    elif [ "$CUR_MNTH" = "may" ]  || [ "$CUR_MNTH" = "may" ]       || [ "$CUR_MNTH" = "May" ]  || [ "$CUR_MNTH" = "May" ]       || [ "$CUR_MNTH" = "MAY" ]  || [ "$CUR_MNTH" = "MAY" ]       || [ "$CUR_MNTH" = "5" ]; then
-        if [ "$HAD_ARG" = "TRUE" ]; then
-            echo "May contains 31 days"
+    elif [ "$MNTH" = "may" ]  || [ "$MNTH" = "may" ]       || [ "$MNTH" = "May" ]  || [ "$MNTH" = "May" ]       || [ "$MNTH" = "MAY" ]  || [ "$MNTH" = "MAY" ]       || [ "$MNTH" = "5" ]; then
+        if [ "$HAD_CUR_ARG" = "FALSE" ]; then
+            echo "May has 31 days"
         else
-            echo "The current month (May) contains 31 days"
+            echo "May (current month) has 31 days"
         fi
 
-    elif [ "$CUR_MNTH" = "jun" ]  || [ "$CUR_MNTH" = "june" ]      || [ "$CUR_MNTH" = "Jun" ]  || [ "$CUR_MNTH" = "June" ]      || [ "$CUR_MNTH" = "JUN" ]  || [ "$CUR_MNTH" = "JUNE" ]      || [ "$CUR_MNTH" = "6" ]; then
-        if [ "$HAD_ARG" = "TRUE" ]; then
-            echo "June contains 30 days"
+    elif [ "$MNTH" = "jun" ]  || [ "$MNTH" = "june" ]      || [ "$MNTH" = "Jun" ]  || [ "$MNTH" = "June" ]      || [ "$MNTH" = "JUN" ]  || [ "$MNTH" = "JUNE" ]      || [ "$MNTH" = "6" ]; then
+        if [ "$HAD_CUR_ARG" = "FALSE" ]; then
+            echo "June has 30 days"
         else
-            echo "The current month (June) contains 30 days"
+            echo "June (current month) has 30 days"
         fi
 
-    elif [ "$CUR_MNTH" = "jul" ]  || [ "$CUR_MNTH" = "july" ]      || [ "$CUR_MNTH" = "Jul" ]  || [ "$CUR_MNTH" = "July" ]      || [ "$CUR_MNTH" = "JUL" ]  || [ "$CUR_MNTH" = "JULY" ]      || [ "$CUR_MNTH" = "7" ]; then
-        if [ "$HAD_ARG" = "TRUE" ]; then
-            echo "July contains 31 days"
+    elif [ "$MNTH" = "jul" ]  || [ "$MNTH" = "july" ]      || [ "$MNTH" = "Jul" ]  || [ "$MNTH" = "July" ]      || [ "$MNTH" = "JUL" ]  || [ "$MNTH" = "JULY" ]      || [ "$MNTH" = "7" ]; then
+        if [ "$HAD_CUR_ARG" = "FALSE" ]; then
+            echo "July has 31 days"
         else
-            echo "The current month (July) contains 31 days"
+            echo "July (current month) has 31 days"
         fi
 
-    elif [ "$CUR_MNTH" = "aug" ]  || [ "$CUR_MNTH" = "august" ]    || [ "$CUR_MNTH" = "Aug" ]  || [ "$CUR_MNTH" = "August" ]    || [ "$CUR_MNTH" = "AUG" ]  || [ "$CUR_MNTH" = "AUGUST" ]    || [ "$CUR_MNTH" = "8" ]; then
-        if [ "$HAD_ARG" = "TRUE" ]; then
-            echo "August contains 31 days"
+    elif [ "$MNTH" = "aug" ]  || [ "$MNTH" = "august" ]    || [ "$MNTH" = "Aug" ]  || [ "$MNTH" = "August" ]    || [ "$MNTH" = "AUG" ]  || [ "$MNTH" = "AUGUST" ]    || [ "$MNTH" = "8" ]; then
+        if [ "$HAD_CUR_ARG" = "FALSE" ]; then
+            echo "August has 31 days"
         else
-            echo "The current month (August) contains 31 days"
+            echo "August (current month) has 31 days"
         fi
 
-    elif [ "$CUR_MNTH" = "sep" ] || [ "$CUR_MNTH" = "Sep" ] || [ "$CUR_MNTH" = "SEP" ] || [ "$CUR_MNTH" = "sept" ] || [ "$CUR_MNTH" = "september" ] || [ "$CUR_MNTH" = "Sept" ] || [ "$CUR_MNTH" = "September" ] || [ "$CUR_MNTH" = "SEPT" ] || [ "$CUR_MNTH" = "SEPTEMBER" ] || [ "$CUR_MNTH" = "9" ]; then
-        if [ "$HAD_ARG" = "TRUE" ]; then
-            echo "September contains 30 days"
+    elif [ "$MNTH" = "sep" ] || [ "$MNTH" = "Sep" ] || [ "$MNTH" = "SEP" ] || [ "$MNTH" = "sept" ] || [ "$MNTH" = "september" ] || [ "$MNTH" = "Sept" ] || [ "$MNTH" = "September" ] || [ "$MNTH" = "SEPT" ] || [ "$MNTH" = "SEPTEMBER" ] || [ "$MNTH" = "9" ]; then
+        if [ "$HAD_CUR_ARG" = "FALSE" ]; then
+            echo "September has 30 days"
         else
-            echo "The current month (September) contains 30 days"
+            echo "September (current month) has 30 days"
         fi
 
-    elif [ "$CUR_MNTH" = "oct" ]  || [ "$CUR_MNTH" = "october" ]   || [ "$CUR_MNTH" = "Oct" ]  || [ "$CUR_MNTH" = "October" ]   || [ "$CUR_MNTH" = "OCT" ]  || [ "$CUR_MNTH" = "OCTOBER" ]   || [ "$CUR_MNTH" = "10" ]; then
-        if [ "$HAD_ARG" = "TRUE" ]; then
-            echo "October contains 31 days"
+    elif [ "$MNTH" = "oct" ]  || [ "$MNTH" = "october" ]   || [ "$MNTH" = "Oct" ]  || [ "$MNTH" = "October" ]   || [ "$MNTH" = "OCT" ]  || [ "$MNTH" = "OCTOBER" ]   || [ "$MNTH" = "10" ]; then
+        if [ "$HAD_CUR_ARG" = "FALSE" ]; then
+            echo "October has 31 days"
         else
-            echo "The current month (October) contains 31 days"
+            echo "October (current month) has 31 days"
         fi
 
-    elif [ "$CUR_MNTH" = "nov" ]  || [ "$CUR_MNTH" = "november" ]  || [ "$CUR_MNTH" = "Nov" ]  || [ "$CUR_MNTH" = "November" ]  || [ "$CUR_MNTH" = "NOV" ]  || [ "$CUR_MNTH" = "NOVEMBER" ]  || [ "$CUR_MNTH" = "11" ]; then
-        if [ "$HAD_ARG" = "TRUE" ]; then
-            echo "November contains 30 days"
+    elif [ "$MNTH" = "nov" ]  || [ "$MNTH" = "november" ]  || [ "$MNTH" = "Nov" ]  || [ "$MNTH" = "November" ]  || [ "$MNTH" = "NOV" ]  || [ "$MNTH" = "NOVEMBER" ]  || [ "$MNTH" = "11" ]; then
+        if [ "$HAD_CUR_ARG" = "FALSE" ]; then
+            echo "November has 30 days"
         else
-            echo "The current month (November) contains 30 days"
+            echo "November (current month) has 30 days"
         fi
 
-    elif [ "$CUR_MNTH" = "dec" ]  || [ "$CUR_MNTH" = "december" ]  || [ "$CUR_MNTH" = "Dec" ]  || [ "$CUR_MNTH" = "December" ]  || [ "$CUR_MNTH" = "DEC" ]  || [ "$CUR_MNTH" = "DECEMBER" ]  || [ "$CUR_MNTH" = "12" ]; then
-        if [ "$HAD_ARG" = "TRUE" ]; then
-            echo "December contains 31 days"
+    elif [ "$MNTH" = "dec" ]  || [ "$MNTH" = "december" ]  || [ "$MNTH" = "Dec" ]  || [ "$MNTH" = "December" ]  || [ "$MNTH" = "DEC" ]  || [ "$MNTH" = "DECEMBER" ]  || [ "$MNTH" = "12" ]; then
+        if [ "$HAD_CUR_ARG" = "FALSE" ]; then
+            echo "December has 31 days"
         else
-            echo "The current month (December) contains 31 days"
+            echo "December (current month) has 31 days"
         fi
+
+    ## Handle 'full list' mode (all, list, cal, --all, --list) ##
+    elif [ "$MNTH" = "all" ]  || [ "$MNTH" = "--all" ]  || [ "$MNTH" = "cal" ]  || [ "$MNTH" = "calendar" ]  || [ "$MNTH" = "full-list" ]  || [ "$MNTH" = "list" ]  || [ "$MNTH" = "--list" ]; then
+        echo "January:    31"
+        echo "February:   28"
+        echo "March:      31"
+        echo "April:      30"
+        echo "May:        31"
+        echo "June:       30"
+        echo "July:       31"
+        echo "August:     31"
+        echo "September:  30"
+        echo "October:    31"
+        echo "November:   30"
+        echo "December:   31"
+
+    ## Handle unknown inputs ##
     else
         __days_in_month_help__
         echo "ERROR: \"$1\" is an invalid argument"
@@ -139,6 +168,7 @@ days_in_month() {
         echo "    *   A number from 1-12 e.g. 1, 5"
         echo "    *   A month shorthand e.g. sep, sept, Sep, Sept, SEP, SEPT"
         echo "    *   A month name e.g. may, May, MAY"
+        echo "    *   \"all\" or \"list\", to show for all months at once"
         echo "    *   --help"
         echo ""
     fi
