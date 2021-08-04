@@ -1,0 +1,8 @@
+<snippet>
+  <description>Prettier ignores next AST node (fn, block, tag, condtional, etc) </description>
+<content><![CDATA[
+// prettier-ignore
+]]></content>  
+  <tabTrigger>prettier</tabTrigger>
+  <scope>source.js, source.ts, source.jsx, source.tsx, source.css, source.scss</scope>
+</snippet>
