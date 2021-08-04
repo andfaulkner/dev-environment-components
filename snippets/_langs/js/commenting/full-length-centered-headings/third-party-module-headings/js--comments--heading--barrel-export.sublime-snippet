@@ -1,8 +1,0 @@
-<snippet>
-  <description>'BARREL EXPORT' header comment</description>
-<content><![CDATA[
-/*---------------------------------------- BARREL EXPORTS ----------------------------------------*/
-]]></content>
-  <tabTrigger>hdbes</tabTrigger>
-  <scope>source.js, source.ts, source.jsx, source.tsx</scope>
-</snippet>
