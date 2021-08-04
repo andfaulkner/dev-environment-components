@@ -1,0 +1,11 @@
+<snippet>
+  <description>Set mad-logs up for isomorphic use</description>
+<content><![CDATA[
+/*------------------------------------------- LOGGING --------------------------------------------*/
+import {logFactory, Styles} from 'mad-logs/lib/shared';
+const log = logFactory(__filename.replace(`\${__dirname}/`, ``), Styles.${1:fountain});
+
+]]></content>
+  <tabTrigger>madlogiso</tabTrigger>
+  <scope>source.js, source.ts, source.jsx, source.tsx</scope>
+</snippet>
