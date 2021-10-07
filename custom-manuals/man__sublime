@@ -1,35 +1,109 @@
 #!/usr/bin/env sh
 
-cat <<-'TERMINAL_MANUAL_QUICK_REF'
+#
+# If WSL
+#
+if grep -qEi "(Microsoft|WSL)" /proc/version &> /dev/null; then
+
+    cat <<-'TERMINAL_MANUAL_QUICK_REF'
 
 ---------------------------------------------------------------------------------
-** EXTRA SUBLIME INFO, HOTKEYS
+** EXTRA SUBLIME INFO, HOTKEYS (WSL)
 ---------------------------------------------------------------------------------
--  see cmd name for each action in console:       sublime.log_commands(True)
+-  See cmd name for each action in console:       sublime.log_commands(True)
+
+CONSOLE
+-------
+-  Clear console hotkey:                          ALT-k
+-  Run in console to show all commands:           sublime.log_commands(True)
+
+HOTKEYS
+-------
+MENUS
+-  Open autocompletions menu                      CTRL-SPACE
+-  Toggle side menu                               CMD-K, B
+
+INSERT LINE
+-  Insert line before current line:               CMD-SHIFT-ENTER
+-  Insert line after current line:                CMD-ENTER
+
+DELETION
+-  Del word forward:                              CTRL-DEL
+-  Del word backward:                             CTRL-BACKSPACE
+
+TYPE DEFINITIONS
+-  Go to definition using mouse click only:       ALT--LEFT_CLICK
+-  Go to selected variable's definition           COMMAND-CTRL-ALT-g
+
+SELECTION
+-  Select cur scope. Expand more w each tap:      CMD-SHIFT-SPACE
+-  Select full contents of current parens:        CTRL-SHIFT-M
+
+FILE/FOLDER HANDLING
+-  Create new file in current dir:                ALT-n
+-  Create new folder in current dir:              ALT-f
+-  Duplicate currently selected file:             ALT-d
+-  Rename currently selected file:                ALT-r
+
+FIND
+-   Find and replace (current file)               CTRL-SHIFT-r
+-   Find and replace (all files)                  CTRL-ALT-SHIFT-r
+-   Find all of selected word/section             COMMAND-CTRL-g  |  CTRL-SHIFT-g
+-   Open file at selected point in find results   o
+
+OPEN FILES
+- open hotkeys file:                              CTRL-ALT-SHIFT-b
+- open custom Sublime help file (this file):      CTRL-ALT-SHIFT-m
+
+MACROS
+-  Start & stop recording macro:                  CTRL-Q
+-  Playback macro:                                CTRL-SHIFT-Q
+
+STRINGS
+-  To uppercase:                                  CTRL-k,CTRL-u    << in sequence
+-  To lowercase:                                  CTRL-k,CTRL-l    << in sequence
+-  To camelCase:                                  CTRL-j,CTRL-c    << in sequence
+-  To dash-case:                                  CTRL-j,CTRL-d    << in sequence
+-  To snake_case:                                 CTRL-j,CTRL-s    << in sequence
+-  To PascalCase:                                 CTRL-j,CTRL-p    << in sequence
+---------------------------------------------------------------------------------
+
+TERMINAL_MANUAL_QUICK_REF
+
+#
+# If Mac or Linux (but not WSL or Windows)
+#
+else
+    cat <<-'TERMINAL_MANUAL_QUICK_REF'
+
+---------------------------------------------------------------------------------
+** EXTRA SUBLIME INFO, HOTKEYS (Mac or Linux)
+---------------------------------------------------------------------------------
+-  See cmd name for each action in console:       sublime.log_commands(True)
 
 HOTKEYS
 -  Go to definition using mouse click only:       ALT--LEFT_CLICK
--  clear console if using ClearConsole plugin:    CTRL-ALT-k
--  rename currently selected file:                ALT-r
--  create new file in current dir:                ALT-n
--  create new folder in current dir:              ALT-f
--  duplicate currently selected file:             ALT-d
--  open autocompletions menu:                     CTRL-SPACE
--  toggle side menu:                              CMD-K, B
--  go to symbol (fns, css blocks, classes, etc.)  CMD-r
--  select cur scope. Expand more w each tap:      CMD-SHIFT-SPACE
--  select full contents of current parens:        CTRL-SHIFT-M
--  insert line before current line:               CMD-SHIFT-ENTER
--  insert line after current line:                CMD-ENTER
--  uppercase:                                     CTRL-k, u
--  lowercase:                                     CTRL-k, l  (ell)
--  del word forward:                              CTRL-DEL
--  del word backward:                             CTRL-BACKSPACE
+-  Clear console if using ClearConsole plugin:    CTRL-ALT-k
+-  Rename currently selected file:                ALT-r
+-  Create new file in current dir:                ALT-n
+-  Create new folder in current dir:              ALT-f
+-  Duplicate currently selected file:             ALT-d
+-  Open autocompletions menu:                     CTRL-SPACE
+-  Toggle side menu:                              CMD-K, B
+-  Go to symbol (fns, css blocks, classes, etc.)  CMD-r
+-  Select cur scope. Expand more w each tap:      CMD-SHIFT-SPACE
+-  Select full contents of current parens:        CTRL-SHIFT-M
+-  Insert line before current line:               CMD-SHIFT-ENTER
+-  Insert line after current line:                CMD-ENTER
+-  Uppercase:                                     CTRL-k, u
+-  Lowercase:                                     CTRL-k, l  (ell)
+-  Del word forward:                              CTRL-DEL
+-  Del word backward:                             CTRL-BACKSPACE
 
 # HOTKEYS: BOOKMARKS
--  bookmark location:                             CMD-F2
--  goto next bookmark::                           F2
--  goto previous bookmark::                       SHIFT-F2
+-  Bookmark location:                             CMD-F2
+-  Goto next bookmark::                           F2
+-  Goto previous bookmark::                       SHIFT-F2
 
 # HOTKEYS: OPEN FILES
 - open hotkeys file:                              CTRL-CMD-b
@@ -51,3 +125,5 @@ HOTKEYS
 ---------------------------------------------------------------------------------
 
 TERMINAL_MANUAL_QUICK_REF
+
+fi

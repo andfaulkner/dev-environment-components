@@ -1,0 +1,56 @@
+#!/usr/bin/env sh
+
+cat <<-'TERMINAL_MANUAL_QUICK_REF'
+
+---------------------------------------------------------------------------------
+TODO: update for windows
+
+---------------------------------------------------------------------------------
+** EXTRA SUBLIME INFO, HOTKEYS
+---------------------------------------------------------------------------------
+-  see cmd name for each action in console:       sublime.log_commands(True)
+
+HOTKEYS
+-  Go to definition using mouse click only:       ALT--LEFT_CLICK
+-  clear console if using ClearConsole plugin:    CTRL-ALT-k
+-  rename currently selected file:                ALT-r
+-  create new file in current dir:                ALT-n
+-  create new folder in current dir:              ALT-f
+-  duplicate currently selected file:             ALT-d
+-  open autocompletions menu:                     CTRL-SPACE
+-  toggle side menu:                              CMD-K, B
+-  go to symbol (fns, css blocks, classes, etc.)  CMD-r
+-  select cur scope. Expand more w each tap:      CMD-SHIFT-SPACE
+-  select full contents of current parens:        CTRL-SHIFT-M
+-  insert line before current line:               CMD-SHIFT-ENTER
+-  insert line after current line:                CMD-ENTER
+-  uppercase:                                     CTRL-k, u
+-  lowercase:                                     CTRL-k, l  (ell)
+-  del word forward:                              CTRL-DEL
+-  del word backward:                             CTRL-BACKSPACE
+
+# HOTKEYS: BOOKMARKS
+-  bookmark location:                             CMD-F2
+-  goto next bookmark::                           F2
+-  goto previous bookmark::                       SHIFT-F2
+
+# HOTKEYS: OPEN FILES
+- open hotkeys file:                              CTRL-CMD-b
+
+# MACROS
+-  Start & stop recording macro:                  CTRL-Q
+-  Playback macro:                                CTRL-SHIFT-Q
+
+# STRINGS
+-  To uppercase:                                  CMD-k,CMD-u    << in sequence
+-  To lowercase:                                  CMD-k,CMD-l    << in sequence
+
+# LINTING
+-  Lint view                                      ctrl+super+l
+-  Next error                                     ctrl+super+e
+-  Prev error                                     ctrl+super+shift-e
+-  See all errors (by line):                      ctrl+super+l
+-  More info on selected error:                   ctrl+super+r
+---------------------------------------------------------------------------------
+
+TERMINAL_MANUAL_QUICK_REF
