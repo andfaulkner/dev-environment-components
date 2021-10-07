@@ -53,9 +53,9 @@ NeoBundle 'tpope/vim-surround'
 " apparently science says this is the most productive color scheme of all time
 NeoBundle 'altercation/vim-colors-solarized'
 " vim statusbar / tabline with special awesomeness
-NeoBundle 'bling/vim-airline'
+" NeoBundle 'bling/vim-airline'
 " semi-GUI for filesystem handling
-NeoBundle 'scrooloose/nerdtree'
+" NeoBundle 'scrooloose/nerdtree'
 " typescript syntax for vim
 NeoBundle 'leafgarland/typescript-vim'
 
