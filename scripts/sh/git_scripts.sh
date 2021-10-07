@@ -153,7 +153,7 @@ alias gas="gac"
 # alias g_resetdev="git stash; git checkout develop; git fetch origin; git reset --hard origin/develop"
 
 # Reset all staged changes to unstaged
-alias g_resethead="git restore .; git reset HEAD"
+alias g_resethead="git restore"
 alias g_reset_staged_to_unstaged="g_resethead"
 alias g_resethead_all="g_resethead"
 alias grh="g_resethead"
