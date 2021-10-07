@@ -34,7 +34,8 @@ TAGS
  -- remove tag                        git tag -d name-of-tag-to-remove
  -- delete remote tag                 git push origin :refs/tags/name-of-tag-to-remove
 
-RENAMING BRANCHES
+BRANCHES
+ -- list all remote & local branches  git branch -a
  -- rename a local branch             git branch -m <oldname> <newname>
 
 DIFFING
