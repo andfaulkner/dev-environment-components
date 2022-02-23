@@ -1,11 +1,11 @@
 <snippet>
     <description>Main module heading - explain what module does etc.</description>
     <content><![CDATA[
-/**************************************************************************************************
+/*------------------------------------------------------------------------------------------------
  *
- *      @file ./$TM_FILENAME
+ *     @file ./$TM_FILENAME
  *
- *      ${1:define module here - e.g. Used for external access to app playlists ... }
+ *     ${1:define module here - e.g. Used for external access to app playlists ... }
  *
  */
 
