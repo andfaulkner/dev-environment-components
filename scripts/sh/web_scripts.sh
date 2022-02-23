@@ -36,7 +36,7 @@ function put {
     fi
 }
 
-alias ip="ifconfig | grep -i "inet.*broadcast" | awk '{print \$2}'"
+# alias ip="ifconfig | grep -i "inet.*broadcast" | awk '{print \$2}'"
 
 ### DOCKER ###
 alias dock_i="docker images"
