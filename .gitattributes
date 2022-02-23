@@ -1,0 +1,115 @@
+########################### GLOBAL PROPS ############################
+## Merge strategies
+en.json merge=ours
+fr.json merge=ours
+
+## Handle all filetypes not explicitly handled below this section
+* text=auto
+
+
+############################## SOURCE ###############################
+## SOURCE CODE
+*.ts   text
+*.tsx  text
+*.js   text
+*.jsx  text
+
+*.css  text
+*.scss text
+*.sass text
+*.styl text
+
+*.hbs  text
+*.htm  text
+*.html text
+
+*.json text
+*.yaml text
+*.yml  text
+*.csv  text
+
+*.sh   text
+*.rb   text
+*.py   text
+
+## CUSTOM BUILD SCRIPTS
+build-watch        text
+start              text
+test-client        text
+test-client-watch  text
+test-integration   text
+test-server        text
+test-server-debug  text
+test-shared-watch  text
+
+## CLI TOOLS
+tir                     text
+ts-crossproject-upgrade text
+ts-update-to-version    text
+
+## SETUP
+production-build-toolchain-setup text
+setup                            text
+
+## DOCS
+*.md      text
+CHANGELOG text
+README    text
+LICENSE   text
+AUTHORS   text
+
+
+############################## CONFIGS ##############################
+## BUILD
+*.npmignore   text
+tsconfig.json text
+base.json     text
+.babelrc      text
+*.opts        text
+
+## LINTERS / CODE-CLEANERS
+tslint.json   text
+.eslintrc     text
+.prettierrc   text
+.editorconfig text
+
+## PACKAGE MANAGEMENT
+.yarnclean   text
+package.json text
+
+## GIT
+.gitattributes text
+.gitignore     text
+.gitconfig     text
+
+## ENV VARS & EXAMPLES
+.env                  text
+.sample-env           text
+.sample-sibling-repos text
+.sibling-repos        text
+
+
+################### BINARIES / NON-DIFFABLE FILES ###################
+## GRAPHICS
+*.bmp  binary
+*.gif  binary
+*.ico  binary
+*.jpg  binary
+*.jpeg binary
+*.pdf  binary
+*.png  binary
+*.psd  binary
+*.svg  text
+*.tif  binary
+*.tiff binary
+*.webp binary
+
+## FONTS
+*.ttf   binary
+*.eot   binary
+*.otf   binary
+*.woff  binary
+*.woff2 binary
+
+## ARCHIVES
+*.tar binary
