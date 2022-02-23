@@ -1,0 +1,8 @@
+<snippet>
+  <description>[TOPBAR]</description>
+<content>
+    <![CDATA[[TOPBAR] ]]>
+</content>
+  <tabTrigger>tb</tabTrigger>
+  <scope>text.markdown, text.html.markdown</scope>
+</snippet>
