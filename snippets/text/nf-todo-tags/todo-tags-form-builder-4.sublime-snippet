@@ -1,0 +1,8 @@
+<snippet>
+  <description>[FORM BUILDER]</description>
+<content>
+    <![CDATA[[FORM BUILDER] ]]>
+</content>
+  <tabTrigger>tfg</tabTrigger>
+  <scope>text.markdown, text.html.markdown</scope>
+</snippet>
