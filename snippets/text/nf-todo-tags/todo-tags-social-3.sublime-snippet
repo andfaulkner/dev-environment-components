@@ -1,0 +1,8 @@
+<snippet>
+  <description>[SOCIAL]</description>
+<content>
+    <![CDATA[[SOCIAL] ]]>
+</content>
+  <tabTrigger>tso</tabTrigger>
+  <scope>text.markdown, text.html.markdown</scope>
+</snippet>
