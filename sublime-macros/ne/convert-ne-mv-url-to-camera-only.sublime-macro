@@ -1,0 +1,361 @@
+[
+	{
+		"args":
+		{
+			"by": "word_ends",
+			"extend": true,
+			"forward": true
+		},
+		"command": "move"
+	},
+	{
+		"args":
+		{
+			"by": "word_ends",
+			"extend": true,
+			"forward": true
+		},
+		"command": "move"
+	},
+	{
+		"args":
+		{
+			"by": "word_ends",
+			"extend": true,
+			"forward": true
+		},
+		"command": "move"
+	},
+	{
+		"args":
+		{
+			"by": "word_ends",
+			"extend": true,
+			"forward": true
+		},
+		"command": "move"
+	},
+	{
+		"args":
+		{
+			"by": "word_ends",
+			"extend": true,
+			"forward": true
+		},
+		"command": "move"
+	},
+	{
+		"args":
+		{
+			"by": "word_ends",
+			"extend": true,
+			"forward": true
+		},
+		"command": "move"
+	},
+	{
+		"args":
+		{
+			"by": "word_ends",
+			"extend": true,
+			"forward": true
+		},
+		"command": "move"
+	},
+	{
+		"args":
+		{
+			"by": "word_ends",
+			"extend": true,
+			"forward": true
+		},
+		"command": "move"
+	},
+	{
+		"args":
+		{
+			"by": "word_ends",
+			"extend": true,
+			"forward": true
+		},
+		"command": "move"
+	},
+	{
+		"args":
+		{
+			"by": "word_ends",
+			"extend": true,
+			"forward": true
+		},
+		"command": "move"
+	},
+	{
+		"args":
+		{
+			"by": "word_ends",
+			"extend": true,
+			"forward": true
+		},
+		"command": "move"
+	},
+	{
+		"args":
+		{
+			"by": "characters",
+			"extend": true,
+			"forward": true
+		},
+		"command": "move"
+	},
+	{
+		"args": null,
+		"command": "right_delete"
+	},
+	{
+		"args":
+		{
+			"create_new": false,
+			"extend": false,
+			"text": "&",
+			"whole_match": false
+		},
+		"command": "jump_to"
+	},
+	{
+		"args":
+		{
+			"by": "characters",
+			"forward": true
+		},
+		"command": "move"
+	},
+	{
+		"args":
+		{
+			"by": "characters",
+			"forward": false
+		},
+		"command": "move"
+	},
+	{
+		"args":
+		{
+			"extend": true,
+			"to": "eol"
+		},
+		"command": "move_to"
+	},
+	{
+		"args": null,
+		"command": "right_delete"
+	},
+	{
+		"args":
+		{
+			"extend": false,
+			"to": "bol"
+		},
+		"command": "move_to"
+	},
+	{
+		"args":
+		{
+			"create_new": false,
+			"extend": false,
+			"text": ",",
+			"whole_match": false
+		},
+		"command": "jump_to"
+	},
+	{
+		"args":
+		{
+			"by": "characters",
+			"extend": true,
+			"forward": true
+		},
+		"command": "move"
+	},
+	{
+		"args":
+		{
+			"characters": "   "
+		},
+		"command": "insert"
+	},
+	{
+		"args":
+		{
+			"characters": "  "
+		},
+		"command": "insert"
+	},
+	{
+		"args": null,
+		"command": "left_delete"
+	},
+	{
+		"args":
+		{
+			"create_new": false,
+			"extend": false,
+			"text": ",",
+			"whole_match": false
+		},
+		"command": "jump_to"
+	},
+	{
+		"args":
+		{
+			"by": "characters",
+			"extend": true,
+			"forward": true
+		},
+		"command": "move"
+	},
+	{
+		"args":
+		{
+			"characters": "    "
+		},
+		"command": "insert"
+	},
+	{
+		"args":
+		{
+			"create_new": false,
+			"extend": false,
+			"text": ",",
+			"whole_match": false
+		},
+		"command": "jump_to"
+	},
+	{
+		"args":
+		{
+			"by": "characters",
+			"extend": true,
+			"forward": true
+		},
+		"command": "move"
+	},
+	{
+		"args":
+		{
+			"characters": "    "
+		},
+		"command": "insert"
+	},
+	{
+		"args":
+		{
+			"create_new": false,
+			"extend": false,
+			"text": ",",
+			"whole_match": false
+		},
+		"command": "jump_to"
+	},
+	{
+		"args":
+		{
+			"by": "characters",
+			"extend": true,
+			"forward": true
+		},
+		"command": "move"
+	},
+	{
+		"args":
+		{
+			"characters": "    "
+		},
+		"command": "insert"
+	},
+	{
+		"args":
+		{
+			"create_new": false,
+			"extend": false,
+			"text": ",",
+			"whole_match": false
+		},
+		"command": "jump_to"
+	},
+	{
+		"args":
+		{
+			"by": "characters",
+			"extend": true,
+			"forward": true
+		},
+		"command": "move"
+	},
+	{
+		"args":
+		{
+			"characters": "    "
+		},
+		"command": "insert"
+	},
+	{
+		"args":
+		{
+			"create_new": false,
+			"extend": false,
+			"text": ",",
+			"whole_match": false
+		},
+		"command": "jump_to"
+	},
+	{
+		"args":
+		{
+			"by": "characters",
+			"extend": true,
+			"forward": true
+		},
+		"command": "move"
+	},
+	{
+		"args":
+		{
+			"characters": "    "
+		},
+		"command": "insert"
+	},
+	{
+		"args":
+		{
+			"create_new": false,
+			"extend": false,
+			"text": ",",
+			"whole_match": false
+		},
+		"command": "jump_to"
+	},
+	{
+		"args":
+		{
+			"by": "characters",
+			"extend": true,
+			"forward": true
+		},
+		"command": "move"
+	},
+	{
+		"args":
+		{
+			"characters": "    "
+		},
+		"command": "insert"
+	},
+	{
+		"args":
+		{
+			"extend": false,
+			"to": "bol"
+		},
+		"command": "move_to"
+	}
+]
