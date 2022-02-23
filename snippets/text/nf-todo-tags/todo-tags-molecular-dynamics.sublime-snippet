@@ -1,0 +1,8 @@
+<snippet>
+  <description>[MOLECULAR DYNAMICS]</description>
+<content>
+    <![CDATA[[MOLECULAR DYNAMICS] ]]>
+</content>
+  <tabTrigger>tmoldyn</tabTrigger>
+  <scope>text.markdown, text.html.markdown</scope>
+</snippet>
