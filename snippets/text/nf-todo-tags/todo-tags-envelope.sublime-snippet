@@ -1,0 +1,8 @@
+<snippet>
+  <description>[ENVELOPE]</description>
+<content>
+    <![CDATA[[ENVELOPE] ]]>
+</content>
+  <tabTrigger>tenv</tabTrigger>
+  <scope>text.markdown, text.html.markdown</scope>
+</snippet>
