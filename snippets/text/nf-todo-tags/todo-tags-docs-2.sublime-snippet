@@ -1,0 +1,8 @@
+<snippet>
+  <description>[DOCS]</description>
+<content>
+    <![CDATA[[DOCS] ]]>
+</content>
+  <tabTrigger>tdoc</tabTrigger>
+  <scope>text.markdown, text.html.markdown</scope>
+</snippet>
