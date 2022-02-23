@@ -1,0 +1,8 @@
+<snippet>
+  <description>[H-TUNNELING]</description>
+<content>
+    <![CDATA[[H-TUNNELING] ]]>
+</content>
+  <tabTrigger>thydtun</tabTrigger>
+  <scope>text.markdown, text.html.markdown</scope>
+</snippet>
