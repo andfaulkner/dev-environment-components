@@ -1,0 +1,8 @@
+<snippet>
+  <description>[FILE SELECTOR]</description>
+<content>
+    <![CDATA[[FILE SELECTOR] ]]>
+</content>
+  <tabTrigger>tsfw</tabTrigger>
+  <scope>text.markdown, text.html.markdown</scope>
+</snippet>
