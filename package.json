@@ -28,7 +28,7 @@
     "babel-preset-es2015": "^6.3.13",
     "common-tags": "^1.8.0",
     "isomorphic-fetch": "^2.2.1",
-    "jsdom": "^13.0.0",
+    "jsdom": "^16.5.0",
     "lodash": "^4.17.11",
     "mad-logs": "^11.2.0",
     "mad-utils": "^0.89.1",
