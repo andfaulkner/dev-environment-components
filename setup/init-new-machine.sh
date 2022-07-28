@@ -18,6 +18,8 @@ if [ "$(uname)" == "Darwin" ]; then
 # If Linux
 elif [ "$(expr substr $(uname -s) 1 5)" == "Linux" ]; then
     echo "Linux detected"
+    IS_LINUX="true"
+
     # Install Ruby
     sudo apt-get install ruby-full
     # Exit if Ruby install failed
@@ -28,6 +30,11 @@ elif [ "$(expr substr $(uname -s) 1 5)" == "Linux" ]; then
 
     __INSTALL_CMD__="sudo apt-get"
     __CLEAN_CMD__="cleanup"
+fi
+
+# Detect Windows WSL environment
+if grep "[Mm]icrosoft" /proc/version; then
+    IS_WSL="true"
 fi
 
 
@@ -95,6 +102,13 @@ $__INSTALL_CMD__ install kotlin
 $__INSTALL_CMD__ install sass/sass/sass
 $__INSTALL_CMD__ install crystal
 $__INSTALL_CMD__ install crystal-lang
+
+# Install Rust
+curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs > rustup-init
+chmod a+x ./rustup-init
+./rustup-init -y
+rm ./rustup-init
+source "$HOME/.cargo/env"
 
 #----- Install misc programming utils -----#
 $__INSTALL_CMD__ install jq
@@ -215,6 +229,52 @@ avn setup
 ########################## SETTINGS ##########################
 #----- Enable scrolling in less -----#
 defaults write com.googlecode.iterm2 AlternateMouseScroll -bool true
+
+########################### MUSIC ############################
+#----- Install CLI Spotify client - ncspot -----#
+
+#
+# FAIL on WSL2
+# But revisit later.
+#
+
+# See https://github.com/hrkfdn/ncspot
+# if [ "$IS_LINUX" = "true" ]; then
+#     # Install pkgconf
+#     $__INSTALL_CMD__ pkgconf
+#     $__INSTALL_CMD__ -y --fix-missing install libdbus-1-dev libncursesw5-dev libpulse-dev
+
+#     # Update packages to gain access to libssl-dev
+#     sudo apt-get -y update
+#     sudo apt-get -y upgrade
+
+#     # Install Spotify client build dependencies
+#     sudo apt-get -y install libssl-dev libxcb1-dev
+#     sudo apt-get -y libxcb-render0-dev libxcb-shape0-dev libxcb-xfixes0-dev
+#     sudo apt-get -y install alsa-base
+#     sudo apt-get -y install librust-alsa-sys-dev
+
+#     # Get portaudio backend
+#     sudo apt-get install libasound-dev portaudio19-dev libportaudio2 libportaudiocpp0
+
+#     ### Use rust to install ncspot ###
+#     # WSL2 Install
+#     if [ "$IS_WSL" = "true" ]; then
+#         pushd ~;
+#         mkdir -p ./bin 2>/dev/null
+#         cd ./bin
+#         git clone https://github.com/hrkfdn/ncspot
+#         cd ./ncspot
+
+#         # cargo build --release --no-default-features --features rodio_backend,pancurses_backend
+#         # cargo run --no-default-features --features rodio_backend,cursive/pancurses-backend
+#         cargo run --no-default-features --features portaudio_backend,cursive/pancurses-backend
+#     # Linux install
+#     else
+#         cargo install ncspot
+#     fi
+
+# fi
 
 
 ########################## COPY SUBLIME PREFERENCES ##########################
