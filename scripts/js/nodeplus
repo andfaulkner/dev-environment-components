@@ -1,4 +1,4 @@
 #!/usr/bin/env bash
 
 DIR=`dirname "$0"`
-node "$DIR/src/nodeplus/nodeplus.js"
+node "$DIR/src/node-repl-plus/nodeplus.js"
