@@ -178,6 +178,7 @@ GEM
       actionpack (>= 4.0)
       activesupport (>= 4.0)
       sprockets (>= 3.0.0)
+    table_print (1.5.6)
     thor (0.19.1)
     thread_safe (0.3.5)
     tilt (2.0.5)
@@ -198,7 +199,7 @@ GEM
       railties (>= 4.2)
     websocket-driver (0.6.4)
       websocket-extensions (>= 0.1.0)
-    websocket-extensions (0.1.2)
+    websocket-extensions (0.1.5)
 
 PLATFORMS
   ruby
@@ -220,6 +221,7 @@ DEPENDENCIES
   sass-rails (~> 5.0)
   spring
   spring-watcher-listen (~> 2.0.0)
+  table_print
   trollop
   turbolinks (~> 5.x)
   tzinfo-data
