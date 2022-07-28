@@ -32,7 +32,7 @@
     "lodash": "^4.17.11",
     "mad-logs": "^11.2.0",
     "mad-utils": "^0.89.1",
-    "moment": "^2.22.2",
+    "moment": "^2.29.4",
     "morgan": "^1.9.0",
     "prettier": "^1.15.3",
     "pretty-error": "^2.1.1",
