@@ -1,0 +1,10 @@
+%YAML1.2
+---
+name: JavaScript TS
+file_extensions:
+  - js
+scope: source.ts
+contexts:
+  main:
+    - match: ""
+      push: "Packages/JavaScript/JavaScript.sublime-syntax"
