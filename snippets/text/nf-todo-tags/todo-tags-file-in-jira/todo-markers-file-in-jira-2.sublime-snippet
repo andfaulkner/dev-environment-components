@@ -1,0 +1,8 @@
+<snippet>
+  <description>{FILE IN JIRA}</description>
+<content>
+    <![CDATA[ {FILE IN JIRA}]]>
+</content>
+  <tabTrigger>tfij</tabTrigger>
+  <scope>text.markdown, text.html.markdown</scope>
+</snippet>

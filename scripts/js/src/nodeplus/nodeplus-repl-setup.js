@@ -73,7 +73,7 @@ const r = repl.start({
 // Add REPL history file
 const historyFile = path.join(rootPath, `.node_history`);
 
-const replHistory = require('repl.history');
+const replHistory = require('./repl.history/index');
 replHistory(r, historyFile);
 
 // Add IN_REPL property to repl environment

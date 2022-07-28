@@ -1,0 +1,8 @@
+<snippet>
+  <description>[HOTKEYS]</description>
+<content>
+    <![CDATA[[HOTKEYS] ]]>
+</content>
+  <tabTrigger>thks</tabTrigger>
+  <scope>text.markdown, text.html.markdown</scope>
+</snippet>

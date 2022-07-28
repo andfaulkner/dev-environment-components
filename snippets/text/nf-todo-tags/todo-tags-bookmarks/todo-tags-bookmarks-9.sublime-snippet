@@ -1,0 +1,8 @@
+<snippet>
+  <description>[BOOKMARKS]</description>
+<content>
+    <![CDATA[[BOOKMARKS] ]]>
+</content>
+  <tabTrigger>tbookmark</tabTrigger>
+  <scope>text.markdown, text.html.markdown</scope>
+</snippet>

@@ -1,0 +1,8 @@
+<snippet>
+  <description>[STM SIMULATOR]</description>
+<content>
+    <![CDATA[[STM SIMULATOR] ]]>
+</content>
+  <tabTrigger>tsim</tabTrigger>
+  <scope>text.markdown, text.html.markdown</scope>
+</snippet>

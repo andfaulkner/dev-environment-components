@@ -1,0 +1,8 @@
+<snippet>
+  <description>[SEQUENCE LIST]</description>
+<content>
+    <![CDATA[[SEQUENCE LIST] ]]>
+</content>
+  <tabTrigger>sl</tabTrigger>
+  <scope>text.markdown, text.html.markdown</scope>
+</snippet>

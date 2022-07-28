@@ -1,0 +1,8 @@
+<snippet>
+  <description>[JUPYTER]</description>
+<content>
+    <![CDATA[[JUPYTER] ]]>
+</content>
+  <tabTrigger>tju</tabTrigger>
+  <scope>text.markdown, text.html.markdown</scope>
+</snippet>
