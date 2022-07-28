@@ -40,7 +40,7 @@ bind "set completion-ignore-case on"
 bind "set mark-symlinked-directories on"
 
 # Don't add exit, ls, lsa, gs, gd, gl, bg, fg, history, or clear to the history list
-export HISTIGNORE="&:[ ]*:exit:ls:lsa:gs:gd:gl:bg:fg:history:clear"
+export HISTIGNORE="&:[ ]*:exit:ls:lsa:lsd:lsar:gs:gd:gl:bg:fg:history:clear"
 # Store history immediately
 export PROMPT_COMMAND='history -a'
 
@@ -159,7 +159,7 @@ PATH=$PATH:"$SNIPPETS_DIR/custom-manuals"
 PATH=$PATH:"~/bin":"~/bin/cypher-shell"
 
 # LOAD LOCAL TS & JS SCRIPTS
-PATH=$PATH:"$SNIPPETS_DIR/scripts/ts":"$SNIPPETS_DIR/scripts/js"
+# PATH=$PATH:"$SNIPPETS_DIR/scripts/ts":"$SNIPPETS_DIR/scripts/js"
 
 # SET ANDROID PATH
 export ANDROID_HOME="$HOME/Library/Android/sdk"
@@ -190,6 +190,7 @@ alias pushpopstackclear="cleardirs"
 
 ## super-ls
 alias lsa='ls -aoh | grep -v "[0-9][0-9] \.\.\?$"'
+alias lsar='ls -aort'
 
 ## lsa for dirs only
 alias lsda='lsa | ack "^d" | awk "{print}"'
@@ -446,6 +447,9 @@ alias runnable="chmod +x"
 
 ## Force kill Google Chrome & all child processes
 alias killchrome="ps aux | ack \"\/[gG]oogle\ ?[cC]hrome\" | awk '{print \$2}' | xargs kill -9"
+
+# Get the local weather
+alias weather="curl wttr.in/Ottawa"
 
 # alias gogameimmunitywarriors="cd $PROJECTS_DIR/own-projects/immunity-warriors-game"
 
