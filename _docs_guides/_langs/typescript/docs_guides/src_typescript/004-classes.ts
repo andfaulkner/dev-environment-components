@@ -128,7 +128,7 @@ class ChestOfMarbles {
   private _latestMarble: Marble;
   private _verbose: boolean = false;
 
-  constructor(private _name: string) { };
+  constructor(private _name: string) { };
 
   get marbleQuantity(): number {
     this._log('marbleQuantity: ', `${this._name} contains ${this._marbles.length} marbles.`);
