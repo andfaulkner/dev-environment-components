@@ -247,11 +247,11 @@ alias g_remote="git init; git remote add origin" #arg: location of repo
 alias g_rro="git remote remove origin"
 alias g_rao="git remote add origin" #[place remote repo uri here]
 
-alias gcom="git checkout master"
+alias gcom="git checkout main"
 
 alias gpull="git pull"
-alias g_pullom="git pull origin master"
-alias g_pullm="git pull origin master"
+alias g_pullom="git pull origin main"
+alias g_pullm="git pull origin main"
 alias gpullm="g_pullom"
 alias gpullom="g_pullom"
 
