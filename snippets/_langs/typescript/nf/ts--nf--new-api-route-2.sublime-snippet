@@ -1,0 +1,47 @@
+<snippet>
+    <description>New api route file</description>
+    <content><![CDATA[
+/*--------------------------------------- PROJECT MODULES ----------------------------------------*/
+import {addGraphRoute} from 'server-imports';
+
+/*------------------------------------------- LOGGING --------------------------------------------*/
+import {logFactory, Styles} from 'mad-logs/lib/shared';
+const log = logFactory(__filename.replace(`${__dirname}/`, ``), Styles.potOfGold);
+
+/*-------------------------------------------- CONFIG --------------------------------------------*/
+/*
+ * ROUTES
+ */
+const apiRoute = `/${1:${TM_FILENAME/([a-zA-Z0-9]+)?([-_]?[-_]?)([a-zA-Z]+)?(?:([-_]?[-_]))?(?:([a-zA-Z]+)?)(?:([-_]?[-_]))?(?:([a-zA-Z]+)?)(?:([-_]?[-_]))?(?:([a-zA-Z]+)?)(?:([-_]?[-_]))?(?:([a-zA-Z]+)?)(?:([-_]?[-_]))?(?:([a-zA-Z]+)?)(?:([-_]?[-_]))?(?:([a-zA-Z]+)?)(?:([-_]?[-_]))?(?:([a-zA-Z]+)?)(?:([-_]?[-_]))?(?:([a-zA-Z]+)?)(?:([-_]?[-_]))?(?:([a-zA-Z]+)?)([^\.]+)?\..*/\L$1(?2:\/)\L$3(?4:\/)(?5:\L$5)(?6:\/)(?7:\L$7)(?8\/:)(?9:\L$9)(?10:\/)(?11:\L$11)(?12:\/)(?13:\L$13)(?14:\/)(?15:\L$15)(?16:\/)(?17:\L$17)(?18:\/)(?19:\L$19)(?20:\/)(?21:\L$21)$22/g}}`;
+const apiTag = `${apiRoute} ::`;
+
+/*----------------------------------------- DATA CONFIG ------------------------------------------*/
+/**
+ * POST /${1}
+ * @route
+ */
+export const ${2:${TM_FILENAME/([a-zA-Z])?([a-zA-Z0-9]+)?[-_]?[-_]?([a-zA-Z])?([a-zA-Z0-9]+)?[-_]?[-_]?([a-zA-Z])?([a-zA-Z0-9]+)?[-_]?[-_]?([a-zA-Z])?([a-zA-Z0-9]+)?[-_]?[-_]?([a-zA-Z])?([a-zA-Z0-9]+)?[-_]?[-_]?([a-zA-Z])?([a-zA-Z0-9]+)?\..*/\L$1\L$2\U$3\L$4\U$5\L$6\U$7\L$8\U$9\L$10\U$11\L$12/g}} = addGraphRoute.POST(
+    {
+        apiRoute,
+        description: `$3`,
+        bodyParams: {
+            ${4:efsPath: ``,}
+        },
+        readWritePermissionRequired: true,
+    },
+    async (req, apiUtil) => {
+        const efsPath: string = req.body?.['efsPath'] ?? ``;
+
+        ${5}
+
+        // Validation
+        if (!efsPath) throw new Error(`Must send EFS path to ${apiRoute}`.oneLine);
+
+        return 'Result here';
+    }
+);
+
+]]></content>
+    <tabTrigger>nf_new_graph_api_route</tabTrigger>
+    <scope>source.ts, source.tsx, source.js, source.jsx</scope>
+</snippet>
