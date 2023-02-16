@@ -1,0 +1,40 @@
+/bin
+----
+-   Essential user executables
+-   Examples:
+    -   alias
+    -   cat
+    -   cd
+    -   cp
+    -   find
+    -   grep
+    -   head
+    -   ls
+    -   mv
+    -   touch
+
+/sbin
+-----
+-   System administration executables
+-   i.e. executables required by whoever administrates the computer, for maintenance
+-   Examples:
+    -   chroot
+    -   crond
+    -   adduser
+
+/usr
+----
+-   User executables and data
+
+ /usr/bin
+ --------
+-   Non-essential applications, such as text editors
+-   Sometimes /bin points to this
+
+ /usr/local
+ ----------
+-   Place for users to install their own software outside the distro's provided software, without worrying about overwriting any distro files
+
+ /usr/sbin
+ ---------
+-   Non-essential system administration binaries
