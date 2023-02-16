@@ -1,0 +1,8 @@
+<snippet>
+  <description>Create a symlink</description>
+<content><![CDATA[
+ln -s ${1:file/being/linked/to} ${2:location/to/place/link}
+]]></content>
+  <tabTrigger>symlink</tabTrigger>
+  <scope>source.shell</scope>
+</snippet>
