@@ -1,17 +1,13 @@
-# Topmost EditorConfig file
 root = true
 
 [*]
+insert_final_newline = true
 indent_style = space
 indent_size = 4
 charset = utf-8
 tab_width = 1
 end_of_line = lf
 trim_trailing_whitespace = true
-# lf: OSX & Unix line end
 
 [*.{rb,erb}]
 indent_size = 2
-
-################## Multiple file & file type match examples ##################
-# [{*.{rb,erb},tir}]    [*.{js,py}]    [{package.json,.travis.yml}]
