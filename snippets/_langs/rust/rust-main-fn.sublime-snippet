@@ -1,0 +1,12 @@
+<snippet>
+  <description>Rust main function</description>
+<content><![CDATA[
+// ${1:Description}
+fn main() {
+    ${0}
+}
+
+]]></content>
+  <tabTrigger>mainfn</tabTrigger>
+  <scope>source.rust</scope>
+</snippet>

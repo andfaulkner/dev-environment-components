@@ -1,0 +1,8 @@
+<snippet>
+  <description>Rust main function</description>
+<content><![CDATA[
+println!("${1:text to print}");
+]]></content>
+  <tabTrigger>clog</tabTrigger>
+  <scope>source.rust</scope>
+</snippet>
