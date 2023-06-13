@@ -1,0 +1,8 @@
+<snippet>
+  <description>[DEVELOPMENT]</description>
+<content>
+    <![CDATA[[DEVELOPMENT] ]]>
+</content>
+  <tabTrigger>tdev</tabTrigger>
+  <scope>text.markdown, text.html.markdown</scope>
+</snippet>
