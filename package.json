@@ -6,7 +6,7 @@
   "private": true,
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "setup": "bundle install && yarn"
+    "setup": "bundle install && yarn && python -m venv ./venv"
   },
   "repository": {
     "type": "git",
