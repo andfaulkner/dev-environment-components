@@ -1,0 +1,8 @@
+<snippet>
+  <description>[API]</description>
+<content>
+    <![CDATA[[API] ]]>
+</content>
+  <tabTrigger>tsrv</tabTrigger>
+  <scope>text.markdown, text.html.markdown</scope>
+</snippet>

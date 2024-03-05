@@ -1,0 +1,8 @@
+<snippet>
+  <description>[NEO4J]</description>
+<content>
+    <![CDATA[[NEO4J] ]]>
+</content>
+  <tabTrigger>tn4j</tabTrigger>
+  <scope>text.markdown, text.html.markdown</scope>
+</snippet>

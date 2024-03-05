@@ -1,7 +1,7 @@
 <snippet>
 	<description>If statement: block inside runs if both conditions return true</description>
 	<content><![CDATA[
-if [ ${1:"\$VARIABLE_ONE" = "some string"} ] || [ ${2:-d \$SOME_DIR_POSSIBLY} ]; then
+if [ ${1:"\$VARIABLE_ONE" = "some string"} ] && [ ${2:-d \$SOME_DIR_POSSIBLY} ]; then
   ${3:# do this if both conditions are met}
 fi
 ]]></content>

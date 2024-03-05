@@ -1,0 +1,8 @@
+<snippet>
+  <description>Import exported type from a module (import type {x} from 'y')</description>
+<content><![CDATA[
+import type {${2}} from '${1}';${0}
+]]></content>  
+  <tabTrigger>imptf</tabTrigger>
+  <scope>source.js, source.ts, source.jsx, source.tsx</scope>
+</snippet>

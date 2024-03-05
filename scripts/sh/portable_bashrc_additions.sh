@@ -453,3 +453,45 @@ alias weather="curl wttr.in/Ottawa"
 
 # alias gogameimmunitywarriors="cd $PROJECTS_DIR/own-projects/immunity-warriors-game"
 
+#=== FUNCTION ==========================================================
+#        NAME:  make_sample_files
+# DESCRIPTION:  Create a collection of sample files in the current directory
+#   @PARAM $1:  NUM_FILES Number of files to generate.
+#=======================================================================
+make_sample_files() {
+    location "portable_bashrc_additions.sh"
+    local NUM_FILES=$1
+
+    if ! [[ "$NUM_FILES" =~ ^[0-9]+$ ]]; then
+        echo "Usage: generate_files [NUM_FILES]"
+        echo "Description: generate NUM_FILES sets of 10 text files each."
+        echo "[NUM_FILES] = number of sets of 10 files to generate. e.g. if 5 is given, 50 files will be generated."
+        echo ""
+        echo "A single numeric argument is required."
+        return 1
+    fi
+
+    for i in $(seq 1 $NUM_FILES); do
+        for j in {1..10}; do
+            is_prime=1;
+            for (( k=2; k<=j/2; k++ )); do
+                if (( j % k == 0 )); then
+                    is_prime=0;
+                    break;
+                fi;
+            done;
+            if (( $j % 2 == 0 && $j % 3 == 0 )); then
+                echo "Lorem ipsum dolor sit amet" >> "file_${i}_${j}_$(date '+%Y-%m-%d_%H:%M:%S')_foobaryeet.txt";
+            elif (( $j % 2 == 0 )); then
+                echo "Lorem ipsum dolor sit amet" >> "file_${i}_${j}_$(date '+%Y-%m-%d_%H:%M:%S').txt";
+            elif (( $is_prime == 1 )); then
+                echo "Lorem ipsum dolor sit amet" >> "file_${i}_${j}_prime.txt";
+            elif (( $j % 3 == 0 )); then
+                echo "Lorem ipsum dolor sit amet" >> "file_${i}_${j}_foobaryeet.txt";
+            else
+                echo "Lorem ipsum dolor sit amet" >> "file_${i}_${j}.txt";
+            fi
+        done
+    done
+}
+

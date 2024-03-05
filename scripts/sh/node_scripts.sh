@@ -414,6 +414,12 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh" # This loads nvm
 
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
+
+export NODE_CURRENT_VERSION_PATH="$HOME/.nvm/versions/node/$(nvm current)"
+# export NODE_CURRENT_VERSION_PATH="$HOME/.nvm/versions/node/v14.16.1"
+
+export NODE_PATH=$NODE_PATH:$NODE_CURRENT_VERSION_PATH/lib/node_modules:/usr/lib/nodejs:/usr/lib/node_modules:/usr/share/javascript:/usr/local/lib/node_modules
+
 [[ -s "$HOME/.avn/bin/avn.sh" ]] && source "$HOME/.avn/bin/avn.sh" # load avn
 
 alias ember_dep_surge="rm -rf dist; ember build --environment=development; cd dist; cp index.html 200.html; surge" # if site already exists, provide it here
@@ -424,12 +430,6 @@ alias ember_dep_surge="rm -rf dist; ember build --environment=development; cd di
 ################################################################################
 
 # export NODE_PATH=$NODE_PATH:/Users/andrew/.nvm/versions/node/v14.16.1/lib/node_modules:/usr/lib/nodejs:/usr/lib/node_modules:/usr/share/javascript:/usr/local/lib/node_modules
-
-export NODE_CURRENT_VERSION_PATH="$HOME/.nvm/versions/node/$(nvm current)"
-# export NODE_CURRENT_VERSION_PATH="$HOME/.nvm/versions/node/v14.16.1"
-
-export NODE_PATH=$NODE_PATH:$NODE_CURRENT_VERSION_PATH/lib/node_modules:/usr/lib/nodejs:/usr/lib/node_modules:/usr/share/javascript:/usr/local/lib/node_modules
-
 
 ####################################################################################################
 ########################### NPM PUBLISHING & VERSION HANDLING UTILITIES ############################

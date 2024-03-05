@@ -1,0 +1,7 @@
+<snippet>
+  <description>Symbol - delta (Δ)</description>
+<content><![CDATA[
+Δ
+]]></content>
+  <tabTrigger>sym_delta</tabTrigger>
+</snippet>

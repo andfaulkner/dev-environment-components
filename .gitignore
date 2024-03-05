@@ -87,3 +87,6 @@ dev-env/.lein/indices/**
 **=+.git=+rebase-merge=+git-rebase-todo=
 
 elm-stuff
+
+# Python virtual env
+venv

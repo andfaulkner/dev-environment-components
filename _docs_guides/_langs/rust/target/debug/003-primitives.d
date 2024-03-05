@@ -1,0 +1,1 @@
+/home/afaulkner/.config/sublime-text/Packages/User/snippets/_docs_guides/_langs/rust/target/debug/003-primitives: /home/afaulkner/.config/sublime-text/Packages/User/snippets/_docs_guides/_langs/rust/src/bin/003-primitives.rs

@@ -1,0 +1,8 @@
+<snippet>
+  <description>[UPGRADE]</description>
+<content>
+    <![CDATA[[UPGRADE] ]]>
+</content>
+  <tabTrigger>tup</tabTrigger>
+  <scope>text.markdown, text.html.markdown</scope>
+</snippet>

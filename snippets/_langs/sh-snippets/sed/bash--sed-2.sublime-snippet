@@ -1,0 +1,8 @@
+<snippet>
+  <description>Replace one string in a file with another</description>
+<content><![CDATA[
+sed -i 's/${1:search_string}/${2:replace_string}/' ${3:filename}
+]]></content>
+  <tabTrigger>replace_in_file</tabTrigger>
+  <scope>source.shell</scope>
+</snippet>

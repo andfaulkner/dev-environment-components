@@ -1,8 +1,8 @@
-ruby '2.3.1'
+ruby '3.0.2'
 
 source 'https://rubygems.org'
 
-gem 'lsr'
+# gem 'lsr'
 gem 'filesize'
 gem 'tty-table'
 gem 'trollop'
