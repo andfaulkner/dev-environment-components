@@ -1,0 +1,11 @@
+<snippet>
+  <description>New PHP function</description>
+<content><![CDATA[
+function ${1:func_name}(${2:\$args, \$go, \$here}) {
+    ${3:return "Content goes here";}
+}
+
+]]></content>
+  <tabTrigger>func</tabTrigger>
+  <scope>embedding.php</scope>
+</snippet>

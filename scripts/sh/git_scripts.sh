@@ -193,7 +193,7 @@ function g_branches {
 }
 
 function g_diff_br_remote {
-  git diff $1 remotes/origin/$1
+    git diff $1 remotes/origin/$1
 }
 
 function g_diff_cur_rem {
