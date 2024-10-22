@@ -122,8 +122,14 @@
   { "keys": [ "command+k,command+b" ], "command": "toggle_side_bar" },
 
 /********************************************* MACROS *********************************************/
+  { "keys": ["ctrl+command+e"], "command": "toggle_record_macro" },
+  { "keys": ["ctrl+command+shift+e"], "command": "run_macro" },
+
   { "keys": [ "command+ctrl+alt+f" ], "command": "run_macro_file",
     "context": [{"key": "selector", "operator": "equal", "operand": "source.js,source.ts,source.tsx,source.jsx"}],
     "args": {"file": "~/Library/Application Support/Sublime Text 3/Packages/User/snippets/macros/sublime/js/js--replace-function-with-const-and-arrow.sublime-macro"}
-  }
+  },
+
+  { "keys": ["ctrl+shift+minus"], "command": "jump_forward" },
+
 ]
