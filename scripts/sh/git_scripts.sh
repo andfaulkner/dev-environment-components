@@ -92,6 +92,25 @@ function gat {
 }
 
 #=== FUNCTION =============================================================
+#        NAME:  gap
+# DESCRIPTION:  git stage a PHP file, or PHP files matching pattern
+#   @PARAM $1:  Name of file(s) to add | string contained in file(s) to add
+#==========================================================================
+function gap {
+    location "git_scripts.sh"
+    local NAME_OF_FILE_TO_ADD=$1
+
+    git add "*$NAME_OF_FILE_TO_ADD*.php" 2>/dev/null
+    git add "*$NAME_OF_FILE_TO_ADD*.phtml" 2>/dev/null
+
+    if [[ $NAME_OF_FILE_TO_ADD == *.php ]] || [[ $NAME_OF_FILE_TO_ADD == *.phtml ]]; then
+        git add "*$NAME_OF_FILE_TO_ADD" 2>/dev/null
+    fi
+}
+alias gaph="gap"
+alias gaphp="gap"
+
+#=== FUNCTION =============================================================
 #        NAME:  gact
 # DESCRIPTION:  Add a Typescript or CSS/SCSS file to git staging
 #   @PARAM $1:  Name of file(s) to add / string contained in file(s) to add
