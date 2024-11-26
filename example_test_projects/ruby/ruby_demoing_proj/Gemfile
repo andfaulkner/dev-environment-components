@@ -6,7 +6,7 @@ source 'https://rubygems.org'
 gem 'bundler'
 
 # task runner
-gem 'rake', '~> 11.2', '>= 11.2.2'
+gem 'rake', '~> 12.3'
 
 ################################ web servers ################################
 # serve to web
