@@ -37,7 +37,7 @@
     "prettier": "^1.15.3",
     "pretty-error": "^2.1.1",
     "python-shell": "^1.0.6",
-    "shelljs": "^0.8.3",
+    "shelljs": "^0.8.5",
     "tslib": "^1.9.3",
     "typescript": "^3.2.2",
     "webpack": "^1.15.0",
